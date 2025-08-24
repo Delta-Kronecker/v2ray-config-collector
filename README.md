@@ -175,17 +175,7 @@ Each stage processes the output from the previous stage, creating a refined data
 
 ### Installation Methods
 
-#### Method 1: Install from PyPI (Recommended)
-
-```bash
-# Install the package
-pip install v2ray-config-collector
-
-# Run the application
-v2ray-config-collector
-```
-
-#### Method 2: Install from Source
+#### Install from Source
 
 ```bash
 # Clone the repository
@@ -200,21 +190,6 @@ pip install -e .
 
 # Run the application
 python v2ray_config_collector/main.py
-```
-
-#### Method 3: Direct Execution (Development)
-
-```bash
-# Clone the repository
-git clone https://github.com/Delta-Kronecker/v2ray-config-collector.git
-cd v2ray-config-collector
-
-# Install dependencies
-pip install requests>=2.28.0 tqdm>=4.64.0
-
-# Run directly
-cd config_collector
-python main.py
 ```
 
 ### Setup Configuration Sources
