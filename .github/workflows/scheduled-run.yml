@@ -1,0 +1,35 @@
+name: Run Script Every 3 Hours
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # هر 3 ساعت اجرا شود
+  workflow_dispatch:  # امکان اجرای دستی
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run main.py
+      run: |
+        python main.py
+
+    - name: Commit and push if changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git diff --staged --quiet || git commit -m "Auto-update: $(date)"
+        git push
