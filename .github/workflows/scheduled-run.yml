@@ -8,29 +8,106 @@ on:
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 30  # محدودیت زمان اجرا
+
     steps:
+    # مرحله ۱: دریافت repository
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
-    - name: Set up Python
+    # مرحله ۲: بررسی ساختار پوشه‌ها (دیباگ)
+    - name: Debug directory structure
+      run: |
+        echo "📁 Current directory structure:"
+        pwd
+        ls -la
+        echo ""
+        echo "🔍 Searching for Python files:"
+        find . -name "*.py" -type f | head -10
+        echo ""
+        echo "🔍 Searching for main.py:"
+        find . -name "main.py" -type f
+        echo ""
+        echo "📦 Checking requirements.txt:"
+        find . -name "requirements.txt" -type f
+
+    # مرحله ۳: نصب Python
+    - name: Set up Python 3.9
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
+        cache: 'pip'
 
+    # مرحله ۴: نصب dependencies
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt
+        echo "📦 Installing dependencies..."
+        pip install --upgrade pip
+        if [ -f "requirements.txt" ]; then
+          pip install -r requirements.txt
+        else
+          echo "⚠️ requirements.txt not found, trying to find it..."
+          REQ_FILE=$(find . -name "requirements.txt" -type f | head -1)
+          if [ -n "$REQ_FILE" ]; then
+            echo "📁 Found requirements.txt at: $REQ_FILE"
+            pip install -r "$REQ_FILE"
+          else
+            echo "❌ No requirements.txt found"
+          fi
+        fi
 
-    - name: Run main.py
+    # مرحله ۵: پیدا کردن و اجرای main.py
+    - name: Find and run main.py
       run: |
-        cd u2ray_config_collector  # تغییر به پوشه مورد نظر
-        python main.py  # اجرای فایل اصلی
+        echo "🔍 Looking for main.py..."
+        MAIN_FILE=$(find . -name "main.py" -type f | head -1)
+        
+        if [ -z "$MAIN_FILE" ]; then
+          echo "❌ Error: main.py not found!"
+          echo "Available Python files:"
+          find . -name "*.py" -type f
+          exit 1
+        fi
+        
+        echo "✅ Found main.py at: $MAIN_FILE"
+        echo "📂 Directory: $(dirname "$MAIN_FILE")"
+        echo "🚀 Running main.py..."
+        
+        # تغییر به پوشه containing برای importهای صحیح
+        cd "$(dirname "$MAIN_FILE")"
+        python "$(basename "$MAIN_FILE")"
 
-    - name: Commit and push if changes
+    # مرحله ۶: لاگ و گزارش اجرا
+    - name: Log execution results
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-        git diff --staged --quiet || git commit -m "Auto-update: $(date)"
-        git push
+        echo "✅ Script execution completed successfully!"
+        echo "🕒 Next run: Every 3 hours"
+        echo "📊 Last execution: $(date)"
+
+    # مرحله ۷: commit و push تغییرات (اگر اسکریپت فایلی را تغییر دهد)
+    - name: Commit and push changes if any
+      run: |
+        echo "📝 Checking for changes..."
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # بررسی تغییرات
+        if git diff --quiet && git diff --staged --quiet; then
+          echo "✅ No changes to commit"
+        else
+          echo "📦 Changes detected, committing..."
+          git add .
+          git commit -m "🤖 Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+          echo "✅ Changes committed and pushed"
+        fi
+
+    # مرحله ۸: مدیریت خطا (اختیاری)
+    - name: Notify on failure
+      if: failure()
+      run: |
+        echo "❌ Workflow failed!"
+        echo "Check the logs for details."
+        # می‌توانید اینجا notification اضافه کنید
