@@ -2,7 +2,7 @@ name: Run Script Every 3 Hours
 
 on:
   schedule:
-    - cron: '0 */3 * * *'  # هر 3 ساعت اجرا شود
+    - cron: '0 */1 * * *'  # هر 3 ساعت اجرا شود
   workflow_dispatch:  # امکان اجرای دستی
 
 jobs:
@@ -83,7 +83,7 @@ jobs:
     - name: Log execution results
       run: |
         echo "✅ Script execution completed successfully!"
-        echo "🕒 Next run: Every 3 hours"
+        echo "🕒 Next run: Every 1 hours"
         echo "📊 Last execution: $(date)"
 
     # مرحله ۷: commit و push تغییرات (اگر اسکریپت فایلی را تغییر دهد)
