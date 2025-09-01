@@ -8,7 +8,7 @@ on:
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    timeout-minutes: 30  # محدودیت زمان اجرا
+    timeout-minutes: 300  # محدودیت زمان اجرا
 
     steps:
     # مرحله ۱: دریافت repository
