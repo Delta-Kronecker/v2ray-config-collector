@@ -24,7 +24,8 @@ jobs:
 
     - name: Run main.py
       run: |
-        python main.py
+        cd u2ray_config_collector  # تغییر به پوشه مورد نظر
+        python main.py  # اجرای فایل اصلی
 
     - name: Commit and push if changes
       run: |
