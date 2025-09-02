@@ -13,17 +13,25 @@ class ConnectivityValidator:
     def __init__(self, input_file=None, output_dir=None):
         # استفاده از مسیرهای نسبی نسبت به محل اجرای اسکریپت
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        
+        print(f"Current directory: {current_dir}")
+
         if input_file is None:
             input_file = os.path.join(current_dir, 'data', 'unique', 'deduplicated.txt')
         if output_dir is None:
             output_dir = os.path.join(current_dir, 'data', 'validated')
-        
+
         self.input_file = input_file
         self.output_dir = output_dir
         self.valid_configs_dir = os.path.join(self.output_dir, 'working_configs')
-        os.makedirs(self.valid_configs_dir, exist_ok=True)
         
+        print(f"Input file: {self.input_file}")
+        print(f"Output directory: {self.output_dir}")
+        print(f"Valid configs directory: {self.valid_configs_dir}")
+        
+        # ایجاد دایرکتوری‌ها
+        os.makedirs(self.valid_configs_dir, exist_ok=True)
+        print(f"Created directory: {self.valid_configs_dir}")
+
         self.stats = {
             'total_configs': 0,
             'tested_configs': 0,
@@ -43,6 +51,11 @@ class ConnectivityValidator:
 
     def read_configs(self):
         try:
+            print(f"Attempting to read file: {self.input_file}")
+            if not os.path.exists(self.input_file):
+                print(f"Input file does not exist: {self.input_file}")
+                return []
+                
             with open(self.input_file, 'r', encoding='utf-8') as f:
                 lines = f.readlines()
             configs = [line.strip() for line in lines if line.strip() and not line.strip().startswith('#')]
@@ -76,9 +89,9 @@ class ConnectivityValidator:
             protocol = self.detect_protocol(config_url)
             if protocol == 'unknown':
                 return None, None
-            
+
             url_data = config_url.replace(f"{protocol}://", "")
-            
+
             if protocol == 'vmess':
                 try:
                     decoded_data = base64.b64decode(url_data).decode('utf-8')
@@ -113,7 +126,7 @@ class ConnectivityValidator:
                     server = server_part
                     port = 443
                 return server, port
-            
+
             return None, None
         except Exception as e:
             print(f"Error extracting server/port from {config_url[:30]}...: {str(e)}")
@@ -215,6 +228,7 @@ class ConnectivityValidator:
     def test_all_configs(self):
         configs = self.read_configs()
         if not configs:
+            print("No configurations found to test!")
             return
 
         for config in configs:
@@ -240,13 +254,13 @@ class ConnectivityValidator:
                     self.display_progress()
                     last_progress_time = current_time
                 time.sleep(0.5)
-            
+
             self.queue.join()
             self.display_progress()
             print("\nTesting completed!")
         except KeyboardInterrupt:
             print("\nTesting interrupted by user!")
-        
+
         duration = time.time() - start_time
         minutes, seconds = divmod(duration, 60)
         self.display_summary(duration)
@@ -256,13 +270,13 @@ class ConnectivityValidator:
         minutes, seconds = divmod(duration, 60)
         hours, minutes = divmod(minutes, 60)
         configs_per_second = self.stats['tested_configs'] / duration if duration > 0 else 0
-        
+
         success_rate = (self.stats['valid_configs'] / self.stats['tested_configs'] * 100) if self.stats['tested_configs'] > 0 else 0
 
         title = "TCP Connection Test Results - Final Summary"
         print(f"\n{title}")
         print("=" * len(title))
-        
+
         subtitle = "Time and Performance Information:"
         print(subtitle)
         print("-" * len(subtitle))
@@ -280,56 +294,45 @@ class ConnectivityValidator:
         print(f"   Valid configurations: {self.stats['valid_configs']:,} ({success_rate:.2f}%)")
         print(f"   Invalid configurations: {self.stats['invalid_configs']:,} ({(self.stats['invalid_configs'] / self.stats['tested_configs'] * 100):.2f}%)")
 
-        subtitle = "Overall Success Rate:"
-        print(f"\n{subtitle}")
-        print("-" * len(subtitle))
-        bar_length = 50
-        filled_length = int(bar_length * success_rate / 100)
-        bar = "█" * filled_length + "░" * (bar_length - filled_length)
-        print(f"   [{bar}] {success_rate:.2f}%")
-
-        subtitle = "Error Analysis:"
-        print(f"\n{subtitle}")
-        print("-" * len(subtitle))
-        if self.stats['tested_configs'] > 0:
-            timeout_pct = (self.stats['timeout_configs'] / self.stats['tested_configs']) * 100
-            conn_err_pct = (self.stats['connection_error_configs'] / self.stats['tested_configs']) * 100
-            parse_err_pct = (self.stats['parse_error_configs'] / self.stats['tested_configs']) * 100
-            print(f"   Timeout errors: {self.stats['timeout_configs']:,} ({timeout_pct:.2f}%)")
-            print(f"   Connection errors: {self.stats['connection_error_configs']:,} ({conn_err_pct:.2f}%)")
-            print(f"   Parse errors: {self.stats['parse_error_configs']:,} ({parse_err_pct:.2f}%)")
+        if self.stats['valid_configs'] > 0:
+            print(f"\n✅ Found {self.stats['valid_configs']} valid configurations!")
+        else:
+            print("\n❌ No valid configurations found!")
 
         subtitle = "Protocol Analysis:"
         print(f"\n{subtitle}")
         print("-" * len(subtitle))
-        
+
         sorted_protocols = sorted(self.stats['by_protocol'].items(), 
                                  key=lambda x: (x[1]['valid'] / x[1]['total'] if x[1]['total'] > 0 else 0, x[1]['total']), 
                                  reverse=True)
-        
-        print(f"{'Protocol':<15} {'Total':<10} {'Valid':<10} {'Invalid':<10} {'Success Rate':<15} {'Chart':<18}")
-        print("-" * len("Protocol Analysis:"))
-        
+
+        print(f"{'Protocol':<15} {'Total':<10} {'Valid':<10} {'Invalid':<10} {'Success Rate':<15}")
+        print("-" * 70)
+
         for protocol, stats in sorted_protocols:
             if stats['total'] > 0:
                 valid_percentage = (stats['valid'] / stats['total']) * 100
-                mini_bar_length = 15
-                mini_filled = int(mini_bar_length * valid_percentage / 100)
-                mini_bar = "█" * mini_filled + "░" * (mini_bar_length - mini_filled)
-                print(f"  {protocol:<13} {stats['total']:<10} {stats['valid']:<10} {stats['invalid']:<10} {valid_percentage:<14.2f}% [{mini_bar}]")
-
-        final_msg = f"Test completed successfully! {self.stats['valid_configs']} valid configurations found"
-        print(f"\n{final_msg}")
-        print("=" * len(final_msg))
+                print(f"  {protocol:<13} {stats['total']:<10} {stats['valid']:<10} {stats['invalid']:<10} {valid_percentage:<14.2f}%")
 
     def save_valid_configs(self):
-        print("\nSaving valid configurations...")
-        os.makedirs(self.valid_configs_dir, exist_ok=True)
+        print(f"\n{'='*50}")
+        print("SAVING VALID CONFIGURATIONS")
+        print(f"{'='*50}")
         
+        print(f"Output directory: {self.valid_configs_dir}")
+        print(f"Directory exists: {os.path.exists(self.valid_configs_dir)}")
+        
+        # اطمینان از وجود دایرکتوری
+        os.makedirs(self.valid_configs_dir, exist_ok=True)
+
+        total_saved = 0
+        
+        # ذخیره فایل‌های جداگانه برای هر پروتکل
         for protocol, configs in self.valid_configs.items():
             if not configs:
                 continue
-            
+
             protocol_file = os.path.join(self.valid_configs_dir, f"{protocol}_valid.txt")
             try:
                 with open(protocol_file, 'w', encoding='utf-8') as f:
@@ -338,35 +341,58 @@ class ConnectivityValidator:
                     f.write(f"# Total valid configs: {len(configs)}\n\n")
                     for config in configs:
                         f.write(f"{config}\n")
-                print(f"Saved {len(configs)} valid {protocol} configurations to {protocol_file}")
+                
+                file_size = os.path.getsize(protocol_file)
+                print(f"✅ Saved {len(configs)} valid {protocol} configurations to {protocol_file}")
+                print(f"   File size: {file_size} bytes")
+                total_saved += len(configs)
             except Exception as e:
-                print(f"Error saving {protocol} configurations: {e}")
+                print(f"❌ Error saving {protocol} configurations: {e}")
 
+        # ذخیره فایل ترکیبی
         try:
             all_valid_file = os.path.join(self.valid_configs_dir, "all_valid.txt")
             with open(all_valid_file, 'w', encoding='utf-8') as f:
                 f.write(f"# All Valid Configurations - TCP Test Passed\n")
                 f.write(f"# Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
                 f.write(f"# Total valid configs: {self.stats['valid_configs']}\n\n")
-                
+
                 for protocol, configs in sorted(self.valid_configs.items()):
                     f.write(f"\n# {protocol.upper()} ({len(configs)} configs)\n")
                     for config in configs:
                         f.write(f"{config}\n")
-            
-            print(f"Saved all {self.stats['valid_configs']} valid configurations to {all_valid_file}")
+
+            file_size = os.path.getsize(all_valid_file)
+            print(f"✅ Saved all {self.stats['valid_configs']} valid configurations to {all_valid_file}")
+            print(f"   File size: {file_size} bytes")
         except Exception as e:
-            print(f"Error saving combined valid configurations: {e}")
+            print(f"❌ Error saving combined valid configurations: {e}")
+
+        # نمایش فهرست فایل‌های ایجاد شده
+        print(f"\n{'='*30}")
+        print("CREATED FILES:")
+        print(f"{'='*30}")
+        try:
+            files = os.listdir(self.valid_configs_dir)
+            for file in files:
+                file_path = os.path.join(self.valid_configs_dir, file)
+                if os.path.isfile(file_path):
+                    size = os.path.getsize(file_path)
+                    print(f"📁 {file} ({size} bytes)")
+        except Exception as e:
+            print(f"Error listing created files: {e}")
+
+        print(f"\n✅ Successfully saved {total_saved} configurations in {len(self.valid_configs)} protocol files")
 
 def main():
-    title = "Tests TCP connectivity of proxy configurations"
+    title = "V2Ray Config TCP Connectivity Validator"
     print(title)
     print("=" * len(title))
-    
+
     validator = ConnectivityValidator()
     validator.test_all_configs()
-    
-    print("\nTesting and saving completed successfully!")
+
+    print("\n🎉 Testing and saving completed successfully!")
 
 if __name__ == "__main__":
     main()
