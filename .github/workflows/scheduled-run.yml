@@ -9,15 +9,17 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Set up Python 3.9
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
@@ -28,38 +30,53 @@ jobs:
         if [ -f "requirements.txt" ]; then
           pip install -r requirements.txt
         else
-          REQ_FILE=$(find . -name "requirements.txt" -type f | head -1)
-          if [ -n "$REQ_FILE" ]; then
-            pip install -r "$REQ_FILE"
-          fi
+          echo "requirements.txt not found in root, checking subdirectories..."
+          find . -name "requirements.txt" -exec pip install -r {} \;
         fi
 
     - name: Run main.py
       run: |
-        MAIN_FILE=$(find . -name "main.py" -type f | head -1)
-        if [ -n "$MAIN_FILE" ]; then
-          cd "$(dirname "$MAIN_FILE")"
-          python "$(basename "$MAIN_FILE")"
-        else
-          echo "main.py not found"
-          exit 1
-        fi
+        cd u2ray_config_collector
+        python main.py
+
+    - name: Check generated files
+      run: |
+        echo "Checking for generated files in repository:"
+        find . -name "*valid*.txt" -type f
+        echo ""
+        echo "Data directory content:"
+        ls -la u2ray_config_collector/data/ || echo "Data directory not found"
+        echo ""
+        echo "Validated directory content:"
+        ls -la u2ray_config_collector/data/validated/working_configs/ 2>/dev/null || echo "Validated directory not found"
 
     - name: Commit and push changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
+        echo "Current git status:"
         git status
+        
+        echo "Adding all files:"
         git add --all
         
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
+        if ! git diff --staged --quiet; then
+          echo "Changes detected, committing..."
           git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S') - Valid configs"
-          git push origin HEAD:${{ github.ref }}
+          git push
+          echo "Changes pushed successfully"
+        else
+          echo "No changes to commit"
         fi
 
-    - name: List generated files
+    - name: Verify final status
       run: |
-        find . -path "*/data/validated/*" -name "*.txt" -exec ls -la {} \;
+        echo "Final repository status:"
+        git status
+        echo ""
+        echo "Last commit:"
+        git log -1 --oneline
+        echo ""
+        echo "Generated files:"
+        find . -name "*valid*.txt" -type f | head -10
