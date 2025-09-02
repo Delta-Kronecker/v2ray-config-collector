@@ -27,12 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        if [ -f "requirements.txt" ]; then
-          pip install -r requirements.txt
-        else
-          echo "requirements.txt not found in root, checking subdirectories..."
-          find . -name "requirements.txt" -exec pip install -r {} \;
-        fi
+        pip install -r requirements.txt
 
     - name: Run main.py
       run: |
@@ -41,14 +36,12 @@ jobs:
 
     - name: Check generated files
       run: |
-        echo "Checking for generated files in repository:"
+        echo "Checking for generated files:"
         find . -name "*valid*.txt" -type f
         echo ""
         echo "Data directory content:"
+        ls -la v2ray_config_collector/data/validated/working_configs/ || echo "Checking validated directory..."
         ls -la v2ray_config_collector/data/ || echo "Data directory not found"
-        echo ""
-        echo "Validated directory content:"
-        ls -la v2ray_config_collector/data/validated/working_configs/ 2>/dev/null || echo "Validated directory not found"
 
     - name: Commit and push changes
       run: |
@@ -78,5 +71,5 @@ jobs:
         echo "Last commit:"
         git log -1 --oneline
         echo ""
-        echo "Generated files:"
-        find . -name "*valid*.txt" -type f | head -10
+        echo "Generated files in repository:"
+        find . -name "*valid*.txt" -type f
