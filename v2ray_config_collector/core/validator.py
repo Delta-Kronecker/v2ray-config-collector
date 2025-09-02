@@ -11,14 +11,13 @@ import json
 
 class ConnectivityValidator:
     def __init__(self, input_file=None, output_dir=None):
-        # استفاده از مسیرهای نسبی به جای مطلق
+        # استفاده از مسیرهای نسبی نسبت به محل اجرای اسکریپت
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        package_dir = os.path.dirname(current_dir)
         
         if input_file is None:
-            input_file = os.path.join(package_dir, 'data', 'unique', 'deduplicated.txt')
+            input_file = os.path.join(current_dir, 'data', 'unique', 'deduplicated.txt')
         if output_dir is None:
-            output_dir = os.path.join(package_dir, 'data', 'validated')
+            output_dir = os.path.join(current_dir, 'data', 'validated')
         
         self.input_file = input_file
         self.output_dir = output_dir
