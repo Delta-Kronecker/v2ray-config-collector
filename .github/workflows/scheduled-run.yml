@@ -36,7 +36,7 @@ jobs:
 
     - name: Run main.py
       run: |
-        cd u2ray_config_collector
+        cd v2ray_config_collector
         python main.py
 
     - name: Check generated files
@@ -45,10 +45,10 @@ jobs:
         find . -name "*valid*.txt" -type f
         echo ""
         echo "Data directory content:"
-        ls -la u2ray_config_collector/data/ || echo "Data directory not found"
+        ls -la v2ray_config_collector/data/ || echo "Data directory not found"
         echo ""
         echo "Validated directory content:"
-        ls -la u2ray_config_collector/data/validated/working_configs/ 2>/dev/null || echo "Validated directory not found"
+        ls -la v2ray_config_collector/data/validated/working_configs/ 2>/dev/null || echo "Validated directory not found"
 
     - name: Commit and push changes
       run: |
