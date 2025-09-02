@@ -2,112 +2,64 @@ name: Run Script Every 3 Hours
 
 on:
   schedule:
-    - cron: '0 */1 * * *'  # هر 3 ساعت اجرا شود
-  workflow_dispatch:  # امکان اجرای دستی
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    timeout-minutes: 300  # محدودیت زمان اجرا
+    timeout-minutes: 60
 
     steps:
-    # مرحله ۱: دریافت repository
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
 
-    # مرحله ۲: بررسی ساختار پوشه‌ها (دیباگ)
-    - name: Debug directory structure
-      run: |
-        echo "📁 Current directory structure:"
-        pwd
-        ls -la
-        echo ""
-        echo "🔍 Searching for Python files:"
-        find . -name "*.py" -type f | head -10
-        echo ""
-        echo "🔍 Searching for main.py:"
-        find . -name "main.py" -type f
-        echo ""
-        echo "📦 Checking requirements.txt:"
-        find . -name "requirements.txt" -type f
-
-    # مرحله ۳: نصب Python
     - name: Set up Python 3.9
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-        cache: 'pip'
 
-    # مرحله ۴: نصب dependencies
     - name: Install dependencies
       run: |
-        echo "📦 Installing dependencies..."
         pip install --upgrade pip
         if [ -f "requirements.txt" ]; then
           pip install -r requirements.txt
         else
-          echo "⚠️ requirements.txt not found, trying to find it..."
           REQ_FILE=$(find . -name "requirements.txt" -type f | head -1)
           if [ -n "$REQ_FILE" ]; then
-            echo "📁 Found requirements.txt at: $REQ_FILE"
             pip install -r "$REQ_FILE"
-          else
-            echo "❌ No requirements.txt found"
           fi
         fi
 
-    # مرحله ۵: پیدا کردن و اجرای main.py
-    - name: Find and run main.py
+    - name: Run main.py
       run: |
-        echo "🔍 Looking for main.py..."
         MAIN_FILE=$(find . -name "main.py" -type f | head -1)
-        
-        if [ -z "$MAIN_FILE" ]; then
-          echo "❌ Error: main.py not found!"
-          echo "Available Python files:"
-          find . -name "*.py" -type f
+        if [ -n "$MAIN_FILE" ]; then
+          cd "$(dirname "$MAIN_FILE")"
+          python "$(basename "$MAIN_FILE")"
+        else
+          echo "main.py not found"
           exit 1
         fi
-        
-        echo "✅ Found main.py at: $MAIN_FILE"
-        echo "📂 Directory: $(dirname "$MAIN_FILE")"
-        echo "🚀 Running main.py..."
-        
-        # تغییر به پوشه containing برای importهای صحیح
-        cd "$(dirname "$MAIN_FILE")"
-        python "$(basename "$MAIN_FILE")"
 
-    # مرحله ۶: لاگ و گزارش اجرا
-    - name: Log execution results
+    - name: Commit and push changes
       run: |
-        echo "✅ Script execution completed successfully!"
-        echo "🕒 Next run: Every 1 hours"
-        echo "📊 Last execution: $(date)"
-
-    # مرحله ۷: commit و push تغییرات (اگر اسکریپت فایلی را تغییر دهد)
-    - name: Commit and push changes if any
-      run: |
-        echo "📝 Checking for changes..."
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        # بررسی تغییرات
-        if git diff --quiet && git diff --staged --quiet; then
-          echo "✅ No changes to commit"
+        git status
+        git add --all
+        
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
         else
-          echo "📦 Changes detected, committing..."
-          git add .
-          git commit -m "🤖 Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
-          echo "✅ Changes committed and pushed"
+          git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S') - Valid configs"
+          git push origin HEAD:${{ github.ref }}
         fi
 
-    # مرحله ۸: مدیریت خطا (اختیاری)
-    - name: Notify on failure
-      if: failure()
+    - name: List generated files
       run: |
-        echo "❌ Workflow failed!"
-        echo "Check the logs for details."
-        # می‌توانید اینجا notification اضافه کنید
+        find . -path "*/data/validated/*" -name "*.txt" -exec ls -la {} \;
