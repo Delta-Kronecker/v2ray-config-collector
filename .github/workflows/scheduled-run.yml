@@ -9,13 +9,13 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     timeout-minutes: 60
-    
+
     permissions:
       contents: write
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
@@ -34,42 +34,81 @@ jobs:
         cd v2ray_config_collector
         python main.py
 
-    - name: Check generated files
+    - name: Check generated files (Debug)
       run: |
-        echo "Checking for generated files:"
+        echo "=== Repository root structure ==="
+        ls -la
+        echo ""
+        echo "=== v2ray_config_collector structure ==="
+        ls -la v2ray_config_collector/ || echo "Directory not found"
+        echo ""
+        echo "=== Looking for data directory ==="
+        find . -name "data" -type d
+        echo ""
+        echo "=== Looking for all .txt files ==="
+        find . -name "*.txt" -type f
+        echo ""
+        echo "=== Looking for valid files specifically ==="
         find . -name "*valid*.txt" -type f
         echo ""
-        echo "Data directory content:"
-        ls -la v2ray_config_collector/data/validated/working_configs/ || echo "Checking validated directory..."
-        ls -la v2ray_config_collector/data/ || echo "Data directory not found"
+        echo "=== Checking validated directory ==="
+        ls -la v2ray_config_collector/data/validated/ 2>/dev/null || echo "Validated directory not found"
+        ls -la v2ray_config_collector/data/validated/working_configs/ 2>/dev/null || echo "Working configs directory not found"
+
+    - name: List all files recursively (Debug)
+      run: |
+        echo "=== All files in repository ==="
+        find . -type f -name "*.txt" | head -20
+
+    - name: Check Git Status Before Adding
+      run: |
+        echo "=== Git status before adding files ==="
+        git status --porcelain
+        echo ""
+        echo "=== Untracked files ==="
+        git ls-files --others --exclude-standard
 
     - name: Commit and push changes
       run: |
+        # تنظیم مشخصات Git
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         
-        echo "Current git status:"
+        echo "=== Current git status ==="
         git status
         
-        echo "Adding all files:"
-        git add --all
+        echo "=== Adding all files ==="
+        git add .
         
+        echo "=== Git status after adding ==="
+        git status
+        
+        echo "=== Staged files ==="
+        git diff --staged --name-only
+        
+        # بررسی وجود تغییرات
         if ! git diff --staged --quiet; then
-          echo "Changes detected, committing..."
-          git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S') - Valid configs"
-          git push
-          echo "Changes pushed successfully"
+          echo "=== Changes detected, committing ==="
+          git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S UTC') - Valid configs found"
+          
+          echo "=== Pushing changes ==="
+          git push origin main || git push origin master
+          
+          echo "=== Changes pushed successfully ==="
         else
-          echo "No changes to commit"
+          echo "=== No changes to commit ==="
         fi
 
-    - name: Verify final status
+    - name: Final verification
       run: |
-        echo "Final repository status:"
+        echo "=== Final repository status ==="
         git status
         echo ""
-        echo "Last commit:"
+        echo "=== Last commit ==="
         git log -1 --oneline
         echo ""
-        echo "Generated files in repository:"
-        find . -name "*valid*.txt" -type f
+        echo "=== Final check for generated files ==="
+        find . -name "*valid*.txt" -type f -exec ls -la {} \;
+        echo ""
+        echo "=== Repository size ==="
+        du -sh .
