@@ -631,8 +631,9 @@
   {
     "address": "mashti.isvcloud2.ir",
     "port": 1010,
-    "password": "----telegram--ISVvpn----",
-    "name": "@XrayTurbo🔥"
+    "password": "DJprIqUa4b",
+    "name": "@XrayTurbo🔥",
+    "type": "raw"
   },
   {
     "address": "104.251.227.182",
@@ -733,18 +734,6 @@
     "type": "ws",
     "host": "fk31lndm4w8uj0yp1drwltdtdko6y-cu.pages.dev",
     "path": "/trNs9G5VJ2vI0PxgP2"
-  },
-  {
-    "address": "172.66.44.59",
-    "port": 443,
-    "password": "?M|$pIEDnf8N",
-    "name": "@XrayTurbo🔥",
-    "sni": "gkH7imOMi--3t3xcStZT8pp4dlZUEsKN.PagEs.deV",
-    "alpn": "http/1.1",
-    "fp": "chrome",
-    "type": "ws",
-    "host": "gkh7imomi--3t3xcstzt8pp4dlzueskn.pages.dev",
-    "path": "/trjlFIcjqAklnJcJjx/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ=="
   },
   {
     "address": "176.97.210.2",
@@ -1188,6 +1177,22 @@
     "path": "%2Ftrojan-ntls"
   },
   {
+    "address": "customer-45-67-229-222.stark-industries.solutions",
+    "port": 443,
+    "password": "c5691b8f-d833-41e4-9295-769f3edb4cd2",
+    "name": "@XrayTurbo🔥",
+    "sni": "customer-45-67-229-222.stark-industries.solutions",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "52.16.250.10",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
     "address": "maradona_vpn14.history-paint.art",
     "port": 443,
     "password": "maradona_vpn",
@@ -1231,14 +1236,6 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "35.181.234.204",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
     "address": "3.72.151.13",
     "port": 22222,
     "password": "telegram-id-privatevpns",
@@ -1248,6 +1245,14 @@
   },
   {
     "address": "63.179.38.42",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "13.37.27.224",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
@@ -1286,14 +1291,6 @@
     "host": "vzwzasc.cn"
   },
   {
-    "address": "35.181.234.204",
-    "port": 22223,
-    "password": "telegram-id-v2rayvpnchannel",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
     "address": "3.72.151.13",
     "port": 22223,
     "password": "telegram-id-v2rayvpnchannel",
@@ -1303,6 +1300,14 @@
   },
   {
     "address": "63.179.38.42",
+    "port": 22223,
+    "password": "telegram-id-v2rayvpnchannel",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "13.37.27.224",
     "port": 22223,
     "password": "telegram-id-v2rayvpnchannel",
     "name": "@XrayTurbo🔥",
@@ -1367,13 +1372,36 @@
     "fp": "chrome"
   },
   {
-    "address": "144.24.87.186",
-    "port": 46527,
-    "password": "09833a6f-4d46-426e-87fe-7793a5489f84",
+    "address": "13.36.201.87",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
-    "sni": "lovehjq.xyz",
-    "fp": "chrome",
-    "allowInsecure": "1"
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "13.37.35.7",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "35.181.163.64",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "141.227.138.29",
+    "port": 1935,
+    "password": "hZ7JkYVAfB",
+    "name": "@XrayTurbo🔥",
+    "sni": "x1ch-ovh.devefun.net",
+    "alpn": "h3,h2,http/1.1"
   },
   {
     "address": "192.169.220.195",
@@ -1386,95 +1414,6 @@
     "path": "Telegram@ShadowProxy66"
   },
   {
-    "address": "104.16.148.178",
-    "port": 443,
-    "password": "WOeXShhJpL",
-    "name": "@XrayTurbo🔥",
-    "sni": "07jzus.zdzdzd.xyz",
-    "type": "ws",
-    "host": "07jzus.zdzdzd.xyz",
-    "path": "/juzigongyi"
-  },
-  {
-    "address": "15.188.179.102",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "104.26.6.89",
-    "port": 443,
-    "password": "auto",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojanmz.pages.dev",
-    "type": "ws",
-    "host": "trojanmz.pages.dev",
-    "path": "/trojanmz.pages.dev/?ed=2560"
-  },
-  {
-    "address": "141.227.128.69",
-    "port": 1935,
-    "password": "utF6JLQd2x",
-    "name": "@XrayTurbo🔥",
-    "sni": "x1es-ovh.devefun.net",
-    "host": "x1es-ovh.devefun.net",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "18.194.230.54",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "ent1.imyourdaddy.top",
-    "port": 20980,
-    "password": "64f33df2-4f9d-4cf3-bb69-b82b08cf149a",
-    "name": "@XrayTurbo🔥",
-    "sni": "sale.alibaba.com",
-    "allowInsecure": "0"
-  },
-  {
-    "address": "download2hkt.windowsupdate.lol",
-    "port": 443,
-    "password": "7778e684-f435-4166-bf9e-0256cb28bf10",
-    "name": "@XrayTurbo🔥",
-    "sni": "download2hkt.windowsupdate.lol",
-    "fp": "chrome"
-  },
-  {
-    "address": "91.193.58.0",
-    "port": 443,
-    "password": "trojan",
-    "name": "@XrayTurbo🔥",
-    "sni": "wahaha.yingyangkuaixian.dpdns.org",
-    "fp": "chrome",
-    "type": "ws",
-    "host": "wahaha.yingyangkuaixian.dpdns.org",
-    "path": "/"
-  },
-  {
-    "address": "103.224.182.213",
-    "port": 443,
-    "password": "654a309b-fdaa-3263-9bed-74a7e1532fd9",
-    "name": "@XrayTurbo🔥",
-    "sni": "az05feiy.kuli888.xyz",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "3.77.198.138",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
     "address": "frontend.yijianlian.app",
     "port": 54530,
     "password": "1d29537a-3ec0-4775-97ec-c5773b6e4103",
@@ -1484,36 +1423,43 @@
     "allowInsecure": "1"
   },
   {
-    "address": "ip.sb",
-    "port": 8443,
-    "password": "trojan",
+    "address": "15.197.162.184",
+    "port": 443,
+    "password": "af4d2493-9156-4514-9f6b-ee5d1a1e4713",
     "name": "@XrayTurbo🔥",
-    "sni": "qianlang.pages.dev",
-    "fp": "random",
+    "sni": "download2hkt.windowsupdate.lol",
+    "fp": "chrome"
+  },
+  {
+    "address": "103.160.204.1",
+    "port": 443,
+    "password": "amclubs",
+    "name": "@XrayTurbo🔥",
+    "sni": "tran.amclubstest.nyc.mn",
     "type": "ws",
-    "host": "qianlang.pages.dev",
-    "path": "/?ed=2560"
+    "host": "tran.amclubstest.nyc.mn",
+    "path": "/?ed=2560",
+    "allowInsecure": "1"
   },
   {
-    "address": "141.227.138.29",
-    "port": 1935,
-    "password": "hZ7JkYVAfB",
+    "address": "52.59.58.34",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
-    "sni": "x1ch-ovh.devefun.net",
-    "alpn": "h3,h2,http/1.1"
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
   },
   {
-    "address": "198.202.211.195",
-    "port": 2096,
-    "password": "slch2024",
+    "address": "mrarshaordenshpgaamericang00d.arshaproplus.cf",
+    "port": 443,
+    "password": "027c71ac-026b-4755-9a33-26558ce6f6a2",
     "name": "@XrayTurbo🔥",
-    "sni": "ocost-dy.wmlefl.cc",
-    "type": "ws",
-    "host": "ocost-dy.wmlefl.cc",
-    "path": "Telegram@ShadowProxy66"
+    "sni": "ddragon.leagueoflegends.com",
+    "fp": "chrome",
+    "allowInsecure": "1"
   },
   {
-    "address": "199.68.156.69",
+    "address": "162.159.152.2",
     "port": 443,
     "password": "dns68",
     "name": "@XrayTurbo🔥",
@@ -1523,160 +1469,6 @@
     "type": "ws",
     "host": "trojan.putata.us.kg",
     "path": "/?ed=2560"
-  },
-  {
-    "address": "aafrtpfxr.hkl01i9zjfegelp.5xfsur8v62.gosdk.xyz",
-    "port": 27101,
-    "password": "4e399fb9-5a4c-49cd-9849-2051512f4c6c",
-    "name": "@XrayTurbo🔥",
-    "sni": "q08m.vgraxiw73s.hasyaf.cn",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "104.20.19.167",
-    "port": 443,
-    "password": "auto",
-    "name": "@XrayTurbo🔥",
-    "sni": "b96ef9ae.trojanfree-76s.pages.dev",
-    "type": "ws",
-    "host": "b96ef9ae.trojanfree-76s.pages.dev",
-    "path": "/b96ef9ae.trojanfree-76s.pages.dev"
-  },
-  {
-    "address": "198.41.212.233",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "df.xiguajiasu.xyz",
-    "port": 46002,
-    "password": "4ea1d07c-41c2-42b5-954d-414fee051856",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "51.15.86.181",
-    "port": 1935,
-    "password": "eG92F3gh09",
-    "name": "@XrayTurbo🔥",
-    "sni": "x1ams-scaleway.devefun.net",
-    "alpn": "h3,h2,http/1.1"
-  },
-  {
-    "address": "104.20.19.172",
-    "port": 443,
-    "password": "auto",
-    "name": "@XrayTurbo🔥",
-    "sni": "b96ef9ae.trojanfree-76s.pages.dev",
-    "type": "ws",
-    "host": "b96ef9ae.trojanfree-76s.pages.dev",
-    "path": "/b96ef9ae.trojanfree-76s.pages.dev"
-  },
-  {
-    "address": "104.18.6.36",
-    "port": 8443,
-    "password": "channel-daily-configs",
-    "name": "@XrayTurbo🔥",
-    "sni": "kanale-daily-configs.blackoutconnection.ir",
-    "alpn": "h2,http/1.1",
-    "fp": "randomized",
-    "type": "ws",
-    "host": "kanale-daily-configs.blackoutconnection.ir",
-    "path": "/TELEGRAM:@Daily_Configs?ed=2560"
-  },
-  {
-    "address": "13.36.49.89",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "104.18.18.138",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "3.65.97.31",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "190.93.245.69",
-    "port": 443,
-    "password": "bpb-trojan",
-    "name": "@XrayTurbo🔥",
-    "sni": "fcspring.ggff.net",
-    "type": "ws",
-    "host": "fcspring.ggff.net",
-    "path": "/tr?ed"
-  },
-  {
-    "address": "172.64.35.188",
-    "port": 443,
-    "password": "blue2024",
-    "name": "@XrayTurbo🔥",
-    "sni": "ta.promote.icu"
-  },
-  {
-    "address": "3050cfd7-sx6ps0-sydxa9-fa3p.cm5.cnkuaishou.com",
-    "port": 27231,
-    "password": "905fcd78-866c-81e1-3cb8-1beb59d661ab",
-    "name": "@XrayTurbo🔥",
-    "sni": "3050cfd7-sx6ps0-sydxa9-fa3p.cm5.cnkuaishou.com",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "172.64.49.211",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "3.98.186.5",
-    "port": 22222,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "15.188.237.53",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "15.188.112.221",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "35.181.163.64",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "15.236.166.144",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
   },
   {
     "address": "2a06:98c1:3121::3",
@@ -1691,27 +1483,29 @@
     "path": "/?ed=2560"
   },
   {
-    "address": "104.36.195.61",
+    "address": "172.64.35.159",
     "port": 443,
-    "password": "bpb-trojan",
+    "password": "auto",
     "name": "@XrayTurbo🔥",
-    "sni": "bpb.my79801.com",
+    "sni": "trojanmz.pages.dev",
     "type": "ws",
-    "host": "bpb.my79801.com",
-    "path": "/tr"
+    "host": "trojanmz.pages.dev",
+    "path": "/trojanmz.pages.dev/?ed=2560"
   },
   {
-    "address": "185.236.233.111",
-    "port": 2053,
-    "password": "ba74833c-8c0f-4dcd-8cbc-13e3c32d3765",
+    "address": "aafrtpfxr.hkl01i9zjfegelp.5xfsur8v62.gosdk.xyz",
+    "port": 27101,
+    "password": "4e399fb9-5a4c-49cd-9849-2051512f4c6c",
     "name": "@XrayTurbo🔥",
-    "sni": "ftp.debian.org"
+    "sni": "q08m.vgraxiw73s.hasyaf.cn",
+    "allowInsecure": "1"
   },
   {
-    "address": "173.245.58.140",
+    "address": "185.231.206.12",
     "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
+    "password": "c5691b8f-d833-41e4-9295-769f3edb4cd2",
+    "name": "@XrayTurbo🔥",
+    "sni": "customer-185-231-206-12.stark-industries.solutions"
   },
   {
     "address": "lm.kaiqsz.com",
@@ -1721,28 +1515,20 @@
     "sni": "mmbiz10.redapricotcloud.com"
   },
   {
-    "address": "aio.zipzap.biz.id",
+    "address": "172.64.35.188",
     "port": 443,
-    "password": "f282b878-8711-45a1-8c69-5564172123c1",
+    "password": "blue2024",
     "name": "@XrayTurbo🔥",
-    "sni": "aio.zipzap.biz.id",
-    "type": "ws",
-    "host": "aio.zipzap.biz.id",
-    "path": "/aioproxybot/129.150.49.58-18650"
+    "sni": "ta.promote.icu"
   },
   {
-    "address": "103.160.204.1",
+    "address": "172.66.207.49",
     "port": 443,
-    "password": "amclubs",
-    "name": "@XrayTurbo🔥",
-    "sni": "tran.amclubstest.nyc.mn",
-    "type": "ws",
-    "host": "tran.amclubstest.nyc.mn",
-    "path": "/?ed=2560",
-    "allowInsecure": "1"
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
   },
   {
-    "address": "104.20.18.121",
+    "address": "104.20.20.23",
     "port": 443,
     "password": "auto",
     "name": "@XrayTurbo🔥",
@@ -1752,22 +1538,7 @@
     "path": "/b96ef9ae.trojanfree-76s.pages.dev"
   },
   {
-    "address": "13.36.201.87",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "3.11.92.247",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk"
-  },
-  {
-    "address": "3.75.7.175",
+    "address": "3.72.224.12",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
@@ -1775,12 +1546,47 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "3.123.67.61",
+    "address": "63.179.50.132",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
+  },
+  {
+    "address": "frontend.kuangbiaoyun.com",
+    "port": 40005,
+    "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
+    "name": "@XrayTurbo🔥",
+    "sni": "frontend.kuangbiaoyun.com",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "204bdce4-sxaf40-t5bgb3-l4nv.cm5.cnkuaishou.com",
+    "port": 27231,
+    "password": "1469e09e-027c-11ec-a0fc-f23c913c8d2b",
+    "name": "@XrayTurbo🔥",
+    "sni": "204bdce4-sxaf40-t5bgb3-l4nv.cm5.cnkuaishou.com"
+  },
+  {
+    "address": "server2.cactusrobot.ir",
+    "port": 8608,
+    "password": "V_kT5VVzTK4gfCCxQipNAA",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "naiu-jp.05vr9nyqg5.download",
+    "port": 13011,
+    "password": "dc15d997-8b26-4294-870e-c90a5784dca4",
+    "name": "@XrayTurbo🔥",
+    "sni": "cloudflare.node-ssl.cdn-alibaba.com"
+  },
+  {
+    "address": "127.0.0.1",
+    "port": 8080,
+    "password": "bcacaab-baca-baca-dbac-accaabbcbacb",
+    "name": "@XrayTurbo🔥"
   },
   {
     "address": "210.203.60.189",
@@ -1789,6 +1595,30 @@
     "name": "@XrayTurbo🔥",
     "sni": "45.32.28.232",
     "fp": "chrome"
+  },
+  {
+    "address": "3.65.97.31",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "36.151.192.198",
+    "port": 36900,
+    "password": "QwwHvrnN",
+    "name": "@XrayTurbo🔥",
+    "sni": "36.151.192.198",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "3.72.224.12",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
   },
   {
     "address": "ca-sep6th.wimax.cc",
@@ -1800,9 +1630,221 @@
     "fp": "chrome"
   },
   {
-    "address": "52.215.96.168",
+    "address": "15.188.179.102",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "18.132.219.129",
     "port": 22222,
     "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "198.202.211.195",
+    "port": 2096,
+    "password": "slch2024",
+    "name": "@XrayTurbo🔥",
+    "sni": "ocost-dy.wmlefl.cc",
+    "type": "ws",
+    "host": "ocost-dy.wmlefl.cc",
+    "path": "Telegram@ShadowProxy66"
+  },
+  {
+    "address": "15.223.108.229",
+    "port": 22222,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk"
+  },
+  {
+    "address": "63.179.231.61",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "aws-uae-1.f1cflineb.com",
+    "port": 443,
+    "password": "your_password",
+    "name": "@XrayTurbo🔥",
+    "sni": "aws-uae-1.f1cflineb.com",
+    "fp": "chrome",
+    "type": "ws",
+    "host": "aws-uae-1.f1cflineb.com",
+    "path": "/f1rocket"
+  },
+  {
+    "address": "172.64.132.154",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "104.16.81.105",
+    "port": 443,
+    "password": "blue2024",
+    "name": "@XrayTurbo🔥",
+    "sni": "hb.lii2010.us.kg"
+  },
+  {
+    "address": "35.167.93.200",
+    "port": 443,
+    "password": "Aimer",
+    "name": "@XrayTurbo🔥",
+    "sni": "ngepy.ambercc.filegear-sg.me"
+  },
+  {
+    "address": "35.181.234.204",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "104.19.166.187",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "3050cfd7-sx6ps0-sydxa9-fa3p.cm5.cnkuaishou.com",
+    "port": 27231,
+    "password": "905fcd78-866c-81e1-3cb8-1beb59d661ab",
+    "name": "@XrayTurbo🔥",
+    "sni": "3050cfd7-sx6ps0-sydxa9-fa3p.cm5.cnkuaishou.com",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "104.18.197.61",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "104.20.243.154",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "103.224.182.213",
+    "port": 443,
+    "password": "654a309b-fdaa-3263-9bed-74a7e1532fd9",
+    "name": "@XrayTurbo🔥",
+    "sni": "az05feiy.kuli888.xyz",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "94.131.122.157",
+    "port": 8443,
+    "password": "da86c6b5-a130-4bb8-a6ef-00b77b85b9e7",
+    "name": "@XrayTurbo🔥",
+    "sni": "uk2.safecdn.site",
+    "type": "grpc",
+    "serviceName": "grpc"
+  },
+  {
+    "address": "gzog.runjustfast.com",
+    "port": 30101,
+    "password": "58bb35bc-8c58-4065-8c5f-9eeedb237eb1",
+    "name": "@XrayTurbo🔥",
+    "sni": "hk1.runjustfast.com",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "103.76.128.50",
+    "port": 3333,
+    "password": "eb0c0b71-20d5-43b3-8c44-3e63e3fdd1a6",
+    "name": "@XrayTurbo🔥",
+    "sni": "akjp.yuwenle.vip"
+  },
+  {
+    "address": "104.26.12.31",
+    "port": 443,
+    "password": "auto",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojanmz.pages.dev",
+    "type": "ws",
+    "host": "trojanmz.pages.dev",
+    "path": "/trojanmz.pages.dev/?ed=2560"
+  },
+  {
+    "address": "51.68.13.106",
+    "port": 1935,
+    "password": "FiSo7J6vfS",
+    "name": "@XrayTurbo🔥",
+    "sni": "x1fr-ovh.devefun.net",
+    "alpn": "h3,h2,http/1.1"
+  },
+  {
+    "address": "35.157.250.100",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "3.98.186.5",
+    "port": 22222,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "104.20.19.172",
+    "port": 443,
+    "password": "auto",
+    "name": "@XrayTurbo🔥",
+    "sni": "b96ef9ae.trojanfree-76s.pages.dev",
+    "type": "ws",
+    "host": "b96ef9ae.trojanfree-76s.pages.dev",
+    "path": "/b96ef9ae.trojanfree-76s.pages.dev"
+  },
+  {
+    "address": "172.64.49.211",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "ent1.imyourdaddy.top",
+    "port": 20980,
+    "password": "64f33df2-4f9d-4cf3-bb69-b82b08cf149a",
+    "name": "@XrayTurbo🔥",
+    "sni": "sale.alibaba.com",
+    "allowInsecure": "0"
+  },
+  {
+    "address": "13.36.17.197",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "198.41.205.240",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "18.168.239.61",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
@@ -1816,10 +1858,12 @@
     "allowInsecure": "0"
   },
   {
-    "address": "172.67.233.168",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
+    "address": "15.188.237.53",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
   },
   {
     "address": "108.162.195.159",
@@ -1832,25 +1876,7 @@
     "path": "/trojanmz.pages.dev/?ed=2560"
   },
   {
-    "address": "36.151.192.198",
-    "port": 36900,
-    "password": "QwwHvrnN",
-    "name": "@XrayTurbo🔥",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "23.247.137.64",
-    "port": 443,
-    "password": "3c4e10af98c30972",
-    "name": "@XrayTurbo🔥",
-    "alpn": "h2",
-    "fp": "chrome",
-    "type": "grpc",
-    "serviceName": "db",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "3.72.224.12",
+    "address": "51.44.137.60",
     "port": 22223,
     "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
@@ -1858,183 +1884,7 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "172.67.254.32",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "52.29.254.165",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "198.41.202.175",
-    "port": 443,
-    "password": "bpb-trojan",
-    "name": "@XrayTurbo🔥",
-    "sni": "bpb.my79801.com",
-    "type": "ws",
-    "host": "bpb.my79801.com",
-    "path": "/tr"
-  },
-  {
-    "address": "94.131.122.157",
-    "port": 8443,
-    "password": "da86c6b5-a130-4bb8-a6ef-00b77b85b9e7",
-    "name": "@XrayTurbo🔥",
-    "sni": "uk2.safecdn.site",
-    "type": "grpc",
-    "serviceName": "grpc"
-  },
-  {
-    "address": "198.41.215.240",
-    "port": 443,
-    "password": "NISHIKUITAN222",
-    "name": "@XrayTurbo🔥",
-    "sni": "ij.ylks.xyz",
-    "type": "ws",
-    "host": "ij.ylks.xyz",
-    "path": "/"
-  },
-  {
-    "address": "mrarshaordenshpgaamericang00d.arshaproplus.cf",
-    "port": 443,
-    "password": "027c71ac-026b-4755-9a33-26558ce6f6a2",
-    "name": "@XrayTurbo🔥",
-    "sni": "ddragon.leagueoflegends.com",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "104.18.197.61",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "15.223.108.229",
-    "port": 22222,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk"
-  },
-  {
-    "address": "172.66.207.49",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "172.67.198.177",
-    "port": 443,
-    "password": "9yu6m5okr",
-    "name": "@XrayTurbo🔥",
-    "sni": "production.tj.ojan.workers.dev",
-    "type": "ws",
-    "host": "production.tj.ojan.workers.dev",
-    "path": "/Telegram-@V2ray_Alpha/?ed=2560"
-  },
-  {
-    "address": "15.236.189.128",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "104.20.204.132",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "104.27.44.212",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "104.19.77.247",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "104.20.243.154",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "sg01.freeflyingcloud.xyz",
-    "port": 35702,
-    "password": "4378e5d1-cddd-42b0-bcc5-d4350fc59b4a",
-    "name": "@XrayTurbo🔥",
-    "sni": "sg01.freeflyingcloud.xyz",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "198.41.205.240",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "sg02.trojanyyds.xyz",
-    "port": 443,
-    "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-    "name": "@XrayTurbo🔥",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "15.188.179.102",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "18.168.239.61",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "185.231.206.12",
-    "port": 443,
-    "password": "c5691b8f-d833-41e4-9295-769f3edb4cd2",
-    "name": "@XrayTurbo🔥",
-    "sni": "customer-185-231-206-12.stark-industries.solutions"
-  },
-  {
-    "address": "104.27.65.15",
-    "port": 443,
-    "password": "blue2024",
-    "name": "@XrayTurbo🔥",
-    "sni": "hb.lii2010.us.kg",
-    "type": "ws",
-    "host": "hb.lii2010.us.kg"
-  },
-  {
-    "address": "198.23.229.250",
-    "port": 443,
-    "password": "2ee85121-31de-4581-a492-eb00f606e392",
-    "name": "@XrayTurbo🔥",
-    "sni": "rc6.freeguard.org",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "13.39.11.27",
+    "address": "18.194.230.54",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
@@ -2052,103 +1902,21 @@
     "path": "ws/?ed=2048"
   },
   {
-    "address": "aws-uae-1.f1cflineb.com",
-    "port": 443,
-    "password": "your_password",
-    "name": "@XrayTurbo🔥",
-    "sni": "aws-uae-1.f1cflineb.com",
-    "fp": "chrome",
-    "type": "ws",
-    "host": "aws-uae-1.f1cflineb.com",
-    "path": "/f1rocket"
-  },
-  {
-    "address": "3.75.7.175",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "13.36.17.197",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "15.236.189.128",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "104.16.192.1",
-    "port": 443,
-    "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
-    "name": "@XrayTurbo🔥",
-    "sni": "sherasheba.com",
-    "type": "ws",
-    "host": "sherasheba.com",
-    "path": "/6b777a91"
-  },
-  {
-    "address": "usla.mjt000.com",
-    "port": 443,
-    "password": "1ba48a0e-af2e-45fb-9e15-2b2d4134657c",
-    "name": "@XrayTurbo🔥",
-    "sni": "usla.mjt000.com"
-  },
-  {
-    "address": "naiu-jp.05vr9nyqg5.download",
-    "port": 13011,
-    "password": "dc15d997-8b26-4294-870e-c90a5784dca4",
-    "name": "@XrayTurbo🔥",
-    "sni": "cloudflare.node-ssl.cdn-alibaba.com"
-  },
-  {
-    "address": "13.37.35.7",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "35.159.2.5",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "35.157.250.100",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "104.26.12.31",
-    "port": 443,
-    "password": "auto",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojanmz.pages.dev",
-    "type": "ws",
-    "host": "trojanmz.pages.dev",
-    "path": "/trojanmz.pages.dev/?ed=2560"
-  },
-  {
-    "address": "154.197.121.175",
+    "address": "159.246.55.202",
     "port": 443,
     "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
+    "name": "@XrayTurbo🔥",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "104.36.195.61",
+    "port": 443,
+    "password": "bpb-trojan",
+    "name": "@XrayTurbo🔥",
+    "sni": "bpb.my79801.com",
+    "type": "ws",
+    "host": "bpb.my79801.com",
+    "path": "/tr"
   },
   {
     "address": "63.179.50.132",
@@ -2159,56 +1927,76 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "63.179.214.164",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
+    "address": "foreign01.lovehjq.xyz",
+    "port": 46521,
+    "password": "09833a6f-4d46-426e-87fe-7793a5489f84",
+    "name": "@XrayTurbo🔥",
+    "sni": "lovehjq.xyz",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "sg01.freeflyingcloud.xyz",
+    "port": 35702,
+    "password": "4378e5d1-cddd-42b0-bcc5-d4350fc59b4a",
+    "name": "@XrayTurbo🔥",
+    "sni": "sg01.freeflyingcloud.xyz",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "198.41.202.175",
+    "port": 443,
+    "password": "bpb-trojan",
+    "name": "@XrayTurbo🔥",
+    "sni": "bpb.my79801.com",
+    "type": "ws",
+    "host": "bpb.my79801.com",
+    "path": "/tr"
+  },
+  {
+    "address": "3.75.7.175",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
   },
   {
-    "address": "35.167.93.200",
-    "port": 443,
-    "password": "Aimer",
-    "name": "@XrayTurbo🔥",
-    "sni": "ngepy.ambercc.filegear-sg.me"
-  },
-  {
-    "address": "172.64.132.154",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "customer-95-164-38-151.stark-industries.solutions",
-    "port": 443,
-    "password": "c5691b8f-d833-41e4-9295-769f3edb4cd2",
-    "name": "@XrayTurbo🔥"
-  },
-  {
     "address": "frontend.kuangbiaoyun.com",
-    "port": 40004,
+    "port": 40006,
     "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
     "name": "@XrayTurbo🔥",
     "fp": "chrome",
     "allowInsecure": "1"
   },
   {
-    "address": "103.76.128.50",
-    "port": 3333,
-    "password": "eb0c0b71-20d5-43b3-8c44-3e63e3fdd1a6",
+    "address": "52.29.254.165",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
-    "sni": "akjp.yuwenle.vip"
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
   },
   {
-    "address": "172.64.146.66",
+    "address": "198.41.215.240",
     "port": 443,
-    "password": "auto",
+    "password": "NISHIKUITAN222",
     "name": "@XrayTurbo🔥",
-    "sni": "trojanmz.pages.dev",
+    "sni": "ij.ylks.xyz",
     "type": "ws",
-    "host": "trojanmz.pages.dev",
-    "path": "/trojanmz.pages.dev/?ed=2560"
+    "host": "ij.ylks.xyz",
+    "path": "/"
+  },
+  {
+    "address": "23.247.137.64",
+    "port": 443,
+    "password": "3c4e10af98c30972",
+    "name": "@XrayTurbo🔥",
+    "alpn": "h2",
+    "fp": "chrome",
+    "type": "grpc",
+    "serviceName": "db",
+    "allowInsecure": "1"
   },
   {
     "address": "172.67.216.95",
@@ -2221,252 +2009,6 @@
     "type": "ws",
     "host": "aws-us-oregon-1.f1cflined.com",
     "path": "/f1rocket"
-  },
-  {
-    "address": "frontend.kuangbiaoyun.com",
-    "port": 40006,
-    "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
-    "name": "@XrayTurbo🔥",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "server2.cactusrobot.ir",
-    "port": 8608,
-    "password": "V_kT5VVzTK4gfCCxQipNAA",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "204bdce4-sxaf40-t5bgb3-l4nv.cm5.cnkuaishou.com",
-    "port": 27231,
-    "password": "1469e09e-027c-11ec-a0fc-f23c913c8d2b",
-    "name": "@XrayTurbo🔥",
-    "sni": "204bdce4-sxaf40-t5bgb3-l4nv.cm5.cnkuaishou.com"
-  },
-  {
-    "address": "35.181.20.132",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "172.64.35.159",
-    "port": 443,
-    "password": "auto",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojanmz.pages.dev",
-    "type": "ws",
-    "host": "trojanmz.pages.dev",
-    "path": "/trojanmz.pages.dev/?ed=2560"
-  },
-  {
-    "address": "18.195.237.139",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "frontend.kuangbiaoyun.com",
-    "port": 40005,
-    "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
-    "name": "@XrayTurbo🔥",
-    "sni": "frontend.kuangbiaoyun.com",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "13.36.201.87",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "18.132.219.129",
-    "port": 22222,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "naiu-us.05vr9nyqg5.download",
-    "port": 13020,
-    "password": "5e2ce79c-170e-484a-8802-40584a1a3a12",
-    "name": "@XrayTurbo🔥",
-    "sni": "cloudflare.node-ssl.cdn-alibaba.com"
-  },
-  {
-    "address": "63.179.50.132",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "hk03.trojanyyds.xyz",
-    "port": 443,
-    "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
-    "name": "@XrayTurbo🔥",
-    "sni": "hk03.trojanyyds.xyz"
-  },
-  {
-    "address": "162.159.138.232",
-    "port": 443,
-    "password": "dQDQCtns4R",
-    "name": "@XrayTurbo🔥",
-    "sni": "fadaei.movieland.top",
-    "type": "ws",
-    "host": "fadaei.movieland.top",
-    "path": "static34528"
-  },
-  {
-    "address": "18.194.230.54",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "13.37.117.144",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "206.238.237.1",
-    "port": 2087,
-    "password": "dns68",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.putata.us.kg",
-    "alpn": "http/1.1",
-    "fp": "randomized",
-    "type": "ws",
-    "host": "trojan.putata.us.kg",
-    "path": "/?ed=2560"
-  },
-  {
-    "address": "190.93.245.154",
-    "port": 443,
-    "password": "blue2024",
-    "name": "@XrayTurbo🔥",
-    "sni": "hb.lii2010.us.kg",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "141.227.160.167",
-    "port": 1935,
-    "password": "AXpQXM4vNh",
-    "name": "@XrayTurbo🔥",
-    "sni": "x2swe-ovh.devefun.net",
-    "alpn": "h3,h2,http/1.1"
-  },
-  {
-    "address": "167.68.11.173",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥",
-    "sni": "zb.ylks.xyz",
-    "type": "ws",
-    "host": "zb.ylks.xyz",
-    "path": "/"
-  },
-  {
-    "address": "gy.58n.net",
-    "port": 20278,
-    "password": "189ee014-7856-3625-954c-91fb1a122bc6",
-    "name": "@XrayTurbo🔥",
-    "sni": "z278.hongkongnode.top",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "5.10.247.97",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥",
-    "sni": "zb.ylks.xyz",
-    "type": "ws",
-    "host": "zb.ylks.xyz",
-    "path": "/"
-  },
-  {
-    "address": "35.181.163.64",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "gzog.runjustfast.com",
-    "port": 30101,
-    "password": "58bb35bc-8c58-4065-8c5f-9eeedb237eb1",
-    "name": "@XrayTurbo🔥",
-    "sni": "hk1.runjustfast.com",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "3.72.224.12",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "127.0.0.1",
-    "port": 8080,
-    "password": "bcacaab-baca-baca-dbac-accaabbcbacb",
-    "name": "@XrayTurbo🔥"
-  },
-  {
-    "address": "3.65.97.31",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "173.245.59.61",
-    "port": 443,
-    "password": "NISHIKUITAN222",
-    "name": "@XrayTurbo🔥",
-    "sni": "in.ylks.xyz",
-    "type": "ws",
-    "host": "in.ylks.xyz",
-    "path": "/"
-  },
-  {
-    "address": "15.188.112.221",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "13.36.17.197",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "104.19.166.187",
-    "port": 443,
-    "password": "NISHIKUITAN111",
-    "name": "@XrayTurbo🔥"
   },
   {
     "address": "35.179.254.202",
@@ -2490,111 +2032,13 @@
     "path": "/tro8sFW1S91B6sZrM1?ed=2560"
   },
   {
-    "address": "35.157.250.100",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "uk-03.allhubb.info",
-    "port": 8443,
-    "password": "1ce1df7962f71c6f",
-    "name": "@XrayTurbo🔥",
-    "sni": "uk-03.allhubb.info",
-    "alpn": "h2,http/1.1",
-    "fp": "chrome"
-  },
-  {
-    "address": "51.68.13.106",
-    "port": 1935,
-    "password": "FiSo7J6vfS",
-    "name": "@XrayTurbo🔥",
-    "sni": "x1fr-ovh.devefun.net",
-    "alpn": "h3,h2,http/1.1"
-  },
-  {
-    "address": "15.197.162.184",
-    "port": 443,
-    "password": "af4d2493-9156-4514-9f6b-ee5d1a1e4713",
-    "name": "@XrayTurbo🔥",
-    "sni": "download2hkt.windowsupdate.lol",
-    "fp": "chrome"
-  },
-  {
-    "address": "104.20.20.23",
-    "port": 443,
-    "password": "auto",
-    "name": "@XrayTurbo🔥",
-    "sni": "b96ef9ae.trojanfree-76s.pages.dev",
-    "type": "ws",
-    "host": "b96ef9ae.trojanfree-76s.pages.dev",
-    "path": "/b96ef9ae.trojanfree-76s.pages.dev"
-  },
-  {
-    "address": "104.17.250.47",
-    "port": 443,
-    "password": "blue2024",
-    "name": "@XrayTurbo🔥",
-    "sni": "hb.lii2010.us.kg"
-  },
-  {
-    "address": "13.39.201.68",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "frontend.kuangbiaoyun.com",
-    "port": 40001,
-    "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
-    "name": "@XrayTurbo🔥",
-    "sni": "frontend.kuangbiaoyun.com",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "104.16.81.105",
-    "port": 443,
-    "password": "blue2024",
-    "name": "@XrayTurbo🔥",
-    "sni": "hb.lii2010.us.kg"
-  },
-  {
     "address": "204.93.210.216",
     "port": 443,
     "password": "NISHIKUITAN111",
     "name": "@XrayTurbo🔥"
   },
   {
-    "address": "52.29.254.165",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "52.59.58.34",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "3.79.160.129",
-    "port": 22223,
-    "password": "telegram-id-directvpn",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "162.159.152.2",
+    "address": "199.68.156.69",
     "port": 443,
     "password": "dns68",
     "name": "@XrayTurbo🔥",
@@ -2606,12 +2050,314 @@
     "path": "/?ed=2560"
   },
   {
+    "address": "frontend.kuangbiaoyun.com",
+    "port": 40004,
+    "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
+    "name": "@XrayTurbo🔥",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "13.36.49.89",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "51.15.86.181",
+    "port": 1935,
+    "password": "eG92F3gh09",
+    "name": "@XrayTurbo🔥",
+    "sni": "x1ams-scaleway.devefun.net",
+    "alpn": "h3,h2,http/1.1"
+  },
+  {
+    "address": "104.18.18.138",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "104.16.192.1",
+    "port": 443,
+    "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
+    "name": "@XrayTurbo🔥",
+    "sni": "sherasheba.com",
+    "type": "ws",
+    "host": "sherasheba.com",
+    "path": "/6b777a91"
+  },
+  {
+    "address": "frontend.kuangbiaoyun.com",
+    "port": 40001,
+    "password": "57edfecf-5694-4a34-8072-54a4f0636a62",
+    "name": "@XrayTurbo🔥",
+    "sni": "frontend.kuangbiaoyun.com",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "3.77.198.138",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "3.75.7.175",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "13.39.201.68",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "144.24.87.186",
+    "port": 46527,
+    "password": "09833a6f-4d46-426e-87fe-7793a5489f84",
+    "name": "@XrayTurbo🔥",
+    "sni": "lovehjq.xyz",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "52.29.254.165",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "104.16.148.178",
+    "port": 443,
+    "password": "WOeXShhJpL",
+    "name": "@XrayTurbo🔥",
+    "sni": "07jzus.zdzdzd.xyz",
+    "type": "ws",
+    "host": "07jzus.zdzdzd.xyz",
+    "path": "/juzigongyi"
+  },
+  {
+    "address": "13.39.11.27",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "15.236.189.128",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "13.37.117.144",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "15.188.112.221",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "ip.sb",
+    "port": 8443,
+    "password": "trojan",
+    "name": "@XrayTurbo🔥",
+    "sni": "qianlang.pages.dev",
+    "fp": "random",
+    "type": "ws",
+    "host": "qianlang.pages.dev",
+    "path": "/?ed=2560"
+  },
+  {
+    "address": "35.159.2.5",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "141.227.160.167",
+    "port": 1935,
+    "password": "AXpQXM4vNh",
+    "name": "@XrayTurbo🔥",
+    "sni": "x2swe-ovh.devefun.net",
+    "alpn": "h3,h2,http/1.1"
+  },
+  {
+    "address": "3.123.67.61",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "naiu-us.05vr9nyqg5.download",
+    "port": 13020,
+    "password": "5e2ce79c-170e-484a-8802-40584a1a3a12",
+    "name": "@XrayTurbo🔥",
+    "sni": "cloudflare.node-ssl.cdn-alibaba.com"
+  },
+  {
+    "address": "173.245.59.61",
+    "port": 443,
+    "password": "NISHIKUITAN222",
+    "name": "@XrayTurbo🔥",
+    "sni": "in.ylks.xyz",
+    "type": "ws",
+    "host": "in.ylks.xyz",
+    "path": "/"
+  },
+  {
+    "address": "15.236.166.144",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "104.20.18.121",
+    "port": 443,
+    "password": "auto",
+    "name": "@XrayTurbo🔥",
+    "sni": "b96ef9ae.trojanfree-76s.pages.dev",
+    "type": "ws",
+    "host": "b96ef9ae.trojanfree-76s.pages.dev",
+    "path": "/b96ef9ae.trojanfree-76s.pages.dev"
+  },
+  {
+    "address": "63.179.214.164",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "15.236.189.128",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "3.11.92.247",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk"
+  },
+  {
+    "address": "35.181.163.64",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
     "address": "13.36.49.89",
     "port": 22223,
     "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
+  },
+  {
+    "address": "190.93.245.69",
+    "port": 443,
+    "password": "bpb-trojan",
+    "name": "@XrayTurbo🔥",
+    "sni": "fcspring.ggff.net",
+    "type": "ws",
+    "host": "fcspring.ggff.net",
+    "path": "/tr?ed"
+  },
+  {
+    "address": "154.197.121.175",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "13.36.201.87",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "18.194.230.54",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "198.41.212.233",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "35.181.20.132",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "190.93.245.154",
+    "port": 443,
+    "password": "blue2024",
+    "name": "@XrayTurbo🔥",
+    "sni": "hb.lii2010.us.kg",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "35.181.234.204",
+    "port": 22223,
+    "password": "telegram-id-v2rayvpnchannel",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "usla.mjt000.com",
+    "port": 443,
+    "password": "1ba48a0e-af2e-45fb-9e15-2b2d4134657c",
+    "name": "@XrayTurbo🔥",
+    "sni": "usla.mjt000.com"
   },
   {
     "address": "15.236.166.144",
@@ -2622,25 +2368,110 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "63.179.231.61",
+    "address": "52.215.96.168",
     "port": 22222,
-    "password": "telegram-id-privatevpns",
+    "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
   },
   {
-    "address": "15.188.237.53",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
+    "address": "3.79.160.129",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "104.26.6.89",
+    "port": 443,
+    "password": "auto",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojanmz.pages.dev",
+    "type": "ws",
+    "host": "trojanmz.pages.dev",
+    "path": "/trojanmz.pages.dev/?ed=2560"
+  },
+  {
+    "address": "91.193.58.0",
+    "port": 443,
+    "password": "trojan",
+    "name": "@XrayTurbo🔥",
+    "sni": "wahaha.yingyangkuaixian.dpdns.org",
+    "fp": "chrome",
+    "type": "ws",
+    "host": "wahaha.yingyangkuaixian.dpdns.org",
+    "path": "/"
+  },
+  {
+    "address": "206.238.237.1",
+    "port": 2087,
+    "password": "dns68",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.putata.us.kg",
+    "alpn": "http/1.1",
+    "fp": "randomized",
+    "type": "ws",
+    "host": "trojan.putata.us.kg",
+    "path": "/?ed=2560"
+  },
+  {
+    "address": "104.20.204.132",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "15.188.112.221",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
   },
   {
     "address": "51.44.137.60",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "173.245.58.140",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "customer-95-164-38-151.stark-industries.solutions",
+    "port": 443,
+    "password": "c5691b8f-d833-41e4-9295-769f3edb4cd2",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "104.20.19.167",
+    "port": 443,
+    "password": "auto",
+    "name": "@XrayTurbo🔥",
+    "sni": "b96ef9ae.trojanfree-76s.pages.dev",
+    "type": "ws",
+    "host": "b96ef9ae.trojanfree-76s.pages.dev",
+    "path": "/b96ef9ae.trojanfree-76s.pages.dev"
+  },
+  {
+    "address": "15.188.179.102",
     "port": 22223,
     "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "18.195.237.139",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
@@ -2654,16 +2485,58 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "159.246.55.202",
+    "address": "104.18.6.36",
+    "port": 8443,
+    "password": "channel-daily-configs",
+    "name": "@XrayTurbo🔥",
+    "sni": "kanale-daily-configs.blackoutconnection.ir",
+    "alpn": "h2,http/1.1",
+    "fp": "randomized",
+    "type": "ws",
+    "host": "kanale-daily-configs.blackoutconnection.ir",
+    "path": "/TELEGRAM:@Daily_Configs?ed=2560"
+  },
+  {
+    "address": "13.36.17.197",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "104.27.44.212",
     "port": 443,
     "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "df.xiguajiasu.xyz",
+    "port": 46002,
+    "password": "4ea1d07c-41c2-42b5-954d-414fee051856",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "15.188.237.53",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "141.227.128.69",
+    "port": 1935,
+    "password": "utF6JLQd2x",
+    "name": "@XrayTurbo🔥",
+    "sni": "x1es-ovh.devefun.net",
+    "host": "x1es-ovh.devefun.net",
     "allowInsecure": "1"
   },
   {
-    "address": "51.44.137.60",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
+    "address": "3.65.97.31",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
@@ -2674,6 +2547,156 @@
     "password": "65f14831-5c67-483f-9e85-f3aa73f21187",
     "name": "@XrayTurbo🔥",
     "sni": "cloudflare.node-ssl.cdn-alibaba.com"
+  },
+  {
+    "address": "5.10.247.97",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥",
+    "sni": "zb.ylks.xyz",
+    "type": "ws",
+    "host": "zb.ylks.xyz",
+    "path": "/"
+  },
+  {
+    "address": "104.19.77.247",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "download2hkt.windowsupdate.lol",
+    "port": 443,
+    "password": "7778e684-f435-4166-bf9e-0256cb28bf10",
+    "name": "@XrayTurbo🔥",
+    "sni": "download2hkt.windowsupdate.lol",
+    "fp": "chrome"
+  },
+  {
+    "address": "104.27.65.15",
+    "port": 443,
+    "password": "blue2024",
+    "name": "@XrayTurbo🔥",
+    "sni": "hb.lii2010.us.kg",
+    "type": "ws",
+    "host": "hb.lii2010.us.kg"
+  },
+  {
+    "address": "uk-03.allhubb.info",
+    "port": 8443,
+    "password": "1ce1df7962f71c6f",
+    "name": "@XrayTurbo🔥",
+    "sni": "uk-03.allhubb.info",
+    "alpn": "h2,http/1.1",
+    "fp": "chrome"
+  },
+  {
+    "address": "172.67.233.168",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥"
+  },
+  {
+    "address": "198.23.229.250",
+    "port": 443,
+    "password": "2ee85121-31de-4581-a492-eb00f606e392",
+    "name": "@XrayTurbo🔥",
+    "sni": "rc6.freeguard.org",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "sg02.trojanyyds.xyz",
+    "port": 443,
+    "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
+    "name": "@XrayTurbo🔥",
+    "fp": "chrome",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "172.64.146.66",
+    "port": 443,
+    "password": "auto",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojanmz.pages.dev",
+    "type": "ws",
+    "host": "trojanmz.pages.dev",
+    "path": "/trojanmz.pages.dev/?ed=2560"
+  },
+  {
+    "address": "35.157.250.100",
+    "port": 22223,
+    "password": "telegram-id-directvpn",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "hk03.trojanyyds.xyz",
+    "port": 443,
+    "password": "243eab52-9ac1-405c-887c-eb112c0985b8",
+    "name": "@XrayTurbo🔥",
+    "sni": "hk03.trojanyyds.xyz"
+  },
+  {
+    "address": "172.67.254.32",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "167.68.11.173",
+    "port": 443,
+    "password": "NISHIKUITAN111",
+    "name": "@XrayTurbo🔥",
+    "sni": "zb.ylks.xyz",
+    "type": "ws",
+    "host": "zb.ylks.xyz",
+    "path": "/"
+  },
+  {
+    "address": "162.159.138.232",
+    "port": 443,
+    "password": "dQDQCtns4R",
+    "name": "@XrayTurbo🔥",
+    "sni": "fadaei.movieland.top",
+    "type": "ws",
+    "host": "fadaei.movieland.top",
+    "path": "static34528"
+  },
+  {
+    "address": "104.17.250.47",
+    "port": 443,
+    "password": "blue2024",
+    "name": "@XrayTurbo🔥",
+    "sni": "hb.lii2010.us.kg"
+  },
+  {
+    "address": "185.236.233.111",
+    "port": 2053,
+    "password": "ba74833c-8c0f-4dcd-8cbc-13e3c32d3765",
+    "name": "@XrayTurbo🔥",
+    "sni": "ftp.debian.org"
+  },
+  {
+    "address": "aio.zipzap.biz.id",
+    "port": 443,
+    "password": "f282b878-8711-45a1-8c69-5564172123c1",
+    "name": "@XrayTurbo🔥",
+    "sni": "aio.zipzap.biz.id",
+    "type": "ws",
+    "host": "aio.zipzap.biz.id",
+    "path": "/aioproxybot/129.150.49.58-18650"
+  },
+  {
+    "address": "172.67.198.177",
+    "port": 443,
+    "password": "9yu6m5okr",
+    "name": "@XrayTurbo🔥",
+    "sni": "production.tj.ojan.workers.dev",
+    "type": "ws",
+    "host": "production.tj.ojan.workers.dev",
+    "path": "/Telegram-@V2ray_Alpha/?ed=2560"
   },
   {
     "address": "yn-zf.jiashumao.net",
@@ -6455,6 +6478,30 @@
     "password": "73658d71-be45-4495-bc3e-e69d36ce73b5",
     "name": "@XrayTurbo🔥",
     "sni": "telewebion.com"
+  },
+  {
+    "address": "52.47.127.117",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "3.73.208.237",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
+  },
+  {
+    "address": "13.38.214.60",
+    "port": 22222,
+    "password": "telegram-id-privatevpns",
+    "name": "@XrayTurbo🔥",
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
   },
   {
     "address": "18.135.90.225",
@@ -37081,6 +37128,14 @@
     "sni": "agepl.ambercc.filegear-sg.me"
   },
   {
+    "address": "gy.58n.net",
+    "port": 20278,
+    "password": "93e7a8d5-c477-3ef2-8056-307a6e766b5a",
+    "name": "@XrayTurbo🔥",
+    "sni": "z278.hongkongnode.top",
+    "allowInsecure": "1"
+  },
+  {
     "address": "52.195.215.104",
     "port": 20230,
     "password": "a124e41a-0fb8-4543-a0ab-a127c7b515a9",
@@ -49554,7 +49609,6 @@
     "password": "bpb-trojan",
     "name": "@XrayTurbo🔥",
     "sni": "cf.090227.xyz",
-    "host": "cf.090227.xyz",
     "allowInsecure": "1"
   },
   {
@@ -55935,14 +55989,6 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "customer-45-67-229-222.stark-industries.solutions",
-    "port": 443,
-    "password": "c5691b8f-d833-41e4-9295-769f3edb4cd2",
-    "name": "@XrayTurbo🔥",
-    "sni": "customer-45-67-229-222.stark-industries.solutions",
-    "allowInsecure": "1"
-  },
-  {
     "address": "193.124.224.87",
     "port": 2096,
     "password": "slch2024",
@@ -56578,14 +56624,6 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "3.73.208.237",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
     "address": "104.20.21.3",
     "port": 443,
     "password": "auto",
@@ -56594,14 +56632,6 @@
     "type": "ws",
     "host": "b96ef9ae.trojanfree-76s.pages.dev",
     "path": "/b96ef9ae.trojanfree-76s.pages.dev"
-  },
-  {
-    "address": "52.47.127.117",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
   },
   {
     "address": "52.47.127.117",
@@ -56774,15 +56804,6 @@
     "sni": "421421.xyz"
   },
   {
-    "address": "foreign01.lovehjq.xyz",
-    "port": 46521,
-    "password": "09833a6f-4d46-426e-87fe-7793a5489f84",
-    "name": "@XrayTurbo🔥",
-    "sni": "lovehjq.xyz",
-    "fp": "chrome",
-    "allowInsecure": "1"
-  },
-  {
     "address": "172.67.198.203",
     "port": 443,
     "password": "auto",
@@ -56920,6 +56941,21 @@
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
+  },
+  {
+    "address": "54.244.5.189",
+    "port": 443,
+    "password": "e3fee3b6-fca1-3985-99dc-da7ca03260ea",
+    "name": "@XrayTurbo🔥",
+    "sni": "steampipe.akamaized.net",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "36.151.192.239",
+    "port": 17806,
+    "password": "QwwHvrnN",
+    "name": "@XrayTurbo🔥",
+    "allowInsecure": "1"
   },
   {
     "address": "deliver.missionsec.io",
@@ -61841,14 +61877,6 @@
     "type": "ws",
     "host": "trojanfree-76s.pages.dev",
     "path": "/trojanfree-76s.pages.dev/?ed=2560"
-  },
-  {
-    "address": "13.38.214.60",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
   },
   {
     "address": "104.20.22.19",
@@ -73514,16 +73542,6 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "104.26.12.31",
-    "port": 8443,
-    "password": "trojan",
-    "name": "@XrayTurbo🔥",
-    "sni": "fofang.pages.dev",
-    "type": "ws",
-    "host": "fofang.pages.dev",
-    "path": "/"
-  },
-  {
     "address": "45.79.19.196",
     "port": 443,
     "password": "tune7jerky7HAYRICK",
@@ -75450,6 +75468,16 @@
     "path": "/?ed=2560"
   },
   {
+    "address": "104.26.12.31",
+    "port": 8443,
+    "password": "trojan",
+    "name": "@XrayTurbo🔥",
+    "sni": "fofang.pages.dev",
+    "type": "ws",
+    "host": "fofang.pages.dev",
+    "path": "/"
+  },
+  {
     "address": "99.199.73.28",
     "port": 2089,
     "password": "1VPOgXGwK7",
@@ -75513,6 +75541,18 @@
     "name": "@XrayTurbo🔥",
     "sni": "fr01.xxxxyyyysbs.sbs",
     "allowInsecure": "0"
+  },
+  {
+    "address": "172.66.44.59",
+    "port": 443,
+    "password": "?M|$pIEDnf8N",
+    "name": "@XrayTurbo🔥",
+    "sni": "gkH7imOMi--3t3xcStZT8pp4dlZUEsKN.PagEs.deV",
+    "alpn": "http/1.1",
+    "fp": "chrome",
+    "type": "ws",
+    "host": "gkh7imomi--3t3xcstzt8pp4dlzueskn.pages.dev",
+    "path": "/trjlFIcjqAklnJcJjx/YnBiLnlvdXNlZi5pc2VnYXJvLmNvbQ=="
   },
   {
     "address": "15.223.118.153",
@@ -76069,37 +76109,6 @@
     "serviceName": "30908trojan"
   },
   {
-    "address": "66.225.252.194",
-    "port": 2096,
-    "password": "ttfang",
-    "name": "@XrayTurbo🔥",
-    "sni": "ttfang.fange.me",
-    "type": "ws",
-    "host": "ttfang.fange.me",
-    "path": "Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3"
-  },
-  {
-    "address": "5.10.247.194",
-    "port": 2096,
-    "password": "ttfang",
-    "name": "@XrayTurbo🔥",
-    "sni": "ttfang.fange.me",
-    "fp": "chrome",
-    "type": "ws",
-    "host": "ttfang.fange.me",
-    "path": "Telegram"
-  },
-  {
-    "address": "5.10.214.216",
-    "port": 2096,
-    "password": "ttfang",
-    "name": "@XrayTurbo🔥",
-    "sni": "ttfang.fange.me",
-    "type": "ws",
-    "host": "ttfang.fange.me",
-    "path": "/Telegram%25F0%259F%2587%25A8%25F0%259F%2587%25B3"
-  },
-  {
     "address": "63.179.68.47",
     "port": 22222,
     "password": "telegram-id-privatevpns",
@@ -76122,13 +76131,6 @@
     "name": "@XrayTurbo🔥",
     "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
-  },
-  {
-    "address": "52.16.250.10",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk"
   },
   {
     "address": "51.44.49.244",
@@ -76170,14 +76172,6 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "34.240.231.167",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
     "address": "3.67.59.182",
     "port": 22222,
     "password": "telegram-id-privatevpns",
@@ -76207,14 +76201,6 @@
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
     "sni": "trj.rollingnext.co.uk",
-    "alpn": "http/1.1"
-  },
-  {
-    "address": "18.199.51.132",
-    "port": 22222,
-    "password": "telegram-id-privatevpns",
-    "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk",
     "alpn": "http/1.1"
   },
   {
@@ -76388,13 +76374,6 @@
     "sni": "cutlery.homeofbrave.net"
   },
   {
-    "address": "54.244.5.189",
-    "port": 443,
-    "password": "e3fee3b6-fca1-3985-99dc-da7ca03260ea",
-    "name": "@XrayTurbo🔥",
-    "sni": "steampipe.akamaized.net"
-  },
-  {
     "address": "103.6.220.71",
     "port": 21042,
     "password": "de4a493f-5fd9-46e7-bde2-46b9cc3a6d9b",
@@ -76563,16 +76542,6 @@
     "type": "splithttp",
     "host": "wellyoumust.goahead.rf.gd",
     "path": "/punchfreaktion"
-  },
-  {
-    "address": "51.68.215.55",
-    "port": 2087,
-    "password": "ComYEI7fQv",
-    "name": "@XrayTurbo🔥",
-    "sni": "uk-04.allhubb.info",
-    "type": "ws",
-    "host": "uk-04.allhubb.info",
-    "path": "/TBHDjkhbgbygcvbjhbfrASDFASdfapoihbgwbenguyncbkjnsrfgFgYWgbunhgfdklerjfgjhkjnwfhXQWDefpmvfrtzvedfhurtg"
   },
   {
     "address": "sgtestngxqisel.57257597.xyz",
@@ -107187,6 +107156,15 @@
     "path": "Telegram🇨🇳"
   },
   {
+    "address": "5.10.214.216",
+    "port": 2096,
+    "password": "ttfang",
+    "name": "@XrayTurbo🔥",
+    "sni": "ttfang.fange.me",
+    "type": "ws",
+    "path": "Telegram🇨🇳"
+  },
+  {
     "address": "5.10.214.91",
     "port": 2096,
     "password": "slch2024",
@@ -107341,6 +107319,15 @@
     "host": "ocost-dy.wmlefl.cc",
     "path": "/Telegram🇨🇳 @WangCai2 /?ed=2560",
     "allowInsecure": "1"
+  },
+  {
+    "address": "5.10.247.194",
+    "port": 2096,
+    "password": "ttfang",
+    "name": "@XrayTurbo🔥",
+    "sni": "ttfang.fange.me",
+    "type": "ws",
+    "path": "Telegram🇨🇳"
   },
   {
     "address": "5.10.247.216",
