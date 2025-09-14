@@ -272,7 +272,7 @@ func NewQualityTester(xrayPath string, concurrent int) *QualityTester {
 		processManager: NewProcessManager(),
 		testSites:      testSites,
 		maxRetries:     3,
-		timeout:        60 * time.Second,
+		timeout:        120 * time.Second,  // افزایش timeout برای شرایط شبکه ایران
 		concurrent:     concurrent,
 	}
 }
@@ -663,8 +663,15 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 
 	latencyScore := 100.0
 	if result.AvgLatency > 0 {
-		// در ایران لیتنسی بالاتر قابل قبول‌تر است
-		latencyScore = math.Max(0, 100-(result.AvgLatency/2000*10))
+		// محاسبه واقعی‌تر لیتنسی برای شرایط GitHub Actions
+		// لیتنسی زیر 3 ثانیه = امتیاز کامل، بالای 10 ثانیه = امتیاز صفر
+		latencyScore = math.Max(0, 100-((result.AvgLatency-3000)/7000*100))
+		if latencyScore < 0 {
+			latencyScore = 0
+		}
+		if result.AvgLatency <= 3000 {
+			latencyScore = 100
+		}
 	}
 
 	stabilityScore := result.Stability
@@ -782,17 +789,17 @@ func (qt *QualityTester) categorizeConfig(result *ConfigResult) {
 	// بررسی دسترسی به سایت‌های فیلتر شده کلیدی ایران
 	criticalSitesAccess := qt.checkCriticalSitesAccess(result.QualityTests)
 
-	// معیارهای بهینه شده برای ایران
-	if score >= 90 && criticalSitesAccess >= 0.8 && result.AvgLatency < 1500 {
-		result.Category = ScoreExcellent  // امتیاز 90-100
-	} else if score >= 80 && criticalSitesAccess >= 0.7 && result.AvgLatency < 2000 {
-		result.Category = ScoreVeryGood   // امتیاز 80-89
-	} else if score >= 70 && criticalSitesAccess >= 0.6 && result.AvgLatency < 2500 {
-		result.Category = ScoreGood       // امتیاز 70-79
-	} else if score >= 60 && criticalSitesAccess >= 0.4 && result.AvgLatency < 3000 {
-		result.Category = ScoreFair       // امتیاز 60-69
+	// معیارهای واقعی‌تر برای شرایط GitHub Actions و شبکه ایران
+	if score >= 85 && criticalSitesAccess >= 0.75 && result.AvgLatency < 3000 {
+		result.Category = ScoreExcellent  // امتیاز 85+ با دسترسی عالی
+	} else if score >= 75 && criticalSitesAccess >= 0.6 && result.AvgLatency < 4000 {
+		result.Category = ScoreVeryGood   // امتیاز 75+ با دسترسی خوب
+	} else if score >= 65 && criticalSitesAccess >= 0.5 && result.AvgLatency < 5000 {
+		result.Category = ScoreGood       // امتیاز 65+ با دسترسی متوسط
+	} else if score >= 50 && criticalSitesAccess >= 0.25 && result.AvgLatency < 6000 {
+		result.Category = ScoreFair       // امتیاز 50+ با دسترسی پایه
 	} else {
-		result.Category = ScorePoor       // امتیاز زیر 60
+		result.Category = ScorePoor       // امتیاز زیر 50 یا دسترسی ضعیف
 	}
 }
 
@@ -1313,8 +1320,8 @@ func (qt *QualityTester) Cleanup() {
 
 func main() {
 	configFile := "../data/working_json/working_all_configs.txt"
-	maxConfigs := 1000
-	concurrent := 20
+	maxConfigs := 10000
+	concurrent := 8  // کاهش اتصالات همزمان برای شرایط بهتر
 
 	tester := NewQualityTester("", concurrent)
 	defer tester.Cleanup()
