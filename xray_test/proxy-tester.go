@@ -1587,9 +1587,9 @@ func main() {
 		shadowsocksFile = "../config_collector/deduplicated_urls/ss.json"
 		vmessFile       = "../config_collector/deduplicated_urls/vmess.json"
 		vlessFile       = "../config_collector/deduplicated_urls/vless.json"
-		maxWorkers      = 100
-		timeout         = 30 * time.Second
-		batchSize       = 100
+		maxWorkers      = 500
+		timeout         = 5 * time.Second
+		batchSize       = 500
 		xrayPath        = ""
 		incrementalSave = true
 	)
