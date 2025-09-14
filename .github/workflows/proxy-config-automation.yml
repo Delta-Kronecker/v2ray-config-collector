@@ -151,7 +151,10 @@ jobs:
         echo "=== Generated files in config_collector/deduplicated_urls ==="
         ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
 
-
+    - name: Configure Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
 
     - name: Commit and push changes
       run: |
