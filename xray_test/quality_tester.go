@@ -246,10 +246,24 @@ func NewQualityTester(xrayPath string, concurrent int) *QualityTester {
 	}
 
 	testSites := []TestSite{
-		{"YouTube", "https://www.youtube.com", "watch", "video"},
-		{"Instagram", "https://www.instagram.com", "instagram", "social"},
-		{"Telegram", "https://web.telegram.org", "telegram", "social"},
-		{"OpenAI", "https://openai.com", "openai", "tech"},
+		// سایت‌های فیلتر شده در ایران - اولویت اول
+		{"Twitter", "https://twitter.com", "twitter", "filtered_primary"},
+		{"YouTube", "https://www.youtube.com", "watch", "filtered_primary"},
+		{"Instagram", "https://www.instagram.com", "instagram", "filtered_primary"},
+
+		// سایت‌های فیلتر شده مهم - اولویت دوم
+		{"Telegram Web", "https://web.telegram.org", "telegram", "filtered_secondary"},
+		{"WhatsApp Web", "https://web.whatsapp.com", "whatsapp", "filtered_secondary"},
+		{"Discord", "https://discord.com", "discord", "filtered_secondary"},
+
+		// سایت‌های تکنولوژی فیلتر شده
+		{"Stack Overflow", "https://stackoverflow.com", "stack overflow", "tech_filtered"},
+		{"Facebook", "https://www.facebook.com", "facebook", "filtered_primary"},
+
+
+		// تست سرعت و پایداری
+		{"Speed Test", "https://fast.com", "fast", "speed_test"},
+		{"CloudFlare Test", "https://1.1.1.1", "cloudflare", "connectivity"},
 	}
 
 	return &QualityTester{
@@ -387,6 +401,11 @@ func (qt *QualityTester) testSingleSite(proxyPort int, site TestSite) TestResult
 		Site: site.Name,
 	}
 
+	// برای سایت‌های حیاتی (فیلتر شده در ایران) تست پایداری انجام دهیم
+	if qt.isCriticalSite(site.Name) {
+		return qt.testSiteStability(proxyPort, site)
+	}
+
 	for attempt := 0; attempt <= qt.maxRetries; attempt++ {
 		success, latency, downloadTime, contentSize, statusCode, err := qt.performRequest(proxyPort, site.URL, site.ExpectedStr)
 
@@ -416,6 +435,80 @@ func (qt *QualityTester) testSingleSite(proxyPort int, site TestSite) TestResult
 		}
 
 		time.Sleep(time.Duration(attempt+1) * time.Second)
+	}
+
+	return result
+}
+
+// تشخیص سایت‌های حیاتی که نیاز به تست پایداری دارند
+func (qt *QualityTester) isCriticalSite(siteName string) bool {
+	criticalSites := []string{"Twitter", "Facebook", "Instagram", "YouTube", "Telegram Web"}
+	for _, critical := range criticalSites {
+		if siteName == critical {
+			return true
+		}
+	}
+	return false
+}
+
+// تست پایداری اتصال با چندین تلاش در فواصل زمانی مختلف
+func (qt *QualityTester) testSiteStability(proxyPort int, site TestSite) TestResult {
+	result := TestResult{
+		Site: site.Name,
+	}
+
+	stabilityTests := []time.Duration{
+		0 * time.Second,          // فوری
+		2 * time.Second,          // بعد از 2 ثانیه
+		5 * time.Second,          // بعد از 5 ثانیه
+		10 * time.Second,         // بعد از 10 ثانیه
+	}
+
+	successCount := 0
+	totalLatency := 0.0
+	totalDownloadTime := 0.0
+	totalContentSize := int64(0)
+	lastStatusCode := 0
+
+	log.Printf("🔄 Testing stability for %s via port %d...", site.Name, proxyPort)
+
+	for i, delay := range stabilityTests {
+		if i > 0 {
+			time.Sleep(delay - stabilityTests[i-1])
+		}
+
+		success, latency, downloadTime, contentSize, statusCode, err := qt.performRequest(proxyPort, site.URL, site.ExpectedStr)
+
+		if success {
+			successCount++
+			totalLatency += latency
+			totalDownloadTime += downloadTime
+			totalContentSize += contentSize
+			lastStatusCode = statusCode
+			log.Printf("  ✓ Attempt %d/%d: %.0fms", i+1, len(stabilityTests), latency)
+		} else {
+			log.Printf("  ✗ Attempt %d/%d: Failed - %v", i+1, len(stabilityTests), err)
+		}
+	}
+
+	// محاسبه نتیجه نهایی بر اساس پایداری
+	stabilityRate := float64(successCount) / float64(len(stabilityTests))
+
+	if stabilityRate >= 0.75 { // حداقل 75% موفقیت
+		result.Success = true
+		result.Latency = totalLatency / float64(successCount)
+		result.DownloadTime = totalDownloadTime / float64(successCount)
+		result.ContentSize = totalContentSize / int64(successCount)
+		result.StatusCode = lastStatusCode
+
+		log.Printf("✓ %s via port %d: STABLE (%.1f%% success, avg %.0fms)", 
+			site.Name, proxyPort, stabilityRate*100, result.Latency)
+	} else {
+		result.Success = false
+		result.ErrorMsg = fmt.Sprintf("Unstable connection: only %.1f%% success rate", stabilityRate*100)
+
+		log.Printf("✗ %s via port %d: UNSTABLE (%.1f%% success)", 
+			site.Name, proxyPort, stabilityRate*100)
 	}
 
 	return result
@@ -559,45 +652,173 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 		return 0
 	}
 
-	successWeight := 0.4
-	latencyWeight := 0.25
-	stabilityWeight := 0.2
-	speedWeight := 0.15
+	// محاسبه امتیاز براساس اولویت سایت‌های فیلتر شده در ایران
+	iranFilteredScore := qt.calculateIranFilteredScore(result.QualityTests)
+	speedTestScore := qt.calculateSpeedTestScore(result.QualityTests)
+
+	// وزن‌های بهینه شده برای شرایط ایران
+	iranFilteredWeight := 0.50  // اولویت اصلی: سایت‌های فیلتر شده
+	latencyWeight := 0.25      // کیفیت اتصال
+	stabilityWeight := 0.15    // پایداری
+	speedWeight := 0.10        // سرعت
 
 	successScore := result.SuccessRate
 
 	latencyScore := 100.0
 	if result.AvgLatency > 0 {
-		latencyScore = math.Max(0, 100-(result.AvgLatency/1000*10))
+		// در ایران لیتنسی بالاتر قابل قبول‌تر است
+		latencyScore = math.Max(0, 100-(result.AvgLatency/2000*10))
 	}
 
 	stabilityScore := result.Stability
-
 	speedScore := math.Min(100, result.Speed*10)
 
-	finalScore := (successScore*successWeight + 
+	finalScore := (iranFilteredScore*iranFilteredWeight + 
 		latencyScore*latencyWeight + 
 		stabilityScore*stabilityWeight + 
 		speedScore*speedWeight)
 
+	// اضافه کردن امتیاز اضافی برای پروکسی‌هایی که Twitter و Facebook را باز می‌کنند
+	bonusScore := qt.calculateBonusScore(result.QualityTests)
+	finalScore += bonusScore
+
 	return math.Round(finalScore*100) / 100
+}
+
+// محاسبه امتیاز براساس دسترسی به سایت‌های فیلتر شده ایران
+func (qt *QualityTester) calculateIranFilteredScore(tests []TestResult) float64 {
+	primaryFilteredSites := []string{"Twitter", "Facebook", "YouTube", "Instagram"}
+	secondaryFilteredSites := []string{"Telegram Web", "WhatsApp Web", "Discord"}
+	techFilteredSites := []string{"Google", "GitHub", "Stack Overflow"}
+
+	primarySuccessCount := 0
+	secondarySuccessCount := 0
+	techSuccessCount := 0
+
+	for _, test := range tests {
+		if test.Success {
+			for _, site := range primaryFilteredSites {
+				if test.Site == site {
+					primarySuccessCount++
+					break
+				}
+			}
+			for _, site := range secondaryFilteredSites {
+				if test.Site == site {
+					secondarySuccessCount++
+					break
+				}
+			}
+			for _, site := range techFilteredSites {
+				if test.Site == site {
+					techSuccessCount++
+					break
+				}
+			}
+		}
+	}
+
+	// وزن‌گذاری: سایت‌های اولویت اول مهم‌ترند
+	primaryScore := float64(primarySuccessCount) / float64(len(primaryFilteredSites)) * 100 * 0.6
+	secondaryScore := float64(secondarySuccessCount) / float64(len(secondaryFilteredSites)) * 100 * 0.25
+	techScore := float64(techSuccessCount) / float64(len(techFilteredSites)) * 100 * 0.15
+
+	return primaryScore + secondaryScore + techScore
+}
+
+
+
+// محاسبه امتیاز براساس تست سرعت
+func (qt *QualityTester) calculateSpeedTestScore(tests []TestResult) float64 {
+	speedSites := []string{"Speed Test", "CloudFlare Test"}
+	successCount := 0
+	totalLatency := 0.0
+
+	for _, test := range tests {
+		for _, site := range speedSites {
+			if test.Site == site && test.Success {
+				successCount++
+				totalLatency += test.Latency
+				break
+			}
+		}
+	}
+
+	if successCount == 0 {
+		return 0
+	}
+
+	avgLatency := totalLatency / float64(successCount)
+	// برای ایران، لیتنسی زیر 3 ثانیه قابل قبول است
+	return math.Max(0, 100-(avgLatency/3000*100))
+}
+
+// امتیاز اضافی برای پروکسی‌های عالی
+func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
+	criticalSites := []string{"Twitter", "Facebook", "Instagram", "YouTube"}
+	successCount := 0
+
+	for _, test := range tests {
+		if test.Success && test.Latency < 1500 { // لیتنسی کمتر از 1.5 ثانیه
+			for _, site := range criticalSites {
+				if test.Site == site {
+					successCount++
+					break
+				}
+			}
+		}
+	}
+
+	// امتیاز اضافی برای پروکسی‌هایی که همه سایت‌های مهم را با سرعت بالا باز می‌کنند
+	if successCount == len(criticalSites) {
+		return 10.0 // امتیاز اضافی 10 درصد
+	} else if successCount >= len(criticalSites)*3/4 {
+		return 5.0  // امتیاز اضافی 5 درصد
+	}
+
+	return 0
 }
 
 func (qt *QualityTester) categorizeConfig(result *ConfigResult) {
 	score := result.FinalScore
 
-	if score >= 80 && result.SuccessRate >= 90 {
-		result.Category = ScoreExcellent
-	} else if score >= 70 && result.SuccessRate >= 80 {
-		result.Category = ScoreVeryGood
-	} else if score >= 60 && result.SuccessRate >= 70 {
-		result.Category = ScoreGood
-	} else if score >= 40 && result.SuccessRate >= 50 {
-		result.Category = ScoreFair
+	// بررسی دسترسی به سایت‌های فیلتر شده کلیدی ایران
+	criticalSitesAccess := qt.checkCriticalSitesAccess(result.QualityTests)
+
+	// معیارهای بهینه شده برای ایران
+	if score >= 90 && criticalSitesAccess >= 0.8 && result.AvgLatency < 1500 {
+		result.Category = ScoreExcellent  // امتیاز 90-100
+	} else if score >= 80 && criticalSitesAccess >= 0.7 && result.AvgLatency < 2000 {
+		result.Category = ScoreVeryGood   // امتیاز 80-89
+	} else if score >= 70 && criticalSitesAccess >= 0.6 && result.AvgLatency < 2500 {
+		result.Category = ScoreGood       // امتیاز 70-79
+	} else if score >= 60 && criticalSitesAccess >= 0.4 && result.AvgLatency < 3000 {
+		result.Category = ScoreFair       // امتیاز 60-69
 	} else {
-		result.Category = ScorePoor
+		result.Category = ScorePoor       // امتیاز زیر 60
 	}
 }
+
+// بررسی دسترسی به سایت‌های فیلتر شده کلیدی
+func (qt *QualityTester) checkCriticalSitesAccess(tests []TestResult) float64 {
+	criticalSites := []string{"Twitter", "Facebook", "Instagram", "YouTube"}
+	successCount := 0
+
+	for _, test := range tests {
+		if test.Success {
+			for _, site := range criticalSites {
+				if test.Site == site {
+					successCount++
+					break
+				}
+			}
+		}
+	}
+
+	return float64(successCount) / float64(len(criticalSites))
+}
+
+
 
 func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort int) (map[string]interface{}, error) {
 	xrayConfig := map[string]interface{}{
