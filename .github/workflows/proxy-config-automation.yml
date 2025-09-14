@@ -172,8 +172,21 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        # Configure git user
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+
         # Add timestamp to commit message
         TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
+
+        # Stash any unstaged changes to avoid conflicts
+        git stash --include-untracked || echo "No changes to stash"
+
+        # Pull latest changes from remote first
+        git pull origin main || echo "Pull failed or already up to date"
+
+        # Pop stashed changes back
+        git stash pop || echo "No stash to pop"
 
         # Stage all changes in data directory and deduplicated_urls
         git add data/
@@ -183,9 +196,6 @@ jobs:
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          # Pull latest changes from remote to avoid conflicts
-          git pull --rebase origin main || git pull origin main
-
           # Commit the changes
           git commit -m "Auto-update proxy configs - $TIMESTAMP"
 
@@ -196,7 +206,11 @@ jobs:
               break
             else
               echo "Push failed, attempt $i/3. Pulling latest changes..."
-              git pull --rebase origin main || git pull origin main
+              git pull origin main
+              if [ $i -lt 3 ]; then
+                echo "Retrying push in 10 seconds..."
+                sleep 10
+              fi
             fi
           done
         fi
