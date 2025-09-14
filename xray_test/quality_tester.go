@@ -654,15 +654,12 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 
 	// محاسبه امتیاز براساس اولویت سایت‌های فیلتر شده در ایران
 	iranFilteredScore := qt.calculateIranFilteredScore(result.QualityTests)
-	speedTestScore := qt.calculateSpeedTestScore(result.QualityTests)
 
 	// وزن‌های بهینه شده برای شرایط ایران
 	iranFilteredWeight := 0.50  // اولویت اصلی: سایت‌های فیلتر شده
 	latencyWeight := 0.25      // کیفیت اتصال
 	stabilityWeight := 0.15    // پایداری
 	speedWeight := 0.10        // سرعت
-
-	successScore := result.SuccessRate
 
 	latencyScore := 100.0
 	if result.AvgLatency > 0 {
