@@ -23,7 +23,7 @@ type ProxyTesterConfig struct {
 	MaxWorkers      int           `yaml:"max_workers" env:"PROXY_MAX_WORKERS" default:"300"`
 	Timeout         time.Duration `yaml:"timeout" env:"PROXY_TIMEOUT" default:"5s"`
 	BatchSize       int           `yaml:"batch_size" env:"PROXY_BATCH_SIZE" default:"300"`
-	XrayPath        string        `yaml:"xray_path" env:"XRAY_PATH" default:"./xray.exe"`
+	XrayPath        string        `yaml:"xray_path" env:"XRAY_PATH" default:""`
 	IncrementalSave bool          `yaml:"incremental_save" env:"INCREMENTAL_SAVE" default:"true"`
 	PortRange       PortRange     `yaml:"port_range"`
 	RetryConfig     RetryConfig   `yaml:"retry"`
@@ -155,7 +155,7 @@ func setDefaults(config *Config) error {
 	config.ProxyTester.MaxWorkers = 300
 	config.ProxyTester.Timeout = 5 * time.Second
 	config.ProxyTester.BatchSize = 300
-	config.ProxyTester.XrayPath = "./xray.exe"
+	config.ProxyTester.XrayPath = ""  // Will be auto-detected by findXrayExecutable()
 	config.ProxyTester.IncrementalSave = true
 	config.ProxyTester.PortRange.Start = 10000
 	config.ProxyTester.PortRange.End = 20000
