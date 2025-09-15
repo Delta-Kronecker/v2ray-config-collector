@@ -1,132 +1,93 @@
-name: Enhanced Proxy Config Collector and Tester
+name: V2Ray Config Collector and Tester
 
 on:
   schedule:
-    # Run every 12 hours for better performance
-    - cron: '0 */12 * * *'
+    # Run every 6 hours
+    - cron: '0 */24 * * *'
   workflow_dispatch: # Allow manual triggering
-    inputs:
-      test_mode:
-        description: 'Test mode (quick/full)'
-        required: false
-        default: 'full'
-        type: choice
-        options:
-        - quick
-        - full
-      max_concurrency:
-        description: 'Maximum concurrency for testing'
-        required: false
-        default: '50'
-        type: string
-
-env:
-  GO_VERSION: '1.21'
-  PYTHON_VERSION: '3.11'
-  PROXY_TEST_TIMEOUT: '300'
-  QUALITY_TEST_TIMEOUT: '600'
 
 jobs:
   collect-and-test-configs:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
 
     permissions:
       contents: write
-      actions: read
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 1
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ env.PYTHON_VERSION }}
+        python-version: '3.9'
 
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: ${{ env.GO_VERSION }}
-        cache: true
-        cache-dependency-path: 'xray_test/go.sum'
+        go-version: '1.21'
 
-    - name: Install system dependencies (optimized)
+    - name: Install system dependencies
       run: |
-        # Install system dependencies with caching and parallel downloads
-        export DEBIAN_FRONTEND=noninteractive
+        # Install system dependencies with retry logic
+        for i in {1..3}; do
+          if sudo apt-get update && sudo apt-get install -y wget unzip; then
+            echo "System dependencies installed successfully"
+            break
+          else
+            echo "System dependencies installation failed, attempt $i/3"
+            if [ $i -lt 3 ]; then
+              echo "Retrying in 10 seconds..."
+              sleep 10
+            fi
+          fi
+        done
 
-        # Update package list with optimizations
-        sudo apt-get update -qq
-
-        # Install dependencies with optimizations
-        sudo apt-get install -y --no-install-recommends \
-          wget unzip jq bc gzip curl \
-          build-essential \
-          && echo "✅ System dependencies installed successfully" \
-          || { echo "❌ Failed to install system dependencies"; exit 1; }
-
-        # Verify installations
-        which jq bc gzip curl wget unzip || { echo "❌ Missing required tools"; exit 1; }
-
-    - name: Setup Xray (optimized)
+    - name: Setup Xray
       run: |
-        # Check for existing Xray installation first
-        if command -v xray >/dev/null 2>&1; then
-          echo "✅ Xray already installed: $(xray version)"
-          exit 0
-        fi
-
-        # Setup Xray with caching and optimized download
-        if [ -f "xray_test/xray" ]; then
-          echo "📦 Using existing Xray binary from project"
-          sudo cp xray_test/xray /usr/local/bin/
-          sudo chmod +x /usr/local/bin/xray
-        else
-          echo "⬇️ Downloading Xray binary (optimized)"
-          # Use GitHub API to get latest release URL with proper filtering
-          XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r '.assets[] | select(.name == "Xray-linux-64.zip") | .browser_download_url' | head -1)
-
-          # Fallback to direct URL if API fails
-          if [ -z "$XRAY_URL" ] || [ "$XRAY_URL" = "null" ]; then
-            echo "⚠️ API failed, using direct download URL"
-            XRAY_URL="https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip"
+        # Setup Xray with retry logic
+        for i in {1..3}; do
+          if [ -f "xray_test/xray" ]; then
+            echo "Using existing Xray binary from project"
+            if sudo cp xray_test/xray /usr/local/bin/ && sudo chmod +x /usr/local/bin/xray && xray version; then
+              echo "Xray setup completed successfully"
+              break
+            fi
+          else
+            echo "Downloading Xray binary, attempt $i/3"
+            if wget -O xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip && unzip -o xray.zip && sudo mv xray /usr/local/bin/ && sudo chmod +x /usr/local/bin/xray && xray version; then
+              echo "Xray setup completed successfully"
+              break
+            fi
           fi
 
-          echo "📥 Downloading from: $XRAY_URL"
-          wget --timeout=30 --tries=2 -O xray.zip "$XRAY_URL" \
-            && unzip -o xray.zip \
-            && sudo mv xray /usr/local/bin/ \
-            && sudo chmod +x /usr/local/bin/xray \
-            || { echo "❌ Failed to setup Xray"; exit 1; }
-        fi
+          echo "Xray setup failed, attempt $i/3"
+          if [ $i -lt 3 ]; then
+            echo "Retrying in 15 seconds..."
+            sleep 15
+          fi
+        done
 
-        # Verify Xray installation
-        xray version && echo "✅ Xray setup completed successfully"
-
-    - name: Install Python dependencies (optimized)
+    - name: Install Python dependencies
       run: |
         cd config_collector
+        # Install any required Python packages with retry logic
+        for i in {1..3}; do
+          if pip install requests beautifulsoup4 lxml urllib3 tenacity; then
+            echo "Python dependencies installed successfully"
+            break
+          else
+            echo "Python dependencies installation failed, attempt $i/3"
+            if [ $i -lt 3 ]; then
+              echo "Retrying in 30 seconds..."
+              sleep 30
+            fi
+          fi
+        done
 
-        # Use pip cache and install with optimizations
-        pip install --no-warn-script-location --disable-pip-version-check \
-          requests beautifulsoup4 lxml urllib3 tenacity \
-          && echo "✅ Python dependencies installed successfully" \
-          || { echo "❌ Failed to install Python dependencies"; exit 1; }
-
-        # Verify key modules
-        python -c "import requests, bs4, lxml, urllib3, tenacity; print('✅ All Python modules verified')"
-
-    - name: Install Go dependencies and build modules
+    - name: Install Go dependencies
       run: |
         cd xray_test
-        # Initialize Go module if needed
-        if [ ! -f "go.mod" ]; then
-          go mod init xray_test
-        fi
-
         # Install Go dependencies with retry logic
         for i in {1..3}; do
           if go mod tidy && go mod download; then
@@ -141,491 +102,82 @@ jobs:
           fi
         done
 
-        # Build and validate all Go modules
-        echo "Building proxy-tester..."
-        go build -o proxy-tester proxy-tester.go config.go utils.go
-        echo "Building quality-tester..."
-        go build -o quality-tester quality_tester.go config.go utils.go
-
-        # Verify builds (just check that binaries exist and are executable)
-        if [ -x "./proxy-tester" ]; then
-          echo "✅ proxy-tester built successfully"
-        else
-          echo "❌ proxy-tester build failed"
-          exit 1
-        fi
-
-        if [ -x "./quality-tester" ]; then
-          echo "✅ quality-tester built successfully"
-        else
-          echo "❌ quality-tester build failed" 
-          exit 1
-        fi
-
     - name: Create necessary directories
       run: |
         mkdir -p data/working_url
         mkdir -p data/working_json
         mkdir -p log
-        mkdir -p xray_test/configs
-        mkdir -p xray_test/temp
-        mkdir -p xray_test/results
 
-    - name: Setup configuration management
-      run: |
-        cd xray_test
-
-        # Create production config based on example
-        if [ ! -f "config.yaml" ]; then
-          echo "Creating production configuration..."
-          cat > config.yaml << 'EOF'
-        # Enhanced Proxy Testing Configuration for CI/CD
-        proxy_tester:
-          max_workers: ${{ github.event.inputs.max_concurrency || '10' }}
-          timeout: ${{ env.PROXY_TEST_TIMEOUT }}s
-          batch_size: ${{ github.event.inputs.max_concurrency || '10' }}
-          xray_path: ""
-          incremental_save: true
-          port_range:
-            start: 10000
-            end: 20000
-          retry:
-            max_retries: 2
-            base_delay: 1s
-            max_delay: 10s
-            backoff_factor: 2.0
-            enable_jitter: true
-
-        quality_tester:
-          max_configs: 1000
-          concurrent: 4
-          test_timeout: ${{ env.QUALITY_TEST_TIMEOUT }}s
-          stability_threshold: 0.75
-          adaptive_testing: true
-          critical_site_weight: 0.50
-          latency_weight: 0.25
-          stability_weight: 0.15
-          speed_weight: 0.10
-
-        common:
-          output_dir: "../data"
-          temp_dir: "./temp"
-          max_file_size: 104857600
-          cleanup_after: 1h
-          enable_metrics: true
-
-        logging:
-          level: "info"
-          format: "text"
-          output_file: ""
-          max_size: 100
-          max_backups: 3
-          max_age: 28
-          compress: true
-
-        performance:
-          enable_connection_pool: true
-          pool_size: 50
-          pool_timeout: 30s
-          enable_circuit_breaker: false
-          circuit_breaker:
-            max_failures: 1000
-            timeout: 300s
-            reset_timeout: 60s
-            threshold_rate: 0.9
-          rate_limit:
-            enabled: false
-            requests_per_sec: 100
-            burst_size: 200
-            cleanup_period: 1m
-          memory_optimization:
-            enable_buffer_pool: true
-            buffer_size: 32768
-            max_buffers: 1000
-            enable_gc_optimization: true
-            gc_percent: 100
-        EOF
-        fi
-
-        # Validate configuration file exists and is readable
-        echo "Validating configuration..."
-        if [ -f "config.yaml" ] && [ -r "config.yaml" ]; then
-          echo "✅ Configuration file created and validated"
-          echo "📝 Config structure matches Go program expectations"
-          echo "🔧 Rate limiting: DISABLED for CI/CD performance"
-        else
-          echo "❌ Configuration validation failed"
-          exit 1
-        fi
-
-    - name: Run optimized config collector
+    - name: Run config collector
       run: |
         cd config_collector
-
-        # Set optimization environment variables
-        export PYTHONUNBUFFERED=1
-        export PYTHONDONTWRITEBYTECODE=1
-
-        echo "🚀 Starting optimized config collection..."
-        start_time=$(date +%s)
-
-        # Run config collector with timeout and monitoring
-        timeout 900 python main.py || {
-          echo "❌ Config collector failed or timed out"
-          echo "=== Checking for partial results ==="
-          ls -la deduplicated_urls/ 2>/dev/null || echo "No partial results found"
-          exit 1
-        }
-
-        end_time=$(date +%s)
-        duration=$((end_time - start_time))
-        echo "✅ Config collection completed in ${duration}s"
-
-        # Verify collected configs
-        if [ -d "deduplicated_urls" ] && [ "$(ls -A deduplicated_urls)" ]; then
-          CONFIG_COUNT=$(find deduplicated_urls -name "*.txt" -exec wc -l {} + | tail -1 | awk '{print $1}')
-          echo "📊 Total configurations collected: $CONFIG_COUNT"
-        else
-          echo "⚠️ No configurations collected"
-        fi
-
-    - name: Run enhanced proxy tester
-      run: |
-        cd xray_test
-        echo "🔧 Starting enhanced proxy testing with configuration..."
-
-        # Verify Xray is available first
-        if ! command -v xray >/dev/null 2>&1; then
-          echo "❌ Xray not found in PATH. Checking alternative locations..."
-          if [ ! -f "/usr/local/bin/xray" ]; then
-            echo "❌ Xray not installed. Proxy testing cannot proceed."
-            echo "⚠️ This will affect quality testing as it needs working configs from proxy tester."
-            exit 1
+        # Run config collector with retry logic
+        for i in {1..3}; do
+          if python main.py; then
+            echo "Config collector completed successfully"
+            break
+          else
+            echo "Config collector failed, attempt $i/3"
+            if [ $i -lt 3 ]; then
+              echo "Retrying in 60 seconds..."
+              sleep 60
+            fi
           fi
-        fi
+        done
 
-        # Verify input files exist
-        if [ ! -d "../config_collector/deduplicated_urls" ] || [ -z "$(ls -A ../config_collector/deduplicated_urls 2>/dev/null)" ]; then
-          echo "❌ No input configurations found from config collector"
-          echo "Expected: ../config_collector/deduplicated_urls/*.txt"
-          ls -la ../config_collector/ || echo "config_collector directory not found"
-          exit 1
-        fi
-
-        echo "✅ Input validation passed. Found configs in ../config_collector/deduplicated_urls/"
-
-        # Set environment variables for enhanced features
-        export TEST_MODE="${{ github.event.inputs.test_mode || 'full' }}"
-        export MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '10' }}"  # Much lower for rate limiting
-        export GOMAXPROCS=4  # Optimize for GitHub Actions
-
-        # Run proxy tester with configuration and monitoring
-        timeout ${{ env.PROXY_TEST_TIMEOUT }} ./proxy-tester config.yaml || {
-          echo "❌ Proxy tester failed or timed out"
-          echo "=== Error logs ==="
-          tail -n 50 log/proxy-tester.log 2>/dev/null || echo "No log file found"
-          echo "=== System resources ==="
-          free -h
-          df -h
-          echo "=== Available Xray paths ==="
-          which xray || echo "xray not in PATH"
-          ls -la /usr/local/bin/xray 2>/dev/null || echo "xray not in /usr/local/bin/"
-          ls -la /usr/bin/xray 2>/dev/null || echo "xray not in /usr/bin/"
-          exit 1
-        }
-
-        echo "✅ Proxy testing completed successfully"
-
-        # Verify output files were generated
-        if [ ! -f "results/proxy-test-results.json" ]; then
-          echo "⚠️ Warning: proxy-test-results.json not generated"
-          mkdir -p results
-          echo '[]' > results/proxy-test-results.json
-        fi
-
-        # Display results summary
-        echo "=== Proxy Testing Results ==="
-        if [ -f "results/proxy-test-results.json" ]; then
-          echo "Results file size: $(du -h results/proxy-test-results.json)"
-          WORKING_COUNT=$(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")
-          echo "Working proxies found: $WORKING_COUNT"
-
-          if [ "$WORKING_COUNT" -eq 0 ]; then
-            echo "⚠️ Warning: No working proxies found. Quality testing may be skipped."
+    - name: Run proxy tester
+      run: |
+        cd xray_test
+        # Run proxy tester with retry logic
+        for i in {1..3}; do
+          if go run proxy-tester.go; then
+            echo "Proxy tester completed successfully"
+            break
+          else
+            echo "Proxy tester failed, attempt $i/3"
+            if [ $i -lt 3 ]; then
+              echo "Retrying in 90 seconds..."
+              sleep 90
+            fi
           fi
-        fi
+        done
 
-    - name: Run enhanced quality tester
+    - name: Run quality tester
       run: |
         cd xray_test
-        echo "🎯 Starting enhanced quality testing..."
+        # Run quality tester with retry logic
+        for i in {1..3}; do
+          if go run quality_tester.go; then
+            echo "Quality tester completed successfully"
+            break
+          else
+            echo "Quality tester failed, attempt $i/3"
+            if [ $i -lt 3 ]; then
+              echo "Retrying in 90 seconds..."
+              sleep 90
+            fi
+          fi
+        done
 
-        # Skip quality testing in quick mode
-        if [ "${{ github.event.inputs.test_mode }}" = "quick" ]; then
-          echo "⏩ Skipping quality testing in quick mode"
-          exit 0
-        fi
-
-        # Verify Xray is still available
-        if ! command -v xray >/dev/null 2>&1 && [ ! -f "/usr/local/bin/xray" ]; then
-          echo "❌ Xray not available. Quality testing requires Xray."
-          exit 1
-        fi
-
-        # Check if working configs are available from proxy tester
-        if [ ! -f "results/proxy-test-results.json" ]; then
-          echo "❌ No working configs found from proxy tester"
-          echo "Quality tester needs working configs from proxy-tester step"
-          echo "Creating empty results file..."
-          mkdir -p results
-          echo '{"results": [], "summary": {"total": 0, "working": 0, "timestamp": "'$(date -Iseconds)'"}}' > results/quality-test-results.json
-          exit 0
-        fi
-
-        # Check if there are any working proxies
-        WORKING_COUNT=$(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")
-        if [ "$WORKING_COUNT" -eq 0 ]; then
-          echo "⚠️ No working proxies found from proxy tester"
-          echo "Quality testing cannot proceed without working configurations"
-          echo "Creating empty quality results..."
-          mkdir -p results
-          echo '{"results": [], "summary": {"total": 0, "tested": 0, "high_quality": 0, "timestamp": "'$(date -Iseconds)'"}}' > results/quality-test-results.json
-          exit 0
-        fi
-
-        echo "✅ Found $WORKING_COUNT working proxies for quality testing"
-
-        # Set environment variables
-        export TEST_MODE="${{ github.event.inputs.test_mode || 'full' }}"
-        export MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '15' }}"  # Lower concurrency for quality testing
-        export GOMAXPROCS=4
-
-        # Run quality tester with timeout and monitoring
-        timeout ${{ env.QUALITY_TEST_TIMEOUT }} ./quality-tester config.yaml || {
-          echo "❌ Quality tester failed or timed out"
-          echo "=== Error logs ==="
-          tail -n 50 log/quality-tester.log 2>/dev/null || echo "No log file found"
-          echo "=== System resources ==="
-          free -h
-          df -h
-          echo "=== Available Xray paths ==="
-          which xray || echo "xray not in PATH"
-          ls -la /usr/local/bin/xray 2>/dev/null || echo "xray not in /usr/local/bin/"
-
-          # Create fallback results if quality testing fails
-          echo "Creating fallback quality results..."
-          mkdir -p results
-          echo '{"results": [], "summary": {"total": 0, "tested": 0, "failed": true, "error": "Quality testing failed", "timestamp": "'$(date -Iseconds)'"}}' > results/quality-test-results.json
-          exit 1
-        }
-
-        echo "✅ Quality testing completed successfully"
-
-        # Display quality results summary
-        echo "=== Quality Testing Results ==="
-        if [ -f "results/quality-test-results.json" ]; then
-          echo "Quality results file size: $(du -h results/quality-test-results.json)"
-          EXCELLENT_COUNT=$(grep -c '"category":"excellent"' results/quality-test-results.json 2>/dev/null || echo "0")
-          GOOD_COUNT=$(grep -c '"category":"good"' results/quality-test-results.json 2>/dev/null || echo "0")
-          TOTAL_HIGH_QUALITY=$((EXCELLENT_COUNT + GOOD_COUNT))
-          echo "High-quality proxies found: $TOTAL_HIGH_QUALITY (Excellent: $EXCELLENT_COUNT, Good: $GOOD_COUNT)"
-        else
-          echo "⚠️ Quality results file not found"
-        fi
-
-    - name: System health check and monitoring
-      run: |
-        echo "=== System Health Check ==="
-        echo "Current time: $(date)"
-        echo "System uptime: $(uptime)"
-        echo "Memory usage:"
-        free -h
-        echo "Disk usage:"
-        df -h
-        echo "CPU info:"
-        nproc
-        cat /proc/loadavg
-
-        echo "=== Process monitoring ==="
-        ps aux | grep -E "(proxy-tester|quality-tester|xray)" | grep -v grep || echo "No test processes running"
-
-        echo "=== Log file health check ==="
-        cd xray_test
-        if [ -f "log/proxy-tester.log" ]; then
-          echo "Proxy tester log size: $(du -h log/proxy-tester.log)"
-          echo "Last 10 lines of proxy tester log:"
-          tail -n 10 log/proxy-tester.log
-        fi
-
-        if [ -f "log/quality-tester.log" ]; then
-          echo "Quality tester log size: $(du -h log/quality-tester.log)"
-          echo "Last 10 lines of quality tester log:"
-          tail -n 10 log/quality-tester.log
-        fi
-
-        echo "=== Performance metrics ==="
-        if [ -f "results/metrics.json" ]; then
-          echo "Performance metrics found:"
-          cat results/metrics.json | head -20
-        fi
-
-    - name: Check generated files and validate results
+    - name: Check generated files
       run: |
         echo "=== Generated files in data/working_url ==="
         ls -la data/working_url/ || echo "No files in working_url directory"
-        if [ -d "data/working_url" ] && [ "$(ls -A data/working_url)" ]; then
-          echo "Files found: $(ls data/working_url | wc -l)"
-          for file in data/working_url/*; do
-            if [ -f "$file" ]; then
-              echo "  $(basename "$file"): $(wc -l < "$file") lines, $(du -h "$file" | cut -f1)"
-            fi
-          done
-        fi
-
         echo "=== Generated files in data/working_json ==="
         ls -la data/working_json/ || echo "No files in working_json directory"
-        if [ -d "data/working_json" ] && [ "$(ls -A data/working_json)" ]; then
-          echo "Files found: $(ls data/working_json | wc -l)"
-          for file in data/working_json/*; do
-            if [ -f "$file" ]; then
-              echo "  $(basename "$file"): $(jq length "$file" 2>/dev/null || echo "invalid JSON") configs, $(du -h "$file" | cut -f1)"
-            fi
-          done
-        fi
-
         echo "=== Generated files in config_collector/deduplicated_urls ==="
         ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
 
-        echo "=== Enhanced testing results ==="
-        cd xray_test
-        if [ -d "results" ] && [ "$(ls -A results)" ]; then
-          echo "Results directory contents:"
-          ls -la results/
-
-          # Validate JSON files
-          for json_file in results/*.json; do
-            if [ -f "$json_file" ]; then
-              if jq empty "$json_file" 2>/dev/null; then
-                echo "✓ $(basename "$json_file") is valid JSON"
-                echo "  Records: $(jq length "$json_file")"
-              else
-                echo "✗ $(basename "$json_file") is invalid JSON"
-              fi
-            fi
-          done
-        fi
-
-        echo "=== Testing summary ==="
-        if [ -f "results/summary.txt" ]; then
-          cat results/summary.txt
-        else
-          echo "No summary file generated"
-        fi
 
 
-
-    - name: Generate comprehensive report
-      if: always()
-      run: |
-        echo "=== Generating Comprehensive Test Report ==="
-        cd xray_test
-
-        # Create comprehensive report
-        cat > results/test-report.md << 'EOF'
-        # Enhanced Proxy Testing Report
-
-        ## Test Execution Summary
-        - **Date**: $(date '+%Y-%m-%d %H:%M:%S UTC')
-        - **Test Mode**: ${{ github.event.inputs.test_mode || 'full' }}
-        - **Max Concurrency**: ${{ github.event.inputs.max_concurrency || '25' }}
-        - **Workflow Run**: ${{ github.run_number }}
-
-        ## System Information
-        - **OS**: $(uname -a)
-        - **Go Version**: $(go version)
-        - **Available Memory**: $(free -h | grep Mem | awk '{print $2}')
-        - **CPU Cores**: $(nproc)
-
-        ## Test Results Summary
-        EOF
-
-        # Add proxy test results if available
-        if [ -f "results/proxy-test-results.json" ]; then
-          echo "### Proxy Testing Results" >> results/test-report.md
-          echo "- **Total Configurations Tested**: $(jq length results/proxy-test-results.json 2>/dev/null || echo "0")" >> results/test-report.md
-          echo "- **Working Proxies**: $(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")" >> results/test-report.md
-          echo "- **Failed Proxies**: $(grep -c '"working":false' results/proxy-test-results.json 2>/dev/null || echo "0")" >> results/test-report.md
-        fi
-
-        # Add quality test results if available
-        if [ -f "results/quality-test-results.json" ]; then
-          echo "### Quality Testing Results" >> results/test-report.md
-          echo "- **Excellent Quality**: $(grep -c '"quality":"excellent"' results/quality-test-results.json 2>/dev/null || echo "0")" >> results/test-report.md
-          echo "- **Good Quality**: $(grep -c '"quality":"good"' results/quality-test-results.json 2>/dev/null || echo "0")" >> results/test-report.md
-          echo "- **Fair Quality**: $(grep -c '"quality":"fair"' results/quality-test-results.json 2>/dev/null || echo "0")" >> results/test-report.md
-        fi
-
-        # Add error summary if available
-        echo "### Error Summary" >> results/test-report.md
-        if [ -f "log/proxy-tester.log" ]; then
-          ERROR_COUNT=$(grep -c "ERROR\|FATAL" log/proxy-tester.log 2>/dev/null || echo "0")
-          echo "- **Proxy Tester Errors**: $ERROR_COUNT" >> results/test-report.md
-        fi
-
-        if [ -f "log/quality-tester.log" ]; then
-          ERROR_COUNT=$(grep -c "ERROR\|FATAL" log/quality-tester.log 2>/dev/null || echo "0")
-          echo "- **Quality Tester Errors**: $ERROR_COUNT" >> results/test-report.md
-        fi
-
-        echo "Report generated successfully"
-
-    - name: Handle errors and create failure report
-      if: failure()
-      run: |
-        echo "=== WORKFLOW FAILURE DETECTED ==="
-        cd xray_test
-
-        # Create failure report
-        cat > results/failure-report.md << 'EOF'
-        # Workflow Failure Report
-
-        ## Failure Information
-        - **Date**: $(date '+%Y-%m-%d %H:%M:%S UTC')
-        - **Workflow Run**: ${{ github.run_number }}
-        - **Failed Step**: ${{ job.status }}
-
-        ## System State at Failure
-        EOF
-
-        echo "### Memory Usage" >> results/failure-report.md
-        free -h >> results/failure-report.md
-
-        echo "### Disk Usage" >> results/failure-report.md
-        df -h >> results/failure-report.md
-
-        echo "### Recent Error Logs" >> results/failure-report.md
-        if [ -f "log/proxy-tester.log" ]; then
-          echo "#### Proxy Tester Errors:" >> results/failure-report.md
-          tail -n 20 log/proxy-tester.log >> results/failure-report.md
-        fi
-
-        if [ -f "log/quality-tester.log" ]; then
-          echo "#### Quality Tester Errors:" >> results/failure-report.md
-          tail -n 20 log/quality-tester.log >> results/failure-report.md
-        fi
-
-        echo "Failure report created"
-
-    - name: Commit and push enhanced results
+    - name: Commit and push changes
       run: |
         # Configure git user
         git config --global user.email "action@github.com"
-        git config --global user.name "Enhanced Proxy Testing Action"
+        git config --global user.name "GitHub Action"
 
-        # Add timestamp and test info to commit message
+        # Add timestamp to commit message
         TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
-        TEST_MODE="${{ github.event.inputs.test_mode || 'full' }}"
-        MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '25' }}"
 
         # Stash any unstaged changes to avoid conflicts
         git stash --include-untracked || echo "No changes to stash"
@@ -636,119 +188,41 @@ jobs:
         # Pop stashed changes back
         git stash pop || echo "No stash to pop"
 
-        # Stage all changes in data directories and enhanced results
-        git add data/ || echo "No data directory to add"
-        git add config_collector/deduplicated_urls/ || echo "No deduplicated_urls to add"
-        git add xray_test/results/ || echo "No results directory to add"
+        # Stage all changes in data directory and deduplicated_urls
+        git add data/
+        git add config_collector/deduplicated_urls/
 
         # Check if there are any changes to commit
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          # Count working proxies for commit message
-          WORKING_PROXIES=0
-          if [ -f "xray_test/results/proxy-test-results.json" ]; then
-            WORKING_PROXIES=$(grep -c '"working":true' xray_test/results/proxy-test-results.json 2>/dev/null || echo "0")
-          fi
-
-          # Create detailed commit message
-          COMMIT_MSG="🚀 Enhanced proxy update - $TIMESTAMP
-
-          📊 Test Results:
-          - Mode: $TEST_MODE
-          - Concurrency: $MAX_CONCURRENT
-          - Working Proxies: $WORKING_PROXIES
-          - Run: #${{ github.run_number }}"
-
           # Commit the changes
-          git commit -m "$COMMIT_MSG"
+          git commit -m "Auto-update proxy configs - $TIMESTAMP"
 
           # Push the changes with retry mechanism
           for i in {1..3}; do
             if git push; then
-              echo "✅ Enhanced results committed and pushed successfully"
-              echo "📈 Working proxies found: $WORKING_PROXIES"
+              echo "Changes committed and pushed successfully"
               break
             else
-              echo "❌ Push failed, attempt $i/3. Pulling latest changes..."
-              git pull origin main --rebase
+              echo "Push failed, attempt $i/3. Pulling latest changes..."
+              git pull origin main
               if [ $i -lt 3 ]; then
-                echo "⏳ Retrying push in 10 seconds..."
+                echo "Retrying push in 10 seconds..."
                 sleep 10
-              else
-                echo "🚨 Failed to push after 3 attempts"
-                exit 1
               fi
             fi
           done
         fi
 
-    - name: Upload enhanced artifacts and reports
+    - name: Upload artifacts (backup)
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: enhanced-proxy-results-${{ github.run_number }}
+        name: proxy-configs-${{ github.run_number }}
         path: |
           data/working_url/
           data/working_json/
           config_collector/deduplicated_urls/
           log/
-          xray_test/results/
-          xray_test/config.yaml
-        retention-days: 14
-        compression-level: 6
-
-    - name: Upload performance metrics
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: performance-metrics-${{ github.run_number }}
-        path: |
-          xray_test/results/metrics.json
-          xray_test/results/test-report.md
-          xray_test/results/failure-report.md
-        retention-days: 30
-
-    - name: Cleanup and optimization
-      if: always()
-      run: |
-        echo "=== Cleanup and Performance Optimization ==="
-
-        # Clean up temporary files
-        rm -rf xray_test/temp/* 2>/dev/null || echo "No temp files to clean"
-        rm -rf xray_test/configs/temp* 2>/dev/null || echo "No temp configs to clean"
-
-        # Compress large log files
-        cd xray_test
-        for log_file in log/*.log; do
-          if [ -f "$log_file" ] && [ $(stat -f%z "$log_file" 2>/dev/null || stat -c%s "$log_file" 2>/dev/null || echo 0) -gt 1048576 ]; then
-            echo "Compressing large log file: $(basename "$log_file")"
-            gzip "$log_file" 2>/dev/null || echo "Could not compress $log_file"
-          fi
-        done
-
-        # Final system state
-        echo "=== Final System State ==="
-        echo "Memory usage after cleanup:"
-        free -h
-        echo "Disk usage after cleanup:"
-        df -h
-
-        # Performance summary
-        echo "=== Performance Summary ==="
-        echo "Workflow completed at: $(date)"
-        echo "Test mode: ${{ github.event.inputs.test_mode || 'full' }}"
-        echo "Max concurrency used: ${{ github.event.inputs.max_concurrency || '25' }}"
-
-        if [ -f "results/proxy-test-results.json" ]; then
-          TOTAL_CONFIGS=$(jq length results/proxy-test-results.json 2>/dev/null || echo "0")
-          WORKING_CONFIGS=$(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")
-          echo "Total configurations processed: $TOTAL_CONFIGS"
-          echo "Working configurations found: $WORKING_CONFIGS"
-          if [ "$TOTAL_CONFIGS" -gt 0 ]; then
-            SUCCESS_RATE=$(echo "scale=2; $WORKING_CONFIGS * 100 / $TOTAL_CONFIGS" | bc 2>/dev/null || echo "N/A")
-            echo "Success rate: $SUCCESS_RATE%"
-          fi
-        fi
-
-        echo "✅ Enhanced proxy testing workflow completed successfully"
+        retention-days: 7
