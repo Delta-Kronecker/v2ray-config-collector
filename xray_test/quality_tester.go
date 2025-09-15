@@ -246,22 +246,22 @@ func NewQualityTester(xrayPath string, concurrent int) *QualityTester {
 	}
 
 	testSites := []TestSite{
-		// سایت‌های فیلتر شده در ایران - اولویت اول
+		// سایت‌های فیلتر شده در ایران - اولویت اول (پایدارترین)
 		{"Twitter", "https://twitter.com", "twitter", "filtered_primary"},
 		{"YouTube", "https://www.youtube.com", "watch", "filtered_primary"},
 		{"Instagram", "https://www.instagram.com", "instagram", "filtered_primary"},
+		{"Discord", "https://discord.com", "discord", "filtered_primary"},
 
 		// سایت‌های فیلتر شده مهم - اولویت دوم
 		{"Telegram Web", "https://web.telegram.org", "telegram", "filtered_secondary"},
-		{"WhatsApp Web", "https://web.whatsapp.com", "whatsapp", "filtered_secondary"},
-		{"Discord", "https://discord.com", "discord", "filtered_secondary"},
+		{"GitHub", "https://github.com", "github", "filtered_secondary"},
+		{"Reddit", "https://www.reddit.com", "reddit", "filtered_secondary"},
 
 		// سایت‌های تکنولوژی فیلتر شده
 		{"Stack Overflow", "https://stackoverflow.com", "stack overflow", "tech_filtered"},
-		{"Facebook", "https://www.facebook.com", "facebook", "filtered_primary"},
+		{"Google Search", "https://www.google.com/search?q=test", "search", "tech_filtered"},
 
-
-		// تست سرعت و پایداری
+		// تست سرعت و پایداری (مطمئن‌ترین)
 		{"Speed Test", "https://fast.com", "fast", "speed_test"},
 		{"CloudFlare Test", "https://1.1.1.1", "cloudflare", "connectivity"},
 	}
@@ -442,7 +442,7 @@ func (qt *QualityTester) testSingleSite(proxyPort int, site TestSite) TestResult
 
 // تشخیص سایت‌های حیاتی که نیاز به تست پایداری دارند
 func (qt *QualityTester) isCriticalSite(siteName string) bool {
-	criticalSites := []string{"Twitter", "Facebook", "Instagram", "YouTube", "Telegram Web"}
+	criticalSites := []string{"Twitter", "Instagram", "YouTube", "Discord", "Telegram Web"}
 	for _, critical := range criticalSites {
 		if siteName == critical {
 			return true
@@ -530,10 +530,11 @@ func (qt *QualityTester) performRequest(proxyPort int, url, expectedContent stri
 		},
 		DisableKeepAlives:     true,
 		DisableCompression:    false,
-		MaxIdleConns:          10,
-		IdleConnTimeout:       30 * time.Second,
-		TLSHandshakeTimeout:   30 * time.Second,
-		ExpectContinueTimeout: 1 * time.Second,
+		MaxIdleConns:          5,
+		IdleConnTimeout:       60 * time.Second,     // افزایش timeout
+		TLSHandshakeTimeout:   60 * time.Second,     // افزایش TLS timeout  
+		ExpectContinueTimeout: 5 * time.Second,      // افزایش timeout
+		ResponseHeaderTimeout: 45 * time.Second,     // اضافه کردن header timeout
 	}
 
 	client := &http.Client{
@@ -691,9 +692,9 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 
 // محاسبه امتیاز براساس دسترسی به سایت‌های فیلتر شده ایران
 func (qt *QualityTester) calculateIranFilteredScore(tests []TestResult) float64 {
-	primaryFilteredSites := []string{"Twitter", "Facebook", "YouTube", "Instagram"}
-	secondaryFilteredSites := []string{"Telegram Web", "WhatsApp Web", "Discord"}
-	techFilteredSites := []string{"Google", "GitHub", "Stack Overflow"}
+	primaryFilteredSites := []string{"Twitter", "YouTube", "Instagram", "Discord"}
+	secondaryFilteredSites := []string{"Telegram Web", "GitHub", "Reddit"}
+	techFilteredSites := []string{"Stack Overflow", "Google Search"}
 
 	primarySuccessCount := 0
 	secondarySuccessCount := 0
@@ -759,11 +760,11 @@ func (qt *QualityTester) calculateSpeedTestScore(tests []TestResult) float64 {
 
 // امتیاز اضافی برای پروکسی‌های عالی
 func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
-	criticalSites := []string{"Twitter", "Facebook", "Instagram", "YouTube"}
+	criticalSites := []string{"Twitter", "Instagram", "YouTube", "Discord"}
 	successCount := 0
 
 	for _, test := range tests {
-		if test.Success && test.Latency < 1500 { // لیتنسی کمتر از 1.5 ثانیه
+		if test.Success && test.Latency < 2000 { // لیتنسی کمتر از 2 ثانیه (واقعی‌تر)
 			for _, site := range criticalSites {
 				if test.Site == site {
 					successCount++
@@ -787,7 +788,7 @@ func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
 
 // بررسی دسترسی به سایت‌های فیلتر شده کلیدی
 func (qt *QualityTester) checkCriticalSitesAccess(tests []TestResult) float64 {
-	criticalSites := []string{"Twitter", "Facebook", "Instagram", "YouTube"}
+	criticalSites := []string{"Twitter", "Instagram", "YouTube", "Discord"}
 	successCount := 0
 
 	for _, test := range tests {
