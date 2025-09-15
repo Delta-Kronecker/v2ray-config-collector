@@ -329,23 +329,43 @@ func NewXrayConfigGenerator(xrayPath string) *XrayConfigGenerator {
 	if xrayPath == "" {
 		xrayPath = findXrayExecutable()
 	}
+	log.Printf("Using Xray path: %s", xrayPath)
 	return &XrayConfigGenerator{xrayPath: xrayPath}
 }
 
 func findXrayExecutable() string {
-	// Try common locations
-	paths := []string{"xray", "./xray", "/usr/local/bin/xray", "/usr/bin/xray"}
-
-	for _, path := range paths {
-		if _, err := exec.LookPath(path); err == nil {
-			return path
-		}
+	// First try system-wide installations
+	systemPaths := []string{"/usr/local/bin/xray", "/usr/bin/xray"}
+	for _, path := range systemPaths {
 		if _, err := os.Stat(path); err == nil {
 			return path
 		}
 	}
 
-	return "xray"
+	// Then try PATH lookup
+	if path, err := exec.LookPath("xray"); err == nil {
+		return path
+	}
+
+	// Finally try local paths (OS-specific)
+	var localPaths []string
+	if runtime.GOOS == "windows" {
+		localPaths = []string{"./xray.exe", "xray.exe"}
+	} else {
+		localPaths = []string{"./xray", "xray"}
+	}
+
+	for _, path := range localPaths {
+		if _, err := os.Stat(path); err == nil {
+			return path
+		}
+	}
+
+	// Return OS-appropriate default
+	if runtime.GOOS == "windows" {
+		return "./xray.exe"
+	}
+	return "./xray"
 }
 
 func (xcg *XrayConfigGenerator) ValidateXray() error {
