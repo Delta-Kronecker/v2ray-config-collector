@@ -199,9 +199,9 @@ jobs:
             success_threshold: 0.8
 
         circuit_breaker:
-          failure_threshold: 5
-          timeout_seconds: 30
-          max_requests: 10
+          failure_threshold: 20
+          timeout_seconds: 60
+          max_requests: 50
 
         health_checks:
           enabled: true
@@ -251,9 +251,12 @@ jobs:
           max_concurrent: 10
           timeout_seconds: 120
         quality_testing:
-          enabled: false
+          enabled: true
+          max_concurrent: 5
         circuit_breaker:
-          failure_threshold: 5
+          failure_threshold: 15
+          timeout_seconds: 45
+          max_requests: 30
         health_checks:
           enabled: false
         logging:
@@ -295,7 +298,27 @@ jobs:
     - name: Run enhanced proxy tester
       run: |
         cd xray_test
-        echo "Starting enhanced proxy testing with configuration..."
+        echo "🔧 Starting enhanced proxy testing with configuration..."
+
+        # Verify Xray is available first
+        if ! command -v xray >/dev/null 2>&1; then
+          echo "❌ Xray not found in PATH. Checking alternative locations..."
+          if [ ! -f "/usr/local/bin/xray" ]; then
+            echo "❌ Xray not installed. Proxy testing cannot proceed."
+            echo "⚠️ This will affect quality testing as it needs working configs from proxy tester."
+            exit 1
+          fi
+        fi
+
+        # Verify input files exist
+        if [ ! -d "../config_collector/deduplicated_urls" ] || [ -z "$(ls -A ../config_collector/deduplicated_urls 2>/dev/null)" ]; then
+          echo "❌ No input configurations found from config collector"
+          echo "Expected: ../config_collector/deduplicated_urls/*.txt"
+          ls -la ../config_collector/ || echo "config_collector directory not found"
+          exit 1
+        fi
+
+        echo "✅ Input validation passed. Found configs in ../config_collector/deduplicated_urls/"
 
         # Set environment variables for enhanced features
         export TEST_MODE="${{ github.event.inputs.test_mode || 'full' }}"
@@ -304,58 +327,116 @@ jobs:
 
         # Run proxy tester with configuration and monitoring
         timeout ${{ env.PROXY_TEST_TIMEOUT }} ./proxy-tester -config=config.yaml -mode="$TEST_MODE" || {
-          echo "Proxy tester failed or timed out"
+          echo "❌ Proxy tester failed or timed out"
           echo "=== Error logs ==="
           tail -n 50 log/proxy-tester.log 2>/dev/null || echo "No log file found"
           echo "=== System resources ==="
           free -h
           df -h
+          echo "=== Available Xray paths ==="
+          which xray || echo "xray not in PATH"
+          ls -la /usr/local/bin/xray 2>/dev/null || echo "xray not in /usr/local/bin/"
+          ls -la /usr/bin/xray 2>/dev/null || echo "xray not in /usr/bin/"
           exit 1
         }
 
-        echo "Proxy testing completed successfully"
+        echo "✅ Proxy testing completed successfully"
+
+        # Verify output files were generated
+        if [ ! -f "results/proxy-test-results.json" ]; then
+          echo "⚠️ Warning: proxy-test-results.json not generated"
+          mkdir -p results
+          echo '[]' > results/proxy-test-results.json
+        fi
 
         # Display results summary
         echo "=== Proxy Testing Results ==="
         if [ -f "results/proxy-test-results.json" ]; then
           echo "Results file size: $(du -h results/proxy-test-results.json)"
-          echo "Working proxies found: $(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")"
+          WORKING_COUNT=$(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")
+          echo "Working proxies found: $WORKING_COUNT"
+
+          if [ "$WORKING_COUNT" -eq 0 ]; then
+            echo "⚠️ Warning: No working proxies found. Quality testing may be skipped."
+          fi
         fi
 
     - name: Run enhanced quality tester
       run: |
         cd xray_test
-        echo "Starting enhanced quality testing..."
+        echo "🎯 Starting enhanced quality testing..."
 
         # Skip quality testing in quick mode
         if [ "${{ github.event.inputs.test_mode }}" = "quick" ]; then
-          echo "Skipping quality testing in quick mode"
+          echo "⏩ Skipping quality testing in quick mode"
           exit 0
         fi
 
+        # Verify Xray is still available
+        if ! command -v xray >/dev/null 2>&1 && [ ! -f "/usr/local/bin/xray" ]; then
+          echo "❌ Xray not available. Quality testing requires Xray."
+          exit 1
+        fi
+
+        # Check if working configs are available from proxy tester
+        if [ ! -f "results/proxy-test-results.json" ]; then
+          echo "❌ No working configs found from proxy tester"
+          echo "Quality tester needs working configs from proxy-tester step"
+          echo "Creating empty results file..."
+          mkdir -p results
+          echo '{"results": [], "summary": {"total": 0, "working": 0, "timestamp": "'$(date -Iseconds)'"}}' > results/quality-test-results.json
+          exit 0
+        fi
+
+        # Check if there are any working proxies
+        WORKING_COUNT=$(grep -c '"working":true' results/proxy-test-results.json 2>/dev/null || echo "0")
+        if [ "$WORKING_COUNT" -eq 0 ]; then
+          echo "⚠️ No working proxies found from proxy tester"
+          echo "Quality testing cannot proceed without working configurations"
+          echo "Creating empty quality results..."
+          mkdir -p results
+          echo '{"results": [], "summary": {"total": 0, "tested": 0, "high_quality": 0, "timestamp": "'$(date -Iseconds)'"}}' > results/quality-test-results.json
+          exit 0
+        fi
+
+        echo "✅ Found $WORKING_COUNT working proxies for quality testing"
+
         # Set environment variables
         export TEST_MODE="${{ github.event.inputs.test_mode || 'full' }}"
-        export MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '20' }}"
+        export MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '15' }}"  # Lower concurrency for quality testing
         export GOMAXPROCS=4
 
         # Run quality tester with timeout and monitoring
         timeout ${{ env.QUALITY_TEST_TIMEOUT }} ./quality-tester -config=config.yaml -mode="$TEST_MODE" || {
-          echo "Quality tester failed or timed out"
+          echo "❌ Quality tester failed or timed out"
           echo "=== Error logs ==="
           tail -n 50 log/quality-tester.log 2>/dev/null || echo "No log file found"
           echo "=== System resources ==="
           free -h
           df -h
+          echo "=== Available Xray paths ==="
+          which xray || echo "xray not in PATH"
+          ls -la /usr/local/bin/xray 2>/dev/null || echo "xray not in /usr/local/bin/"
+
+          # Create fallback results if quality testing fails
+          echo "Creating fallback quality results..."
+          mkdir -p results
+          echo '{"results": [], "summary": {"total": 0, "tested": 0, "failed": true, "error": "Quality testing failed", "timestamp": "'$(date -Iseconds)'"}}' > results/quality-test-results.json
           exit 1
         }
 
-        echo "Quality testing completed successfully"
+        echo "✅ Quality testing completed successfully"
 
         # Display quality results summary
         echo "=== Quality Testing Results ==="
         if [ -f "results/quality-test-results.json" ]; then
           echo "Quality results file size: $(du -h results/quality-test-results.json)"
-          echo "High-quality proxies: $(grep -c '"quality":"excellent\|good"' results/quality-test-results.json 2>/dev/null || echo "0")"
+          EXCELLENT_COUNT=$(grep -c '"category":"excellent"' results/quality-test-results.json 2>/dev/null || echo "0")
+          GOOD_COUNT=$(grep -c '"category":"good"' results/quality-test-results.json 2>/dev/null || echo "0")
+          TOTAL_HIGH_QUALITY=$((EXCELLENT_COUNT + GOOD_COUNT))
+          echo "High-quality proxies found: $TOTAL_HIGH_QUALITY (Excellent: $EXCELLENT_COUNT, Good: $GOOD_COUNT)"
+        else
+          echo "⚠️ Quality results file not found"
         fi
 
     - name: System health check and monitoring
