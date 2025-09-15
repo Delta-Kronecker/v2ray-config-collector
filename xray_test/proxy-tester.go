@@ -150,9 +150,11 @@ func NewNetworkTester(timeout time.Duration, config *Config) *NetworkTester {
 		config:         config,
 	}
 
-	// Configure circuit breaker state change callback
-	nt.circuitBreaker.onStateChange = func(state CircuitState) {
-		log.Printf("Circuit breaker state changed to: %v", state)
+	// Configure circuit breaker state change callback (only if enabled)
+	if config.Performance.EnableCircuitBreaker {
+		nt.circuitBreaker.onStateChange = func(state CircuitState) {
+			log.Printf("Circuit breaker state changed to: %v", state)
+		}
 	}
 
 	return nt
@@ -161,8 +163,8 @@ func NewNetworkTester(timeout time.Duration, config *Config) *NetworkTester {
 func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float64) {
 	startTime := time.Now()
 
-	// Check circuit breaker state
-	if nt.circuitBreaker.GetState() == StateOpen {
+	// Check circuit breaker state (only if enabled)
+	if nt.config.Performance.EnableCircuitBreaker && nt.circuitBreaker.GetState() == StateOpen {
 		nt.metrics.UpdateFailure("circuit_breaker_open")
 		return false, "", time.Since(startTime).Seconds()
 	}
@@ -1370,8 +1372,8 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 					continue
 				}
 
-				// Circuit breaker check
-				if pt.circuitBreaker.GetState() == StateOpen {
+				// Circuit breaker check (only if enabled)
+				if pt.config.Performance.EnableCircuitBreaker && pt.circuitBreaker.GetState() == StateOpen {
 					log.Printf("Worker %d: Circuit breaker open, skipping config %s:%d", workerID, config.Server, config.Port)
 					<-pt.workerPool
 					continue
@@ -1560,8 +1562,8 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 			}
 		}
 
-		// Circuit breaker recovery delay
-		if pt.circuitBreaker.GetState() == StateOpen {
+		// Circuit breaker recovery delay (only if enabled)
+		if pt.config.Performance.EnableCircuitBreaker && pt.circuitBreaker.GetState() == StateOpen {
 			log.Println("Circuit breaker is open, waiting for recovery...")
 			time.Sleep(5 * time.Second)
 		}
