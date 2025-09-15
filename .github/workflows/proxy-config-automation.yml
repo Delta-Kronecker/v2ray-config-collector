@@ -147,9 +147,20 @@ jobs:
         echo "Building quality-tester..."
         go build -o quality-tester quality_tester.go config.go utils.go
 
-        # Verify builds
-        ./proxy-tester --version || echo "Proxy tester version check not available"
-        ./quality-tester --version || echo "Quality tester version check not available"
+        # Verify builds (just check that binaries exist and are executable)
+        if [ -x "./proxy-tester" ]; then
+          echo "✅ proxy-tester built successfully"
+        else
+          echo "❌ proxy-tester build failed"
+          exit 1
+        fi
+
+        if [ -x "./quality-tester" ]; then
+          echo "✅ quality-tester built successfully"
+        else
+          echo "❌ quality-tester build failed" 
+          exit 1
+        fi
 
     - name: Create necessary directories
       run: |
