@@ -27,6 +27,60 @@ type ProxyTesterInterface interface {
 	Cleanup()
 }
 
+// Shared data structures
+type QualityScore int
+
+const (
+	ScoreExcellent QualityScore = 1
+	ScoreVeryGood  QualityScore = 2
+	ScoreGood      QualityScore = 3
+	ScoreFair      QualityScore = 4
+	ScorePoor      QualityScore = 5
+)
+
+type WorkingConfig struct {
+	Protocol   string  `json:"protocol"`
+	Server     string  `json:"server"`
+	Port       int     `json:"port"`
+	Method     string  `json:"method,omitempty"`
+	Password   string  `json:"password,omitempty"`
+	UUID       string  `json:"uuid,omitempty"`
+	AlterID    int     `json:"alterId,omitempty"`
+	Cipher     string  `json:"cipher,omitempty"`
+	Network    string  `json:"network"`
+	TLS        string  `json:"tls"`
+	Path       string  `json:"path,omitempty"`
+	Host       string  `json:"host,omitempty"`
+	SNI        string  `json:"sni,omitempty"`
+	Flow       string  `json:"flow,omitempty"`
+	Encryption string  `json:"encryption,omitempty"`
+	Remarks    string  `json:"remarks"`
+	ExternalIP string  `json:"external_ip"`
+	TestTime   float64 `json:"test_time"`
+}
+
+type TestResult struct {
+	Site         string  `json:"site"`
+	Success      bool    `json:"success"`
+	Latency      float64 `json:"latency_ms"`
+	DownloadTime float64 `json:"download_time_ms"`
+	ContentSize  int64   `json:"content_size_bytes"`
+	StatusCode   int     `json:"status_code"`
+	ErrorMsg     string  `json:"error_message,omitempty"`
+}
+
+type ConfigResult struct {
+	Config       WorkingConfig `json:"config"`
+	QualityTests []TestResult  `json:"quality_tests"`
+	FinalScore   float64       `json:"final_score"`
+	Category     QualityScore  `json:"category"`
+	AvgLatency   float64       `json:"avg_latency"`
+	SuccessRate  float64       `json:"success_rate"`
+	Stability    float64       `json:"stability"`
+	Speed        float64       `json:"speed_mbps"`
+	TestTime     time.Time     `json:"test_time"`
+}
+
 type QualityTesterInterface interface {
 	TestConfigQuality(config *WorkingConfig) (*ConfigResult, error)
 	LoadWorkingConfigs(filePath string) ([]WorkingConfig, error)
