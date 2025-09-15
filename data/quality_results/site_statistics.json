@@ -1,0 +1,107 @@
+{
+  "sites": {
+    "CloudFlare Test": {
+      "total_tests": 0,
+      "success_count": 0,
+      "failure_count": 0,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:32.263455363Z"
+    },
+    "Discord": {
+      "total_tests": 28,
+      "success_count": 0,
+      "failure_count": 28,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:15:56.171432704Z"
+    },
+    "GitHub": {
+      "total_tests": 4,
+      "success_count": 0,
+      "failure_count": 4,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:54.24509703Z"
+    },
+    "Google Search": {
+      "total_tests": 0,
+      "success_count": 0,
+      "failure_count": 0,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:32.263452237Z"
+    },
+    "IP Check": {
+      "total_tests": 0,
+      "success_count": 0,
+      "failure_count": 0,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:32.263455644Z"
+    },
+    "Instagram": {
+      "total_tests": 28,
+      "success_count": 0,
+      "failure_count": 28,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:15:56.171460867Z"
+    },
+    "Reddit": {
+      "total_tests": 0,
+      "success_count": 0,
+      "failure_count": 0,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:32.263451967Z"
+    },
+    "Speed Test": {
+      "total_tests": 4,
+      "success_count": 0,
+      "failure_count": 4,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:36.508164608Z"
+    },
+    "Stack Overflow": {
+      "total_tests": 0,
+      "success_count": 0,
+      "failure_count": 0,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:32.263452057Z"
+    },
+    "Telegram Web": {
+      "total_tests": 4,
+      "success_count": 0,
+      "failure_count": 4,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:09:54.409159809Z"
+    },
+    "Twitter": {
+      "total_tests": 28,
+      "success_count": 0,
+      "failure_count": 28,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:15:56.171452101Z"
+    },
+    "YouTube": {
+      "total_tests": 28,
+      "success_count": 0,
+      "failure_count": 28,
+      "avg_latency": 0,
+      "success_rate": 0,
+      "last_tested": "2025-09-15T21:15:56.171468592Z"
+    }
+  },
+  "summary": {
+    "critical_sites": 4,
+    "secondary_sites": 5,
+    "speed_test_sites": 3,
+    "total_sites": 12
+  },
+  "timestamp": "2025-09-15T21:15:56.174698142Z"
+}

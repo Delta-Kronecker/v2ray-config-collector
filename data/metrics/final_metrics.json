@@ -1,0 +1,27 @@
+{
+  "circuit_breaker_stats": {
+    "final_state": 1,
+    "total_failures": 1337,
+    "total_successes": 28
+  },
+  "configuration": {
+    "batch_size": 500,
+    "circuit_breaker": false,
+    "max_workers": 500,
+    "rate_limiting": false,
+    "timeout_seconds": 5
+  },
+  "performance_metrics": {
+    "avg_batch_time": 10.917961348214286,
+    "memory_usage_mb": 13.359306335449219,
+    "tests_per_second": 0
+  },
+  "test_summary": {
+    "avg_latency_ms": 0,
+    "failed_tests": 0,
+    "success_rate_percent": 0,
+    "successful_tests": 0,
+    "total_configurations": 6576,
+    "total_duration": "2m32.851458875s"
+  }
+}
