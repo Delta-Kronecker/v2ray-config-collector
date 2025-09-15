@@ -72,47 +72,46 @@ jobs:
         # Verify installations
         which jq bc gzip curl wget unzip || { echo "❌ Missing required tools"; exit 1; }
 
-    - name: Setup Xray
+    - name: Setup Xray (optimized)
       run: |
-        # Setup Xray with retry logic
-        for i in {1..3}; do
-          if [ -f "xray_test/xray" ]; then
-            echo "Using existing Xray binary from project"
-            if sudo cp xray_test/xray /usr/local/bin/ && sudo chmod +x /usr/local/bin/xray && xray version; then
-              echo "Xray setup completed successfully"
-              break
-            fi
-          else
-            echo "Downloading Xray binary, attempt $i/3"
-            if wget -O xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip && unzip -o xray.zip && sudo mv xray /usr/local/bin/ && sudo chmod +x /usr/local/bin/xray && xray version; then
-              echo "Xray setup completed successfully"
-              break
-            fi
-          fi
+        # Check for existing Xray installation first
+        if command -v xray >/dev/null 2>&1; then
+          echo "✅ Xray already installed: $(xray version)"
+          exit 0
+        fi
 
-          echo "Xray setup failed, attempt $i/3"
-          if [ $i -lt 3 ]; then
-            echo "Retrying in 15 seconds..."
-            sleep 15
-          fi
-        done
+        # Setup Xray with caching and optimized download
+        if [ -f "xray_test/xray" ]; then
+          echo "📦 Using existing Xray binary from project"
+          sudo cp xray_test/xray /usr/local/bin/
+          sudo chmod +x /usr/local/bin/xray
+        else
+          echo "⬇️ Downloading Xray binary (optimized)"
+          # Use GitHub API to get latest release URL for better reliability
+          XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r '.assets[] | select(.name | contains("linux-64")) | .browser_download_url')
 
-    - name: Install Python dependencies
+          wget --timeout=30 --tries=2 -O xray.zip "$XRAY_URL" \
+            && unzip -o xray.zip \
+            && sudo mv xray /usr/local/bin/ \
+            && sudo chmod +x /usr/local/bin/xray \
+            || { echo "❌ Failed to setup Xray"; exit 1; }
+        fi
+
+        # Verify Xray installation
+        xray version && echo "✅ Xray setup completed successfully"
+
+    - name: Install Python dependencies (optimized)
       run: |
         cd config_collector
-        # Install any required Python packages with retry logic
-        for i in {1..3}; do
-          if pip install requests beautifulsoup4 lxml urllib3 tenacity; then
-            echo "Python dependencies installed successfully"
-            break
-          else
-            echo "Python dependencies installation failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 30 seconds..."
-              sleep 30
-            fi
-          fi
-        done
+
+        # Use pip cache and install with optimizations
+        pip install --no-warn-script-location --disable-pip-version-check \
+          requests beautifulsoup4 lxml urllib3 tenacity \
+          && echo "✅ Python dependencies installed successfully" \
+          || { echo "❌ Failed to install Python dependencies"; exit 1; }
+
+        # Verify key modules
+        python -c "import requests, bs4, lxml, urllib3, tenacity; print('✅ All Python modules verified')"
 
     - name: Install Go dependencies and build modules
       run: |
