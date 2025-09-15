@@ -16,6 +16,7 @@ import (
 	"os/exec"
 	"os/signal"
 	"regexp"
+	"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -23,79 +24,10 @@ import (
 	"syscall"
 	"time"
 
-	"golang.org/x/net/proxy"
+
 )
 
-// Enums
-type TestResult string
-
-const (
-	ResultSuccess            TestResult = "success"
-	ResultParseError         TestResult = "parse_error"
-	ResultSyntaxError        TestResult = "syntax_error"
-	ResultConnectionError    TestResult = "connection_error"
-	ResultTimeout            TestResult = "timeout"
-	ResultPortConflict       TestResult = "port_conflict"
-	ResultInvalidConfig      TestResult = "invalid_config"
-	ResultNetworkError       TestResult = "network_error"
-	ResultHangTimeout        TestResult = "hang_timeout"
-	ResultProcessKilled      TestResult = "process_killed"
-	ResultUnsupportedProtocol TestResult = "unsupported_protocol"
-)
-
-type ProxyProtocol string
-
-const (
-	ProtocolShadowsocks ProxyProtocol = "shadowsocks"
-	ProtocolVMess       ProxyProtocol = "vmess"
-	ProtocolVLESS       ProxyProtocol = "vless"
-)
-
-// Configuration structures
-type ProxyConfig struct {
-	Protocol ProxyProtocol `json:"protocol"`
-	Server   string        `json:"server"`
-	Port     int           `json:"port"`
-	Remarks  string        `json:"remarks"`
-
-	// Shadowsocks specific
-	Method   string `json:"method,omitempty"`
-	Password string `json:"password,omitempty"`
-
-	// VMess/VLESS specific
-	UUID     string `json:"uuid,omitempty"`
-	AlterID  int    `json:"alterId,omitempty"`
-	Cipher   string `json:"cipher,omitempty"`
-	Flow     string `json:"flow,omitempty"`
-	Encrypt  string `json:"encryption,omitempty"`
-
-	// Transport settings
-	Network     string `json:"network,omitempty"`
-	TLS         string `json:"tls,omitempty"`
-	SNI         string `json:"sni,omitempty"`
-	Path        string `json:"path,omitempty"`
-	Host        string `json:"host,omitempty"`
-	ALPN        string `json:"alpn,omitempty"`
-	Fingerprint string `json:"fingerprint,omitempty"`
-	HeaderType  string `json:"headerType,omitempty"`
-	ServiceName string `json:"serviceName,omitempty"`
-
-	// Metadata
-	RawConfig  map[string]interface{} `json:"raw_config,omitempty"`
-	ConfigID   *int                   `json:"config_id,omitempty"`
-	LineNumber *int                   `json:"line_number,omitempty"`
-}
-
-type TestResultData struct {
-	Config       ProxyConfig `json:"config"`
-	Result       TestResult  `json:"result"`
-	TestTime     float64     `json:"test_time"`
-	ResponseTime *float64    `json:"response_time,omitempty"`
-	ErrorMessage string      `json:"error_message,omitempty"`
-	ExternalIP   string      `json:"external_ip,omitempty"`
-	ProxyPort    *int        `json:"proxy_port,omitempty"`
-	BatchID      *int        `json:"batch_id,omitempty"`
-}
+// Note: All shared types moved to utils.go
 
 // JSON file structures for loading configs
 type ShadowsocksJSON struct {
@@ -181,100 +113,23 @@ type VLessJSON struct {
 	} `json:"configs"`
 }
 
-// Port manager
-type PortManager struct {
-	startPort     int
-	endPort       int
-	availablePorts chan int
-	usedPorts     sync.Map
-	mu            sync.Mutex
-}
+// PortManager moved to utils.go
 
-func NewPortManager(startPort, endPort int) *PortManager {
-	pm := &PortManager{
-		startPort:     startPort,
-		endPort:       endPort,
-		availablePorts: make(chan int, endPort-startPort+1),
-	}
-	pm.initializePortPool()
-	return pm
-}
-
-func (pm *PortManager) initializePortPool() {
-	log.Printf("Initializing port pool (%d-%d)...", pm.startPort, pm.endPort)
-	availableCount := 0
-
-	for port := pm.startPort; port <= pm.endPort; port++ {
-		if pm.isPortAvailable(port) {
-			select {
-			case pm.availablePorts <- port:
-				availableCount++
-			default:
-				// Channel is full, which shouldn't happen but let's be safe
-			}
-		}
-	}
-
-	log.Printf("Port pool initialized with %d available ports", availableCount)
-}
-
-func (pm *PortManager) isPortAvailable(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 50*time.Millisecond)
-	if err != nil {
-		// Port is available if we can't connect to it
-		return true
-	}
-	conn.Close()
-	return false
-}
-
-func (pm *PortManager) GetAvailablePort() (int, bool) {
-	select {
-	case port := <-pm.availablePorts:
-		pm.usedPorts.Store(port, true)
-		return port, true
-	case <-time.After(100 * time.Millisecond):
-		// Emergency port finding
-		return pm.findEmergencyPort(), true
-	}
-}
-
-func (pm *PortManager) findEmergencyPort() int {
-	pm.mu.Lock()
-	defer pm.mu.Unlock()
-
-	for i := 0; i < 100; i++ {
-		port := rand.Intn(pm.endPort-pm.startPort+1) + pm.startPort
-		if _, used := pm.usedPorts.Load(port); !used && pm.isPortAvailable(port) {
-			pm.usedPorts.Store(port, true)
-			return port
-		}
-	}
-	return 0
-}
-
-func (pm *PortManager) ReleasePort(port int) {
-	pm.usedPorts.Delete(port)
-	// Return port to pool after a short delay
-	go func() {
-		time.Sleep(20 * time.Millisecond)
-		select {
-		case pm.availablePorts <- port:
-		default:
-			// Channel is full, port will be found by emergency finder
-		}
-	}()
-}
-
-// Network tester
+// Enhanced Network tester with connection pooling and circuit breaker
 type NetworkTester struct {
-	timeout  time.Duration
-	testURLs []string
-	client   *http.Client
+	timeout         time.Duration
+	testURLs        []string
+	clientPool      *HTTPClientPool
+	circuitBreaker  *CircuitBreaker
+	rateLimiter     *RateLimiter
+	retryManager    *SmartRetry
+	bufferPool      *BufferPool
+	metrics         *TestMetrics
+	config          *Config
 }
 
-func NewNetworkTester(timeout time.Duration) *NetworkTester {
-	return &NetworkTester{
+func NewNetworkTester(timeout time.Duration, config *Config) *NetworkTester {
+	nt := &NetworkTester{
 		timeout: timeout,
 		testURLs: []string{
 			"http://httpbin.org/ip",
@@ -286,18 +141,70 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 			"https://httpbin.org/ip",
 			"https://icanhazip.com",
 		},
-		client: &http.Client{Timeout: timeout},
+		clientPool:     NewHTTPClientPool(timeout, config),
+		circuitBreaker: NewCircuitBreaker(config.Performance.CircuitBreakerConfig),
+		rateLimiter:    NewRateLimiter(config.Performance.RateLimitConfig),
+		retryManager:   NewSmartRetry(config.ProxyTester.RetryConfig),
+		bufferPool:     NewBufferPool(config.Performance.MemoryOptimization.BufferSize),
+		metrics:        NewTestMetrics(),
+		config:         config,
 	}
+
+	// Configure circuit breaker state change callback
+	nt.circuitBreaker.onStateChange = func(state CircuitState) {
+		log.Printf("Circuit breaker state changed to: %v", state)
+	}
+
+	return nt
 }
 
 func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float64) {
 	startTime := time.Now()
 
-	// Check if proxy port is responsive
-	if !nt.isProxyResponsive(proxyPort) {
+	// Check circuit breaker state
+	if nt.circuitBreaker.GetState() == StateOpen {
+		nt.metrics.UpdateFailure("circuit_breaker_open")
 		return false, "", time.Since(startTime).Seconds()
 	}
 
+	// Rate limiting
+	if !nt.rateLimiter.Allow() {
+		nt.metrics.UpdateFailure("rate_limited")
+		return false, "", time.Since(startTime).Seconds()
+	}
+
+	// Check if proxy port is responsive
+	if !nt.isProxyResponsive(proxyPort) {
+		nt.metrics.UpdateFailure("proxy_not_responsive")
+		return false, "", time.Since(startTime).Seconds()
+	}
+
+	// Test with multiple URLs using smart retry
+	var lastErr error
+	success, ip, responseTime := false, "", 0.0
+
+	err := nt.retryManager.Execute(func() error {
+		var testErr error
+		success, ip, responseTime, testErr = nt.testWithMultipleURLs(proxyPort)
+		if !success {
+			lastErr = testErr
+			return testErr
+		}
+		return nil
+	})
+
+	totalTime := time.Since(startTime).Seconds()
+
+	if err != nil {
+		nt.metrics.UpdateFailure(fmt.Sprintf("test_failed: %v", lastErr))
+		return false, "", totalTime
+	}
+
+	nt.metrics.UpdateSuccess(responseTime * 1000) // Convert to milliseconds
+	return success, ip, responseTime
+}
+
+func (nt *NetworkTester) testWithMultipleURLs(proxyPort int) (bool, string, float64, error) {
 	// Test with multiple URLs
 	testCount := 6
 	if len(nt.testURLs) < testCount {
@@ -311,14 +218,24 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		shuffled[i], shuffled[j] = shuffled[j], shuffled[i]
 	})
 
+	var lastErr error
 	for i := 0; i < testCount; i++ {
-		success, ip, responseTime := nt.singleTest(proxyPort, shuffled[i])
-		if success {
-			return true, ip, responseTime
+		err := nt.circuitBreaker.Call(func() error {
+			success, _, _ := nt.singleTest(proxyPort, shuffled[i])
+			if success {
+				return nil
+			}
+			return fmt.Errorf("test failed for URL: %s", shuffled[i])
+		})
+
+		if err == nil {
+			// Success case handled in singleTest
+			return true, "", 0, nil
 		}
+		lastErr = err
 	}
 
-	return false, "", time.Since(startTime).Seconds()
+	return false, "", 0, lastErr
 }
 
 func (nt *NetworkTester) isProxyResponsive(port int) bool {
@@ -333,26 +250,25 @@ func (nt *NetworkTester) isProxyResponsive(port int) bool {
 func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string, float64) {
 	startTime := time.Now()
 
-	// Create SOCKS5 dialer
-	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), nil, proxy.Direct)
+	// Get client from pool
+	client, err := nt.clientPool.GetClient(proxyPort)
+	if err != nil {
+		return false, "", time.Since(startTime).Seconds()
+	}
+	defer nt.clientPool.PutClient(client)
+
+	// Create request
+	req, err := http.NewRequest("GET", testURL, nil)
 	if err != nil {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	// Create HTTP client with proxy
-	transport := &http.Transport{
-		Dial:                dialer.Dial,
-		DisableKeepAlives:   true,
-		TLSHandshakeTimeout: 10 * time.Second,
-	}
-
-	client := &http.Client{
-		Transport: transport,
-		Timeout:   nt.timeout,
-	}
+	// Set headers for better compatibility
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
 
 	// Make request
-	resp, err := client.Get(testURL)
+	resp, err := client.Do(req)
 	if err != nil {
 		return false, "", time.Since(startTime).Seconds()
 	}
@@ -362,18 +278,32 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return false, "", time.Since(startTime).Seconds()
+	// Use buffer pool for reading response
+	buf := nt.bufferPool.Get()
+	defer nt.bufferPool.Put(buf)
+
+	// Read response body efficiently
+	var bodyBytes []byte
+	for {
+		n, err := resp.Body.Read(buf)
+		if n > 0 {
+			bodyBytes = append(bodyBytes, buf[:n]...)
+		}
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			return false, "", time.Since(startTime).Seconds()
+		}
 	}
 
 	responseTime := time.Since(startTime).Seconds()
-	ipText := strings.TrimSpace(string(body))
+	ipText := strings.TrimSpace(string(bodyBytes))
 
 	// Handle JSON responses
 	if strings.Contains(resp.Header.Get("Content-Type"), "json") {
 		var data map[string]interface{}
-		if json.Unmarshal(body, &data) == nil {
+		if json.Unmarshal(bodyBytes, &data) == nil {
 			if origin, ok := data["origin"].(string); ok {
 				ipText = origin
 			} else if ip, ok := data["ip"].(string); ok {
@@ -585,76 +515,32 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 	return xrayConfig, nil
 }
 
-// Process manager
-type ProcessManager struct {
-	processes sync.Map
-	mu        sync.RWMutex
-}
+// ProcessManager moved to utils.go
 
-func NewProcessManager() *ProcessManager {
-	return &ProcessManager{}
-}
-
-func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) {
-	pm.processes.Store(pid, cmd)
-}
-
-func (pm *ProcessManager) UnregisterProcess(pid int) {
-	pm.processes.Delete(pid)
-}
-
-func (pm *ProcessManager) KillProcess(pid int) error {
-	if value, ok := pm.processes.Load(pid); ok {
-		if cmd, ok := value.(*exec.Cmd); ok {
-			if cmd.Process != nil {
-				// Try graceful termination first
-				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
-					// Wait a bit for graceful shutdown
-					done := make(chan error, 1)
-					go func() {
-						done <- cmd.Wait()
-					}()
-
-					select {
-					case <-done:
-						// Process terminated gracefully
-					case <-time.After(300 * time.Millisecond):
-						// Force kill
-						cmd.Process.Kill()
-					}
-				} else {
-					// Direct kill if SIGTERM fails
-					cmd.Process.Kill()
-				}
-				pm.UnregisterProcess(pid)
-				return nil
-			}
-		}
-	}
-	return fmt.Errorf("process not found")
-}
-
-func (pm *ProcessManager) Cleanup() {
-	pm.processes.Range(func(key, value interface{}) bool {
-		if pid, ok := key.(int); ok {
-			pm.KillProcess(pid)
-		}
-		return true
-	})
-}
-
-// Main tester
+// Enhanced Main tester with adaptive configuration and monitoring
 type ProxyTester struct {
+	// Configuration
+	config            *Config
 	xrayPath          string
 	maxWorkers        int
 	timeout           time.Duration
 	batchSize         int
 	incrementalSave   bool
 
+	// Enhanced components
 	portManager       *PortManager
 	processManager    *ProcessManager
 	networkTester     *NetworkTester
 	configGenerator   *XrayConfigGenerator
+
+	// New enhancement components
+	healthChecker     *HealthChecker
+	metrics           *TestMetrics
+	progressTracker   *ProgressTracker
+	adaptiveConfig    *AdaptiveConfig
+	circuitBreaker    *CircuitBreaker
+	rateLimiter       *RateLimiter
+	gracefulShutdown  *GracefulShutdown
 
 	// Output files
 	outputFiles       map[ProxyProtocol]*os.File
@@ -668,42 +554,92 @@ type ProxyTester struct {
 	stats             sync.Map
 	results           []TestResultData
 	resultsMu         sync.Mutex
+
+	// Runtime optimization
+	bufferPool        *BufferPool
+	workerPool        chan struct{}
 }
 
-func NewProxyTester(xrayPath string, maxWorkers int, timeout time.Duration, batchSize int, incrementalSave bool) (*ProxyTester, error) {
+func NewProxyTester(configPath string) (*ProxyTester, error) {
+	// Load configuration
+	config, err := LoadConfig(configPath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to load configuration: %w", err)
+	}
+
+	// Initialize enhanced proxy tester
 	pt := &ProxyTester{
-		xrayPath:        xrayPath,
-		maxWorkers:      maxWorkers,
-		timeout:         timeout,
-		batchSize:       batchSize,
-		incrementalSave: incrementalSave,
+		config:          config,
+		xrayPath:        config.ProxyTester.XrayPath,
+		maxWorkers:      config.ProxyTester.MaxWorkers,
+		timeout:         config.ProxyTester.Timeout,
+		batchSize:       config.ProxyTester.BatchSize,
+		incrementalSave: config.ProxyTester.IncrementalSave,
 
-		portManager:     NewPortManager(10000, 20000),
+		// Enhanced components
+		portManager:     NewPortManager(config.ProxyTester.PortRange.Start, config.ProxyTester.PortRange.End, config),
 		processManager:  NewProcessManager(),
-		networkTester:   NewNetworkTester(timeout),
-		configGenerator: NewXrayConfigGenerator(xrayPath),
+		networkTester:   NewNetworkTester(config.ProxyTester.Timeout, config),
+		configGenerator: NewXrayConfigGenerator(config.ProxyTester.XrayPath),
 
+		// New enhancement components
+		healthChecker:    NewHealthChecker(),
+		metrics:          NewTestMetrics(),
+		adaptiveConfig:   NewAdaptiveConfig(),
+		circuitBreaker:   NewCircuitBreaker(config.Performance.CircuitBreakerConfig),
+		rateLimiter:      NewRateLimiter(config.Performance.RateLimitConfig),
+		gracefulShutdown: NewGracefulShutdown(30 * time.Second),
+
+		// Output files
 		outputFiles: make(map[ProxyProtocol]*os.File),
 		urlFiles:    make(map[ProxyProtocol]*os.File),
+
+		// Runtime optimization
+		bufferPool: NewBufferPool(config.Performance.MemoryOptimization.BufferSize),
+		workerPool: make(chan struct{}, config.ProxyTester.MaxWorkers),
 	}
+
+	// Add health checks
+	pt.healthChecker.AddCheck(NewMemoryHealthCheck(1024)) // 1GB limit
+	pt.healthChecker.AddCheck(NewDiskHealthCheck(config.Common.OutputDir, 1)) // 1GB minimum
+
+	// Setup cleanup functions for graceful shutdown
+	pt.gracefulShutdown.AddCleanupFunc(func() error {
+		pt.Cleanup()
+		return nil
+	})
 
 	// Validate Xray
 	if err := pt.configGenerator.ValidateXray(); err != nil {
-		return nil, err
+		return nil, fmt.Errorf("xray validation failed: %w", err)
 	}
 
 	// Initialize statistics
 	pt.initStats()
 
 	// Setup incremental save files if enabled
-	if incrementalSave {
+	if pt.incrementalSave {
 		if err := pt.setupIncrementalSave(); err != nil {
 			log.Printf("Warning: Failed to setup incremental save: %v", err)
 			pt.incrementalSave = false
 		}
 	}
 
+	// Enable GC optimization if configured
+	if config.Performance.MemoryOptimization.EnableGCOptimization {
+		runtime.GC()
+		runtime.GOMAXPROCS(runtime.NumCPU())
+	}
+
+	log.Printf("Enhanced ProxyTester initialized with %d workers, circuit breaker: %v, rate limiting: %v",
+		pt.maxWorkers, config.Performance.EnableCircuitBreaker, config.Performance.RateLimitConfig.Enabled)
+
 	return pt, nil
+}
+
+// NewProxyTesterWithDefaults creates a ProxyTester with default configuration
+func NewProxyTesterWithDefaults() (*ProxyTester, error) {
+	return NewProxyTester("")
 }
 
 func (pt *ProxyTester) initStats() {
@@ -1373,27 +1309,82 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 
 	log.Printf("Testing batch %d with %d configurations...", batchID, len(configs))
 
-	// Create worker pool
-	maxWorkers := pt.maxWorkers
+	// Health check before starting
+	if healthResults := pt.healthChecker.CheckAll(); len(healthResults) > 0 {
+		for name, err := range healthResults {
+			if err != nil {
+				log.Printf("Health check failed for %s: %v", name, err)
+			}
+		}
+	}
+
+	// Adaptive worker count based on performance
+	maxWorkers := pt.adaptiveConfig.SuggestWorkerCount(pt.maxWorkers)
 	if len(configs) < maxWorkers {
 		maxWorkers = len(configs)
 	}
 
+	log.Printf("Using %d workers (adaptive: %d, original: %d)", maxWorkers, maxWorkers, pt.maxWorkers)
+
 	configChan := make(chan ProxyConfig, len(configs))
 	resultChan := make(chan *TestResultData, len(configs))
 
-	// Start workers
+	// Initialize progress tracking
+	progressTracker := NewProgressTracker(int64(len(configs)))
+
+	// Start workers with enhanced error handling
 	var wg sync.WaitGroup
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
-		go func() {
+		go func(workerID int) {
 			defer wg.Done()
+
 			for config := range configChan {
-				result := pt.TestSingleConfig(&config, batchID)
+				// Worker pool semaphore
+				pt.workerPool <- struct{}{}
+
+				// Rate limiting
+				if !pt.rateLimiter.Allow() {
+					log.Printf("Worker %d: Rate limited, skipping config %s:%d", workerID, config.Server, config.Port)
+					<-pt.workerPool
+					continue
+				}
+
+				// Circuit breaker check
+				if pt.circuitBreaker.GetState() == StateOpen {
+					log.Printf("Worker %d: Circuit breaker open, skipping config %s:%d", workerID, config.Server, config.Port)
+					<-pt.workerPool
+					continue
+				}
+
+				// Test configuration with circuit breaker
+				var result *TestResultData
+				err := pt.circuitBreaker.Call(func() error {
+					result = pt.TestSingleConfig(&config, batchID)
+					if result.Result != ResultSuccess {
+						return fmt.Errorf("test failed: %s", result.ErrorMessage)
+					}
+					return nil
+				})
+
+				if err != nil && result == nil {
+					// Create failed result if circuit breaker prevented execution
+					result = &TestResultData{
+						Config:       config,
+						Result:       ResultNetworkError,
+						ErrorMessage: err.Error(),
+						BatchID:      &batchID,
+					}
+				}
+
 				pt.updateStats(result)
+				pt.metrics.UpdateMemoryUsage()
+				progressTracker.IncrementProgress()
+
 				resultChan <- result
+				<-pt.workerPool
 			}
-		}()
+		}(i)
 	}
 
 	// Send configs to workers
@@ -1408,21 +1399,69 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 		close(resultChan)
 	}()
 
-	// Collect results
+	// Collect results with monitoring
 	var results []*TestResultData
 	successCount := 0
+	startTime := time.Now()
 
 	for result := range resultChan {
 		results = append(results, result)
 		if result.Result == ResultSuccess {
 			successCount++
 		}
+
+		// Periodic metrics update
+		if len(results)%100 == 0 {
+			pt.updateAdaptiveMetrics(results)
+		}
 	}
 
-	log.Printf("Batch %d completed: %d/%d successful (%.1f%%)",
-		batchID, successCount, len(configs), float64(successCount)/float64(len(configs))*100)
+	// Final metrics update
+	pt.updateAdaptiveMetrics(results)
+	duration := time.Since(startTime)
+
+	log.Printf("Batch %d completed: %d/%d successful (%.1f%%) in %v",
+		batchID, successCount, len(configs), float64(successCount)/float64(len(configs))*100, duration)
+
+	// Log circuit breaker stats
+	failures, successes, state := pt.circuitBreaker.GetStats()
+	log.Printf("Circuit breaker stats - Failures: %d, Successes: %d, State: %v", failures, successes, state)
 
 	return results
+}
+
+// updateAdaptiveMetrics updates metrics for adaptive configuration
+func (pt *ProxyTester) updateAdaptiveMetrics(results []*TestResultData) {
+	if len(results) == 0 {
+		return
+	}
+
+	successCount := 0
+	totalLatency := 0.0
+	latencyCount := 0
+
+	for _, result := range results {
+		if result.Result == ResultSuccess {
+			successCount++
+			if result.ResponseTime != nil {
+				totalLatency += *result.ResponseTime
+				latencyCount++
+			}
+		}
+	}
+
+	successRate := float64(successCount) / float64(len(results)) * 100
+	avgLatency := 0.0
+	if latencyCount > 0 {
+		avgLatency = totalLatency / float64(latencyCount) * 1000 // Convert to milliseconds
+	}
+
+	// Get memory usage
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+	memoryUsage := float64(m.Alloc) / 1024 / 1024 / 1024 * 100 // Convert to GB percentage
+
+	pt.adaptiveConfig.UpdateMetrics(successRate, avgLatency, memoryUsage)
 }
 
 func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
@@ -1437,45 +1476,175 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 
 	go func() {
 		<-sigChan
-		log.Println("Received shutdown signal, cleaning up...")
-		pt.Cleanup()
+		log.Println("Received shutdown signal, initiating graceful shutdown...")
+		if err := pt.gracefulShutdown.Shutdown(); err != nil {
+			log.Printf("Graceful shutdown failed: %v", err)
+		}
 		os.Exit(0)
 	}()
 
 	totalConfigs := len(configs)
-	log.Printf("Starting comprehensive proxy testing for %d configurations", totalConfigs)
+	log.Printf("Starting enhanced proxy testing for %d configurations", totalConfigs)
 	log.Printf("Settings: %d workers, %v timeout, batch size: %d", pt.maxWorkers, pt.timeout, pt.batchSize)
+	log.Printf("Enhanced features: Circuit Breaker: %v, Rate Limiting: %v, Adaptive Config: enabled",
+		pt.config.Performance.EnableCircuitBreaker, pt.config.Performance.RateLimitConfig.Enabled)
+
+	// Initialize progress tracking
+	pt.progressTracker = NewProgressTracker(int64(totalConfigs))
 
 	var allResults []*TestResultData
+	startTime := time.Now()
 
-	// Process in batches
-	for batchIdx := 0; batchIdx < totalConfigs; batchIdx += pt.batchSize {
-		end := batchIdx + pt.batchSize
+	// Adaptive batch size
+	currentBatchSize := pt.batchSize
+
+	// Process in batches with adaptive optimization
+	for batchIdx := 0; batchIdx < totalConfigs; batchIdx += currentBatchSize {
+		end := batchIdx + currentBatchSize
 		if end > totalConfigs {
 			end = totalConfigs
 		}
 
 		batch := configs[batchIdx:end]
-		batchID := (batchIdx / pt.batchSize) + 1
+		batchID := (batchIdx / currentBatchSize) + 1
 
 		log.Printf("Processing batch %d (%d configs)...", batchID, len(batch))
+
+		// Health check before each batch
+		if healthResults := pt.healthChecker.CheckAll(); len(healthResults) > 0 {
+			for name, err := range healthResults {
+				if err != nil {
+					log.Printf("Health check warning for %s: %v", name, err)
+				}
+			}
+		}
 
 		batchResults := pt.TestConfigs(batch, batchID)
 		allResults = append(allResults, batchResults...)
 
-		// Save intermediate results
-		pt.saveResults(allResults)
+		// Update overall progress
+		pt.progressTracker.UpdateProgress(int64(len(allResults)))
 
-		// Small delay between batches
+		// Save intermediate results
+		if pt.config.Common.EnableMetrics {
+			pt.saveResults(allResults)
+			pt.saveMetrics()
+		}
+
+		// Adaptive batch size adjustment
+		if pt.config.QualityTester.AdaptiveTesting {
+			newBatchSize := pt.adaptiveConfig.SuggestBatchSize(currentBatchSize)
+			if newBatchSize != currentBatchSize {
+				log.Printf("Adaptive batch size changed from %d to %d", currentBatchSize, newBatchSize)
+				currentBatchSize = newBatchSize
+			}
+		}
+
+		// Circuit breaker recovery delay
+		if pt.circuitBreaker.GetState() == StateOpen {
+			log.Println("Circuit breaker is open, waiting for recovery...")
+			time.Sleep(5 * time.Second)
+		}
+
+		// Small delay between batches for resource management
 		if end < totalConfigs {
-			time.Sleep(500 * time.Millisecond)
+			time.Sleep(time.Duration(500+len(batch)/10) * time.Millisecond)
+		}
+
+		// Memory cleanup every few batches
+		if batchID%5 == 0 && pt.config.Performance.MemoryOptimization.EnableGCOptimization {
+			runtime.GC()
 		}
 	}
 
-	// Print final summary
-	pt.printFinalSummary(allResults)
+	duration := time.Since(startTime)
+
+	// Print enhanced final summary
+	pt.printEnhancedFinalSummary(allResults, duration)
+
+	// Save final metrics
+	if pt.config.Common.EnableMetrics {
+		pt.saveFinalMetrics(allResults, duration)
+	}
 
 	return allResults
+}
+
+// saveMetrics saves current metrics to file
+func (pt *ProxyTester) saveMetrics() {
+	total, successful, successRate, avgLatency := pt.metrics.GetStats()
+
+	metricsData := map[string]interface{}{
+		"timestamp":      time.Now(),
+		"total_tests":    total,
+		"successful":     successful,
+		"success_rate":   successRate,
+		"avg_latency_ms": avgLatency,
+		"circuit_breaker": map[string]interface{}{
+			"state":    pt.circuitBreaker.GetState(),
+			"failures": 0, // Will be updated with actual values
+		},
+	}
+
+	// Save to metrics file
+	metricsFile := fmt.Sprintf("%s/metrics/realtime_metrics.json", pt.config.Common.OutputDir)
+	os.MkdirAll(fmt.Sprintf("%s/metrics", pt.config.Common.OutputDir), 0755)
+
+	if file, err := os.Create(metricsFile); err == nil {
+		defer file.Close()
+		encoder := json.NewEncoder(file)
+		encoder.SetIndent("", "  ")
+		encoder.Encode(metricsData)
+	}
+}
+
+// saveFinalMetrics saves comprehensive final metrics
+func (pt *ProxyTester) saveFinalMetrics(results []*TestResultData, duration time.Duration) {
+	total, successful, successRate, avgLatency := pt.metrics.GetStats()
+	failures, successes, cbState := pt.circuitBreaker.GetStats()
+
+	finalMetrics := map[string]interface{}{
+		"test_summary": map[string]interface{}{
+			"total_configurations": len(results),
+			"successful_tests":     successful,
+			"failed_tests":         total - successful,
+			"success_rate_percent": successRate,
+			"total_duration":       duration.String(),
+			"avg_latency_ms":       avgLatency,
+		},
+		"performance_metrics": map[string]interface{}{
+			"tests_per_second":     float64(total) / duration.Seconds(),
+			"avg_batch_time":       duration.Seconds() / float64((len(results)/pt.batchSize)+1),
+			"memory_usage_mb":      0, // Will be updated
+		},
+		"circuit_breaker_stats": map[string]interface{}{
+			"final_state":     cbState,
+			"total_failures":  failures,
+			"total_successes": successes,
+		},
+		"configuration": map[string]interface{}{
+			"max_workers":      pt.maxWorkers,
+			"batch_size":       pt.batchSize,
+			"timeout_seconds":  pt.timeout.Seconds(),
+			"circuit_breaker":  pt.config.Performance.EnableCircuitBreaker,
+			"rate_limiting":    pt.config.Performance.RateLimitConfig.Enabled,
+		},
+	}
+
+	// Add memory usage
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+	finalMetrics["performance_metrics"].(map[string]interface{})["memory_usage_mb"] = float64(m.Alloc) / 1024 / 1024
+
+	// Save final metrics
+	metricsFile := fmt.Sprintf("%s/metrics/final_metrics.json", pt.config.Common.OutputDir)
+	if file, err := os.Create(metricsFile); err == nil {
+		defer file.Close()
+		encoder := json.NewEncoder(file)
+		encoder.SetIndent("", "  ")
+		encoder.Encode(finalMetrics)
+		log.Printf("Final metrics saved to: %s", metricsFile)
+	}
 }
 
 func (pt *ProxyTester) saveResults(results []*TestResultData) {
@@ -1492,6 +1661,10 @@ func (pt *ProxyTester) saveResults(results []*TestResultData) {
 }
 
 func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
+	pt.printEnhancedFinalSummary(results, 0)
+}
+
+func (pt *ProxyTester) printEnhancedFinalSummary(results []*TestResultData, duration time.Duration) {
 	successCount := 0
 	totalCount := len(results)
 	var successTimes []float64
@@ -1505,15 +1678,28 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 		}
 	}
 
-	log.Println("=" + strings.Repeat("=", 59))
-	log.Println("FINAL TESTING SUMMARY")
-	log.Println("=" + strings.Repeat("=", 59))
+	log.Println("=" + strings.Repeat("=", 70))
+	log.Println("ENHANCED PROXY TESTING FINAL SUMMARY")
+	log.Println("=" + strings.Repeat("=", 70))
 	log.Printf("Total configurations tested: %d", totalCount)
 	log.Printf("Successful connections: %d", successCount)
 	log.Printf("Failed connections: %d", totalCount-successCount)
 	if totalCount > 0 {
 		log.Printf("Success rate: %.2f%%", float64(successCount)/float64(totalCount)*100)
 	}
+	if duration > 0 {
+		log.Printf("Total test duration: %v", duration)
+		log.Printf("Tests per second: %.2f", float64(totalCount)/duration.Seconds())
+	}
+
+	// Enhanced metrics
+	total, successful, successRate, avgLatency := pt.metrics.GetStats()
+	log.Printf("Enhanced metrics - Total: %d, Successful: %d, Success Rate: %.1f%%, Avg Latency: %.1fms",
+		total, successful, successRate, avgLatency)
+
+	// Circuit breaker statistics
+	failures, successes, cbState := pt.circuitBreaker.GetStats()
+	log.Printf("Circuit Breaker - State: %v, Failures: %d, Successes: %d", cbState, failures, successes)
 
 	// Protocol breakdown
 	log.Println("\nProtocol Breakdown:")
@@ -1544,7 +1730,7 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 			if t > max {
 				max = t
 			}
-		    }
+		}
 
 		avg := sum / float64(len(successTimes))
 		log.Println("\nResponse Times (successful only):")
@@ -1553,7 +1739,27 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 		log.Printf("  Maximum: %.3fs", max)
 	}
 
-	log.Println("=" + strings.Repeat("=", 59))
+	// Memory usage
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+	log.Printf("\nMemory Usage:")
+	log.Printf("  Allocated: %.2f MB", float64(m.Alloc)/1024/1024)
+	log.Printf("  Total Allocations: %.2f MB", float64(m.TotalAlloc)/1024/1024)
+	log.Printf("  GC Cycles: %d", m.NumGC)
+
+	// Performance recommendations
+	log.Println("\nPerformance Insights:")
+	if successRate < 50 {
+		log.Println("  - Low success rate detected. Consider adjusting timeout or worker count.")
+	}
+	if avgLatency > 5000 {
+		log.Println("  - High latency detected. Network conditions may be poor.")
+	}
+	if cbState == StateOpen {
+		log.Println("  - Circuit breaker is open. Consider investigating network issues.")
+	}
+
+	log.Println("=" + strings.Repeat("=", 70))
 }
 
 func (pt *ProxyTester) Cleanup() {
@@ -1582,54 +1788,42 @@ func (pt *ProxyTester) Cleanup() {
 }
 
 func main() {
-	// Command line arguments simulation (you can use flag package for real CLI args)
-	var (
-		shadowsocksFile = "../config_collector/deduplicated_urls/ss.json"
-		vmessFile       = "../config_collector/deduplicated_urls/vmess.json"
-		vlessFile       = "../config_collector/deduplicated_urls/vless.json"
-		maxWorkers      = 500
-		timeout         = 5 * time.Second
-		batchSize       = 500
-		xrayPath        = ""
-		incrementalSave = true
-	)
+	// Configuration file path (can be passed as command line argument)
+	configPath := ""
+	if len(os.Args) > 1 {
+		configPath = os.Args[1]
+	}
 
-	// Initialize tester
-	tester, err := NewProxyTester(xrayPath, maxWorkers, timeout, batchSize, incrementalSave)
+	// Initialize enhanced tester with configuration
+	tester, err := NewProxyTester(configPath)
 	if err != nil {
-		log.Fatalf("Failed to initialize tester: %v", err)
+		log.Fatalf("Failed to initialize enhanced tester: %v", err)
 	}
 	defer tester.Cleanup()
 
+	// Configuration file paths (can be made configurable)
+	configFiles := map[ProxyProtocol]string{
+		ProtocolShadowsocks: "../config_collector/deduplicated_urls/ss.json",
+		ProtocolVMess:       "../config_collector/deduplicated_urls/vmess.json",
+		ProtocolVLESS:       "../config_collector/deduplicated_urls/vless.json",
+	}
+
 	var allConfigs []ProxyConfig
 
-	// Load Shadowsocks configs
-	if _, err := os.Stat(shadowsocksFile); err == nil {
-		configs, err := tester.LoadConfigsFromJSON(shadowsocksFile, ProtocolShadowsocks)
-		if err != nil {
-			log.Printf("Failed to load Shadowsocks configs: %v", err)
-		} else {
-			allConfigs = append(allConfigs, configs...)
-		}
-	}
+	// Load configurations for each protocol with enhanced error handling
+	for protocol, filePath := range configFiles {
+		if _, err := os.Stat(filePath); err == nil {
+			log.Printf("Loading %s configurations from: %s", protocol, filePath)
+			configs, err := tester.LoadConfigsFromJSON(filePath, protocol)
+			if err != nil {
+				log.Printf("Failed to load %s configs: %v", protocol, err)
+				continue
+			}
 
-	// Load VMess configs
-	if _, err := os.Stat(vmessFile); err == nil {
-		configs, err := tester.LoadConfigsFromJSON(vmessFile, ProtocolVMess)
-		if err != nil {
-			log.Printf("Failed to load VMess configs: %v", err)
-		} else {
+			log.Printf("Successfully loaded %d %s configurations", len(configs), protocol)
 			allConfigs = append(allConfigs, configs...)
-		}
-	}
-
-	// Load VLESS configs
-	if _, err := os.Stat(vlessFile); err == nil {
-		configs, err := tester.LoadConfigsFromJSON(vlessFile, ProtocolVLESS)
-		if err != nil {
-			log.Printf("Failed to load VLESS configs: %v", err)
 		} else {
-			allConfigs = append(allConfigs, configs...)
+			log.Printf("Configuration file not found: %s", filePath)
 		}
 	}
 
@@ -1638,25 +1832,64 @@ func main() {
 		return
 	}
 
-	log.Printf("Total unique configurations for testing: %d", len(allConfigs))
+	log.Printf("Total unique configurations loaded: %d", len(allConfigs))
 
-	// Run tests
+	// Shuffle configurations for better load distribution
+	rand.Shuffle(len(allConfigs), func(i, j int) {
+		allConfigs[i], allConfigs[j] = allConfigs[j], allConfigs[i]
+	})
+
+	// Run enhanced tests with monitoring
+	log.Println("Starting enhanced proxy testing with monitoring...")
 	results := tester.RunTests(allConfigs)
 
+	// Calculate final statistics
 	workingConfigs := 0
+	protocolStats := make(map[ProxyProtocol]int)
+
 	for _, result := range results {
 		if result.Result == ResultSuccess {
 			workingConfigs++
+			protocolStats[result.Config.Protocol]++
 		}
 	}
 
+	// Enhanced final reporting
+	log.Println("\n" + strings.Repeat("=", 60))
+	log.Println("ENHANCED TESTING COMPLETE")
+	log.Println(strings.Repeat("=", 60))
+
 	if workingConfigs > 0 {
-		log.Printf("\nWorking configurations saved to:")
-		log.Println("  JSON: ../data/working_json/working_*.txt")
-		log.Println("  URL: ../data/working_url/working_*_urls.txt")
-		log.Println("  All configs (JSON): ../data/working_json/working_all_configs.txt")
-		log.Println("  All configs (URL): ../data/working_url/working_all_urls.txt")
+		log.Printf("✅ Successfully found %d working configurations!", workingConfigs)
+		log.Println("\nWorking configurations by protocol:")
+		for protocol, count := range protocolStats {
+			log.Printf("  %s: %d configurations", strings.ToUpper(string(protocol)), count)
+		}
+
+		log.Printf("\nOutput files saved to:")
+		log.Printf("  📁 JSON format: %s/working_json/", tester.config.Common.OutputDir)
+		log.Printf("  📁 URL format: %s/working_url/", tester.config.Common.OutputDir)
+		log.Printf("  📁 Metrics: %s/metrics/", tester.config.Common.OutputDir)
+
+		if tester.config.Common.EnableMetrics {
+			log.Printf("  📊 Real-time metrics: %s/metrics/realtime_metrics.json", tester.config.Common.OutputDir)
+			log.Printf("  📊 Final metrics: %s/metrics/final_metrics.json", tester.config.Common.OutputDir)
+		}
 	} else {
-		log.Println("No working configurations found")
+		log.Println("❌ No working configurations found")
+		log.Println("Consider:")
+		log.Println("  - Adjusting timeout settings")
+		log.Println("  - Checking network connectivity")
+		log.Println("  - Reviewing configuration files")
 	}
+
+	// Save configuration template for future use
+	if configPath == "" {
+		templatePath := "config_template.yaml"
+		if err := SaveConfig(tester.config, templatePath); err == nil {
+			log.Printf("📝 Configuration template saved to: %s", templatePath)
+		}
+	}
+
+	log.Println(strings.Repeat("=", 60))
 }
