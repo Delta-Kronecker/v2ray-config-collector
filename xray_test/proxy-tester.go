@@ -129,6 +129,9 @@ type NetworkTester struct {
 }
 
 func NewNetworkTester(timeout time.Duration, config *Config) *NetworkTester {
+	circuitBreaker := NewCircuitBreaker(config.Performance.CircuitBreakerConfig)
+	circuitBreaker.enabled = config.Performance.EnableCircuitBreaker
+
 	nt := &NetworkTester{
 		timeout: timeout,
 		testURLs: []string{
@@ -142,7 +145,7 @@ func NewNetworkTester(timeout time.Duration, config *Config) *NetworkTester {
 			"https://icanhazip.com",
 		},
 		clientPool:     NewHTTPClientPool(timeout, config),
-		circuitBreaker: NewCircuitBreaker(config.Performance.CircuitBreakerConfig),
+		circuitBreaker: circuitBreaker,
 		rateLimiter:    NewRateLimiter(config.Performance.RateLimitConfig),
 		retryManager:   NewSmartRetry(config.ProxyTester.RetryConfig),
 		bufferPool:     NewBufferPool(config.Performance.MemoryOptimization.BufferSize),
