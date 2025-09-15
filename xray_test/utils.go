@@ -358,6 +358,7 @@ type CircuitBreaker struct {
 	thresholdRate float64
 	mu            sync.RWMutex
 	onStateChange func(CircuitState)
+	enabled       bool
 }
 
 func NewCircuitBreaker(config CircuitBreakerConfig) *CircuitBreaker {
@@ -367,6 +368,7 @@ func NewCircuitBreaker(config CircuitBreakerConfig) *CircuitBreaker {
 		resetTimeout:  config.ResetTimeout,
 		thresholdRate: config.ThresholdRate,
 		state:         StateClosed,
+		enabled:       true, // Default enabled, will be set by caller
 	}
 }
 
@@ -401,6 +403,10 @@ func (cb *CircuitBreaker) canExecute() bool {
 }
 
 func (cb *CircuitBreaker) recordResult(err error) {
+	if !cb.enabled {
+		return // Do nothing when disabled
+	}
+
 	cb.mu.Lock()
 	defer cb.mu.Unlock()
 
@@ -431,6 +437,9 @@ func (cb *CircuitBreaker) setState(state CircuitState) {
 }
 
 func (cb *CircuitBreaker) GetState() CircuitState {
+	if !cb.enabled {
+		return StateClosed // Always return closed when disabled
+	}
 	cb.mu.RLock()
 	defer cb.mu.RUnlock()
 	return cb.state
