@@ -9,9 +9,12 @@ import (
 	"math/rand"
 	"net"
 	"net/http"
+	"os/exec"
+
 	"runtime"
 	"sync"
 	"sync/atomic"
+	"syscall"
 	"time"
 
 	"golang.org/x/net/proxy"
@@ -28,6 +31,75 @@ type ProxyTesterInterface interface {
 }
 
 // Shared data structures
+type ProxyProtocol string
+
+const (
+	ProtocolShadowsocks ProxyProtocol = "shadowsocks"
+	ProtocolVMess       ProxyProtocol = "vmess"
+	ProtocolVLESS       ProxyProtocol = "vless"
+)
+
+type ProxyTestResult string
+
+const (
+	ResultSuccess            ProxyTestResult = "success"
+	ResultParseError         ProxyTestResult = "parse_error"
+	ResultSyntaxError        ProxyTestResult = "syntax_error"
+	ResultConnectionError    ProxyTestResult = "connection_error"
+	ResultTimeout            ProxyTestResult = "timeout"
+	ResultPortConflict       ProxyTestResult = "port_conflict"
+	ResultInvalidConfig      ProxyTestResult = "invalid_config"
+	ResultNetworkError       ProxyTestResult = "network_error"
+	ResultHangTimeout        ProxyTestResult = "hang_timeout"
+	ResultProcessKilled      ProxyTestResult = "process_killed"
+	ResultUnsupportedProtocol ProxyTestResult = "unsupported_protocol"
+)
+
+type ProxyConfig struct {
+	Protocol ProxyProtocol `json:"protocol"`
+	Server   string        `json:"server"`
+	Port     int           `json:"port"`
+	Remarks  string        `json:"remarks"`
+
+	// Shadowsocks specific
+	Method   string `json:"method,omitempty"`
+	Password string `json:"password,omitempty"`
+
+	// VMess/VLESS specific
+	UUID     string `json:"uuid,omitempty"`
+	AlterID  int    `json:"alterId,omitempty"`
+	Cipher   string `json:"cipher,omitempty"`
+	Flow     string `json:"flow,omitempty"`
+	Encrypt  string `json:"encryption,omitempty"`
+
+	// Transport settings
+	Network     string `json:"network,omitempty"`
+	TLS         string `json:"tls,omitempty"`
+	SNI         string `json:"sni,omitempty"`
+	Path        string `json:"path,omitempty"`
+	Host        string `json:"host,omitempty"`
+	ALPN        string `json:"alpn,omitempty"`
+	Fingerprint string `json:"fingerprint,omitempty"`
+	HeaderType  string `json:"headerType,omitempty"`
+	ServiceName string `json:"serviceName,omitempty"`
+
+	// Metadata
+	RawConfig  map[string]interface{} `json:"raw_config,omitempty"`
+	ConfigID   *int                   `json:"config_id,omitempty"`
+	LineNumber *int                   `json:"line_number,omitempty"`
+}
+
+type TestResultData struct {
+	Config       ProxyConfig     `json:"config"`
+	Result       ProxyTestResult `json:"result"`
+	TestTime     float64         `json:"test_time"`
+	ResponseTime *float64        `json:"response_time,omitempty"`
+	ErrorMessage string          `json:"error_message,omitempty"`
+	ExternalIP   string          `json:"external_ip,omitempty"`
+	ProxyPort    *int            `json:"proxy_port,omitempty"`
+	BatchID      *int            `json:"batch_id,omitempty"`
+}
+
 type QualityScore int
 
 const (
@@ -69,16 +141,24 @@ type TestResult struct {
 	ErrorMsg     string  `json:"error_message,omitempty"`
 }
 
+type QualityTestResult string
+
+const (
+	QualitySuccess QualityTestResult = "success"
+	QualityFailed  QualityTestResult = "failed"
+)
+
 type ConfigResult struct {
-	Config       WorkingConfig `json:"config"`
-	QualityTests []TestResult  `json:"quality_tests"`
-	FinalScore   float64       `json:"final_score"`
-	Category     QualityScore  `json:"category"`
-	AvgLatency   float64       `json:"avg_latency"`
-	SuccessRate  float64       `json:"success_rate"`
-	Stability    float64       `json:"stability"`
-	Speed        float64       `json:"speed_mbps"`
-	TestTime     time.Time     `json:"test_time"`
+	Config       WorkingConfig     `json:"config"`
+	Result       QualityTestResult `json:"result"`
+	QualityTests []TestResult      `json:"quality_tests"`
+	FinalScore   float64           `json:"final_score"`
+	Category     QualityScore      `json:"category"`
+	AvgLatency   float64           `json:"avg_latency"`
+	SuccessRate  float64           `json:"success_rate"`
+	Stability    float64           `json:"stability"`
+	Speed        float64           `json:"speed_mbps"`
+	TestTime     time.Time         `json:"test_time"`
 }
 
 type QualityTesterInterface interface {
@@ -113,6 +193,154 @@ const (
 	StateOpen
 	StateHalfOpen
 )
+
+// ProcessManager manages Xray processes
+type ProcessManager struct {
+	processes sync.Map
+	mu        sync.RWMutex
+}
+
+func NewProcessManager() *ProcessManager {
+	return &ProcessManager{}
+}
+
+func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) {
+	pm.processes.Store(pid, cmd)
+}
+
+func (pm *ProcessManager) UnregisterProcess(pid int) {
+	pm.processes.Delete(pid)
+}
+
+func (pm *ProcessManager) KillProcess(pid int) error {
+	if value, ok := pm.processes.Load(pid); ok {
+		if cmd, ok := value.(*exec.Cmd); ok {
+			if cmd.Process != nil {
+				// Try graceful termination first
+				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
+					// Wait a bit for graceful shutdown
+					done := make(chan error, 1)
+					go func() {
+						done <- cmd.Wait()
+					}()
+
+					select {
+					case <-done:
+						pm.UnregisterProcess(pid)
+						return nil
+					case <-time.After(5 * time.Second):
+						// Force kill if graceful shutdown fails
+						return cmd.Process.Kill()
+					}
+				}
+				// Direct force kill if signal fails
+				return cmd.Process.Kill()
+			}
+		}
+	}
+	return fmt.Errorf("process %d not found", pid)
+}
+
+func (pm *ProcessManager) Cleanup() {
+	pm.processes.Range(func(key, value interface{}) bool {
+		if pid, ok := key.(int); ok {
+			pm.KillProcess(pid)
+		}
+		return true
+	})
+}
+
+// Enhanced PortManager with health checking and emergency port finding
+type PortManager struct {
+	startPort      int
+	endPort        int
+	availablePorts chan int
+	usedPorts      sync.Map
+	mu             sync.Mutex
+	healthChecker  *HealthChecker
+	metrics        *TestMetrics
+	config         *Config
+}
+
+func NewPortManager(startPort, endPort int, config *Config) *PortManager {
+	pm := &PortManager{
+		startPort:      startPort,
+		endPort:        endPort,
+		availablePorts: make(chan int, endPort-startPort+1),
+		healthChecker:  NewHealthChecker(),
+		metrics:        NewTestMetrics(),
+		config:         config,
+	}
+
+	// Add health checks
+	pm.healthChecker.AddCheck(NewMemoryHealthCheck(1024)) // 1GB memory limit
+
+	pm.initializePortPool()
+	return pm
+}
+
+func (pm *PortManager) initializePortPool() {
+	availableCount := 0
+
+	for port := pm.startPort; port <= pm.endPort; port++ {
+		if pm.IsPortAvailable(port) {
+			select {
+			case pm.availablePorts <- port:
+				availableCount++
+			default:
+				// Channel is full, which shouldn't happen but let's be safe
+			}
+		}
+	}
+}
+
+func (pm *PortManager) IsPortAvailable(port int) bool {
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 50*time.Millisecond)
+	if err != nil {
+		// Port is available if we can't connect to it
+		return true
+	}
+	conn.Close()
+	return false
+}
+
+func (pm *PortManager) GetAvailablePort() (int, bool) {
+	select {
+	case port := <-pm.availablePorts:
+		pm.usedPorts.Store(port, true)
+		return port, true
+	case <-time.After(100 * time.Millisecond):
+		// Emergency port finding
+		return pm.findEmergencyPort(), true
+	}
+}
+
+func (pm *PortManager) findEmergencyPort() int {
+	pm.mu.Lock()
+	defer pm.mu.Unlock()
+
+	for i := 0; i < 100; i++ {
+		port := rand.Intn(pm.endPort-pm.startPort+1) + pm.startPort
+		if _, used := pm.usedPorts.Load(port); !used && pm.IsPortAvailable(port) {
+			pm.usedPorts.Store(port, true)
+			return port
+		}
+	}
+	return 0
+}
+
+func (pm *PortManager) ReleasePort(port int) {
+	pm.usedPorts.Delete(port)
+	// Return port to pool after a short delay
+	go func() {
+		time.Sleep(20 * time.Millisecond)
+		select {
+		case pm.availablePorts <- port:
+		default:
+			// Channel is full, port will be found by emergency finder
+		}
+	}()
+}
 
 var (
 	ErrCircuitOpen = errors.New("circuit breaker is open")
