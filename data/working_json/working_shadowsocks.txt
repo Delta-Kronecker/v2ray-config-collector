@@ -1,4 +1,5 @@
 # Working SHADOWSOCKS Configurations (JSON Format)
+<<<<<<< Updated upstream
 # Generated at: 2025-09-15 01:32:01
 # Format: Each line contains one working configuration in JSON
 
@@ -313,4 +314,860 @@
 
 # Tested at: 2025-09-15 01:32:32 | Response: 0.390s | IP: 46.62.152.84
 {"external_ip":"46.62.152.84","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"46.62.152.84","test_time":0.389581479,"tls":""}
+=======
+# Generated at: 2025-09-15 01:46:36
+# Format: Each line contains one working configuration in JSON
+
+# Tested at: 2025-09-15 01:46:43 | Response: 1.096s | IP: 193.29.139.251
+{"external_ip":"193.29.139.251","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.10","test_time":1.09647743,"tls":""}
+
+# Tested at: 2025-09-15 01:46:43 | Response: 0.361s | IP: 156.146.38.169
+{"external_ip":"156.146.38.169","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.38.169","test_time":0.360903754,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.339s | IP: 212.102.53.196
+{"external_ip":"212.102.53.196","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.196","test_time":0.339016233,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.509s | IP: 78.129.140.11
+{"external_ip":"78.129.140.11","method":"chacha20-ietf-poly1305","network":"tcp","password":"bBmY8pBEH84DLOwbOzyCaL","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"78.129.140.11","test_time":0.509041661,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.510s | IP: 212.102.53.193
+{"external_ip":"212.102.53.193","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.193","test_time":0.510395026,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.944s | IP: 92.112.126.90
+{"external_ip":"92.112.126.90","method":"chacha20-ietf-poly1305","network":"tcp","password":"9tqhMdIrTkgQ46PvhyAtMH","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"92.112.126.90","test_time":0.943618645,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.648s | IP: 195.22.157.104
+{"external_ip":"195.22.157.104","method":"2022-blake3-aes-256-gcm","network":"tcp","password":"rW3/icV74z/gNN1Vcpgr/DX/ULFp8w8OZg+hPWGohhw=:flTq0w9D7G1j7iTwbWMYCD4aT1LFUJbgvWJkzzcCvGg=","port":24754,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"195.22.157.104","test_time":0.647563927,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.606s | IP: 193.29.139.188
+{"external_ip":"193.29.139.188","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.188","test_time":0.606367421,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.562s | IP: 212.102.53.79
+{"external_ip":"212.102.53.79","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.79","test_time":0.562491406,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 1.155s | IP: 159.65.32.18
+{"external_ip":"159.65.32.18","method":"chacha20-ietf-poly1305","network":"tcp","password":"iR8jn9CVsppmLbm9KwWMlj","port":28620,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"159.65.32.18","test_time":1.1553655059999999,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 1.198s | IP: 173.244.56.9
+{"external_ip":"173.244.56.9","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"173.244.56.9","test_time":1.197784294,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 0.903s | IP: 156.146.38.168
+{"external_ip":"156.146.38.168","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.38.168","test_time":0.903323717,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 1.159s | IP: 212.102.53.197
+{"external_ip":"212.102.53.197","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.197","test_time":1.159387997,"tls":""}
+
+# Tested at: 2025-09-15 01:46:44 | Response: 1.277s | IP: 212.102.53.197
+{"external_ip":"212.102.53.197","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"uk-dc1.yangon.club","test_time":1.277137379,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.381s | IP: 144.126.146.38
+{"external_ip":"144.126.146.38","method":"chacha20-ietf-poly1305","network":"tcp","password":"741ddced-e6ee-4175-9c1a-e524009f9045","port":30100,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"144.126.146.38","test_time":0.381252182,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 2.741s | IP: 2a12:5e40:1:70e0:6d64:2987:7ef6:9e23
+{"external_ip":"2a12:5e40:1:70e0:6d64:2987:7ef6:9e23","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.55.240.101","test_time":2.7411004820000002,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 1.497s | IP: 193.29.139.157
+{"external_ip":"193.29.139.157","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"151.242.251.147","test_time":1.497108699,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.454s | IP: 23.157.40.101
+{"external_ip":"23.157.40.101","method":"aes-256-gcm","network":"tcp","password":"KixLvKzwjekG00rm","port":8000,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.101","test_time":0.454167753,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 1.548s | IP: 83.147.216.70
+{"external_ip":"83.147.216.70","method":"chacha20-ietf-poly1305","network":"tcp","password":"w3TdzsHosPQjGAaLmo9lGQ","port":64519,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"83.147.216.70","test_time":1.54752735,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.506s | IP: 38.110.1.122
+{"external_ip":"38.110.1.122","method":"aes-256-gcm","network":"tcp","password":"PCnnH6SQSnfoS27","port":8090,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.110.1.122","test_time":0.506324869,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 1.686s | IP: 195.22.157.104
+{"external_ip":"195.22.157.104","method":"2022-blake3-aes-256-gcm","network":"tcp","password":"/9pLkGAdlCUkCLGb3N1PDJxu+xLcfWLALdvhKkoWJ00=:flTq0w9D7G1j7iTwbWMYCD4aT1LFUJbgvWJkzzcCvGg=","port":22577,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"195.22.157.104","test_time":1.6857651489999999,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.517s | IP: 193.29.139.251
+{"external_ip":"193.29.139.251","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.251","test_time":0.517160375,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.713s | IP: 20.68.181.152
+{"external_ip":"20.68.181.152","method":"chacha20-ietf-poly1305","network":"tcp","password":"5Roo9PK6BFZmfxmI","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"c1.nastuh.link","test_time":0.712729741,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.236s | IP: 156.146.38.170
+{"external_ip":"156.146.38.170","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.38.170","test_time":0.235898725,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.256s | IP: 2606:2040:140:83::2
+{"external_ip":"2606:2040:140:83::2","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"104.167.197.25","test_time":0.25552487,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.230s | IP: 37.19.198.244
+{"external_ip":"37.19.198.244","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"37.19.198.244","test_time":0.230464809,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.426s | IP: 156.146.62.162
+{"external_ip":"156.146.62.162","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.62.162","test_time":0.426470783,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.258s | IP: 79.127.233.179
+{"external_ip":"79.127.233.179","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"79.127.233.170","test_time":0.258089353,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.269s | IP: 37.19.198.243
+{"external_ip":"37.19.198.243","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"37.19.198.243","test_time":0.26877032,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.738s | IP: 23.157.40.101
+{"external_ip":"23.157.40.101","method":"aes-256-gcm","network":"tcp","password":"XKFKl2rULjIp74","port":8008,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.101","test_time":0.737858466,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.243s | IP: 156.146.38.167
+{"external_ip":"156.146.38.167","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.38.167","test_time":0.242833438,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.248s | IP: 38.107.226.159
+{"external_ip":"38.107.226.159","method":"aes-256-gcm","network":"tcp","password":"faBAoD54k87UJG7","port":2376,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.107.226.159","test_time":0.247622063,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.325s | IP: 38.110.1.122
+{"external_ip":"38.110.1.122","method":"aes-256-gcm","network":"tcp","password":"FoOiGlkAA9yPEGP","port":7306,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.110.1.122","test_time":0.324591309,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.772s | IP: 193.29.139.179
+{"external_ip":"193.29.139.179","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.157","test_time":0.771814574,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.779s | IP: 185.231.233.173
+{"external_ip":"185.231.233.173","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.231.233.173","test_time":0.778955106,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.477s | IP: 45.144.49.140
+{"external_ip":"45.144.49.140","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.144.49.140","test_time":0.476861087,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.245s | IP: 212.102.47.132
+{"external_ip":"212.102.47.132","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.47.132","test_time":0.2445379,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.808s | IP: 193.29.139.143
+{"external_ip":"193.29.139.143","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.154","test_time":0.808408479,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.794s | IP: 193.29.139.199
+{"external_ip":"193.29.139.199","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.171","test_time":0.794326498,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.266s | IP: 212.102.47.131
+{"external_ip":"212.102.47.131","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.47.131","test_time":0.266312486,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.299s | IP: 37.19.198.160
+{"external_ip":"37.19.198.160","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"37.19.198.160","test_time":0.298984913,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.368s | IP: 23.157.40.101
+{"external_ip":"23.157.40.101","method":"aes-256-gcm","network":"tcp","password":"FoOiGlkAA9yPEGP","port":7307,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.101","test_time":0.368157501,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.324s | IP: 38.107.226.159
+{"external_ip":"38.107.226.159","method":"aes-256-gcm","network":"tcp","password":"FoOiGlkAA9yPEGP","port":7307,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.107.226.159","test_time":0.324230962,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.617s | IP: 23.166.88.82
+{"external_ip":"23.166.88.82","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ch03.giamping.com","test_time":0.616941174,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.496s | IP: 156.146.62.163
+{"external_ip":"156.146.62.163","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.62.163","test_time":0.495855619,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.501s | IP: 156.146.62.161
+{"external_ip":"156.146.62.161","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.62.161","test_time":0.501160222,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.344s | IP: 212.102.47.130
+{"external_ip":"212.102.47.130","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.47.130","test_time":0.344338666,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.419s | IP: 212.102.53.198
+{"external_ip":"212.102.53.198","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.198","test_time":0.41862705,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.521s | IP: 212.102.53.81
+{"external_ip":"212.102.53.81","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.81","test_time":0.521021544,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.463s | IP: 95.163.176.37
+{"external_ip":"95.163.176.37","method":"chacha20-ietf-poly1305","network":"tcp","password":"eUh4lSpi7nOYj0vSrqLUh0","port":8506,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"95.163.176.37","test_time":0.463085225,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.442s | IP: 193.29.139.164
+{"external_ip":"193.29.139.164","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.190","test_time":0.442072326,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.417s | IP: 193.29.139.157
+{"external_ip":"193.29.139.157","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.157","test_time":0.417109915,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.901s | IP: 185.126.239.250
+{"external_ip":"185.126.239.250","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.126.239.250","test_time":0.901333967,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.436s | IP: 193.29.139.217
+{"external_ip":"193.29.139.217","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"151.242.251.153","test_time":0.435591366,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.531s | IP: 193.29.139.175
+{"external_ip":"193.29.139.175","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.164","test_time":0.531041113,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.520s | IP: 38.180.211.126
+{"external_ip":"38.180.211.126","method":"chacha20-ietf-poly1305","network":"tcp","password":"Kuiqk2cP0BMWrgme9IfEvp","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.180.211.126","test_time":0.520204888,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.494s | IP: 77.83.246.74
+{"external_ip":"77.83.246.74","method":"chacha20-ietf-poly1305","network":"tcp","password":"dZ2YvaTtYoVFWDekMk9XR6","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"77.83.246.74","test_time":0.494000744,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.547s | IP: 193.29.139.209
+{"external_ip":"193.29.139.209","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.209","test_time":0.547299797,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.393s | IP: 193.29.139.162
+{"external_ip":"193.29.139.162","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"151.242.251.144","test_time":0.393249522,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.298s | IP: 142.4.216.225
+{"external_ip":"142.4.216.225","method":"chacha20-ietf-poly1305","network":"tcp","password":"JIhN6rBKkaEboLNXVSv5rq","port":80,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"142.4.216.225","test_time":0.297752334,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.619s | IP: 156.146.62.164
+{"external_ip":"156.146.62.164","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"156.146.62.164","test_time":0.61915961,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.575s | IP: 181.119.30.20
+{"external_ip":"181.119.30.20","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"181.119.30.20","test_time":0.574752328,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.608s | IP: 193.29.139.160
+{"external_ip":"193.29.139.160","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"103.104.247.49","test_time":0.607571634,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.617s | IP: 212.102.53.195
+{"external_ip":"212.102.53.195","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.195","test_time":0.616532332,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.874s | IP: 212.34.140.184
+{"external_ip":"212.34.140.184","method":"chacha20-ietf-poly1305","network":"tcp","password":"0NeN5ta7FLa5B9DLytU0um","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.34.140.184","test_time":0.873519761,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.493s | IP: 81.19.141.45
+{"external_ip":"81.19.141.45","method":"chacha20-ietf-poly1305","network":"tcp","password":"1PRi11zoil3xDSYINHmlxt","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"81.19.141.45","test_time":0.493028835,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.691s | IP: 103.111.114.29
+{"external_ip":"103.111.114.29","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"103.111.114.29","test_time":0.69113404,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.588s | IP: 193.29.139.227
+{"external_ip":"193.29.139.227","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.227","test_time":0.587506192,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.600s | IP: 185.123.101.241
+{"external_ip":"185.123.101.241","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.123.101.241","test_time":0.600201732,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 2.763s | IP: 45.139.24.24
+{"external_ip":"45.139.24.24","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.139.24.24","test_time":2.762749251,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.553s | IP: 193.29.139.243
+{"external_ip":"193.29.139.243","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.28","test_time":0.55322725,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.551s | IP: 193.29.139.217
+{"external_ip":"193.29.139.217","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.217","test_time":0.551029616,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.531s | IP: 193.29.139.133
+{"external_ip":"193.29.139.133","method":"chacha20-ietf-poly1305","network":"tcp","password":"1RWwXhwfAB5gAEozU4G2Pg","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.178","test_time":0.530722409,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.617s | IP: 195.181.160.6
+{"external_ip":"195.181.160.6","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"195.181.160.6","test_time":0.617029032,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.621s | IP: 38.165.233.18
+{"external_ip":"38.165.233.18","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.165.233.18","test_time":0.621312796,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.275s | IP: 104.192.226.106
+{"external_ip":"104.192.226.106","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"104.192.226.106","test_time":0.274530607,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.734s | IP: 153.121.43.183
+{"external_ip":"153.121.43.183","method":"aes-128-gcm","network":"tcp","password":"10086","port":10087,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"153.121.43.183","test_time":0.734259866,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.286s | IP: 193.29.139.240
+{"external_ip":"193.29.139.240","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.158.171.70","test_time":0.286081139,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.600s | IP: 92.118.205.228
+{"external_ip":"92.118.205.228","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"92.118.205.228","test_time":0.599678188,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.449s | IP: 193.29.139.133
+{"external_ip":"193.29.139.133","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.180","test_time":0.448904079,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.852s | IP: 223.165.4.173
+{"external_ip":"223.165.4.173","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"223.165.4.173","test_time":0.852259725,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 1.256s | IP: 45.154.206.192
+{"external_ip":"45.154.206.192","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.154.206.192","test_time":1.256464764,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.304s | IP: 217.170.194.203
+{"external_ip":"217.170.194.203","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"217.170.194.203","test_time":0.303724817,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 1.113s | IP: 212.34.140.184
+{"external_ip":"212.34.140.184","method":"chacha20-ietf-poly1305","network":"tcp","password":"0NeN5ta7FLa5B9DLytU0um","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"promo1o.bystrivpn.ru","test_time":1.112875784,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.879s | IP: 149.22.87.240
+{"external_ip":"149.22.87.240","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.22.87.240","test_time":0.878850483,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 1.048s | IP: 202.61.203.192
+{"external_ip":"202.61.203.192","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"de14.giamping.com","test_time":1.047507077,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.927s | IP: 2a03:f80:357:7687::1
+{"external_ip":"2a03:f80:357:7687::1","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"134.255.210.49","test_time":0.927298224,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.287s | IP: 193.29.139.141
+{"external_ip":"193.29.139.141","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.22","test_time":0.287108269,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.904s | IP: 203.23.128.33
+{"external_ip":"203.23.128.33","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"203.23.128.33","test_time":0.903752937,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.473s | IP: 2a04:3545:1000:720:f8a5:48ff:fe9a:7231
+{"external_ip":"2a04:3545:1000:720:f8a5:48ff:fe9a:7231","method":"chacha20-ietf-poly1305","network":"tcp","password":"Qcsukn6qSHlKiTnh08a9Cb","port":8443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"94.237.105.27","test_time":0.472615938,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.472s | IP: 20.68.181.152
+{"external_ip":"20.68.181.152","method":"chacha20-ietf-poly1305","network":"tcp","password":"W74XFALLLuw6m5IA","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"series-a1.samanehha.co","test_time":0.471705172,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.717s | IP: 141.98.4.67
+{"external_ip":"141.98.4.67","method":"chacha20-ietf-poly1305","network":"tcp","password":"LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj","port":52952,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"141.98.4.67","test_time":0.717222656,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.944s | IP: 38.54.45.129
+{"external_ip":"38.54.45.129","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.54.45.129","test_time":0.944117094,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.932s | IP: 185.47.255.22
+{"external_ip":"185.47.255.22","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.47.255.22","test_time":0.931897015,"tls":""}
+
+# Tested at: 2025-09-15 01:46:45 | Response: 0.284s | IP: 193.29.139.138
+{"external_ip":"193.29.139.138","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.183","test_time":0.284347241,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.485s | IP: 95.174.69.151
+{"external_ip":"95.174.69.151","method":"chacha20-ietf-poly1305","network":"tcp","password":"Bv5YPqwetg7pFaistG9rqn","port":8443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"95.174.69.151","test_time":0.485176796,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.316s | IP: 193.29.139.138
+{"external_ip":"193.29.139.138","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.181","test_time":0.315824431,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.081s | IP: 149.34.244.68
+{"external_ip":"149.34.244.68","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.34.244.68","test_time":1.081050578,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.981s | IP: 193.29.139.227
+{"external_ip":"193.29.139.227","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"151.242.251.131","test_time":0.980824395,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.957s | IP: 104.192.227.162
+{"external_ip":"104.192.227.162","method":"chacha20-ietf-poly1305","network":"tcp","password":"hPlHTS0GGYrkg7mIMpg6mo","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"104.192.227.162","test_time":0.957239277,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.432s | IP: 193.29.139.157
+{"external_ip":"193.29.139.157","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.158.171.146","test_time":0.431923656,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.062s | IP: 84.200.91.228
+{"external_ip":"84.200.91.228","method":"chacha20-ietf-poly1305","network":"tcp","password":"5ZQh4pssSk4aK1JG1XhBRg","port":1080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"84.200.91.228","test_time":1.062405483,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.294s | IP: 193.29.139.199
+{"external_ip":"193.29.139.199","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.175","test_time":0.293798581,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.891s | IP: 193.29.139.164
+{"external_ip":"193.29.139.164","method":"chacha20-ietf-poly1305","network":"tcp","password":"1RWwXhwfAB5gAEozU4G2Pg","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.188","test_time":0.890914279,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.115s | IP: 193.29.139.206
+{"external_ip":"193.29.139.206","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.166","test_time":1.115123261,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.233s | IP: 212.102.53.80
+{"external_ip":"212.102.53.80","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.80","test_time":1.232927382,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.178s | IP: 64.74.163.82
+{"external_ip":"64.74.163.82","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"64.74.163.82","test_time":0.177531996,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.185s | IP: 64.74.163.218
+{"external_ip":"64.74.163.218","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"64.74.163.218","test_time":0.184664078,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.202s | IP: 134.209.147.198
+{"external_ip":"134.209.147.198","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"134.209.147.198","test_time":1.202499998,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.296s | IP: 185.177.229.160
+{"external_ip":"185.177.229.160","method":"chacha20-ietf-poly1305","network":"tcp","password":"oXGp1+ihlfKg826H","port":1866,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.177.229.245","test_time":1.2955130559999999,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.467s | IP: 20.68.181.152
+{"external_ip":"20.68.181.152","method":"chacha20-ietf-poly1305","network":"tcp","password":"b2EJuconC460KllN","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"azjnac1.uksouth.cloudapp.azure.com","test_time":0.466983899,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.325s | IP: 212.102.53.194
+{"external_ip":"212.102.53.194","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.194","test_time":1.325110957,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.339s | IP: 23.157.40.101
+{"external_ip":"23.157.40.101","method":"aes-256-gcm","network":"tcp","password":"XKFKl2rULjIp74","port":8009,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.101","test_time":1.339279626,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.682s | IP: 89.223.93.176
+{"external_ip":"89.223.93.176","method":"chacha20-ietf-poly1305","network":"tcp","password":"Vmsf06YTMqtAYdhwMqdSuGqgdVkm0yddi4kYaAEVQWYj9iHA","port":41348,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"89.223.93.176","test_time":0.682105531,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.183s | IP: 64.74.163.130
+{"external_ip":"64.74.163.130","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"64.74.163.130","test_time":0.183142495,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.296s | IP: 193.29.139.206
+{"external_ip":"193.29.139.206","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.170","test_time":0.295968346,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.110s | IP: 173.244.56.6
+{"external_ip":"173.244.56.6","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"173.244.56.6","test_time":0.110473557,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.292s | IP: 193.29.139.235
+{"external_ip":"193.29.139.235","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.235","test_time":0.291542848,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.300s | IP: 193.29.139.177
+{"external_ip":"193.29.139.177","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.177","test_time":0.300217521,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.474s | IP: 5.188.181.41
+{"external_ip":"5.188.181.41","method":"chacha20-ietf-poly1305","network":"tcp","password":"jHH8Kgfd6IXpvx2svCVG1H","port":8443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"5.188.181.41","test_time":0.474060003,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.051s | IP: 20.68.181.152
+{"external_ip":"20.68.181.152","method":"chacha20-ietf-poly1305","network":"tcp","password":"W74XFALLLuw6m5IA","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"series-a2.samanehha.co","test_time":1.050818179,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.464s | IP: 2a01:4f9:c010:ed96::1
+{"external_ip":"2a01:4f9:c010:ed96::1","method":"chacha20-ietf-poly1305","network":"tcp","password":"mZGUFWMAlfWqI4vP58zw9DAHxR8TZLndKkvRgHHFa9eqWdnx","port":31348,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"65.21.243.22","test_time":0.463654412,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.410s | IP: 193.29.139.160
+{"external_ip":"193.29.139.160","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"103.104.247.47","test_time":0.410142304,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.438s | IP: 193.29.139.138
+{"external_ip":"193.29.139.138","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.185","test_time":0.438076388,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.480s | IP: 94.131.21.174
+{"external_ip":"94.131.21.174","method":"chacha20-ietf-poly1305","network":"tcp","password":"o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3","port":54075,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"94.131.21.174","test_time":0.479891733,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.431s | IP: 193.29.139.202
+{"external_ip":"193.29.139.202","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.69","test_time":0.430943083,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.300s | IP: 193.29.139.235
+{"external_ip":"193.29.139.235","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.158.171.110","test_time":0.299919232,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.448s | IP: 193.29.139.173
+{"external_ip":"193.29.139.173","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.200","test_time":0.447841118,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 2.108s | IP: 193.29.139.173
+{"external_ip":"193.29.139.173","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.199","test_time":2.108050068,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.716s | IP: 141.98.4.67
+{"external_ip":"141.98.4.67","method":"chacha20-ietf-poly1305","network":"tcp","password":"LMSNh21TrXjR2ok25Q2nE8ENT2zoBmPvka3RCCUAHZELCnWoekVjvaf89qwcRkdbxEfep2bc2aUtmnxqvF1ayQRez1JHjULj","port":52952,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"exchange.gameaurela.click","test_time":0.716143161,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.425s | IP: 185.213.23.226
+{"external_ip":"185.213.23.226","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.213.23.226","test_time":0.425011966,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.057s | IP: 45.144.235.103
+{"external_ip":"45.144.235.103","method":"chacha20-ietf-poly1305","network":"tcp","password":"aE5rFdxzG8GQf5TAQhZhRA","port":1080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.144.235.103","test_time":1.057249689,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.291s | IP: 193.29.139.188
+{"external_ip":"193.29.139.188","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.58","test_time":0.290817724,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.431s | IP: 193.29.139.168
+{"external_ip":"193.29.139.168","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.65","test_time":0.431463628,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.477s | IP: 82.180.146.173
+{"external_ip":"82.180.146.173","method":"aes-128-gcm","network":"tcp","password":"162629d7-cb17-43b1-82c9-f9c7ae6cba70","port":30607,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"82.180.146.173","test_time":0.476977167,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.760s | IP: 103.163.218.2
+{"external_ip":"103.163.218.2","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"103.163.218.2","test_time":1.759916752,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 1.880s | IP: 193.29.139.202
+{"external_ip":"193.29.139.202","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.202","test_time":1.879777773,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.262s | IP: 212.102.53.78
+{"external_ip":"212.102.53.78","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.53.78","test_time":0.262028912,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 2.113s | IP: 2a0c:16c0:510:948::7863
+{"external_ip":"2a0c:16c0:510:948::7863","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"216.173.70.187","test_time":2.112565507,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.317s | IP: 193.29.139.240
+{"external_ip":"193.29.139.240","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.240","test_time":0.317348457,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.317s | IP: 193.29.139.132
+{"external_ip":"193.29.139.132","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.35","test_time":0.316504272,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.915s | IP: 171.22.254.17
+{"external_ip":"171.22.254.17","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"171.22.254.17","test_time":0.914526194,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.320s | IP: 51.195.119.47
+{"external_ip":"51.195.119.47","method":"chacha20-ietf-poly1305","network":"tcp","password":"qXvO7zYU7KeaB0Md7DQLow","port":1080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"51.195.119.47","test_time":0.319688676,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.388s | IP: 160.16.123.124
+{"external_ip":"160.16.123.124","method":"aes-128-gcm","network":"tcp","password":"10086","port":10087,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"160.16.123.124","test_time":0.388166083,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.421s | IP: 193.29.139.152
+{"external_ip":"193.29.139.152","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"103.104.247.45","test_time":0.421262797,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.610s | IP: 82.180.146.173
+{"external_ip":"82.180.146.173","method":"aes-128-gcm","network":"tcp","password":"93498539-7838-4836-b9b3-8311ffc79bcf","port":35652,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"82.180.146.173","test_time":0.610050607,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.678s | IP: 185.93.173.218
+{"external_ip":"185.93.173.218","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.93.173.218","test_time":0.678475766,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.835s | IP: 94.131.21.174
+{"external_ip":"94.131.21.174","method":"chacha20-ietf-poly1305","network":"tcp","password":"o38yuvzSe3m5aDNpHtUPH1zGwbGEXXMDsGwVaub2SYEmHUa2WGZUjiezX3Vvva9CCzpjxYtuJLgKsSnsyKBf9ciPVba3y4o3","port":54075,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"beta.mattenadene.org","test_time":0.835071011,"tls":""}
+
+# Tested at: 2025-09-15 01:46:46 | Response: 0.828s | IP: 64.176.85.73
+{"external_ip":"64.176.85.73","method":"chacha20-ietf-poly1305","network":"tcp","password":"oXGp1+ihlfKg826H","port":1866,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"64.176.85.73","test_time":0.828175576,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 1.651s | IP: 193.29.139.189
+{"external_ip":"193.29.139.189","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.192","test_time":1.651158094,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.322s | IP: 142.93.238.172
+{"external_ip":"142.93.238.172","method":"chacha20-ietf-poly1305","network":"tcp","password":"mdPIrGoRyIAP97jWwIkRSn","port":80,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"142.93.238.172","test_time":0.321570544,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 2.175s | IP: 154.205.159.100
+{"external_ip":"154.205.159.100","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"154.205.159.100","test_time":2.174769592,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.268s | IP: 142.4.216.225
+{"external_ip":"142.4.216.225","method":"chacha20-ietf-poly1305","network":"tcp","password":"JIhN6rBKkaEboLNXVSv5rq","port":80,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ca225.vpnbook.com","test_time":0.268074868,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.283s | IP: 193.29.139.240
+{"external_ip":"193.29.139.240","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.158.171.66","test_time":0.283118072,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 1.903s | IP: 83.217.9.64
+{"external_ip":"83.217.9.64","method":"chacha20-ietf-poly1305","network":"tcp","password":"MgEU8qSlwf53","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"83.217.9.64","test_time":1.902867536,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.314s | IP: 193.29.139.179
+{"external_ip":"193.29.139.179","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.179","test_time":0.313957662,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.397s | IP: 141.98.101.178
+{"external_ip":"141.98.101.178","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"141.98.101.178","test_time":0.396590694,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.400s | IP: 178.128.114.43
+{"external_ip":"178.128.114.43","method":"chacha20-ietf-poly1305","network":"tcp","password":"a2x9onpdTqVFmYsPWRFd31","port":6365,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"178.128.114.43","test_time":0.399576223,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.434s | IP: 193.29.139.144
+{"external_ip":"193.29.139.144","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.158.171.60","test_time":0.434072555,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.843s | IP: 213.109.147.242
+{"external_ip":"213.109.147.242","method":"chacha20-ietf-poly1305","network":"tcp","password":"VpKABcOpNNA0l5G2AVOmw8","port":62685,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"213.109.147.242","test_time":0.842812723,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 1.008s | IP: 193.29.139.177
+{"external_ip":"193.29.139.177","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.92","test_time":1.007616053,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 0.536s | IP: 62.133.63.18
+{"external_ip":"62.133.63.18","method":"chacha20-ietf-poly1305","network":"tcp","password":"pW9XyPqxtSX1","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"62.133.63.18","test_time":0.535950401,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 1.061s | IP: 204.136.10.66
+{"external_ip":"204.136.10.66","method":"chacha20-ietf-poly1305","network":"tcp","password":"oXGp1+ihlfKg826H","port":1866,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"204.136.10.115","test_time":1.061264132,"tls":""}
+
+# Tested at: 2025-09-15 01:46:47 | Response: 1.897s | IP: 46.183.185.15
+{"external_ip":"46.183.185.15","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"46.183.185.15","test_time":1.897117516,"tls":""}
+
+# Tested at: 2025-09-15 01:46:48 | Response: 0.408s | IP: 2a12:5e40:1:70e0:6d64:2987:7ef6:9e23
+{"external_ip":"2a12:5e40:1:70e0:6d64:2987:7ef6:9e23","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"fr09.giamping.com","test_time":0.408421508,"tls":""}
+
+# Tested at: 2025-09-15 01:46:48 | Response: 1.330s | IP: 192.71.166.102
+{"external_ip":"192.71.166.102","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"192.71.166.102","test_time":1.330038327,"tls":""}
+
+# Tested at: 2025-09-15 01:46:50 | Response: 0.988s | IP: 116.203.43.2
+{"external_ip":"116.203.43.2","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"de04.giamping.com","test_time":0.987798298,"tls":""}
+
+# Tested at: 2025-09-15 01:46:50 | Response: 4.101s | IP: 2400:e920:0:4::50
+{"external_ip":"2400:e920:0:4::50","method":"chacha20-ietf-poly1305","network":"tcp","password":"Nk9asglDzHzjktVzTkvhaA","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"arxfw2b78fi2q9hzylhn.freesocks.work","test_time":4.100683241,"tls":""}
+
+# Tested at: 2025-09-15 01:46:50 | Response: 1.089s | IP: 92.112.126.90
+{"external_ip":"92.112.126.90","method":"chacha20-ietf-poly1305","network":"tcp","password":"9tqhMdIrTkgQ46PvhyAtMH","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"switcher-nick-croquet.freesocks.work","test_time":1.089216507,"tls":""}
+
+# Tested at: 2025-09-15 01:46:51 | Response: 1.362s | IP: 160.19.78.75
+{"external_ip":"160.19.78.75","method":"chacha20-ietf-poly1305","network":"tcp","password":"Nk9asglDzHzjktVzTkvhaA","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"160.19.78.75","test_time":1.361574228,"tls":""}
+
+# Tested at: 2025-09-15 01:46:51 | Response: 0.743s | IP: 83.172.138.149
+{"external_ip":"83.172.138.149","method":"chacha20-ietf-poly1305","network":"tcp","password":"Yx2sF4XRHe7rS8Ng6elm7B","port":8443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"83.172.138.149","test_time":0.74284188,"tls":""}
+
+# Tested at: 2025-09-15 01:46:53 | Response: 0.816s | IP: 74.50.98.185
+{"external_ip":"74.50.98.185","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"us32.giamping.com","test_time":0.815821686,"tls":""}
+
+# Tested at: 2025-09-15 01:46:54 | Response: 4.644s | IP: 2001:df1:7880:2::6cf
+{"external_ip":"2001:df1:7880:2::6cf","method":"2022-blake3-aes-256-gcm","network":"tcp","password":"15gEk+SZJqjC8Ct7g7xLbxeGjWc5kIXj9K6O4J2Yorc=:eG/TSb2yhsNzhoDuj9RMAPWLDgL1uTCZm6FJkCkc7ec=","port":22728,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.104.30.179","test_time":4.644309246,"tls":""}
+
+# Tested at: 2025-09-15 01:46:55 | Response: 0.483s | IP: 2a03:4000:43:8a8:e42c:42ff:fe7c:7ff8
+{"external_ip":"2a03:4000:43:8a8:e42c:42ff:fe7c:7ff8","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"de15.giamping.com","test_time":0.483004193,"tls":""}
+
+# Tested at: 2025-09-15 01:46:55 | Response: 0.456s | IP: 185.126.237.38
+{"external_ip":"185.126.237.38","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.126.237.38","test_time":0.455890994,"tls":""}
+
+# Tested at: 2025-09-15 01:46:58 | Response: 0.185s | IP: 67.220.95.26
+{"external_ip":"67.220.95.26","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"us55.giamping.com","test_time":0.185367151,"tls":""}
+
+# Tested at: 2025-09-15 01:46:58 | Response: 0.945s | IP: 23.94.67.166
+{"external_ip":"23.94.67.166","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.94.67.166","test_time":0.944515215,"tls":""}
+
+# Tested at: 2025-09-15 01:47:00 | Response: 0.498s | IP: 212.192.214.159
+{"external_ip":"212.192.214.159","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":800,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.192.214.159","test_time":0.498390803,"tls":""}
+
+# Tested at: 2025-09-15 01:47:04 | Response: 0.266s | IP: 2604:4500:9:3d:1c00:91ff:fe00:2e8
+{"external_ip":"2604:4500:9:3d:1c00:91ff:fe00:2e8","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"us33.giamping.com","test_time":0.266354853,"tls":""}
+
+# Tested at: 2025-09-15 01:47:27 | Response: 2.267s | IP: 213.111.182.241
+{"external_ip":"213.111.182.241","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"213.111.182.241","test_time":2.26735458,"tls":""}
+
+# Tested at: 2025-09-15 01:47:48 | Response: 3.760s | IP: 91.149.203.137
+{"external_ip":"91.149.203.137","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"91.149.203.137","test_time":3.7596457709999997,"tls":""}
+
+# Tested at: 2025-09-15 01:48:43 | Response: 0.453s | IP: 208.67.105.196
+{"external_ip":"208.67.105.196","method":"chacha20-ietf-poly1305","network":"tcp","password":"SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD","port":42029,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"208.67.105.196","test_time":0.452815507,"tls":""}
+
+# Tested at: 2025-09-15 01:48:45 | Response: 1.044s | IP: 193.29.139.179
+{"external_ip":"193.29.139.179","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"beesyar.org","test_time":1.043937929,"tls":""}
+
+# Tested at: 2025-09-15 01:49:21 | Response: 0.154s | IP: 2.58.87.221
+{"external_ip":"2.58.87.221","method":"aes-128-gcm","network":"tcp","password":"Yc2CtrIz8L","port":16899,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"2.58.87.221","test_time":0.153929604,"tls":""}
+
+# Tested at: 2025-09-15 01:49:22 | Response: 0.324s | IP: 193.29.139.189
+{"external_ip":"193.29.139.189","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.189","test_time":0.323512565,"tls":""}
+
+# Tested at: 2025-09-15 01:49:22 | Response: 0.967s | IP: 185.47.253.227
+{"external_ip":"185.47.253.227","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.47.253.227","test_time":0.967446422,"tls":""}
+
+# Tested at: 2025-09-15 01:49:22 | Response: 1.174s | IP: 193.29.139.138
+{"external_ip":"193.29.139.138","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.138","test_time":1.173555305,"tls":""}
+
+# Tested at: 2025-09-15 01:51:18 | Response: 0.513s | IP: 71.19.148.143
+{"external_ip":"71.19.148.143","method":"chacha20-ietf-poly1305","network":"tcp","password":"p78naCf2EfOlRSLTX0wFVx","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"pupas-shirting-unsung.freesocks.work","test_time":0.513339942,"tls":""}
+
+# Tested at: 2025-09-15 01:51:19 | Response: 0.575s | IP: 144.126.146.38
+{"external_ip":"144.126.146.38","method":"chacha20-ietf-poly1305","network":"tcp","password":"c1abd8d4-5228-492c-b827-0304e62b7ab0","port":30941,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"144.126.146.38","test_time":0.575176626,"tls":""}
+
+# Tested at: 2025-09-15 01:51:19 | Response: 0.591s | IP: 193.29.139.179
+{"external_ip":"193.29.139.179","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl13.saint.ydns.eu","test_time":0.591091151,"tls":""}
+
+# Tested at: 2025-09-15 01:51:19 | Response: 0.710s | IP: 193.29.139.143
+{"external_ip":"193.29.139.143","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl03.saint.ydns.eu","test_time":0.710421719,"tls":""}
+
+# Tested at: 2025-09-15 01:51:19 | Response: 0.323s | IP: 185.47.253.171
+{"external_ip":"185.47.253.171","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.47.253.171","test_time":0.323307818,"tls":""}
+
+# Tested at: 2025-09-15 01:51:19 | Response: 0.546s | IP: 193.29.139.133
+{"external_ip":"193.29.139.133","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"vip.nl-16-07.galaxymc-ssh.ir","test_time":0.546142159,"tls":""}
+
+# Tested at: 2025-09-15 01:51:19 | Response: 1.301s | IP: 193.29.139.164
+{"external_ip":"193.29.139.164","method":"chacha20-ietf-poly1305","network":"tcp","password":"1RWwXhwfAB5gAEozU4G2Pg","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl02.saint.ydns.eu","test_time":1.3006436,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.469s | IP: 193.29.139.168
+{"external_ip":"193.29.139.168","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl04.saint.ydns.eu","test_time":0.468524482,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.463s | IP: 193.29.139.138
+{"external_ip":"193.29.139.138","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl17.saint.ydns.eu","test_time":0.463097343,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.274s | IP: 147.78.1.27
+{"external_ip":"147.78.1.27","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"147.78.1.27","test_time":0.274305217,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 1.072s | IP: 193.29.139.141
+{"external_ip":"193.29.139.141","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl16.saint.ydns.eu","test_time":1.071847206,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.322s | IP: 2a05:541:103:1d::1
+{"external_ip":"2a05:541:103:1d::1","method":"chacha20-ietf-poly1305","network":"tcp","password":"c40641c1f89e7acb","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"de.vpnsparta.pro","test_time":0.322129457,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.298s | IP: 149.34.244.71
+{"external_ip":"149.34.244.71","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.34.244.71","test_time":0.297585737,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.435s | IP: 2a0c:16c0:510:948::7863
+{"external_ip":"2a0c:16c0:510:948::7863","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"lv.vpnsparta.pro","test_time":0.434603303,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.135s | IP: 144.126.146.38
+{"external_ip":"144.126.146.38","method":"chacha20-ietf-poly1305","network":"tcp","password":"8d73e088-dc5a-4dfe-8927-56351ee80407","port":30789,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"144.126.146.38","test_time":0.135496958,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.488s | IP: 193.29.139.173
+{"external_ip":"193.29.139.173","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl11.saint.ydns.eu","test_time":0.487860153,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.485s | IP: 147.78.3.93
+{"external_ip":"147.78.3.93","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"147.78.3.93","test_time":0.48525989,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.513s | IP: 188.214.36.155
+{"external_ip":"188.214.36.155","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"188.214.36.155","test_time":0.512928781,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.477s | IP: 193.29.139.132
+{"external_ip":"193.29.139.132","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl12.saint.ydns.eu","test_time":0.477203789,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.526s | IP: 185.192.124.188
+{"external_ip":"185.192.124.188","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.192.124.188","test_time":0.525632251,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.565s | IP: 2605:e440:7::1:293
+{"external_ip":"2605:e440:7::1:293","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.193.102.7","test_time":0.565073896,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.462s | IP: 193.29.139.188
+{"external_ip":"193.29.139.188","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl15.saint.ydns.eu","test_time":0.461807641,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.613s | IP: 193.29.139.175
+{"external_ip":"193.29.139.175","method":"chacha20-ietf-poly1305","network":"tcp","password":"1RWwXhwfAB5gAEozU4G2Pg","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl14.saint.ydns.eu","test_time":0.613081927,"tls":""}
+
+# Tested at: 2025-09-15 01:51:20 | Response: 0.648s | IP: 104.167.197.25
+{"external_ip":"104.167.197.25","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"us.vmagnum.win","test_time":0.647516745,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 0.321s | IP: 193.29.139.206
+{"external_ip":"193.29.139.206","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.167","test_time":0.321298348,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 0.667s | IP: 149.22.95.183
+{"external_ip":"149.22.95.183","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.22.95.183","test_time":0.667050316,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 0.906s | IP: 193.29.139.175
+{"external_ip":"193.29.139.175","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"45.87.175.165","test_time":0.906037258,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 0.986s | IP: 185.47.252.251
+{"external_ip":"185.47.252.251","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.47.252.251","test_time":0.986139047,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 0.993s | IP: 23.94.67.166
+{"external_ip":"23.94.67.166","method":"chacha20-ietf-poly1305","network":"tcp","password":"42000e02-6b4d-46ad-a572-80db7db2a9ce","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ie01.giamping.com","test_time":0.992690246,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 1.065s | IP: 193.29.139.251
+{"external_ip":"193.29.139.251","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"2.ilgm.saint.ydns.eu","test_time":1.064799255,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 0.575s | IP: 193.29.139.177
+{"external_ip":"193.29.139.177","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ltnl10.saint.ydns.eu","test_time":0.575308022,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 1.189s | IP: 103.111.114.29
+{"external_ip":"103.111.114.29","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"id.vpnsparta.pro","test_time":1.189269626,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 1.222s | IP: 192.36.61.59
+{"external_ip":"192.36.61.59","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"192.36.61.59","test_time":1.221873241,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 1.301s | IP: 38.180.211.126
+{"external_ip":"38.180.211.126","method":"chacha20-ietf-poly1305","network":"tcp","password":"Kuiqk2cP0BMWrgme9IfEvp","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"promo8v.bystrivpn.ru","test_time":1.301080564,"tls":""}
+
+# Tested at: 2025-09-15 01:51:21 | Response: 1.317s | IP: 176.103.53.105
+{"external_ip":"176.103.53.105","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"176.103.53.105","test_time":1.317192222,"tls":""}
+
+# Tested at: 2025-09-15 01:51:22 | Response: 0.990s | IP: 145.14.131.37
+{"external_ip":"145.14.131.37","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"145.14.131.37","test_time":0.989655857,"tls":""}
+
+# Tested at: 2025-09-15 01:51:22 | Response: 2.496s | IP: 93.186.201.64
+{"external_ip":"93.186.201.64","method":"chacha20-ietf-poly1305","network":"tcp","password":"fe166c5b3465540f","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"desrv.ssvpnapp.win","test_time":2.496342477,"tls":""}
+
+# Tested at: 2025-09-15 01:51:22 | Response: 2.520s | IP: 103.243.215.17
+{"external_ip":"103.243.215.17","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"103.243.215.17","test_time":2.5195032250000002,"tls":""}
+
+# Tested at: 2025-09-15 01:51:22 | Response: 2.540s | IP: 119.59.98.58
+{"external_ip":"119.59.98.58","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"119.59.98.58","test_time":2.539542312,"tls":""}
+
+# Tested at: 2025-09-15 01:51:27 | Response: 2.045s | IP: 192.71.244.150
+{"external_ip":"192.71.244.150","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"192.71.244.150","test_time":2.045101359,"tls":""}
+
+# Tested at: 2025-09-15 01:51:58 | Response: 0.488s | IP: 64.176.180.67
+{"external_ip":"64.176.180.67","method":"chacha20-ietf-poly1305","network":"tcp","password":"oXGp1+ihlfKg826H","port":1866,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"64.176.184.129","test_time":0.487959288,"tls":""}
+
+# Tested at: 2025-09-15 01:51:59 | Response: 0.306s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"lGqs95QkFHo2NV","port":5498,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.305717143,"tls":""}
+
+# Tested at: 2025-09-15 01:51:59 | Response: 0.203s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"Y6R9pAtvxxzmGC","port":3389,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.202809114,"tls":""}
+
+# Tested at: 2025-09-15 01:52:00 | Response: 0.875s | IP: 185.47.254.87
+{"external_ip":"185.47.254.87","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"185.47.254.87","test_time":0.875325777,"tls":""}
+
+# Tested at: 2025-09-15 01:52:00 | Response: 0.470s | IP: 193.29.139.162
+{"external_ip":"193.29.139.162","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.162","test_time":0.469749281,"tls":""}
+
+# Tested at: 2025-09-15 01:52:38 | Response: 0.149s | IP: 212.102.47.129
+{"external_ip":"212.102.47.129","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.102.47.129","test_time":0.148760321,"tls":""}
+
+# Tested at: 2025-09-15 01:52:38 | Response: 0.659s | IP: 141.98.101.182
+{"external_ip":"141.98.101.182","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"141.98.101.182","test_time":0.658887452,"tls":""}
+
+# Tested at: 2025-09-15 01:52:39 | Response: 0.292s | IP: 193.29.139.133
+{"external_ip":"193.29.139.133","method":"chacha20-ietf-poly1305","network":"tcp","password":"cvII85TrW6n0OGyfpHVS1u","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.133","test_time":0.291544241,"tls":""}
+
+# Tested at: 2025-09-15 01:52:39 | Response: 0.486s | IP: 193.29.139.168
+{"external_ip":"193.29.139.168","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.168","test_time":0.485917926,"tls":""}
+
+# Tested at: 2025-09-15 01:52:39 | Response: 0.644s | IP: 169.150.202.174
+{"external_ip":"169.150.202.174","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"169.150.202.174","test_time":0.643677078,"tls":""}
+
+# Tested at: 2025-09-15 01:52:39 | Response: 0.459s | IP: 193.29.139.160
+{"external_ip":"193.29.139.160","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.160","test_time":0.459185317,"tls":""}
+
+# Tested at: 2025-09-15 01:52:39 | Response: 0.400s | IP: 149.34.244.80
+{"external_ip":"149.34.244.80","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.34.244.80","test_time":0.400084373,"tls":""}
+
+# Tested at: 2025-09-15 01:52:40 | Response: 1.575s | IP: 38.54.2.182
+{"external_ip":"38.54.2.182","method":"chacha20-ietf-poly1305","network":"tcp","password":"f8f7aCzcPKbsF8p3","port":990,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.54.2.182","test_time":1.5747672050000001,"tls":""}
+
+# Tested at: 2025-09-15 01:52:40 | Response: 1.321s | IP: 193.29.139.144
+{"external_ip":"193.29.139.144","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"1.ilgm.saint.ydns.eu","test_time":1.320691782,"tls":""}
+
+# Tested at: 2025-09-15 01:53:16 | Response: 0.181s | IP: 37.19.198.236
+{"external_ip":"37.19.198.236","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"37.19.198.236","test_time":0.180671685,"tls":""}
+
+# Tested at: 2025-09-15 01:53:17 | Response: 0.379s | IP: 193.29.139.173
+{"external_ip":"193.29.139.173","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.173","test_time":0.378501592,"tls":""}
+
+# Tested at: 2025-09-15 01:53:18 | Response: 0.868s | IP: 193.29.139.175
+{"external_ip":"193.29.139.175","method":"chacha20-ietf-poly1305","network":"tcp","password":"1RWwXhwfAB5gAEozU4G2Pg","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.175","test_time":0.86759848,"tls":""}
+
+# Tested at: 2025-09-15 01:53:19 | Response: 0.876s | IP: 193.29.139.199
+{"external_ip":"193.29.139.199","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.199","test_time":0.875613316,"tls":""}
+
+# Tested at: 2025-09-15 01:53:56 | Response: 0.351s | IP: 193.29.139.164
+{"external_ip":"193.29.139.164","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.164","test_time":0.351047415,"tls":""}
+
+# Tested at: 2025-09-15 01:53:57 | Response: 0.286s | IP: 193.29.139.132
+{"external_ip":"193.29.139.132","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.132","test_time":0.286134987,"tls":""}
+
+# Tested at: 2025-09-15 01:53:58 | Response: 0.385s | IP: 193.29.139.206
+{"external_ip":"193.29.139.206","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.206","test_time":0.38519909,"tls":""}
+
+# Tested at: 2025-09-15 01:53:58 | Response: 1.116s | IP: 149.22.87.241
+{"external_ip":"149.22.87.241","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.22.87.241","test_time":1.115878704,"tls":""}
+
+# Tested at: 2025-09-15 01:53:58 | Response: 0.488s | IP: 45.139.24.24
+{"external_ip":"45.139.24.24","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"ru.vmagnum.win","test_time":0.487954145,"tls":""}
+
+# Tested at: 2025-09-15 01:54:37 | Response: 0.302s | IP: 193.29.139.143
+{"external_ip":"193.29.139.143","method":"chacha20-ietf-poly1305","network":"tcp","password":"1RWwXhwfAB5gAEozU4G2Pg","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.143","test_time":0.302088252,"tls":""}
+
+# Tested at: 2025-09-15 01:54:37 | Response: 0.442s | IP: 193.29.139.233
+{"external_ip":"193.29.139.233","method":"chacha20-ietf-poly1305","network":"tcp","password":"QCXDxuDlTTMD7jtgHUjIoj","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.233","test_time":0.441874718,"tls":""}
+
+# Tested at: 2025-09-15 01:54:38 | Response: 1.583s | IP: 141.98.101.179
+{"external_ip":"141.98.101.179","method":"aes-128-gcm","network":"tcp","password":"shadowsocks","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"141.98.101.179","test_time":1.582648316,"tls":""}
+
+# Tested at: 2025-09-15 01:55:15 | Response: 0.648s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"KixLvKzwjekG00rm","port":5500,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.647685809,"tls":""}
+
+# Tested at: 2025-09-15 01:55:15 | Response: 0.938s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"g5MeD6Ft3CWlJId","port":5003,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.937896957,"tls":""}
+
+# Tested at: 2025-09-15 01:55:15 | Response: 1.446s | IP: 185.193.102.7
+{"external_ip":"185.193.102.7","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"rusrv.vpnsparta.pro","test_time":1.446152628,"tls":""}
+
+# Tested at: 2025-09-15 01:55:16 | Response: 0.411s | IP: 193.29.139.141
+{"external_ip":"193.29.139.141","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.141","test_time":0.41077285,"tls":""}
+
+# Tested at: 2025-09-15 01:55:17 | Response: 0.447s | IP: 188.126.85.217
+{"external_ip":"188.126.85.217","method":"chacha20-ietf-poly1305","network":"tcp","password":"pwg80CVh4UBkFY4T2HuJUj","port":8443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"188.126.85.217","test_time":0.447097461,"tls":""}
+
+# Tested at: 2025-09-15 01:55:55 | Response: 0.515s | IP: 149.28.212.97
+{"external_ip":"149.28.212.97","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"149.28.212.97","test_time":0.514519023,"tls":""}
+
+# Tested at: 2025-09-15 01:55:56 | Response: 1.968s | IP: 70.34.223.29
+{"external_ip":"70.34.223.29","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"65.20.115.194","test_time":1.967554072,"tls":""}
+
+# Tested at: 2025-09-15 01:55:57 | Response: 0.226s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"KixLvKzwjekG00rm","port":8000,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.226037794,"tls":""}
+
+# Tested at: 2025-09-15 01:55:57 | Response: 0.155s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"kDWvXYZoTBcGkC4","port":8881,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.154608611,"tls":""}
+
+# Tested at: 2025-09-15 01:55:59 | Response: 2.891s | IP: 176.120.21.215
+{"external_ip":"176.120.21.215","method":"chacha20-ietf-poly1305","network":"tcp","password":"5xwdH52EpwETBD6hGviMnz","port":10249,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"176.120.21.215","test_time":2.891273601,"tls":""}
+
+# Tested at: 2025-09-15 01:56:35 | Response: 1.132s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"e4FCWrgpkji3QY","port":9101,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":1.132425193,"tls":""}
+
+# Tested at: 2025-09-15 01:56:35 | Response: 0.309s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"Y6R9pAtvxxzmGC","port":8888,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.309081377,"tls":""}
+
+# Tested at: 2025-09-15 02:01:47 | Response: 0.574s | IP: 167.172.68.156
+{"external_ip":"167.172.68.156","method":"chacha20-ietf-poly1305","network":"tcp","password":"zuXBmzgEGVk6VImtLZDib3","port":48575,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"167.172.68.156","test_time":0.574144571,"tls":""}
+
+# Tested at: 2025-09-15 02:01:49 | Response: 0.670s | IP: 193.29.139.144
+{"external_ip":"193.29.139.144","method":"chacha20-ietf-poly1305","network":"tcp","password":"oZIoA69Q8yhcQV8ka3Pa3A","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"193.29.139.144","test_time":0.66954645,"tls":""}
+
+# Tested at: 2025-09-15 02:02:28 | Response: 0.212s | IP: 71.19.148.143
+{"external_ip":"71.19.148.143","method":"chacha20-ietf-poly1305","network":"tcp","password":"p78naCf2EfOlRSLTX0wFVx","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"71.19.148.143","test_time":0.212124865,"tls":""}
+
+# Tested at: 2025-09-15 02:02:28 | Response: 0.442s | IP: 70.34.223.29
+{"external_ip":"70.34.223.29","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":800,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"65.20.115.194","test_time":0.441549286,"tls":""}
+
+# Tested at: 2025-09-15 02:02:28 | Response: 0.677s | IP: 64.137.109.212
+{"external_ip":"64.137.109.212","method":"chacha20-ietf-poly1305","network":"tcp","password":"2DGq3jvVRg5n3CcxmysGK2kmrgJeSNof12A76cZvVxqPpetyC1XEciCFufq5xKvRWGGnKVembpThuUSQhbZ7GMsZY4UVxEBw","port":44884,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"backup.fleetfoxi.link","test_time":0.677010546,"tls":""}
+
+# Tested at: 2025-09-15 02:09:50 | Response: 0.204s | IP: 44.249.117.74
+{"external_ip":"44.249.117.74","method":"aes-256-gcm","network":"tcp","password":"8f3a835c-8a45-480d-ae35-1deb2c52dcae","port":33152,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"cgroup.node2.s2.nodelist-airport.com","test_time":0.204106851,"tls":""}
+
+# Tested at: 2025-09-15 02:09:51 | Response: 0.307s | IP: 38.102.7.181
+{"external_ip":"38.102.7.181","method":"aes-256-gcm","network":"tcp","password":"SxCyrPsofR","port":59719,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.102.7.181","test_time":0.307202076,"tls":""}
+
+# Tested at: 2025-09-15 02:09:51 | Response: 0.187s | IP: 207.90.239.80
+{"external_ip":"207.90.239.80","method":"chacha20-ietf-poly1305","network":"tcp","password":"tvX1v#NSFP_LG_bJ","port":808,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"207.90.239.80","test_time":0.1865114,"tls":""}
+
+# Tested at: 2025-09-15 02:09:51 | Response: 0.355s | IP: 23.157.40.5
+{"external_ip":"23.157.40.5","method":"aes-256-gcm","network":"tcp","password":"FoOiGlkAA9yPEGP","port":7306,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.157.40.5","test_time":0.354923122,"tls":""}
+
+# Tested at: 2025-09-15 02:09:52 | Response: 1.729s | IP: 45.144.49.140
+{"external_ip":"45.144.49.140","method":"chacha20-ietf-poly1305","network":"tcp","password":"360e21d21977dc11","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"pl.vpnsparta.pro","test_time":1.729290854,"tls":""}
+
+# Tested at: 2025-09-15 02:14:29 | Response: 0.401s | IP: 193.29.139.233
+{"external_ip":"193.29.139.233","method":"chacha20-ietf-poly1305","network":"tcp","password":"4a2rfixophdjffa8KVA4Aa","port":8080,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"151.242.251.137","test_time":0.401002201,"tls":""}
+
+# Tested at: 2025-09-15 02:15:09 | Response: 0.484s | IP: 212.224.125.154
+{"external_ip":"212.224.125.154","method":"chacha20-ietf-poly1305","network":"tcp","password":"fe166c5b3465540f","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"212.224.125.154","test_time":0.483515539,"tls":""}
+
+# Tested at: 2025-09-15 02:15:09 | Response: 0.459s | IP: 20.68.181.152
+{"external_ip":"20.68.181.152","method":"chacha20-ietf-poly1305","network":"tcp","password":"b2EJuconC460KllN","port":443,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"145.133.105.180","test_time":0.459237887,"tls":""}
+
+# Tested at: 2025-09-15 02:15:09 | Response: 0.198s | IP: 23.154.136.213
+{"external_ip":"23.154.136.213","method":"aes-256-gcm","network":"tcp","password":"FoOiGlkAA9yPEGP","port":7307,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.154.136.213","test_time":0.198004498,"tls":""}
+
+# Tested at: 2025-09-15 02:15:09 | Response: 0.213s | IP: 38.110.1.17
+{"external_ip":"38.110.1.17","method":"aes-256-gcm","network":"tcp","password":"XKFKl2rULjIp74","port":8009,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"38.110.1.17","test_time":0.213156197,"tls":""}
+
+# Tested at: 2025-09-15 02:15:09 | Response: 0.640s | IP: 157.245.157.80
+{"external_ip":"157.245.157.80","method":"chacha20-ietf-poly1305","network":"tcp","password":"vQVrWGe7XUu8jFUGEyrmUj","port":31812,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"157.245.157.80","test_time":0.639721164,"tls":""}
+
+# Tested at: 2025-09-15 02:15:09 | Response: 0.323s | IP: 23.154.136.149
+{"external_ip":"23.154.136.149","method":"aes-256-gcm","network":"tcp","password":"e4FCWrgpkji3QY","port":9102,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"23.154.136.149","test_time":0.322778145,"tls":""}
+
+# Tested at: 2025-09-15 02:15:10 | Response: 2.038s | IP: 93.186.201.64
+{"external_ip":"93.186.201.64","method":"chacha20-ietf-poly1305","network":"tcp","password":"fe166c5b3465540f","port":57456,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"93.186.201.64","test_time":2.037746487,"tls":""}
+
+# Tested at: 2025-09-15 02:15:12 | Response: 3.692s | IP: 178.128.25.18
+{"external_ip":"178.128.25.18","method":"chacha20-ietf-poly1305","network":"tcp","password":"RXm7HegKZCyDWbF8CT1YuF","port":15947,"protocol":"shadowsocks","remarks":"@XrayTurbo🔥","server":"178.128.25.18","test_time":3.692007374,"tls":""}
+>>>>>>> Stashed changes
 
