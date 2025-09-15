@@ -351,7 +351,7 @@ func (qt *QualityTester) TestConfigQuality(config *WorkingConfig) (*ConfigResult
 	}
 
 	qt.calculateQualityMetrics(result)
-	qt.categorizeConfig(result)
+	// دسته‌بندی در SaveResults انجام می‌شود
 
 	log.Printf("Config %s:%d completed - Score: %.1f | Success: %.1f%% | Latency: %.0fms | Tests: %d/%d passed", 
 		config.Server, config.Port, result.FinalScore, result.SuccessRate, result.AvgLatency, 
@@ -783,25 +783,7 @@ func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
 	return 0
 }
 
-func (qt *QualityTester) categorizeConfig(result *ConfigResult) {
-	score := result.FinalScore
 
-	// بررسی دسترسی به سایت‌های فیلتر شده کلیدی ایران
-	criticalSitesAccess := qt.checkCriticalSitesAccess(result.QualityTests)
-
-	// معیارهای واقعی‌تر برای شرایط GitHub Actions و شبکه ایران
-	if score >= 85 && criticalSitesAccess >= 0.75 && result.AvgLatency < 3000 {
-		result.Category = ScoreExcellent  // امتیاز 85+ با دسترسی عالی
-	} else if score >= 75 && criticalSitesAccess >= 0.6 && result.AvgLatency < 4000 {
-		result.Category = ScoreVeryGood   // امتیاز 75+ با دسترسی خوب
-	} else if score >= 65 && criticalSitesAccess >= 0.5 && result.AvgLatency < 5000 {
-		result.Category = ScoreGood       // امتیاز 65+ با دسترسی متوسط
-	} else if score >= 50 && criticalSitesAccess >= 0.25 && result.AvgLatency < 6000 {
-		result.Category = ScoreFair       // امتیاز 50+ با دسترسی پایه
-	} else {
-		result.Category = ScorePoor       // امتیاز زیر 50 یا دسترسی ضعیف
-	}
-}
 
 // بررسی دسترسی به سایت‌های فیلتر شده کلیدی
 func (qt *QualityTester) checkCriticalSitesAccess(tests []TestResult) float64 {
@@ -822,7 +804,71 @@ func (qt *QualityTester) checkCriticalSitesAccess(tests []TestResult) float64 {
 	return float64(successCount) / float64(len(criticalSites))
 }
 
+// دسته‌بندی کانفیگ‌ها بر اساس رتبه نسبی
+func (qt *QualityTester) categorizeByRank(results []ConfigResult) {
+	if len(results) == 0 {
+		return
+	}
 
+	// مرتب‌سازی بر اساس امتیاز نهایی (بالا به پایین)
+	sort.Slice(results, func(i, j int) bool {
+		return results[i].FinalScore > results[j].FinalScore
+	})
+
+	totalCount := len(results)
+
+	// محاسبه تعداد کانفیگ در هر دسته
+	excellentCount := int(float64(totalCount) * 0.10)    // 10% اول
+	veryGoodCount := int(float64(totalCount) * 0.20)     // 20% بعدی
+	goodCount := int(float64(totalCount) * 0.30)         // 30% بعدی
+	fairCount := int(float64(totalCount) * 0.25)         // 25% بعدی
+	// باقی در دسته Poor قرار می‌گیرند (15%)
+
+	// اطمینان از اینکه همه کانفیگ‌ها پوشش داده شوند
+	if excellentCount == 0 && totalCount > 0 {
+		excellentCount = 1
+	}
+
+	// اختصاص دسته‌ها
+	index := 0
+
+	// دسته Excellent (10% اول)
+	for i := 0; i < excellentCount && index < totalCount; i++ {
+		results[index].Category = ScoreExcellent
+		index++
+	}
+
+	// دسته Very Good (20% بعدی)
+	for i := 0; i < veryGoodCount && index < totalCount; i++ {
+		results[index].Category = ScoreVeryGood
+		index++
+	}
+
+	// دسته Good (30% بعدی)
+	for i := 0; i < goodCount && index < totalCount; i++ {
+		results[index].Category = ScoreGood
+		index++
+	}
+
+	// دسته Fair (25% بعدی)
+	for i := 0; i < fairCount && index < totalCount; i++ {
+		results[index].Category = ScoreFair
+		index++
+	}
+
+	// باقی در دسته Poor
+	for index < totalCount {
+		results[index].Category = ScorePoor
+		index++
+	}
+
+	log.Printf("📊 Rank-based categorization completed:")
+	log.Printf("   Excellent: %d configs (%.1f%%)", excellentCount, float64(excellentCount)/float64(totalCount)*100)
+	log.Printf("   Very Good: %d configs (%.1f%%)", veryGoodCount, float64(veryGoodCount)/float64(totalCount)*100)
+	log.Printf("   Good: %d configs (%.1f%%)", goodCount, float64(goodCount)/float64(totalCount)*100)
+	log.Printf("   Fair: %d configs (%.1f%%)", fairCount, float64(fairCount)/float64(totalCount)*100)
+	log.Printf("   Poor: %d configs (%.1f%%)", totalCount-index+fairCount, float64(totalCount-index+fairCount)/float64(totalCount)*100)
+}
 
 func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort int) (map[string]interface{}, error) {
 	xrayConfig := map[string]interface{}{
@@ -990,6 +1036,9 @@ func (qt *QualityTester) startXrayProcess(configFile string) (*exec.Cmd, error) 
 func (qt *QualityTester) SaveResults(results []ConfigResult) error {
 	os.MkdirAll("../data/quality_results", 0755)
 
+	// دسته‌بندی مبتنی بر رتبه (percentile-based)
+	qt.categorizeByRank(results)
+
 	excellent := []ConfigResult{}
 	veryGood := []ConfigResult{}
 	good := []ConfigResult{}
@@ -1112,16 +1161,16 @@ func (qt *QualityTester) saveSummary(results []ConfigResult) error {
 	file.WriteString(fmt.Sprintf("# Generated at: %s\n\n", timestamp))
 	file.WriteString(fmt.Sprintf("Total configurations tested: %d\n", len(results)))
 	file.WriteString(fmt.Sprintf("Average quality score: %.2f\n\n", avgScore))
-	file.WriteString("Quality Distribution:\n")
-	file.WriteString(fmt.Sprintf("  Excellent (Score ≥80, Success ≥90%%): %d (%.1f%%)\n", 
+	file.WriteString("Quality Distribution (Rank-Based):\n")
+	file.WriteString(fmt.Sprintf("  Excellent (Top 10%% Best): %d (%.1f%%)\n", 
 		excellentCount, float64(excellentCount)/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Very Good (Score ≥70, Success ≥80%%): %d (%.1f%%)\n", 
+	file.WriteString(fmt.Sprintf("  Very Good (Next 20%% Best): %d (%.1f%%)\n", 
 		veryGoodCount, float64(veryGoodCount)/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Good (Score ≥60, Success ≥70%%): %d (%.1f%%)\n", 
+	file.WriteString(fmt.Sprintf("  Good (Next 30%% Best): %d (%.1f%%)\n", 
 		goodCount, float64(goodCount)/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Fair (Score ≥40, Success ≥50%%): %d (%.1f%%)\n", 
+	file.WriteString(fmt.Sprintf("  Fair (Next 25%% Best): %d (%.1f%%)\n", 
 		fairCount, float64(fairCount)/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Poor (Others): %d (%.1f%%)\n", 
+	file.WriteString(fmt.Sprintf("  Poor (Bottom 15%%): %d (%.1f%%)\n", 
 		poorCount, float64(poorCount)/float64(len(results))*100))
 
 	return nil
@@ -1293,13 +1342,13 @@ func (qt *QualityTester) printQualitySummary(results []ConfigResult) {
 	log.Printf("Total configurations tested: %d", len(results))
 	log.Printf("Average quality score: %.1f", avgScore)
 	log.Println()
-	log.Printf("Excellent (Score ≥80, Success ≥90%%): %d (%.1f%%)", 
+	log.Printf("Excellent (Top 10%% Best): %d (%.1f%%)", 
 		excellentCount, float64(excellentCount)/float64(len(results))*100)
-	log.Printf("Very Good (Score ≥70, Success ≥80%%): %d (%.1f%%)", 
+	log.Printf("Very Good (Next 20%% Best): %d (%.1f%%)", 
 		veryGoodCount, float64(veryGoodCount)/float64(len(results))*100)
-	log.Printf("Good (Score ≥60, Success ≥70%%): %d (%.1f%%)", 
+	log.Printf("Good (Next 30%% Best): %d (%.1f%%)", 
 		goodCount, float64(goodCount)/float64(len(results))*100)
-	log.Printf("Fair (Score ≥40, Success ≥50%%): %d (%.1f%%)", 
+	log.Printf("Fair (Next 25%% Best): %d (%.1f%%)", 
 		fairCount, float64(fairCount)/float64(len(results))*100)
 	log.Printf("Poor (Others): %d (%.1f%%)", 
 		poorCount, float64(poorCount)/float64(len(results))*100)
