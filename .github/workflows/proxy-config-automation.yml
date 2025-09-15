@@ -227,12 +227,12 @@ jobs:
           enable_connection_pool: true
           pool_size: 50
           pool_timeout: 30s
-          enable_circuit_breaker: true
+          enable_circuit_breaker: false
           circuit_breaker:
-            max_failures: 15
-            timeout: 45s
-            reset_timeout: 30s
-            threshold_rate: 0.5
+            max_failures: 1000
+            timeout: 300s
+            reset_timeout: 60s
+            threshold_rate: 0.9
           rate_limit:
             enabled: false
             requests_per_sec: 100
