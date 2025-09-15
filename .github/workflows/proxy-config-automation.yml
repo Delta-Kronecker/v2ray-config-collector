@@ -181,11 +181,12 @@ jobs:
           cat > config.yaml << 'EOF'
         # Enhanced Proxy Testing Configuration for CI/CD
         testing:
-          max_concurrent: ${{ github.event.inputs.max_concurrency || '25' }}
+          max_concurrent: ${{ github.event.inputs.max_concurrency || '10' }}
           timeout_seconds: ${{ env.PROXY_TEST_TIMEOUT }}
-          retry_attempts: 2
-          retry_delay_seconds: 5
-          buffer_pool_size: 100
+          retry_attempts: 1
+          retry_delay_seconds: 2
+          buffer_pool_size: 50
+          rate_limit_per_second: 5
           test_sites:
             - "https://www.google.com"
             - "https://www.github.com"
@@ -259,11 +260,13 @@ jobs:
           # Create minimal safe config
           cat > config.yaml << 'EOF'
         testing:
-          max_concurrent: 10
+          max_concurrent: 5
           timeout_seconds: 120
+          retry_attempts: 1
+          rate_limit_per_second: 2
         quality_testing:
           enabled: true
-          max_concurrent: 5
+          max_concurrent: 3
         circuit_breaker:
           failure_threshold: 15
           timeout_seconds: 45
@@ -272,6 +275,8 @@ jobs:
           enabled: false
         logging:
           level: "info"
+        performance:
+          connection_pool_size: 10
         EOF
         fi
 
@@ -333,7 +338,7 @@ jobs:
 
         # Set environment variables for enhanced features
         export TEST_MODE="${{ github.event.inputs.test_mode || 'full' }}"
-        export MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '25' }}"
+        export MAX_CONCURRENT="${{ github.event.inputs.max_concurrency || '10' }}"  # Much lower for rate limiting
         export GOMAXPROCS=4  # Optimize for GitHub Actions
 
         # Run proxy tester with configuration and monitoring
