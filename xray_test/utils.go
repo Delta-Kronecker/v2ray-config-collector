@@ -446,6 +446,9 @@ func (cb *CircuitBreaker) GetState() CircuitState {
 }
 
 func (cb *CircuitBreaker) GetStats() (int64, int64, CircuitState) {
+	if !cb.enabled {
+		return 0, 0, StateClosed // Always return clean stats when disabled
+	}
 	cb.mu.RLock()
 	defer cb.mu.RUnlock()
 	return atomic.LoadInt64(&cb.failures), atomic.LoadInt64(&cb.successCount), cb.state
@@ -951,14 +954,14 @@ func (ac *AdaptiveConfig) SuggestBatchSize(current int) int {
 	defer ac.mu.RUnlock()
 
 	// Similar logic for batch size optimization
-	if ac.successRate > 80 && ac.memoryUsage < 70 {
+	if ac.successRate > 15 && ac.memoryUsage < 70 {
 		adjustment := int(float64(current) * ac.adjustmentRate)
 		return current + max(10, adjustment)
 	}
 
-	if ac.successRate < 40 || ac.memoryUsage > 85 {
+	if ac.successRate < 2 || ac.memoryUsage > 95 {
 		adjustment := int(float64(current) * ac.adjustmentRate)
-		return max(10, current-max(10, adjustment))
+		return max(50, current-max(5, adjustment))
 	}
 
 	return current
