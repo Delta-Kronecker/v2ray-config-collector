@@ -86,9 +86,16 @@ jobs:
           sudo chmod +x /usr/local/bin/xray
         else
           echo "⬇️ Downloading Xray binary (optimized)"
-          # Use GitHub API to get latest release URL for better reliability
-          XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r '.assets[] | select(.name | contains("linux-64")) | .browser_download_url')
+          # Use GitHub API to get latest release URL with proper filtering
+          XRAY_URL=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | jq -r '.assets[] | select(.name == "Xray-linux-64.zip") | .browser_download_url' | head -1)
 
+          # Fallback to direct URL if API fails
+          if [ -z "$XRAY_URL" ] || [ "$XRAY_URL" = "null" ]; then
+            echo "⚠️ API failed, using direct download URL"
+            XRAY_URL="https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip"
+          fi
+
+          echo "📥 Downloading from: $XRAY_URL"
           wget --timeout=30 --tries=2 -O xray.zip "$XRAY_URL" \
             && unzip -o xray.zip \
             && sudo mv xray /usr/local/bin/ \
