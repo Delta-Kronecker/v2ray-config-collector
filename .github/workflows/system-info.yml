@@ -1,0 +1,26 @@
+name: System Info
+
+on: [push]  # یا هر تریگری که می‌خوای
+
+jobs:
+  check-system:
+    runs-on: ubuntu-latest  # یا windows-latest, macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install psutil
+      - name: Run system info
+        run: python system_info.py > system_info.json
+      - name: Upload info as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: system-info
+          path: system_info.json
+      - name: Print summary
+        run: |
+          echo "### System Summary" >> $GITHUB_STEP_SUMMARY
+          cat system_info.json | jq '.platform, .hardware' >> $GITHUB_STEP_SUMMARY
