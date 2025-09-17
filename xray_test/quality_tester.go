@@ -251,19 +251,7 @@ func NewQualityTester(xrayPath string, concurrent int) *QualityTester {
 		{"YouTube", "https://www.youtube.com", "watch", "filtered_primary"},
 		{"Instagram", "https://www.instagram.com", "instagram", "filtered_primary"},
 		{"Discord", "https://discord.com", "discord", "filtered_primary"},
-
-		// سایت‌های فیلتر شده مهم - اولویت دوم
 		{"Telegram Web", "https://web.telegram.org", "telegram", "filtered_secondary"},
-		{"GitHub", "https://github.com", "github", "filtered_secondary"},
-		{"Reddit", "https://www.reddit.com", "reddit", "filtered_secondary"},
-
-		// سایت‌های تکنولوژی فیلتر شده
-		{"Stack Overflow", "https://stackoverflow.com", "stack overflow", "tech_filtered"},
-		{"Google Search", "https://www.google.com/search?q=test", "search", "tech_filtered"},
-
-		// تست سرعت و پایداری (مطمئن‌ترین)
-		{"Speed Test", "https://fast.com", "fast", "speed_test"},
-		{"CloudFlare Test", "https://1.1.1.1", "cloudflare", "connectivity"},
 	}
 
 	return &QualityTester{
@@ -272,7 +260,7 @@ func NewQualityTester(xrayPath string, concurrent int) *QualityTester {
 		processManager: NewProcessManager(),
 		testSites:      testSites,
 		maxRetries:     3,
-		timeout:        120 * time.Second,  // افزایش timeout برای شرایط شبکه ایران
+		timeout:        30 * time.Second,   // Standard timeout for GitHub workflows
 		concurrent:     concurrent,
 	}
 }
@@ -374,8 +362,12 @@ func (qt *QualityTester) runQualityTests(proxyPort int) []TestResult {
 	var results []TestResult
 	var mu sync.Mutex
 	var wg sync.WaitGroup
+	completed := 0
+	totalTests := len(qt.testSites)
 
 	semaphore := make(chan struct{}, qt.concurrent)
+
+	log.Printf("🔄 Starting quality tests for %d sites via port %d...", totalTests, proxyPort)
 
 	for _, site := range qt.testSites {
 		wg.Add(1)
@@ -388,11 +380,15 @@ func (qt *QualityTester) runQualityTests(proxyPort int) []TestResult {
 
 			mu.Lock()
 			results = append(results, result)
+			completed++
+			log.Printf("📊 Progress: %d/%d tests completed (%.1f%%) - Last: %s",
+				completed, totalTests, float64(completed)/float64(totalTests)*100, testSite.Name)
 			mu.Unlock()
 		}(site)
 	}
 
 	wg.Wait()
+	log.Printf("✅ All quality tests completed for port %d", proxyPort)
 	return results
 }
 
@@ -442,7 +438,7 @@ func (qt *QualityTester) testSingleSite(proxyPort int, site TestSite) TestResult
 
 // تشخیص سایت‌های حیاتی که نیاز به تست پایداری دارند
 func (qt *QualityTester) isCriticalSite(siteName string) bool {
-	criticalSites := []string{"Twitter", "Instagram", "YouTube", "Discord", "Telegram Web"}
+	criticalSites := []string{"Twitter", "Instagram", "YouTube", "Discord"}
 	for _, critical := range criticalSites {
 		if siteName == critical {
 			return true
@@ -530,11 +526,11 @@ func (qt *QualityTester) performRequest(proxyPort int, url, expectedContent stri
 		},
 		DisableKeepAlives:     true,
 		DisableCompression:    false,
-		MaxIdleConns:          5,
-		IdleConnTimeout:       60 * time.Second,     // افزایش timeout
-		TLSHandshakeTimeout:   60 * time.Second,     // افزایش TLS timeout  
-		ExpectContinueTimeout: 5 * time.Second,      // افزایش timeout
-		ResponseHeaderTimeout: 45 * time.Second,     // اضافه کردن header timeout
+		MaxIdleConns:          10,
+		IdleConnTimeout:       30 * time.Second,     // Standard timeout for GitHub
+		TLSHandshakeTimeout:   15 * time.Second,     // Standard TLS timeout
+		ExpectContinueTimeout: 2 * time.Second,      // Standard timeout
+		ResponseHeaderTimeout: 20 * time.Second,     // Standard header timeout
 	}
 
 	client := &http.Client{
@@ -656,21 +652,21 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 	// محاسبه امتیاز براساس اولویت سایت‌های فیلتر شده در ایران
 	iranFilteredScore := qt.calculateIranFilteredScore(result.QualityTests)
 
-	// وزن‌های بهینه شده برای شرایط ایران
-	iranFilteredWeight := 0.50  // اولویت اصلی: سایت‌های فیلتر شده
-	latencyWeight := 0.25      // کیفیت اتصال
-	stabilityWeight := 0.15    // پایداری
-	speedWeight := 0.10        // سرعت
+	// Optimized weights for GitHub Actions environment
+	filteredSitesWeight := 0.50  // Primary focus: filtered sites accessibility
+	latencyWeight := 0.25        // Connection quality
+	stabilityWeight := 0.15      // Stability
+	speedWeight := 0.10          // Speed
 
 	latencyScore := 100.0
 	if result.AvgLatency > 0 {
-		// محاسبه واقعی‌تر لیتنسی برای شرایط GitHub Actions
-		// لیتنسی زیر 3 ثانیه = امتیاز کامل، بالای 10 ثانیه = امتیاز صفر
-		latencyScore = math.Max(0, 100-((result.AvgLatency-3000)/7000*100))
+		// Latency calculation optimized for GitHub Actions environment
+		// Under 1 second = full score, above 5 seconds = zero score
+		latencyScore = math.Max(0, 100-((result.AvgLatency-1000)/4000*100))
 		if latencyScore < 0 {
 			latencyScore = 0
 		}
-		if result.AvgLatency <= 3000 {
+		if result.AvgLatency <= 1000 {
 			latencyScore = 100
 		}
 	}
@@ -678,9 +674,9 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 	stabilityScore := result.Stability
 	speedScore := math.Min(100, result.Speed*10)
 
-	finalScore := (iranFilteredScore*iranFilteredWeight + 
-		latencyScore*latencyWeight + 
-		stabilityScore*stabilityWeight + 
+	finalScore := (iranFilteredScore*filteredSitesWeight +
+		latencyScore*latencyWeight +
+		stabilityScore*stabilityWeight +
 		speedScore*speedWeight)
 
 	// اضافه کردن امتیاز اضافی برای پروکسی‌هایی که Twitter و Facebook را باز می‌کنند
@@ -693,12 +689,8 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 // محاسبه امتیاز براساس دسترسی به سایت‌های فیلتر شده ایران
 func (qt *QualityTester) calculateIranFilteredScore(tests []TestResult) float64 {
 	primaryFilteredSites := []string{"Twitter", "YouTube", "Instagram", "Discord"}
-	secondaryFilteredSites := []string{"Telegram Web", "GitHub", "Reddit"}
-	techFilteredSites := []string{"Stack Overflow", "Google Search"}
 
 	primarySuccessCount := 0
-	secondarySuccessCount := 0
-	techSuccessCount := 0
 
 	for _, test := range tests {
 		if test.Success {
@@ -708,55 +700,18 @@ func (qt *QualityTester) calculateIranFilteredScore(tests []TestResult) float64 
 					break
 				}
 			}
-			for _, site := range secondaryFilteredSites {
-				if test.Site == site {
-					secondarySuccessCount++
-					break
-				}
-			}
-			for _, site := range techFilteredSites {
-				if test.Site == site {
-					techSuccessCount++
-					break
-				}
-			}
 		}
 	}
 
-	// وزن‌گذاری: سایت‌های اولویت اول مهم‌ترند
-	primaryScore := float64(primarySuccessCount) / float64(len(primaryFilteredSites)) * 100 * 0.6
-	secondaryScore := float64(secondarySuccessCount) / float64(len(secondaryFilteredSites)) * 100 * 0.25
-	techScore := float64(techSuccessCount) / float64(len(techFilteredSites)) * 100 * 0.15
+	// تمام وزن به سایت‌های اولویت اول داده می‌شود
+	primaryScore := float64(primarySuccessCount) / float64(len(primaryFilteredSites)) * 100
 
-	return primaryScore + secondaryScore + techScore
+	return primaryScore
 }
 
 
 
-// محاسبه امتیاز براساس تست سرعت
-func (qt *QualityTester) calculateSpeedTestScore(tests []TestResult) float64 {
-	speedSites := []string{"Speed Test", "CloudFlare Test"}
-	successCount := 0
-	totalLatency := 0.0
 
-	for _, test := range tests {
-		for _, site := range speedSites {
-			if test.Site == site && test.Success {
-				successCount++
-				totalLatency += test.Latency
-				break
-			}
-		}
-	}
-
-	if successCount == 0 {
-		return 0
-	}
-
-	avgLatency := totalLatency / float64(successCount)
-	// برای ایران، لیتنسی زیر 3 ثانیه قابل قبول است
-	return math.Max(0, 100-(avgLatency/3000*100))
-}
 
 // امتیاز اضافی برای پروکسی‌های عالی
 func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
@@ -764,7 +719,7 @@ func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
 	successCount := 0
 
 	for _, test := range tests {
-		if test.Success && test.Latency < 2000 { // لیتنسی کمتر از 2 ثانیه (واقعی‌تر)
+		if test.Success && test.Latency < 800 { // Latency under 800ms for GitHub workflows
 			for _, site := range criticalSites {
 				if test.Site == site {
 					successCount++
@@ -1265,7 +1220,7 @@ func (qt *QualityTester) RunQualityTests(configFile string, maxConfigs int) erro
 		configs = configs[:maxConfigs]
 	}
 
-	log.Printf("Testing quality for %d configurations...", len(configs))
+	log.Printf("🚀 Testing quality for %d configurations with %d test sites each...", len(configs), len(qt.testSites))
 
 	var results []ConfigResult
 	var mu sync.Mutex
@@ -1273,6 +1228,7 @@ func (qt *QualityTester) RunQualityTests(configFile string, maxConfigs int) erro
 
 	semaphore := make(chan struct{}, qt.concurrent)
 	processed := 0
+	totalConfigs := len(configs)
 
 	for _, config := range configs {
 		wg.Add(1)
@@ -1283,19 +1239,24 @@ func (qt *QualityTester) RunQualityTests(configFile string, maxConfigs int) erro
 
 			result, err := qt.TestConfigQuality(&cfg)
 			if err != nil {
-				log.Printf("Failed to test config %s:%d - %v", cfg.Server, cfg.Port, err)
+				log.Printf("❌ Failed to test config %s:%d - %v", cfg.Server, cfg.Port, err)
+				mu.Lock()
+				processed++
+				log.Printf("📈 Overall Progress: %d/%d configs tested (%.1f%%) - Failed: %s:%d",
+					processed, totalConfigs, float64(processed)/float64(totalConfigs)*100, cfg.Server, cfg.Port)
+				mu.Unlock()
 				return
 			}
 
 			mu.Lock()
 			results = append(results, *result)
 			processed++
-			if processed%10 == 0 {
-				log.Printf("Processed %d/%d configurations", processed, len(configs))
-			}
+			log.Printf("📈 Overall Progress: %d/%d configs tested (%.1f%%) - Score: %.1f | Success: %.1f%% | Latency: %.0fms",
+				processed, totalConfigs, float64(processed)/float64(totalConfigs)*100,
+				result.FinalScore, result.SuccessRate, result.AvgLatency)
 			mu.Unlock()
 
-			log.Printf("Config %s:%d - Score: %.1f, Success: %.1f%%, Latency: %.0fms", 
+			log.Printf("✅ Config %s:%d completed - Score: %.1f, Success: %.1f%%, Latency: %.0fms",
 				cfg.Server, cfg.Port, result.FinalScore, result.SuccessRate, result.AvgLatency)
 		}(config)
 	}
@@ -1371,7 +1332,7 @@ func (qt *QualityTester) Cleanup() {
 func main() {
 	configFile := "../data/working_json/working_all_configs.txt"
 	maxConfigs := 10000
-	concurrent := 8  // کاهش اتصالات همزمان برای شرایط بهتر
+	concurrent := 12 // Increased concurrent connections for GitHub Actions
 
 	tester := NewQualityTester("", concurrent)
 	defer tester.Cleanup()
