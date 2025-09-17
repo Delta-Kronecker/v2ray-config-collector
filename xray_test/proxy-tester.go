@@ -68,7 +68,7 @@ func NewDefaultConfig() *Config {
 	dataDir := getEnvOrDefault("PROXY_DATA_DIR", "./data")
 	configDir := getEnvOrDefault("PROXY_CONFIG_DIR", "./config")
 	logDir := getEnvOrDefault("PROXY_LOG_DIR", "./log")
-	
+
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
 		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 300),
@@ -1524,9 +1524,9 @@ func main() {
 	var allConfigs []ProxyConfig
 
 	configFiles := map[ProxyProtocol]string{
-		ProtocolShadowsocks: filepath.Join(config.ConfigDir, "ss.json"),
-		ProtocolVMess:       filepath.Join(config.ConfigDir, "vmess.json"),
-		ProtocolVLESS:       filepath.Join(config.ConfigDir, "vless.json"),
+		ProtocolShadowsocks: "../config_collector/deduplicated_urls/ss.json",
+		ProtocolVMess:       "../config_collector/deduplicated_urls/vmess.json",
+		ProtocolVLESS:       "../config_collector/deduplicated_urls/vless.json",
 	}
 
 	for protocol, filePath := range configFiles {
