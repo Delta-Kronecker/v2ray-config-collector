@@ -106,6 +106,8 @@ jobs:
       run: |
         mkdir -p data/working_url
         mkdir -p data/working_json
+        mkdir -p data/speed_results
+        mkdir -p data/quality_results
         mkdir -p log
 
     - name: Run config collector
@@ -159,12 +161,33 @@ jobs:
           fi
         done
 
+    - name: Run speed tester
+      run: |
+        cd xray_test
+        # Run speed tester with retry logic
+        for i in {1..3}; do
+          if go run speed_test_runner.go; then
+            echo "Speed tester completed successfully"
+            break
+          else
+            echo "Speed tester failed, attempt $i/3"
+            if [ $i -lt 3 ]; then
+              echo "Retrying in 90 seconds..."
+              sleep 90
+            fi
+          fi
+        done
+
     - name: Check generated files
       run: |
         echo "=== Generated files in data/working_url ==="
         ls -la data/working_url/ || echo "No files in working_url directory"
         echo "=== Generated files in data/working_json ==="
         ls -la data/working_json/ || echo "No files in working_json directory"
+        echo "=== Generated files in data/speed_results ==="
+        ls -la data/speed_results/ || echo "No files in speed_results directory"
+        echo "=== Generated files in data/quality_results ==="
+        ls -la data/quality_results/ || echo "No files in quality_results directory"
         echo "=== Generated files in config_collector/deduplicated_urls ==="
         ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
 
@@ -190,7 +213,6 @@ jobs:
 
         # Stage all changes in data directory and deduplicated_urls
         git add data/
-        git add config_collector/deduplicated_urls/
 
         # Check if there are any changes to commit
         if git diff --staged --quiet; then
@@ -223,6 +245,6 @@ jobs:
         path: |
           data/working_url/
           data/working_json/
-          config_collector/deduplicated_urls/
-          log/
+          data/speed_results/
+          data/quality_results/
         retention-days: 7
