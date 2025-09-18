@@ -26,6 +26,12 @@ jobs:
       with:
         python-version: '3.x'
 
+    - name: Install Python dependencies
+      run: |
+        echo "Installing required Python packages..."
+        pip install tenacity requests
+        echo "Python dependencies installed successfully"
+
     - name: Set up Go 1.25.1
       uses: actions/setup-go@v4
       with:
