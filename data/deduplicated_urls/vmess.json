@@ -282,31 +282,6 @@
     "sni": "time.is"
   },
   {
-    "address": "45.94.68.179",
-    "port": 34103,
-    "id": "f083427f-9d8b-4863-b4a5-fc15255547d2",
-    "security": "auto",
-    "network": "tcp",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "F0rc3RunVPN ud83cudff3",
-    "aid": "0",
-    "type": "http",
-    "path": "/"
-  },
-  {
-    "address": "51.79.102.253",
-    "port": 80,
-    "id": "58fe1542-5290-40ad-815a-77707a81afe5",
-    "security": null,
-    "network": "ws",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "F0rc3RunVPN ud83cudff3",
-    "aid": "0",
-    "path": "/IOebhLMhl1CTbFHbL95myfRX2"
-  },
-  {
     "address": "47.92.152.169",
     "port": 50002,
     "id": "418048af-a293-4b99-9b0c-98ca3580dd24",
@@ -355,19 +330,6 @@
     "ps": "F0rc3RunVPN ud83cudff3",
     "aid": "0",
     "type": "none"
-  },
-  {
-    "address": "91.92.40.78",
-    "port": 2060,
-    "id": "2d211130-9cb8-4c77-a99e-4071f70bf17b",
-    "security": "auto",
-    "network": "tcp",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "F0rc3RunVPN ud83cudff3",
-    "aid": "0",
-    "type": "none",
-    "tls": "none"
   },
   {
     "address": "91.99.191.110",
@@ -539,22 +501,6 @@
     "path": "/vmess-tls",
     "tls": "tls",
     "sni": "xray.artunnel57.host"
-  },
-  {
-    "address": "yichueng.org",
-    "port": 443,
-    "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-    "security": "auto",
-    "network": "ws",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "F0rc3RunVPN ud83cudff3",
-    "aid": "1",
-    "type": "auto",
-    "host": "yichueng.org",
-    "path": "linkvws",
-    "tls": "tls",
-    "sni": "yichueng.org"
   },
   {
     "address": "zula.ir",
