@@ -1524,9 +1524,9 @@ func main() {
 	var allConfigs []ProxyConfig
 
 	configFiles := map[ProxyProtocol]string{
-		ProtocolShadowsocks: "../config_collector/deduplicated_urls/ss.json",
-		ProtocolVMess:       "../config_collector/deduplicated_urls/vmess.json",
-		ProtocolVLESS:       "../config_collector/deduplicated_urls/vless.json",
+		ProtocolShadowsocks: "../data/deduplicated_urls/ss.json",
+		ProtocolVMess:       "../data/deduplicated_urls/vmess.json",
+		ProtocolVLESS:       "../data/deduplicated_urls/vless.json",
 	}
 
 	for protocol, filePath := range configFiles {
