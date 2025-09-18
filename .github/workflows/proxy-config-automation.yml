@@ -66,6 +66,8 @@ jobs:
           mkdir -p data
           echo "Data folder created"
         fi
+        # Create necessary subdirectories
+        mkdir -p data/working_json data/working_url data/quality_results data/speed_results data/deduplicated_urls
 
     - name: Execute Python proxy collector
       id: python-collector
@@ -122,6 +124,7 @@ jobs:
           echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
           echo "Quality results: $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0)"
           echo "Speed results: $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Deduplicated URLs: $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0)"
           echo "Total files: $(find data -type f | wc -l)"
         else
           echo "Data folder not found"
@@ -132,10 +135,15 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-    - name: Commit and push changes
+    - name: Commit and push ALL changes
       run: |
-        echo "Checking for changes..."
-        git add data/
+        echo "Checking for changes in all data subdirectories..."
+        
+        # Add all data subdirectories explicitly
+        git add data/working_json/ data/working_url/ data/quality_results/ data/speed_results/ data/deduplicated_urls/
+        
+        # Also add any other files that might be created
+        git add data/ || true
 
         if git diff --cached --quiet; then
           echo "No changes to commit"
@@ -171,9 +179,10 @@ jobs:
           data/working_url/
           data/quality_results/
           data/speed_results/
+          data/deduplicated_urls/
         retention-days: 7
 
-    - name: Upload individual artifact for each result type
+    - name: Upload individual artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with:
@@ -205,6 +214,14 @@ jobs:
         path: data/speed_results/
         retention-days: 7
 
+    - name: Upload deduplicated URLs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: deduplicated-urls-${{ github.run_id }}
+        path: data/deduplicated_urls/
+        retention-days: 7
+
     - name: Workflow summary
       if: always()
       run: |
@@ -230,6 +247,7 @@ jobs:
           echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| Quality Results | $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| Speed Results | $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Deduplicated URLs | $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
         else
           echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
