@@ -110,15 +110,6 @@ jobs:
         mkdir -p data/quality_results
         mkdir -p log
 
-    - name: Clean previous results
-      run: |
-        # Only remove input files to ensure fresh data collection, keep result files
-        echo "Cleaning previous input files..."
-        rm -f data/working_url/* || echo "No files to clean in working_url"
-        rm -f data/working_json/* || echo "No files to clean in working_json"
-        rm -f config_collector/deduplicated_urls/* || echo "No files to clean in deduplicated_urls"
-        echo "Input files cleanup completed. Result files preserved."
-
     - name: Run config collector
       run: |
         cd config_collector
@@ -199,6 +190,8 @@ jobs:
         ls -la data/quality_results/ || echo "No files in quality_results directory"
         echo "=== Generated files in config_collector/deduplicated_urls ==="
         ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
+        echo "=== Git status before commit ==="
+        git status
 
 
 
@@ -222,6 +215,7 @@ jobs:
 
         # Stage all changes in data directory and deduplicated_urls
         git add data/
+        git add config_collector/deduplicated_urls/
 
         # Check if there are any changes to commit
         if git diff --staged --quiet; then
