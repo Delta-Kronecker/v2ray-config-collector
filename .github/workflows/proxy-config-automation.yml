@@ -43,6 +43,29 @@ jobs:
         go mod download
         go mod verify
 
+    - name: Download and install Xray-core
+      run: |
+        echo "Downloading latest Xray-core for Linux..."
+        # Get latest release version
+        LATEST_RELEASE=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        echo "Latest Xray-core version: $LATEST_RELEASE"
+        
+        # Download Xray-core
+        wget "https://github.com/XTLS/Xray-core/releases/download/${LATEST_RELEASE}/Xray-linux-64.zip" -O xray.zip
+        
+        # Extract and install
+        unzip xray.zip -d xray-temp
+        chmod +x xray-temp/xray
+        sudo mv xray-temp/xray /usr/local/bin/
+        
+        # Clean up
+        rm -rf xray.zip xray-temp
+        
+        # Verify installation
+        echo "Xray-core version:"
+        xray -version
+        echo "Xray-core installed successfully in /usr/local/bin/"
+
     - name: Clear data folder
       run: |
         echo "Clearing data folder..."
