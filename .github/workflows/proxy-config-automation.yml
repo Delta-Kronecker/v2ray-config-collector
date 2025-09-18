@@ -84,46 +84,7 @@ jobs:
         cd config_collector
         python main.py
         echo "Python proxy collection completed"
-        
-        # Check what files were created
-        echo "Files created by Python collector:"
-        find . -name "*.json" -type f | head -20
-        if [ -d "deduplicated_urls" ]; then
-          echo "deduplicated_urls directory contents:"
-          ls -la deduplicated_urls/ || echo "Cannot list deduplicated_urls"
-        fi
       continue-on-error: true
-
-    - name: Check and prepare config files for Go tests
-      run: |
-        echo "Checking and preparing config files..."
-        
-        # Check if deduplicated_urls directory exists
-        if [ -d "config_collector/deduplicated_urls" ]; then
-          echo "deduplicated_urls directory exists, contents:"
-          ls -la config_collector/deduplicated_urls/
-          
-          # Copy files to the expected location if they exist
-          mkdir -p ../config_collector/deduplicated_urls || true
-          cp -f config_collector/deduplicated_urls/*.json ../config_collector/deduplicated_urls/ 2>/dev/null || echo "No files to copy"
-        else
-          echo "deduplicated_urls directory not found in config_collector/"
-          
-          # Check if files are in config_collector root
-          echo "Checking config_collector root directory:"
-          ls -la config_collector/
-          
-          # Create empty files to prevent errors
-          mkdir -p ../config_collector/deduplicated_urls
-          touch ../config_collector/deduplicated_urls/vless.json
-          touch ../config_collector/deduplicated_urls/ss.json
-          touch ../config_collector/deduplicated_urls/vmess.json
-          echo "Created empty config files to prevent Go test errors"
-        fi
-        
-        # Verify the files exist for Go tests
-        echo "Final files available for Go tests:"
-        ls -la ../config_collector/deduplicated_urls/ || echo "Cannot list final directory"
 
     - name: Check Python collector results
       run: |
@@ -138,14 +99,6 @@ jobs:
       run: |
         echo "Starting Go proxy connectivity testing..."
         cd xray_test
-        
-        # Show current directory structure for debugging
-        echo "Current directory structure:"
-        pwd
-        ls -la ../
-        ls -la ../config_collector/ || echo "Cannot list config_collector"
-        ls -la ../config_collector/deduplicated_urls/ || echo "Cannot list deduplicated_urls"
-        
         timeout 300 go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
         echo "Go proxy testing completed"
       continue-on-error: true
@@ -165,7 +118,7 @@ jobs:
         echo "Starting Go proxy speed testing..."
         cd xray_test
         timeout 300 go run speed_tester.go || echo "Speed tester completed (may have timed out)"
-        echo "Go proxy testing completed"
+        echo "Go speed testing completed"
       continue-on-error: true
 
     - name: Check data folder contents
