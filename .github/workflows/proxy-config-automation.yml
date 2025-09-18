@@ -78,31 +78,14 @@ jobs:
         echo "Python proxy collection completed"
       continue-on-error: true
 
-    - name: Debug - Check files after Python collection
-      run: |
-        echo "=== Files after Python collection ==="
-        find data -type f 2>/dev/null || echo "No files found"
-        echo "=== Directory structure ==="
-        find data -type d 2>/dev/null || echo "No directories found"
-
     - name: Execute Go proxy tester
       id: go-proxy-tester
       run: |
         echo "Starting Go proxy connectivity testing..."
-        echo "Current directory: $(pwd)"
-        echo "Directory contents:"
-        ls -la
         cd xray_test
-        echo "Xray_test directory contents:"
-        ls -la
         timeout 300 go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
         echo "Go proxy testing completed"
       continue-on-error: true
-
-    - name: Debug - Check files after proxy test
-      run: |
-        echo "=== Files after proxy test ==="
-        find data -type f 2>/dev/null || echo "No files found"
 
     - name: Execute Go quality tester
       id: go-quality-tester
@@ -122,12 +105,23 @@ jobs:
         echo "Go speed testing completed"
       continue-on-error: true
 
+    - name: Check for xray_test data and move files
+      run: |
+        echo "Checking for files in xray_test/data..."
+        if [ -d "xray_test/data" ]; then
+          echo "Found xray_test/data directory, moving files to main data directory..."
+          # Move all files from xray_test/data to data/
+          mv xray_test/data/* data/ 2>/dev/null || echo "No files to move or already moved"
+          # Remove empty directory
+          rm -rf xray_test/data 2>/dev/null || true
+        else
+          echo "xray_test/data directory not found"
+        fi
+
     - name: Comprehensive file check
       run: |
         echo "=== COMPREHENSIVE FILE CHECK ==="
         echo "Current working directory: $(pwd)"
-        echo "=== Full directory structure ==="
-        find . -name "data" -type d 2>/dev/null || echo "Data directory not found"
         echo "=== Data directory contents ==="
         if [ -d "data" ]; then
           find data -type f | head -50
@@ -141,8 +135,6 @@ jobs:
         else
           echo "Data folder not found!"
         fi
-        echo "=== Root directory files ==="
-        ls -la *.txt *.json *.go 2>/dev/null || echo "No relevant files in root"
 
     - name: Configure git for automated commits
       run: |
