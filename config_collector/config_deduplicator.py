@@ -7,7 +7,7 @@ from collections import defaultdict
 
 
 class ConfigDeduplicator:
-    def __init__(self, input_dir: str = "parsed_configs", output_dir: str = "deduplicated_urls"):
+    def __init__(self, input_dir: str = "parsed_configs", output_dir: str = "../data/deduplicated_urls"):
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.stats = {
