@@ -56,18 +56,18 @@ jobs:
         go mod download
         go mod verify
 
-    - name: Clear data folder
+    - name: Clear and prepare data folder
       run: |
-        echo "Clearing data folder..."
+        echo "Clearing and preparing data folder..."
         if [ -d "data" ]; then
           rm -rf data/*
-          echo "Data folder cleared successfully"
         else
           mkdir -p data
-          echo "Data folder created"
         fi
-        # Create necessary subdirectories
+        # Create all necessary subdirectories
         mkdir -p data/working_json data/working_url data/quality_results data/speed_results data/deduplicated_urls
+        echo "Created directory structure:"
+        find data -type d
 
     - name: Execute Python proxy collector
       id: python-collector
@@ -78,22 +78,31 @@ jobs:
         echo "Python proxy collection completed"
       continue-on-error: true
 
-    - name: Check Python collector results
+    - name: Debug - Check files after Python collection
       run: |
-        if [ "${{ steps.python-collector.outcome }}" = "failure" ]; then
-          echo "⚠️ Python collector failed, but continuing with Go tests"
-        else
-          echo "✅ Python collector completed successfully"
-        fi
+        echo "=== Files after Python collection ==="
+        find data -type f 2>/dev/null || echo "No files found"
+        echo "=== Directory structure ==="
+        find data -type d 2>/dev/null || echo "No directories found"
 
     - name: Execute Go proxy tester
       id: go-proxy-tester
       run: |
         echo "Starting Go proxy connectivity testing..."
+        echo "Current directory: $(pwd)"
+        echo "Directory contents:"
+        ls -la
         cd xray_test
+        echo "Xray_test directory contents:"
+        ls -la
         timeout 300 go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
         echo "Go proxy testing completed"
       continue-on-error: true
+
+    - name: Debug - Check files after proxy test
+      run: |
+        echo "=== Files after proxy test ==="
+        find data -type f 2>/dev/null || echo "No files found"
 
     - name: Execute Go quality tester
       id: go-quality-tester
@@ -113,22 +122,27 @@ jobs:
         echo "Go speed testing completed"
       continue-on-error: true
 
-    - name: Check data folder contents
+    - name: Comprehensive file check
       run: |
-        echo "Checking data folder contents..."
+        echo "=== COMPREHENSIVE FILE CHECK ==="
+        echo "Current working directory: $(pwd)"
+        echo "=== Full directory structure ==="
+        find . -name "data" -type d 2>/dev/null || echo "Data directory not found"
+        echo "=== Data directory contents ==="
         if [ -d "data" ]; then
-          echo "=== Full directory structure ==="
-          find data -type f -name "*" | head -50
+          find data -type f | head -50
           echo "=== File counts by type ==="
           echo "Working JSON: $(find data/working_json -type f 2>/dev/null | wc -l || echo 0)"
           echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
           echo "Quality results: $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0)"
           echo "Speed results: $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0)"
           echo "Deduplicated URLs: $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0)"
-          echo "Total files: $(find data -type f | wc -l)"
+          echo "Total files in data: $(find data -type f | wc -l)"
         else
-          echo "Data folder not found"
+          echo "Data folder not found!"
         fi
+        echo "=== Root directory files ==="
+        ls -la *.txt *.json *.go 2>/dev/null || echo "No relevant files in root"
 
     - name: Configure git for automated commits
       run: |
@@ -140,10 +154,16 @@ jobs:
         echo "Checking for changes in all data subdirectories..."
         
         # Add all data subdirectories explicitly
-        git add data/working_json/ data/working_url/ data/quality_results/ data/speed_results/ data/deduplicated_urls/
-        
-        # Also add any other files that might be created
         git add data/ || true
+        git add data/working_json/ || true
+        git add data/working_url/ || true
+        git add data/quality_results/ || true
+        git add data/speed_results/ || true
+        git add data/deduplicated_urls/ || true
+        
+        # Check what's actually being committed
+        echo "Files to be committed:"
+        git diff --cached --name-only || echo "No files to commit"
 
         if git diff --cached --quiet; then
           echo "No changes to commit"
@@ -180,46 +200,6 @@ jobs:
           data/quality_results/
           data/speed_results/
           data/deduplicated_urls/
-        retention-days: 7
-
-    - name: Upload individual artifacts
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: working-json-${{ github.run_id }}
-        path: data/working_json/
-        retention-days: 7
-
-    - name: Upload working URLs
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: working-urls-${{ github.run_id }}
-        path: data/working_url/
-        retention-days: 7
-
-    - name: Upload quality results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: quality-results-${{ github.run_id }}
-        path: data/quality_results/
-        retention-days: 7
-
-    - name: Upload speed results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: speed-results-${{ github.run_id }}
-        path: data/speed_results/
-        retention-days: 7
-
-    - name: Upload deduplicated URLs
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: deduplicated-urls-${{ github.run_id }}
-        path: data/deduplicated_urls/
         retention-days: 7
 
     - name: Workflow summary
