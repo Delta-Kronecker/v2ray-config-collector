@@ -43,29 +43,6 @@ jobs:
         go mod download
         go mod verify
 
-    - name: Download and install Xray-core
-      run: |
-        echo "Downloading latest Xray-core for Linux..."
-        # Get latest release version
-        LATEST_RELEASE=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-        echo "Latest Xray-core version: $LATEST_RELEASE"
-        
-        # Download Xray-core
-        wget "https://github.com/XTLS/Xray-core/releases/download/${LATEST_RELEASE}/Xray-linux-64.zip" -O xray.zip
-        
-        # Extract and install
-        unzip xray.zip -d xray-temp
-        chmod +x xray-temp/xray
-        sudo mv xray-temp/xray /usr/local/bin/
-        
-        # Clean up
-        rm -rf xray.zip xray-temp
-        
-        # Verify installation
-        echo "Xray-core version:"
-        xray -version
-        echo "Xray-core installed successfully in /usr/local/bin/"
-
     - name: Clear data folder
       run: |
         echo "Clearing data folder..."
@@ -125,8 +102,14 @@ jobs:
       run: |
         echo "Checking data folder contents..."
         if [ -d "data" ]; then
-          find data -type f -name "*" | head -20
-          echo "Data folder file count: $(find data -type f | wc -l)"
+          echo "=== Full directory structure ==="
+          find data -type f -name "*" | head -50
+          echo "=== File counts by type ==="
+          echo "Working JSON: $(find data/working_json -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Quality results: $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Speed results: $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Total files: $(find data -type f | wc -l)"
         else
           echo "Data folder not found"
         fi
@@ -165,12 +148,48 @@ jobs:
           echo "✅ Changes committed and pushed successfully"
         fi
 
-    - name: Upload execution logs as artifacts
+    - name: Upload all results as artifacts
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: execution-logs-${{ github.run_id }}
-        path: data/
+        name: proxy-results-${{ github.run_id }}
+        path: |
+          data/working_json/
+          data/working_url/
+          data/quality_results/
+          data/speed_results/
+        retention-days: 7
+
+    - name: Upload individual artifact for each result type
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: working-json-${{ github.run_id }}
+        path: data/working_json/
+        retention-days: 7
+
+    - name: Upload working URLs
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: working-urls-${{ github.run_id }}
+        path: data/working_url/
+        retention-days: 7
+
+    - name: Upload quality results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: quality-results-${{ github.run_id }}
+        path: data/quality_results/
+        retention-days: 7
+
+    - name: Upload speed results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: speed-results-${{ github.run_id }}
+        path: data/speed_results/
         retention-days: 7
 
     - name: Workflow summary
@@ -191,8 +210,14 @@ jobs:
         echo "" >> $GITHUB_STEP_SUMMARY
 
         if [ -d "data" ]; then
-          FILE_COUNT=$(find data -type f | wc -l)
-          echo "**Data Files Generated:** ${FILE_COUNT}" >> $GITHUB_STEP_SUMMARY
+          echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Working JSON | $(find data/working_json -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Quality Results | $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Speed Results | $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
         else
           echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
         fi
