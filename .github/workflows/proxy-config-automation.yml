@@ -112,14 +112,12 @@ jobs:
 
     - name: Clean previous results
       run: |
-        # Remove old files to ensure fresh data collection
-        echo "Cleaning previous results..."
-        rm -rf data/working_url/* || echo "No files to clean in working_url"
-        rm -rf data/working_json/* || echo "No files to clean in working_json"
-        rm -rf data/speed_results/* || echo "No files to clean in speed_results"
-        rm -rf data/quality_results/* || echo "No files to clean in quality_results"
-        rm -rf config_collector/deduplicated_urls/* || echo "No files to clean in deduplicated_urls"
-        echo "Cleanup completed. Ready for fresh data collection."
+        # Only remove input files to ensure fresh data collection, keep result files
+        echo "Cleaning previous input files..."
+        rm -f data/working_url/* || echo "No files to clean in working_url"
+        rm -f data/working_json/* || echo "No files to clean in working_json"
+        rm -f config_collector/deduplicated_urls/* || echo "No files to clean in deduplicated_urls"
+        echo "Input files cleanup completed. Result files preserved."
 
     - name: Run config collector
       run: |
