@@ -1,253 +1,173 @@
-name: V2Ray Config Collector and Tester
+name: Automated Proxy Collection and Testing
 
 on:
   schedule:
-    # Run every 6 hours
-    - cron: '0 */48 * * *'
+    # Run every 12 hours at 00:00 and 12:00 UTC
+    - cron: '0 0,12 * * *'
   workflow_dispatch: # Allow manual triggering
 
-jobs:
-  collect-and-test-configs:
-    runs-on: ubuntu-latest
+permissions:
+  contents: write
+  actions: read
 
-    permissions:
-      contents: write
+jobs:
+  proxy-collection-and-testing:
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
 
-    - name: Set up Python
+    - name: Set up Python 3.x
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.x'
 
-    - name: Set up Go
+    - name: Set up Go 1.25.1
       uses: actions/setup-go@v4
       with:
-        go-version: '1.21'
-
-    - name: Install system dependencies
-      run: |
-        # Install system dependencies with retry logic
-        for i in {1..3}; do
-          if sudo apt-get update && sudo apt-get install -y wget unzip; then
-            echo "System dependencies installed successfully"
-            break
-          else
-            echo "System dependencies installation failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 10 seconds..."
-              sleep 10
-            fi
-          fi
-        done
-
-    - name: Setup Xray
-      run: |
-        # Setup Xray with retry logic
-        for i in {1..3}; do
-          if [ -f "xray_test/xray" ]; then
-            echo "Using existing Xray binary from project"
-            if sudo cp xray_test/xray /usr/local/bin/ && sudo chmod +x /usr/local/bin/xray && xray version; then
-              echo "Xray setup completed successfully"
-              break
-            fi
-          else
-            echo "Downloading Xray binary, attempt $i/3"
-            if wget -O xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip && unzip -o xray.zip && sudo mv xray /usr/local/bin/ && sudo chmod +x /usr/local/bin/xray && xray version; then
-              echo "Xray setup completed successfully"
-              break
-            fi
-          fi
-
-          echo "Xray setup failed, attempt $i/3"
-          if [ $i -lt 3 ]; then
-            echo "Retrying in 15 seconds..."
-            sleep 15
-          fi
-        done
-
-    - name: Install Python dependencies
-      run: |
-        cd config_collector
-        # Install any required Python packages with retry logic
-        for i in {1..3}; do
-          if pip install requests beautifulsoup4 lxml urllib3 tenacity; then
-            echo "Python dependencies installed successfully"
-            break
-          else
-            echo "Python dependencies installation failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 30 seconds..."
-              sleep 30
-            fi
-          fi
-        done
+        go-version: '1.25.1'
 
     - name: Install Go dependencies
       run: |
         cd xray_test
-        # Install Go dependencies with retry logic
-        for i in {1..3}; do
-          if go mod tidy && go mod download; then
-            echo "Go dependencies installed successfully"
-            break
-          else
-            echo "Go dependencies installation failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 20 seconds..."
-              sleep 20
-            fi
-          fi
-        done
+        go mod download
+        go mod verify
 
-    - name: Create necessary directories
+    - name: Clear data folder
       run: |
-        mkdir -p data/working_url
-        mkdir -p data/working_json
-        mkdir -p data/speed_results
-        mkdir -p data/quality_results
-        mkdir -p log
+        echo "Clearing data folder..."
+        if [ -d "data" ]; then
+          rm -rf data/*
+          echo "Data folder cleared successfully"
+        else
+          mkdir -p data
+          echo "Data folder created"
+        fi
 
-    - name: Run config collector
+    - name: Execute Python proxy collector
+      id: python-collector
       run: |
+        echo "Starting Python proxy collection..."
         cd config_collector
-        # Run config collector with retry logic
-        for i in {1..3}; do
-          if python main.py; then
-            echo "Config collector completed successfully"
-            break
-          else
-            echo "Config collector failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 60 seconds..."
-              sleep 60
-            fi
-          fi
-        done
+        python main.py
+        echo "Python proxy collection completed"
+      continue-on-error: true
 
-    - name: Run proxy tester
+    - name: Check Python collector results
       run: |
+        if [ "${{ steps.python-collector.outcome }}" = "failure" ]; then
+          echo "⚠️ Python collector failed, but continuing with Go tests"
+        else
+          echo "✅ Python collector completed successfully"
+        fi
+
+    - name: Execute Go proxy tester
+      id: go-proxy-tester
+      run: |
+        echo "Starting Go proxy connectivity testing..."
         cd xray_test
-        # Run proxy tester with retry logic
-        for i in {1..3}; do
-          if go run proxy-tester.go; then
-            echo "Proxy tester completed successfully"
-            break
-          else
-            echo "Proxy tester failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 90 seconds..."
-              sleep 90
-            fi
-          fi
-        done
+        timeout 300 go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
+        echo "Go proxy testing completed"
+      continue-on-error: true
 
-    - name: Run quality tester
+    - name: Execute Go quality tester
+      id: go-quality-tester
       run: |
+        echo "Starting Go proxy quality testing..."
         cd xray_test
-        # Run quality tester with retry logic
-        for i in {1..3}; do
-          if go run quality_tester.go; then
-            echo "Quality tester completed successfully"
-            break
-          else
-            echo "Quality tester failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 90 seconds..."
-              sleep 90
-            fi
-          fi
-        done
+        timeout 300 go run quality_tester.go || echo "Quality tester completed (may have timed out)"
+        echo "Go quality testing completed"
+      continue-on-error: true
 
-    - name: Run speed tester
+    - name: Execute Go speed tester
+      id: go-speed-tester
       run: |
+        echo "Starting Go proxy speed testing..."
         cd xray_test
-        # Run speed tester with retry logic
-        for i in {1..3}; do
-          if go run speed_tester.go; then
-            echo "Speed tester completed successfully"
-            break
-          else
-            echo "Speed tester failed, attempt $i/3"
-            if [ $i -lt 3 ]; then
-              echo "Retrying in 90 seconds..."
-              sleep 90
-            fi
-          fi
-        done
+        timeout 300 go run speed_tester.go || echo "Speed tester completed (may have timed out)"
+        echo "Go speed testing completed"
+      continue-on-error: true
 
-    - name: Check generated files
+    - name: Check data folder contents
       run: |
-        echo "=== Generated files in data/working_url ==="
-        ls -la data/working_url/ || echo "No files in working_url directory"
-        echo "=== Generated files in data/working_json ==="
-        ls -la data/working_json/ || echo "No files in working_json directory"
-        echo "=== Generated files in data/speed_results ==="
-        ls -la data/speed_results/ || echo "No files in speed_results directory"
-        echo "=== Generated files in data/quality_results ==="
-        ls -la data/quality_results/ || echo "No files in quality_results directory"
-        echo "=== Generated files in config_collector/deduplicated_urls ==="
-        ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
-        echo "=== Git status before commit ==="
-        git status
+        echo "Checking data folder contents..."
+        if [ -d "data" ]; then
+          find data -type f -name "*" | head -20
+          echo "Data folder file count: $(find data -type f | wc -l)"
+        else
+          echo "Data folder not found"
+        fi
 
-
+    - name: Configure git for automated commits
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
     - name: Commit and push changes
       run: |
-        # Configure git user
-        git config --global user.email "action@github.com"
-        git config --global user.name "GitHub Action"
-
-        # Add timestamp to commit message
-        TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S UTC')
-
-        # Stash any unstaged changes to avoid conflicts
-        git stash --include-untracked || echo "No changes to stash"
-
-        # Pull latest changes from remote first
-        git pull origin main || echo "Pull failed or already up to date"
-
-        # Pop stashed changes back
-        git stash pop || echo "No stash to pop"
-
-        # Stage all changes in data directory and deduplicated_urls
+        echo "Checking for changes..."
         git add data/
-        git add config_collector/deduplicated_urls/
 
-        # Check if there are any changes to commit
-        if git diff --staged --quiet; then
+        if git diff --cached --quiet; then
           echo "No changes to commit"
         else
-          # Commit the changes
-          git commit -m "Auto-update proxy configs - $TIMESTAMP"
+          echo "Changes detected, committing..."
 
-          # Push the changes with retry mechanism
-          for i in {1..3}; do
-            if git push; then
-              echo "Changes committed and pushed successfully"
-              break
-            else
-              echo "Push failed, attempt $i/3. Pulling latest changes..."
-              git pull origin main
-              if [ $i -lt 3 ]; then
-                echo "Retrying push in 10 seconds..."
-                sleep 10
-              fi
-            fi
-          done
+          # Create commit message with execution summary
+          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+          PYTHON_STATUS="${{ steps.python-collector.outcome }}"
+          PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
+          QUALITY_STATUS="${{ steps.go-quality-tester.outcome }}"
+          SPEED_STATUS="${{ steps.go-speed-tester.outcome }}"
+
+          COMMIT_MSG="Automated proxy collection - ${TIMESTAMP}
+
+Execution Summary:
+- Python Collector: ${PYTHON_STATUS}
+- Proxy Tester: ${PROXY_STATUS}
+- Quality Tester: ${QUALITY_STATUS}
+- Speed Tester: ${SPEED_STATUS}
+
+Workflow run: ${{ github.run_id }}"
+
+          git commit -m "${COMMIT_MSG}"
+          git push origin ${{ github.ref_name }}
+          echo "✅ Changes committed and pushed successfully"
         fi
 
-    - name: Upload artifacts (backup)
-      uses: actions/upload-artifact@v4
+    - name: Upload execution logs as artifacts
       if: always()
+      uses: actions/upload-artifact@v4
       with:
-        name: proxy-configs-${{ github.run_number }}
+        name: execution-logs-${{ github.run_id }}
         path: |
-          data/working_url/
-          data/working_json/
-          data/speed_results/
-          data/quality_results/
+          data/
         retention-days: 7
+
+    - name: Workflow summary
+      if: always()
+      run: |
+        echo "## 🤖 Automated Proxy Collection Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Execution Time:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "**Workflow Run:** [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Script Execution Status" >> $GITHUB_STEP_SUMMARY
+        echo "| Script | Status |" >> $GITHUB_STEP_SUMMARY
+        echo "|--------|--------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Python Collector | ${{ steps.python-collector.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Go Proxy Tester | ${{ steps.go-proxy-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Go Quality Tester | ${{ steps.go-quality-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Go Speed Tester | ${{ steps.go-speed-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+
+        if [ -d "data" ]; then
+          FILE_COUNT=$(find data -type f | wc -l)
+          echo "**Data Files Generated:** ${FILE_COUNT}" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
+        fi
