@@ -1432,7 +1432,7 @@ func main() {
 		config.OutputPath = outputPathEnv
 	}
 
-	configFile := "../data/working_json/working_all_configs.txt"
+	configFile := "data/working_json/working_all_configs.txt"
 	if configFileEnv := os.Getenv("CONFIG_FILE"); configFileEnv != "" {
 		configFile = configFileEnv
 	}
