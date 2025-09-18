@@ -1,0 +1,16 @@
+# Working VMESS Configurations (JSON Format)
+# Generated at: 2025-09-18 13:48:12
+# Format: Each line contains one working configuration in JSON
+
+# Tested at: 2025-09-18 13:48:14 | Response: 0.917s | IP: 2400:e920:0:10:250:56ff:fe94:5045
+{"alterId":0,"cipher":"auto","external_ip":"2400:e920:0:10:250:56ff:fe94:5045","host":"","network":"ws","path":"/","port":20086,"protocol":"vmess","remarks":"@XrayTurbo🔥","server":"161.248.30.3","sni":"","test_time":0.916515576,"tls":"","uuid":"1006a928-2021-4a3b-beb5-d5853c6281c5"}
+
+# Tested at: 2025-09-18 13:48:15 | Response: 1.212s | IP: 112.132.215.34
+{"alterId":0,"cipher":"auto","external_ip":"112.132.215.34","host":"","network":"tcp","path":"","port":50007,"protocol":"vmess","remarks":"@XrayTurbo🔥","server":"112.132.215.34","sni":"","test_time":1.212334118,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+
+# Tested at: 2025-09-18 13:48:22 | Response: 0.771s | IP: 107.172.15.148
+{"alterId":0,"cipher":"auto","external_ip":"107.172.15.148","host":"OOoOOOooOp.222769.XYZ","network":"ws","path":"/VaaSEfNLHdW3I98dxLkez","port":80,"protocol":"vmess","remarks":"@XrayTurbo🔥","server":"OOoOOOooOp.222769.XYZ","sni":"","test_time":0.770696482,"tls":"","uuid":"ce921385-2b31-45fe-84c5-1843e8ae845b"}
+
+# Tested at: 2025-09-18 13:48:23 | Response: 0.638s | IP: 57.129.24.132
+{"alterId":1,"cipher":"auto","external_ip":"57.129.24.132","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"@XrayTurbo🔥","server":"serkat.org","sni":"","test_time":0.637942095,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
