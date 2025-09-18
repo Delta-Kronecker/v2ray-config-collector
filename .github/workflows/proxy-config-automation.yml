@@ -37,6 +37,19 @@ jobs:
       with:
         go-version: '1.25.1'
 
+    - name: Install Xray
+      run: |
+        echo "Installing Xray..."
+        # Download and install Xray
+        wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+        unzip Xray-linux-64.zip
+        chmod +x xray
+        sudo mv xray /usr/local/bin/
+        
+        # Verify installation
+        xray -version
+        echo "Xray installed successfully"
+
     - name: Install Go dependencies
       run: |
         cd xray_test
