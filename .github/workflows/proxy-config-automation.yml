@@ -166,7 +166,7 @@ jobs:
         cd xray_test
         # Run speed tester with retry logic
         for i in {1..3}; do
-          if go run speed_test_runner.go; then
+          if go run speed_tester.go; then
             echo "Speed tester completed successfully"
             break
           else
