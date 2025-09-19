@@ -83,7 +83,7 @@ jobs:
       run: |
         echo "Starting Go proxy connectivity testing..."
         cd xray_test
-        timeout 300 go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
+        go run proxy-tester.go || echo "Proxy tester completed (may have timed out)"
         echo "Go proxy testing completed"
       continue-on-error: true
 
@@ -92,7 +92,7 @@ jobs:
       run: |
         echo "Starting Go proxy quality testing..."
         cd xray_test
-        timeout 300 go run quality_tester.go || echo "Quality tester completed (may have timed out)"
+        go run quality_tester.go || echo "Quality tester completed (may have timed out)"
         echo "Go quality testing completed"
       continue-on-error: true
 
@@ -101,7 +101,7 @@ jobs:
       run: |
         echo "Starting Go proxy speed testing..."
         cd xray_test
-        timeout 300 go run speed_tester.go || echo "Speed tester completed (may have timed out)"
+        go run speed_tester.go || echo "Speed tester completed (may have timed out)"
         echo "Go speed testing completed"
       continue-on-error: true
 
