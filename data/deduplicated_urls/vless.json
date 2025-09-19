@@ -18583,6 +18583,14 @@
     "headerType": "http"
   },
   {
+    "address": "turboo-server.aftabz.com",
+    "port": 80,
+    "id": "turboo-server",
+    "name": "@XrayTurbo🔥",
+    "type": "ws",
+    "path": "/--ping--www.speedtest.net?ed=2080"
+  },
+  {
     "address": "turboo-server.sadafspace.com",
     "port": 80,
     "id": "turboo-server",
@@ -20361,14 +20369,6 @@
     "headerType": "http"
   },
   {
-    "address": "turboo-server.aftabz.com",
-    "port": 80,
-    "id": "turboo-server",
-    "name": "@XrayTurbo🔥",
-    "type": "ws",
-    "path": "/--ping--www.speedtest.net?ed=2080"
-  },
-  {
     "address": "5.42.77.71",
     "port": 443,
     "id": "2f8179a0-c0ea-4f8a-97fc-39af16d2bfc5",
@@ -20850,12 +20850,17 @@
     "headerType": "http"
   },
   {
-    "address": "159.65.29.233",
-    "port": 57864,
-    "id": "40da1cf7-f3bc-4b2e-95d8-b392a154ee23",
+    "address": "104.17.234.128",
+    "port": 443,
+    "id": "6e7dde55-f681-4cd2-a8e1-2ff9b1df7b25",
     "name": "@XrayTurbo🔥",
+    "security": "tls",
+    "sni": "join.VPNCUSTOMIZE.www.speedtest.net.ovh.Powerfullserver.de",
+    "alpn": "h2,http/1.1",
+    "fp": "randomized",
     "type": "ws",
-    "host": "/"
+    "host": "join.VPNCUSTOMIZE.www.speedtest.net.ovh.Powerfullserver.de",
+    "path": "/Telegram,VPNCUSTOMIZE?ed=8080"
   },
   {
     "address": "199.247.28.17",
