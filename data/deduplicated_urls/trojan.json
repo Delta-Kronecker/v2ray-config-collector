@@ -16,7 +16,7 @@
     "password": "installshield",
     "name": "@XrayTurbo🔥",
     "sni": "38.180.249.177",
-    "allowInsecure": "1"
+    "allowInsecure": "0"
   },
   {
     "address": "203.218.158.199",
@@ -83,11 +83,20 @@
     "allowInsecure": "1"
   },
   {
-    "address": "192.3.107.252",
+    "address": "telaviv.viefast.net",
+    "port": 443,
+    "password": "9e76767d-4bfa-4f04-a800-42e2f63afed2",
+    "name": "@XrayTurbo🔥",
+    "sni": "csapp.catch.net.tw",
+    "allowInsecure": "1"
+  },
+  {
+    "address": "51.81.203.233",
     "port": 443,
     "password": "2ee85121-31de-4581-a492-eb00f606e392",
     "name": "@XrayTurbo🔥",
-    "sni": "rc8.freeguard.org"
+    "sni": "rs4.freeguard.org",
+    "allowInsecure": "0"
   },
   {
     "address": "155.117.228.70",
@@ -419,12 +428,11 @@
   {
     "address": "gb-1.stunnel.cc",
     "port": 8441,
-    "password": "tunnel-astrovpn_official_gb",
+    "password": "tunnel-astrovpn_official-gb",
     "name": "@XrayTurbo🔥",
     "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev",
     "alpn": "http/1.1",
     "host": "gb-1.stunnel.cc",
-    "path": "AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official",
     "allowInsecure": "1"
   },
   {
@@ -457,6 +465,16 @@
     "allowInsecure": "1"
   },
   {
+    "address": "213.108.198.158",
+    "port": 8441,
+    "password": "tunnel-astrovpn_official029",
+    "name": "@XrayTurbo🔥",
+    "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev.AstroVPN_Official.org.AstroVPN.com.AstroVPN_Official.xyz.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.monster.AstroVPN_OfficialJoinTelegram-------------AstroVPN_Official----------Join.ir",
+    "alpn": "http/1.1",
+    "host": "213.108.198.158",
+    "allowInsecure": "1"
+  },
+  {
     "address": "170.39.216.138",
     "port": 8441,
     "password": "tunnel-astrovpn_official6",
@@ -474,16 +492,6 @@
     "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev.AstroVPN_Official.org.AstroVPN.com.AstroVPN_Official.xyz.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.monster.AstroVPN_OfficialJoinTelegram-------------AstroVPN_Official----------Join.ir",
     "alpn": "http/1.1",
     "host": "193.29.181.38",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "213.108.198.158",
-    "port": 8441,
-    "password": "tunnel-astrovpn_official92",
-    "name": "@XrayTurbo🔥",
-    "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev.AstroVPN_Official.org.AstroVPN.com.AstroVPN_Official.xyz.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.AstroVPN_Official.monster.AstroVPN_OfficialJoinTelegram-------------AstroVPN_Official----------Join.ir",
-    "alpn": "http/1.1",
-    "host": "213.108.198.158",
     "allowInsecure": "1"
   },
   {
@@ -514,28 +522,6 @@
     "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev",
     "alpn": "http/1.1",
     "host": "sg-3.stunnel.cc",
-    "path": "AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "us-1.stunnel.cc",
-    "port": 8441,
-    "password": "tunnel-astrovpn_official_us",
-    "name": "@XrayTurbo🔥",
-    "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev",
-    "alpn": "http/1.1",
-    "host": "us-1.stunnel.cc",
-    "path": "AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official",
-    "allowInsecure": "1"
-  },
-  {
-    "address": "pt-1.stunnel.cc",
-    "port": 8441,
-    "password": "tunnel-astrovpn_pt",
-    "name": "@XrayTurbo🔥",
-    "sni": "zula.ir.AstroVPN-official.AstroVPN-official.workers.dev",
-    "alpn": "http/1.1",
-    "host": "pt-1.stunnel.cc",
     "path": "AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official-AstroVPN_Official",
     "allowInsecure": "1"
   },
@@ -578,7 +564,7 @@
     "path": "%2Ftrojan-ntls"
   },
   {
-    "address": "162.159.44.176",
+    "address": "172.67.75.172",
     "port": 443,
     "password": "auto",
     "name": "@XrayTurbo🔥",
@@ -588,17 +574,19 @@
     "path": "/trojanmz.pages.dev/?ed=2560"
   },
   {
-    "address": "127.0.0.1",
-    "port": 8080,
-    "password": "abbacca-baac-acba-adcb-cabaccacbabb",
-    "name": "@XrayTurbo🔥"
+    "address": "45.146.232.171",
+    "port": 27101,
+    "password": "26e159d2-ec3a-4005-97c7-eb480bab096d",
+    "name": "@XrayTurbo🔥",
+    "sni": "q08m.vgraxiw73s.hasyaf.cn"
   },
   {
     "address": "51.20.156.141",
     "port": 22222,
     "password": "telegram-id-directvpn",
     "name": "@XrayTurbo🔥",
-    "sni": "trojan.burgerip.co.uk"
+    "sni": "trojan.burgerip.co.uk",
+    "alpn": "http/1.1"
   },
   {
     "address": "maradona_vpn14.history-paint.art",
@@ -644,7 +632,7 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "3.64.30.37",
+    "address": "18.198.130.48",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
@@ -652,7 +640,7 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "15.188.202.143",
+    "address": "15.237.152.250",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
@@ -660,7 +648,7 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "13.36.106.107",
+    "address": "35.181.17.181",
     "port": 22222,
     "password": "telegram-id-privatevpns",
     "name": "@XrayTurbo🔥",
@@ -698,7 +686,7 @@
     "host": "vzwzasc.cn"
   },
   {
-    "address": "3.64.30.37",
+    "address": "18.198.130.48",
     "port": 22223,
     "password": "telegram-id-v2rayvpnchannel",
     "name": "@XrayTurbo🔥",
@@ -706,7 +694,7 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "15.188.202.143",
+    "address": "15.237.152.250",
     "port": 22223,
     "password": "telegram-id-v2rayvpnchannel",
     "name": "@XrayTurbo🔥",
@@ -714,7 +702,7 @@
     "alpn": "http/1.1"
   },
   {
-    "address": "13.36.106.107",
+    "address": "35.181.17.181",
     "port": 22223,
     "password": "telegram-id-v2rayvpnchannel",
     "name": "@XrayTurbo🔥",
