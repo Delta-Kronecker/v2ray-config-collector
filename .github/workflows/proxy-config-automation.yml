@@ -32,17 +32,17 @@ jobs:
         pip install tenacity requests
         echo "Python dependencies installed successfully"
 
-    - name: Set up Go 1.25.1
+    - name: Set up Go 1.23
       uses: actions/setup-go@v4
       with:
-        go-version: '1.25.1'
+        go-version: '1.23'
 
     - name: Install Xray
       run: |
         echo "Installing Xray..."
         # Download and install Xray
-        wget https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
-        unzip Xray-linux-64.zip
+        wget -q https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip 
+        unzip -q Xray-linux-64.zip
         chmod +x xray
         sudo mv xray /usr/local/bin/
         
@@ -144,7 +144,7 @@ jobs:
     - name: Commit and push ALL changes
       run: |
         echo "Checking for changes in all data subdirectories..."
-        
+
         # Add all data subdirectories explicitly
         git add data/ || true
         git add data/working_json/ || true
@@ -152,8 +152,7 @@ jobs:
         git add data/quality_results/ || true
         git add data/speed_results/ || true
         git add data/deduplicated_urls/ || true
-        
-        # Check what's actually being committed
+
         echo "Files to be committed:"
         git diff --cached --name-only || echo "No files to commit"
 
@@ -162,11 +161,9 @@ jobs:
         else
           echo "Changes detected, committing..."
 
-          # Fetch the latest changes from the remote repository
+          # Fetch and pull latest changes from remote
           git fetch origin
-
-          # Pull the changes to the local repository
-          git pull origin "${{ github.ref_name }}"
+          git pull --rebase origin "${{ github.ref_name }}"
 
           # Create commit message with execution summary
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
@@ -183,6 +180,7 @@ jobs:
                      -m "Quality Tester: ${QUALITY_STATUS}" \
                      -m "Speed Tester: ${SPEED_STATUS}" \
                      -m "Workflow run: ${RUN_ID}"
+
           git push origin "${GITHUB_REF_NAME}"
           echo "✅ Changes committed and pushed successfully"
         fi
