@@ -2155,23 +2155,6 @@
     "sni": "ad80f8ec-4861-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat"
   },
   {
-    "address": "office.andishehnegariran.ir",
-    "port": 2096,
-    "id": "279245e6-70b6-45f9-af12-db8746e04c8a",
-    "security": "auto",
-    "network": "httpupgrade",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "ud83dudea9 CF | ud83dudd12 VMESS | @config_proxy [37]",
-    "aid": "0",
-    "type": "none",
-    "host": "office.andishehnegariran.ir",
-    "path": "/ud83cudd94@M3HDIO1",
-    "tls": "tls",
-    "sni": "office.andishehnegariran.ir",
-    "alpn": "h3,h2,http/1.1"
-  },
-  {
     "address": "join.melodyfreenet2.shop",
     "port": 443,
     "id": "50ef0b23-f14b-459f-97aa-d0f346189d2a",
@@ -2946,37 +2929,6 @@
     "path": "/"
   },
   {
-    "address": "masjide.org",
-    "port": 443,
-    "id": "03fcc618-b93d-6796-6aed-8a38c975d581",
-    "security": "auto",
-    "network": "ws",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "ud83cudde8ud83cudde6 CA | ud83dudd13 VMESS | @v2ray_free_conf [18]",
-    "aid": "1",
-    "type": "auto",
-    "host": "masjide.org",
-    "path": "linkvws",
-    "tls": "tls",
-    "sni": "masjide.org"
-  },
-  {
-    "address": "xc125-1.meiziba5566.com",
-    "port": 443,
-    "id": "6b95d340-30a5-47bd-ac53-49584e5d4ddf",
-    "security": "auto",
-    "network": "ws",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "ud83cuddfaud83cuddf8 US | ud83dudd13 VMESS | @v2ray_free_conf [19]",
-    "aid": "0",
-    "host": "xc125-1.meiziba5566.com",
-    "path": "/6b95d340",
-    "tls": "tls",
-    "sni": "xc125-1.meiziba5566.com"
-  },
-  {
     "address": "ii.USA02.ml",
     "port": 8880,
     "id": "c84fd455-3094-445c-e330-8fac28215409",
@@ -3027,17 +2979,6 @@
     "type": "none",
     "host": "209.126.84.189",
     "path": "/vmessws"
-  },
-  {
-    "address": "127.0.0.1",
-    "port": 8080,
-    "id": "caacbba-abac-cbaa-dbca-abccaccababb",
-    "security": "auto",
-    "network": "tcp",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "u2754 XX | ud83dudd13 VMESS | @v2raych [20]",
-    "aid": "0"
   },
   {
     "address": "172.67.81.238",
@@ -3133,19 +3074,6 @@
     "type": "http"
   },
   {
-    "address": "38.93.202.253",
-    "port": 25431,
-    "id": "6d8f6ae4-b831-43c2-aa39-8049eef8d8c7",
-    "security": "auto",
-    "network": "ws",
-    "name": "@XrayTurbo🔥",
-    "v": "2",
-    "ps": "ud83cuddfaud83cuddf8 US | ud83dudd13 VMESS | @vpnfail_v2ray [18]",
-    "aid": "0",
-    "type": "auto",
-    "path": "/6d8f6ae4"
-  },
-  {
     "address": "47.86.35.129",
     "port": 18912,
     "id": "6052a431-b718-4aad-9067-86ca6c788e6f",
@@ -3153,7 +3081,7 @@
     "network": "ws",
     "name": "@XrayTurbo🔥",
     "v": "2",
-    "ps": "ud83cuddedud83cuddf0 HK | ud83dudd13 VMESS | @vpnfail_v2ray [19]",
+    "ps": "ud83cuddedud83cuddf0 HK | ud83dudd13 VMESS | @vpnfail_v2ray [18]",
     "aid": "0",
     "type": "auto",
     "path": "/arki?ed=2048"
@@ -3166,10 +3094,23 @@
     "network": "ws",
     "name": "@XrayTurbo🔥",
     "v": "2",
-    "ps": "ud83cuddedud83cuddf0 HK | ud83dudd13 VMESS | @vpnfail_v2ray [20]",
+    "ps": "ud83cuddedud83cuddf0 HK | ud83dudd13 VMESS | @vpnfail_v2ray [19]",
     "aid": "0",
     "type": "auto",
     "path": "/"
+  },
+  {
+    "address": "47.86.43.197",
+    "port": 29435,
+    "id": "248828eb-38cc-4806-8ec0-5eb5f821f41c",
+    "security": "auto",
+    "network": "ws",
+    "name": "@XrayTurbo🔥",
+    "v": "2",
+    "ps": "ud83cuddedud83cuddf0 HK | ud83dudd13 VMESS | @vpnfail_v2ray [20]",
+    "aid": "0",
+    "type": "auto",
+    "path": "/arki?ed=2048"
   },
   {
     "address": "waynn.makeup",
@@ -3310,6 +3251,21 @@
     "path": "/linkws",
     "tls": "tls",
     "sni": "xmivideo.cfd"
+  },
+  {
+    "address": "xc125-1.meiziba5566.com",
+    "port": 443,
+    "id": "6b95d340-30a5-47bd-ac53-49584e5d4ddf",
+    "security": "auto",
+    "network": "ws",
+    "name": "@XrayTurbo🔥",
+    "v": "2",
+    "ps": "ud83cuddfaud83cuddf8u7f8eu56fd13 | u2b07ufe0f 1.8MB/s",
+    "aid": "0",
+    "host": "xc125-1.meiziba5566.com",
+    "path": "/6b95d340",
+    "tls": "tls",
+    "sni": "xc125-1.meiziba5566.com"
   },
   {
     "address": "www.wn03.cc",
@@ -3797,6 +3753,19 @@
     "aid": "0",
     "type": "auto",
     "path": "/"
+  },
+  {
+    "address": "38.93.202.253",
+    "port": 25431,
+    "id": "6d8f6ae4-b831-43c2-aa39-8049eef8d8c7",
+    "security": "auto",
+    "network": "ws",
+    "name": "@XrayTurbo🔥",
+    "v": "2",
+    "ps": "ud83cuddfaud83cuddf8US-38.93.202.253-5087",
+    "aid": "0",
+    "type": "auto",
+    "path": "/6d8f6ae4"
   },
   {
     "address": "51.77.220.179",
