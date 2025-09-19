@@ -162,6 +162,12 @@ jobs:
         else
           echo "Changes detected, committing..."
 
+          # Fetch the latest changes from the remote repository
+          git fetch origin
+
+          # Pull the changes to the local repository
+          git pull origin "${{ github.ref_name }}"
+
           # Create commit message with execution summary
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           PYTHON_STATUS="${{ steps.python-collector.outcome }}"
