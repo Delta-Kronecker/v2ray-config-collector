@@ -1,5 +1,5 @@
-// proxy-tester.go  (rev-250920-fixed)
-// Complete, self-contained, ready to build
+// proxy-tester.go  (rev-250920-verbose)
+// Full verbose version – logs every step
 package main
 
 import (
@@ -29,8 +29,7 @@ import (
 	"golang.org/x/net/proxy"
 )
 
-/* ==========================  TYPES  ========================== */
-
+/* --------------  Types & Constants -------------- */
 type TestResult string
 
 const (
@@ -55,6 +54,7 @@ const (
 	ProtocolVLESS       ProxyProtocol = "vless"
 )
 
+/* --------------  Config -------------- */
 type Config struct {
 	XrayPath        string
 	MaxWorkers      int
@@ -72,7 +72,6 @@ func NewDefaultConfig() *Config {
 	dataDir := getEnvOrDefault("PROXY_DATA_DIR", "./data")
 	configDir := getEnvOrDefault("PROXY_CONFIG_DIR", "./config")
 	logDir := getEnvOrDefault("PROXY_LOG_DIR", "./log")
-
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
 		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 100),
@@ -87,11 +86,11 @@ func NewDefaultConfig() *Config {
 	}
 }
 
-func getEnvOrDefault(key, defaultValue string) string {
+func getEnvOrDefault(key, dv string) string {
 	if v := os.Getenv(key); v != "" {
 		return v
 	}
-	return defaultValue
+	return dv
 }
 
 func getEnvIntOrDefault(key string, dv int) int {
@@ -112,8 +111,7 @@ func getEnvBoolOrDefault(key string, dv bool) bool {
 	return dv
 }
 
-/* ==========================  PROXY CONFIG  ========================== */
-
+/* --------------  ProxyConfig -------------- */
 type ProxyConfig struct {
 	Protocol ProxyProtocol `json:"protocol"`
 	Server   string        `json:"server"`
@@ -144,8 +142,7 @@ type ProxyConfig struct {
 	LineNumber *int                   `json:"line_number,omitempty"`
 }
 
-/* ==========================  TEST RESULT  ========================== */
-
+/* --------------  TestResultData -------------- */
 type TestResultData struct {
 	Config       ProxyConfig `json:"config"`
 	Result       TestResult  `json:"result"`
@@ -157,8 +154,7 @@ type TestResultData struct {
 	BatchID      *int        `json:"batch_id,omitempty"`
 }
 
-/* ==========================  PORT MANAGER  ========================== */
-
+/* --------------  PortManager -------------- */
 type PortManager struct {
 	startPort      int
 	endPort        int
@@ -182,7 +178,7 @@ func (pm *PortManager) initializePortPool() {
 	if !atomic.CompareAndSwapInt32(&pm.initialized, 0, 1) {
 		return
 	}
-	log.Printf("Initializing port pool (%d-%d)...", pm.startPort, pm.endPort)
+	log.Printf("[PortManager] Initializing port pool (%d-%d)...", pm.startPort, pm.endPort)
 	availableCount := 0
 	for port := pm.startPort; port <= pm.endPort; port++ {
 		if pm.isPortAvailable(port) {
@@ -193,7 +189,7 @@ func (pm *PortManager) initializePortPool() {
 			}
 		}
 	}
-	log.Printf("Port pool initialized with %d available ports", availableCount)
+	log.Printf("[PortManager] Port pool initialized with %d available ports", availableCount)
 }
 
 func (pm *PortManager) isPortAvailable(port int) bool {
@@ -209,6 +205,7 @@ func (pm *PortManager) GetAvailablePort() (int, bool) {
 	select {
 	case port := <-pm.availablePorts:
 		pm.usedPorts.Store(port, time.Now())
+		log.Printf("[PortManager] Allocated port %d", port)
 		return port, true
 	case <-time.After(100 * time.Millisecond):
 		return pm.findEmergencyPort(), true
@@ -222,15 +219,18 @@ func (pm *PortManager) findEmergencyPort() int {
 		port := rand.Intn(pm.endPort-pm.startPort+1) + pm.startPort
 		if _, used := pm.usedPorts.Load(port); !used && pm.isPortAvailable(port) {
 			pm.usedPorts.Store(port, time.Now())
+			log.Printf("[PortManager] Emergency allocated port %d", port)
 			return port
 		}
 	}
+	log.Printf("[PortManager] No emergency port found!")
 	return 0
 }
 
 func (pm *PortManager) ReleasePort(port int) {
 	pm.usedPorts.Delete(port)
-	// kernel TIME_WAIT grace
+	log.Printf("[PortManager] Released port %d", port)
+	// kernel grace
 	time.Sleep(100 * time.Millisecond)
 	go func() {
 		select {
@@ -247,8 +247,7 @@ func (pm *PortManager) cleanup() {
 	})
 }
 
-/* ==========================  NETWORK TESTER  ========================== */
-
+/* --------------  NetworkTester -------------- */
 type NetworkTester struct {
 	timeout  time.Duration
 	testURLs []string
@@ -274,7 +273,9 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 
 func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float64) {
 	start := time.Now()
+	log.Printf("[NetworkTester] Start test on SOCKS5 port %d", proxyPort)
 	if !nt.isProxyResponsive(proxyPort) {
+		log.Printf("[NetworkTester] Port %d not responsive", proxyPort)
 		return false, "", time.Since(start).Seconds()
 	}
 	testCount := 4
@@ -287,9 +288,11 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 	for i := 0; i < testCount; i++ {
 		ok, ip, rt := nt.singleTest(proxyPort, shuffled[i])
 		if ok {
+			log.Printf("[NetworkTester] Success on port %d, IP %s, time %.3fs", proxyPort, ip, rt)
 			return true, ip, rt
 		}
 	}
+	log.Printf("[NetworkTester] All tests failed on port %d", proxyPort)
 	return false, "", time.Since(start).Seconds()
 }
 
@@ -304,8 +307,10 @@ func (nt *NetworkTester) isProxyResponsive(port int) bool {
 
 func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string, float64) {
 	start := time.Now()
+	log.Printf("[NetworkTester] singleTest port %d URL %s", proxyPort, testURL)
 	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), nil, proxy.Direct)
 	if err != nil {
+		log.Printf("[NetworkTester] SOCKS5 dial error: %v", err)
 		return false, "", time.Since(start).Seconds()
 	}
 	tr := &http.Transport{
@@ -319,14 +324,17 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	client := &http.Client{Transport: tr, Timeout: nt.timeout}
 	resp, err := client.Get(testURL)
 	if err != nil {
+		log.Printf("[NetworkTester] HTTP GET error: %v", err)
 		return false, "", time.Since(start).Seconds()
 	}
 	defer resp.Body.Close()
 	if resp.StatusCode != 200 {
+		log.Printf("[NetworkTester] Non-200 status: %d", resp.StatusCode)
 		return false, "", time.Since(start).Seconds()
 	}
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
+		log.Printf("[NetworkTester] Read body error: %v", err)
 		return false, "", time.Since(start).Seconds()
 	}
 	rt := time.Since(start).Seconds()
@@ -344,11 +352,11 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	if net.ParseIP(ipText) != nil {
 		return true, ipText, rt
 	}
+	log.Printf("[NetworkTester] Invalid IP returned: %s", ipText)
 	return false, "", rt
 }
 
-/* ==========================  XRAY CONFIG GENERATOR  ========================== */
-
+/* --------------  XrayConfigGenerator -------------- */
 type XrayConfigGenerator struct {
 	xrayPath string
 }
@@ -381,11 +389,14 @@ func (xcg *XrayConfigGenerator) ValidateXray() error {
 	if err != nil {
 		return fmt.Errorf("xray validation failed: %w", err)
 	}
-	log.Printf("Xray version: %s", strings.TrimSpace(string(out)))
+	log.Printf("[XrayConfigGenerator] Version: %s", strings.TrimSpace(string(out)))
 	return nil
 }
 
 func (xcg *XrayConfigGenerator) GenerateConfig(cfg *ProxyConfig, listenPort int) (map[string]interface{}, error) {
+	log.Printf("[GenerateConfig] Building Xray JSON for %s://%s:%d  (listen %d)",
+		cfg.Protocol, cfg.Server, cfg.Port, listenPort)
+
 	out := map[string]interface{}{
 		"log": map[string]interface{}{"loglevel": "error"},
 		"inbounds": []map[string]interface{}{
@@ -494,11 +505,11 @@ func (xcg *XrayConfigGenerator) GenerateConfig(cfg *ProxyConfig, listenPort int)
 			ss["realitySettings"] = tlsSets
 		}
 	}
+	log.Printf("[GenerateConfig] Xray JSON generated for %s://%s:%d", cfg.Protocol, cfg.Server, cfg.Port)
 	return out, nil
 }
 
-/* ==========================  PROCESS MANAGER  ========================== */
-
+/* --------------  ProcessManager -------------- */
 type ProcessManager struct {
 	processes sync.Map
 	cleanup   int32
@@ -506,9 +517,15 @@ type ProcessManager struct {
 
 func NewProcessManager() *ProcessManager { return &ProcessManager{} }
 
-func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) { pm.processes.Store(pid, cmd) }
+func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) {
+	pm.processes.Store(pid, cmd)
+	log.Printf("[ProcessManager] Registered PID %d", pid)
+}
 
-func (pm *ProcessManager) UnregisterProcess(pid int) { pm.processes.Delete(pid) }
+func (pm *ProcessManager) UnregisterProcess(pid int) {
+	pm.processes.Delete(pid)
+	log.Printf("[ProcessManager] Unregistered PID %d", pid)
+}
 
 func (pm *ProcessManager) KillProcess(pid int) error {
 	if atomic.LoadInt32(&pm.cleanup) == 1 {
@@ -516,7 +533,7 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 	}
 	if v, ok := pm.processes.Load(pid); ok {
 		if cmd, ok := v.(*exec.Cmd); ok && cmd.Process != nil {
-			// kill whole group
+			log.Printf("[ProcessManager] Killing process group %d", pid)
 			_ = syscall.Kill(-pid, syscall.SIGTERM)
 			time.Sleep(200 * time.Millisecond)
 			_ = syscall.Kill(-pid, syscall.SIGKILL)
@@ -530,6 +547,7 @@ func (pm *ProcessManager) Cleanup() {
 	if !atomic.CompareAndSwapInt32(&pm.cleanup, 0, 1) {
 		return
 	}
+	log.Printf("[ProcessManager] Global cleanup started")
 	pm.processes.Range(func(key, value interface{}) bool {
 		if pid, ok := key.(int); ok {
 			pm.KillProcess(pid)
@@ -538,8 +556,7 @@ func (pm *ProcessManager) Cleanup() {
 	})
 }
 
-/* ==========================  PROXY TESTER  ========================== */
-
+/* --------------  ProxyTester -------------- */
 type ProxyTester struct {
 	config          *Config
 	portManager     *PortManager
@@ -633,8 +650,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	return nil
 }
 
-/* --------------------  LOAD CONFIGS  -------------------- */
-
+/* --------------  Load JSON -------------- */
 func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtocol) ([]ProxyConfig, error) {
 	f, err := os.Open(filePath)
 	if err != nil {
@@ -643,7 +659,7 @@ func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtoc
 	defer f.Close()
 	var configs []ProxyConfig
 	seen := make(map[string]bool)
-	log.Printf("Loading %s configurations from: %s", protocol, filePath)
+	log.Printf("[LoadConfigs] Loading %s configurations from: %s", protocol, filePath)
 	switch protocol {
 	case ProtocolShadowsocks:
 		configs, err = pt.loadShadowsocksConfigs(f, seen)
@@ -655,7 +671,7 @@ func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtoc
 	if err != nil {
 		return nil, err
 	}
-	log.Printf("Loaded %d unique %s configurations", len(configs), protocol)
+	log.Printf("[LoadConfigs] Loaded %d unique %s configurations", len(configs), protocol)
 	return configs, nil
 }
 
@@ -798,8 +814,7 @@ func (pt *ProxyTester) getConfigHash(c *ProxyConfig) string {
 	return fmt.Sprintf("%x", h)
 }
 
-/* --------------------  TEST SINGLE CONFIG  -------------------- */
-
+/* --------------  TestSingleConfig -------------- */
 func (pt *ProxyTester) TestSingleConfig(cfg *ProxyConfig, batchID int) *TestResultData {
 	start := time.Now()
 	var proxyPort int
@@ -807,9 +822,12 @@ func (pt *ProxyTester) TestSingleConfig(cfg *ProxyConfig, batchID int) *TestResu
 	var configFile string
 
 	res := &TestResultData{Config: *cfg, BatchID: &batchID}
+	log.Printf("[TestSingleConfig] >>> Start test %s://%s:%d  (batch %d)", cfg.Protocol, cfg.Server, cfg.Port, batchID)
 
 	defer func() {
 		res.TestTime = time.Since(start).Seconds()
+		log.Printf("[TestSingleConfig] <<< Finished %s://%s:%d  result=%s  time=%.3fs",
+			cfg.Protocol, cfg.Server, cfg.Port, res.Result, res.TestTime)
 		if proc != nil && proc.Process != nil {
 			pt.processManager.KillProcess(proc.Process.Pid)
 		}
@@ -826,9 +844,11 @@ func (pt *ProxyTester) TestSingleConfig(cfg *ProxyConfig, batchID int) *TestResu
 	proxyPort, ok = pt.portManager.GetAvailablePort()
 	if !ok || proxyPort == 0 {
 		res.Result = ResultPortConflict
+		log.Printf("[TestSingleConfig] Port conflict")
 		return res
 	}
 	res.ProxyPort = &proxyPort
+	log.Printf("[TestSingleConfig] Got port %d", proxyPort)
 
 	// generate xray json
 	xrayConf, err := pt.configGenerator.GenerateConfig(cfg, proxyPort)
@@ -843,6 +863,7 @@ func (pt *ProxyTester) TestSingleConfig(cfg *ProxyConfig, batchID int) *TestResu
 		res.ErrorMessage = err.Error()
 		return res
 	}
+	log.Printf("[TestSingleConfig] Written temp config: %s", configFile)
 
 	// syntax test
 	if err := pt.testConfigSyntax(configFile); err != nil {
@@ -877,7 +898,8 @@ func (pt *ProxyTester) TestSingleConfig(cfg *ProxyConfig, batchID int) *TestResu
 		if pt.config.IncrementalSave {
 			pt.saveConfigImmediately(res)
 		}
-		log.Printf("SUCCESS: %s://%s:%d (%.3fs)", cfg.Protocol, cfg.Server, cfg.Port, rt)
+		log.Printf("[TestSingleConfig] SUCCESS %s://%s:%d  IP=%s  time=%.3fs",
+			cfg.Protocol, cfg.Server, cfg.Port, ip, rt)
 	} else {
 		res.Result = ResultNetworkError
 		res.ErrorMessage = "network test failed"
@@ -897,6 +919,7 @@ func (pt *ProxyTester) writeConfigToTempFile(cfg map[string]interface{}) (string
 		os.Remove(tmp.Name())
 		return "", err
 	}
+	log.Printf("[writeConfigToTempFile] Written: %s", tmp.Name())
 	return tmp.Name(), nil
 }
 
@@ -906,28 +929,30 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 	cmd := exec.CommandContext(ctx, pt.configGenerator.xrayPath, "run", "-test", "-config", configFile)
 	out, err := cmd.CombinedOutput()
 	if err != nil {
+		log.Printf("[testConfigSyntax] Syntax test failed: %s", string(out))
 		return fmt.Errorf("syntax test failed: %s", string(out))
 	}
+	log.Printf("[testConfigSyntax] Syntax OK for %s", configFile)
 	return nil
 }
 
 func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(pt.configGenerator.xrayPath, "run", "-config", configFile)
-	// ⚠️ critical: create new process group
 	cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true}
+	log.Printf("[startXrayProcess] Starting xray with config %s", configFile)
 	if err := cmd.Start(); err != nil {
 		return nil, err
 	}
+	log.Printf("[startXrayProcess] Xray started, PID %d", cmd.Process.Pid)
 	return cmd, nil
 }
 
-/* --------------------  BATCH TEST  -------------------- */
-
+/* --------------  Batch Test -------------- */
 func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestResultData {
 	if len(configs) == 0 {
 		return nil
 	}
-	log.Printf("Testing batch %d with %d configurations...", batchID, len(configs))
+	log.Printf("[TestConfigs] ===== BATCH %d  (%d configs) =====", batchID, len(configs))
 	maxWorkers := pt.config.MaxWorkers
 	if len(configs) < maxWorkers {
 		maxWorkers = len(configs)
@@ -962,24 +987,24 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 			success++
 		}
 	}
-	log.Printf("Batch %d completed: %d/%d successful (%.1f%%)",
+	log.Printf("[TestConfigs] Batch %d finished: %d/%d successful (%.1f%%)",
 		batchID, success, len(configs), float64(success)/float64(len(configs))*100)
-	// ⚠️  hard cleanup + grace
+	// hard cleanup
 	pt.hardCleanupBatch()
 	time.Sleep(500 * time.Millisecond)
 	return results
 }
 
-/* --------------------  HARD CLEANUP  -------------------- */
-
 func (pt *ProxyTester) hardCleanupBatch() {
-	// kill any leftover xray
-	_ = exec.Command("pkill", "-f", "xray.*xray-config").Run()
+	log.Printf("[hardCleanupBatch] Killing leftover xray processes...")
+	out, _ := exec.Command("pkill", "-f", "xray.*xray-config").CombinedOutput()
+	if len(out) > 0 {
+		log.Printf("[hardCleanupBatch] pkill output: %s", string(out))
+	}
 	time.Sleep(300 * time.Millisecond)
 }
 
-/* --------------------  STATS & SAVE  -------------------- */
-
+/* --------------  Stats & Save -------------- */
 func (pt *ProxyTester) updateStats(res *TestResultData) {
 	if protoStats, ok := pt.stats.Load(res.Config.Protocol); ok {
 		m := protoStats.(map[string]*int64)
@@ -1141,25 +1166,24 @@ func (pt *ProxyTester) createConfigURL(res *TestResultData) string {
 	return fmt.Sprintf("%s://%s:%d", c.Protocol, c.Server, c.Port)
 }
 
-/* --------------------  RUN ALL TESTS  -------------------- */
-
+/* --------------  RunAll -------------- */
 func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 	if len(configs) == 0 {
-		log.Println("No configurations to test")
+		log.Println("[RunTests] No configurations to test")
 		return nil
 	}
 	sigC := make(chan os.Signal, 1)
 	signal.Notify(sigC, syscall.SIGINT, syscall.SIGTERM)
 	go func() {
 		<-sigC
-		log.Println("Shutdown signal received, cleaning up...")
+		log.Println("[RunTests] Shutdown signal received, cleaning up...")
 		pt.Cleanup()
 		os.Exit(0)
 	}()
 
 	total := len(configs)
-	log.Printf("Starting comprehensive proxy testing for %d configurations", total)
-	log.Printf("Settings: %d workers, %v timeout, batch size: %d", pt.config.MaxWorkers, pt.config.Timeout, pt.config.BatchSize)
+	log.Printf("[RunTests] Starting comprehensive proxy testing for %d configurations", total)
+	log.Printf("[RunTests] Settings: %d workers, %v timeout, batch size: %d", pt.config.MaxWorkers, pt.config.Timeout, pt.config.BatchSize)
 
 	var all []*TestResultData
 	for batchIdx := 0; batchIdx < total; batchIdx += pt.config.BatchSize {
@@ -1169,7 +1193,7 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 		}
 		batch := configs[batchIdx:end]
 		batchID := (batchIdx / pt.config.BatchSize) + 1
-		log.Printf("Processing batch %d (%d configs)...", batchID, len(batch))
+		log.Printf("[RunTests] Processing batch %d (%d configs)...", batchID, len(batch))
 		batchRes := pt.TestConfigs(batch, batchID)
 		all = append(all, batchRes...)
 		pt.saveResults(all)
@@ -1183,12 +1207,12 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 
 func (pt *ProxyTester) saveResults(results []*TestResultData) {
 	if err := os.MkdirAll(pt.config.LogDir, 0755); err != nil {
-		log.Printf("Failed to create log directory: %v", err)
+		log.Printf("[saveResults] Failed to create log directory: %v", err)
 		return
 	}
 	f, err := os.Create(filepath.Join(pt.config.LogDir, "test_results.json"))
 	if err != nil {
-		log.Printf("Failed to save results: %v", err)
+		log.Printf("[saveResults] Failed to save results: %v", err)
 		return
 	}
 	defer f.Close()
@@ -1271,8 +1295,7 @@ func (pt *ProxyTester) Cleanup() {
 	pt.portManager.cleanup()
 }
 
-/* ==========================  MAIN  ========================== */
-
+/* --------------  Main -------------- */
 func setupDirectories(cfg *Config) error {
 	dirs := []string{
 		cfg.DataDir,
