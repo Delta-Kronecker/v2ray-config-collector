@@ -1,3 +1,6 @@
+// proxy-tester.go
+// نسخه اصلاح‌شده برای جلوگیری از زامبی‌شدن Xray و آزادسازی کامل منابع
+
 package main
 
 import (
@@ -26,6 +29,14 @@ import (
 
 	"golang.org/x/net/proxy"
 )
+
+// -------------------- تغییرات کلیدی --------------------
+// 1. در startXrayProcess: افزودن Setpgid
+// 2. در KillProcess: کشتن کل گروه با -pid
+// 3. در NetworkTester: غیرفعال‌سازی Keep-Alive
+// 4. در PortManager: تأخیر ۱۰۰ms بعد از آزادسازی پورت
+// 5. در TestConfigs: pause ۵۰۰ms پایان هر بچ
+// -----------------------------------------------------
 
 type TestResult string
 
@@ -150,12 +161,12 @@ type TestResultData struct {
 }
 
 type PortManager struct {
-	startPort     int
-	endPort       int
+	startPort      int
+	endPort        int
 	availablePorts chan int
-	usedPorts     sync.Map
-	mu            sync.Mutex
-	initialized   int32
+	usedPorts      sync.Map
+	mu             sync.Mutex
+	initialized    int32
 }
 
 func NewPortManager(startPort, endPort int) *PortManager {
@@ -224,8 +235,8 @@ func (pm *PortManager) findEmergencyPort() int {
 
 func (pm *PortManager) ReleasePort(port int) {
 	pm.usedPorts.Delete(port)
+	time.Sleep(100 * time.Millisecond) // ✅ تأخیر برای آزادسازی واقعی پورت
 	go func() {
-		time.Sleep(50 * time.Millisecond)
 		select {
 		case pm.availablePorts <- port:
 		default:
@@ -311,8 +322,10 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	transport := &http.Transport{
 		Dial:                dialer.Dial,
 		DisableKeepAlives:   true,
+		MaxIdleConns:        0,
+		MaxIdleConnsPerHost: 0,
+		IdleConnTimeout:     1 * time.Second,
 		TLSHandshakeTimeout: 5 * time.Second,
-		IdleConnTimeout:     time.Second,
 	}
 
 	client := &http.Client{
@@ -571,28 +584,15 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 	}
 
 	if value, ok := pm.processes.Load(pid); ok {
-		if cmd, ok := value.(*exec.Cmd); ok {
-			if cmd.Process != nil {
-				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
-					done := make(chan error, 1)
-					go func() {
-						done <- cmd.Wait()
-					}()
-
-					select {
-					case <-done:
-					case <-time.After(200 * time.Millisecond):
-						cmd.Process.Kill()
-					}
-				} else {
-					cmd.Process.Kill()
-				}
-				pm.UnregisterProcess(pid)
-				return nil
-			}
+		if cmd, ok := value.(*exec.Cmd); ok && cmd.Process != nil {
+			// ✅ کشتن کل گروه پروسه
+			_ = syscall.Kill(-pid, syscall.SIGTERM)
+			time.Sleep(200 * time.Millisecond)
+			_ = syscall.Kill(-pid, syscall.SIGKILL)
+			pm.UnregisterProcess(pid)
 		}
 	}
-	return fmt.Errorf("process not found")
+	return nil
 }
 
 func (pm *ProcessManager) Cleanup() {
@@ -1070,14 +1070,10 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 
 func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(pt.configGenerator.xrayPath, "run", "-config", configFile)
-
-	cmd.Stdout = nil
-	cmd.Stderr = nil
-
+	cmd.SysProcAttr = &syscall.SysProcAttr{Setpgid: true} // ✅ ساخت process group
 	if err := cmd.Start(); err != nil {
 		return nil, err
 	}
-
 	return cmd, nil
 }
 
@@ -1336,6 +1332,9 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 
 	log.Printf("Batch %d completed: %d/%d successful (%.1f%%)",
 		batchID, successCount, len(configs), float64(successCount)/float64(len(configs))*100)
+
+	// ✅ pause پایان بچ برای اطمینان از کلین‌آپ
+	time.Sleep(500 * time.Millisecond)
 
 	return results
 }
