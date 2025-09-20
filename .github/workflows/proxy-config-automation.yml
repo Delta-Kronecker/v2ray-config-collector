@@ -40,14 +40,13 @@ jobs:
     - name: Install Xray
       run: |
         echo "Installing Xray..."
-        # Download and install Xray
-        wget -q https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip 
-        unzip -q Xray-linux-64.zip
+        # Download and extract
+        wget -q https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -O xray.zip
+        unzip -q xray.zip
         chmod +x xray
         sudo mv xray /usr/local/bin/
-        
-        # Verify installation
-        xray -version
+        # Verify
+        xray version
         echo "Xray installed successfully"
 
     - name: Install Go dependencies
@@ -219,12 +218,4 @@ jobs:
           echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Working JSON | $(find data/working_json -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Quality Results | $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Speed Results | $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Deduplicated URLs | $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
-        fi
+          echo "| Working JSON | $(find data/working_json -type f 2>/dev/null | wc -l || echo 0) |" >>
