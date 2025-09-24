@@ -135,14 +135,29 @@ jobs:
           echo "Data folder not found!"
         fi
 
-    - name: Configure git for automated commits
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-
     - name: Commit and push ALL changes
       run: |
         echo "Checking for changes in all data subdirectories..."
+
+        # Configure git for automated commits
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+        # Fetch latest changes BEFORE adding files
+        echo "Fetching latest changes from remote..."
+        git fetch origin
+
+        # Check if we're behind remote and pull if needed
+        LOCAL=$(git rev-parse HEAD)
+        REMOTE=$(git rev-parse origin/${{ github.ref_name }})
+        
+        if [ "$LOCAL" != "$REMOTE" ]; then
+          echo "Local branch is behind remote, pulling changes..."
+          git pull --rebase origin "${{ github.ref_name }}" || {
+            echo "Rebase failed, trying merge instead..."
+            git pull origin "${{ github.ref_name }}"
+          }
+        fi
 
         # Add all data subdirectories explicitly
         git add data/ || true
@@ -160,10 +175,6 @@ jobs:
         else
           echo "Changes detected, committing..."
 
-          # Fetch and pull latest changes from remote
-          git fetch origin
-          git pull --rebase origin "${{ github.ref_name }}"
-
           # Create commit message with execution summary
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           PYTHON_STATUS="${{ steps.python-collector.outcome }}"
@@ -180,8 +191,31 @@ jobs:
                      -m "Speed Tester: ${SPEED_STATUS}" \
                      -m "Workflow run: ${RUN_ID}"
 
-          git push origin "${GITHUB_REF_NAME}"
-          echo "✅ Changes committed and pushed successfully"
+          # Push with retry logic
+          MAX_RETRIES=3
+          RETRY_COUNT=0
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+            if git push origin "${GITHUB_REF_NAME}"; then
+              echo "✅ Changes committed and pushed successfully"
+              break
+            else
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              echo "Push failed, attempt $RETRY_COUNT of $MAX_RETRIES"
+              
+              if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
+                echo "Fetching latest changes and retrying..."
+                git fetch origin
+                git pull --rebase origin "${GITHUB_REF_NAME}" || {
+                  echo "Rebase failed, trying merge..."
+                  git pull origin "${GITHUB_REF_NAME}"
+                }
+              else
+                echo "❌ Failed to push after $MAX_RETRIES attempts"
+                exit 1
+              fi
+            fi
+          done
         fi
 
     - name: Upload all results as artifacts
@@ -218,4 +252,30 @@ jobs:
           echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Working JSON | $(find data/working_json -type f 2>/dev/null | wc -l || echo 0) |" >>
+          echo "| Working JSON | $(find data/working_json -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Working URL | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Quality Results | $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Speed Results | $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Deduplicated URLs | $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📊 Data Quality Metrics" >> $GITHUB_STEP_SUMMARY
+          
+          # Add quality metrics if files exist
+          if [ -f "data/quality_results/summary.txt" ]; then
+            echo "#### Quality Summary" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat data/quality_results/summary.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          if [ -f "data/speed_results/speed_summary.txt" ]; then
+            echo "#### Speed Summary" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat data/speed_results/speed_summary.txt >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "### ⚠️ No Data Generated" >> $GITHUB_STEP_SUMMARY
+          echo "No data directory found. Check the execution logs for errors." >> $GITHUB_STEP_SUMMARY
+        fi
