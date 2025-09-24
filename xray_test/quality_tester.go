@@ -334,10 +334,8 @@ func NewQualityTester(config *Config) *QualityTester {
 	ctx, cancel := context.WithCancel(context.Background())
 
 	testSites := []TestSite{
-		{"Twitter", "https://twitter.com", "twitter", "filtered_primary"},
 		{"YouTube", "https://www.youtube.com", "watch", "filtered_primary"},
 		{"Instagram", "https://www.instagram.com", "instagram", "filtered_primary"},
-		{"Discord", "https://discord.com", "discord", "filtered_primary"},
 		{"Telegram Web", "https://web.telegram.org", "telegram", "filtered_secondary"},
 	}
 
