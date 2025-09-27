@@ -105,8 +105,8 @@ jobs:
         run: |
           echo "====== current directory ======"
           pwd
-          echo "====== list config_collector/deduplicated_urls ======"
-          ls -lh config_collector/deduplicated_urls/ || echo "dir not found"
+          echo "====== list data/deduplicated_urls ======"
+          ls -lh data/deduplicated_urls/ || echo "dir not found"
           echo "====== find all json ======"
           find . -name "*.json" -type f | head -20
 
@@ -145,8 +145,8 @@ jobs:
           ls -la data/working_url/ || echo "No files in working_url directory"
           echo "=== Generated files in data/working_json ==="
           ls -la data/working_json/ || echo "No files in working_json directory"
-          echo "=== Generated files in config_collector/deduplicated_urls ==="
-          ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
+          echo "=== Generated files in data/deduplicated_urls ==="
+          ls -la data/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
 
       - name: Commit and push changes
         run: |
@@ -184,6 +184,6 @@ jobs:
           path: |
             data/working_url/
             data/working_json/
-            config_collector/deduplicated_urls/
+            data/deduplicated_urls/
             log/
           retention-days: 7
