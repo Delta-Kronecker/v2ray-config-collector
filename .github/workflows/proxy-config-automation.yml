@@ -124,6 +124,29 @@ jobs:
           fi
         done
 
+    - name: Debug - Check JSON structure
+      run: |
+        echo "====== list deduplicated files ======"
+        ls -lh config_collector/deduplicated_urls/
+        echo "====== head ss.json ======"
+        head -n 10 config_collector/deduplicated_urls/ss.json || echo "ss.json not found"
+        echo "====== validate JSON array ======"
+        python3 -c "
+import json,sys
+for p in ['ss','vmess','vless','trojan']:
+    f=f'config_collector/deduplicated_urls/{p}.json'
+    try:
+        with open(f) as fp:
+            data=json.load(fp)
+        if isinstance(data,list):
+            print(f'{p}.json : Array OK ({len(data)} items)')
+        else:
+            print(f'{p}.json : ERROR - not Array')
+            sys.exit(1)
+    except FileNotFoundError:
+        print(f'{p}.json : File not found')
+        "
+
     - name: Run proxy tester
       run: |
         cd xray_test
@@ -166,8 +189,6 @@ jobs:
         ls -la data/working_json/ || echo "No files in working_json directory"
         echo "=== Generated files in config_collector/deduplicated_urls ==="
         ls -la config_collector/deduplicated_urls/ || echo "No files in deduplicated_urls directory"
-
-
 
     - name: Commit and push changes
       run: |
