@@ -3,13 +3,15 @@ import json
 import sys
 import os
 
-# مسیر کامل فایل‌ها
-BASE = 'config_collector/deduplicated_urls'
-
+BASE = 'data/deduplicated_urls'  # مسیر صحیح طبق خروجی find
 PROTOCOLS = ('ss', 'vmess', 'vless', 'trojan')
 
 print(f"Checking directory: {os.path.abspath(BASE)}")
-print(f"Files in directory: {os.listdir(BASE) if os.path.exists(BASE) else 'Directory not found'}")
+if os.path.exists(BASE):
+    print(f"Files in directory: {os.listdir(BASE)}")
+else:
+    print("Directory not found")
+    sys.exit(1)
 
 ok = True
 for p in PROTOCOLS:
