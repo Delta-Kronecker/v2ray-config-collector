@@ -20,7 +20,6 @@ import (
 	"strconv"
 	"strings"
 	"sync"
-	"sync/atomic"
 	"syscall"
 	"time"
 
@@ -29,18 +28,16 @@ import (
 
 const (
 	DefaultPortStart    = 21000
-	DefaultPortEnd      = 22000 // کاهش محدوده پورت برای کاهش استفاده از منابع
-	DefaultConcurrent   = 8    // کاهش همزمانی
-	DefaultMaxConfigs   = 10000   // کاهش تعداد تست برای جلوگیری از timeout
-	DefaultTimeout      = 20 * time.Second // کاهش timeout
-	DefaultRetries      = 1     // کاهش تلاش‌ها
-	ProcessKillTimeout  = 100 * time.Millisecond
-	XrayStartupTimeout  = 2 * time.Second
-	PortReleaseDelay    = 5 * time.Millisecond
+	DefaultPortEnd      = 30000
+	DefaultConcurrent   = 8
+	DefaultMaxConfigs   = 10000
+	DefaultTimeout      = 25 * time.Second
+	DefaultRetries      = 2
+	ProcessKillTimeout  = 200 * time.Millisecond
+	XrayStartupTimeout  = 3 * time.Second
+	PortReleaseDelay    = 10 * time.Millisecond
 	MaxLatencyMs        = 5000
-	StabilityThreshold  = 0.6   // کاهش آستانه پایداری
-	MaxRunTime          = 240 * time.Minute // حداکثر زمان اجرا
-	MemoryCheckInterval = 1 * time.Minute
+	StabilityThreshold  = 0.75
 )
 
 type QualityScore int
@@ -75,48 +72,51 @@ func DefaultConfig() *Config {
 		MaxRetries:   DefaultRetries,
 		XrayPath:     findXrayExecutable(),
 		OutputPath:   "../data/quality_results",
-		TestCritical: false, // غیرفعال کردن تست پایداری برای سرعت بیشتر
+		TestCritical: true,
 	}
 }
 
 type PortManager struct {
 	startPort      int
 	endPort        int
-	currentPort    int32
-	mu             sync.Mutex
+	availablePorts chan int
+	usedPorts      sync.Map
+	mu             sync.RWMutex
 	ctx            context.Context
 }
 
 func NewPortManager(ctx context.Context, startPort, endPort int) *PortManager {
-	return &PortManager{
-		startPort:   startPort,
-		endPort:     endPort,
-		currentPort: int32(startPort),
-		ctx:         ctx,
+	pm := &PortManager{
+		startPort:      startPort,
+		endPort:        endPort,
+		availablePorts: make(chan int, endPort-startPort+1),
+		ctx:            ctx,
 	}
+	pm.initializePortPool()
+	return pm
 }
 
-func (pm *PortManager) GetAvailablePort() (int, error) {
-	pm.mu.Lock()
-	defer pm.mu.Unlock()
-	
-	for i := 0; i < 50; i++ {
-		port := int(atomic.AddInt32(&pm.currentPort, 1))
-		if port > pm.endPort {
-			atomic.StoreInt32(&pm.currentPort, int32(pm.startPort))
-			port = pm.startPort
-		}
-		
+func (pm *PortManager) initializePortPool() {
+	log.Printf("Initializing port pool (%d-%d)...", pm.startPort, pm.endPort)
+	availableCount := 0
+
+	for port := pm.startPort; port <= pm.endPort; port++ {
 		if pm.isPortAvailable(port) {
-			return port, nil
+			select {
+			case pm.availablePorts <- port:
+				availableCount++
+			case <-pm.ctx.Done():
+				return
+			default:
+			}
 		}
 	}
-	
-	return 0, fmt.Errorf("no available port")
+
+	log.Printf("Port pool initialized with %d available ports", availableCount)
 }
 
 func (pm *PortManager) isPortAvailable(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 10*time.Millisecond)
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 50*time.Millisecond)
 	if err != nil {
 		return true
 	}
@@ -124,12 +124,47 @@ func (pm *PortManager) isPortAvailable(port int) bool {
 	return false
 }
 
+func (pm *PortManager) GetAvailablePort() (int, error) {
+	select {
+	case port := <-pm.availablePorts:
+		pm.usedPorts.Store(port, true)
+		return port, nil
+	case <-time.After(100 * time.Millisecond):
+		return pm.findEmergencyPort()
+	case <-pm.ctx.Done():
+		return 0, pm.ctx.Err()
+	}
+}
+
+func (pm *PortManager) findEmergencyPort() (int, error) {
+	pm.mu.Lock()
+	defer pm.mu.Unlock()
+
+	for i := 0; i < 100; i++ {
+		port := pm.startPort + (i * 17) % (pm.endPort - pm.startPort + 1)
+		if _, used := pm.usedPorts.Load(port); !used && pm.isPortAvailable(port) {
+			pm.usedPorts.Store(port, true)
+			return port, nil
+		}
+	}
+	return 0, fmt.Errorf("no emergency port available")
+}
+
 func (pm *PortManager) ReleasePort(port int) {
-	// ساده‌سازی - بدون عملیات پیچیده
+	pm.usedPorts.Delete(port)
+	go func() {
+		time.Sleep(PortReleaseDelay)
+		select {
+		case pm.availablePorts <- port:
+		case <-pm.ctx.Done():
+		default:
+		}
+	}()
 }
 
 type ProcessManager struct {
 	processes sync.Map
+	mu        sync.RWMutex
 	ctx       context.Context
 }
 
@@ -141,20 +176,39 @@ func (pm *ProcessManager) RegisterProcess(pid int, cmd *exec.Cmd) {
 	pm.processes.Store(pid, cmd)
 }
 
+func (pm *ProcessManager) UnregisterProcess(pid int) {
+	pm.processes.Delete(pid)
+}
+
 func (pm *ProcessManager) KillProcess(pid int) error {
 	value, ok := pm.processes.Load(pid)
 	if !ok {
-		return nil
+		return fmt.Errorf("process not found")
 	}
 
 	cmd, ok := value.(*exec.Cmd)
 	if !ok || cmd.Process == nil {
-		return nil
+		return fmt.Errorf("invalid process")
 	}
 
-	// سریع‌تر کردن kill process
-	cmd.Process.Kill()
-	pm.processes.Delete(pid)
+	if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
+		done := make(chan error, 1)
+		go func() {
+			done <- cmd.Wait()
+		}()
+
+		select {
+		case <-done:
+		case <-time.After(ProcessKillTimeout):
+			cmd.Process.Kill()
+		case <-pm.ctx.Done():
+			cmd.Process.Kill()
+		}
+	} else {
+		cmd.Process.Kill()
+	}
+
+	pm.UnregisterProcess(pid)
 	return nil
 }
 
@@ -190,6 +244,7 @@ type ConfigResult struct {
 	AvgLatency   float64       `json:"avg_latency"`
 	SuccessRate  float64       `json:"success_rate"`
 	Stability    float64       `json:"stability"`
+	Speed        float64       `json:"speed_mbps"`
 	TestTime     time.Time     `json:"test_time"`
 }
 
@@ -262,8 +317,6 @@ type QualityTester struct {
 	testSites      []TestSite
 	ctx            context.Context
 	cancel         context.CancelFunc
-	startTime      time.Time
-	stats          *TestStats
 }
 
 type TestSite struct {
@@ -273,27 +326,19 @@ type TestSite struct {
 	Category    string
 }
 
-type TestStats struct {
-	Total     int32
-	Success   int32
-	Failed    int32
-	Processed int32
-}
-
 func NewQualityTester(config *Config) *QualityTester {
 	if config == nil {
 		config = DefaultConfig()
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), MaxRunTime)
+	ctx, cancel := context.WithCancel(context.Background())
 
-	// سایت‌های فیلتر شده در ایران - حفظ سایت‌های اصلی
 	testSites := []TestSite{
+		{"Twitter", "https://twitter.com", "twitter", "filtered_primary"},
 		{"YouTube", "https://www.youtube.com", "watch", "filtered_primary"},
 		{"Instagram", "https://www.instagram.com", "instagram", "filtered_primary"},
-		{"Twitter", "https://twitter.com", "twitter", "filtered_primary"},
+		{"Discord", "https://discord.com", "discord", "filtered_primary"},
 		{"Telegram Web", "https://web.telegram.org", "telegram", "filtered_secondary"},
-		{"Discord", "https://discord.com", "discord", "filtered_secondary"},
 	}
 
 	return &QualityTester{
@@ -303,8 +348,6 @@ func NewQualityTester(config *Config) *QualityTester {
 		testSites:      testSites,
 		ctx:            ctx,
 		cancel:         cancel,
-		startTime:      time.Now(),
-		stats:          &TestStats{},
 	}
 }
 
@@ -338,18 +381,12 @@ func (qt *QualityTester) LoadWorkingConfigs(filePath string) ([]WorkingConfig, e
 		}
 
 		configs = append(configs, config)
-		
-		// محدود کردن تعداد برای جلوگیری از timeout
-		if len(configs) >= qt.config.MaxConfigs {
-			break
-		}
 	}
 
 	if err := scanner.Err(); err != nil {
 		return nil, fmt.Errorf("error reading config file: %w", err)
 	}
 
-	atomic.StoreInt32(&qt.stats.Total, int32(len(configs)))
 	return configs, nil
 }
 
@@ -360,15 +397,11 @@ func (qt *QualityTester) TestConfigQuality(config *WorkingConfig) (*ConfigResult
 	default:
 	}
 
-	// بررسی زمان اجرا
-	if time.Since(qt.startTime) > MaxRunTime-2*time.Minute {
-		return nil, fmt.Errorf("timeout approaching")
-	}
-
 	proxyPort, err := qt.portManager.GetAvailablePort()
 	if err != nil {
 		return nil, fmt.Errorf("no available port: %w", err)
 	}
+	defer qt.portManager.ReleasePort(proxyPort)
 
 	xrayConfig, err := qt.generateXrayConfig(config, proxyPort)
 	if err != nil {
@@ -391,8 +424,11 @@ func (qt *QualityTester) TestConfigQuality(config *WorkingConfig) (*ConfigResult
 		}
 	}()
 
-	// کاهش زمان انتظار
-	time.Sleep(XrayStartupTimeout)
+	select {
+	case <-time.After(XrayStartupTimeout):
+	case <-qt.ctx.Done():
+		return nil, qt.ctx.Err()
+	}
 
 	if process.ProcessState != nil && process.ProcessState.Exited() {
 		return nil, fmt.Errorf("xray process exited")
@@ -407,25 +443,34 @@ func (qt *QualityTester) TestConfigQuality(config *WorkingConfig) (*ConfigResult
 	}
 
 	qt.calculateQualityMetrics(result)
-	
-	// آپدیت آمار
-	atomic.AddInt32(&qt.stats.Processed, 1)
-	if result.SuccessRate > 0 {
-		atomic.AddInt32(&qt.stats.Success, 1)
-	} else {
-		atomic.AddInt32(&qt.stats.Failed, 1)
-	}
+
+	log.Printf("Config %s:%d completed - Score: %.1f | Success: %.1f%% | Latency: %.0fms | Tests: %d/%d passed",
+		config.Server, config.Port, result.FinalScore, result.SuccessRate, result.AvgLatency,
+		qt.countSuccessfulTests(result.QualityTests), len(result.QualityTests))
 
 	return result, nil
+}
+
+func (qt *QualityTester) countSuccessfulTests(tests []TestResult) int {
+	count := 0
+	for _, test := range tests {
+		if test.Success {
+			count++
+		}
+	}
+	return count
 }
 
 func (qt *QualityTester) runQualityTests(proxyPort int) []TestResult {
 	var results []TestResult
 	var mu sync.Mutex
 	var wg sync.WaitGroup
+	completed := 0
+	totalTests := len(qt.testSites)
 
-	// کاهش همزمانی برای کاهش استفاده از منابع
-	semaphore := make(chan struct{}, 2)
+	semaphore := make(chan struct{}, qt.config.Concurrent)
+
+	log.Printf("Starting quality tests for %d sites via port %d...", totalTests, proxyPort)
 
 	for _, site := range qt.testSites {
 		wg.Add(1)
@@ -443,11 +488,15 @@ func (qt *QualityTester) runQualityTests(proxyPort int) []TestResult {
 
 			mu.Lock()
 			results = append(results, result)
+			completed++
+			log.Printf("Progress: %d/%d tests completed (%.1f%%) - Last: %s",
+				completed, totalTests, float64(completed)/float64(totalTests)*100, testSite.Name)
 			mu.Unlock()
 		}(site)
 	}
 
 	wg.Wait()
+	log.Printf("All quality tests completed for port %d", proxyPort)
 	return results
 }
 
@@ -456,16 +505,131 @@ func (qt *QualityTester) testSingleSite(proxyPort int, site TestSite) TestResult
 		Site: site.Name,
 	}
 
-	// ساده‌سازی: حذف تست پایداری پیچیده
-	success, latency, downloadTime, contentSize, statusCode, err := qt.performRequest(proxyPort, site.URL, site.ExpectedStr)
+	if qt.config.TestCritical && qt.isCriticalSite(site.Name) {
+		return qt.testSiteStability(proxyPort, site)
+	}
 
-	result.Success = success
-	result.Latency = latency
-	result.DownloadTime = downloadTime
-	result.ContentSize = contentSize
-	result.StatusCode = statusCode
-	if err != nil {
-		result.ErrorMsg = err.Error()
+	for attempt := 0; attempt <= qt.config.MaxRetries; attempt++ {
+		select {
+		case <-qt.ctx.Done():
+			result.Success = false
+			result.ErrorMsg = "context cancelled"
+			return result
+		default:
+		}
+
+		success, latency, downloadTime, contentSize, statusCode, err := qt.performRequest(proxyPort, site.URL, site.ExpectedStr)
+
+		if success {
+			result.Success = true
+			result.Latency = latency
+			result.DownloadTime = downloadTime
+			result.ContentSize = contentSize
+			result.StatusCode = statusCode
+			log.Printf("SUCCESS %s via port %d: %.0fms (HTTP %d, %d bytes)",
+				site.Name, proxyPort, latency, statusCode, contentSize)
+			break
+		}
+
+		if attempt == qt.config.MaxRetries {
+			result.Success = false
+			if err != nil {
+				result.ErrorMsg = err.Error()
+			}
+			result.StatusCode = statusCode
+			if statusCode > 0 {
+				log.Printf("FAILED %s via port %d: (HTTP %d) - %v",
+					site.Name, proxyPort, statusCode, err)
+			} else {
+				log.Printf("FAILED %s via port %d: %v",
+					site.Name, proxyPort, err)
+			}
+		}
+
+		if attempt < qt.config.MaxRetries {
+			time.Sleep(time.Duration(attempt+1) * time.Second)
+		}
+	}
+
+	return result
+}
+
+func (qt *QualityTester) isCriticalSite(siteName string) bool {
+	criticalSites := []string{"Twitter", "Instagram", "YouTube", "Discord"}
+	for _, critical := range criticalSites {
+		if siteName == critical {
+			return true
+		}
+	}
+	return false
+}
+
+func (qt *QualityTester) testSiteStability(proxyPort int, site TestSite) TestResult {
+	result := TestResult{
+		Site: site.Name,
+	}
+
+	stabilityTests := []time.Duration{
+		0 * time.Second,
+		2 * time.Second,
+		5 * time.Second,
+		8 * time.Second,
+	}
+
+	successCount := 0
+	totalLatency := 0.0
+	totalDownloadTime := 0.0
+	totalContentSize := int64(0)
+	lastStatusCode := 0
+
+	log.Printf("Testing stability for %s via port %d...", site.Name, proxyPort)
+
+	for i, delay := range stabilityTests {
+		select {
+		case <-qt.ctx.Done():
+			result.Success = false
+			result.ErrorMsg = "context cancelled"
+			return result
+		default:
+		}
+
+		if i > 0 {
+			time.Sleep(delay - stabilityTests[i-1])
+		}
+
+		success, latency, downloadTime, contentSize, statusCode, err := qt.performRequest(proxyPort, site.URL, site.ExpectedStr)
+
+		if success {
+			successCount++
+			totalLatency += latency
+			totalDownloadTime += downloadTime
+			totalContentSize += contentSize
+			lastStatusCode = statusCode
+			log.Printf("  SUCCESS Attempt %d/%d: %.0fms", i+1, len(stabilityTests), latency)
+		} else {
+			log.Printf("  FAILED Attempt %d/%d: %v", i+1, len(stabilityTests), err)
+		}
+	}
+
+	stabilityRate := float64(successCount) / float64(len(stabilityTests))
+
+	if stabilityRate >= StabilityThreshold {
+		result.Success = true
+		if successCount > 0 {
+			result.Latency = totalLatency / float64(successCount)
+			result.DownloadTime = totalDownloadTime / float64(successCount)
+			result.ContentSize = totalContentSize / int64(successCount)
+		}
+		result.StatusCode = lastStatusCode
+
+		log.Printf("SUCCESS %s via port %d: STABLE (%.1f%% success, avg %.0fms)",
+			site.Name, proxyPort, stabilityRate*100, result.Latency)
+	} else {
+		result.Success = false
+		result.ErrorMsg = fmt.Sprintf("Unstable connection: only %.1f%% success rate", stabilityRate*100)
+
+		log.Printf("FAILED %s via port %d: UNSTABLE (%.1f%% success)",
+			site.Name, proxyPort, stabilityRate*100)
 	}
 
 	return result
@@ -484,18 +648,18 @@ func (qt *QualityTester) performRequest(proxyPort int, targetURL, expectedConten
 		},
 		DisableKeepAlives:     true,
 		DisableCompression:    false,
-		MaxIdleConns:          2, // کاهش تعداد اتصالات
-		IdleConnTimeout:       10 * time.Second,
-		TLSHandshakeTimeout:   8 * time.Second,
+		MaxIdleConns:          5,
+		IdleConnTimeout:       15 * time.Second,
+		TLSHandshakeTimeout:   10 * time.Second,
 		ExpectContinueTimeout: 1 * time.Second,
-		ResponseHeaderTimeout: 10 * time.Second,
+		ResponseHeaderTimeout: 15 * time.Second,
 	}
 
 	client := &http.Client{
 		Transport: transport,
 		Timeout:   qt.config.Timeout,
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
-			if len(via) >= 2 { // کاهش تعداد redirects
+			if len(via) >= 3 {
 				return fmt.Errorf("too many redirects")
 			}
 			return nil
@@ -510,8 +674,11 @@ func (qt *QualityTester) performRequest(proxyPort int, targetURL, expectedConten
 		return false, 0, 0, 0, 0, fmt.Errorf("failed to create request: %w", err)
 	}
 
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
-	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
+	req.Header.Set("Accept-Language", "en-US,en;q=0.5")
+	req.Header.Set("Accept-Encoding", "gzip, deflate")
+	req.Header.Set("Connection", "keep-alive")
 
 	connectTime := time.Now()
 	resp, err := client.Do(req)
@@ -523,9 +690,7 @@ func (qt *QualityTester) performRequest(proxyPort int, targetURL, expectedConten
 	latency := time.Since(connectTime).Seconds() * 1000
 
 	downloadStart := time.Now()
-	// محدود کردن خواندن محتوا برای کاهش استفاده از حافظه
-	limitedReader := io.LimitReader(resp.Body, 10*1024) // حداکثر 10KB
-	body, err := io.ReadAll(limitedReader)
+	body, err := io.ReadAll(resp.Body)
 	downloadTime := time.Since(downloadStart).Seconds() * 1000
 
 	if err != nil {
@@ -547,28 +712,36 @@ func (qt *QualityTester) validateContent(body, expectedContent string) bool {
 	bodyLower := strings.ToLower(body)
 	expectedLower := strings.ToLower(expectedContent)
 
-	if len(body) < 100 {
+	if expectedContent == "origin" {
+		return strings.Contains(bodyLower, expectedLower)
+	}
+
+	if len(body) < 500 {
 		return false
 	}
 
-	blockedIndicators := []string{"access denied", "403 forbidden", "blocked", "not available", "filtered"}
+	blockedIndicators := []string{"access denied", "403 forbidden", "blocked", "not available"}
 	for _, indicator := range blockedIndicators {
 		if strings.Contains(bodyLower, indicator) {
 			return false
 		}
 	}
 
-	return strings.Contains(bodyLower, expectedLower)
+	return true
 }
 
 func (qt *QualityTester) calculateQualityMetrics(result *ConfigResult) {
 	var latencies []float64
+	var downloadTimes []float64
+	var contentSizes []int64
 	successCount := 0
 
 	for _, test := range result.QualityTests {
 		if test.Success {
 			successCount++
 			latencies = append(latencies, test.Latency)
+			downloadTimes = append(downloadTimes, test.DownloadTime)
+			contentSizes = append(contentSizes, test.ContentSize)
 		}
 	}
 
@@ -586,18 +759,32 @@ func (qt *QualityTester) calculateQualityMetrics(result *ConfigResult) {
 		}
 		result.AvgLatency = sum / float64(len(latencies))
 
-		// محاسبه پایداری ساده‌تر
+		variance := 0.0
+		for _, lat := range latencies {
+			variance += math.Pow(lat-result.AvgLatency, 2)
+		}
 		if len(latencies) > 1 {
-			variance := 0.0
-			for _, lat := range latencies {
-				variance += math.Pow(lat-result.AvgLatency, 2)
-			}
 			stdDev := math.Sqrt(variance / float64(len(latencies)-1))
 			if result.AvgLatency > 0 {
-				result.Stability = math.Max(0, 100-(stdDev/result.AvgLatency*50))
+				result.Stability = math.Max(0, 100-(stdDev/result.AvgLatency*100))
+			} else {
+				result.Stability = 0
 			}
 		} else {
 			result.Stability = 100
+		}
+	}
+
+	if len(downloadTimes) > 0 && len(contentSizes) > 0 {
+		totalBytes := int64(0)
+		totalTime := 0.0
+		for i, size := range contentSizes {
+			totalBytes += size
+			totalTime += downloadTimes[i]
+		}
+		if totalTime > 0 {
+			bytesPerMs := float64(totalBytes) / totalTime
+			result.Speed = (bytesPerMs * 1000 * 8) / (1024 * 1024)
 		}
 	}
 
@@ -611,26 +798,29 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 
 	iranFilteredScore := qt.calculateIranFilteredScore(result.QualityTests)
 
-	filteredSitesWeight := 0.60
-	latencyWeight := 0.30
-	stabilityWeight := 0.10
+	filteredSitesWeight := 0.50
+	latencyWeight := 0.25
+	stabilityWeight := 0.15
+	speedWeight := 0.10
 
 	latencyScore := 100.0
 	if result.AvgLatency > 0 {
-		if result.AvgLatency <= 800 {
+		if result.AvgLatency <= 1000 {
 			latencyScore = 100
 		} else if result.AvgLatency >= MaxLatencyMs {
 			latencyScore = 0
 		} else {
-			latencyScore = 100 - ((result.AvgLatency-800)/(MaxLatencyMs-800))*100
+			latencyScore = 100 - ((result.AvgLatency-1000)/(MaxLatencyMs-1000))*100
 		}
 	}
 
 	stabilityScore := result.Stability
+	speedScore := math.Min(100, result.Speed*10)
 
 	finalScore := (iranFilteredScore*filteredSitesWeight +
 		latencyScore*latencyWeight +
-		stabilityScore*stabilityWeight)
+		stabilityScore*stabilityWeight +
+		speedScore*speedWeight)
 
 	bonusScore := qt.calculateBonusScore(result.QualityTests)
 	finalScore = math.Min(100, finalScore+bonusScore)
@@ -639,7 +829,7 @@ func (qt *QualityTester) calculateFinalScore(result *ConfigResult) float64 {
 }
 
 func (qt *QualityTester) calculateIranFilteredScore(tests []TestResult) float64 {
-	primaryFilteredSites := []string{"Twitter", "YouTube", "Instagram", "Discord", "Telegram Web"}
+	primaryFilteredSites := []string{"Twitter", "YouTube", "Instagram", "Discord"}
 	primarySuccessCount := 0
 
 	for _, test := range tests {
@@ -665,7 +855,7 @@ func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
 	successCount := 0
 
 	for _, test := range tests {
-		if test.Success && test.Latency < 1000 {
+		if test.Success && test.Latency < 800 {
 			for _, site := range criticalSites {
 				if test.Site == site {
 					successCount++
@@ -677,7 +867,7 @@ func (qt *QualityTester) calculateBonusScore(tests []TestResult) float64 {
 
 	if successCount == len(criticalSites) {
 		return 10.0
-	} else if successCount >= len(criticalSites)*2/3 {
+	} else if successCount >= len(criticalSites)*3/4 {
 		return 5.0
 	}
 
@@ -694,10 +884,10 @@ func (qt *QualityTester) categorizeByRank(results []ConfigResult) {
 	})
 
 	totalCount := len(results)
-	excellentCount := int(math.Max(1, float64(totalCount)*0.15))
-	veryGoodCount := int(float64(totalCount) * 0.25)
+	excellentCount := int(math.Max(1, float64(totalCount)*0.10))
+	veryGoodCount := int(float64(totalCount) * 0.20)
 	goodCount := int(float64(totalCount) * 0.30)
-	fairCount := int(float64(totalCount) * 0.20)
+	fairCount := int(float64(totalCount) * 0.25)
 
 	index := 0
 	for i := 0; i < excellentCount && index < totalCount; i++ {
@@ -720,12 +910,19 @@ func (qt *QualityTester) categorizeByRank(results []ConfigResult) {
 		results[index].Category = ScorePoor
 		index++
 	}
+
+	log.Printf("Rank-based categorization completed:")
+	log.Printf("   Excellent: %d configs (%.1f%%)", excellentCount, float64(excellentCount)/float64(totalCount)*100)
+	log.Printf("   Very Good: %d configs (%.1f%%)", veryGoodCount, float64(veryGoodCount)/float64(totalCount)*100)
+	log.Printf("   Good: %d configs (%.1f%%)", goodCount, float64(goodCount)/float64(totalCount)*100)
+	log.Printf("   Fair: %d configs (%.1f%%)", fairCount, float64(fairCount)/float64(totalCount)*100)
+	log.Printf("   Poor: %d configs (%.1f%%)", totalCount-excellentCount-veryGoodCount-goodCount-fairCount, float64(totalCount-excellentCount-veryGoodCount-goodCount-fairCount)/float64(totalCount)*100)
 }
 
 func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort int) (map[string]interface{}, error) {
 	xrayConfig := map[string]interface{}{
 		"log": map[string]interface{}{
-			"loglevel": "error", // کاهش log برای بهبود عملکرد
+			"loglevel": "warning",
 		},
 		"inbounds": []map[string]interface{}{
 			{
@@ -734,7 +931,7 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 				"protocol": "socks",
 				"settings": map[string]interface{}{
 					"auth": "noauth",
-					"udp":  false, // غیرفعال کردن UDP برای کاهش پیچیدگی
+					"udp":  true,
 					"ip":   "127.0.0.1",
 				},
 			},
@@ -743,6 +940,11 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 			{
 				"protocol": config.Protocol,
 				"settings": map[string]interface{}{},
+				"streamSettings": map[string]interface{}{
+					"sockopt": map[string]interface{}{
+						"tcpKeepAliveInterval": 30,
+					},
+				},
 			},
 		},
 	}
@@ -758,6 +960,7 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 					"port":     config.Port,
 					"method":   config.Method,
 					"password": config.Password,
+					"level":    0,
 				},
 			},
 		}
@@ -773,6 +976,7 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 							"id":       config.UUID,
 							"alterId":  config.AlterID,
 							"security": config.Cipher,
+							"level":    0,
 						},
 					},
 				},
@@ -790,6 +994,7 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 							"id":         config.UUID,
 							"flow":       config.Flow,
 							"encryption": config.Encryption,
+							"level":      0,
 						},
 					},
 				},
@@ -800,8 +1005,7 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 		return nil, fmt.Errorf("unsupported protocol: %s", config.Protocol)
 	}
 
-	// تنظیمات stream ساده‌تر
-	streamSettings := map[string]interface{}{}
+	streamSettings := outbound["streamSettings"].(map[string]interface{})
 
 	if config.Network != "" && config.Network != "tcp" {
 		streamSettings["network"] = config.Network
@@ -816,6 +1020,16 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 				wsSettings["headers"] = map[string]interface{}{"Host": config.Host}
 			}
 			streamSettings["wsSettings"] = wsSettings
+
+		case "h2":
+			h2Settings := map[string]interface{}{}
+			if config.Path != "" {
+				h2Settings["path"] = config.Path
+			}
+			if config.Host != "" {
+				h2Settings["host"] = []string{config.Host}
+			}
+			streamSettings["httpSettings"] = h2Settings
 		}
 	}
 
@@ -833,10 +1047,10 @@ func (qt *QualityTester) generateXrayConfig(config *WorkingConfig, listenPort in
 
 		if config.TLS == "tls" {
 			streamSettings["tlsSettings"] = tlsSettings
+		} else if config.TLS == "reality" {
+			streamSettings["realitySettings"] = tlsSettings
 		}
 	}
-
-	outbound["streamSettings"] = streamSettings
 
 	return xrayConfig, nil
 }
@@ -848,7 +1062,9 @@ func (qt *QualityTester) writeConfigToTempFile(config map[string]interface{}) (s
 	}
 	defer tmpFile.Close()
 
-	if err := json.NewEncoder(tmpFile).Encode(config); err != nil {
+	encoder := json.NewEncoder(tmpFile)
+	encoder.SetIndent("", "  ")
+	if err := encoder.Encode(config); err != nil {
 		os.Remove(tmpFile.Name())
 		return "", fmt.Errorf("failed to write config: %w", err)
 	}
@@ -857,7 +1073,7 @@ func (qt *QualityTester) writeConfigToTempFile(config map[string]interface{}) (s
 }
 
 func (qt *QualityTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
-	ctx, cancel := context.WithTimeout(qt.ctx, 15*time.Second)
+	ctx, cancel := context.WithTimeout(qt.ctx, 30*time.Second)
 	defer cancel()
 
 	cmd := exec.CommandContext(ctx, qt.config.XrayPath, "run", "-config", configFile)
@@ -966,16 +1182,16 @@ func (qt *QualityTester) saveSummary(results []ConfigResult) error {
 	file.WriteString(fmt.Sprintf("# Generated at: %s\n\n", timestamp))
 	file.WriteString(fmt.Sprintf("Total configurations tested: %d\n", len(results)))
 	file.WriteString(fmt.Sprintf("Average quality score: %.2f\n\n", avgScore))
-	file.WriteString("Quality Distribution:\n")
-	file.WriteString(fmt.Sprintf("  Excellent: %d (%.1f%%)\n",
+	file.WriteString("Quality Distribution (Rank-Based):\n")
+	file.WriteString(fmt.Sprintf("  Excellent (Top 10%% Best): %d (%.1f%%)\n",
 		categoryCount[ScoreExcellent], float64(categoryCount[ScoreExcellent])/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Very Good: %d (%.1f%%)\n",
+	file.WriteString(fmt.Sprintf("  Very Good (Next 20%% Best): %d (%.1f%%)\n",
 		categoryCount[ScoreVeryGood], float64(categoryCount[ScoreVeryGood])/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Good: %d (%.1f%%)\n",
+	file.WriteString(fmt.Sprintf("  Good (Next 30%% Best): %d (%.1f%%)\n",
 		categoryCount[ScoreGood], float64(categoryCount[ScoreGood])/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Fair: %d (%.1f%%)\n",
+	file.WriteString(fmt.Sprintf("  Fair (Next 25%% Best): %d (%.1f%%)\n",
 		categoryCount[ScoreFair], float64(categoryCount[ScoreFair])/float64(len(results))*100))
-	file.WriteString(fmt.Sprintf("  Poor: %d (%.1f%%)\n",
+	file.WriteString(fmt.Sprintf("  Poor (Bottom 15%%): %d (%.1f%%)\n",
 		categoryCount[ScorePoor], float64(categoryCount[ScorePoor])/float64(len(results))*100))
 
 	return nil
@@ -990,7 +1206,7 @@ func (qt *QualityTester) createConfigURL(result *ConfigResult) string {
 		authB64 := base64.StdEncoding.EncodeToString([]byte(auth))
 		remarks := url.QueryEscape(config.Remarks)
 		if remarks == "" {
-			remarks = fmt.Sprintf("SS-%.0f", result.FinalScore)
+			remarks = fmt.Sprintf("SS-%s", config.Server)
 		}
 		return fmt.Sprintf("ss://%s@%s:%d#%s", authB64, config.Server, config.Port, remarks)
 
@@ -1011,7 +1227,7 @@ func (qt *QualityTester) createConfigURL(result *ConfigResult) string {
 			"sni":  config.SNI,
 		}
 		if vmessConfig["ps"] == "" {
-			vmessConfig["ps"] = fmt.Sprintf("VMess-%.0f", result.FinalScore)
+			vmessConfig["ps"] = fmt.Sprintf("VMess-%s", config.Server)
 		}
 
 		jsonBytes, _ := json.Marshal(vmessConfig)
@@ -1049,7 +1265,7 @@ func (qt *QualityTester) createConfigURL(result *ConfigResult) string {
 
 		remarks := url.QueryEscape(config.Remarks)
 		if remarks == "" {
-			remarks = fmt.Sprintf("VLESS-%.0f", result.FinalScore)
+			remarks = fmt.Sprintf("VLESS-%s", config.Server)
 		}
 
 		return fmt.Sprintf("vless://%s@%s:%d%s#%s", config.UUID, config.Server, config.Port, query, remarks)
@@ -1065,6 +1281,10 @@ func (qt *QualityTester) RunQualityTests(configFile string) error {
 		return fmt.Errorf("failed to load configs: %w", err)
 	}
 
+	if qt.config.MaxConfigs > 0 && len(configs) > qt.config.MaxConfigs {
+		configs = configs[:qt.config.MaxConfigs]
+	}
+
 	log.Printf("Testing quality for %d configurations with %d test sites each...", len(configs), len(qt.testSites))
 
 	var results []ConfigResult
@@ -1072,19 +1292,10 @@ func (qt *QualityTester) RunQualityTests(configFile string) error {
 	var wg sync.WaitGroup
 
 	semaphore := make(chan struct{}, qt.config.Concurrent)
-	processed := int32(0)
-	totalConfigs := int32(len(configs))
-
-	// شروع goroutine برای نمایش پیشرفت
-	go qt.showProgress(&processed, totalConfigs)
+	processed := 0
+	totalConfigs := len(configs)
 
 	for _, config := range configs {
-		// بررسی timeout
-		if time.Since(qt.startTime) > MaxRunTime-2*time.Minute {
-			log.Printf("Timeout approaching, stopping at %d/%d configs", processed, totalConfigs)
-			break
-		}
-
 		wg.Add(1)
 		go func(cfg WorkingConfig) {
 			defer wg.Done()
@@ -1099,13 +1310,24 @@ func (qt *QualityTester) RunQualityTests(configFile string) error {
 			result, err := qt.TestConfigQuality(&cfg)
 			if err != nil {
 				log.Printf("Failed to test config %s:%d - %v", cfg.Server, cfg.Port, err)
-			} else if result != nil {
 				mu.Lock()
-				results = append(results, *result)
+				processed++
+				log.Printf("Overall Progress: %d/%d configs tested (%.1f%%) - Failed: %s:%d",
+					processed, totalConfigs, float64(processed)/float64(totalConfigs)*100, cfg.Server, cfg.Port)
 				mu.Unlock()
+				return
 			}
 
-			atomic.AddInt32(&processed, 1)
+			mu.Lock()
+			results = append(results, *result)
+			processed++
+			log.Printf("Overall Progress: %d/%d configs tested (%.1f%%) - Score: %.1f | Success: %.1f%% | Latency: %.0fms",
+				processed, totalConfigs, float64(processed)/float64(totalConfigs)*100,
+				result.FinalScore, result.SuccessRate, result.AvgLatency)
+			mu.Unlock()
+
+			log.Printf("Config %s:%d completed - Score: %.1f, Success: %.1f%%, Latency: %.0fms",
+				cfg.Server, cfg.Port, result.FinalScore, result.SuccessRate, result.AvgLatency)
 		}(config)
 	}
 
@@ -1122,24 +1344,6 @@ func (qt *QualityTester) RunQualityTests(configFile string) error {
 
 	qt.printQualitySummary(results)
 	return nil
-}
-
-func (qt *QualityTester) showProgress(processed *int32, total int32) {
-	ticker := time.NewTicker(10 * time.Second)
-	defer ticker.Stop()
-
-	for {
-		select {
-		case <-ticker.C:
-			current := atomic.LoadInt32(processed)
-			if total > 0 {
-				progress := float64(current) / float64(total) * 100
-				log.Printf("Progress: %d/%d (%.1f%%) configs tested", current, total, progress)
-			}
-		case <-qt.ctx.Done():
-			return
-		}
-	}
 }
 
 func (qt *QualityTester) printQualitySummary(results []ConfigResult) {
@@ -1165,15 +1369,15 @@ func (qt *QualityTester) printQualitySummary(results []ConfigResult) {
 	log.Printf("Total configurations tested: %d", len(results))
 	log.Printf("Average quality score: %.1f", avgScore)
 	log.Println()
-	log.Printf("Excellent: %d (%.1f%%)",
+	log.Printf("Excellent (Top 10%% Best): %d (%.1f%%)",
 		categoryCount[ScoreExcellent], float64(categoryCount[ScoreExcellent])/float64(len(results))*100)
-	log.Printf("Very Good: %d (%.1f%%)",
+	log.Printf("Very Good (Next 20%% Best): %d (%.1f%%)",
 		categoryCount[ScoreVeryGood], float64(categoryCount[ScoreVeryGood])/float64(len(results))*100)
-	log.Printf("Good: %d (%.1f%%)",
+	log.Printf("Good (Next 30%% Best): %d (%.1f%%)",
 		categoryCount[ScoreGood], float64(categoryCount[ScoreGood])/float64(len(results))*100)
-	log.Printf("Fair: %d (%.1f%%)",
+	log.Printf("Fair (Next 25%% Best): %d (%.1f%%)",
 		categoryCount[ScoreFair], float64(categoryCount[ScoreFair])/float64(len(results))*100)
-	log.Printf("Poor: %d (%.1f%%)",
+	log.Printf("Poor (Others): %d (%.1f%%)",
 		categoryCount[ScorePoor], float64(categoryCount[ScorePoor])/float64(len(results))*100)
 	log.Println()
 	log.Println("Results saved to:")
@@ -1208,7 +1412,6 @@ func setupSignalHandler(tester *QualityTester) {
 func main() {
 	config := DefaultConfig()
 
-	// تنظیمات از environment variables
 	if xrayPath := os.Getenv("XRAY_PATH"); xrayPath != "" {
 		config.XrayPath = xrayPath
 	}
@@ -1229,7 +1432,7 @@ func main() {
 		config.OutputPath = outputPathEnv
 	}
 
-	configFile := "data/working_json/working_all_configs.txt"
+	configFile := "../data/working_json/working_all_configs.txt"
 	if configFileEnv := os.Getenv("CONFIG_FILE"); configFileEnv != "" {
 		configFile = configFileEnv
 	}
