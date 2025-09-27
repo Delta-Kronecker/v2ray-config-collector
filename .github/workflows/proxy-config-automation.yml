@@ -108,8 +108,8 @@ jobs:
           echo "====== head ss.json ======"
           head -n 10 config_collector/deduplicated_urls/ss.json || echo "ss.json not found"
           echo "====== validate JSON array ======"
-          python3 -c "
-import json,sys
+          python3 <<'PY'
+import json,sys,os
 for p in ['ss','vmess','vless','trojan']:
     f=f'config_collector/deduplicated_urls/{p}.json'
     try:
@@ -122,7 +122,7 @@ for p in ['ss','vmess','vless','trojan']:
             sys.exit(1)
     except FileNotFoundError:
         print(f'{p}.json : File not found')
-        "
+PY
 
       - name: Run proxy tester
         run: |
