@@ -1,328 +1,589 @@
 # Working VMESS Configurations (JSON Format)
-# Generated at: 2025-09-28 19:39:34
+# Generated at: 2025-09-28 19:51:36
 # Format: Each line contains one working configuration in JSON
 
-# Tested at: 2025-09-28 19:40:20 | Response: 0.625s | IP: 51.79.102.253
-{"alterId":0,"cipher":"auto","external_ip":"51.79.102.253","host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","network":"ws","path":"/IOebhLMhl1CTbFHbL95myfRX2","port":80,"protocol":"vmess","remarks":"🔥","server":"51.79.102.253","sni":"","test_time":0.625267279,"tls":"","uuid":"58fe1542-5290-40ad-815a-77707a81afe5"}
+# Tested at: 2025-09-28 21:42:50 | Response: 0.538s | IP: 51.79.102.253
+{"alterId":0,"cipher":"auto","external_ip":"51.79.102.253","host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","network":"ws","path":"/IOebhLMhl1CTbFHbL95myfRX2","port":80,"protocol":"vmess","remarks":"🔥","server":"51.79.102.253","sni":"","test_time":0.537984012,"tls":"","uuid":"58fe1542-5290-40ad-815a-77707a81afe5"}
 
-# Tested at: 2025-09-28 19:40:21 | Response: 0.116s | IP: 2001:470:2be:1:20c:29ff:fead:c1b7
-{"alterId":0,"cipher":"auto","external_ip":"2001:470:2be:1:20c:29ff:fead:c1b7","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"165.140.216.141","sni":"","test_time":0.115864001,"tls":"","uuid":"e7d72a8d-26f2-4b54-b366-0c43e0bcba7d"}
+# Tested at: 2025-09-28 21:42:51 | Response: 1.176s | IP: 134.195.198.147
+{"alterId":0,"cipher":"auto","external_ip":"134.195.198.147","host":"inna.cfd","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"134.195.198.147","sni":"","test_time":1.175691071,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:21 | Response: 0.385s | IP: 216.132.112.116
-{"alterId":0,"cipher":"auto","external_ip":"216.132.112.116","host":"","network":"tcp","path":"","port":30475,"protocol":"vmess","remarks":"🔥","server":"216.132.112.116","sni":"","test_time":0.385486802,"tls":"","uuid":"defa10be-f618-4b64-c815-049d2eacbd3f"}
+# Tested at: 2025-09-28 21:42:51 | Response: 1.292s | IP: 15.235.50.172
+{"alterId":0,"cipher":"auto","external_ip":"15.235.50.172","host":"baradiha.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.50.172","sni":"","test_time":1.292285202,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.124s | IP: 152.67.8.205
-{"alterId":0,"cipher":"auto","external_ip":"152.67.8.205","host":"","network":"ws","path":"/","port":80,"protocol":"vmess","remarks":"🔥","server":"152.67.8.205","sni":"","test_time":1.123546826,"tls":"","uuid":"9db4c708-aef8-4359-821b-38e47990be0d"}
+# Tested at: 2025-09-28 21:42:51 | Response: 1.456s | IP: 23.162.200.227
+{"alterId":0,"cipher":"auto","external_ip":"23.162.200.227","host":"","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"23.162.200.227","sni":"","test_time":1.455954409,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.095s | IP: 15.235.85.156
-{"alterId":1,"cipher":"auto","external_ip":"15.235.85.156","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.85.156","sni":"kampong.org","test_time":1.095373678,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:42:51 | Response: 1.434s | IP: 57.129.25.20
+{"alterId":1,"cipher":"auto","external_ip":"57.129.25.20","host":"57.129.25.20","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.20","sni":"","test_time":1.433509344,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.500s | IP: 2407:3640:2270:2033::1
-{"alterId":0,"cipher":"auto","external_ip":"2407:3640:2270:2033::1","host":"","network":"tcp","path":"","port":39674,"protocol":"vmess","remarks":"🔥","server":"82.197.69.131","sni":"","test_time":0.499892018,"tls":"","uuid":"5a89386a-827b-4f54-8778-2f1b5122c6ef"}
+# Tested at: 2025-09-28 21:42:51 | Response: 0.879s | IP: 57.129.24.125
+{"alterId":0,"cipher":"auto","external_ip":"57.129.24.125","host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.125","sni":"","test_time":0.879298936,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.652s | IP: 172.82.65.77
-{"alterId":0,"cipher":"auto","external_ip":"172.82.65.77","host":"m16-9d86dc15-7d51-7138-bee5-645e0ef7936c.huangshang.pp.ua","network":"ws","path":"/ZVrc7MGZcKzYE40sF9Z5","port":443,"protocol":"vmess","remarks":"🔥","server":"172.82.65.77","sni":"","test_time":0.652350931,"tls":"tls","uuid":"1ecc7e61-d639-4e18-8cae-2cff9e787261"}
+# Tested at: 2025-09-28 21:42:52 | Response: 1.207s | IP: 51.79.103.76
+{"alterId":0,"cipher":"auto","external_ip":"51.79.103.76","host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","network":"ws","path":"/IOebhLMhl1CTbFHbL95myfRX2","port":80,"protocol":"vmess","remarks":"🔥","server":"51.79.103.76","sni":"","test_time":1.207178586,"tls":"","uuid":"58fe1542-5290-40ad-815a-77707a81afe5"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.269s | IP: 148.113.176.192
-{"alterId":0,"cipher":"auto","external_ip":"148.113.176.192","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"148.113.176.192","sni":"fapeng.org","test_time":1.268554298,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:43:35 | Response: 0.765s | IP: 5.196.29.123
+{"alterId":0,"cipher":"auto","external_ip":"5.196.29.123","host":"google.com","network":"ws","path":"/","port":2082,"protocol":"vmess","remarks":"🔥","server":"5.196.29.123","sni":"","test_time":0.765014578,"tls":"none","uuid":"112ac36f-3f53-4e26-8371-d25c028e1b9a"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.711s | IP: 23.162.200.227
-{"alterId":0,"cipher":"auto","external_ip":"23.162.200.227","host":"","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"23.162.200.227","sni":"","test_time":0.711177938,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:43:36 | Response: 0.990s | IP: 112.132.215.12
+{"alterId":0,"cipher":"auto","external_ip":"112.132.215.12","host":"","network":"tcp","path":"/","port":50002,"protocol":"vmess","remarks":"🔥","server":"112.132.215.12","sni":"","test_time":0.990427174,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.519s | IP: 38.99.82.193
-{"alterId":0,"cipher":"auto","external_ip":"38.99.82.193","host":"tilebani.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"38.99.82.193","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":0.518706296,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:43:36 | Response: 1.106s | IP: 57.129.64.238
+{"alterId":0,"cipher":"auto","external_ip":"57.129.64.238","host":"kapelleng.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.64.238","sni":"kapelleng.com","test_time":1.106100958,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.972s | IP: 107.174.82.102
-{"alterId":0,"cipher":"auto","external_ip":"107.174.82.102","host":"HHhjjMKi.457.PP.Ua","network":"ws","path":"/hepNwpzuxszIxZMQZRJ","port":443,"protocol":"vmess","remarks":"🔥","server":"HHhjjMKi.457.PP.Ua","sni":"","test_time":0.972011333,"tls":"tls","uuid":"9f1673a0-688a-4f31-85fa-af40b03c708a"}
+# Tested at: 2025-09-28 21:43:36 | Response: 1.130s | IP: 146.59.55.50
+{"alterId":0,"cipher":"auto","external_ip":"146.59.55.50","host":"o.metuji.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"146.59.55.50","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":1.129809999,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.150s | IP: 57.129.28.215
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.215","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.215","sni":"serkat.org","test_time":1.150221438,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:44:20 | Response: 0.073s | IP: 103.124.107.144
+{"alterId":0,"cipher":"auto","external_ip":"103.124.107.144","host":"","network":"tcp","path":"/","port":29800,"protocol":"vmess","remarks":"🔥","server":"103.124.107.144","sni":"","test_time":0.072657974,"tls":"","uuid":"cc31ddfc-d92e-4dab-cd06-00dfb84af8ac"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.434s | IP: 85.195.101.122
-{"alterId":0,"cipher":"auto","external_ip":"85.195.101.122","host":"","network":"tcp","path":"","port":40878,"protocol":"vmess","remarks":"🔥","server":"85.195.101.122","sni":"","test_time":0.434055691,"tls":"","uuid":"f3d4167e-b15e-4e46-82e9-9286ef93fda7"}
+# Tested at: 2025-09-28 21:44:20 | Response: 0.153s | IP: 198.2.249.97
+{"alterId":64,"cipher":"auto","external_ip":"198.2.249.97","host":"loosely.freetrade.link","network":"tcp","path":"/","port":30002,"protocol":"vmess","remarks":"🔥","server":"38.12.83.217","sni":"","test_time":0.153254458,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.168s | IP: 57.129.28.67
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.67","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"yichueng.org","sni":"yichueng.org","test_time":1.167924948,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:44:20 | Response: 0.804s | IP: 57.129.28.65
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.65","host":"kapelleng.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.65","sni":"kapelleng.com","test_time":0.803761776,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.162s | IP: 107.174.82.102
-{"alterId":0,"cipher":"auto","external_ip":"107.174.82.102","host":"HhHjJMki.457.pP.uA","network":"ws","path":"/hepNwpzuxszIxZMQZRJ","port":443,"protocol":"vmess","remarks":"🔥","server":"HhHjJMki.457.pP.uA","sni":"","test_time":0.162056438,"tls":"tls","uuid":"da7e8bcf-b195-4d69-a667-24f9a7673a11"}
+# Tested at: 2025-09-28 21:44:20 | Response: 0.566s | IP: 46.250.243.56
+{"alterId":0,"cipher":"auto","external_ip":"46.250.243.56","host":"www.speedtest.net","network":"tcp","path":"","port":50394,"protocol":"vmess","remarks":"🔥","server":"46.250.243.56","sni":"","test_time":0.56643857,"tls":"","uuid":"a75f3f95-ad4e-4498-fc72-dd740dd02bfc"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.037s | IP: 46.250.243.56
-{"alterId":0,"cipher":"auto","external_ip":"46.250.243.56","host":"","network":"tcp","path":"","port":50394,"protocol":"vmess","remarks":"🔥","server":"46.250.243.56","sni":"","test_time":1.037083094,"tls":"","uuid":"a75f3f95-ad4e-4498-fc72-dd740dd02bfc"}
+# Tested at: 2025-09-28 21:44:20 | Response: 0.738s | IP: 94.136.185.230
+{"alterId":0,"cipher":"auto","external_ip":"94.136.185.230","host":"","network":"tcp","path":"","port":10534,"protocol":"vmess","remarks":"🔥","server":"94.136.185.230","sni":"","test_time":0.738273422,"tls":"","uuid":"b01c7ef9-33ec-41f6-bfbf-77ddc4d21649"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.013s | IP: 82.152.64.235
-{"alterId":0,"cipher":"auto","external_ip":"82.152.64.235","host":"test2.flha.ru","network":"ws","path":"/15f62abf-8cc9-4598-8d57-e4df7b499a84-vmess","port":80,"protocol":"vmess","remarks":"🔥","server":"test2.flha.ru","sni":"","test_time":1.013419761,"tls":"","uuid":"15f62abf-8cc9-4598-8d57-e4df7b499a84"}
+# Tested at: 2025-09-28 21:44:21 | Response: 1.732s | IP: 155.117.84.80
+{"alterId":0,"cipher":"auto","external_ip":"155.117.84.80","host":"aflzzul.meiquankongjian.com","network":"ws","path":"/564dfa20/","port":52513,"protocol":"vmess","remarks":"🔥","server":"aflzzul.meiquankongjian.com","sni":"","test_time":1.731766321,"tls":"","uuid":"342bacfd-2b8f-3f49-a16e-439db5b0b9d5"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.718s | IP: 57.129.59.193
-{"alterId":0,"cipher":"auto","external_ip":"57.129.59.193","host":"serkat.org","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.193","sni":"serkat.org","test_time":0.717858382,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:44:21 | Response: 1.085s | IP: 120.210.205.59
+{"alterId":64,"cipher":"auto","external_ip":"120.210.205.59","host":"","network":"tcp","path":"/","port":50002,"protocol":"vmess","remarks":"🔥","server":"120.210.205.59","sni":"","test_time":1.085278621,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.885s | IP: 94.131.111.195
-{"alterId":0,"cipher":"auto","external_ip":"94.131.111.195","host":"","network":"tcp","path":"","port":444,"protocol":"vmess","remarks":"🔥","server":"94.131.111.195","sni":"","test_time":1.884542645,"tls":"","uuid":"8bbd9d8c-481b-49b6-8029-e4648f2ea31d"}
+# Tested at: 2025-09-28 21:44:21 | Response: 0.986s | IP: 85.159.229.117
+{"alterId":0,"cipher":"auto","external_ip":"85.159.229.117","host":"","network":"tcp","path":"","port":45294,"protocol":"vmess","remarks":"🔥","server":"lt.fxlcn.com","sni":"","test_time":0.986110024,"tls":"","uuid":"469e0b31-30c3-4dab-800d-711232634ce1"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 0.399s | IP: 15.204.11.190
-{"alterId":0,"cipher":"auto","external_ip":"15.204.11.190","host":"","network":"tcp","path":"","port":15361,"protocol":"vmess","remarks":"🔥","server":"15.204.11.190","sni":"","test_time":0.398895749,"tls":"","uuid":"5d7bf9e3-415c-40f3-c66d-a54ea0fd860e"}
+# Tested at: 2025-09-28 21:44:22 | Response: 2.061s | IP: 146.56.143.32
+{"alterId":0,"cipher":"auto","external_ip":"146.56.143.32","host":"dv4.789900.xyz","network":"ws","path":"/0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05-vm","port":2096,"protocol":"vmess","remarks":"🔥","server":"dv4.789900.xyz","sni":"dv4.789900.xyz","test_time":2.061042147,"tls":"tls","uuid":"0c8f3e29-4ec9-4ba6-a6ef-4487873f5d05"}
 
-# Tested at: 2025-09-28 19:40:22 | Response: 1.832s | IP: 91.92.40.78
-{"alterId":0,"cipher":"","external_ip":"91.92.40.78","host":"","network":"tcp","path":"","port":2060,"protocol":"vmess","remarks":"🔥","server":"configfree.korosh.shop","sni":"","test_time":1.83193728,"tls":"none","uuid":"1bc8a6f7-34b4-440d-cd84-3066abf12189"}
+# Tested at: 2025-09-28 21:44:25 | Response: 0.661s | IP: 112.132.215.34
+{"alterId":0,"cipher":"auto","external_ip":"112.132.215.34","host":"","network":"tcp","path":"/","port":50007,"protocol":"vmess","remarks":"🔥","server":"112.132.215.34","sni":"","test_time":0.661452159,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 1.635s | IP: 5.182.39.44
-{"alterId":0,"cipher":"auto","external_ip":"5.182.39.44","host":"","network":"tcp","path":"","port":444,"protocol":"vmess","remarks":"🔥","server":"5.182.39.44","sni":"","test_time":1.634887274,"tls":"","uuid":"7d52a409-aa5a-471f-aca5-e7621bf1b813"}
+# Tested at: 2025-09-28 21:45:04 | Response: 0.083s | IP: 15.204.11.190
+{"alterId":0,"cipher":"auto","external_ip":"15.204.11.190","host":"","network":"tcp","path":"","port":15361,"protocol":"vmess","remarks":"🔥","server":"15.204.11.190","sni":"","test_time":0.083282075,"tls":"none","uuid":"5d7bf9e3-415c-40f3-c66d-a54ea0fd860e"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 0.728s | IP: 2001:41d0:801:2000::1963
-{"alterId":0,"cipher":"auto","external_ip":"2001:41d0:801:2000::1963","host":"blazE-Uk-237.BLaZEsERVERs1.sItE","network":"ws","path":"/linkvkwss","port":443,"protocol":"vmess","remarks":"🔥","server":"51.75.160.237","sni":"blazE-Uk-237.BLaZEsERVERs1.sItE","test_time":0.727986323,"tls":"tls","uuid":"3adba462-318f-4a6c-ad7a-2923bc74f207"}
+# Tested at: 2025-09-28 21:45:05 | Response: 0.935s | IP: 57.129.24.124
+{"alterId":0,"cipher":"auto","external_ip":"57.129.24.124","host":"aveiror.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.124","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":0.935388018,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 0.660s | IP: 15.204.234.200
-{"alterId":0,"cipher":"auto","external_ip":"15.204.234.200","host":"","network":"tcp","path":"","port":41100,"protocol":"vmess","remarks":"🔥","server":"15.204.234.200","sni":"","test_time":0.660149961,"tls":"","uuid":"c7f169a3-2e9a-4894-ba53-7b2fa6fd08b4"}
+# Tested at: 2025-09-28 21:45:05 | Response: 1.124s | IP: 140.238.18.215
+{"alterId":0,"cipher":"auto","external_ip":"140.238.18.215","host":"lv4.789900.xyz","network":"ws","path":"/7dd16ab1-2a36-4b32-86fd-eb49fb039752-vm","port":2087,"protocol":"vmess","remarks":"🔥","server":"lv4.789900.xyz","sni":"lv4.789900.xyz","test_time":1.12399554,"tls":"tls","uuid":"7dd16ab1-2a36-4b32-86fd-eb49fb039752"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 0.662s | IP: 57.129.59.202
-{"alterId":1,"cipher":"auto","external_ip":"57.129.59.202","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"fapeng.org","sni":"fapeng.org","test_time":0.661678511,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:45:06 | Response: 1.318s | IP: 152.67.8.205
+{"alterId":0,"cipher":"auto","external_ip":"152.67.8.205","host":"","network":"ws","path":"/","port":80,"protocol":"vmess","remarks":"🔥","server":"152.67.8.205","sni":"","test_time":1.318078265,"tls":"","uuid":"9db4c708-aef8-4359-821b-38e47990be0d"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 2.429s | IP: 57.129.24.130
-{"alterId":0,"cipher":"auto","external_ip":"57.129.24.130","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.130","sni":"serkat.org","test_time":2.429312457,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:45:49 | Response: 1.071s | IP: 57.129.28.69
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.69","host":"baradiha.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.69","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":1.071209145,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 2.460s | IP: 57.129.28.214
-{"alterId":1,"cipher":"auto","external_ip":"57.129.28.214","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.214","sni":"kampong.org","test_time":2.459700212,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:45:49 | Response: 0.172s | IP: 15.204.234.200
+{"alterId":0,"cipher":"auto","external_ip":"15.204.234.200","host":"","network":"tcp","path":"","port":41100,"protocol":"vmess","remarks":"🔥","server":"15.204.234.200","sni":"","test_time":0.172147507,"tls":"none","uuid":"c7f169a3-2e9a-4894-ba53-7b2fa6fd08b4"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 1.514s | IP: 91.134.8.102
-{"alterId":0,"cipher":"auto","external_ip":"91.134.8.102","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"91.134.8.102","sni":"serkat.org","test_time":1.5137572769999998,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:45:49 | Response: 1.437s | IP: 57.129.25.25
+{"alterId":0,"cipher":"auto","external_ip":"57.129.25.25","host":"f.khilei.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.25","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":1.436541686,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 0.810s | IP: 57.129.28.64
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.64","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.64","sni":"serkat.org","test_time":0.809735967,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:45:51 | Response: 2.999s | IP: 51.68.189.39
+{"alterId":0,"cipher":"auto","external_ip":"51.68.189.39","host":"","network":"ws","path":"/vmess/","port":8443,"protocol":"vmess","remarks":"🔥","server":"ov-germany4.09vpn.com","sni":"","test_time":2.998566606,"tls":"tls","uuid":"cfc66d8d-48b5-434f-b92d-22de1907ced7"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 1.807s | IP: 141.94.155.228
-{"alterId":1,"cipher":"auto","external_ip":"141.94.155.228","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"141.94.155.228","sni":"kampong.org","test_time":1.8072698109999998,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:32 | Response: 0.540s | IP: 62.146.235.193
+{"alterId":0,"cipher":"auto","external_ip":"62.146.235.193","host":"","network":"tcp","path":"","port":28011,"protocol":"vmess","remarks":"🔥","server":"62.146.235.193","sni":"","test_time":0.539724185,"tls":"","uuid":"cfc5a87f-3c13-4e25-b556-176cdd6b5c6a"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 1.721s | IP: 8.220.188.238
-{"alterId":0,"cipher":"auto","external_ip":"8.220.188.238","host":"","network":"ws","path":"/arki?ed=2048","port":59134,"protocol":"vmess","remarks":"🔥","server":"8.220.188.238","sni":"","test_time":1.7209034939999999,"tls":"","uuid":"b5a82c1d-0d98-4d4d-a499-5d04e4bb114d"}
+# Tested at: 2025-09-28 21:46:32 | Response: 0.695s | IP: 2a01:ecc0:400:d9::2
+{"alterId":0,"cipher":"auto","external_ip":"2a01:ecc0:400:d9::2","host":"google.com","network":"ws","path":"/","port":28838,"protocol":"vmess","remarks":"🔥","server":"89.169.13.60","sni":"","test_time":0.695020224,"tls":"","uuid":"b9d3c414-89cc-455d-b717-10c7ca1665a1"}
 
-# Tested at: 2025-09-28 19:40:23 | Response: 2.894s | IP: 141.94.155.228
-{"alterId":0,"cipher":"auto","external_ip":"141.94.155.228","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"kampong.org","sni":"kampong.org","test_time":2.89380693,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.725s | IP: 2a01:4f8:c013:fbbc::1
+{"alterId":0,"cipher":"auto","external_ip":"2a01:4f8:c013:fbbc::1","host":"","network":"ws","path":"/","port":20086,"protocol":"vmess","remarks":"🔥","server":"91.99.185.216","sni":"","test_time":0.72535296,"tls":"none","uuid":"7bd6a1ea-a220-4f1c-afed-6cfb8ab96ad9"}
 
-# Tested at: 2025-09-28 19:40:24 | Response: 1.551s | IP: 146.59.55.50
-{"alterId":0,"cipher":"auto","external_ip":"146.59.55.50","host":"o.metuji.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"146.59.55.50","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":1.551048811,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.143s | IP: 38.22.232.77
+{"alterId":0,"cipher":"auto","external_ip":"38.22.232.77","host":"","network":"ws","path":"/","port":20086,"protocol":"vmess","remarks":"🔥","server":"38.22.232.77","sni":"","test_time":0.143106353,"tls":"","uuid":"f757bef6-53e5-4411-85e4-03924e08c68f"}
 
-# Tested at: 2025-09-28 19:40:24 | Response: 0.557s | IP: 47.76.89.175
-{"alterId":0,"cipher":"auto","external_ip":"47.76.89.175","host":"","network":"ws","path":"/arki?ed=2048","port":35964,"protocol":"vmess","remarks":"🔥","server":"47.76.89.175","sni":"","test_time":0.557139354,"tls":"","uuid":"49764ed6-084e-463e-ae08-e9e932b71020"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.398s | IP: 85.195.101.122
+{"alterId":0,"cipher":"auto","external_ip":"85.195.101.122","host":"","network":"tcp","path":"","port":40878,"protocol":"vmess","remarks":"🔥","server":"85.195.101.122","sni":"","test_time":0.39807677,"tls":"none","uuid":"f3d4167e-b15e-4e46-82e9-9286ef93fda7"}
 
-# Tested at: 2025-09-28 19:40:24 | Response: 2.177s | IP: 57.128.189.211
-{"alterId":0,"cipher":"auto","external_ip":"57.128.189.211","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.189.211","sni":"yichueng.org","test_time":2.177151922,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.926s | IP: 2407:3640:2270:2033::1
+{"alterId":0,"cipher":"auto","external_ip":"2407:3640:2270:2033::1","host":"","network":"tcp","path":"","port":39674,"protocol":"vmess","remarks":"🔥","server":"82.197.69.131","sni":"","test_time":0.926246797,"tls":"none","uuid":"5a89386a-827b-4f54-8778-2f1b5122c6ef"}
 
-# Tested at: 2025-09-28 19:40:24 | Response: 2.088s | IP: 94.136.185.230
-{"alterId":0,"cipher":"auto","external_ip":"94.136.185.230","host":"","network":"tcp","path":"","port":10534,"protocol":"vmess","remarks":"🔥","server":"94.136.185.230","sni":"","test_time":2.087793116,"tls":"","uuid":"b01c7ef9-33ec-41f6-bfbf-77ddc4d21649"}
+# Tested at: 2025-09-28 21:46:33 | Response: 1.102s | IP: 57.129.132.223
+{"alterId":0,"cipher":"auto","external_ip":"57.129.132.223","host":"google.com","network":"ws","path":"/vmess/","port":80,"protocol":"vmess","remarks":"🔥","server":"57.129.132.223","sni":"","test_time":1.102135008,"tls":"","uuid":"a25cbf11-2908-4a1b-a3a8-9a571777dca3"}
 
-# Tested at: 2025-09-28 19:40:24 | Response: 3.740s | IP: 91.134.8.92
-{"alterId":0,"cipher":"auto","external_ip":"91.134.8.92","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"91.134.8.92","sni":"yichueng.org","test_time":3.7401929579999997,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.711s | IP: 45.67.230.79
+{"alterId":0,"cipher":"auto","external_ip":"45.67.230.79","host":"/JOKERRVPN_BIA_CHANEL@JOKERRVPN","network":"tcp","path":"","port":11052,"protocol":"vmess","remarks":"🔥","server":"45.67.230.79","sni":"","test_time":0.711304824,"tls":"","uuid":"314185f7-931d-4656-922d-0857e7afd224"}
 
-# Tested at: 2025-09-28 19:40:25 | Response: 3.076s | IP: 57.129.24.125
-{"alterId":0,"cipher":"auto","external_ip":"57.129.24.125","host":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.125","sni":"","test_time":3.076147017,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.562s | IP: 2605:a140:2273:7184::1
+{"alterId":0,"cipher":"auto","external_ip":"2605:a140:2273:7184::1","host":"209.126.84.189","network":"ws","path":"/vmessws","port":443,"protocol":"vmess","remarks":"🔥","server":"209.126.84.189","sni":"","test_time":0.561720031,"tls":"","uuid":"2c981164-9b93-4bca-94ff-b78d3f8498d7"}
 
-# Tested at: 2025-09-28 19:40:25 | Response: 3.197s | IP: 57.129.28.69
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.69","host":"baradiha.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.69","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":3.197257608,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.885s | IP: 38.107.234.57
+{"alterId":0,"cipher":"auto","external_ip":"38.107.234.57","host":"/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI","network":"ws","path":"/vmess/","port":80,"protocol":"vmess","remarks":"🔥","server":"38.107.234.57","sni":"","test_time":0.885014122,"tls":"","uuid":"567f4be5-12ab-42e1-b8d9-db6fd1fdd31c"}
 
-# Tested at: 2025-09-28 19:40:25 | Response: 3.324s | IP: 103.61.139.137
-{"alterId":0,"cipher":"auto","external_ip":"103.61.139.137","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"103.61.139.137","sni":"","test_time":3.324118055,"tls":"","uuid":"f8d93cfb-3d5d-447c-a697-16496dd74697"}
+# Tested at: 2025-09-28 21:46:33 | Response: 0.224s | IP: 2a01:7e04::f03c:95ff:fe7b:426b
+{"alterId":0,"cipher":"auto","external_ip":"2a01:7e04::f03c:95ff:fe7b:426b","host":"","network":"tcp","path":"","port":16416,"protocol":"vmess","remarks":"🔥","server":"172.233.171.224","sni":"","test_time":0.223901588,"tls":"","uuid":"8c1b9bea-cb51-43bb-a65c-0af31bbbf145"}
 
-# Tested at: 2025-09-28 19:40:26 | Response: 0.635s | IP: 148.113.176.187
-{"alterId":1,"cipher":"auto","external_ip":"148.113.176.187","host":"jamekk.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"jamekk.org","sni":"jamekk.org","test_time":0.634974793,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 0.503s | IP: 103.57.249.204
+{"alterId":0,"cipher":"none","external_ip":"103.57.249.204","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"103.57.249.204","sni":"","test_time":0.502860367,"tls":"","uuid":"f13143a7-542d-49ec-9428-098142b6977c"}
 
-# Tested at: 2025-09-28 19:40:26 | Response: 4.855s | IP: 15.204.103.7
-{"alterId":0,"cipher":"auto","external_ip":"15.204.103.7","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.204.103.7","sni":"lammaland.org","test_time":4.855043154,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 0.463s | IP: 15.235.41.200
+{"alterId":0,"cipher":"auto","external_ip":"15.235.41.200","host":"google.com","network":"ws","path":"/IOebhLMhl1CTbFHbL95myfRX2","port":80,"protocol":"vmess","remarks":"🔥","server":"15.235.41.200","sni":"","test_time":0.462822487,"tls":"","uuid":"58fe1542-5290-40ad-815a-77707a81afe5"}
 
-# Tested at: 2025-09-28 19:40:26 | Response: 3.463s | IP: 62.146.235.193
-{"alterId":0,"cipher":"auto","external_ip":"62.146.235.193","host":"","network":"tcp","path":"","port":28011,"protocol":"vmess","remarks":"🔥","server":"62.146.235.193","sni":"","test_time":3.46318582,"tls":"","uuid":"cfc5a87f-3c13-4e25-b556-176cdd6b5c6a"}
+# Tested at: 2025-09-28 21:46:34 | Response: 0.598s | IP: 51.68.191.233
+{"alterId":0,"cipher":"auto","external_ip":"51.68.191.233","host":"google.com","network":"ws","path":"/vmess/","port":80,"protocol":"vmess","remarks":"🔥","server":"51.68.191.233","sni":"","test_time":0.598125398,"tls":"","uuid":"f0eda072-9ae8-494c-a495-215fa5729467"}
 
-# Tested at: 2025-09-28 19:40:27 | Response: 4.925s | IP: 57.129.25.26
-{"alterId":0,"cipher":"auto","external_ip":"57.129.25.26","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.26","sni":"yichueng.org","test_time":4.925016065,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 0.743s | IP: 57.129.25.22
+{"alterId":0,"cipher":"auto","external_ip":"57.129.25.22","host":"o.metuji.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.22","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":0.742734727,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:40:27 | Response: 5.043s | IP: 57.129.28.213
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.213","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.213","sni":"fapeng.org","test_time":5.043267246,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 0.721s | IP: 2a0c:16c0:510:88f::2cd7
+{"alterId":0,"cipher":"auto","external_ip":"2a0c:16c0:510:88f::2cd7","host":"","network":"ws","path":"/","port":8443,"protocol":"vmess","remarks":"🔥","server":"216.173.69.250","sni":"","test_time":0.721197139,"tls":"none","uuid":"91382092-2330-455b-8a1c-9c129cfe661a"}
 
-# Tested at: 2025-09-28 19:40:27 | Response: 1.930s | IP: 164.138.202.114
-{"alterId":0,"cipher":"auto","external_ip":"164.138.202.114","host":"","network":"tcp","path":"","port":21639,"protocol":"vmess","remarks":"🔥","server":"164.138.202.114","sni":"","test_time":1.929623969,"tls":"","uuid":"ea4f2a2a-601c-4340-81b4-4b360eff4f61"}
+# Tested at: 2025-09-28 21:46:34 | Response: 0.313s | IP: 45.8.146.129
+{"alterId":0,"cipher":"auto","external_ip":"45.8.146.129","host":"","network":"ws","path":"/vmess/","port":80,"protocol":"vmess","remarks":"🔥","server":"45.8.146.129","sni":"","test_time":0.31324764,"tls":"","uuid":"0704016f-5435-4655-be6a-771a5aba52c3"}
 
-# Tested at: 2025-09-28 19:40:28 | Response: 5.555s | IP: 57.129.28.216
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.216","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.216","sni":"fapeng.org","test_time":5.55536392,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 1.929s | IP: 103.61.139.137
+{"alterId":0,"cipher":"auto","external_ip":"103.61.139.137","host":"","network":"ws","path":"/?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN","port":20521,"protocol":"vmess","remarks":"🔥","server":"103.61.139.137","sni":"","test_time":1.92936118,"tls":"","uuid":"f8d93cfb-3d5d-447c-a697-16496dd74697"}
 
-# Tested at: 2025-09-28 19:40:28 | Response: 6.229s | IP: 57.129.64.238
-{"alterId":0,"cipher":"auto","external_ip":"57.129.64.238","host":"kapelleng.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.64.238","sni":"kapelleng.com","test_time":6.229479525,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 1.176s | IP: 172.111.146.64
+{"alterId":0,"cipher":"auto","external_ip":"172.111.146.64","host":"","network":"ws","path":"/vmess/","port":80,"protocol":"vmess","remarks":"🔥","server":"172.111.146.64","sni":"","test_time":1.175724172,"tls":"","uuid":"05b8c783-7f59-47f9-9923-06a465679f6a"}
 
-# Tested at: 2025-09-28 19:40:28 | Response: 5.534s | IP: 57.129.64.157
-{"alterId":0,"cipher":"auto","external_ip":"57.129.64.157","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.64.157","sni":"lammaland.org","test_time":5.534376564,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:34 | Response: 1.644s | IP: 38.54.113.13
+{"alterId":0,"cipher":"auto","external_ip":"38.54.113.13","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"38.54.113.13","sni":"","test_time":1.643672977,"tls":"","uuid":"e4de34c6-eaac-4528-ac90-e03b3f66f9d2"}
 
-# Tested at: 2025-09-28 19:40:28 | Response: 6.736s | IP: 57.129.59.199
-{"alterId":1,"cipher":"auto","external_ip":"57.129.59.199","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.199","sni":"kampong.org","test_time":6.735951348,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:35 | Response: 1.261s | IP: 51.68.191.233
+{"alterId":0,"cipher":"auto","external_ip":"51.68.191.233","host":"","network":"ws","path":"/vmess/","port":8443,"protocol":"vmess","remarks":"🔥","server":"ov-germany7.09vpn.com","sni":"","test_time":1.260869378,"tls":"tls","uuid":"8b7ec98d-c291-4034-9719-e6d62051636a"}
 
-# Tested at: 2025-09-28 19:40:29 | Response: 7.674s | IP: 57.129.24.124
-{"alterId":0,"cipher":"auto","external_ip":"57.129.24.124","host":"aveiror.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.124","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":7.673954717,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:35 | Response: 0.726s | IP: 2a14:3087::9ea
+{"alterId":0,"cipher":"auto","external_ip":"2a14:3087::9ea","host":"","network":"tcp","path":"","port":37313,"protocol":"vmess","remarks":"🔥","server":"45.128.54.84","sni":"","test_time":0.725585531,"tls":"none","uuid":"72feb833-4196-4a70-a3f5-aeb011f7d534"}
 
-# Tested at: 2025-09-28 19:40:29 | Response: 7.848s | IP: 15.235.83.227
-{"alterId":0,"cipher":"auto","external_ip":"15.235.83.227","host":"mankadmu.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.83.227","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":7.847583684,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:46:35 | Response: 2.006s | IP: 89.31.120.192
+{"alterId":0,"cipher":"auto","external_ip":"89.31.120.192","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"89.31.120.192","sni":"","test_time":2.006021915,"tls":"","uuid":"44537595-9ccc-4b83-8936-5f9ad3229019"}
 
-# Tested at: 2025-09-28 19:40:30 | Response: 3.840s | IP: 65.109.217.125
-{"alterId":0,"cipher":"auto","external_ip":"65.109.217.125","host":"","network":"ws","path":"/","port":8443,"protocol":"vmess","remarks":"🔥","server":"65.109.217.125","sni":"fl.v2bazzar.ir","test_time":3.839551361,"tls":"tls","uuid":"5a38afce-c5eb-4cb8-8e5e-bb4f03462b44"}
+# Tested at: 2025-09-28 21:46:39 | Response: 6.299s | IP: 188.208.141.177
+{"alterId":0,"cipher":"auto","external_ip":"188.208.141.177","host":"188.208.141.177","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"188.208.141.177","sni":"","test_time":6.299015436,"tls":"","uuid":"0970834f-5b4d-44da-d890-19dcb2a72d4c"}
 
-# Tested at: 2025-09-28 19:40:33 | Response: 3.391s | IP: 15.235.83.228
-{"alterId":0,"cipher":"auto","external_ip":"15.235.83.228","host":"","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.83.228","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":3.390830092,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:17 | Response: 0.976s | IP: 38.114.100.17
+{"alterId":0,"cipher":"auto","external_ip":"38.114.100.17","host":"","network":"tcp","path":"","port":6506,"protocol":"vmess","remarks":"🔥","server":"193.124.24.247","sni":"","test_time":0.976040887,"tls":"","uuid":"c53d41d1-7d56-43ce-9994-408780c6476a"}
 
-# Tested at: 2025-09-28 19:40:36 | Response: 0.802s | IP: 57.129.28.70
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.70","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"lammaland.org","sni":"lammaland.org","test_time":0.801770807,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:17 | Response: 0.817s | IP: 139.180.155.29
+{"alterId":0,"cipher":"auto","external_ip":"139.180.155.29","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"139.180.155.29","sni":"","test_time":0.817437389,"tls":"","uuid":"08c2a76e-15d1-4ec0-a8d0-1f51bc76a667"}
 
-# Tested at: 2025-09-28 19:40:40 | Response: 8.330s | IP: 57.129.25.20
-{"alterId":1,"cipher":"auto","external_ip":"57.129.25.20","host":"57.129.25.20","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.20","sni":"","test_time":8.329643838,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:17 | Response: 1.009s | IP: 47.83.16.29
+{"alterId":0,"cipher":"auto","external_ip":"47.83.16.29","host":"","network":"ws","path":"/","port":30298,"protocol":"vmess","remarks":"🔥","server":"47.83.16.29","sni":"","test_time":1.008650904,"tls":"","uuid":"602272c0-1916-41fe-9b53-f1efd149f9bf"}
 
-# Tested at: 2025-09-28 19:41:05 | Response: 0.688s | IP: 45.136.12.37
-{"alterId":0,"cipher":"auto","external_ip":"45.136.12.37","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"45.136.12.37","sni":"","test_time":0.687541836,"tls":"","uuid":"090d0bd9-f9c4-4c3b-8aae-ffa678765935"}
+# Tested at: 2025-09-28 21:47:17 | Response: 0.469s | IP: 165.140.216.196
+{"alterId":0,"cipher":"auto","external_ip":"165.140.216.196","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"165.140.216.141","sni":"","test_time":0.469365921,"tls":"none","uuid":"e7d72a8d-26f2-4b54-b366-0c43e0bcba7d"}
 
-# Tested at: 2025-09-28 19:41:05 | Response: 0.741s | IP: 2a01:4f8:c013:fbbc::1
-{"alterId":0,"cipher":"auto","external_ip":"2a01:4f8:c013:fbbc::1","host":"","network":"ws","path":"/","port":20086,"protocol":"vmess","remarks":"🔥","server":"91.99.185.216","sni":"","test_time":0.741126384,"tls":"","uuid":"7bd6a1ea-a220-4f1c-afed-6cfb8ab96ad9"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.206s | IP: 123.58.203.92
+{"alterId":0,"cipher":"auto","external_ip":"123.58.203.92","host":"","network":"ws","path":"/","port":8443,"protocol":"vmess","remarks":"🔥","server":"123.58.203.92","sni":"","test_time":1.20573441,"tls":"none","uuid":"0bb0365b-c183-48c3-ad0d-a90fc76e2926"}
 
-# Tested at: 2025-09-28 19:41:05 | Response: 0.765s | IP: 45.128.54.84
-{"alterId":0,"cipher":"auto","external_ip":"45.128.54.84","host":"","network":"tcp","path":"","port":37313,"protocol":"vmess","remarks":"🔥","server":"45.128.54.84","sni":"","test_time":0.764910365,"tls":"","uuid":"72feb833-4196-4a70-a3f5-aeb011f7d534"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.628s | IP: 15.204.64.211
+{"alterId":1,"cipher":"auto","external_ip":"15.204.64.211","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.204.64.211","sni":"kampong.org","test_time":1.627875849,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:05 | Response: 0.251s | IP: 193.233.207.2
-{"alterId":0,"cipher":"auto","external_ip":"193.233.207.2","host":"","network":"tcp","path":"","port":6508,"protocol":"vmess","remarks":"🔥","server":"193.124.24.230","sni":"","test_time":0.251002103,"tls":"","uuid":"c93bf634-6a68-4117-fc6c-bd8b2e13e83e"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.185s | IP: 47.238.252.154
+{"alterId":0,"cipher":"auto","external_ip":"47.238.252.154","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"47.238.252.154","sni":"","test_time":1.185361199,"tls":"","uuid":"87bb9d49-6345-42d4-9ee4-91dd8a6ca544"}
 
-# Tested at: 2025-09-28 19:41:05 | Response: 0.920s | IP: 47.76.118.235
-{"alterId":0,"cipher":"auto","external_ip":"47.76.118.235","host":"","network":"ws","path":"/arki?ed=2048","port":4656,"protocol":"vmess","remarks":"🔥","server":"47.76.118.235","sni":"","test_time":0.920093913,"tls":"","uuid":"b32e6f10-a209-4614-a2da-5c3c2769c507"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.840s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"cc889ca0-cd29-2728-dadf-753fb6f18502.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":443,"protocol":"vmess","remarks":"🔥","server":"cc889ca0-cd29-2728-dadf-753fb6f18502.freevpnatm2025.dpdns.org","sni":"cc889ca0-cd29-2728-dadf-753fb6f18502.freevpnatm2025.dpdns.org","test_time":1.8401094260000002,"tls":"tls","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 1.200s | IP: 57.129.25.23
-{"alterId":0,"cipher":"auto","external_ip":"57.129.25.23","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.23","sni":"","test_time":1.200459498,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.230s | IP: 158.51.121.63
+{"alterId":1,"cipher":"auto","external_ip":"158.51.121.63","host":"seribus.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"seribus.org","sni":"seribus.org","test_time":1.23001042,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.978s | IP: 8.217.34.12
-{"alterId":0,"cipher":"auto","external_ip":"8.217.34.12","host":"","network":"ws","path":"/arki?ed=2048","port":62312,"protocol":"vmess","remarks":"🔥","server":"8.217.34.12","sni":"","test_time":0.977600844,"tls":"","uuid":"e2bdea80-bb43-4eac-a663-9d615b3a6c3f"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.402s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"6fa8477e-2e84-02aa-c932-3f2e884194a4.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":443,"protocol":"vmess","remarks":"🔥","server":"6fa8477e-2e84-02aa-c932-3f2e884194a4.freevpnatm2025.dpdns.org","sni":"6fa8477e-2e84-02aa-c932-3f2e884194a4.freevpnatm2025.dpdns.org","test_time":1.401600334,"tls":"tls","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.514s | IP: 47.242.214.178
-{"alterId":0,"cipher":"auto","external_ip":"47.242.214.178","host":"","network":"ws","path":"/arki?ed=2048","port":24497,"protocol":"vmess","remarks":"🔥","server":"47.242.214.178","sni":"","test_time":0.514390961,"tls":"","uuid":"0f62d166-39e5-4d3d-89b6-5c6490b4f4d4"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.456s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"e8c46690-90d1-8c68-db2c-35ca7bda3680.925.qzz.io","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":443,"protocol":"vmess","remarks":"🔥","server":"e8c46690-90d1-8c68-db2c-35ca7bda3680.925.qzz.io","sni":"e8c46690-90d1-8c68-db2c-35ca7bda3680.925.qzz.io","test_time":1.4563747949999999,"tls":"tls","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.578s | IP: 45.67.230.79
-{"alterId":0,"cipher":"auto","external_ip":"45.67.230.79","host":"/JOKERRVPN_BIA_CHANEL@JOKERRVPN","network":"tcp","path":"","port":11052,"protocol":"vmess","remarks":"🔥","server":"45.67.230.79","sni":"","test_time":0.578118545,"tls":"","uuid":"314185f7-931d-4656-922d-0857e7afd224"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.482s | IP: 148.113.176.192
+{"alterId":0,"cipher":"auto","external_ip":"148.113.176.192","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"148.113.176.192","sni":"fapeng.org","test_time":1.481643896,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.565s | IP: 198.2.249.97
-{"alterId":0,"cipher":"auto","external_ip":"198.2.249.97","host":"","network":"tcp","path":"","port":30002,"protocol":"vmess","remarks":"🔥","server":"38.12.83.217","sni":"","test_time":0.565051185,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.266s | IP: 47.250.159.134
+{"alterId":0,"cipher":"auto","external_ip":"47.250.159.134","host":"","network":"ws","path":"/arki?ed=2048","port":28293,"protocol":"vmess","remarks":"🔥","server":"47.250.159.134","sni":"","test_time":1.265920634,"tls":"","uuid":"ff9ad07c-e1b4-467f-90bc-9b067f47dd5c"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 1.266s | IP: 47.242.214.178
-{"alterId":0,"cipher":"auto","external_ip":"47.242.214.178","host":"","network":"ws","path":"/arki?ed=2048","port":52983,"protocol":"vmess","remarks":"🔥","server":"47.242.214.178","sni":"","test_time":1.266013732,"tls":"","uuid":"72a13e0b-5e55-4d6f-9404-db2f0a482f97"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.564s | IP: 57.129.59.201
+{"alterId":1,"cipher":"auto","external_ip":"57.129.59.201","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.201","sni":"kampong.org","test_time":1.564239833,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.751s | IP: 154.201.80.214
-{"alterId":0,"cipher":"auto","external_ip":"154.201.80.214","host":"","network":"ws","path":"/arki?ed=2048","port":11159,"protocol":"vmess","remarks":"🔥","server":"154.201.80.214","sni":"","test_time":0.751156019,"tls":"","uuid":"d9202fdd-5679-43a7-a933-0d07605bab3c"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.569s | IP: 148.113.153.112
+{"alterId":0,"cipher":"auto","external_ip":"148.113.153.112","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"148.113.153.112","sni":"serkat.org","test_time":1.5689288430000001,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.639s | IP: 2a03:f80:61:9925::1
-{"alterId":0,"cipher":"auto","external_ip":"2a03:f80:61:9925::1","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"103.57.249.204","sni":"","test_time":0.639294566,"tls":"","uuid":"f13143a7-542d-49ec-9428-098142b6977c"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.477s | IP: 57.129.28.213
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.213","host":"fapeng.org","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.213","sni":"fapeng.org","test_time":1.477328322,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.304s | IP: 15.204.64.211
-{"alterId":1,"cipher":"auto","external_ip":"15.204.64.211","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.204.64.211","sni":"kampong.org","test_time":0.304131322,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.510s | IP: 57.129.28.215
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.215","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.215","sni":"serkat.org","test_time":1.510240534,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 1.806s | IP: 209.126.84.189
-{"alterId":0,"cipher":"auto","external_ip":"209.126.84.189","host":"209.126.84.189","network":"ws","path":"/vmessws","port":443,"protocol":"vmess","remarks":"🔥","server":"209.126.84.189","sni":"","test_time":1.8059494900000002,"tls":"","uuid":"2c981164-9b93-4bca-94ff-b78d3f8498d7"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.562s | IP: 57.129.59.199
+{"alterId":1,"cipher":"auto","external_ip":"57.129.59.199","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.199","sni":"kampong.org","test_time":1.5621052739999999,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 1.564s | IP: 8.218.8.84
-{"alterId":0,"cipher":"auto","external_ip":"8.218.8.84","host":"","network":"ws","path":"/arki?ed=2048","port":23326,"protocol":"vmess","remarks":"🔥","server":"8.218.8.84","sni":"","test_time":1.564110655,"tls":"","uuid":"871d04df-fc58-470a-baca-daae28869164"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.150s | IP: 38.114.100.17
+{"alterId":0,"cipher":"auto","external_ip":"38.114.100.17","host":"","network":"tcp","path":"","port":6513,"protocol":"vmess","remarks":"🔥","server":"193.124.24.247","sni":"","test_time":0.149822595,"tls":"","uuid":"5cf7fcbc-e2c1-42c4-d0d7-79c45a7d588d"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.317s | IP: 38.114.100.17
-{"alterId":0,"cipher":"auto","external_ip":"38.114.100.17","host":"","network":"tcp","path":"","port":6513,"protocol":"vmess","remarks":"🔥","server":"193.124.24.247","sni":"","test_time":0.316711996,"tls":"","uuid":"5cf7fcbc-e2c1-42c4-d0d7-79c45a7d588d"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.603s | IP: 91.134.8.100
+{"alterId":1,"cipher":"auto","external_ip":"91.134.8.100","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"91.134.8.100","sni":"kampong.org","test_time":1.6033780420000001,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 1.005s | IP: 89.31.120.192
-{"alterId":0,"cipher":"auto","external_ip":"89.31.120.192","host":"","network":"tcp","path":"","port":443,"protocol":"vmess","remarks":"🔥","server":"89.31.120.192","sni":"","test_time":1.005444345,"tls":"","uuid":"44537595-9ccc-4b83-8936-5f9ad3229019"}
+# Tested at: 2025-09-28 21:47:18 | Response: 2.171s | IP: 146.59.118.250
+{"alterId":0,"cipher":"auto","external_ip":"146.59.118.250","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"146.59.118.250","sni":"lammaland.org","test_time":2.170973117,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.503s | IP: 8.217.34.12
-{"alterId":0,"cipher":"auto","external_ip":"8.217.34.12","host":"","network":"ws","path":"/arki?ed=2048","port":23477,"protocol":"vmess","remarks":"🔥","server":"8.217.34.12","sni":"","test_time":0.50307585,"tls":"","uuid":"80975d47-7f6a-436d-9085-4dadf4546e03"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.476s | IP: 15.235.85.156
+{"alterId":1,"cipher":"auto","external_ip":"15.235.85.156","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.85.156","sni":"kampong.org","test_time":1.475772401,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:06 | Response: 0.849s | IP: 218.102.159.40
-{"alterId":0,"cipher":"auto","external_ip":"218.102.159.40","host":"c004e6fe-t1i9s0-tm53cm-1ol97.hkt.tcpbbr.net","network":"ws","path":"/","port":80,"protocol":"vmess","remarks":"🔥","server":"c004e6fe-t1i9s0-tm53cm-1ol97.hkt.tcpbbr.net","sni":"","test_time":0.848948591,"tls":"","uuid":"93fb69fc-77cf-11ee-85ee-f23c91369f2d"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.715s | IP: 57.129.28.64
+{"alterId":1,"cipher":"auto","external_ip":"57.129.28.64","host":"serkat.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"serkat.org","sni":"","test_time":1.715202824,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 0.615s | IP: 37.59.112.70
-{"alterId":0,"cipher":"auto","external_ip":"37.59.112.70","host":"","network":"ws","path":"/cdn-cgi/trace","port":80,"protocol":"vmess","remarks":"🔥","server":"37.59.112.70","sni":"","test_time":0.614847658,"tls":"","uuid":"dc23b36a-b723-43c8-b5ac-e756592d6400"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.717s | IP: 57.129.28.214
+{"alterId":1,"cipher":"auto","external_ip":"57.129.28.214","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.214","sni":"kampong.org","test_time":1.717142078,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 0.725s | IP: 57.129.59.195
-{"alterId":1,"cipher":"auto","external_ip":"57.129.59.195","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.195","sni":"kampong.org","test_time":0.724775912,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.742s | IP: 15.235.83.227
+{"alterId":0,"cipher":"auto","external_ip":"15.235.83.227","host":"mankadmu.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.83.227","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":0.741945529,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.399s | IP: 47.76.118.235
-{"alterId":0,"cipher":"auto","external_ip":"47.76.118.235","host":"","network":"ws","path":"/arki?ed=2048","port":35407,"protocol":"vmess","remarks":"🔥","server":"47.76.118.235","sni":"","test_time":1.399405838,"tls":"","uuid":"b19fe95d-32ac-416a-9d46-d76d03f91873"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.514s | IP: 146.56.138.175
+{"alterId":0,"cipher":"auto","external_ip":"146.56.138.175","host":"","network":"ws","path":"/c399917/","port":443,"protocol":"vmess","remarks":"🔥","server":"seoul.lonxin.net","sni":"","test_time":1.513921346,"tls":"tls","uuid":"8118d54e-d91d-45d1-88ca-e302696f3a53"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 2.028s | IP: 47.83.162.4
-{"alterId":0,"cipher":"auto","external_ip":"47.83.162.4","host":"","network":"ws","path":"/arki?ed=2048","port":40873,"protocol":"vmess","remarks":"🔥","server":"47.83.162.4","sni":"","test_time":2.028272469,"tls":"","uuid":"3fd266bc-7691-43cf-a82f-0c9761a69bf0"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.623s | IP: 15.235.83.228
+{"alterId":64,"cipher":"auto","external_ip":"15.235.83.228","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.83.228","sni":"","test_time":0.622872233,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.484s | IP: 131.196.252.59
-{"alterId":0,"cipher":"auto","external_ip":"131.196.252.59","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"131.196.252.59","sni":"","test_time":1.483930559,"tls":"","uuid":"5809911a-a16e-43d3-90b0-2c94cfc2035e"}
+# Tested at: 2025-09-28 21:47:18 | Response: 2.197s | IP: 57.129.25.26
+{"alterId":0,"cipher":"auto","external_ip":"57.129.25.26","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.26","sni":"yichueng.org","test_time":2.196758945,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.125s | IP: 8.220.188.238
-{"alterId":0,"cipher":"auto","external_ip":"8.220.188.238","host":"","network":"ws","path":"/arki?ed=2048","port":33248,"protocol":"vmess","remarks":"🔥","server":"8.220.188.238","sni":"","test_time":1.124834258,"tls":"","uuid":"81b57c84-698f-4944-9268-db6a06a4a63a"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.572s | IP: 57.129.59.193
+{"alterId":0,"cipher":"auto","external_ip":"57.129.59.193","host":"serkat.org","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.193","sni":"serkat.org","test_time":1.572496855,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 0.346s | IP: 216.39.249.206
-{"alterId":1,"cipher":"auto","external_ip":"216.39.249.206","host":"masjide.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"masjide.org","sni":"masjide.org","test_time":0.345661175,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.176s | IP: 2605:a140:2273:7184::1
+{"alterId":0,"cipher":"auto","external_ip":"2605:a140:2273:7184::1","host":"v2ray.codefyinc.com","network":"ws","path":"/vmessws","port":443,"protocol":"vmess","remarks":"🔥","server":"v2ray.codefyinc.com","sni":"v2ray.codefyinc.com","test_time":1.175813466,"tls":"tls","uuid":"2c981164-9b93-4bca-94ff-b78d3f8498d7"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.797s | IP: 47.76.118.235
-{"alterId":0,"cipher":"auto","external_ip":"47.76.118.235","host":"","network":"ws","path":"/arki?ed=2048","port":7775,"protocol":"vmess","remarks":"🔥","server":"47.76.118.235","sni":"","test_time":1.7971884230000001,"tls":"","uuid":"0f1c2d37-adb4-4677-9727-dbb1b8e2b794"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.214s | IP: 38.99.82.193
+{"alterId":0,"cipher":"auto","external_ip":"38.99.82.193","host":"tilebani.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"38.99.82.193","sni":"wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc","test_time":1.214182128,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.873s | IP: 57.129.59.200
-{"alterId":0,"cipher":"auto","external_ip":"57.129.59.200","host":"Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"serkat.org","sni":"serkat.org","test_time":1.8725072539999998,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.194s | IP: 57.129.28.216
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.216","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.216","sni":"fapeng.org","test_time":1.193967905,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.792s | IP: 8.217.246.150
-{"alterId":0,"cipher":"auto","external_ip":"8.217.246.150","host":"","network":"ws","path":"/","port":54288,"protocol":"vmess","remarks":"🔥","server":"8.217.246.150","sni":"","test_time":1.791802176,"tls":"","uuid":"c84014f1-9de0-49f4-b751-ab8d7928bf9a"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.731s | IP: 165.154.195.38
+{"alterId":0,"cipher":"auto","external_ip":"165.154.195.38","host":"","network":"tcp","path":"","port":35034,"protocol":"vmess","remarks":"🔥","server":"165.154.195.38","sni":"","test_time":0.731099942,"tls":"","uuid":"959a8caf-4cea-43d0-a548-3628e7ddfafc"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 0.395s | IP: 47.239.81.113
-{"alterId":0,"cipher":"auto","external_ip":"47.239.81.113","host":"","network":"ws","path":"/arki?ed=2048","port":29760,"protocol":"vmess","remarks":"🔥","server":"47.239.81.113","sni":"","test_time":0.395251486,"tls":"","uuid":"fd2987cc-b25f-4966-846a-b0d65d3c1e4b"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.181s | IP: 57.129.24.131
+{"alterId":1,"cipher":"auto","external_ip":"57.129.24.131","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.131","sni":"kampong.org","test_time":1.181161912,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.869s | IP: 89.169.13.60
-{"alterId":0,"cipher":"auto","external_ip":"89.169.13.60","host":"google.com","network":"ws","path":"/","port":28838,"protocol":"vmess","remarks":"🔥","server":"89.169.13.60","sni":"","test_time":1.868997878,"tls":"","uuid":"b9d3c414-89cc-455d-b717-10c7ca1665a1"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.788s | IP: 1.64.14.145
+{"alterId":0,"cipher":"auto","external_ip":"1.64.14.145","host":"","network":"tcp","path":"","port":64019,"protocol":"vmess","remarks":"🔥","server":"pub.ap20250909.xyz","sni":"","test_time":1.787979908,"tls":"","uuid":"59033095-4fda-31ab-9f9d-06d464aef2be"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.174s | IP: 38.143.66.81
-{"alterId":1,"cipher":"auto","external_ip":"38.143.66.81","host":"seribus.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"seribus.org","sni":"seribus.org","test_time":1.174227288,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.477s | IP: 15.204.239.14
+{"alterId":0,"cipher":"auto","external_ip":"15.204.239.14","host":"BlaZe-Us-14.BLazECLoUdmaIN.site","network":"ws","path":"/linkvkwsss","port":443,"protocol":"vmess","remarks":"🔥","server":"15.204.239.14","sni":"BlaZe-Us-14.BLazECLoUdmaIN.site","test_time":0.477149955,"tls":"tls","uuid":"59b0b7da-6ea6-4685-a760-0ef304aef0e3"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 1.519s | IP: 91.134.8.100
-{"alterId":1,"cipher":"auto","external_ip":"91.134.8.100","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"91.134.8.100","sni":"kampong.org","test_time":1.519490048,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.270s | IP: 57.129.25.23
+{"alterId":0,"cipher":"auto","external_ip":"57.129.25.23","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.25.23","sni":"yichueng.org","test_time":1.269520843,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:07 | Response: 2.085s | IP: 38.60.217.146
-{"alterId":0,"cipher":"auto","external_ip":"38.60.217.146","host":"","network":"ws","path":"/","port":443,"protocol":"vmess","remarks":"🔥","server":"38.60.217.146","sni":"","test_time":2.085130176,"tls":"","uuid":"26ae36a4-e21f-48ae-e90b-5adf271b046e"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.525s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"ef7c2383-03bb-fec2-327b-34f6b2ace7cb.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":443,"protocol":"vmess","remarks":"🔥","server":"ef7c2383-03bb-fec2-327b-34f6b2ace7cb.freevpnatm2025.dpdns.org","sni":"ef7c2383-03bb-fec2-327b-34f6b2ace7cb.freevpnatm2025.dpdns.org","test_time":0.525250862,"tls":"tls","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
 
-# Tested at: 2025-09-28 19:41:08 | Response: 2.283s | IP: 154.201.80.214
-{"alterId":0,"cipher":"auto","external_ip":"154.201.80.214","host":"","network":"ws","path":"/arki?ed=2048","port":44471,"protocol":"vmess","remarks":"🔥","server":"154.201.80.214","sni":"","test_time":2.282808174,"tls":"","uuid":"7b454c2e-51d2-49ef-8814-71531c2bd41f"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.397s | IP: 47.83.162.4
+{"alterId":0,"cipher":"auto","external_ip":"47.83.162.4","host":"","network":"ws","path":"/arki?ed=2048","port":40873,"protocol":"vmess","remarks":"🔥","server":"47.83.162.4","sni":"","test_time":0.397386002,"tls":"","uuid":"3fd266bc-7691-43cf-a82f-0c9761a69bf0"}
 
-# Tested at: 2025-09-28 19:41:08 | Response: 0.501s | IP: 8.210.230.179
-{"alterId":0,"cipher":"auto","external_ip":"8.210.230.179","host":"","network":"ws","path":"/arki?ed=2048","port":45324,"protocol":"vmess","remarks":"🔥","server":"8.210.230.179","sni":"","test_time":0.501434723,"tls":"","uuid":"88ae3410-5af6-4a76-bb0f-940d6fff4f1a"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.708s | IP: 172.245.152.39
+{"alterId":0,"cipher":"auto","external_ip":"172.245.152.39","host":"newyork.cloudflareservervpn.sbs","network":"ws","path":"/newyork","port":2096,"protocol":"vmess","remarks":"🔥","server":"newyork.cloudflareservervpn.sbs","sni":"","test_time":0.70751169,"tls":"tls","uuid":"8c111c4f-af43-43fe-bbf8-d7e075479557"}
 
-# Tested at: 2025-09-28 19:41:08 | Response: 0.741s | IP: 160.19.78.237
-{"alterId":0,"cipher":"auto","external_ip":"160.19.78.237","host":"","network":"ws","path":"/arki?ed=2048","port":26037,"protocol":"vmess","remarks":"🔥","server":"160.19.78.237","sni":"","test_time":0.741438439,"tls":"","uuid":"f527c7b2-ab3a-4aec-a3d1-94351020dff4"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.894s | IP: 57.129.28.212
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.212","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.212","sni":"fapeng.org","test_time":1.89386071,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:08 | Response: 2.214s | IP: 57.128.216.125
-{"alterId":1,"cipher":"auto","external_ip":"57.128.216.125","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.216.125","sni":"kampong.org","test_time":2.214127927,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 1.889s | IP: 47.76.89.175
+{"alterId":0,"cipher":"auto","external_ip":"47.76.89.175","host":"","network":"ws","path":"/arki?ed=2048","port":43359,"protocol":"vmess","remarks":"🔥","server":"47.76.89.175","sni":"","test_time":1.88882734,"tls":"","uuid":"34d54f29-ad0a-47e6-9f5e-0b82074163dc"}
 
-# Tested at: 2025-09-28 19:41:08 | Response: 2.238s | IP: 57.128.189.240
-{"alterId":0,"cipher":"auto","external_ip":"57.128.189.240","host":"","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.189.240","sni":"","test_time":2.237857042,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:18 | Response: 2.093s | IP: 141.94.155.228
+{"alterId":1,"cipher":"auto","external_ip":"141.94.155.228","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"141.94.155.228","sni":"kampong.org","test_time":2.093122965,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:09 | Response: 1.046s | IP: 160.19.78.237
-{"alterId":0,"cipher":"auto","external_ip":"160.19.78.237","host":"","network":"ws","path":"/arki?ed=2048","port":40608,"protocol":"vmess","remarks":"🔥","server":"160.19.78.237","sni":"","test_time":1.045541014,"tls":"","uuid":"167dc5a8-6f72-49b3-a0c9-e41e403bd400"}
+# Tested at: 2025-09-28 21:47:18 | Response: 0.341s | IP: 185.122.166.65
+{"alterId":0,"cipher":"auto","external_ip":"185.122.166.65","host":"klo.986986.shop","network":"ws","path":"/nvjx6j7kbDQIQMZvbeVA9","port":443,"protocol":"vmess","remarks":"🔥","server":"klo.986986.shop","sni":"klo.986986.shop","test_time":0.341163232,"tls":"tls","uuid":"b75c9731-408d-4aa6-8ae9-3857205113a1"}
 
-# Tested at: 2025-09-28 19:41:09 | Response: 3.018s | IP: 209.126.84.189
-{"alterId":0,"cipher":"auto","external_ip":"209.126.84.189","host":"v2ray.codefyinc.com","network":"ws","path":"/vmessws","port":443,"protocol":"vmess","remarks":"🔥","server":"v2ray.codefyinc.com","sni":"","test_time":3.017954962,"tls":"","uuid":"2c981164-9b93-4bca-94ff-b78d3f8498d7"}
+# Tested at: 2025-09-28 21:47:19 | Response: 1.612s | IP: 8.218.8.84
+{"alterId":0,"cipher":"auto","external_ip":"8.218.8.84","host":"","network":"ws","path":"/arki?ed=2048","port":30489,"protocol":"vmess","remarks":"🔥","server":"8.218.8.84","sni":"","test_time":1.6119191449999999,"tls":"","uuid":"c7275393-4687-4709-ac07-17a516a1b457"}
 
-# Tested at: 2025-09-28 19:41:09 | Response: 2.256s | IP: 47.238.252.154
-{"alterId":0,"cipher":"auto","external_ip":"47.238.252.154","host":"","network":"ws","path":"/arki?ed=2048","port":58867,"protocol":"vmess","remarks":"🔥","server":"47.238.252.154","sni":"","test_time":2.256203903,"tls":"","uuid":"7b80e36f-b082-46fc-ae59-6bb0dd17eee8"}
+# Tested at: 2025-09-28 21:47:19 | Response: 2.614s | IP: 57.129.59.195
+{"alterId":1,"cipher":"auto","external_ip":"57.129.59.195","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.195","sni":"kampong.org","test_time":2.613912192,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:11 | Response: 6.005s | IP: 154.9.254.63
-{"alterId":0,"cipher":"auto","external_ip":"154.9.254.63","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"154.9.254.63","sni":"","test_time":6.004552206,"tls":"","uuid":"d824764a-954e-4c75-9116-f6e5eba944a9"}
+# Tested at: 2025-09-28 21:47:19 | Response: 1.691s | IP: 47.76.118.235
+{"alterId":0,"cipher":"auto","external_ip":"47.76.118.235","host":"","network":"ws","path":"/arki?ed=2048","port":35407,"protocol":"vmess","remarks":"🔥","server":"47.76.118.235","sni":"","test_time":1.690786501,"tls":"","uuid":"b19fe95d-32ac-416a-9d46-d76d03f91873"}
 
-# Tested at: 2025-09-28 19:41:11 | Response: 5.252s | IP: 57.129.28.63
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.63","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.63","sni":"fapeng.org","test_time":5.251503037,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:19 | Response: 0.873s | IP: 51.195.91.6
+{"alterId":0,"cipher":"auto","external_ip":"51.195.91.6","host":"BLaze-GERMaNy-6.bLaZeserVeRs1.Site","network":"ws","path":"/linkvkwss","port":443,"protocol":"vmess","remarks":"🔥","server":"51.195.91.6","sni":"BLaze-GERMaNy-6.bLaZeserVeRs1.Site","test_time":0.873367639,"tls":"tls","uuid":"441a06df-989f-4d06-aef0-1d90ad3f8582"}
 
-# Tested at: 2025-09-28 19:41:11 | Response: 1.359s | IP: 47.76.157.234
-{"alterId":0,"cipher":"auto","external_ip":"47.76.157.234","host":"","network":"ws","path":"/arki?ed=2048","port":55125,"protocol":"vmess","remarks":"🔥","server":"47.76.157.234","sni":"","test_time":1.358828391,"tls":"","uuid":"87227bd9-1506-4d48-bd6b-0b80a8c2aae7"}
+# Tested at: 2025-09-28 21:47:19 | Response: 0.778s | IP: 91.134.8.92
+{"alterId":0,"cipher":"auto","external_ip":"91.134.8.92","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"91.134.8.92","sni":"yichueng.org","test_time":0.778239876,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:11 | Response: 7.506s | IP: 57.129.24.131
-{"alterId":1,"cipher":"auto","external_ip":"57.129.24.131","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.24.131","sni":"kampong.org","test_time":7.5063402230000005,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:19 | Response: 1.700s | IP: 8.217.246.150
+{"alterId":0,"cipher":"auto","external_ip":"8.217.246.150","host":"","network":"ws","path":"/","port":54288,"protocol":"vmess","remarks":"🔥","server":"8.217.246.150","sni":"","test_time":1.700479922,"tls":"","uuid":"c84014f1-9de0-49f4-b751-ab8d7928bf9a"}
 
-# Tested at: 2025-09-28 19:41:12 | Response: 6.108s | IP: 57.129.28.212
-{"alterId":0,"cipher":"auto","external_ip":"57.129.28.212","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.212","sni":"fapeng.org","test_time":6.107926528,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:19 | Response: 0.405s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"b47c127d-bec2-6281-8d44-63d0c17d7a4a.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":443,"protocol":"vmess","remarks":"🔥","server":"b47c127d-bec2-6281-8d44-63d0c17d7a4a.freevpnatm2025.dpdns.org","sni":"b47c127d-bec2-6281-8d44-63d0c17d7a4a.freevpnatm2025.dpdns.org","test_time":0.405067919,"tls":"tls","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
 
-# Tested at: 2025-09-28 19:41:14 | Response: 8.370s | IP: 57.129.59.201
-{"alterId":0,"cipher":"auto","external_ip":"57.129.59.201","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.59.201","sni":"kampong.org","test_time":8.370249509,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:19 | Response: 1.825s | IP: 5.182.39.44
+{"alterId":0,"cipher":"auto","external_ip":"5.182.39.44","host":"Join----JKVPN---Join----JKVPN----Join----JKVPN----Join----JKVPN","network":"tcp","path":"","port":444,"protocol":"vmess","remarks":"🔥","server":"5.182.39.44","sni":"","test_time":1.8245123159999999,"tls":"","uuid":"7d52a409-aa5a-471f-aca5-e7621bf1b813"}
 
-# Tested at: 2025-09-28 19:41:16 | Response: 0.561s | IP: 8.210.230.179
-{"alterId":0,"cipher":"auto","external_ip":"8.210.230.179","host":"","network":"ws","path":"/arki?ed=2048","port":2318,"protocol":"vmess","remarks":"🔥","server":"8.210.230.179","sni":"","test_time":0.561400644,"tls":"","uuid":"55bb7a7c-c09d-47f6-a047-8472eeaadeff"}
+# Tested at: 2025-09-28 21:47:19 | Response: 0.396s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"6fa8477e-2e84-02aa-c932-3f2e884194a4.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":80,"protocol":"vmess","remarks":"🔥","server":"6fa8477e-2e84-02aa-c932-3f2e884194a4.freevpnatm2025.dpdns.org","sni":"","test_time":0.395574749,"tls":"","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
 
-# Tested at: 2025-09-28 19:41:22 | Response: 1.705s | IP: 57.128.189.222
-{"alterId":0,"cipher":"auto","external_ip":"57.128.189.222","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.189.222","sni":"","test_time":1.70539442,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+# Tested at: 2025-09-28 21:47:19 | Response: 1.176s | IP: 146.59.118.249
+{"alterId":1,"cipher":"auto","external_ip":"146.59.118.249","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"fapeng.org","sni":"fapeng.org","test_time":1.176458177,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
 
-# Tested at: 2025-09-28 19:41:23 | Response: 7.319s | IP: 2a14:3087::152
-{"alterId":0,"cipher":"auto","external_ip":"2a14:3087::152","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"45.89.107.51","sni":"","test_time":7.319124835,"tls":"","uuid":"3dbaa5c3-f493-4ad1-9c5d-8525f4962a6c"}
+# Tested at: 2025-09-28 21:47:19 | Response: 0.756s | IP: 8.210.230.179
+{"alterId":0,"cipher":"auto","external_ip":"8.210.230.179","host":"","network":"ws","path":"/arki?ed=2048","port":45324,"protocol":"vmess","remarks":"🔥","server":"8.210.230.179","sni":"","test_time":0.756196788,"tls":"","uuid":"88ae3410-5af6-4a76-bb0f-940d6fff4f1a"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 1.144s | IP: 146.59.118.250
+{"alterId":1,"cipher":"auto","external_ip":"146.59.118.250","host":"lammaland.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"lammaland.org","sni":"lammaland.org","test_time":1.144103428,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 0.831s | IP: 141.94.155.228
+{"alterId":1,"cipher":"auto","external_ip":"141.94.155.228","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"kampong.org","sni":"kampong.org","test_time":0.831246845,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 1.077s | IP: 54.169.173.51
+{"alterId":0,"cipher":"auto","external_ip":"54.169.173.51","host":"singapore2.helloshuai.com","network":"ws","path":"/39cb4/","port":443,"protocol":"vmess","remarks":"🔥","server":"54.169.173.51","sni":"singapore2.helloshuai.com","test_time":1.077431842,"tls":"tls","uuid":"14a79148-3d75-41d6-a998-2be9edef88cb"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 0.727s | IP: 154.201.80.214
+{"alterId":0,"cipher":"auto","external_ip":"154.201.80.214","host":"","network":"ws","path":"/arki?ed=2048","port":44471,"protocol":"vmess","remarks":"🔥","server":"154.201.80.214","sni":"","test_time":0.726919103,"tls":"","uuid":"7b454c2e-51d2-49ef-8814-71531c2bd41f"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 2.481s | IP: 57.129.28.63
+{"alterId":0,"cipher":"auto","external_ip":"57.129.28.63","host":"fapeng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.129.28.63","sni":"fapeng.org","test_time":2.480977858,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 0.928s | IP: 57.129.28.67
+{"alterId":1,"cipher":"auto","external_ip":"57.129.28.67","host":"yichueng.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"yichueng.org","sni":"yichueng.org","test_time":0.92814103,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 1.448s | IP: 47.239.81.113
+{"alterId":0,"cipher":"auto","external_ip":"47.239.81.113","host":"","network":"ws","path":"/arki?ed=2048","port":29760,"protocol":"vmess","remarks":"🔥","server":"47.239.81.113","sni":"","test_time":1.448309863,"tls":"","uuid":"fd2987cc-b25f-4966-846a-b0d65d3c1e4b"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 0.785s | IP: 8.217.220.30
+{"alterId":0,"cipher":"auto","external_ip":"8.217.220.30","host":"","network":"ws","path":"/arki?ed=2048","port":62236,"protocol":"vmess","remarks":"🔥","server":"8.217.220.30","sni":"","test_time":0.785357012,"tls":"","uuid":"1d250ec9-412a-4b9b-bbdc-cdfcd76620b0"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 0.939s | IP: 154.201.80.214
+{"alterId":0,"cipher":"auto","external_ip":"154.201.80.214","host":"","network":"ws","path":"/arki?ed=2048","port":11159,"protocol":"vmess","remarks":"🔥","server":"154.201.80.214","sni":"","test_time":0.939052501,"tls":"","uuid":"d9202fdd-5679-43a7-a933-0d07605bab3c"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 2.869s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"e8c46690-90d1-8c68-db2c-35ca7bda3680.925.qzz.io","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":80,"protocol":"vmess","remarks":"🔥","server":"e8c46690-90d1-8c68-db2c-35ca7bda3680.925.qzz.io","sni":"","test_time":2.869039339,"tls":"","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 1.197s | IP: 2a05:541:142:4f::1
+{"alterId":0,"cipher":"auto","external_ip":"2a05:541:142:4f::1","host":"","network":"ws","path":"/","port":20086,"protocol":"vmess","remarks":"🔥","server":"62.60.187.28","sni":"","test_time":1.197224493,"tls":"","uuid":"570b4cfc-80d5-4277-8c97-8444ba0689b9"}
+
+# Tested at: 2025-09-28 21:47:19 | Response: 1.447s | IP: 103.96.73.162
+{"alterId":0,"cipher":"auto","external_ip":"103.96.73.162","host":"","network":"ws","path":"/","port":20086,"protocol":"vmess","remarks":"🔥","server":"103.96.73.162","sni":"","test_time":1.446755103,"tls":"none","uuid":"253fd22d-6cbe-4953-891b-4ce3108ed935"}
+
+# Tested at: 2025-09-28 21:47:20 | Response: 2.572s | IP: 54.169.173.51
+{"alterId":0,"cipher":"auto","external_ip":"54.169.173.51","host":"singapore2.helloshuai.com","network":"ws","path":"/39cb4/","port":443,"protocol":"vmess","remarks":"🔥","server":"singapore2.helloshuai.com","sni":"singapore2.helloshuai.com","test_time":2.572319025,"tls":"tls","uuid":"14a79148-3d75-41d6-a998-2be9edef88cb"}
+
+# Tested at: 2025-09-28 21:47:23 | Response: 7.073s | IP: 216.39.249.206
+{"alterId":1,"cipher":"auto","external_ip":"216.39.249.206","host":"masjide.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"masjide.org","sni":"masjide.org","test_time":7.072582738,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:47:29 | Response: 3.984s | IP: 192.3.233.216
+{"alterId":0,"cipher":"auto","external_ip":"192.3.233.216","host":"","network":"ws","path":"/","port":16556,"protocol":"vmess","remarks":"🔥","server":"192.3.233.216","sni":"","test_time":3.984085719,"tls":"","uuid":"600f0d3e-a25d-468b-c789-0b5baa2f52c1"}
+
+# Tested at: 2025-09-28 21:47:31 | Response: 5.522s | IP: 140.235.38.89
+{"alterId":0,"cipher":"auto","external_ip":"140.235.38.89","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"140.235.38.89","sni":"","test_time":5.5217778509999995,"tls":"","uuid":"c65ef645-2172-44d1-909f-cb30a40bca1c"}
+
+# Tested at: 2025-09-28 21:47:41 | Response: 9.130s | IP: 38.54.33.254
+{"alterId":0,"cipher":"auto","external_ip":"38.54.33.254","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"38.54.33.254","sni":"","test_time":9.130460164,"tls":"","uuid":"9c51f7f3-eafc-4525-a920-8d7fbda435f2"}
+
+# Tested at: 2025-09-28 21:47:41 | Response: 9.467s | IP: 164.138.202.114
+{"alterId":0,"cipher":"auto","external_ip":"164.138.202.114","host":"/?BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI","network":"tcp","path":"","port":21639,"protocol":"vmess","remarks":"🔥","server":"164.138.202.114","sni":"","test_time":9.467098661,"tls":"","uuid":"816c36a6-94a6-4d0c-9e55-25f1b1afa9a9"}
+
+# Tested at: 2025-09-28 21:48:02 | Response: 0.487s | IP: 47.239.81.113
+{"alterId":0,"cipher":"auto","external_ip":"47.239.81.113","host":"","network":"ws","path":"/arki?ed=2048","port":28421,"protocol":"vmess","remarks":"🔥","server":"47.239.81.113","sni":"","test_time":0.487200191,"tls":"","uuid":"10f1cf8b-065b-49bd-9c2c-46e64ed08b3d"}
+
+# Tested at: 2025-09-28 21:48:03 | Response: 0.440s | IP: 8.210.230.179
+{"alterId":0,"cipher":"auto","external_ip":"8.210.230.179","host":"","network":"ws","path":"/arki?ed=2048","port":2318,"protocol":"vmess","remarks":"🔥","server":"8.210.230.179","sni":"","test_time":0.439838749,"tls":"","uuid":"55bb7a7c-c09d-47f6-a047-8472eeaadeff"}
+
+# Tested at: 2025-09-28 21:48:03 | Response: 0.481s | IP: 116.206.93.165
+{"alterId":0,"cipher":"auto","external_ip":"116.206.93.165","host":"","network":"ws","path":"/","port":39975,"protocol":"vmess","remarks":"🔥","server":"116.206.93.165","sni":"","test_time":0.481401493,"tls":"","uuid":"bb892078-98ef-4321-edf4-4c408edd5ae2"}
+
+# Tested at: 2025-09-28 21:48:03 | Response: 0.883s | IP: 160.19.78.237
+{"alterId":0,"cipher":"auto","external_ip":"160.19.78.237","host":"","network":"ws","path":"/arki?ed=2048","port":40608,"protocol":"vmess","remarks":"🔥","server":"160.19.78.237","sni":"","test_time":0.88347246,"tls":"","uuid":"167dc5a8-6f72-49b3-a0c9-e41e403bd400"}
+
+# Tested at: 2025-09-28 21:48:04 | Response: 1.353s | IP: 57.128.189.253
+{"alterId":0,"cipher":"auto","external_ip":"57.128.189.253","host":"kapelleng.com","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.189.253","sni":"kapelleng.com","test_time":1.352841739,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:48:04 | Response: 1.203s | IP: 57.128.189.240
+{"alterId":0,"cipher":"auto","external_ip":"57.128.189.240","host":"","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.189.240","sni":"","test_time":1.202883581,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:48:04 | Response: 1.155s | IP: 107.174.26.166
+{"alterId":0,"cipher":"auto","external_ip":"107.174.26.166","host":"bbbbbbbbb.222769.xyz","network":"ws","path":"/f6taOMcOSZb9TPR","port":80,"protocol":"vmess","remarks":"🔥","server":"bbbbbbbbb.222769.xyz","sni":"","test_time":1.155316954,"tls":"","uuid":"2e65577e-8fdb-4bb1-a495-96f3122099a7"}
+
+# Tested at: 2025-09-28 21:48:47 | Response: 1.194s | IP: 8.217.34.12
+{"alterId":0,"cipher":"auto","external_ip":"8.217.34.12","host":"","network":"ws","path":"/arki?ed=2048","port":62312,"protocol":"vmess","remarks":"🔥","server":"8.217.34.12","sni":"","test_time":1.193942794,"tls":"","uuid":"e2bdea80-bb43-4eac-a663-9d615b3a6c3f"}
+
+# Tested at: 2025-09-28 21:48:49 | Response: 1.062s | IP: 2406:8dc0:6008:302::
+{"alterId":0,"cipher":"auto","external_ip":"2406:8dc0:6008:302::","host":"","network":"ws","path":"/arki?ed=2048","port":6474,"protocol":"vmess","remarks":"🔥","server":"140.235.38.89","sni":"","test_time":1.062262408,"tls":"","uuid":"96a69037-7bf8-43f8-bd62-4beb8f1f36e2"}
+
+# Tested at: 2025-09-28 21:48:49 | Response: 2.647s | IP: 154.9.254.63
+{"alterId":0,"cipher":"auto","external_ip":"154.9.254.63","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"154.9.254.63","sni":"","test_time":2.647042662,"tls":"","uuid":"d824764a-954e-4c75-9116-f6e5eba944a9"}
+
+# Tested at: 2025-09-28 21:49:05 | Response: 8.712s | IP: 209.141.56.238
+{"alterId":0,"cipher":"auto","external_ip":"209.141.56.238","host":"","network":"ws","path":"/","port":23183,"protocol":"vmess","remarks":"🔥","server":"212.192.12.251","sni":"","test_time":8.712421417,"tls":"","uuid":"cd7e994f-f9f3-4fae-93c7-ee4e36a84811"}
+
+# Tested at: 2025-09-28 21:49:31 | Response: 0.780s | IP: 45.136.12.37
+{"alterId":0,"cipher":"auto","external_ip":"45.136.12.37","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"45.136.12.37","sni":"","test_time":0.779599644,"tls":"","uuid":"090d0bd9-f9c4-4c3b-8aae-ffa678765935"}
+
+# Tested at: 2025-09-28 21:49:32 | Response: 0.950s | IP: 47.76.118.235
+{"alterId":0,"cipher":"auto","external_ip":"47.76.118.235","host":"","network":"ws","path":"/arki?ed=2048","port":4656,"protocol":"vmess","remarks":"🔥","server":"47.76.118.235","sni":"","test_time":0.950464233,"tls":"","uuid":"b32e6f10-a209-4614-a2da-5c3c2769c507"}
+
+# Tested at: 2025-09-28 21:49:32 | Response: 1.245s | IP: 2a14:3087::152
+{"alterId":0,"cipher":"auto","external_ip":"2a14:3087::152","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"45.89.107.51","sni":"","test_time":1.245383309,"tls":"","uuid":"3dbaa5c3-f493-4ad1-9c5d-8525f4962a6c"}
+
+# Tested at: 2025-09-28 21:49:33 | Response: 1.551s | IP: 8.210.230.179
+{"alterId":0,"cipher":"auto","external_ip":"8.210.230.179","host":"","network":"ws","path":"/arki?ed=2048","port":12125,"protocol":"vmess","remarks":"🔥","server":"8.210.230.179","sni":"","test_time":1.551262395,"tls":"","uuid":"8b0c11be-1ffe-4074-afc5-e734fe985b22"}
+
+# Tested at: 2025-09-28 21:50:16 | Response: 1.363s | IP: 154.201.80.214
+{"alterId":0,"cipher":"auto","external_ip":"154.201.80.214","host":"","network":"ws","path":"/arki?ed=2048","port":13660,"protocol":"vmess","remarks":"🔥","server":"154.201.80.214","sni":"","test_time":1.36347398,"tls":"","uuid":"aeffa9bc-8bb5-4974-8d51-9cfec0051c3c"}
+
+# Tested at: 2025-09-28 21:50:17 | Response: 2.013s | IP: 47.76.233.2
+{"alterId":0,"cipher":"auto","external_ip":"47.76.233.2","host":"","network":"ws","path":"/arki?ed=2048","port":37660,"protocol":"vmess","remarks":"🔥","server":"47.76.233.2","sni":"","test_time":2.013326287,"tls":"","uuid":"249624df-4ca9-496c-9313-da9c3cd3f655"}
+
+# Tested at: 2025-09-28 21:50:17 | Response: 1.233s | IP: 95.164.4.88
+{"alterId":0,"cipher":"auto","external_ip":"95.164.4.88","host":"pq-brazil1.09vpn.com","network":"ws","path":"/vmess/","port":80,"protocol":"vmess","remarks":"🔥","server":"pq-brazil1.09vpn.com","sni":"","test_time":1.232839819,"tls":"","uuid":"c04c3b34-70fd-4fec-963e-c12d09f36bef"}
+
+# Tested at: 2025-09-28 21:50:18 | Response: 1.520s | IP: 8.218.8.84
+{"alterId":0,"cipher":"auto","external_ip":"8.218.8.84","host":"","network":"ws","path":"/arki?ed=2048","port":55138,"protocol":"vmess","remarks":"🔥","server":"8.218.8.84","sni":"","test_time":1.519772095,"tls":"","uuid":"6bd50af8-81a7-480d-ab78-5ef284868485"}
+
+# Tested at: 2025-09-28 21:50:19 | Response: 1.344s | IP: 82.26.72.150
+{"alterId":0,"cipher":"auto","external_ip":"82.26.72.150","host":"aflzzul.meiquankongjian.com","network":"ws","path":"/564dfa20/","port":52512,"protocol":"vmess","remarks":"🔥","server":"aflzzul.meiquankongjian.com","sni":"aflzzul.meiquankongjian.com","test_time":1.344415874,"tls":"","uuid":"342bacfd-2b8f-3f49-a16e-439db5b0b9d5"}
+
+# Tested at: 2025-09-28 21:50:20 | Response: 3.626s | IP: 47.76.118.235
+{"alterId":0,"cipher":"auto","external_ip":"47.76.118.235","host":"","network":"ws","path":"/arki?ed=2048","port":7775,"protocol":"vmess","remarks":"🔥","server":"47.76.118.235","sni":"","test_time":3.626185225,"tls":"","uuid":"0f1c2d37-adb4-4677-9727-dbb1b8e2b794"}
+
+# Tested at: 2025-09-28 21:51:00 | Response: 0.233s | IP: 107.174.82.102
+{"alterId":0,"cipher":"auto","external_ip":"107.174.82.102","host":"HHhjjMKi.457.PP.Ua","network":"ws","path":"/hepNwpzuxszIxZMQZRJ","port":443,"protocol":"vmess","remarks":"🔥","server":"HHhjjMKi.457.PP.Ua","sni":"","test_time":0.232566675,"tls":"tls","uuid":"9f1673a0-688a-4f31-85fa-af40b03c708a"}
+
+# Tested at: 2025-09-28 21:51:00 | Response: 0.731s | IP: 148.113.207.225
+{"alterId":0,"cipher":"auto","external_ip":"148.113.207.225","host":"","network":"tcp","path":"","port":2083,"protocol":"vmess","remarks":"🔥","server":"148.113.207.225","sni":"","test_time":0.731344728,"tls":"tls","uuid":"ee5760ea-3d19-4dfe-bb30-3cc43d336aec"}
+
+# Tested at: 2025-09-28 21:51:00 | Response: 0.283s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"cc889ca0-cd29-2728-dadf-753fb6f18502.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":80,"protocol":"vmess","remarks":"🔥","server":"cc889ca0-cd29-2728-dadf-753fb6f18502.freevpnatm2025.dpdns.org","sni":"","test_time":0.283007925,"tls":"","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
+
+# Tested at: 2025-09-28 21:51:00 | Response: 0.249s | IP: 216.132.112.116
+{"alterId":0,"cipher":"auto","external_ip":"216.132.112.116","host":"","network":"tcp","path":"","port":30475,"protocol":"vmess","remarks":"🔥","server":"216.132.112.116","sni":"","test_time":0.249116588,"tls":"","uuid":"defa10be-f618-4b64-c815-049d2eacbd3f"}
+
+# Tested at: 2025-09-28 21:51:00 | Response: 0.529s | IP: 57.128.170.234
+{"alterId":0,"cipher":"auto","external_ip":"57.128.170.234","host":"","network":"tcp","path":"","port":2083,"protocol":"vmess","remarks":"🔥","server":"57.128.170.234","sni":"","test_time":0.528696357,"tls":"tls","uuid":"0d0262af-fd47-4c82-a474-7e65430f11f2"}
+
+# Tested at: 2025-09-28 21:51:00 | Response: 0.162s | IP: 154.201.76.172
+{"alterId":0,"cipher":"auto","external_ip":"154.201.76.172","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"154.201.76.172","sni":"","test_time":0.161953995,"tls":"","uuid":"496cec71-a0fd-4f25-bba1-cba9e9d5a52f"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 1.032s | IP: 107.172.132.247
+{"alterId":0,"cipher":"auto","external_ip":"107.172.132.247","host":"sssssssxxxx.2032.pp.ua","network":"ws","path":"/6We3U9Df1WGxgFnoFPw1","port":443,"protocol":"vmess","remarks":"🔥","server":"sssssssxxxx.2032.pp.ua","sni":"sssssssxxxx.2032.pp.ua","test_time":1.032255481,"tls":"tls","uuid":"4174b95d-115e-4d39-add6-1f8db95bb860"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.179s | IP: 193.233.207.2
+{"alterId":0,"cipher":"auto","external_ip":"193.233.207.2","host":"","network":"tcp","path":"","port":6508,"protocol":"vmess","remarks":"🔥","server":"193.124.24.230","sni":"","test_time":0.178988844,"tls":"","uuid":"c93bf634-6a68-4117-fc6c-bd8b2e13e83e"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.730s | IP: 39.107.155.11
+{"alterId":64,"cipher":"auto","external_ip":"39.107.155.11","host":"","network":"tcp","path":"","port":30302,"protocol":"vmess","remarks":"🔥","server":"39.107.155.11","sni":"","test_time":0.729663789,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 1.039s | IP: 8.220.188.238
+{"alterId":0,"cipher":"auto","external_ip":"8.220.188.238","host":"","network":"ws","path":"/arki?ed=2048","port":59134,"protocol":"vmess","remarks":"🔥","server":"8.220.188.238","sni":"","test_time":1.038886483,"tls":"","uuid":"b5a82c1d-0d98-4d4d-a499-5d04e4bb114d"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.448s | IP: 2406:8dc0:6004:679f:ad6b:40d1:b47c:15d6
+{"alterId":0,"cipher":"auto","external_ip":"2406:8dc0:6004:679f:ad6b:40d1:b47c:15d6","host":"","network":"tcp","path":"","port":56018,"protocol":"vmess","remarks":"🔥","server":"83.147.12.99","sni":"","test_time":0.448143084,"tls":"","uuid":"ddb1f976-4239-4086-833f-f9b275f637a0"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.366s | IP: 47.242.214.178
+{"alterId":0,"cipher":"auto","external_ip":"47.242.214.178","host":"","network":"ws","path":"/arki?ed=2048","port":52983,"protocol":"vmess","remarks":"🔥","server":"47.242.214.178","sni":"","test_time":0.366282122,"tls":"","uuid":"72a13e0b-5e55-4d6f-9404-db2f0a482f97"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.715s | IP: 91.92.40.78
+{"alterId":0,"cipher":"","external_ip":"91.92.40.78","host":"","network":"tcp","path":"","port":2060,"protocol":"vmess","remarks":"🔥","server":"configfree.korosh.shop","sni":"","test_time":0.715369581,"tls":"none","uuid":"1bc8a6f7-34b4-440d-cd84-3066abf12189"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.700s | IP: 106.14.75.114
+{"alterId":64,"cipher":"auto","external_ip":"106.14.75.114","host":"","network":"tcp","path":"","port":50002,"protocol":"vmess","remarks":"🔥","server":"106.14.75.114","sni":"","test_time":0.699839508,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.538s | IP: 103.236.227.7
+{"alterId":0,"cipher":"auto","external_ip":"103.236.227.7","host":"","network":"tcp","path":"","port":49795,"protocol":"vmess","remarks":"🔥","server":"103.236.227.7","sni":"","test_time":0.537919706,"tls":"","uuid":"a9024f1d-77a1-4c56-87c7-eeee5398667e"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.602s | IP: 47.76.157.234
+{"alterId":0,"cipher":"auto","external_ip":"47.76.157.234","host":"","network":"ws","path":"/arki?ed=2048","port":55125,"protocol":"vmess","remarks":"🔥","server":"47.76.157.234","sni":"","test_time":0.601837106,"tls":"","uuid":"87227bd9-1506-4d48-bd6b-0b80a8c2aae7"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.744s | IP: 107.172.132.247
+{"alterId":0,"cipher":"auto","external_ip":"107.172.132.247","host":"ssssssssssssfffffffgh.2032.pp.ua","network":"ws","path":"/6We3U9Df1WGxgFnoFPw1","port":443,"protocol":"vmess","remarks":"🔥","server":"ssssssssssssfffffffgh.2032.pp.ua","sni":"ssssssssssssfffffffgh.2032.pp.ua","test_time":0.744003066,"tls":"tls","uuid":"4174b95d-115e-4d39-add6-1f8db95bb860"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.742s | IP: 8.217.220.30
+{"alterId":0,"cipher":"auto","external_ip":"8.217.220.30","host":"","network":"ws","path":"/arki?ed=2048","port":39648,"protocol":"vmess","remarks":"🔥","server":"8.217.220.30","sni":"","test_time":0.741882522,"tls":"","uuid":"2c2583b6-ece0-4d3d-a7f5-cf37c4a6fa8d"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 1.115s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"b47c127d-bec2-6281-8d44-63d0c17d7a4a.freevpnatm2025.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":80,"protocol":"vmess","remarks":"🔥","server":"b47c127d-bec2-6281-8d44-63d0c17d7a4a.freevpnatm2025.dpdns.org","sni":"","test_time":1.114967814,"tls":"","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.636s | IP: 37.59.112.70
+{"alterId":0,"cipher":"auto","external_ip":"37.59.112.70","host":"","network":"ws","path":"/cdn-cgi/trace","port":80,"protocol":"vmess","remarks":"🔥","server":"37.59.112.70","sni":"","test_time":0.635549971,"tls":"","uuid":"dc23b36a-b723-43c8-b5ac-e756592d6400"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.614s | IP: 131.196.252.59
+{"alterId":0,"cipher":"auto","external_ip":"131.196.252.59","host":"","network":"ws","path":"/","port":20521,"protocol":"vmess","remarks":"🔥","server":"131.196.252.59","sni":"","test_time":0.613883097,"tls":"","uuid":"5809911a-a16e-43d3-90b0-2c94cfc2035e"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 0.758s | IP: 120.26.137.112
+{"alterId":64,"cipher":"auto","external_ip":"120.26.137.112","host":"","network":"tcp","path":"","port":50002,"protocol":"vmess","remarks":"🔥","server":"120.26.137.112","sni":"","test_time":0.758256299,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+
+# Tested at: 2025-09-28 21:51:01 | Response: 1.035s | IP: 8.217.34.12
+{"alterId":0,"cipher":"auto","external_ip":"8.217.34.12","host":"","network":"ws","path":"/arki?ed=2048","port":23477,"protocol":"vmess","remarks":"🔥","server":"8.217.34.12","sni":"","test_time":1.035058125,"tls":"","uuid":"80975d47-7f6a-436d-9085-4dadf4546e03"}
+
+# Tested at: 2025-09-28 21:51:02 | Response: 1.123s | IP: 57.128.216.125
+{"alterId":1,"cipher":"auto","external_ip":"57.128.216.125","host":"kampong.org","network":"ws","path":"linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"57.128.216.125","sni":"kampong.org","test_time":1.12321892,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:51:02 | Response: 1.680s | IP: 51.75.160.237
+{"alterId":0,"cipher":"auto","external_ip":"51.75.160.237","host":"blazE-Uk-237.BLaZEsERVERs1.sItE","network":"ws","path":"/linkvkwss","port":443,"protocol":"vmess","remarks":"🔥","server":"51.75.160.237","sni":"blazE-Uk-237.BLaZEsERVERs1.sItE","test_time":1.680004777,"tls":"tls","uuid":"3adba462-318f-4a6c-ad7a-2923bc74f207"}
+
+# Tested at: 2025-09-28 21:51:02 | Response: 1.719s | IP: 39.100.81.215
+{"alterId":64,"cipher":"auto","external_ip":"39.100.81.215","host":"","network":"tcp","path":"","port":50002,"protocol":"vmess","remarks":"🔥","server":"39.100.81.215","sni":"","test_time":1.71864759,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+
+# Tested at: 2025-09-28 21:51:03 | Response: 2.597s | IP: 94.131.111.195
+{"alterId":0,"cipher":"auto","external_ip":"94.131.111.195","host":"","network":"tcp","path":"","port":444,"protocol":"vmess","remarks":"🔥","server":"94.131.111.195","sni":"","test_time":2.597125393,"tls":"","uuid":"8bbd9d8c-481b-49b6-8029-e4648f2ea31d"}
+
+# Tested at: 2025-09-28 21:51:45 | Response: 0.551s | IP: 195.123.244.94
+{"alterId":0,"cipher":"auto","external_ip":"195.123.244.94","host":"","network":"tcp","path":"","port":45291,"protocol":"vmess","remarks":"🔥","server":"85.234.94.143","sni":"","test_time":0.551438655,"tls":"","uuid":"469e0b31-30c3-4dab-800d-711232634ce1"}
+
+# Tested at: 2025-09-28 21:51:45 | Response: 0.514s | IP: 8.217.187.15
+{"alterId":0,"cipher":"auto","external_ip":"8.217.187.15","host":"","network":"ws","path":"/arki?ed=2048","port":56950,"protocol":"vmess","remarks":"🔥","server":"8.217.187.15","sni":"","test_time":0.513704227,"tls":"","uuid":"256c7d4c-6096-40bd-9f01-f7a57af1b2d6"}
+
+# Tested at: 2025-09-28 21:51:45 | Response: 0.521s | IP: 8.217.187.15
+{"alterId":0,"cipher":"auto","external_ip":"8.217.187.15","host":"","network":"ws","path":"/arki?ed=2048","port":59542,"protocol":"vmess","remarks":"🔥","server":"8.217.187.15","sni":"","test_time":0.521220549,"tls":"","uuid":"cda20db1-68d2-47f4-a0cf-1d9f501946e6"}
+
+# Tested at: 2025-09-28 21:51:47 | Response: 2.109s | IP: 47.76.233.2
+{"alterId":0,"cipher":"auto","external_ip":"47.76.233.2","host":"","network":"ws","path":"/arki?ed=2048","port":5634,"protocol":"vmess","remarks":"🔥","server":"47.76.233.2","sni":"","test_time":2.108749943,"tls":"","uuid":"93070eaa-b553-44d9-b239-994e46239c9c"}
+
+# Tested at: 2025-09-28 21:52:29 | Response: 1.107s | IP: 103.229.127.212
+{"alterId":0,"cipher":"auto","external_ip":"103.229.127.212","host":"","network":"ws","path":"/arki?ed=2048","port":49393,"protocol":"vmess","remarks":"🔥","server":"103.229.127.212","sni":"","test_time":1.106764362,"tls":"","uuid":"0d4c0345-b6f4-4d23-9427-88923cc57fc4"}
+
+# Tested at: 2025-09-28 21:52:29 | Response: 0.047s | IP: 43.162.114.137
+{"alterId":0,"cipher":"auto","external_ip":"43.162.114.137","host":"","network":"tcp","path":"","port":59674,"protocol":"vmess","remarks":"🔥","server":"43.162.114.137","sni":"","test_time":0.046545279,"tls":"","uuid":"6a4ce5b9-0d60-4a21-a8fe-897798019500"}
+
+# Tested at: 2025-09-28 21:52:29 | Response: 0.895s | IP: 172.245.152.39
+{"alterId":0,"cipher":"auto","external_ip":"172.245.152.39","host":"newyork.cloudflareservervpn.sbs","network":"ws","path":"/newyork","port":2096,"protocol":"vmess","remarks":"🔥","server":"104.21.31.73","sni":"newyork.cloudflareservervpn.sbs","test_time":0.89491723,"tls":"tls","uuid":"8c111c4f-af43-43fe-bbf8-d7e075479557"}
+
+# Tested at: 2025-09-28 21:52:29 | Response: 1.180s | IP: 103.229.127.212
+{"alterId":0,"cipher":"auto","external_ip":"103.229.127.212","host":"","network":"ws","path":"/arki?ed=2048","port":57206,"protocol":"vmess","remarks":"🔥","server":"103.229.127.212","sni":"","test_time":1.1800910390000001,"tls":"","uuid":"6768839e-fa1b-488e-a715-2a8dfaebbea6"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 0.977s | IP: 152.69.226.134
+{"alterId":0,"cipher":"auto","external_ip":"152.69.226.134","host":"gykr.aifjj.asia","network":"ws","path":"/","port":2053,"protocol":"vmess","remarks":"🔥","server":"s3.db-link03.top","sni":"gykr.aifjj.asia","test_time":0.976691121,"tls":"tls","uuid":"79dc600a-b63b-4406-bd79-f5f7fb0c0e52"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 0.916s | IP: 152.69.226.134
+{"alterId":0,"cipher":"auto","external_ip":"152.69.226.134","host":"gykr.aifjj.asia","network":"ws","path":"/","port":2053,"protocol":"vmess","remarks":"🔥","server":"s2.db-link03.top","sni":"gykr.aifjj.asia","test_time":0.91589449,"tls":"tls","uuid":"79dc600a-b63b-4406-bd79-f5f7fb0c0e52"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 1.077s | IP: 152.69.226.134
+{"alterId":0,"cipher":"auto","external_ip":"152.69.226.134","host":"gykr.aifjj.asia","network":"ws","path":"/","port":2053,"protocol":"vmess","remarks":"🔥","server":"jx.973973.xyz","sni":"gykr.aifjj.asia","test_time":1.076650745,"tls":"tls","uuid":"79dc600a-b63b-4406-bd79-f5f7fb0c0e52"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 1.066s | IP: 152.69.226.134
+{"alterId":0,"cipher":"auto","external_ip":"152.69.226.134","host":"gykr.aifjj.asia","network":"ws","path":"/","port":2053,"protocol":"vmess","remarks":"🔥","server":"cloudflare.182682.xyz","sni":"gykr.aifjj.asia","test_time":1.065878438,"tls":"tls","uuid":"79dc600a-b63b-4406-bd79-f5f7fb0c0e52"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 1.413s | IP: 198.98.49.124
+{"alterId":0,"cipher":"auto","external_ip":"198.98.49.124","host":"","network":"ws","path":"/","port":22122,"protocol":"vmess","remarks":"🔥","server":"212.192.12.251","sni":"","test_time":1.4126534259999999,"tls":"","uuid":"32807277-6527-4bd0-a5b6-de6375496707"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 1.330s | IP: 152.69.226.134
+{"alterId":0,"cipher":"auto","external_ip":"152.69.226.134","host":"gykr.aifjj.asia","network":"ws","path":"/","port":2053,"protocol":"vmess","remarks":"🔥","server":"s1.db-link03.top","sni":"gykr.aifjj.asia","test_time":1.33008221,"tls":"tls","uuid":"79dc600a-b63b-4406-bd79-f5f7fb0c0e52"}
+
+# Tested at: 2025-09-28 21:52:30 | Response: 1.050s | IP: 152.69.226.134
+{"alterId":0,"cipher":"auto","external_ip":"152.69.226.134","host":"gykr.aifjj.asia","network":"ws","path":"/","port":2053,"protocol":"vmess","remarks":"🔥","server":"anycast.cf.030419.xyz","sni":"gykr.aifjj.asia","test_time":1.050442936,"tls":"tls","uuid":"79dc600a-b63b-4406-bd79-f5f7fb0c0e52"}
+
+# Tested at: 2025-09-28 21:53:13 | Response: 0.679s | IP: 146.56.112.110
+{"alterId":0,"cipher":"auto","external_ip":"146.56.112.110","host":"","network":"tcp","path":"","port":8888,"protocol":"vmess","remarks":"🔥","server":"146.56.112.110","sni":"","test_time":0.678994789,"tls":"","uuid":"e7c302f3-90d6-42dd-9d7d-94a3683a3707"}
+
+# Tested at: 2025-09-28 21:53:14 | Response: 0.796s | IP: 139.129.20.6
+{"alterId":64,"cipher":"auto","external_ip":"139.129.20.6","host":"","network":"tcp","path":"","port":50002,"protocol":"vmess","remarks":"🔥","server":"139.129.20.6","sni":"","test_time":0.7956443,"tls":"","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24"}
+
+# Tested at: 2025-09-28 21:54:43 | Response: 1.492s | IP: 2001:41d0:305:2100::1712
+{"alterId":0,"cipher":"auto","external_ip":"2001:41d0:305:2100::1712","host":"BLaZe-FR-113.BlazeseRveR12.siTe","network":"ws","path":"/linkws","port":443,"protocol":"vmess","remarks":"🔥","server":"51.77.221.113","sni":"BLaZe-FR-113.BlazeseRveR12.siTe","test_time":1.491691957,"tls":"tls","uuid":"32b5d097-46b3-4903-87ab-382a7be859b8"}
+
+# Tested at: 2025-09-28 21:54:49 | Response: 8.794s | IP: 172.82.67.157
+{"alterId":0,"cipher":"auto","external_ip":"172.82.67.157","host":"ea596492-e849-fedb-4940-add11fdfa131.freevpnatm.dpdns.org","network":"ws","path":"/e7JS5ETJeA85VyjPCYXwETL","port":80,"protocol":"vmess","remarks":"🔥","server":"ea596492-e849-fedb-4940-add11fdfa131.freevpnatm.dpdns.org","sni":"","test_time":8.794058673,"tls":"","uuid":"34a7da0c-a43a-49b8-a8d0-64b43100090e"}
+
+# Tested at: 2025-09-28 21:57:52 | Response: 1.039s | IP: 15.235.13.69
+{"alterId":0,"cipher":"auto","external_ip":"15.235.13.69","host":"vkvd127.mycdn.me","network":"ws","path":"/linkvws","port":443,"protocol":"vmess","remarks":"🔥","server":"15.235.13.69","sni":"vkvd127.mycdn.me","test_time":1.038612971,"tls":"tls","uuid":"03fcc618-b93d-6796-6aed-8a38c975d581"}
+
+# Tested at: 2025-09-28 21:58:36 | Response: 1.582s | IP: 155.117.84.80
+{"alterId":0,"cipher":"auto","external_ip":"155.117.84.80","host":"aflzzul.meiquankongjian.com","network":"ws","path":"/564dfa20/","port":52511,"protocol":"vmess","remarks":"🔥","server":"aflzzul.meiquankongjian.com","sni":"","test_time":1.581650738,"tls":"","uuid":"342bacfd-2b8f-3f49-a16e-439db5b0b9d5"}
 
