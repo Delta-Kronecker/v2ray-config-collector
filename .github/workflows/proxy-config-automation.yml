@@ -2,9 +2,8 @@ name: ProxyTesting
 
 on:
   schedule:
-    # Run every 12 hours at 00:00 and 12:00 UTC
     - cron: '0 0,12 * * *'
-  workflow_dispatch: # Allow manual triggering
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -108,9 +107,7 @@ jobs:
         if [ -d "data" ]; then
           find data -type f | head -50
           echo "=== File counts by type ==="
-          echo "Working JSON: $(find data/working_json -type f 2>/dev/null | wc -l || echo 0)"
           echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
-          echo "Deduplicated URLs: $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0)"
           echo "Total files in data: $(find data -type f | wc -l)"
         else
           echo "Data folder not found!"
@@ -144,8 +141,6 @@ jobs:
           TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
           PYTHON_STATUS="${{ steps.python-collector.outcome }}"
           PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
-          QUALITY_STATUS="${{ steps.go-quality-tester.outcome }}"
-          SPEED_STATUS="${{ steps.go-speed-tester.outcome }}"
           RUN_ID="${{ github.run_id }}"
           GITHUB_REF_NAME="${{ github.ref_name }}"
 
@@ -187,7 +182,6 @@ jobs:
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
           echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Deduplicated URLs | $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
         else
           echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
