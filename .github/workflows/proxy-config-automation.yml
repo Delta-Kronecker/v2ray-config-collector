@@ -126,10 +126,7 @@ jobs:
         echo "Checking for changes in all data subdirectories..."
 
         # Add all data subdirectories explicitly
-        git add data/ || true
-        git add data/working_json/ || true
         git add data/working_url/ || true
-        git add data/deduplicated_urls/ || true
 
         echo "Files to be committed:"
         git diff --cached --name-only || echo "No files to commit"
