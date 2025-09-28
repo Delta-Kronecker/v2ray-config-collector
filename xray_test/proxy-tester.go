@@ -15,6 +15,7 @@ import (
 	"os"
 	"os/exec"
 	"os/signal"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
@@ -26,7 +27,6 @@ import (
 	"golang.org/x/net/proxy"
 )
 
-// Enums
 type TestResult string
 
 const (
@@ -51,25 +51,78 @@ const (
 	ProtocolVLESS       ProxyProtocol = "vless"
 )
 
-// Configuration structures
+type Config struct {
+	XrayPath        string
+	MaxWorkers      int
+	Timeout         time.Duration
+	BatchSize       int
+	IncrementalSave bool
+	DataDir         string
+	ConfigDir       string
+	LogDir          string
+	StartPort       int
+	EndPort         int
+}
+
+func NewDefaultConfig() *Config {
+	dataDir := getEnvOrDefault("PROXY_DATA_DIR", "./data")
+	configDir := getEnvOrDefault("PROXY_CONFIG_DIR", "./config")
+	logDir := getEnvOrDefault("PROXY_LOG_DIR", "./log")
+
+	return &Config{
+		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 1000),
+		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 10)) * time.Second,
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 1000),
+		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
+		DataDir:         dataDir,
+		ConfigDir:       configDir,
+		LogDir:          logDir,
+		StartPort:       getEnvIntOrDefault("PROXY_START_PORT", 10000),
+		EndPort:         getEnvIntOrDefault("PROXY_END_PORT", 20000),
+	}
+}
+
+func getEnvOrDefault(key, defaultValue string) string {
+	if value := os.Getenv(key); value != "" {
+		return value
+	}
+	return defaultValue
+}
+
+func getEnvIntOrDefault(key string, defaultValue int) int {
+	if value := os.Getenv(key); value != "" {
+		if intVal, err := strconv.Atoi(value); err == nil {
+			return intVal
+		}
+	}
+	return defaultValue
+}
+
+func getEnvBoolOrDefault(key string, defaultValue bool) bool {
+	if value := os.Getenv(key); value != "" {
+		if boolVal, err := strconv.ParseBool(value); err == nil {
+			return boolVal
+		}
+	}
+	return defaultValue
+}
+
 type ProxyConfig struct {
 	Protocol ProxyProtocol `json:"protocol"`
 	Server   string        `json:"server"`
 	Port     int           `json:"port"`
 	Remarks  string        `json:"remarks"`
 
-	// Shadowsocks specific
 	Method   string `json:"method,omitempty"`
 	Password string `json:"password,omitempty"`
 
-	// VMess/VLESS specific
 	UUID     string `json:"uuid,omitempty"`
 	AlterID  int    `json:"alterId,omitempty"`
 	Cipher   string `json:"cipher,omitempty"`
 	Flow     string `json:"flow,omitempty"`
 	Encrypt  string `json:"encryption,omitempty"`
 
-	// Transport settings
 	Network     string `json:"network,omitempty"`
 	TLS         string `json:"tls,omitempty"`
 	SNI         string `json:"sni,omitempty"`
@@ -80,7 +133,6 @@ type ProxyConfig struct {
 	HeaderType  string `json:"headerType,omitempty"`
 	ServiceName string `json:"serviceName,omitempty"`
 
-	// Metadata
 	RawConfig  map[string]interface{} `json:"raw_config,omitempty"`
 	ConfigID   *int                   `json:"config_id,omitempty"`
 	LineNumber *int                   `json:"line_number,omitempty"`
@@ -97,103 +149,19 @@ type TestResultData struct {
 	BatchID      *int        `json:"batch_id,omitempty"`
 }
 
-// JSON file structures for loading configs
-type ShadowsocksJSON struct {
-	Metadata struct {
-		Protocol     string `json:"protocol"`
-		GeneratedAt  string `json:"generated_at"`
-		TotalConfigs int    `json:"total_configs"`
-	} `json:"metadata"`
-	Configs []struct {
-		Type       string `json:"type"`
-		Server     string `json:"server"`
-		Port       int    `json:"port"`
-		Method     string `json:"method"`
-		Password   string `json:"password"`
-		Remarks    string `json:"remarks"`
-		Plugin     string `json:"plugin"`
-		PluginOpts string `json:"plugin_opts"`
-		NonStd     bool   `json:"non_standard"`
-		RawParams  map[string]interface{} `json:"raw_params"`
-		ID         int    `json:"id"`
-		LineNumber int    `json:"line_number"`
-		ParsedAt   string `json:"parsed_at"`
-	} `json:"configs"`
-}
-
-type VMessJSON struct {
-	Metadata struct {
-		Protocol     string `json:"protocol"`
-		GeneratedAt  string `json:"generated_at"`
-		TotalConfigs int    `json:"total_configs"`
-	} `json:"metadata"`
-	Configs []struct {
-		Type        string                 `json:"type"`
-		Server      string                 `json:"server"`
-		Port        int                    `json:"port"`
-		UUID        string                 `json:"uuid"`
-		AlterID     int                    `json:"alterId"`
-		Cipher      string                 `json:"cipher"`
-		Network     string                 `json:"network"`
-		TLS         string                 `json:"tls"`
-		SNI         string                 `json:"sni"`
-		Path        string                 `json:"path"`
-		Host        string                 `json:"host"`
-		Remarks     string                 `json:"remarks"`
-		ALPN        string                 `json:"alpn"`
-		Fingerprint string                 `json:"fingerprint"`
-		TypeNetwork string                 `json:"type_network"`
-		Security    string                 `json:"security"`
-		RawConfig   map[string]interface{} `json:"raw_config"`
-		ID          int                    `json:"id"`
-		LineNumber  int                    `json:"line_number"`
-		ParsedAt    string                 `json:"parsed_at"`
-	} `json:"configs"`
-}
-
-type VLessJSON struct {
-	Metadata struct {
-		Protocol     string `json:"protocol"`
-		GeneratedAt  string `json:"generated_at"`
-		TotalConfigs int    `json:"total_configs"`
-	} `json:"metadata"`
-	Configs []struct {
-		Type        string                 `json:"type"`
-		Server      string                 `json:"server"`
-		Port        int                    `json:"port"`
-		UUID        string                 `json:"uuid"`
-		Flow        string                 `json:"flow"`
-		Encryption  string                 `json:"encryption"`
-		Network     string                 `json:"network"`
-		TLS         string                 `json:"tls"`
-		SNI         string                 `json:"sni"`
-		Path        string                 `json:"path"`
-		Host        string                 `json:"host"`
-		Remarks     string                 `json:"remarks"`
-		ALPN        string                 `json:"alpn"`
-		Fingerprint string                 `json:"fingerprint"`
-		HeaderType  string                 `json:"headerType"`
-		ServiceName string                 `json:"serviceName"`
-		RawParams   map[string]interface{} `json:"raw_params"`
-		ID          int                    `json:"id"`
-		LineNumber  int                    `json:"line_number"`
-		ParsedAt    string                 `json:"parsed_at"`
-	} `json:"configs"`
-}
-
-// Port manager
 type PortManager struct {
 	startPort     int
 	endPort       int
 	availablePorts chan int
 	usedPorts     sync.Map
 	mu            sync.Mutex
+	initialized   int32
 }
 
 func NewPortManager(startPort, endPort int) *PortManager {
 	pm := &PortManager{
-		startPort:     startPort,
-		endPort:       endPort,
+		startPort:      startPort,
+		endPort:        endPort,
 		availablePorts: make(chan int, endPort-startPort+1),
 	}
 	pm.initializePortPool()
@@ -201,6 +169,10 @@ func NewPortManager(startPort, endPort int) *PortManager {
 }
 
 func (pm *PortManager) initializePortPool() {
+	if !atomic.CompareAndSwapInt32(&pm.initialized, 0, 1) {
+		return
+	}
+
 	log.Printf("Initializing port pool (%d-%d)...", pm.startPort, pm.endPort)
 	availableCount := 0
 
@@ -210,7 +182,6 @@ func (pm *PortManager) initializePortPool() {
 			case pm.availablePorts <- port:
 				availableCount++
 			default:
-				// Channel is full, which shouldn't happen but let's be safe
 			}
 		}
 	}
@@ -221,7 +192,6 @@ func (pm *PortManager) initializePortPool() {
 func (pm *PortManager) isPortAvailable(port int) bool {
 	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 50*time.Millisecond)
 	if err != nil {
-		// Port is available if we can't connect to it
 		return true
 	}
 	conn.Close()
@@ -231,10 +201,9 @@ func (pm *PortManager) isPortAvailable(port int) bool {
 func (pm *PortManager) GetAvailablePort() (int, bool) {
 	select {
 	case port := <-pm.availablePorts:
-		pm.usedPorts.Store(port, true)
+		pm.usedPorts.Store(port, time.Now())
 		return port, true
 	case <-time.After(100 * time.Millisecond):
-		// Emergency port finding
 		return pm.findEmergencyPort(), true
 	}
 }
@@ -246,7 +215,7 @@ func (pm *PortManager) findEmergencyPort() int {
 	for i := 0; i < 100; i++ {
 		port := rand.Intn(pm.endPort-pm.startPort+1) + pm.startPort
 		if _, used := pm.usedPorts.Load(port); !used && pm.isPortAvailable(port) {
-			pm.usedPorts.Store(port, true)
+			pm.usedPorts.Store(port, time.Now())
 			return port
 		}
 	}
@@ -255,18 +224,22 @@ func (pm *PortManager) findEmergencyPort() int {
 
 func (pm *PortManager) ReleasePort(port int) {
 	pm.usedPorts.Delete(port)
-	// Return port to pool after a short delay
 	go func() {
-		time.Sleep(20 * time.Millisecond)
+		time.Sleep(50 * time.Millisecond)
 		select {
 		case pm.availablePorts <- port:
 		default:
-			// Channel is full, port will be found by emergency finder
 		}
 	}()
 }
 
-// Network tester
+func (pm *PortManager) cleanup() {
+	pm.usedPorts.Range(func(key, value interface{}) bool {
+		pm.usedPorts.Delete(key)
+		return true
+	})
+}
+
 type NetworkTester struct {
 	timeout  time.Duration
 	testURLs []string
@@ -293,18 +266,15 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float64) {
 	startTime := time.Now()
 
-	// Check if proxy port is responsive
 	if !nt.isProxyResponsive(proxyPort) {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	// Test with multiple URLs
-	testCount := 6
+	testCount := 4
 	if len(nt.testURLs) < testCount {
 		testCount = len(nt.testURLs)
 	}
 
-	// Shuffle URLs for better distribution
 	shuffled := make([]string, len(nt.testURLs))
 	copy(shuffled, nt.testURLs)
 	rand.Shuffle(len(shuffled), func(i, j int) {
@@ -322,7 +292,7 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 }
 
 func (nt *NetworkTester) isProxyResponsive(port int) bool {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), 2*time.Second)
+	conn, err := net.DialTimeout("tcp", fmt.Sprintf("127.0.0.1:%d", port), time.Second)
 	if err != nil {
 		return false
 	}
@@ -333,17 +303,16 @@ func (nt *NetworkTester) isProxyResponsive(port int) bool {
 func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string, float64) {
 	startTime := time.Now()
 
-	// Create SOCKS5 dialer
 	dialer, err := proxy.SOCKS5("tcp", fmt.Sprintf("127.0.0.1:%d", proxyPort), nil, proxy.Direct)
 	if err != nil {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	// Create HTTP client with proxy
 	transport := &http.Transport{
 		Dial:                dialer.Dial,
 		DisableKeepAlives:   true,
-		TLSHandshakeTimeout: 10 * time.Second,
+		TLSHandshakeTimeout: 5 * time.Second,
+		IdleConnTimeout:     time.Second,
 	}
 
 	client := &http.Client{
@@ -351,7 +320,6 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 		Timeout:   nt.timeout,
 	}
 
-	// Make request
 	resp, err := client.Get(testURL)
 	if err != nil {
 		return false, "", time.Since(startTime).Seconds()
@@ -370,7 +338,6 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	responseTime := time.Since(startTime).Seconds()
 	ipText := strings.TrimSpace(string(body))
 
-	// Handle JSON responses
 	if strings.Contains(resp.Header.Get("Content-Type"), "json") {
 		var data map[string]interface{}
 		if json.Unmarshal(body, &data) == nil {
@@ -382,7 +349,6 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 		}
 	}
 
-	// Validate IP format
 	if net.ParseIP(ipText) != nil {
 		return true, ipText, responseTime
 	}
@@ -390,7 +356,6 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	return false, "", responseTime
 }
 
-// Xray config generator
 type XrayConfigGenerator struct {
 	xrayPath string
 }
@@ -403,7 +368,6 @@ func NewXrayConfigGenerator(xrayPath string) *XrayConfigGenerator {
 }
 
 func findXrayExecutable() string {
-	// Try common locations
 	paths := []string{"xray", "./xray", "/usr/local/bin/xray", "/usr/bin/xray"}
 
 	for _, path := range paths {
@@ -419,7 +383,7 @@ func findXrayExecutable() string {
 }
 
 func (xcg *XrayConfigGenerator) ValidateXray() error {
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 
 	cmd := exec.CommandContext(ctx, xcg.xrayPath, "version")
@@ -435,7 +399,7 @@ func (xcg *XrayConfigGenerator) ValidateXray() error {
 func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort int) (map[string]interface{}, error) {
 	xrayConfig := map[string]interface{}{
 		"log": map[string]interface{}{
-			"loglevel": "warning",
+			"loglevel": "error",
 		},
 		"inbounds": []map[string]interface{}{
 			{
@@ -444,7 +408,7 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 				"protocol": "socks",
 				"settings": map[string]interface{}{
 					"auth": "noauth",
-					"udp":  true,
+					"udp":  false,
 					"ip":   "127.0.0.1",
 				},
 				"sniffing": map[string]interface{}{
@@ -459,6 +423,7 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 				"streamSettings": map[string]interface{}{
 					"sockopt": map[string]interface{}{
 						"tcpKeepAliveInterval": 30,
+						"tcpNoDelay":          true,
 					},
 				},
 			},
@@ -518,7 +483,6 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 		}
 	}
 
-	// Configure stream settings
 	streamSettings := outbound["streamSettings"].(map[string]interface{})
 
 	if config.Network != "" && config.Network != "tcp" {
@@ -554,7 +518,6 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 		}
 	}
 
-	// TLS settings
 	if config.TLS != "" {
 		streamSettings["security"] = config.TLS
 		tlsSettings := map[string]interface{}{
@@ -585,10 +548,9 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 	return xrayConfig, nil
 }
 
-// Process manager
 type ProcessManager struct {
 	processes sync.Map
-	mu        sync.RWMutex
+	cleanup   int32
 }
 
 func NewProcessManager() *ProcessManager {
@@ -604,12 +566,14 @@ func (pm *ProcessManager) UnregisterProcess(pid int) {
 }
 
 func (pm *ProcessManager) KillProcess(pid int) error {
+	if atomic.LoadInt32(&pm.cleanup) == 1 {
+		return nil
+	}
+
 	if value, ok := pm.processes.Load(pid); ok {
 		if cmd, ok := value.(*exec.Cmd); ok {
 			if cmd.Process != nil {
-				// Try graceful termination first
 				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
-					// Wait a bit for graceful shutdown
 					done := make(chan error, 1)
 					go func() {
 						done <- cmd.Wait()
@@ -617,13 +581,10 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 
 					select {
 					case <-done:
-						// Process terminated gracefully
-					case <-time.After(300 * time.Millisecond):
-						// Force kill
+					case <-time.After(200 * time.Millisecond):
 						cmd.Process.Kill()
 					}
 				} else {
-					// Direct kill if SIGTERM fails
 					cmd.Process.Kill()
 				}
 				pm.UnregisterProcess(pid)
@@ -635,6 +596,10 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 }
 
 func (pm *ProcessManager) Cleanup() {
+	if !atomic.CompareAndSwapInt32(&pm.cleanup, 0, 1) {
+		return
+	}
+
 	pm.processes.Range(func(key, value interface{}) bool {
 		if pid, ok := key.(int); ok {
 			pm.KillProcess(pid)
@@ -643,63 +608,43 @@ func (pm *ProcessManager) Cleanup() {
 	})
 }
 
-// Main tester
 type ProxyTester struct {
-	xrayPath          string
-	maxWorkers        int
-	timeout           time.Duration
-	batchSize         int
-	incrementalSave   bool
-
+	config            *Config
 	portManager       *PortManager
 	processManager    *ProcessManager
 	networkTester     *NetworkTester
 	configGenerator   *XrayConfigGenerator
 
-	// Output files
 	outputFiles       map[ProxyProtocol]*os.File
 	urlFiles          map[ProxyProtocol]*os.File
-
-	// General output files for all successful configs
 	generalJSONFile   *os.File
 	generalURLFile    *os.File
 
-	// Statistics
 	stats             sync.Map
-	results           []TestResultData
 	resultsMu         sync.Mutex
 }
 
-func NewProxyTester(xrayPath string, maxWorkers int, timeout time.Duration, batchSize int, incrementalSave bool) (*ProxyTester, error) {
+func NewProxyTester(config *Config) (*ProxyTester, error) {
 	pt := &ProxyTester{
-		xrayPath:        xrayPath,
-		maxWorkers:      maxWorkers,
-		timeout:         timeout,
-		batchSize:       batchSize,
-		incrementalSave: incrementalSave,
-
-		portManager:     NewPortManager(10000, 20000),
+		config:          config,
+		portManager:     NewPortManager(config.StartPort, config.EndPort),
 		processManager:  NewProcessManager(),
-		networkTester:   NewNetworkTester(timeout),
-		configGenerator: NewXrayConfigGenerator(xrayPath),
-
-		outputFiles: make(map[ProxyProtocol]*os.File),
-		urlFiles:    make(map[ProxyProtocol]*os.File),
+		networkTester:   NewNetworkTester(config.Timeout),
+		configGenerator: NewXrayConfigGenerator(config.XrayPath),
+		outputFiles:     make(map[ProxyProtocol]*os.File),
+		urlFiles:        make(map[ProxyProtocol]*os.File),
 	}
 
-	// Validate Xray
 	if err := pt.configGenerator.ValidateXray(); err != nil {
 		return nil, err
 	}
 
-	// Initialize statistics
 	pt.initStats()
 
-	// Setup incremental save files if enabled
-	if incrementalSave {
+	if config.IncrementalSave {
 		if err := pt.setupIncrementalSave(); err != nil {
 			log.Printf("Warning: Failed to setup incremental save: %v", err)
-			pt.incrementalSave = false
+			pt.config.IncrementalSave = false
 		}
 	}
 
@@ -728,9 +673,12 @@ func (pt *ProxyTester) initStats() {
 }
 
 func (pt *ProxyTester) setupIncrementalSave() error {
-	// Create directories if they don't exist
-	os.MkdirAll("../data/working_json", 0755)
-	os.MkdirAll("../data/working_url", 0755)
+	if err := os.MkdirAll(filepath.Join(pt.config.DataDir, "working_json"), 0755); err != nil {
+		return err
+	}
+	if err := os.MkdirAll(filepath.Join(pt.config.DataDir, "working_url"), 0755); err != nil {
+		return err
+	}
 
 	protocols := map[ProxyProtocol]string{
 		ProtocolShadowsocks: "shadowsocks",
@@ -741,8 +689,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	timestamp := time.Now().Format("2006-01-02 15:04:05")
 
 	for protocol, name := range protocols {
-		// JSON format files
-		jsonFile, err := os.Create(fmt.Sprintf("../data/working_json/working_%s.txt", name))
+		jsonFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_json", fmt.Sprintf("working_%s.txt", name)))
 		if err != nil {
 			return err
 		}
@@ -752,8 +699,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 		jsonFile.WriteString("# Format: Each line contains one working configuration in JSON\n\n")
 		pt.outputFiles[protocol] = jsonFile
 
-		// URL format files
-		urlFile, err := os.Create(fmt.Sprintf("../data/working_url/working_%s_urls.txt", name))
+		urlFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", fmt.Sprintf("working_%s_urls.txt", name)))
 		if err != nil {
 			return err
 		}
@@ -764,8 +710,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 		pt.urlFiles[protocol] = urlFile
 	}
 
-	// Create general output files for all successful configs
-	generalJSONFile, err := os.Create("../data/working_json/working_all_configs.txt")
+	generalJSONFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_json", "working_all_configs.txt"))
 	if err != nil {
 		return err
 	}
@@ -775,7 +720,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	generalJSONFile.WriteString("# Protocols: Shadowsocks, VMess, VLESS\n\n")
 	pt.generalJSONFile = generalJSONFile
 
-	generalURLFile, err := os.Create("../data/working_url/working_all_urls.txt")
+	generalURLFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", "working_all_urls.txt"))
 	if err != nil {
 		return err
 	}
@@ -785,7 +730,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	generalURLFile.WriteString("# Protocols: Shadowsocks, VMess, VLESS\n\n")
 	pt.generalURLFile = generalURLFile
 
-	log.Println("Incremental save files initialized (JSON + URL formats + General files)")
+	log.Println("Incremental save files initialized")
 	return nil
 }
 
@@ -823,7 +768,6 @@ func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtoc
 }
 
 func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
-	// Simple structure for parsed_configs/ss.json
 	type SSConfig struct {
 		Server     string `json:"server"`
 		ServerPort int    `json:"server_port"`
@@ -847,7 +791,7 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 			Method:   configData.Method,
 			Password: configData.Password,
 			Remarks:  configData.Name,
-			Network:  "tcp", // Default
+			Network:  "tcp",
 		}
 
 		if pt.isValidConfig(&config) {
@@ -863,7 +807,6 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 }
 
 func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
-	// Simple structure for parsed_configs/vmess.json
 	type VMConfig struct {
 		Address  string `json:"address"`
 		Port     int    `json:"port"`
@@ -887,7 +830,6 @@ func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]boo
 
 	var configs []ProxyConfig
 	for _, configData := range data {
-		// Convert AlterId from string to int
 		alterId := 0
 		if configData.AlterId != "" {
 			if aid, err := strconv.Atoi(configData.AlterId); err == nil {
@@ -896,18 +838,18 @@ func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]boo
 		}
 
 		config := ProxyConfig{
-			Protocol: ProtocolVMess,
-			Server:   configData.Address,
-			Port:     configData.Port,
-			UUID:     configData.ID,
-			AlterID:  alterId,
-			Cipher:   configData.Security,
-			Network:  configData.Network,
-			TLS:      configData.TLS,
-			SNI:      configData.SNI,
-			Path:     configData.Path,
-			Host:     configData.Host,
-			Remarks:  configData.Name,
+			Protocol:   ProtocolVMess,
+			Server:     configData.Address,
+			Port:       configData.Port,
+			UUID:       configData.ID,
+			AlterID:    alterId,
+			Cipher:     configData.Security,
+			Network:    configData.Network,
+			TLS:        configData.TLS,
+			SNI:        configData.SNI,
+			Path:       configData.Path,
+			Host:       configData.Host,
+			Remarks:    configData.Name,
 			HeaderType: configData.Type,
 		}
 
@@ -924,7 +866,6 @@ func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]boo
 }
 
 func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
-	// Simple structure for parsed_configs/vless.json
 	type VLConfig struct {
 		Address string `json:"address"`
 		Port    int    `json:"port"`
@@ -956,7 +897,7 @@ func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]boo
 			Path:     configData.Path,
 			Host:     configData.Host,
 			Remarks:  configData.Name,
-			Encrypt:  "none", // Default for VLESS
+			Encrypt:  "none",
 		}
 
 		if pt.isValidConfig(&config) {
@@ -977,12 +918,10 @@ func (pt *ProxyTester) isValidUUID(uuid string) bool {
 }
 
 func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
-	// Basic validation
 	if config.Server == "" || config.Port <= 0 || config.Port > 65535 {
 		return false
 	}
 
-	// Protocol-specific validation
 	switch config.Protocol {
 	case ProtocolShadowsocks:
 		return config.Method != "" && config.Password != ""
@@ -1024,7 +963,6 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	defer func() {
 		result.TestTime = time.Since(startTime).Seconds()
 
-		// Cleanup
 		if process != nil && process.Process != nil {
 			pt.processManager.KillProcess(process.Process.Pid)
 		}
@@ -1036,7 +974,6 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		}
 	}()
 
-	// Get available port
 	var ok bool
 	proxyPort, ok = pt.portManager.GetAvailablePort()
 	if !ok || proxyPort == 0 {
@@ -1045,7 +982,6 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	}
 	result.ProxyPort = &proxyPort
 
-	// Generate Xray config
 	xrayConfig, err := pt.configGenerator.GenerateConfig(config, proxyPort)
 	if err != nil {
 		result.Result = ResultInvalidConfig
@@ -1053,7 +989,6 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		return result
 	}
 
-	// Write config to temporary file
 	configFile, err = pt.writeConfigToTempFile(xrayConfig)
 	if err != nil {
 		result.Result = ResultInvalidConfig
@@ -1061,14 +996,12 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		return result
 	}
 
-	// Test config syntax
 	if err := pt.testConfigSyntax(configFile); err != nil {
 		result.Result = ResultSyntaxError
 		result.ErrorMessage = err.Error()
 		return result
 	}
 
-	// Start Xray process
 	process, err = pt.startXrayProcess(configFile)
 	if err != nil {
 		result.Result = ResultConnectionError
@@ -1078,25 +1011,21 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 
 	pt.processManager.RegisterProcess(process.Process.Pid, process)
 
-	// Wait for Xray to start
-	time.Sleep(2 * time.Second)
+	time.Sleep(time.Second)
 
-	// Check if process is still running
 	if process.ProcessState != nil && process.ProcessState.Exited() {
 		result.Result = ResultConnectionError
 		result.ErrorMessage = "Xray process terminated"
 		return result
 	}
 
-	// Test connection through proxy
 	success, externalIP, responseTime := pt.networkTester.TestProxyConnection(proxyPort)
 	if success {
 		result.Result = ResultSuccess
 		result.ExternalIP = externalIP
 		result.ResponseTime = &responseTime
 
-		// Save immediately if incremental save is enabled
-		if pt.incrementalSave {
+		if pt.config.IncrementalSave {
 			pt.saveConfigImmediately(result)
 		}
 
@@ -1110,14 +1039,12 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 }
 
 func (pt *ProxyTester) writeConfigToTempFile(config map[string]interface{}) (string, error) {
-	// Create temp file
 	tmpFile, err := os.CreateTemp("", "xray-config-*.json")
 	if err != nil {
 		return "", err
 	}
 	defer tmpFile.Close()
 
-	// Write config as JSON
 	encoder := json.NewEncoder(tmpFile)
 	encoder.SetIndent("", "  ")
 	if err := encoder.Encode(config); err != nil {
@@ -1129,7 +1056,7 @@ func (pt *ProxyTester) writeConfigToTempFile(config map[string]interface{}) (str
 }
 
 func (pt *ProxyTester) testConfigSyntax(configFile string) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
 	cmd := exec.CommandContext(ctx, pt.configGenerator.xrayPath, "run", "-test", "-config", configFile)
@@ -1144,7 +1071,6 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(pt.configGenerator.xrayPath, "run", "-config", configFile)
 
-	// Redirect stdout and stderr to discard
 	cmd.Stdout = nil
 	cmd.Stderr = nil
 
@@ -1163,7 +1089,6 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 	protocol := result.Config.Protocol
 	timestamp := time.Now().Format("2006-01-02 15:04:05")
 
-	// Save JSON format
 	if file, ok := pt.outputFiles[protocol]; ok {
 		configLine := pt.createWorkingConfigLine(result)
 		fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
@@ -1172,7 +1097,6 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 		file.Sync()
 	}
 
-	// Save URL format
 	if file, ok := pt.urlFiles[protocol]; ok {
 		configURL := pt.createConfigURL(result)
 		fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
@@ -1181,7 +1105,6 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 		file.Sync()
 	}
 
-	// Save to general JSON file
 	if pt.generalJSONFile != nil {
 		configLine := pt.createWorkingConfigLine(result)
 		fmt.Fprintf(pt.generalJSONFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
@@ -1190,7 +1113,6 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 		pt.generalJSONFile.Sync()
 	}
 
-	// Save to general URL file
 	if pt.generalURLFile != nil {
 		configURL := pt.createConfigURL(result)
 		fmt.Fprintf(pt.generalURLFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
@@ -1326,7 +1248,6 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 }
 
 func (pt *ProxyTester) updateStats(result *TestResultData) {
-	// Update protocol-specific stats
 	if protocolStats, ok := pt.stats.Load(result.Config.Protocol); ok {
 		stats := protocolStats.(map[string]*int64)
 		atomic.AddInt64(stats["total"], 1)
@@ -1337,7 +1258,6 @@ func (pt *ProxyTester) updateStats(result *TestResultData) {
 		}
 	}
 
-	// Update overall stats
 	if overallStats, ok := pt.stats.Load("overall"); ok {
 		stats := overallStats.(map[string]*int64)
 		atomic.AddInt64(stats["total"], 1)
@@ -1373,8 +1293,7 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 
 	log.Printf("Testing batch %d with %d configurations...", batchID, len(configs))
 
-	// Create worker pool
-	maxWorkers := pt.maxWorkers
+	maxWorkers := pt.config.MaxWorkers
 	if len(configs) < maxWorkers {
 		maxWorkers = len(configs)
 	}
@@ -1382,7 +1301,6 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 	configChan := make(chan ProxyConfig, len(configs))
 	resultChan := make(chan *TestResultData, len(configs))
 
-	// Start workers
 	var wg sync.WaitGroup
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
@@ -1396,19 +1314,16 @@ func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestRe
 		}()
 	}
 
-	// Send configs to workers
 	for _, config := range configs {
 		configChan <- config
 	}
 	close(configChan)
 
-	// Wait for workers to finish
 	go func() {
 		wg.Wait()
 		close(resultChan)
 	}()
 
-	// Collect results
 	var results []*TestResultData
 	successCount := 0
 
@@ -1431,7 +1346,6 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 		return nil
 	}
 
-	// Setup signal handler for graceful shutdown
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
 
@@ -1444,42 +1358,42 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 
 	totalConfigs := len(configs)
 	log.Printf("Starting comprehensive proxy testing for %d configurations", totalConfigs)
-	log.Printf("Settings: %d workers, %v timeout, batch size: %d", pt.maxWorkers, pt.timeout, pt.batchSize)
+	log.Printf("Settings: %d workers, %v timeout, batch size: %d", pt.config.MaxWorkers, pt.config.Timeout, pt.config.BatchSize)
 
 	var allResults []*TestResultData
 
-	// Process in batches
-	for batchIdx := 0; batchIdx < totalConfigs; batchIdx += pt.batchSize {
-		end := batchIdx + pt.batchSize
+	for batchIdx := 0; batchIdx < totalConfigs; batchIdx += pt.config.BatchSize {
+		end := batchIdx + pt.config.BatchSize
 		if end > totalConfigs {
 			end = totalConfigs
 		}
 
 		batch := configs[batchIdx:end]
-		batchID := (batchIdx / pt.batchSize) + 1
+		batchID := (batchIdx / pt.config.BatchSize) + 1
 
 		log.Printf("Processing batch %d (%d configs)...", batchID, len(batch))
 
 		batchResults := pt.TestConfigs(batch, batchID)
 		allResults = append(allResults, batchResults...)
 
-		// Save intermediate results
 		pt.saveResults(allResults)
 
-		// Small delay between batches
 		if end < totalConfigs {
 			time.Sleep(500 * time.Millisecond)
 		}
 	}
 
-	// Print final summary
 	pt.printFinalSummary(allResults)
-
 	return allResults
 }
 
 func (pt *ProxyTester) saveResults(results []*TestResultData) {
-	file, err := os.Create("../log/test_results.json")
+	if err := os.MkdirAll(pt.config.LogDir, 0755); err != nil {
+		log.Printf("Failed to create log directory: %v", err)
+		return
+	}
+
+	file, err := os.Create(filepath.Join(pt.config.LogDir, "test_results.json"))
 	if err != nil {
 		log.Printf("Failed to save results: %v", err)
 		return
@@ -1515,7 +1429,6 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 		log.Printf("Success rate: %.2f%%", float64(successCount)/float64(totalCount)*100)
 	}
 
-	// Protocol breakdown
 	log.Println("\nProtocol Breakdown:")
 	protocols := []ProxyProtocol{ProtocolShadowsocks, ProtocolVMess, ProtocolVLESS}
 	for _, protocol := range protocols {
@@ -1531,7 +1444,6 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 		}
 	}
 
-	// Response time statistics
 	if len(successTimes) > 0 {
 		var sum float64
 		min, max := successTimes[0], successTimes[0]
@@ -1544,7 +1456,7 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 			if t > max {
 				max = t
 			}
-		    }
+		}
 
 		avg := sum / float64(len(successTimes))
 		log.Println("\nResponse Times (successful only):")
@@ -1557,7 +1469,6 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 }
 
 func (pt *ProxyTester) Cleanup() {
-	// Close output files
 	for _, file := range pt.outputFiles {
 		if file != nil {
 			file.Close()
@@ -1569,7 +1480,6 @@ func (pt *ProxyTester) Cleanup() {
 		}
 	}
 
-	// Close general output files
 	if pt.generalJSONFile != nil {
 		pt.generalJSONFile.Close()
 	}
@@ -1577,25 +1487,35 @@ func (pt *ProxyTester) Cleanup() {
 		pt.generalURLFile.Close()
 	}
 
-	// Cleanup processes
 	pt.processManager.Cleanup()
+	pt.portManager.cleanup()
+}
+
+func setupDirectories(config *Config) error {
+	dirs := []string{
+		config.DataDir,
+		config.LogDir,
+		filepath.Join(config.DataDir, "working_json"),
+		filepath.Join(config.DataDir, "working_url"),
+	}
+
+	for _, dir := range dirs {
+		if err := os.MkdirAll(dir, 0755); err != nil {
+			return fmt.Errorf("failed to create directory %s: %w", dir, err)
+		}
+	}
+
+	return nil
 }
 
 func main() {
-	// Command line arguments simulation (you can use flag package for real CLI args)
-	var (
-		shadowsocksFile = "../config_collector/deduplicated_urls/ss.json"
-		vmessFile       = "../config_collector/deduplicated_urls/vmess.json"
-		vlessFile       = "../config_collector/deduplicated_urls/vless.json"
-		maxWorkers      = 500
-		timeout         = 5 * time.Second
-		batchSize       = 500
-		xrayPath        = ""
-		incrementalSave = true
-	)
+	config := NewDefaultConfig()
 
-	// Initialize tester
-	tester, err := NewProxyTester(xrayPath, maxWorkers, timeout, batchSize, incrementalSave)
+	if err := setupDirectories(config); err != nil {
+		log.Fatalf("Failed to setup directories: %v", err)
+	}
+
+	tester, err := NewProxyTester(config)
 	if err != nil {
 		log.Fatalf("Failed to initialize tester: %v", err)
 	}
@@ -1603,33 +1523,22 @@ func main() {
 
 	var allConfigs []ProxyConfig
 
-	// Load Shadowsocks configs
-	if _, err := os.Stat(shadowsocksFile); err == nil {
-		configs, err := tester.LoadConfigsFromJSON(shadowsocksFile, ProtocolShadowsocks)
-		if err != nil {
-			log.Printf("Failed to load Shadowsocks configs: %v", err)
-		} else {
-			allConfigs = append(allConfigs, configs...)
-		}
+	configFiles := map[ProxyProtocol]string{
+		ProtocolShadowsocks: "../data/deduplicated_urls/ss.json",
+		ProtocolVMess:       "../data/deduplicated_urls/vmess.json",
+		ProtocolVLESS:       "../data/deduplicated_urls/vless.json",
 	}
 
-	// Load VMess configs
-	if _, err := os.Stat(vmessFile); err == nil {
-		configs, err := tester.LoadConfigsFromJSON(vmessFile, ProtocolVMess)
-		if err != nil {
-			log.Printf("Failed to load VMess configs: %v", err)
+	for protocol, filePath := range configFiles {
+		if _, err := os.Stat(filePath); err == nil {
+			configs, err := tester.LoadConfigsFromJSON(filePath, protocol)
+			if err != nil {
+				log.Printf("Failed to load %s configs: %v", protocol, err)
+			} else {
+				allConfigs = append(allConfigs, configs...)
+			}
 		} else {
-			allConfigs = append(allConfigs, configs...)
-		}
-	}
-
-	// Load VLESS configs
-	if _, err := os.Stat(vlessFile); err == nil {
-		configs, err := tester.LoadConfigsFromJSON(vlessFile, ProtocolVLESS)
-		if err != nil {
-			log.Printf("Failed to load VLESS configs: %v", err)
-		} else {
-			allConfigs = append(allConfigs, configs...)
+			log.Printf("Config file not found: %s", filePath)
 		}
 	}
 
@@ -1640,7 +1549,6 @@ func main() {
 
 	log.Printf("Total unique configurations for testing: %d", len(allConfigs))
 
-	// Run tests
 	results := tester.RunTests(allConfigs)
 
 	workingConfigs := 0
@@ -1652,10 +1560,10 @@ func main() {
 
 	if workingConfigs > 0 {
 		log.Printf("\nWorking configurations saved to:")
-		log.Println("  JSON: ../data/working_json/working_*.txt")
-		log.Println("  URL: ../data/working_url/working_*_urls.txt")
-		log.Println("  All configs (JSON): ../data/working_json/working_all_configs.txt")
-		log.Println("  All configs (URL): ../data/working_url/working_all_urls.txt")
+		log.Printf("  JSON: %s/working_json/working_*.txt", config.DataDir)
+		log.Printf("  URL: %s/working_url/working_*_urls.txt", config.DataDir)
+		log.Printf("  All configs (JSON): %s/working_json/working_all_configs.txt", config.DataDir)
+		log.Printf("  All configs (URL): %s/working_url/working_all_urls.txt", config.DataDir)
 	} else {
 		log.Println("No working configurations found")
 	}
