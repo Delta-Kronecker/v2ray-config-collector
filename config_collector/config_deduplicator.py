@@ -52,8 +52,7 @@ class ConfigDeduplicator:
             else:
                 selected_config = max(group, key=self.count_non_empty_params).copy()
 
-            # Set the name to @XrayTurbo🔥 for all unique configurations
-            selected_config["name"] = "@XrayTurbo🔥"
+            selected_config["name"] = "🔥"
             deduplicated.append(selected_config)
 
         return deduplicated
