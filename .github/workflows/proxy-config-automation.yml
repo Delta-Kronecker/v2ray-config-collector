@@ -64,7 +64,7 @@ jobs:
           mkdir -p data
         fi
         # Create all necessary subdirectories
-        mkdir -p data/working_json data/working_url data/quality_results data/speed_results data/deduplicated_urls
+        mkdir -p data/working_url
         echo "Created directory structure:"
         find data -type d
 
