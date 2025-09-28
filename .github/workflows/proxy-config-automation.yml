@@ -87,24 +87,6 @@ jobs:
         echo "Go proxy testing completed"
       continue-on-error: true
 
-    - name: Execute Go quality tester
-      id: go-quality-tester
-      run: |
-        echo "Starting Go proxy quality testing..."
-        cd xray_test
-        go run quality_tester.go || echo "Quality tester completed (may have timed out)"
-        echo "Go quality testing completed"
-      continue-on-error: true
-
-    - name: Execute Go speed tester
-      id: go-speed-tester
-      run: |
-        echo "Starting Go proxy speed testing..."
-        cd xray_test
-        go run speed_tester.go || echo "Speed tester completed (may have timed out)"
-        echo "Go speed testing completed"
-      continue-on-error: true
-
     - name: Check for xray_test data and move files
       run: |
         echo "Checking for files in xray_test/data..."
@@ -128,8 +110,6 @@ jobs:
           echo "=== File counts by type ==="
           echo "Working JSON: $(find data/working_json -type f 2>/dev/null | wc -l || echo 0)"
           echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
-          echo "Quality results: $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0)"
-          echo "Speed results: $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0)"
           echo "Deduplicated URLs: $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0)"
           echo "Total files in data: $(find data -type f | wc -l)"
         else
@@ -149,8 +129,6 @@ jobs:
         git add data/ || true
         git add data/working_json/ || true
         git add data/working_url/ || true
-        git add data/quality_results/ || true
-        git add data/speed_results/ || true
         git add data/deduplicated_urls/ || true
 
         echo "Files to be committed:"
@@ -177,8 +155,6 @@ jobs:
           git commit -m "Automated proxy collection - ${TIMESTAMP}" \
                      -m "Python Collector: ${PYTHON_STATUS}" \
                      -m "Proxy Tester: ${PROXY_STATUS}" \
-                     -m "Quality Tester: ${QUALITY_STATUS}" \
-                     -m "Speed Tester: ${SPEED_STATUS}" \
                      -m "Workflow run: ${RUN_ID}"
 
           git push origin "${GITHUB_REF_NAME}"
@@ -191,11 +167,7 @@ jobs:
       with:
         name: proxy-results-${{ github.run_id }}
         path: |
-          data/working_json/
           data/working_url/
-          data/quality_results/
-          data/speed_results/
-          data/deduplicated_urls/
         retention-days: 7
 
     - name: Workflow summary
@@ -211,18 +183,13 @@ jobs:
         echo "|--------|--------|" >> $GITHUB_STEP_SUMMARY
         echo "| Python Collector | ${{ steps.python-collector.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
         echo "| Go Proxy Tester | ${{ steps.go-proxy-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-        echo "| Go Quality Tester | ${{ steps.go-quality-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
-        echo "| Go Speed Tester | ${{ steps.go-speed-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
 
         if [ -d "data" ]; then
           echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Working JSON | $(find data/working_json -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Quality Results | $(find data/quality_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Speed Results | $(find data/speed_results -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| Deduplicated URLs | $(find data/deduplicated_urls -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
         else
