@@ -7,7 +7,7 @@
  The configurations in `working_all_urls.txt` have been tested for functionality within Iran. The test results are available at:
  
  **Iran Test Results**: 
- - [https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/test_in_iran.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/test_in_iran.txt)
+ - [test in iran](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/test_in_iran.txt)
 
  ### All Protocols Combined (automatic update every 12 hour)
  - **All Working URLs**: 
