@@ -129,7 +129,7 @@ jobs:
         # Reapply stashed changes
         git stash pop --quiet || { echo "Stash pop failed (possible conflicts)"; exit 1; }
         # Add all files in data/ explicitly (expanded from original to cover all subdirs for safety)
-        git add data/ || true
+        git add data/working_url || true
         echo "Files to be committed:"
         git diff --cached --name-only || echo "No files to commit"
         if git diff --cached --quiet; then
