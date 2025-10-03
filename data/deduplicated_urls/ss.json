@@ -126,13 +126,6 @@
     "name": "🔥"
   },
   {
-    "server": "tr.vpnsparta.pro",
-    "server_port": 57456,
-    "password": "c40641c1f89e7acb",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "103.103.245.158",
     "server_port": 443,
     "password": "ccf426f1fe78",
@@ -144,34 +137,6 @@
     "server": "103.186.154.198",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "arxfw2b78fi2q9hzylhn.freesocks.work",
-    "server_port": 443,
-    "password": "Nk9asglDzHzjktVzTkvhaA",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "78.40.117.109",
-    "server_port": 37538,
-    "password": "RP767jpZVarzQ0iI0vbTuA",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "hackney-latest-strike.freesocks.work",
-    "server_port": 443,
-    "password": "XUMTygEM1jVYIvysXKqA5T",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "3.107.151.161",
-    "server_port": 443,
-    "password": "amazonskr05",
     "method": "aes-256-cfb",
     "name": "🔥"
   },
@@ -190,9 +155,44 @@
     "name": "🔥"
   },
   {
+    "server": "arxfw2b78fi2q9hzylhn.freesocks.work",
+    "server_port": 443,
+    "password": "Nk9asglDzHzjktVzTkvhaA",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "3.107.151.161",
+    "server_port": 443,
+    "password": "amazonskr05",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "185.242.86.156",
     "server_port": 54170,
     "password": "36ZCHeabUSfKjfQEvJ4HDV",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "hackney-latest-strike.freesocks.work",
+    "server_port": 443,
+    "password": "XUMTygEM1jVYIvysXKqA5T",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "194.135.46.13",
+    "server_port": 1419,
+    "password": "EacZIMFwmMCR6dWqN5Ah0c",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "78.40.117.109",
+    "server_port": 37538,
+    "password": "RP767jpZVarzQ0iI0vbTuA",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -208,62 +208,6 @@
     "server_port": 8080,
     "password": "oZIoA69Q8yhcQV8ka3Pa3A",
     "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "104.26.12.31",
-    "server_port": 443,
-    "password": "01996d6c-ca12-a514-1884-58805e80e2c9",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "172.66.40.99",
-    "server_port": 443,
-    "password": "0bfe0c56-9e18-44ac-bf97-2c7bcb5cd3c0",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "172.66.40.99",
-    "server_port": 8880,
-    "password": "1ddcf6a7-a002-4b01-af9f-38b283c02fa0",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "172.66.40.99",
-    "server_port": 80,
-    "password": "2232faac-959f-4707-beb7-a634bafb837d",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "ftp2.tehran-park.com",
-    "server_port": 443,
-    "password": "2bcb196d-f5db-4cd9-94d9-4f2ea8c8991e",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "masterserver1.byte-server.ir",
-    "server_port": 1331,
-    "password": "34a89207-93fd-4df8-9cdf-355a0c3426e4",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "dl.de3.azarbanou.ir",
-    "server_port": 5055,
-    "password": "6261b90d-3268-4a3d-b02a-16329e0a4a9a",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "94.131.8.19",
-    "server_port": 45448,
-    "password": "s~9",
-    "method": "\u001cw",
     "name": "🔥"
   },
   {
@@ -436,6 +380,13 @@
   },
   {
     "server": "45.87.175.171",
+    "server_port": 8080,
+    "password": "4a2rfixophdjffa8KVA4Aa",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "45.87.175.178",
     "server_port": 8080,
     "password": "4a2rfixophdjffa8KVA4Aa",
     "method": "chacha20-ietf-poly1305",
@@ -624,13 +575,6 @@
     "name": "🔥"
   },
   {
-    "server": "45.87.175.178",
-    "server_port": 8080,
-    "password": "1RWwXhwfAB5gAEozU4G2Pg",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "45.87.175.188",
     "server_port": 8080,
     "password": "1RWwXhwfAB5gAEozU4G2Pg",
@@ -809,13 +753,6 @@
     "server": "212.192.214.159",
     "server_port": 800,
     "password": "tvX1v#NSFP_LG_bJ",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "40.172.49.150",
-    "server_port": 443,
-    "password": "u17T3BvpYaaiuW2c",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -1016,6 +953,13 @@
     "name": "🔥"
   },
   {
+    "server": "45.95.232.23",
+    "server_port": 4248,
+    "password": "IOO9httX1VQgWVBVpEknzm",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
     "server": "142.4.216.225",
     "server_port": 80,
     "password": "JIhN6rBKkaEboLNXVSv5rq",
@@ -1208,6 +1152,13 @@
     "server": "89.223.93.176",
     "server_port": 41348,
     "password": "Vmsf06YTMqtAYdhwMqdSuGqgdVkm0yddi4kYaAEVQWYj9iHA",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "145.133.44.86",
+    "server_port": 443,
+    "password": "W74XFALLLuw6m5IA",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -1548,13 +1499,6 @@
     "name": "🔥"
   },
   {
-    "server": "18.139.0.110",
-    "server_port": 8319,
-    "password": "ljqdalu13..",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "18.162.146.85",
     "server_port": 8313,
     "password": "ljqdalu13..",
@@ -1744,13 +1688,6 @@
     "name": "🔥"
   },
   {
-    "server": "46.246.96.191",
-    "server_port": 15721,
-    "password": "rW878n2pgucX4r0z4fgWJM",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "160.16.123.124",
     "server_port": 10087,
     "password": "10086",
@@ -1845,13 +1782,6 @@
     "server": "80.92.204.106",
     "server_port": 9025,
     "password": "XPtzA9sCug3SPR4c",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "103.186.154.184",
-    "server_port": 38388,
-    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
     "name": "🔥"
   },
@@ -2066,6 +1996,20 @@
     "name": "🔥"
   },
   {
+    "server": "139.64.164.15",
+    "server_port": 7306,
+    "password": "FoOiGlkAA9yPEGP",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "23.157.40.89",
+    "server_port": 7306,
+    "password": "FoOiGlkAA9yPEGP",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "38.107.226.159",
     "server_port": 7307,
     "password": "FoOiGlkAA9yPEGP",
@@ -2150,8 +2094,22 @@
     "name": "🔥"
   },
   {
+    "server": "38.75.136.33",
+    "server_port": 5003,
+    "password": "g5MeD6Ft3CWlJId",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "162.251.63.124",
     "server_port": 8881,
+    "password": "kDWvXYZoTBcGkC4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "38.86.135.141",
+    "server_port": 8882,
     "password": "kDWvXYZoTBcGkC4",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -2171,20 +2129,6 @@
     "name": "🔥"
   },
   {
-    "server": "31.6.1.186",
-    "server_port": 48900,
-    "password": "a1f51e2b-cc02-4eb6-938c-ba3d147d6bef",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "nkang2replace.airlineshoma.com",
-    "server_port": 443,
-    "password": "b754b53a-aaf5-475c-eeed-46806c2aa63f",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "68.183.227.4",
     "server_port": 8080,
     "password": "14fFPrbezE3HDZzsMOr6",
@@ -2196,13 +2140,6 @@
     "server_port": 8080,
     "password": "14fFPrbezE3HDZzsMOr6",
     "method": "rc4-md5",
-    "name": "🔥"
-  },
-  {
-    "server": "45.89.107.245",
-    "server_port": 8880,
-    "password": "G\u001a7s=ߞwξ}wMv",
-    "method": "u",
     "name": "🔥"
   },
   {
@@ -2374,13 +2311,6 @@
     "name": "🔥"
   },
   {
-    "server": "103.186.154.253",
-    "server_port": 38388,
-    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "89.23.103.125",
     "server_port": 42090,
     "password": "uQS5ntVqC00sSKkeNzUiD3",
@@ -2458,14 +2388,14 @@
     "name": "🔥"
   },
   {
-    "server": "156.146.38.168",
+    "server": "156.146.38.169",
     "server_port": 443,
     "password": "shadowsocks",
     "method": "aes-128-gcm",
     "name": "🔥"
   },
   {
-    "server": "156.146.38.169",
+    "server": "156.146.38.168",
     "server_port": 443,
     "password": "shadowsocks",
     "method": "aes-128-gcm",
@@ -2479,16 +2409,30 @@
     "name": "🔥"
   },
   {
-    "server": "193.29.139.217",
+    "server": "104.192.226.106",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "194.116.173.21",
+    "server_port": 9038,
+    "password": "gYCYXfkUQEs2TaJQ",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "193.29.139.189",
     "server_port": 8080,
     "password": "QCXDxuDlTTMD7jtgHUjIoj",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
-    "server": "151.242.251.144",
+    "server": "151.242.251.147",
     "server_port": 8080,
-    "password": "4a2rfixophdjffa8KVA4Aa",
+    "password": "QCXDxuDlTTMD7jtgHUjIoj",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -2507,13 +2451,6 @@
     "name": "🔥"
   },
   {
-    "server": "151.242.251.131",
-    "server_port": 8080,
-    "password": "QCXDxuDlTTMD7jtgHUjIoj",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "beesyar.org",
     "server_port": 8080,
     "password": "1RWwXhwfAB5gAEozU4G2Pg",
@@ -2521,44 +2458,9 @@
     "name": "🔥"
   },
   {
-    "server": "193.29.139.202",
+    "server": "193.29.139.157",
     "server_port": 8080,
-    "password": "oZIoA69Q8yhcQV8ka3Pa3A",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "193.29.139.189",
-    "server_port": 8080,
-    "password": "QCXDxuDlTTMD7jtgHUjIoj",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "45.158.171.66",
-    "server_port": 8080,
-    "password": "oZIoA69Q8yhcQV8ka3Pa3A",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "51.15.17.169",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "45.158.171.70",
-    "server_port": 8080,
-    "password": "oZIoA69Q8yhcQV8ka3Pa3A",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "151.242.251.147",
-    "server_port": 8080,
-    "password": "QCXDxuDlTTMD7jtgHUjIoj",
+    "password": "4a2rfixophdjffa8KVA4Aa",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -2570,23 +2472,16 @@
     "name": "🔥"
   },
   {
-    "server": "195.154.169.198",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "193.29.139.157",
+    "server": "193.29.139.217",
     "server_port": 8080,
-    "password": "4a2rfixophdjffa8KVA4Aa",
+    "password": "QCXDxuDlTTMD7jtgHUjIoj",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
-    "server": "pl.vpnsparta.pro",
-    "server_port": 57456,
-    "password": "360e21d21977dc11",
+    "server": "151.242.251.131",
+    "server_port": 8080,
+    "password": "QCXDxuDlTTMD7jtgHUjIoj",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -2598,28 +2493,28 @@
     "name": "🔥"
   },
   {
-    "server": "156.146.62.163",
+    "server": "de.vpnsparta.pro",
+    "server_port": 57456,
+    "password": "c40641c1f89e7acb",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "156.146.62.161",
     "server_port": 443,
     "password": "shadowsocks",
     "method": "aes-128-gcm",
     "name": "🔥"
   },
   {
-    "server": "121.127.46.147",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "104.192.226.106",
+    "server": "92.118.205.228",
     "server_port": 990,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
-    "server": "185.126.237.38",
+    "server": "45.154.206.192",
     "server_port": 990,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "chacha20-ietf-poly1305",
@@ -2633,24 +2528,10 @@
     "name": "🔥"
   },
   {
-    "server": "156.146.62.161",
-    "server_port": 443,
-    "password": "shadowsocks",
-    "method": "aes-128-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "45.154.206.192",
-    "server_port": 990,
+    "server": "121.127.46.147",
+    "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "de.vpnsparta.pro",
-    "server_port": 57456,
-    "password": "c40641c1f89e7acb",
-    "method": "chacha20-ietf-poly1305",
+    "method": "aes-256-cfb",
     "name": "🔥"
   },
   {
@@ -2661,9 +2542,37 @@
     "name": "🔥"
   },
   {
-    "server": "92.118.205.228",
+    "server": "156.146.62.163",
+    "server_port": 443,
+    "password": "shadowsocks",
+    "method": "aes-128-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "185.126.237.38",
     "server_port": 990,
     "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "51.15.17.169",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "195.154.169.198",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "151.242.251.144",
+    "server_port": 8080,
+    "password": "4a2rfixophdjffa8KVA4Aa",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -2682,13 +2591,6 @@
     "name": "🔥"
   },
   {
-    "server": "95.163.176.37",
-    "server_port": 8506,
-    "password": "eUh4lSpi7nOYj0vSrqLUh0",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "ca225.vpnbook.com",
     "server_port": 80,
     "password": "JIhN6rBKkaEboLNXVSv5rq",
@@ -2696,24 +2598,17 @@
     "name": "🔥"
   },
   {
-    "server": "217.30.10.18",
-    "server_port": 9019,
-    "password": "GA9KzeEgvfxNrgmM",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "51.15.23.63",
+    "server": "103.163.218.2",
     "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
     "name": "🔥"
   },
   {
-    "server": "217.30.10.18",
-    "server_port": 9060,
-    "password": "ueLXVkvh4hckhErQ",
-    "method": "aes-256-cfb",
+    "server": "95.163.176.37",
+    "server_port": 8506,
+    "password": "eUh4lSpi7nOYj0vSrqLUh0",
+    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -2724,20 +2619,6 @@
     "name": "🔥"
   },
   {
-    "server": "103.163.218.2",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "103.149.182.191",
-    "server_port": 8388,
-    "password": "asd123456",
-    "method": "chacha20-ietf",
-    "name": "🔥"
-  },
-  {
     "server": "192.36.27.94",
     "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
@@ -2745,7 +2626,7 @@
     "name": "🔥"
   },
   {
-    "server": "192.71.249.78",
+    "server": "38.165.233.93",
     "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
@@ -2759,28 +2640,28 @@
     "name": "🔥"
   },
   {
-    "server": "38.165.233.93",
+    "server": "51.15.23.63",
     "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "192.71.249.78",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.149.182.191",
+    "server_port": 8388,
+    "password": "asd123456",
+    "method": "chacha20-ietf",
     "name": "🔥"
   },
   {
     "server": "194.71.126.31",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "45.89.52.66",
-    "server_port": 9042,
-    "password": "S7KwUu7yBy58S3Ga",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "37.235.49.168",
     "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
@@ -2794,17 +2675,185 @@
     "name": "🔥"
   },
   {
-    "server": "38.110.1.122",
-    "server_port": 8090,
-    "password": "PCnnH6SQSnfoS27",
+    "server": "38.54.45.129",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "223.165.4.173",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "185.126.239.250",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "23.157.40.101",
+    "server_port": 8008,
+    "password": "XKFKl2rULjIp74",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "38.110.1.122",
-    "server_port": 7306,
-    "password": "FoOiGlkAA9yPEGP",
+    "server": "45.89.52.66",
+    "server_port": 9031,
+    "password": "BwcAUZk8hUFAkDGN",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "193.29.139.179",
+    "server_port": 8080,
+    "password": "cvII85TrW6n0OGyfpHVS1u",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "203.23.128.33",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "134.209.147.198",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "154.90.63.177",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "37.235.49.168",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "37.235.49.152",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "185.47.255.22",
+    "server_port": 990,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "154.223.20.79",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "193.29.139.202",
+    "server_port": 8080,
+    "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "134.209.147.198",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "89.46.238.35",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "192.71.166.100",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "171.22.254.17",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "45.87.175.166",
+    "server_port": 8080,
+    "password": "4a2rfixophdjffa8KVA4Aa",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "45.158.171.66",
+    "server_port": 8080,
+    "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "154.90.62.168",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "45.158.171.70",
+    "server_port": 8080,
+    "password": "oZIoA69Q8yhcQV8ka3Pa3A",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "46.183.185.37",
+    "server_port": 989,
+    "password": "f8f7aCzcPKbsF8p3",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "23.157.40.101",
+    "server_port": 8009,
+    "password": "XKFKl2rULjIp74",
     "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "208.67.105.196",
+    "server_port": 42029,
+    "password": "SjdGCHwafjktt1rzpGxTKYTvVBWb8Xa6E5DTr6MzbdHQSwvpLiDczj3n6MBjy2uyFSzgqgvCWsDQmpM4VQzfPzyGYF58wdyD",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "217.30.10.18",
+    "server_port": 9060,
+    "password": "ueLXVkvh4hckhErQ",
+    "method": "aes-256-cfb",
     "name": "🔥"
   },
   {
@@ -2826,13 +2875,6 @@
     "server_port": 10087,
     "password": "10086",
     "method": "aes-128-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "us.vmagnum.win",
-    "server_port": 57456,
-    "password": "360e21d21977dc11",
-    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -3151,13 +3193,6 @@
     "name": "🔥"
   },
   {
-    "server": "171.22.254.17",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "149.202.82.172",
     "server_port": 8000,
     "password": "KixLvKzwjekG00rm",
@@ -3375,13 +3410,6 @@
     "name": "🔥"
   },
   {
-    "server": "45.87.175.166",
-    "server_port": 8080,
-    "password": "1RWwXhwfAB5gAEozU4G2Pg",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "81.19.140.31",
     "server_port": 65305,
     "password": "nlVqIVyKwWoDsD7dVYT9Y0",
@@ -3505,13 +3533,6 @@
     "server_port": 443,
     "password": "0a44145f-59dc-4e5b-a233-677b97f5114c",
     "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "203.23.128.33",
-    "server_port": 990,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -4726,13 +4747,6 @@
     "name": "🔥"
   },
   {
-    "server": "223.165.4.173",
-    "server_port": 990,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "116.203.215.147",
     "server_port": 8880,
     "password": "MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206dC9qWVVkZmdjbFdWcHdvZXdJM2p1MkQ3NVNmby9SRFFyTEdKSExIMzlVZz06MnpQempEKzdJREZvalhlSHdXMGpaRWQ2N2dTbXRWanNLTmRPYzFXNW9Hcz0%3D",
@@ -5811,13 +5825,6 @@
     "name": "🔥"
   },
   {
-    "server": "185.126.239.250",
-    "server_port": 990,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "18.222.137.168",
     "server_port": 2222,
     "password": "7fc993f5-7cd7-4485-9e6f-1f7c5160c910",
@@ -6081,13 +6088,6 @@
     "server_port": 80,
     "password": "42f36835-730c-4ecc-9daf-20121ae7ba47",
     "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "185.47.255.22",
-    "server_port": 990,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -7808,13 +7808,6 @@
     "name": "🔥"
   },
   {
-    "server": "23.157.40.101",
-    "server_port": 8008,
-    "password": "YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ%3D",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "148.113.141.170",
     "server_port": 2053,
     "password": "s\u001aqݦ=5y",
@@ -8634,13 +8627,6 @@
     "name": "🔥"
   },
   {
-    "server": "37.235.49.152",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "38.110.1.114",
     "server_port": 11202,
     "password": "29da002ab4fca0c8",
@@ -8869,13 +8855,6 @@
     "server_port": 40019,
     "password": "72bb3072-7efd-4d67-9beb-2cd9c18e69f4",
     "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "23.157.40.101",
-    "server_port": 8009,
-    "password": "XKFKl2rULjIp74",
-    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -11646,13 +11625,6 @@
     "name": "🔥"
   },
   {
-    "server": "154.90.63.177",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "85.190.246.242",
     "server_port": 26585,
     "password": "f9bb4c02e245cceb",
@@ -11926,13 +11898,6 @@
     "name": "🔥"
   },
   {
-    "server": "154.223.20.79",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "38.121.43.71",
     "server_port": 5004,
     "password": "g5MeD6Ft3CWlJId",
@@ -11958,13 +11923,6 @@
     "server_port": 443,
     "password": "amazonskr05",
     "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "193.29.139.179",
-    "server_port": 8080,
-    "password": "cvII85TrW6n0OGyfpHVS1u",
-    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -12896,13 +12854,6 @@
     "server": "35.161.163.245",
     "server_port": 443,
     "password": "amazonskr05",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "192.71.166.100",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
     "name": "🔥"
   },
@@ -16754,6 +16705,13 @@
     "name": "🔥"
   },
   {
+    "server": "45.89.52.66",
+    "server_port": 9042,
+    "password": "S7KwUu7yBy58S3Ga",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "hm.huamao888.top",
     "server_port": 16947,
     "password": "29d10bfd-fce9-47f8-9d14-71e0de63ffbb",
@@ -16946,13 +16904,6 @@
     "server": "45.89.52.66",
     "server_port": 9079,
     "password": "TPqX8edgbAURcAMb",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "89.46.238.35",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
     "name": "🔥"
   },
@@ -18396,13 +18347,6 @@
     "name": "🔥"
   },
   {
-    "server": "46.183.185.37",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "77.110.102.235",
     "server_port": 31080,
     "password": "74J5gS8i6FiGupqrahFvM9",
@@ -18769,13 +18713,6 @@
     "name": "🔥"
   },
   {
-    "server": "38.54.45.129",
-    "server_port": 990,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "54.251.238.225",
     "server_port": 6666,
     "password": "//Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxYTE3YjE5ZC00ODk2LTQ1MzEtYWY3OS02ZTkxZDhlZjgyMjg",
@@ -19139,13 +19076,6 @@
     "server_port": 10024,
     "password": "YWQ3Y2UxOGQ2MTkzYTU0MQ==:MzljOTA5ZTAtMDM2OS00MQ==\r",
     "method": "2022-blake3-aes-128-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "134.209.147.198",
-    "server_port": 990,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -20445,13 +20375,6 @@
   },
   {
     "server": "185.213.23.226",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "154.90.62.168",
     "server_port": 989,
     "password": "f8f7aCzcPKbsF8p3",
     "method": "aes-256-cfb",
@@ -22292,13 +22215,6 @@
     "server_port": 7002,
     "password": "RexnBgU7EV5ADxG",
     "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "194.116.173.21",
-    "server_port": 9038,
-    "password": "gYCYXfkUQEs2TaJQ",
-    "method": "aes-256-cfb",
     "name": "🔥"
   },
   {
@@ -26386,6 +26302,13 @@
     "name": "🔥"
   },
   {
+    "server": "217.30.10.18",
+    "server_port": 9019,
+    "password": "GA9KzeEgvfxNrgmM",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "51.13.114.206",
     "server_port": 19940,
     "password": "Bk6CwTEYasiCd9iqVOvOpZ",
@@ -26698,6 +26621,13 @@
     "server_port": 50126,
     "password": "7e1dd4c55bf85da5\r",
     "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "tr.vpnsparta.pro",
+    "server_port": 57456,
+    "password": "c40641c1f89e7acb",
+    "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
@@ -27977,6 +27907,13 @@
     "name": "🔥"
   },
   {
+    "server": "18.139.0.110",
+    "server_port": 8319,
+    "password": "ljqdalu13..\r",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
     "server": "sumibi.org.sumibi.org",
     "server_port": 19160,
     "password": "TiPuePVaYOGBMYWaEjnmRN",
@@ -28931,13 +28868,6 @@
     "name": "🔥"
   },
   {
-    "server": "139.64.164.15",
-    "server_port": 7306,
-    "password": "FoOiGlkAA9yPEGP",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "139.224.111.72",
     "server_port": 40504,
     "password": "0015b020-963b-450d-92f9-a8339de6332c",
@@ -29435,6 +29365,13 @@
     "name": "🔥"
   },
   {
+    "server": "172.66.40.99",
+    "server_port": 8880,
+    "password": "1ddcf6a7-a002-4b01-af9f-38b283c02fa0",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "91.99.221.194",
     "server_port": 38644,
     "password": "32c07748-0ad4-4d34-943f-b0b978564766",
@@ -29575,6 +29512,13 @@
     "name": "🔥"
   },
   {
+    "server": "us.vmagnum.win",
+    "server_port": 57456,
+    "password": "360e21d21977dc11",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
     "server": "51.195.149.115",
     "server_port": 45816,
     "password": "KkDzY101Oe",
@@ -29708,6 +29652,13 @@
     "name": "🔥"
   },
   {
+    "server": "172.66.40.99",
+    "server_port": 80,
+    "password": "ysg=Nk",
+    "method": "٭m\\z",
+    "name": "🔥"
+  },
+  {
     "server": "services.dissertationhelpspecialist.com",
     "server_port": 443,
     "password": "0af87659-0a29-47d0-800e-a038ba3d2922",
@@ -29768,6 +29719,13 @@
     "server_port": 443,
     "password": "mps3FwmDjLrWaOVg",
     "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "38.110.1.122",
+    "server_port": 8090,
+    "password": "PCnnH6SQSnfoS27",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -29873,13 +29831,6 @@
     "server_port": 808,
     "password": "tvX1v#NSFP_LG_bJ",
     "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "134.209.147.198",
-    "server_port": 989,
-    "password": "f8f7aCzcPKbsF8p3",
-    "method": "aes-256-cfb",
     "name": "🔥"
   },
   {
@@ -30461,6 +30412,13 @@
     "server_port": 443,
     "password": "s~yvqޚ",
     "method": "k]4Ms",
+    "name": "🔥"
+  },
+  {
+    "server": "172.66.40.99",
+    "server_port": 443,
+    "password": "e9ba730d-76c9-4786-9f49-e13d7935e4ae",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -31060,13 +31018,6 @@
     "name": "🔥"
   },
   {
-    "server": "208.67.105.196",
-    "server_port": 42029,
-    "password": "Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGemY1dmFYRnM3b0NZM1hiMzNhWjk0NXhraHZGdDJycnhkUkJZOUQzZFFlY05RS0VYeXNCWGIyZVZQekRWYjlpcU0zaUJod0pIRWk1ZVdoekFYSlhFUDJ2VXdXQ3BaWEQ%3D",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "185.22.154.251",
     "server_port": 50192,
     "password": "c5fcdf7829112cb4",
@@ -31463,13 +31414,6 @@
     "server_port": 443,
     "password": "Bog0ELmMM9DSxDdQ",
     "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "38.86.135.141",
-    "server_port": 8882,
-    "password": "kDWvXYZoTBcGkC4",
-    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -32209,6 +32153,13 @@
     "name": "🔥"
   },
   {
+    "server": "46.246.96.191",
+    "server_port": 15721,
+    "password": "rW878n2pgucX4r0z4fgWJM",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
     "server": "38.75.136.49",
     "server_port": 8118,
     "password": "cdBIDV42DCwnfIN",
@@ -32289,6 +32240,13 @@
     "server": "server1.mrlizard.my",
     "server_port": 443,
     "password": "b753fa60-9b8e-41b0-bf3d-7d800df4a070",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.26.12.31",
+    "server_port": 443,
+    "password": "01996d6c-ca12-a514-1884-58805e80e2c9",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -32678,6 +32636,13 @@
     "name": "🔥"
   },
   {
+    "server": "masterserver1.byte-server.ir",
+    "server_port": 1331,
+    "password": "df574996-5eb5-4aab-a355-cb3573a89fe9",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "V2rayNGSelllBoT.byte-server.ir",
     "server_port": 2020,
     "password": "34a89207-93fd-4df8-9cdf-355a0c3426e4",
@@ -32734,13 +32699,6 @@
     "name": "🔥"
   },
   {
-    "server": "45.95.232.23",
-    "server_port": 4248,
-    "password": "IOO9httX1VQgWVBVpEknzm",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "test.fast.hosting-ip.com",
     "server_port": 80,
     "password": "b3d62a62-264e-44e8-af2a-759d455de4f2",
@@ -32762,6 +32720,13 @@
     "name": "🔥"
   },
   {
+    "server": "40.172.49.150",
+    "server_port": 443,
+    "password": "u17T3BvpYaaiuW2c",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
     "server": "15.184.48.253",
     "server_port": 443,
     "password": "Bog0ELmMM9DSxDdQ",
@@ -32772,6 +32737,83 @@
     "server": "45.14.247.49",
     "server_port": 5555,
     "password": "l-CowVm4edcf2gp-WcJD1g",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "23.150.152.112",
+    "server_port": 8009,
+    "password": "XKFKl2rULjIp74",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "38.75.136.33",
+    "server_port": 8080,
+    "password": "KixLvKzwjekG00rm",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "167.71.120.207",
+    "server_port": 443,
+    "password": "vQtw1u6bxycg6IrypzC9Ic",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "79.127.239.84",
+    "server_port": 19175,
+    "password": "5Au7NhFmcBqMnika4KVk7h4ZdV3wD4hFtJ8PJ3AlHzLeU1chEBaz19a643q7hBPV",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "23.157.40.87",
+    "server_port": 8881,
+    "password": "kDWvXYZoTBcGkC4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "91.205.158.2",
+    "server_port": 2053,
+    "password": "MjAyMi1ibGFrZTMtYWVzLTI1Ni1nY206NUNYNWRGUnpRMjlYMUNUeEhDL3ZzQjM1aTdsTGU4MkhlbG9aM0xCQmJSdz06bFZXRDVqd0swWjJyN1NvZFBYNDFnaXViUGFEaTRJcmdrVGZRK2VqVWFGdz0%3D",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "18.170.151.104",
+    "server_port": 443,
+    "password": "W74XFALLLuw6m5IA",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "glance.asuscomm.com",
+    "server_port": 10099,
+    "password": "12242\r",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "142.202.48.43",
+    "server_port": 8091,
+    "password": "PCnnH6SQSnfoS27",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.154.73",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "89.110.70.175",
+    "server_port": 13402,
+    "password": "cn01a4DBPNhzoUBfwvy51t",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -33931,6 +33973,13 @@
     "name": "🔥"
   },
   {
+    "server": "154.211.8.18",
+    "server_port": 2083,
+    "password": "019931aa-8cba-3a74-6c77-cb288ae52f2a",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "154.81.141.36",
     "server_port": 2096,
     "password": "019931aa-8cba-3a74-6c77-cb288ae52f2a",
@@ -33959,6 +34008,20 @@
     "name": "🔥"
   },
   {
+    "server": "46.232.108.217",
+    "server_port": 443,
+    "password": "019931aa-8cba-3a74-6c77-cb288ae52f2a",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "50.62.91.36",
+    "server_port": 2096,
+    "password": "019931aa-8cba-3a74-6c77-cb288ae52f2a",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "86.110.56.71",
     "server_port": 2053,
     "password": "019931aa-8cba-3a74-6c77-cb288ae52f2a",
@@ -33969,6 +34032,13 @@
     "server": "92.243.75.49",
     "server_port": 2087,
     "password": "019931aa-8cba-3a74-6c77-cb288ae52f2a",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.26.12.31",
+    "server_port": 2087,
+    "password": "01996431-3e8b-e8ed-202a-baf93f8e8851",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -34785,6 +34855,13 @@
     "name": "🔥"
   },
   {
+    "server": "13.37.151.65",
+    "server_port": 22224,
+    "password": "^",
+    "method": "ӞuN|ݚs\u001fϽ{ٽ",
+    "name": "🔥"
+  },
+  {
     "server": "13.37.155.106",
     "server_port": 22224,
     "password": "^",
@@ -34862,21 +34939,7 @@
     "name": "🔥"
   },
   {
-    "server": "15.188.189.248",
-    "server_port": 22224,
-    "password": "^",
-    "method": "ӞuN|ݚs\u001fϽ{ٽ",
-    "name": "🔥"
-  },
-  {
     "server": "15.188.237.53",
-    "server_port": 22224,
-    "password": "^",
-    "method": "ӞuN|ݚs\u001fϽ{ٽ",
-    "name": "🔥"
-  },
-  {
-    "server": "15.188.29.86",
     "server_port": 22224,
     "password": "^",
     "method": "ӞuN|ݚs\u001fϽ{ٽ",
@@ -35030,13 +35093,6 @@
     "name": "🔥"
   },
   {
-    "server": "35.156.39.96",
-    "server_port": 22224,
-    "password": "^",
-    "method": "ӞuN|ݚs\u001fϽ{ٽ",
-    "name": "🔥"
-  },
-  {
     "server": "35.181.20.144",
     "server_port": 22224,
     "password": "^",
@@ -35058,8 +35114,22 @@
     "name": "🔥"
   },
   {
+    "server": "51.44.114.6",
+    "server_port": 22224,
+    "password": "^",
+    "method": "ӞuN|ݚs\u001fϽ{ٽ",
+    "name": "🔥"
+  },
+  {
     "server": "52.44.20.178",
     "server_port": 22222,
+    "password": "^",
+    "method": "ӞuN|ݚs\u001fϽ{ٽ",
+    "name": "🔥"
+  },
+  {
+    "server": "52.47.77.12",
+    "server_port": 22224,
     "password": "^",
     "method": "ӞuN|ݚs\u001fϽ{ٽ",
     "name": "🔥"
@@ -35123,13 +35193,6 @@
   {
     "server": "63.179.40.205",
     "server_port": 22224,
-    "password": "^",
-    "method": "ӞuN|ݚs\u001fϽ{ٽ",
-    "name": "🔥"
-  },
-  {
-    "server": "99.80.152.187",
-    "server_port": 22222,
     "password": "^",
     "method": "ӞuN|ݚs\u001fϽ{ٽ",
     "name": "🔥"
@@ -36297,13 +36360,6 @@
     "name": "🔥"
   },
   {
-    "server": "91.99.156.14",
-    "server_port": 443,
-    "password": "078adfae-f6ac-411a-ad69-b0521f457c05",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "62.60.179.100",
     "server_port": 15193,
     "password": "079291d7-2d5a-4dcc-b2a9-514cda7eb9f9",
@@ -36521,20 +36577,6 @@
     "name": "🔥"
   },
   {
-    "server": "85.158.110.62",
-    "server_port": 8443,
-    "password": "0852185a-d988-4e19-b234-015593df4fa5",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "91.242.241.45",
-    "server_port": 8443,
-    "password": "0852185a-d988-4e19-b234-015593df4fa5",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "45.82.161.120",
     "server_port": 42671,
     "password": "0855af4e-ec2c-4382-ac60-c54f9db3e04a",
@@ -36643,6 +36685,13 @@
     "server": "188.114.97.3",
     "server_port": 8080,
     "password": "08c41e17-9d1c-4d4a-9edc-242d3d71c1ac",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "www.speedtest.net",
+    "server_port": 2053,
+    "password": "08cb0591-5193-4a0c-9105-ceb09fba67fe",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -36895,13 +36944,6 @@
     "server": "135.125.182.74",
     "server_port": 38413,
     "password": "0a30769a-400b-4501-a7f0-47d4eea82ae3",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "178.239.155.115",
-    "server_port": 8443,
-    "password": "0a37cef9-f64e-453a-b4d1-3ab2257276fa",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -37790,8 +37832,8 @@
   {
     "server": "104.21.112.1",
     "server_port": 443,
-    "password": "518d0495-2139-4bfd-94df-2a029108f1af",
-    "method": "aes-256-gcm",
+    "password": "o>w{",
+    "method": "\u001cMx4",
     "name": "🔥"
   },
   {
@@ -38092,6 +38134,13 @@
     "server": "104.21.25.228",
     "server_port": 443,
     "password": "1010501a-ca9a-479c-84d0-1308d97789b5",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.64.154.211",
+    "server_port": 443,
+    "password": "101e6a7d-7d10-4859-a626-8a76daab4547",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -38586,7 +38635,70 @@
     "name": "🔥"
   },
   {
+    "server": "102.132.188.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.129.164.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "140.99.233.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "147.185.161.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "154.198.173.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "170.114.45.44",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "185.221.160.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "185.251.80.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "188.42.145.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "194.36.55.54",
     "server_port": 2096,
     "password": "12345678-1234-1234-1234-123456789123",
     "method": "aes-256-gcm",
@@ -38601,6 +38713,55 @@
   },
   {
     "server": "209.46.30.44",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "45.67.215.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "45.80.108.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "46.254.93.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "5.182.85.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "77.105.163.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "88.216.69.54",
+    "server_port": 2096,
+    "password": "12345678-1234-1234-1234-123456789123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "89.116.250.54",
     "server_port": 2096,
     "password": "12345678-1234-1234-1234-123456789123",
     "method": "aes-256-gcm",
@@ -38796,6 +38957,13 @@
     "name": "🔥"
   },
   {
+    "server": "fx.ircloudmarket.com",
+    "server_port": 80,
+    "password": "s8os~޵g",
+    "method": "~Ӈ",
+    "name": "🔥"
+  },
+  {
     "server": "141.227.180.211",
     "server_port": 25365,
     "password": "1375d9a1-dece-4bbb-8131-29e06afd8ca4",
@@ -38870,13 +39038,6 @@
     "server_port": 2096,
     "password": "\u001fwO>ӷZ<",
     "method": "w6",
-    "name": "🔥"
-  },
-  {
-    "server": "188.114.96.0",
-    "server_port": 443,
-    "password": "13cc6d95-fe5c-423b-a6d2-b8177ed88808",
-    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -40056,6 +40217,13 @@
     "name": "🔥"
   },
   {
+    "server": "178.20.215.2",
+    "server_port": 443,
+    "password": "192ea2c7-d7d0-6676-2929-b04a072b387d",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "162.159.44.250",
     "server_port": 443,
     "password": "193a9af6-5202-429c-b0c9-50637db37888",
@@ -40420,16 +40588,16 @@
     "name": "🔥"
   },
   {
-    "server": "rplcehdfy3.makingirangreatagain.com",
-    "server_port": 2053,
-    "password": "1a834111-ded2-4078-f4a6-6dfd32b346c5",
+    "server": "ardagulerturk.gojustore.site",
+    "server_port": 7035,
+    "password": "1a845c08-9e71-4f24-9b74-c6a6e1ea2be0",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "ardagulerturk.gojustore.site",
-    "server_port": 7035,
-    "password": "1a845c08-9e71-4f24-9b74-c6a6e1ea2be0",
+    "server": "5.75.203.184",
+    "server_port": 443,
+    "password": "1a856134-b4c2-4018-b22c-f4db2c7beddf",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -41239,13 +41407,6 @@
     "name": "🔥"
   },
   {
-    "server": "185.239.48.109",
-    "server_port": 8443,
-    "password": "1e6bf5a6-299e-4c49-a619-ef39b27463d5",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "104.16.1.106",
     "server_port": 80,
     "password": "60ba0849-348a-4fe2-9b32-a6800232a357",
@@ -41270,6 +41431,13 @@
     "server": "mamadtatardo442.my442vpn442.workers.dev",
     "server_port": 443,
     "password": "1ea40d23-e223-4be9-a830-036c9740b830",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "tiklit.mechanictak.ir",
+    "server_port": 34070,
+    "password": "1ec3c918-c1fa-49e0-9ee6-6b6636c5399f",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -41326,6 +41494,13 @@
     "server": "45.88.8.147",
     "server_port": 80,
     "password": "1f38b094-7a91-f29c-3ed8-4ede1dc23639",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "157.90.247.32",
+    "server_port": 57276,
+    "password": "1f41c4cd-8d0f-47ed-b3a9-b90f5e2419b5",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -41589,6 +41764,13 @@
     "name": "🔥"
   },
   {
+    "server": "ftp2.tehran-park.com",
+    "server_port": 443,
+    "password": "2bcb196d-f5db-4cd9-94d9-4f2ea8c8991e",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "185.146.173.185",
     "server_port": 8080,
     "password": "20421f01-5215-4f7c-934f-1675b9235f23",
@@ -41725,13 +41907,6 @@
     "server": "104.24.198.111",
     "server_port": 80,
     "password": "20cf8a2b-e301-4240-9c03-20883249a287",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "www.speedtest.net",
-    "server_port": 2053,
-    "password": "20d98fd8-b472-4574-eeae-b1ecc9082eb9",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -41908,6 +42083,13 @@
     "server_port": 443,
     "password": "o~",
     "method": "]}7q^~{vs",
+    "name": "🔥"
+  },
+  {
+    "server": "direct-jde6zos4zet26b15zzd1.appcity-download.ir",
+    "server_port": 17337,
+    "password": "21441ba7-8364-496c-d43b-39fc7f9cb8d7",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -43479,6 +43661,13 @@
     "name": "🔥"
   },
   {
+    "server": "91.107.244.131",
+    "server_port": 443,
+    "password": "27f389ef-7337-4bb2-885e-17ee4a20017c",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "192.0.63.44",
     "server_port": 8080,
     "password": "283ee7c1-69ca-4af9-a812-2c87e6dc6cd1",
@@ -43605,6 +43794,13 @@
     "name": "🔥"
   },
   {
+    "server": "162.159.152.205",
+    "server_port": 443,
+    "password": "29187857-4a1f-4d1e-88eb-0016771e0dbb",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "104.17.70.206",
     "server_port": 2096,
     "password": "291c27a5-34d2-4081-83cc-2196cd208148",
@@ -43633,7 +43829,21 @@
     "name": "🔥"
   },
   {
+    "server": "104.20.20.166",
+    "server_port": 443,
+    "password": "2928d83a-ca75-4d52-b437-fa78c7601378",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "104.20.21.155",
+    "server_port": 443,
+    "password": "2928d83a-ca75-4d52-b437-fa78c7601378",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.20.22.148",
     "server_port": 443,
     "password": "2928d83a-ca75-4d52-b437-fa78c7601378",
     "method": "aes-256-gcm",
@@ -44767,6 +44977,13 @@
     "name": "🔥"
   },
   {
+    "server": "81.12.32.27",
+    "server_port": 8080,
+    "password": "2d49bd79-3f21-4534-b6d0-cb290d7cf123",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "91.99.79.7",
     "server_port": 443,
     "password": "2d5320e1-a5e7-4959-b158-6a04dd895cff",
@@ -45236,6 +45453,20 @@
     "name": "🔥"
   },
   {
+    "server": "luckyping.bikofile.com",
+    "server_port": 43381,
+    "password": "2ecc1c66-0808-174c-e51a-5274c1428b3c",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "luckypingout.bikofile.com",
+    "server_port": 48008,
+    "password": "2ecc1c66-0808-174c-e51a-5274c1428b3c",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "148.113.138.64",
     "server_port": 56010,
     "password": "2ecdfbf0-90a5-45df-bc57-9988eb001cd7",
@@ -45698,6 +45929,13 @@
     "name": "🔥"
   },
   {
+    "server": "141.227.180.39",
+    "server_port": 22287,
+    "password": "312b10a5-a604-4199-bf43-6a773e8b24e4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "92.112.126.22",
     "server_port": 8442,
     "password": "31303020-3531-4035-b120-343920343920",
@@ -46121,6 +46359,34 @@
     "server": "91.99.212.10",
     "server_port": 10485,
     "password": "334de2e2-5e33-47f3-9159-0d3539fc4ba5",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "hetz-vl1.danims.sbs",
+    "server_port": 8081,
+    "password": "33800b9d-be13-4156-82c2-b985a8bad6dd",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "hetz-vl2.danims.sbs",
+    "server_port": 8081,
+    "password": "33800b9d-be13-4156-82c2-b985a8bad6dd",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "hetz-vl3.danims.sbs",
+    "server_port": 8081,
+    "password": "33800b9d-be13-4156-82c2-b985a8bad6dd",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "ulta-tvl.danims.sbs",
+    "server_port": 8081,
+    "password": "33800b9d-be13-4156-82c2-b985a8bad6dd",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -46737,27 +47003,6 @@
     "server": "45.83.20.34",
     "server_port": 58164,
     "password": "34c9f621-0614-4b7f-aab3-c4400bb15a89",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "hetz-vl1.danims.sbs",
-    "server_port": 8081,
-    "password": "34cc700f-850f-4161-b5fb-bb71797aef2a",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "hetz-vl2.danims.sbs",
-    "server_port": 8081,
-    "password": "34cc700f-850f-4161-b5fb-bb71797aef2a",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "hetz-vl3.danims.sbs",
-    "server_port": 8081,
-    "password": "34cc700f-850f-4161-b5fb-bb71797aef2a",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -48008,6 +48253,13 @@
     "name": "🔥"
   },
   {
+    "server": "sss59124.tas-bazi.com",
+    "server_port": 443,
+    "password": "{ߗqwyݶ",
+    "method": "ݷvw\u001f",
+    "name": "🔥"
+  },
+  {
     "server": "power.teampluss.ir",
     "server_port": 80,
     "password": "3bebc077-0d92-4832-9ae4-c0820a673b9e",
@@ -48316,6 +48568,13 @@
     "name": "🔥"
   },
   {
+    "server": "104.21.48.1",
+    "server_port": 2053,
+    "password": ":玾\u001e{",
+    "method": "\u001fێ\u001d",
+    "name": "🔥"
+  },
+  {
     "server": "230920393.f-sub.com",
     "server_port": 3799,
     "password": "3d554bba-9c77-499f-9055-1eb42058ed00",
@@ -48463,6 +48722,13 @@
     "name": "🔥"
   },
   {
+    "server": "164.90.202.94",
+    "server_port": 8880,
+    "password": "3e18c700-a3a7-44b4-9775-c8ff625e150a",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "104.25.46.234",
     "server_port": 8443,
     "password": "3e33acba-13b9-4485-9c0c-ae5501e2b468",
@@ -48505,6 +48771,13 @@
     "name": "🔥"
   },
   {
+    "server": "160.187.111.222",
+    "server_port": 443,
+    "password": "3e7f67de-648e-4871-b51a-a225214d41ee",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "171.22.16.161",
     "server_port": 443,
     "password": "3e7f67de-648e-4871-b51a-a225214d41ee",
@@ -48529,6 +48802,13 @@
     "server": "poolw.iceuniverse.top",
     "server_port": 443,
     "password": "3e999a70-5fa8-41e2-bd39-fc9b6da527bf",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.66.45.4",
+    "server_port": 2087,
+    "password": "3e9d9ee2-ba23-4269-8340-c8c8ac1455cb",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -48788,13 +49068,6 @@
     "server": "141.227.168.93",
     "server_port": 40114,
     "password": "4%653c4cb5-325b-495d-%61%616b-b1%61d09%65d72d0",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "217.195.200.81",
-    "server_port": 443,
-    "password": "40089ccb-cd68-487a-aae0-ac9ca6a64d09",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -52334,6 +52607,20 @@
     "name": "🔥"
   },
   {
+    "server": "185.239.48.109",
+    "server_port": 8443,
+    "password": "4b1c3b24-ae03-4559-98fb-3ef706359cd5",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "85.158.110.62",
+    "server_port": 8443,
+    "password": "4b1c3b24-ae03-4559-98fb-3ef706359cd5",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "172.67.155.140",
     "server_port": 443,
     "password": "4b33b482-25bc-49e4-b866-878c914d945a",
@@ -52351,6 +52638,13 @@
     "server": "77.221.154.111",
     "server_port": 46647,
     "password": "4b3b2137-bead-4540-a90f-46017d0540a4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "57.128.123.217",
+    "server_port": 37646,
+    "password": "4b5327ad-5648-4d3e-b931-36c92e73cc20",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -52509,13 +52803,6 @@
     "name": "🔥"
   },
   {
-    "server": "15.237.197.217",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
     "server": "16.171.133.93",
     "server_port": 443,
     "password": "wϛf\u001cq",
@@ -52537,21 +52824,7 @@
     "name": "🔥"
   },
   {
-    "server": "18.138.11.17",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
     "server": "18.156.163.111",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
-    "server": "18.182.59.228",
     "server_port": 443,
     "password": "wϛf\u001cq",
     "method": "ͺy7",
@@ -52593,13 +52866,6 @@
     "name": "🔥"
   },
   {
-    "server": "3.36.66.65",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
     "server": "3.78.250.204",
     "server_port": 443,
     "password": "wϛf\u001cq",
@@ -52635,13 +52901,6 @@
     "name": "🔥"
   },
   {
-    "server": "34.254.97.113",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
     "server": "35.180.83.162",
     "server_port": 443,
     "password": "wϛf\u001cq",
@@ -52670,13 +52929,6 @@
     "name": "🔥"
   },
   {
-    "server": "43.200.169.157",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
     "server": "44.203.10.181",
     "server_port": 443,
     "password": "wϛf\u001cq",
@@ -52692,13 +52944,6 @@
   },
   {
     "server": "51.44.209.50",
-    "server_port": 443,
-    "password": "wϛf\u001cq",
-    "method": "ͺy7",
-    "name": "🔥"
-  },
-  {
-    "server": "52.68.69.70",
     "server_port": 443,
     "password": "wϛf\u001cq",
     "method": "ͺy7",
@@ -53027,6 +53272,13 @@
     "name": "🔥"
   },
   {
+    "server": "142.93.171.234",
+    "server_port": 443,
+    "password": "{_߇W",
+    "method": "޹^Vk",
+    "name": "🔥"
+  },
+  {
     "server": "strong.smartfg1.com",
     "server_port": 11917,
     "password": "4d697fd2-1a97-47b6-b1be-97e78f26b4a0",
@@ -53139,6 +53391,13 @@
     "name": "🔥"
   },
   {
+    "server": "ip.cloudflare.com.appcity-download.ir",
+    "server_port": 2082,
+    "password": "4d9b44ea-016f-4348-9209-70a32ecfa5dd",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "185.239.48.109",
     "server_port": 443,
     "password": "4db2d7bf-c88d-4fdf-85f8-154c05202dc9",
@@ -53220,6 +53479,13 @@
     "server_port": 14255,
     "password": "4e1be948-3942-4819-826d-6bbe4fc84982",
     "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.17.227.60",
+    "server_port": 443,
+    "password": ":ow~~kF<",
+    "method": "_",
     "name": "🔥"
   },
   {
@@ -56065,6 +56331,13 @@
     "name": "🔥"
   },
   {
+    "server": "direct-jde6zos4zet26b15zzd1.appcity-download.ir",
+    "server_port": 22238,
+    "password": "5501f384-03b9-4dda-8d4c-4904e3fd7361",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "lwndnnw.js87nlw.iwhwkdh87.owjfj87kdk.theiranoflegends.com",
     "server_port": 883,
     "password": "55143323-5ef4-45c2-b8fb-9f7b987589e6",
@@ -56950,6 +57223,13 @@
     "server": "172.67.139.111",
     "server_port": 2087,
     "password": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "188.114.96.0",
+    "server_port": 443,
+    "password": "d77906a1-59fd-4222-ba9e-3de834bb33e2",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -58760,6 +59040,13 @@
     "name": "🔥"
   },
   {
+    "server": "www.wto.org",
+    "server_port": 8443,
+    "password": "5bbf7617-1153-4149-94ed-a6a38f0c8a52",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "128.140.125.228",
     "server_port": 443,
     "password": "㏼vg;m㷟",
@@ -58858,7 +59145,7 @@
     "name": "🔥"
   },
   {
-    "server": "JOIN-RAIV2MMR-TELEGRAM.koyeb.app",
+    "server": "104.20.31.27",
     "server_port": 443,
     "password": "5c9b6087-f955-4506-9c1d-67a5aae44bc9",
     "method": "aes-256-gcm",
@@ -59145,6 +59432,13 @@
     "name": "🔥"
   },
   {
+    "server": "141.227.170.178",
+    "server_port": 21232,
+    "password": "5e0eddef-95cd-4109-9807-0f32062939f3",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "irp3.cactustory.site",
     "server_port": 443,
     "password": "5e118904-cd1a-42af-8ca3-d97007bfb57d",
@@ -59383,6 +59677,13 @@
     "name": "🔥"
   },
   {
+    "server": "141.227.134.240",
+    "server_port": 54983,
+    "password": "6016845b-61d0-49c5-b20c-d61e860778d4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "104.16.246.173",
     "server_port": 443,
     "password": "601e7e24-0697-4fed-9715-f3336ad5094c",
@@ -59449,13 +59750,6 @@
     "server": "172.67.200.238",
     "server_port": 443,
     "password": "6040a753-e35b-4384-8713-96f3c639b621",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "38.54.23.58",
-    "server_port": 443,
-    "password": "6048472f-0993-4ae0-8203-960b9a0f4113",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -59726,6 +60020,13 @@
     "name": "🔥"
   },
   {
+    "server": "cdnf.ten10rocket.top",
+    "server_port": 80,
+    "password": "6231a8be-01ec-4ea0-9b39-ca00151f59ea",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "103.160.204.4",
     "server_port": 443,
     "password": "62357561-a129-4b9e-9614-ce2578020866",
@@ -59882,13 +60183,6 @@
   {
     "server": "dl.nim3.azarbanou.ir",
     "server_port": 5252,
-    "password": "6261b90d-3268-4a3d-b02a-16329e0a4a9a",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "dl.nl.azarbanou.ir",
-    "server_port": 5055,
     "password": "6261b90d-3268-4a3d-b02a-16329e0a4a9a",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -60065,13 +60359,6 @@
     "server": "190.93.244.0",
     "server_port": 2086,
     "password": "636b1684-b26c-4a9c-bc6e-8e1197a36d74",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "am.speeditest.ir",
-    "server_port": 81,
-    "password": "636d3fe4-eb1f-49ee-9f70-2f4ec935015a",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -60419,6 +60706,20 @@
     "name": "🔥"
   },
   {
+    "server": "31.6.1.187",
+    "server_port": 25607,
+    "password": "656f6e6c-ea27-4028-bc28-1fc92d23af4b",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "faster.grayping.com",
+    "server_port": 25607,
+    "password": "656f6e6c-ea27-4028-bc28-1fc92d23af4b",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "46.101.199.91",
     "server_port": 8080,
     "password": "65951889-54af-453f-a7a1-55b91e5a5ad5",
@@ -60443,13 +60744,6 @@
     "server": "82.25.101.123",
     "server_port": 34712,
     "password": "65cd9b4b-90a1-43f4-9682-3e33c8a29b0e",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "188.212.97.205",
-    "server_port": 2030,
-    "password": "65da960e-97bd-499c-a79f-69c8c3a6984d",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -60538,6 +60832,13 @@
     "name": "🔥"
   },
   {
+    "server": "5.75.198.232",
+    "server_port": 443,
+    "password": "664cb874-5182-4ebb-b3b4-5f430f0152dd",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "yahoo.wlftest.xyz",
     "server_port": 8443,
     "password": "665db431-79ed-4309-ede4-9df37be3eb6e",
@@ -60589,7 +60890,14 @@
   {
     "server": "104.16.64.38",
     "server_port": 2096,
-    "password": "c21855ae-3e7b-4a82-bb1c-d7fbcbfe22f2",
+    "password": "66a48080-4140-440a-bf2a-ddbc522c867d",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.67.205.91",
+    "server_port": 2087,
+    "password": "66b5be45-291a-417d-bfe1-df5f407f2617",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -60646,6 +60954,13 @@
     "server": "104.21.65.133",
     "server_port": 2087,
     "password": "67736622-d2b2-49fa-84eb-6259d61b0223",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "m64a.vip784.com",
+    "server_port": 33801,
+    "password": "67794891-20c8-4041-a48f-640dcc8e5c7e",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -60765,6 +61080,13 @@
     "server": "93.127.180.247",
     "server_port": 8443,
     "password": "680821ce-2898-4929-ad75-857723d2e33e",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "157.90.247.32",
+    "server_port": 42671,
+    "password": "680e9152-1196-4451-a1fd-60830b0f3e4b",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -61668,6 +61990,13 @@
     "server": "172.67.176.243",
     "server_port": 443,
     "password": "6d91bc33-2d86-4839-9205-02024ff483c7",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "45.136.5.109",
+    "server_port": 2087,
+    "password": "6d9a7312-5021-40b0-9e2b-d08b6ef0d917",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -66488,6 +66817,13 @@
     "name": "🔥"
   },
   {
+    "server": "213.209.148.20",
+    "server_port": 443,
+    "password": "ߏ>u߿\u001fwW",
+    "method": "M;ޛm",
+    "name": "🔥"
+  },
+  {
     "server": "104.18.165.203",
     "server_port": 2095,
     "password": "801423f9-311a-45df-97df-a05ed9545566",
@@ -67251,13 +67587,6 @@
     "name": "🔥"
   },
   {
-    "server": "fx.ircloudmarket.com",
-    "server_port": 80,
-    "password": "816fae3f-8cac-4ef6-8d8c-461a0c896f2c",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "104.16.40.145",
     "server_port": 80,
     "password": "",
@@ -67881,13 +68210,6 @@
     "name": "🔥"
   },
   {
-    "server": "tunnelamin.paneldegemeto.com",
-    "server_port": 6188,
-    "password": "8434234d-f89f-d936-4622-2fa7a4851964",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "165.22.87.142",
     "server_port": 10109,
     "password": "8443e32a-8ba7-4198-ae8d-c150ab9d4a1c",
@@ -68203,6 +68525,13 @@
     "name": "🔥"
   },
   {
+    "server": "40.233.81.116",
+    "server_port": 59303,
+    "password": "862e90e1-2f26-4506-b8b9-0adf20da05fc",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "109.207.173.6",
     "server_port": 8443,
     "password": "863a79a8-b56b-41cc-b7fb-c7d7314c2fa2",
@@ -68303,6 +68632,13 @@
   {
     "server": "WWw.speedtest.net",
     "server_port": 443,
+    "password": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "itarmy.com.ua",
+    "server_port": 2095,
     "password": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -68764,6 +69100,13 @@
   },
   {
     "server": "162.159.42.37",
+    "server_port": 443,
+    "password": "897a4bec-26b8-11e8-94be-00505695472c",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.64.152.253",
     "server_port": 443,
     "password": "897a4bec-26b8-11e8-94be-00505695472c",
     "method": "aes-256-gcm",
@@ -69464,13 +69807,6 @@
   },
   {
     "server": "172.67.192.148",
-    "server_port": 443,
-    "password": "89b3cbba-e6ac-485a-9481-976a0415eab9",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "172.67.198.12",
     "server_port": 443,
     "password": "89b3cbba-e6ac-485a-9481-976a0415eab9",
     "method": "aes-256-gcm",
@@ -70219,7 +70555,7 @@
     "name": "🔥"
   },
   {
-    "server": "172.64.33.212",
+    "server": "173.245.59.212",
     "server_port": 443,
     "password": "8ce5a4b4-903a-4eb7-bc1d-0e9860dc5476",
     "method": "aes-256-gcm",
@@ -70383,6 +70719,13 @@
     "server": "83.147.216.173",
     "server_port": 8443,
     "password": "8d9cfb4f-69a7-435f-86d7-79d8e62d72c9",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "hk01.youyacloud.me",
+    "server_port": 28888,
+    "password": "8da7bd17-70ab-472d-a925-cc827857dc35",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -70866,6 +71209,20 @@
     "server": "us2.jeeet.ir",
     "server_port": 47606,
     "password": "90963d5b-b90d-448a-bced-b418e516ab98",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.67.168.193",
+    "server_port": 443,
+    "password": "9096805c-e6b8-4da9-9bdc-d76e392e6630",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.67.168.193",
+    "server_port": 80,
+    "password": "9096805c-e6b8-4da9-9bdc-d76e392e6630",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -71584,6 +71941,13 @@
     "name": "🔥"
   },
   {
+    "server": "157.90.247.32",
+    "server_port": 30052,
+    "password": "952ed71d-c003-4ce0-8698-8bb06b308e2b",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "mail.bahmannn.shop",
     "server_port": 44016,
     "password": "952f1a38-3c51-4fc2-ec9f-f3b80afb1e4c",
@@ -71997,6 +72361,13 @@
     "name": "🔥"
   },
   {
+    "server": "94.131.8.19",
+    "server_port": 45448,
+    "password": "s~9",
+    "method": "\u001cw",
+    "name": "🔥"
+  },
+  {
     "server": "video-streaming.comtent-delivery.poshtibani.4b3a.com",
     "server_port": 23410,
     "password": "9718b260-03c9-4313-af0f-d08a0b5c859e",
@@ -72279,8 +72650,8 @@
   {
     "server": "151.101.194.228",
     "server_port": 443,
-    "password": "w7Z",
-    "method": "kfs}oo[6m",
+    "password": "98d15952-07aa-5331-b67f-0c2f8a60d0a6",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -72561,6 +72932,13 @@
     "server_port": 8080,
     "password": "9a533595-a408-4b94-b846-602d62af6857",
     "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "216.133.149.235",
+    "server_port": 30227,
+    "password": "8ӏt",
+    "method": "xm|w;㏛>",
     "name": "🔥"
   },
   {
@@ -75897,13 +76275,6 @@
     "name": "🔥"
   },
   {
-    "server": "glance.asuscomm.com",
-    "server_port": 10099,
-    "password": "12242",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "46.32.186.234",
     "server_port": 1080,
     "password": "171pEaFf5HJtdAAI3L7r6A",
@@ -76082,6 +76453,13 @@
     "server": "hnt.cndns.shop",
     "server_port": 27766,
     "password": "31347057-7af5-4562-b912-f1c217c4c160",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "pl.vpnsparta.pro",
+    "server_port": 57456,
+    "password": "360e21d21977dc11",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -76320,13 +76698,6 @@
     "server": "77.238.241.73",
     "server_port": 7865,
     "password": "vLJ4oLM2dsNP2Eag0cgJhN",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "167.71.120.207",
-    "server_port": 443,
-    "password": "vQtw1u6bxycg6IrypzC9Ic",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -80027,13 +80398,6 @@
     "name": "🔥"
   },
   {
-    "server": "89.110.70.175",
-    "server_port": 13402,
-    "password": "ZXByXCVah8pX5yNSDRsTVT",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "77.91.123.173",
     "server_port": 18332,
     "password": "ZkynFX5eSaE0YusF8jXgqQ",
@@ -80065,13 +80429,6 @@
     "server": "157.173.123.197",
     "server_port": 20483,
     "password": "a10ce75508810f1f",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "172.105.112.53",
-    "server_port": 21532,
-    "password": "a4f51398-bc7b-4459-96f8-5e6c54a73027",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -81818,13 +82175,6 @@
     "name": "🔥"
   },
   {
-    "server": "45.89.52.66",
-    "server_port": 9031,
-    "password": "BwcAUZk8hUFAkDGN",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "185.135.86.173",
     "server_port": 9019,
     "password": "GA9KzeEgvfxNrgmM",
@@ -82497,6 +82847,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.154.149",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.154.14",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -82546,7 +82903,21 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.154.156",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.154.157",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.154.158",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -82589,6 +82960,13 @@
   },
   {
     "server": "103.186.154.163",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.154.164",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -82700,6 +83078,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.154.181",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.154.182",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -82708,6 +83093,13 @@
   },
   {
     "server": "103.186.154.183",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.154.184",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -83043,6 +83435,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.154.238",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.154.239",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -83121,6 +83520,13 @@
   },
   {
     "server": "103.186.154.252",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.154.253",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -83337,6 +83743,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.154.67",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.154.68",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -83366,13 +83779,6 @@
   },
   {
     "server": "103.186.154.72",
-    "server_port": 38388,
-    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
-    "server": "103.186.154.73",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -83512,6 +83918,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.155.111",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.155.112",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -83547,6 +83960,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.155.118",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.155.119",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -83555,6 +83975,13 @@
   },
   {
     "server": "103.186.155.120",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.155.121",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -83680,6 +84107,13 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.155.13",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.155.140",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
@@ -83729,7 +84163,21 @@
     "name": "🔥"
   },
   {
+    "server": "103.186.155.148",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
     "server": "103.186.155.149",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.155.150",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -83849,6 +84297,13 @@
   },
   {
     "server": "103.186.155.218",
+    "server_port": 38388,
+    "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "103.186.155.220",
     "server_port": 38388,
     "password": "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV",
     "method": "aes-256-cfb",
@@ -86760,13 +87215,6 @@
     "name": "🔥"
   },
   {
-    "server": "121.170.203.147",
-    "server_port": 2520,
-    "password": "qwerREWQ@@",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "125.141.26.5",
     "server_port": 2003,
     "password": "qwerREWQ@@",
@@ -86797,6 +87245,13 @@
   {
     "server": "p110.panda001.net",
     "server_port": 54345,
+    "password": "qwerREWQ@@",
+    "method": "aes-256-cfb",
+    "name": "🔥"
+  },
+  {
+    "server": "121.170.203.147",
+    "server_port": 2520,
     "password": "qwerREWQ@@",
     "method": "aes-256-cfb",
     "name": "🔥"
@@ -87712,13 +88167,6 @@
     "name": "🔥"
   },
   {
-    "server": "194.15.196.106",
-    "server_port": 7306,
-    "password": "FoOiGlkAA9yPEGP",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "23.150.152.56",
     "server_port": 7307,
     "password": "FoOiGlkAA9yPEGP",
@@ -87791,6 +88239,13 @@
   {
     "server": "38.107.226.49",
     "server_port": 7307,
+    "password": "FoOiGlkAA9yPEGP",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "38.110.1.122",
+    "server_port": 7306,
     "password": "FoOiGlkAA9yPEGP",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -88993,13 +89448,6 @@
     "name": "🔥"
   },
   {
-    "server": "142.202.48.43",
-    "server_port": 8091,
-    "password": "PCnnH6SQSnfoS27",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "142.202.48.52",
     "server_port": 8090,
     "password": "PCnnH6SQSnfoS27",
@@ -89714,6 +90162,13 @@
     "name": "🔥"
   },
   {
+    "server": "134.195.196.231",
+    "server_port": 7001,
+    "password": "RexnBgU7EV5ADxG",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "134.195.196.51",
     "server_port": 7002,
     "password": "RexnBgU7EV5ADxG",
@@ -89779,6 +90234,13 @@
   {
     "server": "167.88.63.82",
     "server_port": 7002,
+    "password": "RexnBgU7EV5ADxG",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "169.197.141.14",
+    "server_port": 7001,
     "password": "RexnBgU7EV5ADxG",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -90703,13 +91165,6 @@
   {
     "server": "134.195.196.149",
     "server_port": 8009,
-    "password": "XKFKl2rULjIp74",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "134.195.196.231",
-    "server_port": 8008,
     "password": "XKFKl2rULjIp74",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -93431,13 +93886,6 @@
     "name": "🔥"
   },
   {
-    "server": "ss.008.node-for-bigairport.win",
-    "server_port": 19888,
-    "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "ss.010.node-for-bigairport.win",
     "server_port": 11689,
     "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
@@ -93474,13 +93922,6 @@
   },
   {
     "server": "ss.027.node-for-bigairport.win",
-    "server_port": 10079,
-    "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "ss.030.node-for-bigairport.win",
     "server_port": 10079,
     "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
     "method": "aes-256-gcm",
@@ -95602,13 +96043,6 @@
   },
   {
     "server": "193.108.117.75",
-    "server_port": 8881,
-    "password": "kDWvXYZoTBcGkC4",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "194.15.196.106",
     "server_port": 8881,
     "password": "kDWvXYZoTBcGkC4",
     "method": "aes-256-gcm",
@@ -98520,6 +98954,13 @@
     "name": "🔥"
   },
   {
+    "server": "31.6.1.186",
+    "server_port": 48900,
+    "password": "a1f51e2b-cc02-4eb6-938c-ba3d147d6bef",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "free.trial.grayping.com",
     "server_port": 48900,
     "password": "a1f51e2b-cc02-4eb6-938c-ba3d147d6bef",
@@ -98622,13 +99063,6 @@
     "server_port": 443,
     "password": "a270cd7a-8ab3-4e34-8838-a687df96fef9",
     "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "172.67.168.193",
-    "server_port": 443,
-    "password": "\u001eϼѽ~MZ",
-    "method": "ko8^",
     "name": "🔥"
   },
   {
@@ -98866,13 +99300,6 @@
     "server": "172.237.147.79",
     "server_port": 443,
     "password": "a409d129-70fe-4bc4-906b-73985847e6ab",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "cloudteach.com.tr",
-    "server_port": 80,
-    "password": "a40e2c15-6c4d-b5e6-3e9c-d2adad0ee1e6",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -100851,6 +101278,13 @@
     "name": "🔥"
   },
   {
+    "server": "vfast7.hvitrin.ir",
+    "server_port": 49330,
+    "password": "ac7b6757-05c0-4a28-8b08-14ab496a5fe4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "104.26.12.101",
     "server_port": 443,
     "password": "ac7bcf0a-ef69-4949-aff2-a93630021826",
@@ -102650,13 +103084,6 @@
     "name": "🔥"
   },
   {
-    "server": "germanya.motorbazan.com",
-    "server_port": 8443,
-    "password": "cf556419-247c-4d04-969e-8742b836f364",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "31.56.206.70",
     "server_port": 443,
     "password": "b67ddb53-9e46-492a-84be-0f5b752d7e83",
@@ -102842,6 +103269,27 @@
     "server": "Iran.v2sub.online",
     "server_port": 80,
     "password": "b7155dd2-eaac-4570-85b7-7138e7b45e49",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.21.74.141",
+    "server_port": 443,
+    "password": "b754b53a-aaf5-475c-eeed-46806c2aa63f",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "162.159.129.67",
+    "server_port": 443,
+    "password": "b754b53a-aaf5-475c-eeed-46806c2aa63f",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "nkang2replace.airlineshoma.com",
+    "server_port": 443,
+    "password": "b754b53a-aaf5-475c-eeed-46806c2aa63f",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -103367,13 +103815,6 @@
     "server": "main.systemgamingirani.ir",
     "server_port": 2082,
     "password": "b9e3fc70-0770-4530-acd8-3468d9a9d093",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "104.17.227.60",
-    "server_port": 443,
-    "password": "b9e82117-ed3a-4098-8153-100ca12aa523",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -104015,13 +104456,6 @@
     "name": "🔥"
   },
   {
-    "server": "vpn-srv-2.circlevpn.net",
-    "server_port": 37096,
-    "password": "bcf185f3-3610-4129-b3df-4c1f40aa9876",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "tanel.vpnmr.sub4u.site",
     "server_port": 1112,
     "password": "bcf2ae66-9318-4450-8c96-e4fa1d128dcc",
@@ -104095,6 +104529,13 @@
     "server": "91.98.35.181",
     "server_port": 2222,
     "password": "bda11a81-5b59-4326-bec4-7614f96d8990",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "91.242.241.45",
+    "server_port": 8443,
+    "password": "dded386e-260d-442f-a1da-c6c4dae339a5",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -106269,6 +106710,13 @@
     "name": "🔥"
   },
   {
+    "server": "direct-jde6zos4zet26b15zzd1.appcity-download.ir",
+    "server_port": 64286,
+    "password": "ca2bbc0a-3139-4a1c-bc93-049ad63c1d95",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "ucj3xy12fic116ixrq0m.appcity-download.ir",
     "server_port": 64286,
     "password": "ca2bbc0a-3139-4a1c-bc93-049ad63c1d95",
@@ -107445,6 +107893,13 @@
     "name": "🔥"
   },
   {
+    "server": "germanya.motorbazan.com",
+    "server_port": 8443,
+    "password": "cf556419-247c-4d04-969e-8742b836f364",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "indiaa.motorbazan.com",
     "server_port": 8443,
     "password": "cf556419-247c-4d04-969e-8742b836f364",
@@ -108278,6 +108733,13 @@
     "name": "🔥"
   },
   {
+    "server": "ip.cloudflare.com.appcity-download.ir",
+    "server_port": 443,
+    "password": "d2952db0-0379-4f1b-9c31-fe08c3ca1ea5",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "154.211.8.47",
     "server_port": 2096,
     "password": "d2965257-0536-4811-a0d5-cdce54e90326",
@@ -108699,6 +109161,13 @@
   },
   {
     "server": "141.101.120.5",
+    "server_port": 443,
+    "password": "d342d11e-d424-4583-b36e-524ab1f0afa4",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "141.101.121.119",
     "server_port": 443,
     "password": "d342d11e-d424-4583-b36e-524ab1f0afa4",
     "method": "aes-256-gcm",
@@ -110162,6 +110631,13 @@
   },
   {
     "server": "91.107.180.39",
+    "server_port": 443,
+    "password": "d8b42cd5-a149-4356-9e61-30ad83662600",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "91.107.189.106",
     "server_port": 443,
     "password": "d8b42cd5-a149-4356-9e61-30ad83662600",
     "method": "aes-256-gcm",
@@ -111806,6 +112282,13 @@
     "name": "🔥"
   },
   {
+    "server": "185.231.205.165",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "185.231.205.181",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -111862,6 +112345,41 @@
     "name": "🔥"
   },
   {
+    "server": "185.234.64.101",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "185.234.64.149",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "185.234.64.155",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "185.234.64.228",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "185.234.64.87",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "185.234.66.89",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -111877,6 +112395,13 @@
   },
   {
     "server": "185.242.87.154",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "185.242.87.159",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -111904,6 +112429,13 @@
     "name": "🔥"
   },
   {
+    "server": "185.242.87.72",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "185.8.105.254",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -111912,6 +112444,34 @@
   },
   {
     "server": "188.245.114.143",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "194.4.49.16",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "194.4.49.19",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "194.4.49.218",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "194.4.49.40",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -111974,6 +112534,13 @@
     "name": "🔥"
   },
   {
+    "server": "195.42.233.89",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "195.42.233.91",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -112030,6 +112597,13 @@
     "name": "🔥"
   },
   {
+    "server": "45.12.150.67",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "45.12.150.98",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -112080,6 +112654,13 @@
   },
   {
     "server": "45.89.107.242",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "45.89.107.245",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -112310,6 +112891,13 @@
     "name": "🔥"
   },
   {
+    "server": "638930975314215960.dublin-drc-tusabu.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "638931077057619102.hamedan-drc-tusabu.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -112471,21 +113059,7 @@
     "name": "🔥"
   },
   {
-    "server": "638938180050754915.birjand-drc-tusabl.info",
-    "server_port": 8880,
-    "password": "G\u001a7s=ߞwξ}wMv",
-    "method": "u",
-    "name": "🔥"
-  },
-  {
     "server": "638938180050767269.birjand-drc-tusabl.info",
-    "server_port": 8880,
-    "password": "G\u001a7s=ߞwξ}wMv",
-    "method": "u",
-    "name": "🔥"
-  },
-  {
-    "server": "638938180050776211.birjand-drc-tusabl.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -112989,7 +113563,21 @@
     "name": "🔥"
   },
   {
+    "server": "638948510129810487.dezful-drc-tusaas.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "638948510129812987.dezful-drc-tusaas.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "638948510129815070.dezful-drc-tusaas.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -113017,6 +113605,13 @@
     "name": "🔥"
   },
   {
+    "server": "638948510129820437.dezful-drc-tusaas.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "638948510129823158.dezful-drc-tusaas.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -113032,6 +113627,13 @@
   },
   {
     "server": "638948510378509240.mashhad-drc-tusacaf.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "638948510378510115.mashhad-drc-tusacaf.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -113115,6 +113717,20 @@
     "name": "🔥"
   },
   {
+    "server": "638949491062080162.prague-prx-dnraacr.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "638949521660379297.copenhagen-prx-dnraacr.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "638949521662009295.budapest-prx-dnraacr.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -113123,6 +113739,20 @@
   },
   {
     "server": "638949521662014894.budapest-prx-dnraacr.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "638950280434430524.neyshabur-drc-tusacaf.info",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "638950280434431325.neyshabur-drc-tusacaf.info",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -113381,6 +114011,13 @@
     "name": "🔥"
   },
   {
+    "server": "94.131.13.164",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
     "server": "94.131.13.181",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
@@ -113389,6 +114026,27 @@
   },
   {
     "server": "94.131.13.207",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "94.131.14.193",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "94.131.14.28",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "94.131.14.29",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -113431,6 +114089,13 @@
   },
   {
     "server": "95.164.6.149",
+    "server_port": 8880,
+    "password": "G\u001a7s=ߞwξ}wMv",
+    "method": "u",
+    "name": "🔥"
+  },
+  {
+    "server": "95.164.6.156",
     "server_port": 8880,
     "password": "G\u001a7s=ߞwξ}wMv",
     "method": "u",
@@ -113895,13 +114560,6 @@
     "server": "104.21.80.12",
     "server_port": 443,
     "password": "e1cf1cbc-a1b0-4db8-86b0-45dd2e8a68da",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "193.200.17.251",
-    "server_port": 443,
-    "password": "e1dcc2f8-0ce5-42d5-964b-c9deea0a066e",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -114649,13 +115307,6 @@
   },
   {
     "server": "pqh29v6.vetrkot.com",
-    "server_port": 8880,
-    "password": "e4824193-4f54-453b-d037-88368e85ef0e",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "pqh29v7.vetrkot.com",
     "server_port": 8880,
     "password": "e4824193-4f54-453b-d037-88368e85ef0e",
     "method": "aes-256-gcm",
@@ -115523,6 +116174,13 @@
     "name": "🔥"
   },
   {
+    "server": "172.67.176.1",
+    "server_port": 443,
+    "password": "e959d53c-91e9-459d-a332-d59ae89b3b4c",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "hdfynpv2d1.farvaharforever.com",
     "server_port": 443,
     "password": "e959d53c-91e9-459d-a332-d59ae89b3b4c",
@@ -115769,6 +116427,13 @@
   },
   {
     "server": "104.254.140.15",
+    "server_port": 443,
+    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "104.254.140.15",
     "server_port": 8443,
     "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
     "method": "aes-256-gcm",
@@ -115783,6 +116448,27 @@
   },
   {
     "server": "104.26.6.89",
+    "server_port": 8443,
+    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "170.114.46.175",
+    "server_port": 2096,
+    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "170.114.46.175",
+    "server_port": 443,
+    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "170.114.46.175",
     "server_port": 8443,
     "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
     "method": "aes-256-gcm",
@@ -115813,6 +116499,13 @@
     "server": "vipvpn2022.esnpenel.com",
     "server_port": 2020,
     "password": "e9cae639-8a68-4038-9145-458df42ba577",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "159.69.21.66",
+    "server_port": 80,
+    "password": "e9cf7de8-33a6-42da-badd-c40ec172b5a0",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -118827,14 +119520,14 @@
     "name": "🔥"
   },
   {
-    "server": "94.237.82.179",
+    "server": "94.237.29.224",
     "server_port": 443,
     "password": "ef85a9bd-3caa-4de9-f409-6c457c170634",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "94.237.87.194",
+    "server": "94.237.82.179",
     "server_port": 443,
     "password": "ef85a9bd-3caa-4de9-f409-6c457c170634",
     "method": "aes-256-gcm",
@@ -121088,6 +121781,13 @@
     "name": "🔥"
   },
   {
+    "server": "141.227.132.199",
+    "server_port": 42817,
+    "password": "f7df6c83-e527-4bb2-bae1-ea743edaffcd",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "188.114.98.45",
     "server_port": 80,
     "password": "f7ef59d8-e848-454d-8613-9e2f45ddd04f",
@@ -121116,13 +121816,6 @@
     "name": "🔥"
   },
   {
-    "server": "157.90.247.32",
-    "server_port": 30052,
-    "password": "f858ce87-a7c3-40fb-a945-79ecaaac07e6",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "172.105.18.242",
     "server_port": 443,
     "password": "f8629dd0-239a-4a44-b4c0-8041f5e403ca",
@@ -121141,6 +121834,13 @@
     "server_port": 80,
     "password": "w",
     "method": "ι6vs=s߼>姸߿",
+    "name": "🔥"
+  },
+  {
+    "server": "fast7.hvitrin.ir",
+    "server_port": 48769,
+    "password": "f8806934-15d7-4194-9c35-ec7a140bb6f6",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -123601,6 +124301,13 @@
     "name": "🔥"
   },
   {
+    "server": "185.226.93.12",
+    "server_port": 28973,
+    "password": "fb77f152-3f32-4190-88bd-8202576ee740",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "94.182.105.51",
     "server_port": 22921,
     "password": "fb85dd7a-f159-49f2-98bf-8c190be49102",
@@ -123902,6 +124609,13 @@
     "name": "🔥"
   },
   {
+    "server": "164.92.245.26",
+    "server_port": 443,
+    "password": "fd283396-d418-4b69-c24c-03f2405c2b7d",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "199.232.8.39",
     "server_port": 443,
     "password": "fd29defb-7f80-59ba-88d9-2234b20a806e",
@@ -123995,13 +124709,6 @@
   {
     "server": "93.127.180.124",
     "server_port": 77,
-    "password": "fdc4e100-9979-47f2-b683-421fb19f7227",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "93.127.180.124",
-    "server_port": 85,
     "password": "fdc4e100-9979-47f2-b683-421fb19f7227",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -124560,13 +125267,6 @@
     "name": "🔥"
   },
   {
-    "server": "sitaci.com.sitaci.com",
-    "server_port": 48092,
-    "password": "telegram-ID-v2ray_configs_pools",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "84.32.101.93",
     "server_port": 443,
     "password": "telegram-id-ArV2ray2",
@@ -124714,6 +125414,13 @@
     "name": "🔥"
   },
   {
+    "server": "jone.fast-turbooserver.com",
+    "server_port": 8443,
+    "password": "turboo-server",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "jone.turbooo-server.com",
     "server_port": 60123,
     "password": "turboo-server",
@@ -124721,14 +125428,14 @@
     "name": "🔥"
   },
   {
-    "server": "server.turboo-server.com.co",
-    "server_port": 80,
+    "server": "jone1.fast-turbooserver.com",
+    "server_port": 8880,
     "password": "turboo-server",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "server.turbooo-server.com",
+    "server": "server.turboo-server.com.co",
     "server_port": 80,
     "password": "turboo-server",
     "method": "aes-256-gcm",
@@ -127478,13 +128185,6 @@
     "name": "🔥"
   },
   {
-    "server": "38.75.136.33",
-    "server_port": 8080,
-    "password": "KixLvKzwjekG00rm",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "36.234.68.202",
     "server_port": 10079,
     "password": "Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphMmE1ZDJiYi02YTdiLTRkMWEtOWY4NC0xN2FkYTc0ZGI4YWE%3D",
@@ -127674,27 +128374,6 @@
     "name": "🔥"
   },
   {
-    "server": "hzhz1.sssyun.xyz",
-    "server_port": 39505,
-    "password": "MDhhMTdjZDI0MjI2ZWRlNg%3D%3D%3ANmZlMDM5ZmQtNDFlYS00MQ%3D%3D",
-    "method": "2022-blake3-aes-128-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "hzhz2.sssyun.xyz",
-    "server_port": 44014,
-    "password": "MDhhMTdjZDI0MjI2ZWRlNg%3D%3D%3ANmZlMDM5ZmQtNDFlYS00MQ%3D%3D",
-    "method": "2022-blake3-aes-128-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "hzhz2.sssyun.xyz",
-    "server_port": 20116,
-    "password": "NjVhMWE2YmVmNzg4MTcwMA%3D%3D%3ANmZlMDM5ZmQtNDFlYS00MQ%3D%3D",
-    "method": "2022-blake3-aes-128-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "59.138.63.214",
     "server_port": 20155,
     "password": "tvfJ1dskO7ZoSqNJL1ku516Z4SG3oFE31koW%2BwA%2BIi0%3D%3AJ6QRG9TfsabK4lRw%2BnvV0a9WVhF6hCqnUGObiSgvn%2BE%3D",
@@ -127730,24 +128409,10 @@
     "name": "🔥"
   },
   {
-    "server": "162.159.129.60",
-    "server_port": 443,
-    "password": "7d2dfb7a-2ecc-4448-bcbe-245a2092fe85",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "5.202.8.211",
     "server_port": 443,
     "password": "7dc035ac-6d78-4df3-963e-13102fb92176",
     "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "178.162.244.196",
-    "server_port": 2020,
-    "password": "",
-    "method": "ַw]vuvi{;o7",
     "name": "🔥"
   },
   {
@@ -128556,13 +129221,6 @@
     "name": "🔥"
   },
   {
-    "server": "91.205.158.2",
-    "server_port": 2053,
-    "password": "5CX5dFRzQ29X1CTxHC/vsB35i7lLe82HeloZ3LBBbRw=",
-    "method": "2022-blake3-aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "ydydydgzgzgz.nana.pics",
     "server_port": 45909,
     "password": "MDU1MmI0YzgxYjA2YjA2OWMwYTkyYjZjMzkzYWEwNDM=:ZGE5Nzc4ZDYtOGQyYS00N2I1LWFmZmQtZWVjYTI2MzM=",
@@ -128591,14 +129249,28 @@
     "name": "🔥"
   },
   {
-    "server": "202.61.203.192",
+    "server": "194.13.81.235",
+    "server_port": 8080,
+    "password": "42000e02-6b4d-46ad-a572-80db7db2a9ce7",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "23.166.88.82",
+    "server_port": 8080,
+    "password": "42000e02-6b4d-46ad-a572-80db7db2a9ce7",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "67.220.95.26",
     "server_port": 8080,
     "password": "42000e02-6b4d-46ad-a572-80db7db2a9ce",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
   {
-    "server": "67.220.95.26",
+    "server": "74.50.99.86",
     "server_port": 8080,
     "password": "42000e02-6b4d-46ad-a572-80db7db2a9ce",
     "method": "chacha20-ietf-poly1305",
@@ -128650,7 +129322,7 @@
     "plugin": "simple-obfs;obfs=http;obfs-host=215996dd9f1c3db1e54b.microsoft.com"
   },
   {
-    "server": "4.250.202.248",
+    "server": "4.250.113.233",
     "server_port": 443,
     "password": "69MUii7VDwMqh7Hz",
     "method": "chacha20-ietf-poly1305",
@@ -128689,13 +129361,6 @@
     "server": "45.145.164.238",
     "server_port": 40034,
     "password": "78e36312-16d4-49c2-ad18-610bf6d05d637",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "185.255.94.128",
-    "server_port": 40019,
-    "password": "79",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -129107,13 +129772,6 @@
     "name": "🔥"
   },
   {
-    "server": "4.250.178.34",
-    "server_port": 443,
-    "password": "1xO2cqPazqjGfCfd",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "fuck5.mmmmmmmmmm.cfd",
     "server_port": 59019,
     "password": "2062a5ca-a34e-47bf-9810-db91185f07fc",
@@ -129142,13 +129800,6 @@
     "name": "🔥"
   },
   {
-    "server": "1.170.23.34",
-    "server_port": 10085,
-    "password": "38a89995-d4fd-430a-912b-19a88e5d00f7",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "193.42.12.49",
     "server_port": 2222,
     "password": "trErto8XzLALaQEslTp_jw",
@@ -129172,13 +129823,6 @@
   {
     "server": "207.90.239.80",
     "server_port": 808,
-    "password": "tvX1v#NSFP_LG_bJ",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "65.20.115.194",
-    "server_port": 801,
     "password": "tvX1v#NSFP_LG_bJ",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
@@ -129212,16 +129856,9 @@
     "name": "🔥"
   },
   {
-    "server": "4.250.32.22",
+    "server": "145.133.44.61",
     "server_port": 443,
     "password": "AlCsBGpsejHdVCME",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "15.184.124.152",
-    "server_port": 443,
-    "password": "Bog0ELmMM9DSxDdQ",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -129275,9 +129912,23 @@
     "name": "🔥"
   },
   {
-    "server": "4.250.72.102",
+    "server": "13.43.234.40",
+    "server_port": 443,
+    "password": "W74XFALLLuw6m5IA",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "145.133.85.31",
     "server_port": 443,
     "password": "WstuSnlu4ieA9M0L",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
+    "server": "114.114.114.114",
+    "server_port": 1234,
+    "password": "ae845cbd-08fb-4346-929a-e28a6f3960a8",
     "method": "chacha20-ietf-poly1305",
     "name": "🔥"
   },
@@ -129591,6 +130242,13 @@
     "name": "🔥"
   },
   {
+    "server": "62.133.63.211",
+    "server_port": 57456,
+    "password": "c40641c1f89e7acb",
+    "method": "chacha20-ietf-poly1305",
+    "name": "🔥"
+  },
+  {
     "server": "93.186.201.64",
     "server_port": 57456,
     "password": "c40641c1f89e7acb",
@@ -129847,20 +130505,6 @@
     "name": "🔥"
   },
   {
-    "server": "35.176.3.41",
-    "server_port": 443,
-    "password": "mps3FwmDjLrWaOVg",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
-    "server": "35.176.73.121",
-    "server_port": 443,
-    "password": "mps3FwmDjLrWaOVg",
-    "method": "chacha20-ietf-poly1305",
-    "name": "🔥"
-  },
-  {
     "server": "www.outline.network.ak1909.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou",
     "server_port": 443,
     "password": "mps3FwmDjLrWaOVg",
@@ -129910,17 +130554,17 @@
     "name": "🔥"
   },
   {
-    "server": "172.67.132.246",
+    "server": "104.21.13.183",
     "server_port": 443,
     "password": "www.v2nodes.com",
     "method": "chacha20-poly1305",
     "name": "🔥"
   },
   {
-    "server": "8.8.8.8",
-    "server_port": 53,
-    "password": "3cff966f-c1ab-4f99-a585-8119337c0e81",
-    "method": "aes-128-gcm",
+    "server": "172.67.132.246",
+    "server_port": 443,
+    "password": "www.v2nodes.com",
+    "method": "chacha20-poly1305",
     "name": "🔥"
   },
   {
@@ -130375,7 +131019,42 @@
     "plugin": "simple-obfs;obfs=http;obfs-host=215996dd9f1c3db1e54b.microsoft.com"
   },
   {
-    "server": "142.250.190.4",
+    "server": "172.253.115.103",
+    "server_port": 443,
+    "password": "bfdf169e-d8d2-4c71-93c8-edf01f0d6123",
+    "method": "aes-128-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.253.115.104",
+    "server_port": 443,
+    "password": "bfdf169e-d8d2-4c71-93c8-edf01f0d6123",
+    "method": "aes-128-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.253.115.105",
+    "server_port": 443,
+    "password": "bfdf169e-d8d2-4c71-93c8-edf01f0d6123",
+    "method": "aes-128-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.253.115.106",
+    "server_port": 443,
+    "password": "bfdf169e-d8d2-4c71-93c8-edf01f0d6123",
+    "method": "aes-128-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.253.115.147",
+    "server_port": 443,
+    "password": "bfdf169e-d8d2-4c71-93c8-edf01f0d6123",
+    "method": "aes-128-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "172.253.115.99",
     "server_port": 443,
     "password": "bfdf169e-d8d2-4c71-93c8-edf01f0d6123",
     "method": "aes-128-gcm",
@@ -130683,13 +131362,6 @@
     "name": "🔥"
   },
   {
-    "server": "3.112.215.69",
-    "server_port": 443,
-    "password": "amazonskr05",
-    "method": "aes-256-cfb",
-    "name": "🔥"
-  },
-  {
     "server": "217.30.10.70",
     "server_port": 9070,
     "password": "bf7v334KKDV3YDhH",
@@ -130900,57 +131572,50 @@
     "name": "🔥"
   },
   {
-    "server": "13.212.16.80",
+    "server": "13.229.142.0",
     "server_port": 34502,
     "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "18.141.219.57",
+    "server": "13.251.128.23",
     "server_port": 16198,
     "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "35.78.74.212",
-    "server_port": 51205,
-    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "43.198.115.13",
-    "server_port": 48712,
-    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "44.254.127.196",
-    "server_port": 5003,
-    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "54.178.31.86",
-    "server_port": 54329,
-    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "54.218.103.17",
+    "server": "34.208.82.205",
     "server_port": 27232,
     "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
-    "server": "95.40.34.103",
-    "server_port": 32013,
+    "server": "35.78.123.169",
+    "server_port": 54329,
+    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "35.78.207.137",
+    "server_port": 51205,
+    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "54.184.164.96",
+    "server_port": 5003,
+    "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "95.40.38.93",
+    "server_port": 48712,
     "password": "8f3a835c-8a45-480d-ae35-1deb2c52dcae",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -131075,6 +131740,20 @@
     "name": "🔥"
   },
   {
+    "server": "23.157.40.95",
+    "server_port": 7306,
+    "password": "FoOiGlkAA9yPEGP",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "15.204.87.217",
+    "server_port": 8000,
+    "password": "KixLvKzwjekG00rm",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "23.185.248.26",
     "server_port": 17016,
     "password": "H6QU4LJ91ZQ66BTM",
@@ -131148,6 +131827,13 @@
     "server": "8tv68qhq.slashdevslashnetslashtun.net",
     "server_port": 15014,
     "password": "P5FMEGDPGYCXJIKC",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "69.50.95.191",
+    "server_port": 8090,
+    "password": "PCnnH6SQSnfoS27",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -131229,13 +131915,6 @@
     "name": "🔥"
   },
   {
-    "server": "38.110.1.17",
-    "server_port": 8009,
-    "password": "XKFKl2rULjIp74",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "69.50.95.203",
     "server_port": 8009,
     "password": "XKFKl2rULjIp74",
@@ -131252,6 +131931,13 @@
   {
     "server": "23.166.88.198",
     "server_port": 3306,
+    "password": "Y6R9pAtvxxzmGC",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "69.50.93.86",
+    "server_port": 8888,
     "password": "Y6R9pAtvxxzmGC",
     "method": "aes-256-gcm",
     "name": "🔥"
@@ -131369,6 +132055,34 @@
     "name": "🔥"
   },
   {
+    "server": "18.162.143.107",
+    "server_port": 36888,
+    "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "18.167.68.6",
+    "server_port": 10079,
+    "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "43.199.211.7",
+    "server_port": 16688,
+    "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "95.40.83.157",
+    "server_port": 19888,
+    "password": "c69374da-2208-4cbd-b81e-cdf88b5e7f53",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
     "server": "188.121.119.219",
     "server_port": 11305,
     "password": "d3d06009-580c-d0f5-ee0e-6844e8155542",
@@ -131393,6 +132107,13 @@
     "server": "195.20.17.224",
     "server_port": 34282,
     "password": "fVdovvKBlC06pO7s",
+    "method": "aes-256-gcm",
+    "name": "🔥"
+  },
+  {
+    "server": "69.50.95.191",
+    "server_port": 2375,
+    "password": "faBAoD54k87UJG7",
     "method": "aes-256-gcm",
     "name": "🔥"
   },
@@ -131467,10 +132188,10 @@
     "name": "🔥"
   },
   {
-    "server": "47.129.170.82",
-    "server_port": 443,
-    "password": "//YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU",
-    "method": "ss",
+    "server": "195.42.233.127",
+    "server_port": 8880,
+    "password": "G\u001a{\u001dy",
+    "method": "u",
     "name": "🔥"
   },
   {
@@ -131513,13 +132234,6 @@
     "server_port": 8880,
     "password": "e4824193-4f54-453b-d037-88368e85ef0e",
     "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
-    "server": "199.247.18.92",
-    "server_port": 443,
-    "password": "",
-    "method": "{}wW]k}wZ{[ݾ\u001c",
     "name": "🔥"
   },
   {
@@ -131576,13 +132290,6 @@
     "server_port": 22224,
     "password": "^",
     "method": "ӞuN|ݚs\u001fϽ{ٽ",
-    "name": "🔥"
-  },
-  {
-    "server": "170.114.46.175",
-    "server_port": 8443,
-    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
-    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -131943,13 +132650,6 @@
     "name": "🔥"
   },
   {
-    "server": "170.114.46.175",
-    "server_port": 2096,
-    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "190.93.245.166",
     "server_port": 443,
     "password": "//a13df940-020c-465f-bc89-ee5279b5cd6a",
@@ -131971,17 +132671,17 @@
     "name": "🔥"
   },
   {
-    "server": "157.90.247.32",
-    "server_port": 42671,
-    "password": "ϼ>ӗ}\u001e{",
-    "method": "voWws",
-    "name": "🔥"
-  },
-  {
     "server": "35.180.13.18",
     "server_port": 22224,
     "password": "^",
     "method": "ӞuN|ݚs\u001fϽ{ٽ",
+    "name": "🔥"
+  },
+  {
+    "server": "162.159.129.60",
+    "server_port": 443,
+    "password": "7d2dfb7a-2ecc-4448-bcbe-245a2092fe85",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
@@ -132069,13 +132769,6 @@
     "name": "🔥"
   },
   {
-    "server": "170.114.46.175",
-    "server_port": 443,
-    "password": "e999db7a-1b17-4da6-bc37-c9fa24af2e93",
-    "method": "aes-256-gcm",
-    "name": "🔥"
-  },
-  {
     "server": "199.232.0.39",
     "server_port": 443,
     "password": "621e8a54-2947-4a98-b0e0-f9048a426e34",
@@ -132108,6 +132801,13 @@
     "server_port": 443,
     "password": "s~yvqޚ",
     "method": "k]4Ms",
+    "name": "🔥"
+  },
+  {
+    "server": "93.127.180.124",
+    "server_port": 85,
+    "password": "fdc4e100-9979-47f2-b683-421fb19f7227",
+    "method": "aes-256-gcm",
     "name": "🔥"
   },
   {
