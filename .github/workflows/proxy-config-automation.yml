@@ -121,34 +121,51 @@ jobs:
     - name: Commit and push ALL changes
       run: |
         echo "Checking for changes in all data subdirectories..."
-        # Stash all local changes, including untracked/new files (quiet to suppress output)
-        git stash push --include-untracked --quiet || true
-        # Fetch and pull with rebase (now on a clean working directory)
-        git fetch origin
-        git pull --rebase origin "${{ github.ref_name }}" || { echo "Pull failed"; exit 1; }
-        # Reapply stashed changes
-        git stash pop --quiet || { echo "Stash pop failed (possible conflicts)"; exit 1; }
-        # Add all files in data/ explicitly (expanded from original to cover all subdirs for safety)
+
+        # Add all files in data/ first (before pull to avoid conflicts)
         git add data/working_url || true
-        echo "Files to be committed:"
-        git diff --cached --name-only || echo "No files to commit"
+
+        # Check if there are changes to commit
         if git diff --cached --quiet; then
           echo "No changes to commit"
-        else
-          echo "Changes detected, committing..."
-          # Create commit message with execution summary
-          TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
-          PYTHON_STATUS="${{ steps.python-collector.outcome }}"
-          PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
-          RUN_ID="${{ github.run_id }}"
-          GITHUB_REF_NAME="${{ github.ref_name }}"
-          git commit -m "Automated proxy collection - ${TIMESTAMP}" \
-                     -m "Python Collector: ${PYTHON_STATUS}" \
-                     -m "Proxy Tester: ${PROXY_STATUS}" \
-                     -m "Workflow run: ${RUN_ID}"
-          git push origin "${GITHUB_REF_NAME}"
-          echo "✅ Changes committed and pushed successfully"
+          exit 0
         fi
+
+        echo "Files to be committed:"
+        git diff --cached --name-only
+
+        # Create commit message with execution summary
+        TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
+        PYTHON_STATUS="${{ steps.python-collector.outcome }}"
+        PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
+        RUN_ID="${{ github.run_id }}"
+        GITHUB_REF_NAME="${{ github.ref_name }}"
+
+        git commit -m "Automated proxy collection - ${TIMESTAMP}" \
+                   -m "Python Collector: ${PYTHON_STATUS}" \
+                   -m "Proxy Tester: ${PROXY_STATUS}" \
+                   -m "Workflow run: ${RUN_ID}"
+
+        # Pull with rebase and push (handle conflicts gracefully)
+        echo "Pulling latest changes from remote..."
+        git fetch origin
+
+        # Try to pull with rebase, accepting ours for conflicts in data folder
+        git pull --rebase origin "${GITHUB_REF_NAME}" -X ours || {
+          echo "Rebase had conflicts, attempting to continue with our changes..."
+          # If rebase fails, abort and try merge strategy instead
+          git rebase --abort 2>/dev/null || true
+          git pull origin "${GITHUB_REF_NAME}" --no-rebase --strategy=recursive -X ours || {
+            echo "Merge also failed, forcing push with our changes"
+            git push origin "${GITHUB_REF_NAME}" --force-with-lease
+            echo "✅ Changes force-pushed successfully"
+            exit 0
+          }
+        }
+
+        # Push the changes
+        git push origin "${GITHUB_REF_NAME}"
+        echo "✅ Changes committed and pushed successfully"
 
     - name: Upload all results as artifacts
       if: always()
