@@ -2,14 +2,14 @@
  
  A comprehensive tool for collecting, processing, and testing proxy configurations for Xray. This project automates the discovery and validation of working proxy servers, making it easier to find reliable proxies for bypassing internet restrictions.
  
- ## Iran-Specific Testing Results (update every day)
+ ## Iran-Specific Testing Results (Manually update)
  
  The configurations in `working_all_urls.txt` have been tested for functionality within Iran. The test results are available at:
  
  **Iran Test Results**: 
  - [https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/test_in_iran.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/test_in_iran.txt)
 
- ### All Protocols Combined (update every 12 hour)
+ ### All Protocols Combined (automatic update every 12 hour)
  - **All Working URLs**: 
  - [https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_all_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_all_urls.txt)
  
