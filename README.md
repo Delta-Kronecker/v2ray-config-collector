@@ -8,7 +8,7 @@
  The test results are available at:
  
  **Iran Test Results**: 
- - [test_in_iran.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/test_in_iran.txt)
+ - [iran.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/iran.txt)
 
  ### All Protocols Combined (automatic update every 12 hour)
  - **All Working URLs**: 
