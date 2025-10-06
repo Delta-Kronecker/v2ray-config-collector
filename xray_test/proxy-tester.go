@@ -17,7 +17,6 @@ import (
 	"os/signal"
 	"path/filepath"
 	"regexp"
-	"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -72,9 +71,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 500),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 1500),
 		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 5)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 500),
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 1500),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
@@ -1379,13 +1378,8 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 
 		pt.saveResults(allResults)
 
-		// Report system status after batch completion
-		pt.reportSystemStatus(batchID)
-
-		// Add 5-second rest between batches
 		if end < totalConfigs {
-			log.Printf("⏸️  Resting for 5 seconds before next batch...")
-			time.Sleep(5 * time.Second)
+			time.Sleep(500 * time.Millisecond)
 		}
 	}
 
@@ -1409,78 +1403,6 @@ func (pt *ProxyTester) saveResults(results []*TestResultData) {
 	encoder := json.NewEncoder(file)
 	encoder.SetIndent("", "  ")
 	encoder.Encode(results)
-}
-
-func (pt *ProxyTester) getSystemMemoryUsage() (uint64, error) {
-	var m runtime.MemStats
-	runtime.ReadMemStats(&m)
-
-	// Get system memory on different platforms
-	if runtime.GOOS == "windows" {
-		// On Windows, use PowerShell to get total RAM usage
-		cmd := exec.Command("powershell", "-Command", "(Get-Process | Measure-Object WorkingSet64 -Sum).Sum / 1MB")
-		output, err := cmd.Output()
-		if err == nil {
-			if memMB, err := strconv.ParseFloat(strings.TrimSpace(string(output)), 64); err == nil {
-				return uint64(memMB), nil
-			}
-		}
-	} else {
-		// On Linux/Unix, read from /proc/meminfo
-		cmd := exec.Command("sh", "-c", "free -m | awk '/^Mem:/ {print $3}'")
-		output, err := cmd.Output()
-		if err == nil {
-			if memMB, err := strconv.ParseUint(strings.TrimSpace(string(output)), 10, 64); err == nil {
-				return memMB, nil
-			}
-		}
-	}
-
-	// Fallback to current process memory
-	return m.Alloc / 1024 / 1024, nil
-}
-
-func (pt *ProxyTester) countXrayCoreProcesses() int {
-	var cmd *exec.Cmd
-
-	if runtime.GOOS == "windows" {
-		// On Windows, use tasklist
-		cmd = exec.Command("powershell", "-Command", "(Get-Process -Name '*xray*' -ErrorAction SilentlyContinue | Measure-Object).Count")
-	} else {
-		// On Linux/Unix, use ps and grep
-		cmd = exec.Command("sh", "-c", "ps aux | grep -i xray | grep -v grep | wc -l")
-	}
-
-	output, err := cmd.Output()
-	if err != nil {
-		return 0
-	}
-
-	count, err := strconv.Atoi(strings.TrimSpace(string(output)))
-	if err != nil {
-		return 0
-	}
-
-	return count
-}
-
-func (pt *ProxyTester) reportSystemStatus(batchID int) {
-	log.Println(strings.Repeat("-", 60))
-	log.Printf("📊 System Status After Batch %d:", batchID)
-
-	// Get memory usage
-	memUsage, err := pt.getSystemMemoryUsage()
-	if err == nil {
-		log.Printf("  💾 RAM Usage: %.2f MB", float64(memUsage))
-	} else {
-		log.Printf("  💾 RAM Usage: Unable to retrieve (Error: %v)", err)
-	}
-
-	// Count xray-core processes
-	processCount := pt.countXrayCoreProcesses()
-	log.Printf("  🔧 Xray-core Processes: %d", processCount)
-
-	log.Println(strings.Repeat("-", 60))
 }
 
 func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
