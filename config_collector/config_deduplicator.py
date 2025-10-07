@@ -2,6 +2,7 @@ import json
 import os
 import base64
 import urllib.parse
+import random
 from typing import Dict, List, Any, Tuple
 from collections import defaultdict
 
@@ -208,6 +209,9 @@ class ConfigDeduplicator:
 
         deduplicated_configs = self.deduplicate_configs(configs)
 
+        # Randomize the order of configs
+        random.shuffle(deduplicated_configs)
+
         urls = []
         failed_count = 0
 
@@ -227,6 +231,9 @@ class ConfigDeduplicator:
             "processed": processed_count,
             "failed": failed_count
         }
+
+        # Randomize the order of URLs
+        random.shuffle(urls)
 
         if urls:
             # Save URLs as text file
