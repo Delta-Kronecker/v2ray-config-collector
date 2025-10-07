@@ -17,6 +17,7 @@ import (
 	"os/signal"
 	"path/filepath"
 	"regexp"
+	"runtime"
 	"strconv"
 	"strings"
 	"sync"
@@ -71,9 +72,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 500),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 200),
 		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 5)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 500),
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 400),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
@@ -551,6 +552,7 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 type ProcessManager struct {
 	processes sync.Map
 	cleanup   int32
+	mu        sync.Mutex
 }
 
 func NewProcessManager() *ProcessManager {
@@ -566,27 +568,11 @@ func (pm *ProcessManager) UnregisterProcess(pid int) {
 }
 
 func (pm *ProcessManager) KillProcess(pid int) error {
-	if atomic.LoadInt32(&pm.cleanup) == 1 {
-		return nil
-	}
-
 	if value, ok := pm.processes.Load(pid); ok {
 		if cmd, ok := value.(*exec.Cmd); ok {
 			if cmd.Process != nil {
-				if err := cmd.Process.Signal(syscall.SIGTERM); err == nil {
-					done := make(chan error, 1)
-					go func() {
-						done <- cmd.Wait()
-					}()
-
-					select {
-					case <-done:
-					case <-time.After(200 * time.Millisecond):
-						cmd.Process.Kill()
-					}
-				} else {
-					cmd.Process.Kill()
-				}
+				// Force kill immediately
+				cmd.Process.Kill()
 				pm.UnregisterProcess(pid)
 				return nil
 			}
@@ -596,16 +582,65 @@ func (pm *ProcessManager) KillProcess(pid int) error {
 }
 
 func (pm *ProcessManager) Cleanup() {
-	if !atomic.CompareAndSwapInt32(&pm.cleanup, 0, 1) {
-		return
-	}
+	pm.mu.Lock()
+	defer pm.mu.Unlock()
 
+	var pids []int
 	pm.processes.Range(func(key, value interface{}) bool {
 		if pid, ok := key.(int); ok {
-			pm.KillProcess(pid)
+			pids = append(pids, pid)
 		}
 		return true
 	})
+
+	// Kill all processes
+	for _, pid := range pids {
+		pm.KillProcess(pid)
+	}
+
+	// Wait for processes to terminate
+	time.Sleep(100 * time.Millisecond)
+}
+
+func (pm *ProcessManager) GetProcessCount() int {
+	count := 0
+	pm.processes.Range(func(key, value interface{}) bool {
+		count++
+		return true
+	})
+	return count
+}
+
+func (pm *ProcessManager) ForceCleanupAll() int {
+	pm.mu.Lock()
+	defer pm.mu.Unlock()
+
+	var cmdsToKill []*exec.Cmd
+
+	// Collect all processes
+	pm.processes.Range(func(key, value interface{}) bool {
+		if cmd, ok := value.(*exec.Cmd); ok {
+			if cmd.Process != nil {
+				cmdsToKill = append(cmdsToKill, cmd)
+			}
+		}
+		pm.processes.Delete(key)
+		return true
+	})
+
+	// Kill all processes
+	for _, cmd := range cmdsToKill {
+		cmd.Process.Kill()
+	}
+
+	// Wait for all processes to be reaped (prevent zombies)
+	for _, cmd := range cmdsToKill {
+		go func(c *exec.Cmd) {
+			c.Wait() // Reap the process
+		}(cmd)
+	}
+
+	return len(cmdsToKill)
 }
 
 type ProxyTester struct {
@@ -963,9 +998,8 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	defer func() {
 		result.TestTime = time.Since(startTime).Seconds()
 
-		if process != nil && process.Process != nil {
-			pt.processManager.KillProcess(process.Process.Pid)
-		}
+		// Don't kill process here - let cleanup handle it
+		// Just clean up temp files and release port
 		if configFile != "" {
 			os.Remove(configFile)
 		}
@@ -1378,8 +1412,16 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 
 		pt.saveResults(allResults)
 
+		// Report system status after batch completion
+		pt.reportSystemStatus(batchID)
+
+		// Cleanup resources between batches
 		if end < totalConfigs {
-			time.Sleep(500 * time.Millisecond)
+			pt.cleanupBetweenBatches()
+
+			// Add 10-second rest between batches
+			log.Printf("⏸️  Resting for 10 seconds before next batch...")
+			time.Sleep(10 * time.Second)
 		}
 	}
 
@@ -1403,6 +1445,153 @@ func (pt *ProxyTester) saveResults(results []*TestResultData) {
 	encoder := json.NewEncoder(file)
 	encoder.SetIndent("", "  ")
 	encoder.Encode(results)
+}
+
+func (pt *ProxyTester) getSystemMemoryUsage() (used uint64, total uint64, err error) {
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+
+	// Get system memory on different platforms
+	if runtime.GOOS == "windows" {
+		// On Windows, use PowerShell to get total and used RAM
+		cmdUsed := exec.Command("powershell", "-Command", "(Get-Process | Measure-Object WorkingSet64 -Sum).Sum / 1MB")
+		outputUsed, errUsed := cmdUsed.Output()
+
+		cmdTotal := exec.Command("powershell", "-Command", "(Get-CimInstance Win32_OperatingSystem).TotalVisibleMemorySize / 1KB")
+		outputTotal, errTotal := cmdTotal.Output()
+
+		if errUsed == nil && errTotal == nil {
+			if memUsedMB, err := strconv.ParseFloat(strings.TrimSpace(string(outputUsed)), 64); err == nil {
+				if memTotalMB, err := strconv.ParseFloat(strings.TrimSpace(string(outputTotal)), 64); err == nil {
+					return uint64(memUsedMB), uint64(memTotalMB), nil
+				}
+			}
+		}
+	} else {
+		// On Linux/Unix, read from /proc/meminfo or free command
+		cmd := exec.Command("sh", "-c", "free -m | awk '/^Mem:/ {print $3, $2}'")
+		output, cmdErr := cmd.Output()
+		if cmdErr == nil {
+			parts := strings.Fields(strings.TrimSpace(string(output)))
+			if len(parts) >= 2 {
+				if memUsedMB, err := strconv.ParseUint(parts[0], 10, 64); err == nil {
+					if memTotalMB, err := strconv.ParseUint(parts[1], 10, 64); err == nil {
+						return memUsedMB, memTotalMB, nil
+					}
+				}
+			}
+		}
+	}
+
+	// Fallback to current process memory
+	return m.Alloc / 1024 / 1024, 0, nil
+}
+
+func (pt *ProxyTester) countXrayCoreProcesses() int {
+	var cmd *exec.Cmd
+
+	if runtime.GOOS == "windows" {
+		// On Windows, use tasklist
+		cmd = exec.Command("powershell", "-Command", "(Get-Process -Name '*xray*' -ErrorAction SilentlyContinue | Measure-Object).Count")
+	} else {
+		// On Linux/Unix, use ps and grep
+		cmd = exec.Command("sh", "-c", "ps aux | grep -i xray | grep -v grep | wc -l")
+	}
+
+	output, err := cmd.Output()
+	if err != nil {
+		return 0
+	}
+
+	count, err := strconv.Atoi(strings.TrimSpace(string(output)))
+	if err != nil {
+		return 0
+	}
+
+	return count
+}
+
+func (pt *ProxyTester) cleanupBetweenBatches() {
+	log.Println(strings.Repeat("-", 70))
+	log.Println(" Cleaning up resources before next batch...")
+
+	// Count tracked processes before cleanup
+	trackedProcessesBefore := pt.processManager.GetProcessCount()
+	systemProcessesBefore := pt.countXrayCoreProcesses()
+	log.Printf("   Tracked processes: %d", trackedProcessesBefore)
+	log.Printf("   System xray-core processes: %d", systemProcessesBefore)
+
+	// Stop all tracked xray-core processes
+	log.Println("   Force killing all tracked xray processes...")
+	killedCount := pt.processManager.ForceCleanupAll()
+
+	// Wait for processes to be reaped and fully terminate
+	log.Println("  ⏳ Waiting for processes to terminate...")
+	time.Sleep(2 * time.Second)
+
+	trackedProcessesAfter := pt.processManager.GetProcessCount()
+	systemProcessesAfter := pt.countXrayCoreProcesses()
+
+	log.Printf("   Tracked processes killed: %d", killedCount)
+	log.Printf("   Tracked processes remaining: %d", trackedProcessesAfter)
+
+	if systemProcessesAfter == 0 {
+		log.Printf("   System xray-core processes cleaned: %d", systemProcessesBefore)
+	} else {
+		log.Printf("    System xray-core processes still running: %d", systemProcessesAfter)
+	}
+
+	// Release all used ports
+	log.Println("   Releasing all used ports...")
+	portsBefore := 0
+	pt.portManager.usedPorts.Range(func(key, value interface{}) bool {
+		portsBefore++
+		return true
+	})
+	log.Printf("   Used ports before cleanup: %d", portsBefore)
+
+	pt.portManager.cleanup()
+
+	portsAfter := 0
+	pt.portManager.usedPorts.Range(func(key, value interface{}) bool {
+		portsAfter++
+		return true
+	})
+	log.Printf("   Used ports released: %d", portsBefore - portsAfter)
+	log.Printf("   Used ports remaining: %d", portsAfter)
+
+	// Force garbage collection to free memory
+	runtime.GC()
+	log.Println("    Garbage collection completed")
+
+	log.Println("   Cleanup completed successfully!")
+	log.Println(strings.Repeat("-", 70))
+}
+
+func (pt *ProxyTester) reportSystemStatus(batchID int) {
+	log.Println(strings.Repeat("=", 70))
+	log.Printf(" System Status After Batch %d:", batchID)
+	log.Println(strings.Repeat("=", 70))
+
+	// Get memory usage
+	memUsed, memTotal, err := pt.getSystemMemoryUsage()
+	if err == nil {
+		if memTotal > 0 {
+			usagePercent := float64(memUsed) / float64(memTotal) * 100
+			log.Printf(" RAM Usage: %.2f MB / %.2f MB (%.1f%%)",
+				float64(memUsed), float64(memTotal), usagePercent)
+		} else {
+			log.Printf(" RAM Usage: %.2f MB", float64(memUsed))
+		}
+	} else {
+		log.Printf(" RAM Usage: Unable to retrieve (Error: %v)", err)
+	}
+
+	// Count xray-core processes
+	processCount := pt.countXrayCoreProcesses()
+	log.Printf("🔧 Xray-core Processes: %d", processCount)
+
+	log.Println(strings.Repeat("=", 70))
 }
 
 func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
@@ -1521,49 +1710,68 @@ func main() {
 	}
 	defer tester.Cleanup()
 
-	var allConfigs []ProxyConfig
-
-	configFiles := map[ProxyProtocol]string{
-		ProtocolShadowsocks: "../data/deduplicated_urls/ss.json",
-		ProtocolVMess:       "../data/deduplicated_urls/vmess.json",
-		ProtocolVLESS:       "../data/deduplicated_urls/vless.json",
+	// Define test order: VLESS, VMess, Shadowsocks
+	configFilesOrdered := []struct {
+		protocol ProxyProtocol
+		filePath string
+	}{
+		{ProtocolVLESS, "../data/deduplicated_urls/vless.json"},
+		{ProtocolVMess, "../data/deduplicated_urls/vmess.json"},
+		{ProtocolShadowsocks, "../data/deduplicated_urls/ss.json"},
 	}
 
-	for protocol, filePath := range configFiles {
+	var allResults []*TestResultData
+	totalWorkingConfigs := 0
+
+	for _, configFile := range configFilesOrdered {
+		protocol := configFile.protocol
+		filePath := configFile.filePath
+
+		log.Println(strings.Repeat("=", 70))
+		log.Printf(" Starting tests for %s protocol", strings.ToUpper(string(protocol)))
+		log.Println(strings.Repeat("=", 70))
+
 		if _, err := os.Stat(filePath); err == nil {
 			configs, err := tester.LoadConfigsFromJSON(filePath, protocol)
 			if err != nil {
 				log.Printf("Failed to load %s configs: %v", protocol, err)
-			} else {
-				allConfigs = append(allConfigs, configs...)
+				continue
 			}
+
+			if len(configs) == 0 {
+				log.Printf("No valid %s configurations found", protocol)
+				continue
+			}
+
+			log.Printf("Testing %d %s configurations...", len(configs), protocol)
+
+			results := tester.RunTests(configs)
+			allResults = append(allResults, results...)
+
+			workingCount := 0
+			for _, result := range results {
+				if result.Result == ResultSuccess {
+					workingCount++
+				}
+			}
+			totalWorkingConfigs += workingCount
+
+			log.Printf(" %s testing completed: %d working configurations found", strings.ToUpper(string(protocol)), workingCount)
 		} else {
 			log.Printf("Config file not found: %s", filePath)
 		}
 	}
 
-	if len(allConfigs) == 0 {
-		log.Println("No valid configurations found to test")
-		return
-	}
-
-	log.Printf("Total unique configurations for testing: %d", len(allConfigs))
-
-	results := tester.RunTests(allConfigs)
-
-	workingConfigs := 0
-	for _, result := range results {
-		if result.Result == ResultSuccess {
-			workingConfigs++
-		}
-	}
-
-	if workingConfigs > 0 {
+	if totalWorkingConfigs > 0 {
+		log.Println(strings.Repeat("=", 70))
+		log.Printf("\n FINAL RESULTS ")
+		log.Printf("Total working configurations: %d", totalWorkingConfigs)
 		log.Printf("\nWorking configurations saved to:")
 		log.Printf("  JSON: %s/working_json/working_*.txt", config.DataDir)
 		log.Printf("  URL: %s/working_url/working_*_urls.txt", config.DataDir)
 		log.Printf("  All configs (JSON): %s/working_json/working_all_configs.txt", config.DataDir)
 		log.Printf("  All configs (URL): %s/working_url/working_all_urls.txt", config.DataDir)
+		log.Println(strings.Repeat("=", 70))
 	} else {
 		log.Println("No working configurations found")
 	}
