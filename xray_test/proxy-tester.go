@@ -47,9 +47,14 @@ const (
 type ProxyProtocol string
 
 const (
-	ProtocolShadowsocks ProxyProtocol = "shadowsocks"
-	ProtocolVMess       ProxyProtocol = "vmess"
-	ProtocolVLESS       ProxyProtocol = "vless"
+	ProtocolShadowsocks   ProxyProtocol = "shadowsocks"
+	ProtocolShadowsocksR  ProxyProtocol = "shadowsocksr"
+	ProtocolVMess         ProxyProtocol = "vmess"
+	ProtocolVLESS         ProxyProtocol = "vless"
+	ProtocolTrojan        ProxyProtocol = "trojan"
+	ProtocolHysteria      ProxyProtocol = "hysteria"
+	ProtocolHysteria2     ProxyProtocol = "hysteria2"
+	ProtocolTUIC          ProxyProtocol = "tuic"
 )
 
 type Config struct {
@@ -133,6 +138,16 @@ type ProxyConfig struct {
 	Fingerprint string `json:"fingerprint,omitempty"`
 	HeaderType  string `json:"headerType,omitempty"`
 	ServiceName string `json:"serviceName,omitempty"`
+
+	Protocol_Param string `json:"protocol_param,omitempty"`
+	Obfs           string `json:"obfs,omitempty"`
+	ObfsParam      string `json:"obfs_param,omitempty"`
+
+	UpMbps         int    `json:"up_mbps,omitempty"`
+	DownMbps       int    `json:"down_mbps,omitempty"`
+	AuthStr        string `json:"auth_str,omitempty"`
+	Insecure       bool   `json:"insecure,omitempty"`
+	CongestionCtrl string `json:"congestion_control,omitempty"`
 
 	RawConfig  map[string]interface{} `json:"raw_config,omitempty"`
 	ConfigID   *int                   `json:"config_id,omitempty"`
@@ -447,6 +462,9 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 			},
 		}
 
+	case ProtocolShadowsocksR:
+		return nil, fmt.Errorf("shadowsocksr protocol is not supported by xray-core")
+
 	case ProtocolVMess:
 		outbound["settings"] = map[string]interface{}{
 			"vnext": []map[string]interface{}{
@@ -482,6 +500,21 @@ func (xcg *XrayConfigGenerator) GenerateConfig(config *ProxyConfig, listenPort i
 				},
 			},
 		}
+
+	case ProtocolTrojan:
+		outbound["settings"] = map[string]interface{}{
+			"servers": []map[string]interface{}{
+				{
+					"address":  config.Server,
+					"port":     config.Port,
+					"password": config.Password,
+					"level":    0,
+				},
+			},
+		}
+
+	case ProtocolHysteria, ProtocolHysteria2, ProtocolTUIC:
+		return nil, fmt.Errorf("%s protocol is not supported by xray-core", config.Protocol)
 	}
 
 	streamSettings := outbound["streamSettings"].(map[string]interface{})
@@ -687,7 +720,7 @@ func NewProxyTester(config *Config) (*ProxyTester, error) {
 }
 
 func (pt *ProxyTester) initStats() {
-	protocols := []ProxyProtocol{ProtocolShadowsocks, ProtocolVMess, ProtocolVLESS}
+	protocols := []ProxyProtocol{ProtocolShadowsocks, ProtocolShadowsocksR, ProtocolVMess, ProtocolVLESS, ProtocolTrojan, ProtocolHysteria, ProtocolHysteria2, ProtocolTUIC}
 	for _, protocol := range protocols {
 		pt.stats.Store(protocol, map[string]*int64{
 			"total":   new(int64),
@@ -716,9 +749,14 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	}
 
 	protocols := map[ProxyProtocol]string{
-		ProtocolShadowsocks: "shadowsocks",
-		ProtocolVMess:       "vmess",
-		ProtocolVLESS:       "vless",
+		ProtocolShadowsocks:  "shadowsocks",
+		ProtocolShadowsocksR: "shadowsocksr",
+		ProtocolVMess:        "vmess",
+		ProtocolVLESS:        "vless",
+		ProtocolTrojan:       "trojan",
+		ProtocolHysteria:     "hysteria",
+		ProtocolHysteria2:    "hysteria2",
+		ProtocolTUIC:         "tuic",
 	}
 
 	timestamp := time.Now().Format("2006-01-02 15:04:05")
@@ -752,7 +790,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	generalJSONFile.WriteString("# All Working Configurations (JSON Format)\n")
 	generalJSONFile.WriteString(fmt.Sprintf("# Generated at: %s\n", timestamp))
 	generalJSONFile.WriteString("# Format: Each line contains one working configuration in JSON\n")
-	generalJSONFile.WriteString("# Protocols: Shadowsocks, VMess, VLESS\n\n")
+	generalJSONFile.WriteString("# Protocols: Shadowsocks, ShadowsocksR, VMess, VLESS, Trojan, Hysteria, Hysteria2, TUIC\n\n")
 	pt.generalJSONFile = generalJSONFile
 
 	generalURLFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", "working_all_urls.txt"))
@@ -762,7 +800,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	generalURLFile.WriteString("# All Working Configurations (URL Format)\n")
 	generalURLFile.WriteString(fmt.Sprintf("# Generated at: %s\n", timestamp))
 	generalURLFile.WriteString("# Format: Each line contains one working configuration as URL\n")
-	generalURLFile.WriteString("# Protocols: Shadowsocks, VMess, VLESS\n\n")
+	generalURLFile.WriteString("# Protocols: Shadowsocks, ShadowsocksR, VMess, VLESS, Trojan, Hysteria, Hysteria2, TUIC\n\n")
 	pt.generalURLFile = generalURLFile
 
 	log.Println("Incremental save files initialized")
@@ -788,10 +826,20 @@ func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtoc
 	switch protocol {
 	case ProtocolShadowsocks:
 		configs, err = pt.loadShadowsocksConfigs(file, seenHashes)
+	case ProtocolShadowsocksR:
+		configs, err = pt.loadShadowsocksRConfigs(file, seenHashes)
 	case ProtocolVMess:
 		configs, err = pt.loadVMessConfigs(file, seenHashes)
 	case ProtocolVLESS:
 		configs, err = pt.loadVLessConfigs(file, seenHashes)
+	case ProtocolTrojan:
+		configs, err = pt.loadTrojanConfigs(file, seenHashes)
+	case ProtocolHysteria:
+		configs, err = pt.loadHysteriaConfigs(file, seenHashes)
+	case ProtocolHysteria2:
+		configs, err = pt.loadHysteria2Configs(file, seenHashes)
+	case ProtocolTUIC:
+		configs, err = pt.loadTUICConfigs(file, seenHashes)
 	}
 
 	if err != nil {
@@ -947,6 +995,279 @@ func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]boo
 	return configs, nil
 }
 
+func (pt *ProxyTester) loadShadowsocksRConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type SSRConfig struct {
+		Server        string `json:"server"`
+		ServerPort    int    `json:"server_port"`
+		Password      string `json:"password"`
+		Method        string `json:"method"`
+		Protocol      string `json:"protocol"`
+		ProtocolParam string `json:"protocol_param"`
+		Obfs          string `json:"obfs"`
+		ObfsParam     string `json:"obfs_param"`
+		Name          string `json:"name"`
+	}
+
+	var data []SSRConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		config := ProxyConfig{
+			Protocol:       ProtocolShadowsocksR,
+			Server:         configData.Server,
+			Port:           configData.ServerPort,
+			Method:         configData.Method,
+			Password:       configData.Password,
+			Protocol_Param: configData.ProtocolParam,
+			Obfs:           configData.Obfs,
+			ObfsParam:      configData.ObfsParam,
+			Remarks:        configData.Name,
+			Network:        "tcp",
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) loadTrojanConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type TrojanConfig struct {
+		Address     string `json:"address"`
+		Port        int    `json:"port"`
+		Password    string `json:"password"`
+		Name        string `json:"name"`
+		Type        string `json:"type"`
+		Host        string `json:"host"`
+		Path        string `json:"path"`
+		SNI         string `json:"sni"`
+		ALPN        string `json:"alpn"`
+		Fingerprint string `json:"fingerprint"`
+	}
+
+	var data []TrojanConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		config := ProxyConfig{
+			Protocol:    ProtocolTrojan,
+			Server:      configData.Address,
+			Port:        configData.Port,
+			Password:    configData.Password,
+			Network:     configData.Type,
+			Host:        configData.Host,
+			Path:        configData.Path,
+			SNI:         configData.SNI,
+			ALPN:        configData.ALPN,
+			Fingerprint: configData.Fingerprint,
+			Remarks:     configData.Name,
+			TLS:         "tls",
+		}
+
+		if config.Network == "" {
+			config.Network = "tcp"
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) loadHysteriaConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type HysteriaConfig struct {
+		Address  string `json:"address"`
+		Port     int    `json:"port"`
+		Auth     string `json:"auth"`
+		Protocol string `json:"protocol"`
+		UpMbps   string `json:"upmbps"`
+		DownMbps string `json:"downmbps"`
+		Obfs     string `json:"obfs"`
+		Peer     string `json:"peer"`
+		ALPN     string `json:"alpn"`
+		Insecure string `json:"insecure"`
+		Name     string `json:"name"`
+	}
+
+	var data []HysteriaConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		upMbps := 0
+		if configData.UpMbps != "" {
+			if val, err := strconv.Atoi(configData.UpMbps); err == nil {
+				upMbps = val
+			}
+		}
+
+		downMbps := 0
+		if configData.DownMbps != "" {
+			if val, err := strconv.Atoi(configData.DownMbps); err == nil {
+				downMbps = val
+			}
+		}
+
+		insecure := false
+		if configData.Insecure == "1" || configData.Insecure == "true" {
+			insecure = true
+		}
+
+		sni := configData.Peer
+		if sni == "" {
+			sni = configData.Address
+		}
+
+		config := ProxyConfig{
+			Protocol: ProtocolHysteria,
+			Server:   configData.Address,
+			Port:     configData.Port,
+			AuthStr:  configData.Auth,
+			UpMbps:   upMbps,
+			DownMbps: downMbps,
+			Obfs:     configData.Obfs,
+			SNI:      sni,
+			ALPN:     configData.ALPN,
+			Insecure: insecure,
+			Remarks:  configData.Name,
+			Network:  "udp",
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) loadHysteria2Configs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type Hysteria2Config struct {
+		Address  string `json:"address"`
+		Port     int    `json:"port"`
+		Auth     string `json:"auth"`
+		Obfs     string `json:"obfs"`
+		SNI      string `json:"sni"`
+		Insecure string `json:"insecure"`
+		Name     string `json:"name"`
+	}
+
+	var data []Hysteria2Config
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		insecure := false
+		if configData.Insecure == "1" || configData.Insecure == "true" {
+			insecure = true
+		}
+
+		config := ProxyConfig{
+			Protocol: ProtocolHysteria2,
+			Server:   configData.Address,
+			Port:     configData.Port,
+			Password: configData.Auth,
+			Obfs:     configData.Obfs,
+			SNI:      configData.SNI,
+			Insecure: insecure,
+			Remarks:  configData.Name,
+			Network:  "udp",
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
+func (pt *ProxyTester) loadTUICConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+	type TUICConfig struct {
+		Address          string `json:"address"`
+		Port             int    `json:"port"`
+		UUID             string `json:"uuid"`
+		Password         string `json:"password"`
+		CongestionControl string `json:"congestion_control"`
+		ALPN             string `json:"alpn"`
+		SNI              string `json:"sni"`
+		AllowInsecure    string `json:"allow_insecure"`
+		Name             string `json:"name"`
+	}
+
+	var data []TUICConfig
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&data); err != nil {
+		return nil, err
+	}
+
+	var configs []ProxyConfig
+	for _, configData := range data {
+		insecure := false
+		if configData.AllowInsecure == "1" || configData.AllowInsecure == "true" {
+			insecure = true
+		}
+
+		config := ProxyConfig{
+			Protocol:       ProtocolTUIC,
+			Server:         configData.Address,
+			Port:           configData.Port,
+			UUID:           configData.UUID,
+			Password:       configData.Password,
+			CongestionCtrl: configData.CongestionControl,
+			ALPN:           configData.ALPN,
+			SNI:            configData.SNI,
+			Insecure:       insecure,
+			Remarks:        configData.Name,
+			Network:        "udp",
+		}
+
+		if pt.isValidConfig(&config) {
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
+		}
+	}
+
+	return configs, nil
+}
+
 func (pt *ProxyTester) isValidUUID(uuid string) bool {
 	re := regexp.MustCompile(`^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`)
 	return re.MatchString(uuid)
@@ -960,10 +1281,20 @@ func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
 	switch config.Protocol {
 	case ProtocolShadowsocks:
 		return config.Method != "" && config.Password != ""
+	case ProtocolShadowsocksR:
+		return config.Method != "" && config.Password != ""
 	case ProtocolVMess:
 		return pt.isValidUUID(config.UUID)
 	case ProtocolVLESS:
 		return pt.isValidUUID(config.UUID)
+	case ProtocolTrojan:
+		return config.Password != ""
+	case ProtocolHysteria:
+		return config.AuthStr != ""
+	case ProtocolHysteria2:
+		return config.Password != ""
+	case ProtocolTUIC:
+		return config.UUID != "" && config.Password != ""
 	}
 
 	return false
@@ -974,10 +1305,20 @@ func (pt *ProxyTester) getConfigHash(config *ProxyConfig) string {
 	switch config.Protocol {
 	case ProtocolShadowsocks:
 		hashStr = fmt.Sprintf("ss://%s:%d:%s:%s", config.Server, config.Port, config.Method, config.Password)
+	case ProtocolShadowsocksR:
+		hashStr = fmt.Sprintf("ssr://%s:%d:%s:%s:%s:%s", config.Server, config.Port, config.Method, config.Password, config.Protocol_Param, config.Obfs)
 	case ProtocolVMess:
 		hashStr = fmt.Sprintf("vmess://%s:%d:%s:%d:%s", config.Server, config.Port, config.UUID, config.AlterID, config.Network)
 	case ProtocolVLESS:
 		hashStr = fmt.Sprintf("vless://%s:%d:%s:%s", config.Server, config.Port, config.UUID, config.Network)
+	case ProtocolTrojan:
+		hashStr = fmt.Sprintf("trojan://%s:%d:%s:%s", config.Server, config.Port, config.Password, config.Network)
+	case ProtocolHysteria:
+		hashStr = fmt.Sprintf("hysteria://%s:%d:%s", config.Server, config.Port, config.AuthStr)
+	case ProtocolHysteria2:
+		hashStr = fmt.Sprintf("hysteria2://%s:%d:%s", config.Server, config.Port, config.Password)
+	case ProtocolTUIC:
+		hashStr = fmt.Sprintf("tuic://%s:%d:%s:%s", config.Server, config.Port, config.UUID, config.Password)
 	}
 
 	hash := md5.Sum([]byte(hashStr))
@@ -1174,6 +1515,12 @@ func (pt *ProxyTester) createWorkingConfigLine(result *TestResultData) string {
 	case ProtocolShadowsocks:
 		data["method"] = config.Method
 		data["password"] = config.Password
+	case ProtocolShadowsocksR:
+		data["method"] = config.Method
+		data["password"] = config.Password
+		data["protocol"] = config.Protocol_Param
+		data["obfs"] = config.Obfs
+		data["obfs_param"] = config.ObfsParam
 	case ProtocolVMess:
 		data["uuid"] = config.UUID
 		data["alterId"] = config.AlterID
@@ -1188,6 +1535,33 @@ func (pt *ProxyTester) createWorkingConfigLine(result *TestResultData) string {
 		data["path"] = config.Path
 		data["host"] = config.Host
 		data["sni"] = config.SNI
+	case ProtocolTrojan:
+		data["password"] = config.Password
+		data["path"] = config.Path
+		data["host"] = config.Host
+		data["sni"] = config.SNI
+		data["alpn"] = config.ALPN
+		data["fingerprint"] = config.Fingerprint
+	case ProtocolHysteria:
+		data["auth_str"] = config.AuthStr
+		data["up_mbps"] = config.UpMbps
+		data["down_mbps"] = config.DownMbps
+		data["obfs"] = config.Obfs
+		data["sni"] = config.SNI
+		data["alpn"] = config.ALPN
+		data["insecure"] = config.Insecure
+	case ProtocolHysteria2:
+		data["password"] = config.Password
+		data["obfs"] = config.Obfs
+		data["sni"] = config.SNI
+		data["insecure"] = config.Insecure
+	case ProtocolTUIC:
+		data["uuid"] = config.UUID
+		data["password"] = config.Password
+		data["congestion_control"] = config.CongestionCtrl
+		data["alpn"] = config.ALPN
+		data["sni"] = config.SNI
+		data["insecure"] = config.Insecure
 	}
 
 	jsonBytes, _ := json.Marshal(data)
@@ -1206,6 +1580,21 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 			remarks = fmt.Sprintf("SS-%s", config.Server)
 		}
 		return fmt.Sprintf("ss://%s@%s:%d#%s", authB64, config.Server, config.Port, remarks)
+
+	case ProtocolShadowsocksR:
+		remarks := url.QueryEscape(config.Remarks)
+		if remarks == "" {
+			remarks = fmt.Sprintf("SSR-%s", config.Server)
+		}
+		ssrStr := fmt.Sprintf("%s:%d:%s:%s:%s:%s", config.Server, config.Port, config.Protocol_Param, config.Method, config.Obfs, base64.URLEncoding.EncodeToString([]byte(config.Password)))
+		if config.ObfsParam != "" {
+			ssrStr += "/?obfsparam=" + base64.URLEncoding.EncodeToString([]byte(config.ObfsParam))
+		}
+		if config.Protocol_Param != "" {
+			ssrStr += "&protoparam=" + base64.URLEncoding.EncodeToString([]byte(config.Protocol_Param))
+		}
+		ssrStr += "&remarks=" + base64.URLEncoding.EncodeToString([]byte(config.Remarks))
+		return fmt.Sprintf("ssr://%s", base64.URLEncoding.EncodeToString([]byte(ssrStr)))
 
 	case ProtocolVMess:
 		vmessConfig := map[string]interface{}{
@@ -1276,6 +1665,126 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		}
 
 		return fmt.Sprintf("vless://%s@%s:%d%s#%s", config.UUID, config.Server, config.Port, query, remarks)
+
+	case ProtocolTrojan:
+		params := url.Values{}
+		if config.TLS != "" {
+			params.Add("security", config.TLS)
+		}
+		if config.Network != "" && config.Network != "tcp" {
+			params.Add("type", config.Network)
+		}
+		if config.Host != "" {
+			params.Add("host", config.Host)
+		}
+		if config.Path != "" {
+			params.Add("path", config.Path)
+		}
+		if config.SNI != "" {
+			params.Add("sni", config.SNI)
+		}
+		if config.ALPN != "" {
+			params.Add("alpn", config.ALPN)
+		}
+		if config.Fingerprint != "" {
+			params.Add("fp", config.Fingerprint)
+		}
+
+		query := ""
+		if len(params) > 0 {
+			query = "?" + params.Encode()
+		}
+
+		remarks := url.QueryEscape(config.Remarks)
+		if remarks == "" {
+			remarks = fmt.Sprintf("Trojan-%s", config.Server)
+		}
+
+		return fmt.Sprintf("trojan://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, remarks)
+
+	case ProtocolHysteria:
+		params := url.Values{}
+		if config.UpMbps > 0 {
+			params.Add("upmbps", strconv.Itoa(config.UpMbps))
+		}
+		if config.DownMbps > 0 {
+			params.Add("downmbps", strconv.Itoa(config.DownMbps))
+		}
+		if config.Obfs != "" {
+			params.Add("obfs", config.Obfs)
+		}
+		if config.SNI != "" {
+			params.Add("peer", config.SNI)
+		}
+		if config.ALPN != "" {
+			params.Add("alpn", config.ALPN)
+		}
+		if config.Insecure {
+			params.Add("insecure", "1")
+		}
+
+		query := ""
+		if len(params) > 0 {
+			query = "?" + params.Encode()
+		}
+
+		remarks := url.QueryEscape(config.Remarks)
+		if remarks == "" {
+			remarks = fmt.Sprintf("Hysteria-%s", config.Server)
+		}
+
+		return fmt.Sprintf("hysteria://%s@%s:%d%s#%s", config.AuthStr, config.Server, config.Port, query, remarks)
+
+	case ProtocolHysteria2:
+		params := url.Values{}
+		if config.Obfs != "" {
+			params.Add("obfs", config.Obfs)
+		}
+		if config.SNI != "" {
+			params.Add("sni", config.SNI)
+		}
+		if config.Insecure {
+			params.Add("insecure", "1")
+		}
+
+		query := ""
+		if len(params) > 0 {
+			query = "?" + params.Encode()
+		}
+
+		remarks := url.QueryEscape(config.Remarks)
+		if remarks == "" {
+			remarks = fmt.Sprintf("Hysteria2-%s", config.Server)
+		}
+
+		return fmt.Sprintf("hysteria2://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, remarks)
+
+	case ProtocolTUIC:
+		params := url.Values{}
+		if config.CongestionCtrl != "" {
+			params.Add("congestion_control", config.CongestionCtrl)
+		}
+		if config.ALPN != "" {
+			params.Add("alpn", config.ALPN)
+		}
+		if config.SNI != "" {
+			params.Add("sni", config.SNI)
+		}
+		if config.Insecure {
+			params.Add("allow_insecure", "1")
+		}
+
+		query := ""
+		if len(params) > 0 {
+			query = "?" + params.Encode()
+		}
+
+		remarks := url.QueryEscape(config.Remarks)
+		if remarks == "" {
+			remarks = fmt.Sprintf("TUIC-%s", config.Server)
+		}
+
+		return fmt.Sprintf("tuic://%s:%s@%s:%d%s#%s", config.UUID, config.Password, config.Server, config.Port, query, remarks)
 	}
 
 	return fmt.Sprintf("%s://%s:%d", config.Protocol, config.Server, config.Port)
@@ -1619,7 +2128,7 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 	}
 
 	log.Println("\nProtocol Breakdown:")
-	protocols := []ProxyProtocol{ProtocolShadowsocks, ProtocolVMess, ProtocolVLESS}
+	protocols := []ProxyProtocol{ProtocolShadowsocks, ProtocolShadowsocksR, ProtocolVMess, ProtocolVLESS, ProtocolTrojan, ProtocolHysteria, ProtocolHysteria2, ProtocolTUIC}
 	for _, protocol := range protocols {
 		if statsValue, ok := pt.stats.Load(protocol); ok {
 			stats := statsValue.(map[string]*int64)
@@ -1715,9 +2224,14 @@ func main() {
 		protocol ProxyProtocol
 		filePath string
 	}{
-		{ProtocolVLESS, "../data/deduplicated_urls/vless.json"},
-		{ProtocolVMess, "../data/deduplicated_urls/vmess.json"},
 		{ProtocolShadowsocks, "../data/deduplicated_urls/ss.json"},
+		{ProtocolShadowsocksR, "../data/deduplicated_urls/ssr.json"},
+		{ProtocolVMess, "../data/deduplicated_urls/vmess.json"},
+		{ProtocolVLESS, "../data/deduplicated_urls/vless.json"},
+		{ProtocolTrojan, "../data/deduplicated_urls/trojan.json"},
+		{ProtocolHysteria, "../data/deduplicated_urls/hy.json"},
+		{ProtocolHysteria2, "../data/deduplicated_urls/hysteria2.json"},
+		{ProtocolTUIC, "../data/deduplicated_urls/tuic.json"},
 	}
 
 	var allResults []*TestResultData
