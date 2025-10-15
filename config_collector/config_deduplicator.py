@@ -183,6 +183,139 @@ class ConfigDeduplicator:
 
         return url
 
+    def ssr_to_url(self, config: Dict[str, Any]) -> str:
+        server = config.get("server", "")
+        port = config.get("server_port", 0)
+        protocol = config.get("protocol", "")
+        method = config.get("method", "")
+        obfs = config.get("obfs", "")
+        password = config.get("password", "")
+        name = config.get("name", "")
+
+        if not all([server, port, protocol, method, obfs, password]):
+            raise ValueError("Missing required SSR parameters")
+
+        # Encode password
+        password_b64 = base64.b64encode(password.encode()).decode().rstrip('=')
+
+        # Main part: server:port:protocol:method:obfs:password_base64
+        main_part = f"{server}:{port}:{protocol}:{method}:{obfs}:{password_b64}"
+
+        # Add query parameters
+        params = []
+        for key, value in config.items():
+            if key not in ["server", "server_port", "protocol", "method", "obfs", "password", "name"] and value:
+                encoded_value = base64.b64encode(str(value).encode()).decode().rstrip('=')
+                params.append(f"{key}={encoded_value}")
+
+        if params:
+            main_part += "/?" + "&".join(params)
+
+        # Encode the whole thing
+        encoded = base64.b64encode(main_part.encode()).decode().rstrip('=')
+        url = f"ssr://{encoded}"
+
+        if name:
+            url += "#" + urllib.parse.quote(name)
+
+        return url
+
+    def hysteria_to_url(self, config: Dict[str, Any]) -> str:
+        address = config.get("address", "")
+        port = config.get("port", 0)
+        name = config.get("name", "")
+
+        if not all([address, port]):
+            raise ValueError("Missing required Hysteria parameters")
+
+        url = f"hy://{address}:{port}"
+
+        params = {}
+        for key, value in config.items():
+            if key not in ["address", "port", "name"] and value:
+                params[key] = str(value)
+
+        if params:
+            url += "?" + urllib.parse.urlencode(params)
+
+        if name:
+            url += "#" + urllib.parse.quote(name)
+
+        return url
+
+    def hysteria2_to_url(self, config: Dict[str, Any]) -> str:
+        address = config.get("address", "")
+        port = config.get("port", 0)
+        auth = config.get("auth", "")
+        name = config.get("name", "")
+
+        if not all([address, port, auth]):
+            raise ValueError("Missing required Hysteria2 parameters")
+
+        url = f"hysteria2://{auth}@{address}:{port}/"
+
+        params = {}
+        for key, value in config.items():
+            if key not in ["address", "port", "auth", "name"] and value:
+                params[key] = str(value)
+
+        if params:
+            url += "?" + urllib.parse.urlencode(params)
+
+        if name:
+            url += "#" + urllib.parse.quote(name)
+
+        return url
+
+    def tuic_to_url(self, config: Dict[str, Any]) -> str:
+        address = config.get("address", "")
+        port = config.get("port", 0)
+        uuid = config.get("uuid", "")
+        password = config.get("password", "")
+        name = config.get("name", "")
+
+        if not all([address, port, uuid, password]):
+            raise ValueError("Missing required TUIC parameters")
+
+        url = f"tuic://{uuid}:{password}@{address}:{port}"
+
+        params = {}
+        for key, value in config.items():
+            if key not in ["address", "port", "uuid", "password", "name"] and value:
+                params[key] = str(value)
+
+        if params:
+            url += "?" + urllib.parse.urlencode(params)
+
+        if name:
+            url += "#" + urllib.parse.quote(name)
+
+        return url
+
+    def wireguard_to_url(self, config: Dict[str, Any]) -> str:
+        address = config.get("address", "")
+        port = config.get("port", 0)
+        private_key = config.get("private_key", "")
+        name = config.get("name", "")
+
+        if not all([address, port, private_key]):
+            raise ValueError("Missing required WireGuard parameters")
+
+        url = f"wireguard://{private_key}@{address}:{port}"
+
+        params = {}
+        for key, value in config.items():
+            if key not in ["address", "port", "private_key", "name"] and value:
+                params[key] = str(value)
+
+        if params:
+            url += "?" + urllib.parse.urlencode(params)
+
+        if name:
+            url += "#" + urllib.parse.quote(name)
+
+        return url
+
     def config_to_url(self, config: Dict[str, Any], protocol: str) -> str:
         if protocol == "ss":
             return self.ss_to_url(config)
@@ -192,6 +325,16 @@ class ConfigDeduplicator:
             return self.vmess_to_url(config)
         elif protocol == "trojan":
             return self.trojan_to_url(config)
+        elif protocol == "ssr":
+            return self.ssr_to_url(config)
+        elif protocol == "hy" or protocol == "hysteria":
+            return self.hysteria_to_url(config)
+        elif protocol == "hysteria2":
+            return self.hysteria2_to_url(config)
+        elif protocol == "tuic":
+            return self.tuic_to_url(config)
+        elif protocol == "wireguard":
+            return self.wireguard_to_url(config)
         else:
             raise ValueError(f"Unsupported protocol: {protocol}")
 
@@ -247,7 +390,7 @@ class ConfigDeduplicator:
                 json.dump(deduplicated_configs, f, ensure_ascii=False, indent=2)
 
     def process_all_protocols(self):
-        protocols = ["ss", "vless", "vmess", "trojan"]
+        protocols = ["ss", "vless", "vmess", "trojan", "ssr", "hy", "hysteria2", "tuic", "wireguard"]
 
         for protocol in protocols:
             self.process_protocol(protocol)
