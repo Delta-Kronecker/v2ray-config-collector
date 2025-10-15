@@ -312,6 +312,329 @@ class ConfigParser:
 
         return result
 
+    def parse_ssr_config(self, config: str) -> Dict[str, Any]:
+        """Parse ShadowsocksR configuration."""
+        if not config.startswith("ssr://"):
+            raise ValueError("Invalid SSR config format")
+
+        config = config[6:]
+        parts = config.split("#")
+        name = urllib.parse.unquote(parts[1]) if len(parts) > 1 else ""
+
+        main_part = parts[0]
+
+        # Decode base64
+        try:
+            padding = 4 - len(main_part) % 4
+            if padding != 4:
+                padded_data = main_part + "=" * padding
+            else:
+                padded_data = main_part
+
+            decoded = base64.b64decode(padded_data).decode('utf-8')
+        except Exception as e:
+            raise ValueError(f"Failed to decode SSR config: {str(e)}")
+
+        # Split by /
+        split_parts = decoded.split('/')
+        if len(split_parts) < 1:
+            raise ValueError("Invalid SSR structure")
+
+        main_data = split_parts[0]
+        query_part = split_parts[1] if len(split_parts) > 1 else ''
+
+        # Parse main part: server:port:protocol:method:obfs:password_base64
+        components = main_data.split(':')
+        if len(components) != 6:
+            raise ValueError("Invalid SSR main part structure")
+
+        server, port_str, protocol, method, obfs, password_b64 = components
+
+        try:
+            port = int(port_str)
+            if port <= 0 or port > 65535:
+                raise ValueError("Invalid port number")
+        except ValueError:
+            raise ValueError("Invalid port number")
+
+        # Decode password
+        try:
+            padding = 4 - len(password_b64) % 4
+            if padding != 4:
+                padded_pw = password_b64 + "=" * padding
+            else:
+                padded_pw = password_b64
+            password = base64.b64decode(padded_pw).decode('utf-8')
+        except:
+            password = password_b64
+
+        result = {
+            "server": server,
+            "server_port": port,
+            "protocol": protocol,
+            "method": method,
+            "obfs": obfs,
+            "password": password,
+            "name": name
+        }
+
+        # Parse query parameters
+        if query_part.startswith('?'):
+            query_part = query_part[1:]
+
+        for param in query_part.split('&'):
+            if '=' in param:
+                key, value = param.split('=', 1)
+                try:
+                    padding = 4 - len(value) % 4
+                    if padding != 4:
+                        padded_val = value + "=" * padding
+                    else:
+                        padded_val = value
+                    decoded_value = base64.b64decode(padded_val).decode('utf-8')
+                    result[key] = decoded_value
+                except:
+                    result[key] = value
+
+        return result
+
+    def parse_hysteria_config(self, config: str) -> Dict[str, Any]:
+        """Parse Hysteria/Hysteria1 configuration."""
+        if not config.startswith("hysteria://") and not config.startswith("hy://"):
+            raise ValueError("Invalid Hysteria config format")
+
+        if config.startswith("hysteria://"):
+            config = config[11:]
+        else:
+            config = config[5:]
+
+        parts = config.split("#")
+        name = urllib.parse.unquote(parts[1]) if len(parts) > 1 else ""
+
+        main_part = parts[0]
+
+        server_params = main_part.split("?")
+        server_address = server_params[0]
+
+        # Parse server:port
+        if server_address.startswith("[") and "]:" in server_address:
+            ipv6_end = server_address.find("]:")
+            address = server_address[1:ipv6_end]
+            port_str = server_address[ipv6_end+2:]
+        else:
+            server_port = server_address.rsplit(":", 1)
+            if len(server_port) != 2:
+                raise ValueError("Invalid server:port format")
+            address = server_port[0]
+            port_str = server_port[1]
+
+        try:
+            port = int(port_str)
+            if port <= 0 or port > 65535:
+                raise ValueError("Invalid port number")
+        except ValueError:
+            raise ValueError("Invalid port number")
+
+        result = {
+            "address": address,
+            "port": port,
+            "name": name
+        }
+
+        # Parse parameters
+        if len(server_params) > 1:
+            params = urllib.parse.parse_qs(server_params[1])
+            for key, value in params.items():
+                result[key] = value[0] if len(value) == 1 else value
+
+        return result
+
+    def parse_hysteria2_config(self, config: str) -> Dict[str, Any]:
+        """Parse Hysteria2 configuration."""
+        if not config.startswith("hysteria2://") and not config.startswith("hy2://"):
+            raise ValueError("Invalid Hysteria2 config format")
+
+        if config.startswith("hysteria2://"):
+            config = config[12:]
+        else:
+            config = config[6:]
+
+        parts = config.split("#")
+        name = urllib.parse.unquote(parts[1]) if len(parts) > 1 else ""
+
+        main_part = parts[0]
+
+        # Parse auth@server:port
+        if "@" not in main_part:
+            raise ValueError("Invalid Hysteria2 config structure")
+
+        auth_part, server_part = main_part.split("@", 1)
+
+        # Remove trailing /
+        if "/" in server_part:
+            server_addr, path_query = server_part.split("/", 1)
+        else:
+            server_addr = server_part
+            path_query = ""
+
+        # Parse query parameters
+        if "?" in path_query:
+            path, query_part = path_query.split("?", 1)
+        else:
+            query_part = ""
+
+        # Parse server:port
+        if server_addr.startswith("[") and "]:" in server_addr:
+            ipv6_end = server_addr.find("]:")
+            address = server_addr[1:ipv6_end]
+            port_str = server_addr[ipv6_end+2:]
+        else:
+            server_port = server_addr.rsplit(":", 1)
+            if len(server_port) != 2:
+                raise ValueError("Invalid server:port format")
+            address = server_port[0]
+            port_str = server_port[1]
+
+        try:
+            port = int(port_str)
+            if port <= 0 or port > 65535:
+                raise ValueError("Invalid port number")
+        except ValueError:
+            raise ValueError("Invalid port number")
+
+        result = {
+            "address": address,
+            "port": port,
+            "auth": auth_part,
+            "name": name
+        }
+
+        # Parse parameters
+        if query_part:
+            params = urllib.parse.parse_qs(query_part)
+            for key, value in params.items():
+                result[key] = value[0] if len(value) == 1 else value
+
+        return result
+
+    def parse_tuic_config(self, config: str) -> Dict[str, Any]:
+        """Parse TUIC configuration."""
+        if not config.startswith("tuic://"):
+            raise ValueError("Invalid TUIC config format")
+
+        config = config[7:]
+        parts = config.split("#")
+        name = urllib.parse.unquote(parts[1]) if len(parts) > 1 else ""
+
+        main_part = parts[0]
+
+        # Parse uuid:password@server:port
+        if "@" not in main_part:
+            raise ValueError("Invalid TUIC config structure")
+
+        userinfo_part, server_part = main_part.split("@", 1)
+
+        if ":" not in userinfo_part:
+            raise ValueError("Invalid TUIC userinfo")
+
+        uuid, password = userinfo_part.split(":", 1)
+
+        # Parse server and query params
+        server_params = server_part.split("?")
+        server_address = server_params[0]
+
+        # Parse server:port
+        if server_address.startswith("[") and "]:" in server_address:
+            ipv6_end = server_address.find("]:")
+            address = server_address[1:ipv6_end]
+            port_str = server_address[ipv6_end+2:]
+        else:
+            server_port = server_address.rsplit(":", 1)
+            if len(server_port) != 2:
+                raise ValueError("Invalid server:port format")
+            address = server_port[0]
+            port_str = server_port[1]
+
+        try:
+            port = int(port_str)
+            if port <= 0 or port > 65535:
+                raise ValueError("Invalid port number")
+        except ValueError:
+            raise ValueError("Invalid port number")
+
+        result = {
+            "address": address,
+            "port": port,
+            "uuid": uuid,
+            "password": password,
+            "name": name
+        }
+
+        # Parse parameters
+        if len(server_params) > 1:
+            params = urllib.parse.parse_qs(server_params[1])
+            for key, value in params.items():
+                result[key] = value[0] if len(value) == 1 else value
+
+        return result
+
+    def parse_wireguard_config(self, config: str) -> Dict[str, Any]:
+        """Parse WireGuard configuration."""
+        if not config.startswith("wireguard://"):
+            raise ValueError("Invalid WireGuard config format")
+
+        config = config[12:]
+        parts = config.split("#")
+        name = urllib.parse.unquote(parts[1]) if len(parts) > 1 else ""
+
+        main_part = parts[0]
+
+        # WireGuard format can vary, implementing basic parsing
+        # Format: wireguard://private_key@server:port?params
+
+        if "@" in main_part:
+            key_part, server_part = main_part.split("@", 1)
+        else:
+            raise ValueError("Invalid WireGuard config structure")
+
+        # Parse server and query params
+        server_params = server_part.split("?")
+        server_address = server_params[0]
+
+        # Parse server:port
+        if server_address.startswith("[") and "]:" in server_address:
+            ipv6_end = server_address.find("]:")
+            address = server_address[1:ipv6_end]
+            port_str = server_address[ipv6_end+2:]
+        else:
+            server_port = server_address.rsplit(":", 1)
+            if len(server_port) != 2:
+                raise ValueError("Invalid server:port format")
+            address = server_port[0]
+            port_str = server_port[1]
+
+        try:
+            port = int(port_str)
+            if port <= 0 or port > 65535:
+                raise ValueError("Invalid port number")
+        except ValueError:
+            raise ValueError("Invalid port number")
+
+        result = {
+            "address": address,
+            "port": port,
+            "private_key": key_part,
+            "name": name
+        }
+
+        # Parse parameters
+        if len(server_params) > 1:
+            params = urllib.parse.parse_qs(server_params[1])
+            for key, value in params.items():
+                result[key] = value[0] if len(value) == 1 else value
+
+        return result
+
     def parse_config_line(self, line: str, protocol: str) -> Dict[str, Any]:
         line = line.strip()
         if not line:
@@ -325,6 +648,16 @@ class ConfigParser:
             return self.parse_vmess_config(line)
         elif protocol == "trojan":
             return self.parse_trojan_config(line)
+        elif protocol == "ssr":
+            return self.parse_ssr_config(line)
+        elif protocol == "hy" or protocol == "hysteria":
+            return self.parse_hysteria_config(line)
+        elif protocol == "hysteria2":
+            return self.parse_hysteria2_config(line)
+        elif protocol == "tuic":
+            return self.parse_tuic_config(line)
+        elif protocol == "wireguard":
+            return self.parse_wireguard_config(line)
         else:
             raise ValueError(f"Unsupported protocol: {protocol}")
 
@@ -371,7 +704,7 @@ class ConfigParser:
 
     def process_all_files(self):
 
-        files = ["ss.txt", "vless.txt", "vmess.txt", "trojan.txt"]
+        files = ["ss.txt", "vless.txt", "vmess.txt", "trojan.txt", "ssr.txt", "hy.txt", "hysteria2.txt", "tuic.txt", "wireguard.txt"]
 
         for filename in files:
             filepath = os.path.join(self.input_dir, filename)
