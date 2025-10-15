@@ -71,9 +71,9 @@ type Config struct {
 }
 
 func NewDefaultConfig() *Config {
-	dataDir := getEnvOrDefault("PROXY_DATA_DIR", "./data")
-	configDir := getEnvOrDefault("PROXY_CONFIG_DIR", "./config")
-	logDir := getEnvOrDefault("PROXY_LOG_DIR", "./log")
+	dataDir := getEnvOrDefault("PROXY_DATA_DIR", "../data")
+	configDir := getEnvOrDefault("PROXY_CONFIG_DIR", "../config")
+	logDir := getEnvOrDefault("PROXY_LOG_DIR", "../log")
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
@@ -2224,14 +2224,14 @@ func main() {
 		protocol ProxyProtocol
 		filePath string
 	}{
-		{ProtocolShadowsocks, "../data/deduplicated_urls/ss.json"},
-		{ProtocolShadowsocksR, "../data/deduplicated_urls/ssr.json"},
-		{ProtocolVMess, "../data/deduplicated_urls/vmess.json"},
-		{ProtocolVLESS, "../data/deduplicated_urls/vless.json"},
-		{ProtocolTrojan, "../data/deduplicated_urls/trojan.json"},
-		{ProtocolHysteria, "../data/deduplicated_urls/hy.json"},
-		{ProtocolHysteria2, "../data/deduplicated_urls/hysteria2.json"},
-		{ProtocolTUIC, "../data/deduplicated_urls/tuic.json"},
+		{ProtocolShadowsocks, filepath.Join(config.DataDir, "deduplicated_urls", "ss.json")},
+		{ProtocolShadowsocksR, filepath.Join(config.DataDir, "deduplicated_urls", "ssr.json")},
+		{ProtocolVMess, filepath.Join(config.DataDir, "deduplicated_urls", "vmess.json")},
+		{ProtocolVLESS, filepath.Join(config.DataDir, "deduplicated_urls", "vless.json")},
+		{ProtocolTrojan, filepath.Join(config.DataDir, "deduplicated_urls", "trojan.json")},
+		{ProtocolHysteria, filepath.Join(config.DataDir, "deduplicated_urls", "hy.json")},
+		{ProtocolHysteria2, filepath.Join(config.DataDir, "deduplicated_urls", "hysteria2.json")},
+		{ProtocolTUIC, filepath.Join(config.DataDir, "deduplicated_urls", "tuic.json")},
 	}
 
 	var allResults []*TestResultData
