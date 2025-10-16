@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"crypto/md5"
 	"encoding/base64"
@@ -214,28 +215,34 @@ func (pm *PortManager) isPortAvailable(port int) bool {
 	return false
 }
 
+// GetAvailablePort returns (port, true) on success, (0, false) if no port available.
 func (pm *PortManager) GetAvailablePort() (int, bool) {
 	select {
 	case port := <-pm.availablePorts:
 		pm.usedPorts.Store(port, time.Now())
 		return port, true
 	case <-time.After(100 * time.Millisecond):
-		return pm.findEmergencyPort(), true
+		if port, ok := pm.findEmergencyPort(); ok {
+			return port, true
+		}
+		return 0, false
 	}
 }
 
-func (pm *PortManager) findEmergencyPort() int {
+// findEmergencyPort tries to find a random available port in the range.
+// returns (port, true) if found, (0, false) otherwise
+func (pm *PortManager) findEmergencyPort() (int, bool) {
 	pm.mu.Lock()
 	defer pm.mu.Unlock()
 
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 200; i++ {
 		port := rand.Intn(pm.endPort-pm.startPort+1) + pm.startPort
 		if _, used := pm.usedPorts.Load(port); !used && pm.isPortAvailable(port) {
 			pm.usedPorts.Store(port, time.Now())
-			return port
+			return port, true
 		}
 	}
-	return 0
+	return 0, false
 }
 
 func (pm *PortManager) ReleasePort(port int) {
@@ -282,6 +289,14 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float64) {
 	startTime := time.Now()
 
+	// Wait and poll for the proxy port to be responsive (up to timeout)
+	waitDeadline := time.Now().Add(nt.timeout)
+	for time.Now().Before(waitDeadline) {
+		if nt.isProxyResponsive(proxyPort) {
+			break
+		}
+		time.Sleep(100 * time.Millisecond)
+	}
 	if !nt.isProxyResponsive(proxyPort) {
 		return false, "", time.Since(startTime).Seconds()
 	}
@@ -600,18 +615,37 @@ func (pm *ProcessManager) UnregisterProcess(pid int) {
 	pm.processes.Delete(pid)
 }
 
+func (pm *ProcessManager) HasProcess(pid int) bool {
+	_, ok := pm.processes.Load(pid)
+	return ok
+}
+
 func (pm *ProcessManager) KillProcess(pid int) error {
-	if value, ok := pm.processes.Load(pid); ok {
-		if cmd, ok := value.(*exec.Cmd); ok {
-			if cmd.Process != nil {
-				// Force kill immediately
-				cmd.Process.Kill()
-				pm.UnregisterProcess(pid)
-				return nil
-			}
-		}
+	value, ok := pm.processes.Load(pid)
+	if !ok {
+		return fmt.Errorf("process not found")
 	}
-	return fmt.Errorf("process not found")
+	cmd, ok := value.(*exec.Cmd)
+	if !ok || cmd == nil || cmd.Process == nil {
+		pm.processes.Delete(pid)
+		return fmt.Errorf("invalid process")
+	}
+
+	// Try to kill the process; spawn Wait() in a goroutine to reap it.
+	if err := cmd.Process.Kill(); err != nil {
+		// If kill fails, still remove registration to avoid blocking cleanup
+		pm.processes.Delete(pid)
+		return fmt.Errorf("failed to kill process %d: %w", pid, err)
+	}
+
+	// Unregister now and call Wait in background to reap
+	pm.processes.Delete(pid)
+	go func(c *exec.Cmd) {
+		// Ensure we call Wait but don't block indefinitely
+		c.Wait()
+	}(cmd)
+
+	return nil
 }
 
 func (pm *ProcessManager) Cleanup() {
@@ -631,8 +665,8 @@ func (pm *ProcessManager) Cleanup() {
 		pm.KillProcess(pid)
 	}
 
-	// Wait for processes to terminate
-	time.Sleep(100 * time.Millisecond)
+	// Give processes a moment to terminate and be reaped
+	time.Sleep(200 * time.Millisecond)
 }
 
 func (pm *ProcessManager) GetProcessCount() int {
@@ -818,39 +852,69 @@ func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtoc
 	}
 	defer file.Close()
 
-	var configs []ProxyConfig
 	seenHashes := make(map[string]bool)
 
 	log.Printf("Loading %s configurations from: %s", protocol, filePath)
 
 	switch protocol {
 	case ProtocolShadowsocks:
-		configs, err = pt.loadShadowsocksConfigs(file, seenHashes)
+		return pt.loadShadowsocksConfigsFromReader(file, seenHashes)
 	case ProtocolShadowsocksR:
-		configs, err = pt.loadShadowsocksRConfigs(file, seenHashes)
+		return pt.loadShadowsocksRConfigs(file, seenHashes)
 	case ProtocolVMess:
-		configs, err = pt.loadVMessConfigs(file, seenHashes)
+		return pt.loadVMessConfigsFromReader(file, seenHashes)
 	case ProtocolVLESS:
-		configs, err = pt.loadVLessConfigs(file, seenHashes)
+		return pt.loadVLessConfigs(file, seenHashes)
 	case ProtocolTrojan:
-		configs, err = pt.loadTrojanConfigs(file, seenHashes)
+		return pt.loadTrojanConfigs(file, seenHashes)
 	case ProtocolHysteria:
-		configs, err = pt.loadHysteriaConfigs(file, seenHashes)
+		return pt.loadHysteriaConfigs(file, seenHashes)
 	case ProtocolHysteria2:
-		configs, err = pt.loadHysteria2Configs(file, seenHashes)
+		return pt.loadHysteria2Configs(file, seenHashes)
 	case ProtocolTUIC:
-		configs, err = pt.loadTUICConfigs(file, seenHashes)
+		return pt.loadTUICConfigs(file, seenHashes)
 	}
 
+	return nil, fmt.Errorf("unsupported protocol: %s", protocol)
+}
+
+// Helper: tries to decode as a JSON array first, then falls back to line-delimited JSON objects.
+func decodeJSONList[T any](r io.Reader) ([]T, error) {
+	// Read all bytes - small files expected for configs
+	data, err := io.ReadAll(r)
 	if err != nil {
 		return nil, err
 	}
+	var arr []T
+	if len(data) == 0 {
+		return arr, nil
+	}
+	if err := json.Unmarshal(data, &arr); err == nil {
+		return arr, nil
+	}
 
-	log.Printf("Loaded %d unique %s configurations", len(configs), protocol)
-	return configs, nil
+	// Fallback: try line-delimited JSON
+	scanner := bufio.NewScanner(strings.NewReader(string(data)))
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		var item T
+		if err := json.Unmarshal([]byte(line), &item); err == nil {
+			arr = append(arr, item)
+		} else {
+			// ignore unparsable lines gracefully
+			continue
+		}
+	}
+	if err := scanner.Err(); err != nil {
+		return arr, err
+	}
+	return arr, nil
 }
 
-func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadShadowsocksConfigsFromReader(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type SSConfig struct {
 		Server     string `json:"server"`
 		ServerPort int    `json:"server_port"`
@@ -860,8 +924,9 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 	}
 
 	var data []SSConfig
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&data); err != nil {
+	if arr, err := decodeJSONList[SSConfig](file); err == nil {
+		data = arr
+	} else {
 		return nil, err
 	}
 
@@ -889,7 +954,7 @@ func (pt *ProxyTester) loadShadowsocksConfigs(file *os.File, seenHashes map[stri
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadVMessConfigsFromReader(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type VMConfig struct {
 		Address  string `json:"address"`
 		Port     int    `json:"port"`
@@ -906,8 +971,9 @@ func (pt *ProxyTester) loadVMessConfigs(file *os.File, seenHashes map[string]boo
 	}
 
 	var data []VMConfig
-	decoder := json.NewDecoder(file)
-	if err := decoder.Decode(&data); err != nil {
+	if arr, err := decodeJSONList[VMConfig](file); err == nil {
+		data = arr
+	} else {
 		return nil, err
 	}
 
@@ -964,7 +1030,16 @@ func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]boo
 	var data []VLConfig
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&data); err != nil {
-		return nil, err
+		// fallback: try line-delimited
+		if _, err2 := file.Seek(0, io.SeekStart); err2 == nil {
+			if arr, err3 := decodeJSONList[VLConfig](file); err3 == nil {
+				data = arr
+			} else {
+				return nil, err
+			}
+		} else {
+			return nil, err
+		}
 	}
 
 	var configs []ProxyConfig
@@ -1011,7 +1086,16 @@ func (pt *ProxyTester) loadShadowsocksRConfigs(file *os.File, seenHashes map[str
 	var data []SSRConfig
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&data); err != nil {
-		return nil, err
+		// fallback
+		if _, err2 := file.Seek(0, io.SeekStart); err2 == nil {
+			if arr, err3 := decodeJSONList[SSRConfig](file); err3 == nil {
+				data = arr
+			} else {
+				return nil, err
+			}
+		} else {
+			return nil, err
+		}
 	}
 
 	var configs []ProxyConfig
@@ -1058,7 +1142,16 @@ func (pt *ProxyTester) loadTrojanConfigs(file *os.File, seenHashes map[string]bo
 	var data []TrojanConfig
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&data); err != nil {
-		return nil, err
+		// fallback
+		if _, err2 := file.Seek(0, io.SeekStart); err2 == nil {
+			if arr, err3 := decodeJSONList[TrojanConfig](file); err3 == nil {
+				data = arr
+			} else {
+				return nil, err
+			}
+		} else {
+			return nil, err
+		}
 	}
 
 	var configs []ProxyConfig
@@ -1112,7 +1205,16 @@ func (pt *ProxyTester) loadHysteriaConfigs(file *os.File, seenHashes map[string]
 	var data []HysteriaConfig
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&data); err != nil {
-		return nil, err
+		// fallback
+		if _, err2 := file.Seek(0, io.SeekStart); err2 == nil {
+			if arr, err3 := decodeJSONList[HysteriaConfig](file); err3 == nil {
+				data = arr
+			} else {
+				return nil, err
+			}
+		} else {
+			return nil, err
+		}
 	}
 
 	var configs []ProxyConfig
@@ -1182,7 +1284,16 @@ func (pt *ProxyTester) loadHysteria2Configs(file *os.File, seenHashes map[string
 	var data []Hysteria2Config
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&data); err != nil {
-		return nil, err
+		// fallback
+		if _, err2 := file.Seek(0, io.SeekStart); err2 == nil {
+			if arr, err3 := decodeJSONList[Hysteria2Config](file); err3 == nil {
+				data = arr
+			} else {
+				return nil, err
+			}
+		} else {
+			return nil, err
+		}
 	}
 
 	var configs []ProxyConfig
@@ -1232,7 +1343,16 @@ func (pt *ProxyTester) loadTUICConfigs(file *os.File, seenHashes map[string]bool
 	var data []TUICConfig
 	decoder := json.NewDecoder(file)
 	if err := decoder.Decode(&data); err != nil {
-		return nil, err
+		// fallback
+		if _, err2 := file.Seek(0, io.SeekStart); err2 == nil {
+			if arr, err3 := decodeJSONList[TUICConfig](file); err3 == nil {
+				data = arr
+			} else {
+				return nil, err
+			}
+		} else {
+			return nil, err
+		}
 	}
 
 	var configs []ProxyConfig
@@ -1339,8 +1459,7 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	defer func() {
 		result.TestTime = time.Since(startTime).Seconds()
 
-		// Don't kill process here - let cleanup handle it
-		// Just clean up temp files and release port
+		// Clean up temp files and release port
 		if configFile != "" {
 			os.Remove(configFile)
 		}
@@ -1384,13 +1503,24 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		return result
 	}
 
-	pt.processManager.RegisterProcess(process.Process.Pid, process)
+	// Register and ensure we try to stop the process after testing to avoid accumulation
+	if process.Process != nil {
+		pt.processManager.RegisterProcess(process.Process.Pid, process)
+	}
 
-	time.Sleep(time.Second)
+	// Wait for the local socks inbound to be responsive with a short timeout
+	readyBy := time.Now().Add(3 * time.Second)
+	for !pt.networkTester.isProxyResponsive(proxyPort) && time.Now().Before(readyBy) {
+		time.Sleep(100 * time.Millisecond)
+	}
 
 	if process.ProcessState != nil && process.ProcessState.Exited() {
 		result.Result = ResultConnectionError
 		result.ErrorMessage = "Xray process terminated"
+		// Ensure process cleaned up
+		if process.Process != nil {
+			pt.processManager.KillProcess(process.Process.Pid)
+		}
 		return result
 	}
 
@@ -1408,6 +1538,16 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 	} else {
 		result.Result = ResultNetworkError
 		result.ErrorMessage = "Network test failed"
+	}
+
+	// Ensure we stop this xray process after testing to free resources promptly
+	if process != nil && process.Process != nil {
+		_ = pt.processManager.KillProcess(process.Process.Pid)
+		// wait briefly for process to be reaped (bounded)
+		waitDeadline := time.Now().Add(2 * time.Second)
+		for pt.processManager.HasProcess(process.Process.Pid) && time.Now().Before(waitDeadline) {
+			time.Sleep(50 * time.Millisecond)
+		}
 	}
 
 	return result
@@ -1434,10 +1574,12 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
+	// Run xray's syntax test; capture combined output for better diagnostics
 	cmd := exec.CommandContext(ctx, pt.configGenerator.xrayPath, "run", "-test", "-config", configFile)
 	output, err := cmd.CombinedOutput()
 	if err != nil {
-		return fmt.Errorf("syntax test failed: %s", string(output))
+		// include output for debugging
+		return fmt.Errorf("syntax test failed: %s", strings.TrimSpace(string(output)))
 	}
 
 	return nil
@@ -1446,8 +1588,16 @@ func (pt *ProxyTester) testConfigSyntax(configFile string) error {
 func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd := exec.Command(pt.configGenerator.xrayPath, "run", "-config", configFile)
 
-	cmd.Stdout = nil
-	cmd.Stderr = nil
+	// Avoid writing logs to parent stdout/stderr.
+	cmd.Stdout = io.Discard
+	cmd.Stderr = io.Discard
+
+	// On Unix, set new process group so group-kill is possible if needed.
+	if runtime.GOOS != "windows" {
+		cmd.SysProcAttr = &syscall.SysProcAttr{
+			Setpgid: true,
+		}
+	}
 
 	if err := cmd.Start(); err != nil {
 		return nil, err
@@ -2066,7 +2216,7 @@ func (pt *ProxyTester) cleanupBetweenBatches() {
 		portsAfter++
 		return true
 	})
-	log.Printf("   Used ports released: %d", portsBefore - portsAfter)
+	log.Printf("   Used ports released: %d", portsBefore-portsAfter)
 	log.Printf("   Used ports remaining: %d", portsAfter)
 
 	// Force garbage collection to free memory
@@ -2204,6 +2354,11 @@ func setupDirectories(config *Config) error {
 	}
 
 	return nil
+}
+
+func init() {
+	// Seed RNG for port emergency selection and shuffling
+	rand.Seed(time.Now().UnixNano())
 }
 
 func main() {
