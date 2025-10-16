@@ -335,7 +335,7 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
+	if resp.StatusCode != 204 {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
