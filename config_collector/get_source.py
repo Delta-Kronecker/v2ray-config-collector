@@ -11,7 +11,7 @@ with open(links, "r", encoding="utf-8") as file:
     except Exception as e:
         print(f"{e} \n")
 
-@retry(stop=stop_after_attempt(2), wait=wait_fixed(2))
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
 
 def get(url,session, i):
     try:
@@ -28,7 +28,7 @@ session = requests.Session()
 
 def get_source():
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=1) as executor:
         try:
             for i, url in enumerate(links, start=1):
                 if url != "":
