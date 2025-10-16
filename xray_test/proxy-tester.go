@@ -266,7 +266,14 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 	return &NetworkTester{
 		timeout: timeout,
 		testURLs: []string{
-			"http://connectivitycheck.gstatic.com/generate_204",
+			"http://httpbin.org/ip",
+			"http://icanhazip.com",
+			"http://ifconfig.me/ip",
+			"http://api.ipify.org",
+			"http://ipinfo.io/ip",
+			"http://checkip.amazonaws.com",
+			"https://httpbin.org/ip",
+			"https://icanhazip.com",
 		},
 		client: &http.Client{Timeout: timeout},
 	}
@@ -335,7 +342,7 @@ func (nt *NetworkTester) singleTest(proxyPort int, testURL string) (bool, string
 	}
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 204 {
+	if resp.StatusCode != 200 {
 		return false, "", time.Since(startTime).Seconds()
 	}
 
