@@ -4,6 +4,7 @@
  
 
  ### (automatic update every 6 hour)
+ - **All**: 
    [working_all_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_all_urls.txt)
   - **Shadowsocks**: 
    [working_shadowsocks_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_shadowsocks_urls.txt)
