@@ -3,12 +3,9 @@
  A comprehensive tool for collecting, processing, and testing proxy configurations for Xray. This project automates the discovery and validation of working proxy servers, making it easier to find reliable proxies for bypassing internet restrictions.
  
 
- ### All Protocols Combined (automatic update every 6 hour)
- - **All Working URLs**: 
+ ### (automatic update every 6 hour)
    [working_all_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_all_urls.txt)
- 
- ### Protocol-Specific Files (update every 12 hour)
- - **Shadowsocks**: 
+  - **Shadowsocks**: 
    [working_shadowsocks_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_shadowsocks_urls.txt)
  - **VMess**: 
    [working_vmess_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_vmess_urls.txt)
