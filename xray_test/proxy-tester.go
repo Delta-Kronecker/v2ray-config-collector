@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"context"
+	"crypto/md5"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
@@ -57,11 +58,6 @@ const (
 	ProtocolTUIC          ProxyProtocol = "tuic"
 )
 
-var AllProtocols = []ProxyProtocol{
-	ProtocolShadowsocks, ProtocolShadowsocksR, ProtocolVMess, ProtocolVLESS,
-	ProtocolTrojan, ProtocolHysteria, ProtocolHysteria2, ProtocolTUIC,
-}
-
 type Config struct {
 	XrayPath        string
 	MaxWorkers      int
@@ -82,9 +78,9 @@ func NewDefaultConfig() *Config {
 
 	return &Config{
 		XrayPath:        getEnvOrDefault("XRAY_PATH", ""),
-		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 300),
-		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 10)) * time.Second,
-		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 300),
+		MaxWorkers:      getEnvIntOrDefault("PROXY_MAX_WORKERS", 200),
+		Timeout:         time.Duration(getEnvIntOrDefault("PROXY_TIMEOUT", 5)) * time.Second,
+		BatchSize:       getEnvIntOrDefault("PROXY_BATCH_SIZE", 400),
 		IncrementalSave: getEnvBoolOrDefault("PROXY_INCREMENTAL_SAVE", true),
 		DataDir:         dataDir,
 		ConfigDir:       configDir,
@@ -124,7 +120,6 @@ type ProxyConfig struct {
 	Server   string        `json:"server"`
 	Port     int           `json:"port"`
 	Remarks  string        `json:"remarks"`
-	Source   string        `json:"source,omitempty"`
 
 	Method   string `json:"method,omitempty"`
 	Password string `json:"password,omitempty"`
@@ -306,7 +301,7 @@ func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float
 		return false, "", time.Since(startTime).Seconds()
 	}
 
-	testCount := 8
+	testCount := 4
 	if len(nt.testURLs) < testCount {
 		testCount = len(nt.testURLs)
 	}
@@ -715,12 +710,6 @@ func (pm *ProcessManager) ForceCleanupAll() int {
 	return len(cmdsToKill)
 }
 
-type SourceStats struct {
-	TotalConfigs   int64
-	SuccessConfigs int64
-	FailedConfigs  int64
-}
-
 type ProxyTester struct {
 	config            *Config
 	portManager       *PortManager
@@ -734,10 +723,7 @@ type ProxyTester struct {
 	generalURLFile    *os.File
 
 	stats             sync.Map
-	sourceStats       sync.Map  // map[string]*SourceStats - stats per subscription source
 	resultsMu         sync.Mutex
-	configCounter     int
-	counterMu         sync.Mutex
 }
 
 func NewProxyTester(config *Config) (*ProxyTester, error) {
@@ -807,12 +793,17 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 		ProtocolTUIC:         "tuic",
 	}
 
+	timestamp := time.Now().Format("2006-01-02 15:04:05")
+
 	for protocol, name := range protocols {
 		jsonFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_json", fmt.Sprintf("working_%s.txt", name)))
 		if err != nil {
 			return err
 		}
 
+		jsonFile.WriteString(fmt.Sprintf("# Working %s Configurations (JSON Format)\n", strings.ToUpper(name)))
+		jsonFile.WriteString(fmt.Sprintf("# Generated at: %s\n", timestamp))
+		jsonFile.WriteString("# Format: Each line contains one working configuration in JSON\n\n")
 		pt.outputFiles[protocol] = jsonFile
 
 		urlFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", fmt.Sprintf("working_%s_urls.txt", name)))
@@ -820,130 +811,34 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 			return err
 		}
 
+		urlFile.WriteString(fmt.Sprintf("# Working %s Configurations (URL Format)\n", strings.ToUpper(name)))
+		urlFile.WriteString(fmt.Sprintf("# Generated at: %s\n", timestamp))
+		urlFile.WriteString("# Format: Each line contains one working configuration as URL\n\n")
 		pt.urlFiles[protocol] = urlFile
 	}
 
-	generalJSONFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_json", "all.txt"))
+	generalJSONFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_json", "working_all_configs.txt"))
 	if err != nil {
 		return err
 	}
+	generalJSONFile.WriteString("# All Working Configurations (JSON Format)\n")
+	generalJSONFile.WriteString(fmt.Sprintf("# Generated at: %s\n", timestamp))
+	generalJSONFile.WriteString("# Format: Each line contains one working configuration in JSON\n")
+	generalJSONFile.WriteString("# Protocols: Shadowsocks, ShadowsocksR, VMess, VLESS, Trojan, Hysteria, Hysteria2, TUIC\n\n")
 	pt.generalJSONFile = generalJSONFile
 
-	generalURLFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", "all.txt"))
+	generalURLFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", "working_all_urls.txt"))
 	if err != nil {
 		return err
 	}
+	generalURLFile.WriteString("# All Working Configurations (URL Format)\n")
+	generalURLFile.WriteString(fmt.Sprintf("# Generated at: %s\n", timestamp))
+	generalURLFile.WriteString("# Format: Each line contains one working configuration as URL\n")
+	generalURLFile.WriteString("# Protocols: Shadowsocks, ShadowsocksR, VMess, VLESS, Trojan, Hysteria, Hysteria2, TUIC\n\n")
 	pt.generalURLFile = generalURLFile
 
 	log.Println("Incremental save files initialized")
 	return nil
-}
-
-// LoadConfigFromCollectorJSON loads a single config file created by ConfigCollector
-func (pt *ProxyTester) LoadConfigFromCollectorJSON(filePath string) (*ProxyConfig, error) {
-	file, err := os.Open(filePath)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-
-	var rawConfig map[string]interface{}
-	if err := json.NewDecoder(file).Decode(&rawConfig); err != nil {
-		return nil, err
-	}
-
-	configType, ok := rawConfig["type"].(string)
-	if !ok {
-		return nil, fmt.Errorf("missing or invalid 'type' field")
-	}
-
-	config := ProxyConfig{
-		Remarks: getString(rawConfig, "name"),
-		Server:  getString(rawConfig, "server"),
-		Port:    getInt(rawConfig, "port"),
-		Source:  getString(rawConfig, "source"),
-	}
-
-	switch configType {
-	case "vmess":
-		config.Protocol = ProtocolVMess
-		config.UUID = getString(rawConfig, "uuid")
-		config.AlterID = getInt(rawConfig, "alterId")
-		config.Cipher = getString(rawConfig, "cipher")
-		config.Network = getStringOrDefault(rawConfig, "network", "tcp")
-		config.TLS = getString(rawConfig, "tls")
-		config.SNI = getString(rawConfig, "sni")
-		config.Host = getString(rawConfig, "host")
-		config.Path = getString(rawConfig, "path")
-
-	case "vless":
-		config.Protocol = ProtocolVLESS
-		config.UUID = getString(rawConfig, "password")
-		config.Flow = getString(rawConfig, "flow")
-		config.Network = getStringOrDefault(rawConfig, "network", "tcp")
-		config.TLS = getString(rawConfig, "security")
-		config.SNI = getString(rawConfig, "sni")
-		config.Host = getString(rawConfig, "host")
-		config.Path = getString(rawConfig, "path")
-		config.Encrypt = "none"
-
-	case "trojan":
-		config.Protocol = ProtocolTrojan
-		config.Password = getString(rawConfig, "password")
-		config.Network = getStringOrDefault(rawConfig, "network", "tcp")
-		config.TLS = getStringOrDefault(rawConfig, "security", "tls")
-		config.SNI = getString(rawConfig, "sni")
-		config.Host = getString(rawConfig, "host")
-		config.Path = getString(rawConfig, "path")
-
-	case "shadowsocks", "ss":
-		config.Protocol = ProtocolShadowsocks
-		config.Method = getString(rawConfig, "method")
-		config.Password = getString(rawConfig, "password")
-		config.Network = "tcp"
-
-	default:
-		return nil, fmt.Errorf("unsupported protocol: %s", configType)
-	}
-
-	if !pt.isValidConfig(&config) {
-		return nil, fmt.Errorf("invalid config")
-	}
-
-	return &config, nil
-}
-
-// Helper functions for JSON parsing
-func getString(data map[string]interface{}, key string) string {
-	if val, ok := data[key]; ok {
-		if str, ok := val.(string); ok {
-			return str
-		}
-	}
-	return ""
-}
-
-func getStringOrDefault(data map[string]interface{}, key, defaultValue string) string {
-	if str := getString(data, key); str != "" {
-		return str
-	}
-	return defaultValue
-}
-
-func getInt(data map[string]interface{}, key string) int {
-	if val, ok := data[key]; ok {
-		switch v := val.(type) {
-		case float64:
-			return int(v)
-		case int:
-			return v
-		case string:
-			if intVal, err := strconv.Atoi(v); err == nil {
-				return intVal
-			}
-		}
-	}
-	return 0
 }
 
 func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtocol) ([]ProxyConfig, error) {
@@ -957,25 +852,27 @@ func (pt *ProxyTester) LoadConfigsFromJSON(filePath string, protocol ProxyProtoc
 	}
 	defer file.Close()
 
+	seenHashes := make(map[string]bool)
+
 	log.Printf("Loading %s configurations from: %s", protocol, filePath)
 
 	switch protocol {
 	case ProtocolShadowsocks:
-		return pt.loadShadowsocksConfigsFromReader(file)
+		return pt.loadShadowsocksConfigsFromReader(file, seenHashes)
 	case ProtocolShadowsocksR:
-		return pt.loadShadowsocksRConfigs(file)
+		return pt.loadShadowsocksRConfigs(file, seenHashes)
 	case ProtocolVMess:
-		return pt.loadVMessConfigsFromReader(file)
+		return pt.loadVMessConfigsFromReader(file, seenHashes)
 	case ProtocolVLESS:
-		return pt.loadVLessConfigs(file)
+		return pt.loadVLessConfigs(file, seenHashes)
 	case ProtocolTrojan:
-		return pt.loadTrojanConfigs(file)
+		return pt.loadTrojanConfigs(file, seenHashes)
 	case ProtocolHysteria:
-		return pt.loadHysteriaConfigs(file)
+		return pt.loadHysteriaConfigs(file, seenHashes)
 	case ProtocolHysteria2:
-		return pt.loadHysteria2Configs(file)
+		return pt.loadHysteria2Configs(file, seenHashes)
 	case ProtocolTUIC:
-		return pt.loadTUICConfigs(file)
+		return pt.loadTUICConfigs(file, seenHashes)
 	}
 
 	return nil, fmt.Errorf("unsupported protocol: %s", protocol)
@@ -1017,7 +914,7 @@ func decodeJSONList[T any](r io.Reader) ([]T, error) {
 	return arr, nil
 }
 
-func (pt *ProxyTester) loadShadowsocksConfigsFromReader(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadShadowsocksConfigsFromReader(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type SSConfig struct {
 		Server     string `json:"server"`
 		ServerPort int    `json:"server_port"`
@@ -1046,14 +943,18 @@ func (pt *ProxyTester) loadShadowsocksConfigsFromReader(file *os.File) ([]ProxyC
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadVMessConfigsFromReader(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadVMessConfigsFromReader(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type VMConfig struct {
 		Address  string `json:"address"`
 		Port     int    `json:"port"`
@@ -1102,14 +1003,18 @@ func (pt *ProxyTester) loadVMessConfigsFromReader(file *os.File) ([]ProxyConfig,
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadVLessConfigs(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadVLessConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type VLConfig struct {
 		Address string `json:"address"`
 		Port    int    `json:"port"`
@@ -1154,14 +1059,18 @@ func (pt *ProxyTester) loadVLessConfigs(file *os.File) ([]ProxyConfig, error) {
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadShadowsocksRConfigs(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadShadowsocksRConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type SSRConfig struct {
 		Server        string `json:"server"`
 		ServerPort    int    `json:"server_port"`
@@ -1205,14 +1114,18 @@ func (pt *ProxyTester) loadShadowsocksRConfigs(file *os.File) ([]ProxyConfig, er
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadTrojanConfigs(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadTrojanConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type TrojanConfig struct {
 		Address     string `json:"address"`
 		Port        int    `json:"port"`
@@ -1263,14 +1176,18 @@ func (pt *ProxyTester) loadTrojanConfigs(file *os.File) ([]ProxyConfig, error) {
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadHysteriaConfigs(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadHysteriaConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type HysteriaConfig struct {
 		Address  string `json:"address"`
 		Port     int    `json:"port"`
@@ -1342,14 +1259,18 @@ func (pt *ProxyTester) loadHysteriaConfigs(file *os.File) ([]ProxyConfig, error)
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadHysteria2Configs(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadHysteria2Configs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type Hysteria2Config struct {
 		Address  string `json:"address"`
 		Port     int    `json:"port"`
@@ -1395,14 +1316,18 @@ func (pt *ProxyTester) loadHysteria2Configs(file *os.File) ([]ProxyConfig, error
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
 	return configs, nil
 }
 
-func (pt *ProxyTester) loadTUICConfigs(file *os.File) ([]ProxyConfig, error) {
+func (pt *ProxyTester) loadTUICConfigs(file *os.File, seenHashes map[string]bool) ([]ProxyConfig, error) {
 	type TUICConfig struct {
 		Address          string `json:"address"`
 		Port             int    `json:"port"`
@@ -1452,7 +1377,11 @@ func (pt *ProxyTester) loadTUICConfigs(file *os.File) ([]ProxyConfig, error) {
 		}
 
 		if pt.isValidConfig(&config) {
-			configs = append(configs, config)
+			hash := pt.getConfigHash(&config)
+			if !seenHashes[hash] {
+				seenHashes[hash] = true
+				configs = append(configs, config)
+			}
 		}
 	}
 
@@ -1491,7 +1420,30 @@ func (pt *ProxyTester) isValidConfig(config *ProxyConfig) bool {
 	return false
 }
 
+func (pt *ProxyTester) getConfigHash(config *ProxyConfig) string {
+	var hashStr string
+	switch config.Protocol {
+	case ProtocolShadowsocks:
+		hashStr = fmt.Sprintf("ss://%s:%d:%s:%s", config.Server, config.Port, config.Method, config.Password)
+	case ProtocolShadowsocksR:
+		hashStr = fmt.Sprintf("ssr://%s:%d:%s:%s:%s:%s", config.Server, config.Port, config.Method, config.Password, config.Protocol_Param, config.Obfs)
+	case ProtocolVMess:
+		hashStr = fmt.Sprintf("vmess://%s:%d:%s:%d:%s", config.Server, config.Port, config.UUID, config.AlterID, config.Network)
+	case ProtocolVLESS:
+		hashStr = fmt.Sprintf("vless://%s:%d:%s:%s", config.Server, config.Port, config.UUID, config.Network)
+	case ProtocolTrojan:
+		hashStr = fmt.Sprintf("trojan://%s:%d:%s:%s", config.Server, config.Port, config.Password, config.Network)
+	case ProtocolHysteria:
+		hashStr = fmt.Sprintf("hysteria://%s:%d:%s", config.Server, config.Port, config.AuthStr)
+	case ProtocolHysteria2:
+		hashStr = fmt.Sprintf("hysteria2://%s:%d:%s", config.Server, config.Port, config.Password)
+	case ProtocolTUIC:
+		hashStr = fmt.Sprintf("tuic://%s:%d:%s:%s", config.Server, config.Port, config.UUID, config.Password)
+	}
 
+	hash := md5.Sum([]byte(hashStr))
+	return fmt.Sprintf("%x", hash)
+}
 
 func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestResultData {
 	startTime := time.Now()
@@ -1660,38 +1612,37 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 	}
 
 	protocol := result.Config.Protocol
-
-	// Increment counter once for this config
-	pt.counterMu.Lock()
-	pt.configCounter++
-	counter := pt.configCounter
-	pt.counterMu.Unlock()
+	timestamp := time.Now().Format("2006-01-02 15:04:05")
 
 	if file, ok := pt.outputFiles[protocol]; ok {
 		configLine := pt.createWorkingConfigLine(result)
-		fmt.Fprintf(file, "%s\n", configLine)
+		fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
+			timestamp, *result.ResponseTime, result.ExternalIP)
+		fmt.Fprintf(file, "%s\n\n", configLine)
 		file.Sync()
 	}
 
 	if file, ok := pt.urlFiles[protocol]; ok {
 		configURL := pt.createConfigURL(result)
-		// Add fire emoji name to protocol-specific files too
-		configURL = pt.addConfigName(configURL, fmt.Sprintf("🔥%d🔥", counter))
-		fmt.Fprintf(file, "%s\n", configURL)
+		fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
+			timestamp, *result.ResponseTime, result.ExternalIP)
+		fmt.Fprintf(file, "%s\n\n", configURL)
 		file.Sync()
 	}
 
 	if pt.generalJSONFile != nil {
 		configLine := pt.createWorkingConfigLine(result)
-		fmt.Fprintf(pt.generalJSONFile, "%s\n", configLine)
+		fmt.Fprintf(pt.generalJSONFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
+			strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP)
+		fmt.Fprintf(pt.generalJSONFile, "%s\n\n", configLine)
 		pt.generalJSONFile.Sync()
 	}
 
 	if pt.generalURLFile != nil {
 		configURL := pt.createConfigURL(result)
-		// Add name with fire emoji and number
-		configURL = pt.addConfigName(configURL, fmt.Sprintf("🔥%d🔥", counter))
-		fmt.Fprintf(pt.generalURLFile, "%s\n", configURL)
+		fmt.Fprintf(pt.generalURLFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
+			strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP)
+		fmt.Fprintf(pt.generalURLFile, "%s\n\n", configURL)
 		pt.generalURLFile.Sync()
 	}
 }
@@ -1765,15 +1716,6 @@ func (pt *ProxyTester) createWorkingConfigLine(result *TestResultData) string {
 
 	jsonBytes, _ := json.Marshal(data)
 	return string(jsonBytes)
-}
-
-func (pt *ProxyTester) addConfigName(configURL, name string) string {
-	// Replace the fragment (part after #) with the new name
-	if idx := strings.Index(configURL, "#"); idx != -1 {
-		return configURL[:idx] + "#" + url.QueryEscape(name)
-	}
-	// If no fragment exists, add it
-	return configURL + "#" + url.QueryEscape(name)
 }
 
 func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
@@ -2035,19 +1977,6 @@ func (pt *ProxyTester) updateStats(result *TestResultData) {
 			atomic.AddInt64(stats["failed"], 1)
 		}
 	}
-
-	// Update per-source statistics
-	if result.Config.Source != "" {
-		value, _ := pt.sourceStats.LoadOrStore(result.Config.Source, &SourceStats{})
-		srcStats := value.(*SourceStats)
-
-		atomic.AddInt64(&srcStats.TotalConfigs, 1)
-		if result.Result == ResultSuccess {
-			atomic.AddInt64(&srcStats.SuccessConfigs, 1)
-		} else {
-			atomic.AddInt64(&srcStats.FailedConfigs, 1)
-		}
-	}
 }
 
 func (pt *ProxyTester) TestConfigs(configs []ProxyConfig, batchID int) []*TestResultData {
@@ -2150,8 +2079,8 @@ func (pt *ProxyTester) RunTests(configs []ProxyConfig) []*TestResultData {
 			pt.cleanupBetweenBatches()
 
 			// Add 10-second rest between batches
-			log.Printf("⏸️  Resting for 5 seconds before next batch...")
-			time.Sleep(5 * time.Second)
+			log.Printf("⏸️  Resting for 10 seconds before next batch...")
+			time.Sleep(10 * time.Second)
 		}
 	}
 
@@ -2363,43 +2292,6 @@ func (pt *ProxyTester) printFinalSummary(results []*TestResultData) {
 		}
 	}
 
-	// Display per-subscription statistics
-	log.Println("\nSubscription Source Breakdown:")
-	log.Println(strings.Repeat("-", 150))
-	log.Printf("%-120s | %8s | %8s | %8s | %8s", "Subscription URL", "Total", "Success", "Failed", "Success%")
-	log.Println(strings.Repeat("-", 150))
-
-	var totalSubConfigs, totalSubSuccess, totalSubFailed int64
-	pt.sourceStats.Range(func(key, value interface{}) bool {
-		source := key.(string)
-		stats := value.(*SourceStats)
-
-		total := atomic.LoadInt64(&stats.TotalConfigs)
-		success := atomic.LoadInt64(&stats.SuccessConfigs)
-		failed := atomic.LoadInt64(&stats.FailedConfigs)
-
-		totalSubConfigs += total
-		totalSubSuccess += success
-		totalSubFailed += failed
-
-		successPct := float64(0)
-		if total > 0 {
-			successPct = float64(success) / float64(total) * 100
-		}
-
-		log.Printf("%-120s | %8d | %8d | %8d | %7.1f%%",
-			source, total, success, failed, successPct)
-		return true
-	})
-
-	log.Println(strings.Repeat("-", 150))
-	overallSuccessPct := float64(0)
-	if totalSubConfigs > 0 {
-		overallSuccessPct = float64(totalSubSuccess) / float64(totalSubConfigs) * 100
-	}
-	log.Printf("%-120s | %8d | %8d | %8d | %7.1f%%",
-		"TOTAL", totalSubConfigs, totalSubSuccess, totalSubFailed, overallSuccessPct)
-
 	if len(successTimes) > 0 {
 		var sum float64
 		min, max := successTimes[0], successTimes[0]
@@ -2482,59 +2374,60 @@ func main() {
 	}
 	defer tester.Cleanup()
 
-	// Load all configs from Config directory
-	configDir := filepath.Join(config.DataDir, "Config")
-
-	log.Println(strings.Repeat("=", 70))
-	log.Printf(" Loading configurations from: %s", configDir)
-	log.Println(strings.Repeat("=", 70))
-
-	// Find all JSON files in Config directory
-	jsonFiles, err := filepath.Glob(filepath.Join(configDir, "*.json"))
-	if err != nil {
-		log.Fatalf("Failed to find config files: %v", err)
+	// Define test order: VLESS, VMess, Shadowsocks
+	configFilesOrdered := []struct {
+		protocol ProxyProtocol
+		filePath string
+	}{
+		{ProtocolShadowsocks, filepath.Join(config.DataDir, "deduplicated_urls", "ss.json")},
+		{ProtocolShadowsocksR, filepath.Join(config.DataDir, "deduplicated_urls", "ssr.json")},
+		{ProtocolVMess, filepath.Join(config.DataDir, "deduplicated_urls", "vmess.json")},
+		{ProtocolVLESS, filepath.Join(config.DataDir, "deduplicated_urls", "vless.json")},
+		{ProtocolTrojan, filepath.Join(config.DataDir, "deduplicated_urls", "trojan.json")},
+		{ProtocolHysteria, filepath.Join(config.DataDir, "deduplicated_urls", "hy.json")},
+		{ProtocolHysteria2, filepath.Join(config.DataDir, "deduplicated_urls", "hysteria2.json")},
+		{ProtocolTUIC, filepath.Join(config.DataDir, "deduplicated_urls", "tuic.json")},
 	}
 
-	if len(jsonFiles) == 0 {
-		log.Printf("No JSON config files found in: %s", configDir)
-		log.Println("No working configurations found")
-		return
-	}
-
-	log.Printf("Found %d configuration files", len(jsonFiles))
-
-	// Load all configs
-	var allConfigs []ProxyConfig
-
-	for _, jsonFile := range jsonFiles {
-		config, err := tester.LoadConfigFromCollectorJSON(jsonFile)
-		if err != nil {
-			log.Printf("Failed to load %s: %v", filepath.Base(jsonFile), err)
-			continue
-		}
-		if config != nil {
-			allConfigs = append(allConfigs, *config)
-		}
-	}
-
-	if len(allConfigs) == 0 {
-		log.Println("No valid configurations could be loaded")
-		log.Println("No working configurations found")
-		return
-	}
-
-	log.Printf("Loaded %d valid configurations", len(allConfigs))
-	log.Println(strings.Repeat("=", 70))
-	log.Printf(" Starting tests for all configurations")
-	log.Println(strings.Repeat("=", 70))
-
-	// Test all configs
-	allResults := tester.RunTests(allConfigs)
-
+	var allResults []*TestResultData
 	totalWorkingConfigs := 0
-	for _, result := range allResults {
-		if result.Result == ResultSuccess {
-			totalWorkingConfigs++
+
+	for _, configFile := range configFilesOrdered {
+		protocol := configFile.protocol
+		filePath := configFile.filePath
+
+		log.Println(strings.Repeat("=", 70))
+		log.Printf(" Starting tests for %s protocol", strings.ToUpper(string(protocol)))
+		log.Println(strings.Repeat("=", 70))
+
+		if _, err := os.Stat(filePath); err == nil {
+			configs, err := tester.LoadConfigsFromJSON(filePath, protocol)
+			if err != nil {
+				log.Printf("Failed to load %s configs: %v", protocol, err)
+				continue
+			}
+
+			if len(configs) == 0 {
+				log.Printf("No valid %s configurations found", protocol)
+				continue
+			}
+
+			log.Printf("Testing %d %s configurations...", len(configs), protocol)
+
+			results := tester.RunTests(configs)
+			allResults = append(allResults, results...)
+
+			workingCount := 0
+			for _, result := range results {
+				if result.Result == ResultSuccess {
+					workingCount++
+				}
+			}
+			totalWorkingConfigs += workingCount
+
+			log.Printf(" %s testing completed: %d working configurations found", strings.ToUpper(string(protocol)), workingCount)
+		} else {
+			log.Printf("Config file not found: %s", filePath)
 		}
 	}
 
@@ -2545,8 +2438,8 @@ func main() {
 		log.Printf("\nWorking configurations saved to:")
 		log.Printf("  JSON: %s/working_json/working_*.txt", config.DataDir)
 		log.Printf("  URL: %s/working_url/working_*_urls.txt", config.DataDir)
-		log.Printf("  All configs (JSON): %s/working_json/all.txt", config.DataDir)
-		log.Printf("  All configs (URL): %s/working_url/all.txt", config.DataDir)
+		log.Printf("  All configs (JSON): %s/working_json/working_all_configs.txt", config.DataDir)
+		log.Printf("  All configs (URL): %s/working_url/working_all_urls.txt", config.DataDir)
 		log.Println(strings.Repeat("=", 70))
 	} else {
 		log.Println("No working configurations found")
