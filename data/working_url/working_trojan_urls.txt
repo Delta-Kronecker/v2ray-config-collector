@@ -1,115 +1,193 @@
 # Working TROJAN Configurations (URL Format)
-# Generated at: 2025-11-06 01:04:40
+# Generated at: 2025-11-06 06:27:37
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-11-06 03:51:31 | Response: 0.156s | IP: 104.28.157.169
-trojan://trojan@172.67.75.172:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:14:24 | Response: 1.705s | IP: 141.11.127.25
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:43107?security=tls&sni=iepl.usq2.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 03:52:11 | Response: 0.126s | IP: 2a09:bac5:c82e:dcd::160:122
-trojan://trojan@104.26.12.31:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:14:24 | Response: 1.864s | IP: 141.11.127.26
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@R2.tube-cat.com:8210?security=tls&sni=us.weixin.qq.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 03:52:13 | Response: 0.753s | IP: 38.180.249.177
-trojan://installshield@38.180.249.177:8443?host=38.180.249.177&security=tls&sni=38.180.249.177#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 03:53:09 | Response: 0.077s | IP: 155.138.200.226
-trojan://vp0GmFj.yIw1RZrd@155.138.228.41:19313?security=tls&sni=raincoat.bluetigeraa.click&type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 03:56:03 | Response: 3.077s | IP: 104.28.153.179
-trojan://trojan@104.26.12.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 03:57:27 | Response: 4.446s | IP: 107.175.32.156
-trojan://e4cbe8b8-37db-4aaa-8469-b84f34c51ebc@172.67.157.220:443?alpn=http%2F1.1&host=6666yhju.777159.xyz&path=%2FdilyfCPEmLvYr5hYXD&security=tls&sni=6666YHjU.777159.xYz&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 03:57:28 | Response: 0.402s | IP: 63.180.184.162
-trojan://telegram-id-privatevpns@63.180.184.162:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 03:59:15 | Response: 0.416s | IP: 2a09:bac5:2a94:1282::1d8:1a4
-trojan://iwangjie@135.125.232.253:2053?path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:00:03 | Response: 1.151s | IP: 63.180.37.96
-trojan://telegram-id-privatevpns@63.180.37.96:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:00:59 | Response: 0.437s | IP: 81.168.83.89
-trojan://YwuvGJk36B@creativecommons.org:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:02:38 | Response: 0.840s | IP: 51.44.127.0
-trojan://telegram-id-privatevpns@51.44.127.0:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:02:38 | Response: 0.619s | IP: 104.28.158.226
-trojan://iwangjie@158.101.11.204:15805?path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:03:34 | Response: 4.146s | IP: 96.9.213.108
+# Tested at: 2025-11-06 09:14:30 | Response: 2.016s | IP: 96.9.213.108
 trojan://G9CHhXltVx@96.9.213.108:12646?security=tls&sni=96.9.213.108#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:03:37 | Response: 1.178s | IP: 47.128.73.64
-trojan://58176021-8165-48d5-94b1-ad3e96e71e8b@47.128.73.64:20230?host=www.alibaba.com&path=%2F&security=tls&sni=www.alibaba.com&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:04:33 | Response: 1.881s | IP: 104.28.153.223
-trojan://trojan@104.18.12.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:06:08 | Response: 0.870s | IP: 2a09:bac5:c82d:1678::23d:55
-trojan://trojan@172.67.75.172:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:06:09 | Response: 0.963s | IP: 167.160.10.54
-trojan://liCV_rq-BftxwXpM@167.160.10.54:12184?security=tls#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:06:12 | Response: 0.864s | IP: 165.154.112.107
-trojan://1640ef52-2db0-44ab-b3f3-8690b762ebc9@165.154.112.107:12000?security=tls&sni=aliyun.com#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:06:57 | Response: 0.779s | IP: 58.152.53.3
-trojan://BxceQaOe@58.152.53.3:443?security=tls&sni=58.152.53.3#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:07:50 | Response: 0.858s | IP: 104.28.164.152
-trojan://trojan@104.26.13.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:08:38 | Response: 1.083s | IP: 2a09:bac5:c828:dcd::160:b6
-trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@www.digitalocean.com:443?host=azadnet-5vk.pages.dev&path=%2Fazadnet-5vk.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-5vk.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:08:45 | Response: 0.290s | IP: 2a09:bac6:d70f:166e::23c:4e
-trojan://trojan@www.visa.com.sg:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:09:40 | Response: 0.444s | IP: 2a09:bac5:c82e:1032::19d:195
-trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%2F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:11:18 | Response: 0.290s | IP: 2a09:bac6:d70f:dcd::160:b8
+# Tested at: 2025-11-06 09:15:16 | Response: 1.194s | IP: 104.28.160.26
 trojan://trojan@104.18.13.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:12:11 | Response: 1.002s | IP: 2a09:bac5:c82e:2446::39d:6d
-trojan://trojan@45.192.222.112:8443?host=store.timimi.dpdns.org&path=%2F%3Fed%3D2560&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:15:20 | Response: 3.674s | IP: 103.172.183.82
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:46407?security=tls&sni=iepl.sgx1.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:13:13 | Response: 0.341s | IP: 104.28.157.171
-trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?host=azadnet-bdr.pages.dev&path=%2Fazadnet-bdr.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-bdr.pages.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:15:21 | Response: 0.149s | IP: 104.28.160.23
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@www.digitalocean.com:443?host=azadnet-5vk.pages.dev&path=%2Fazadnet-5vk.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-5vk.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:13:58 | Response: 1.076s | IP: 58.152.53.42
-trojan://bca467b8c15211d189008a93c7519d3b@58.152.53.42:443?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:16:08 | Response: 1.727s | IP: 103.17.98.26
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:40275?security=tls&sni=iepl.hkx3.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:14:07 | Response: 0.249s | IP: 104.28.158.130
-trojan://trojan@104.24.57.5:443?host=azadnet2-dl4.pages.dev&path=%F0%9F%94%92+%5BBy+EbraSha%5D&security=tls&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:16:13 | Response: 2.586s | IP: 154.64.226.147
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:48263?security=tls&sni=iepl.jpx1.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:14:52 | Response: 2.678s | IP: 81.168.83.89
+# Tested at: 2025-11-06 09:17:52 | Response: 0.948s | IP: 103.17.98.26
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:40275?security=tls&sni=iepl.hkx3.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:18:01 | Response: 3.845s | IP: 104.28.160.24
+trojan://trojan@104.26.12.31:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:18:45 | Response: 0.643s | IP: 81.168.83.89
 trojan://YwuvGJk36B@104.20.6.134:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:15:45 | Response: 1.342s | IP: 104.28.159.229
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.222.79:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:19:38 | Response: 1.443s | IP: 210.79.151.22
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:41881?security=tls&sni=iepl.twx1.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:17:30 | Response: 2.585s | IP: 58.152.46.98
+# Tested at: 2025-11-06 09:19:39 | Response: 1.702s | IP: 58.152.46.98
 trojan://BxceQaOe@58.152.46.98:443?security=tls&sni=58.152.46.98#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:18:20 | Response: 0.078s | IP: 2a09:bac6:d70f:166e::23c:48
-trojan://Aimer@5.182.84.22:2096?path=%2F%3Fed%3D2560%26proxyip%3Dts.hpc.tw&security=tls&sni=epge.muarua.filegear-sg.me&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:19:49 | Response: 0.820s | IP: 103.172.183.79
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:48159?security=tls&sni=iepl.sgx2.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:19:14 | Response: 0.198s | IP: 2a09:bac1:76c1:62b0::10:471
-trojan://er668@kfjdi.pages.dev:443?path=%2F%3Fed%3D2048%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN&security=tls&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-06 04:20:09 | Response: 0.941s | IP: 81.168.83.89
+# Tested at: 2025-11-06 09:20:30 | Response: 1.122s | IP: 81.168.83.89
 trojan://YwuvGJk36B@104.20.5.134:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:20:11 | Response: 0.899s | IP: 203.198.122.129
-trojan://BxceQaOe@203.198.122.129:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:20:32 | Response: 1.332s | IP: 103.172.183.80
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:42826?security=tls&sni=iepl.sgx3.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:21:11 | Response: 0.866s | IP: 104.28.164.150
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.223.79:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:21:26 | Response: 0.732s | IP: 206.237.119.211
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:44863?security=tls&sni=iepl.hkx1.cat.bilibili.com#%F0%9F%94%A5
 
-# Tested at: 2025-11-06 04:23:34 | Response: 0.882s | IP: 104.28.153.192
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@whatismyipaddress.com:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-06 09:21:29 | Response: 0.961s | IP: 103.172.183.80
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:46918?security=tls&sni=iepl.sgx3.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:23:14 | Response: 1.043s | IP: 38.180.249.177
+trojan://installshield@38.180.249.177:8443?host=38.180.249.177&security=tls&sni=38.180.249.177#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:23:17 | Response: 1.459s | IP: 107.175.32.156
+trojan://e4cbe8b8-37db-4aaa-8469-b84f34c51ebc@172.67.157.220:443?alpn=http%2F1.1&host=6666yhju.777159.xyz&path=%2FdilyfCPEmLvYr5hYXD&security=tls&sni=6666YHjU.777159.xYz&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:23:25 | Response: 2.714s | IP: 206.237.119.211
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:44863?security=tls&sni=iepl.hkx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:24:13 | Response: 0.264s | IP: 104.28.159.165
+trojan://trojan@104.18.12.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:24:54 | Response: 0.954s | IP: 154.64.226.147
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:49629?security=tls&sni=iepl.jpx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:24:58 | Response: 0.420s | IP: 2a09:bac6:d687:f91::18d:149
+trojan://trojan@ip.sb:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:24:59 | Response: 0.706s | IP: 210.79.151.20
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:46964?security=tls&sni=iepl.twq1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:25:45 | Response: 0.437s | IP: 104.28.152.225
+trojan://trojan@104.24.57.5:443?host=azadnet2-dl4.pages.dev&path=%F0%9F%94%92+%5BBy+EbraSha%5D&security=tls&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:25:45 | Response: 1.949s | IP: 104.28.152.203
+trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%2F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:25:49 | Response: 0.842s | IP: 103.172.183.80
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:46918?security=tls&sni=iepl.sgx3.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:26:07 | Response: 0.920s | IP: 141.11.127.25
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:43107?security=tls&sni=iepl.usq2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:26:38 | Response: 1.397s | IP: 103.172.183.82
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:46407?security=tls&sni=iepl.sgx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:26:39 | Response: 2.878s | IP: 104.28.163.60
+trojan://trojan@104.26.12.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:27:35 | Response: 0.109s | IP: 104.28.153.131
+trojan://trojan@172.67.75.172:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:27:40 | Response: 0.108s | IP: 2a09:bac5:bf0c:2632::3ce:26
+trojan://trojan@azadnet-9ya.pages.dev:443?path=%2F%3Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:28:21 | Response: 1.292s | IP: 154.64.226.147
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:47067?security=tls&sni=iepl.jpx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:28:31 | Response: 0.427s | IP: 154.64.226.147
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:47067?security=tls&sni=iepl.jpx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:29:25 | Response: 0.440s | IP: 104.28.162.252
+trojan://trojan@www.visa.com.sg:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:30:58 | Response: 1.354s | IP: 58.152.53.3
+trojan://BxceQaOe@58.152.53.3:443?security=tls&sni=58.152.53.3#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:30:59 | Response: 1.089s | IP: 210.79.151.22
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:43024?security=tls&sni=iepl.twx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:31:02 | Response: 4.557s | IP: 154.64.226.147
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:49629?security=tls&sni=iepl.jpx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:31:03 | Response: 0.241s | IP: 104.168.76.144
+trojan://er668@kfjdi.pages.dev:443?path=%2F%3Fed%3D2048%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN&security=tls&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:31:49 | Response: 0.630s | IP: 103.17.98.25
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:46603?security=tls&sni=iepl.hkx2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:31:52 | Response: 0.753s | IP: 103.17.98.26
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:44708?security=tls&sni=iepl.hkx3.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:33:00 | Response: 0.769s | IP: 154.64.226.147
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:40585?security=tls&sni=iepl.jpx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:33:34 | Response: 1.280s | IP: 167.160.10.54
+trojan://liCV_rq-BftxwXpM@167.160.10.54:12184?security=tls#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:34:45 | Response: 0.588s | IP: 104.28.159.169
+trojan://trojan@172.67.75.172:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:35:23 | Response: 3.009s | IP: 103.36.25.6
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:41077?security=tls&sni=iepl.twq2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:35:24 | Response: 1.064s | IP: 104.28.153.128
+trojan://trojan@45.192.222.112:8443?host=store.timimi.dpdns.org&path=%2F%3Fed%3D2560&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:37:07 | Response: 1.499s | IP: 103.172.183.79
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:48159?security=tls&sni=iepl.sgx2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:37:11 | Response: 0.593s | IP: 103.17.98.25
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:42570?security=tls&sni=iepl.hkx2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:37:17 | Response: 0.675s | IP: 210.79.151.20
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:41567?security=tls&sni=iepl.twq1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:38:02 | Response: 0.696s | IP: 210.79.151.22
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:43024?security=tls&sni=iepl.twx1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:38:54 | Response: 0.646s | IP: 103.172.183.79
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:40294?security=tls&sni=iepl.sgx2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:39:45 | Response: 0.801s | IP: 141.11.127.25
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:40338?security=tls&sni=iepl.usq2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:40:33 | Response: 0.623s | IP: 2a09:bac5:79df:1cd2::2df:4
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?host=azadnet-bdr.pages.dev&path=%2Fazadnet-bdr.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-bdr.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:41:24 | Response: 0.664s | IP: 165.154.112.107
+trojan://1640ef52-2db0-44ab-b3f3-8690b762ebc9@165.154.112.107:12000?security=tls&sni=aliyun.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:42:17 | Response: 0.223s | IP: 104.28.152.207
+trojan://trojan@104.26.13.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:42:32 | Response: 1.849s | IP: 58.152.53.42
+trojan://bca467b8c15211d189008a93c7519d3b@58.152.53.42:443?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:43:13 | Response: 0.823s | IP: 103.17.98.25
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.252:46603?security=tls&sni=iepl.hkx2.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:43:20 | Response: 2.893s | IP: 210.79.151.20
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@5.34.222.4:41567?security=tls&sni=iepl.twq1.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:43:59 | Response: 1.107s | IP: 203.198.122.129
+trojan://BxceQaOe@203.198.122.129:443?security=tls&sni=203.198.122.129#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:44:04 | Response: 0.627s | IP: 81.168.83.89
+trojan://YwuvGJk36B@creativecommons.org:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:44:50 | Response: 0.726s | IP: 155.138.200.226
+trojan://vp0GmFj.yIw1RZrd@155.138.228.41:19313?security=tls&sni=raincoat.bluetigeraa.click&type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-06 09:46:47 | Response: 0.821s | IP: 206.237.119.211
+trojan://8972cc22-819f-4f6b-8fd2-e5c69e0a0c62@d1.catcat321.com:40974?security=tls&sni=iepl.hkx1.cat.bilibili.com#%F0%9F%94%A5
 
