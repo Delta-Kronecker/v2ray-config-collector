@@ -1,160 +1,211 @@
 # Working TROJAN Configurations (URL Format)
-# Generated at: 2025-11-12 06:28:21
+# Generated at: 2025-11-13 01:05:53
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-11-12 09:19:22 | Response: 0.308s | IP: 104.28.162.251
+# Tested at: 2025-11-13 03:55:13 | Response: 1.198s | IP: 104.28.165.121
+trojan://7d82af32-915f-4619-aa9c-7d3b612d33ff@65.109.227.138:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F65.109.227.138%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 03:55:18 | Response: 0.182s | IP: 104.28.152.212
 trojan://trojan@104.26.12.31:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:19:26 | Response: 0.913s | IP: 219.77.239.35
-trojan://BxceQaOe@219.77.239.35:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
+# Tested at: 2025-11-13 03:56:10 | Response: 0.936s | IP: 104.28.162.215
+trojan://d5a49621-b25c-4684-aea8-8389f3a8afaf@94.177.199.119:8443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F94.177.199.119%3D8443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:20:08 | Response: 1.574s | IP: 2a05:d012:8af:1a00:91a3:682a:bcdd:9e26
-trojan://telegram-id-privatevpns@51.44.99.222:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+# Tested at: 2025-11-13 03:56:56 | Response: 0.889s | IP: 2a09:bac5:bf0c:15eb::22f:51
+trojan://trojan@45.192.222.112:8443?host=store.timimi.dpdns.org&path=%2F%3Fed%3D2560&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:20:11 | Response: 0.854s | IP: 104.28.152.219
-trojan://trojan@104.18.13.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:21:02 | Response: 1.364s | IP: 104.28.165.103
-trojan://14d6efcf-b0d3-4054-9d4e-e1347e3ceaa2@213.159.208.88:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F213.159.208.88%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:21:02 | Response: 3.021s | IP: 104.28.164.165
-trojan://0c7edd8f-96d8-4227-b086-1ffc3aeecc96@193.233.115.79:8443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F193.233.115.79%3D8443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:21:02 | Response: 3.007s | IP: 104.28.159.133
-trojan://trojan@104.18.12.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:21:54 | Response: 0.799s | IP: 2a09:bac1:23e0:1138::238:4e
-trojan://0a4dd3f9-4db4-4be7-83a1-2a0384ed6156@103.45.245.208:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F103.45.245.208%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:22:00 | Response: 0.871s | IP: 2a09:bac1:6480:1068::407:3c
-trojan://76ed5507-80e9-4549-877c-f74c174c26b4@95.214.9.72:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F95.214.9.72%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:22:08 | Response: 1.810s | IP: 104.28.163.58
+# Tested at: 2025-11-13 03:56:58 | Response: 0.328s | IP: 104.28.162.251
 trojan://trojan@104.19.174.68:443?host=azadnet-9ya.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:23:03 | Response: 0.431s | IP: 104.28.152.217
-trojan://trojan@104.26.13.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560%2F%3FJoin-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:24:41 | Response: 1.584s | IP: 104.28.165.147
-trojan://19f8e29a-3f0b-448c-92e8-ae035ea5f9ba@45.159.251.8:81?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F45.159.251.8%3D81&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:25:29 | Response: 1.345s | IP: 104.28.155.235
-trojan://c2d6a850-7e35-44f5-ab9f-8299f6f8c72b@194.147.115.149:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F194.147.115.149%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:25:30 | Response: 1.557s | IP: 137.220.150.111
-trojan://1b57001bd214304027025a740b6cf1ac@202.181.103.246:2173?security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:25:31 | Response: 1.408s | IP: 104.28.165.34
-trojan://63b8ce6d-9a30-4122-a00f-fd47f020dc27@89.28.236.243:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F89.28.236.243%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:26:23 | Response: 1.187s | IP: 81.168.83.89
-trojan://YwuvGJk36B@104.20.5.134:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:28:15 | Response: 0.618s | IP: 104.28.160.15
-trojan://trojan@azadnet-9ya.pages.dev:443?path=%2F%3Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:28:58 | Response: 1.126s | IP: 2a09:bac5:bf0c:1923::281:6
-trojan://0@8.39.125.151:443?host=snippets.sbak.netlib.re&path=%2Fproxyip%3Dd23d61f1.tp81.ip.090227.xyz&security=tls&sni=snippets.sbak.netlib.re&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:28:58 | Response: 1.138s | IP: 107.175.32.156
-trojan://e4cbe8b8-37db-4aaa-8469-b84f34c51ebc@172.67.157.220:443?alpn=http%2F1.1&host=6666yhju.777159.xyz&path=%2FdilyfCPEmLvYr5hYXD&security=tls&sni=6666YHjU.777159.xYz&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:29:03 | Response: 2.485s | IP: 104.28.159.165
-trojan://trojan@www.visa.com.sg:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:29:07 | Response: 4.856s | IP: 203.198.122.129
-trojan://BxceQaOe@203.198.122.129:443?security=tls&sni=203.198.122.129#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:29:55 | Response: 0.909s | IP: 38.180.249.177
-trojan://installshield@38.180.249.177:8443?host=38.180.249.177&security=tls&sni=38.180.249.177#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:29:55 | Response: 0.300s | IP: 54.186.121.20
-trojan://13430296-2407-4839-900f-db97584fb27a@54.186.121.20:20230?host=www.alibaba.com&path=%2F&security=tls&sni=www.alibaba.com&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:30:47 | Response: 3.394s | IP: 37.1.212.205
-trojan://BxceQaOe@116.49.237.130:4569?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:31:41 | Response: 0.892s | IP: 104.131.109.145
-trojan://1b57001bd214304027025a740b6cf1ac@160.16.223.205:31409?security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:33:29 | Response: 2.792s | IP: 128.199.230.228
-trojan://BxceQaOe@116.49.237.130:518?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:33:32 | Response: 2.166s | IP: 104.28.153.129
-trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@www.digitalocean.com:443?host=azadnet-5vk.pages.dev&path=%2Fazadnet-5vk.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-5vk.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:34:31 | Response: 0.873s | IP: 58.152.110.25
-trojan://1b57001bd214304027025a740b6cf1ac@58.152.110.25:443?security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:37:20 | Response: 2.183s | IP: 203.198.122.97
-trojan://BxceQaOe@203.198.122.97:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:38:06 | Response: 3.545s | IP: 38.180.107.76
-trojan://1b57001bd214304027025a740b6cf1ac@160.16.106.144:127?security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:38:47 | Response: 1.689s | IP: 2a05:d012:8af:1a00:97b6:8e7c:5fa1:b54a
-trojan://telegram-id-privatevpns@13.39.206.112:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:39:07 | Response: 1.340s | IP: 104.28.162.254
-trojan://trojan@ip.sb:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:39:41 | Response: 2.274s | IP: 104.28.165.2
-trojan://a5a3350e-6ea2-4e12-ae84-20db849ce1fc@94.131.114.50:81?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F94.131.114.50%3D81&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:39:51 | Response: 0.785s | IP: 81.168.83.89
-trojan://YwuvGJk36B@104.20.6.134:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:39:58 | Response: 0.328s | IP: 104.28.153.127
-trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?host=azadnet-bdr.pages.dev&path=%2Fazadnet-bdr.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-bdr.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:41:21 | Response: 0.478s | IP: 155.138.200.226
-trojan://vp0GmFj.yIw1RZrd@155.138.228.41:19313?security=tls&sni=raincoat.bluetigeraa.click&type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:41:22 | Response: 0.178s | IP: 104.28.163.77
-trojan://trojan@172.67.75.172:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560%2F%3FJoin-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:41:22 | Response: 1.081s | IP: 104.28.162.252
-trojan://er668@kfjdi.pages.dev:443?path=%2F%3Fed%3D2048%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN&security=tls&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:41:42 | Response: 0.623s | IP: 96.9.213.108
-trojan://G9CHhXltVx@96.9.213.108:12646?security=tls&sni=96.9.213.108#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:43:19 | Response: 4.060s | IP: 104.28.162.253
-trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%2F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:44:17 | Response: 0.208s | IP: 104.28.159.119
-trojan://trojan@104.24.57.5:443?host=azadnet2-dl4.pages.dev&path=%F0%9F%94%92+%5BBy+EbraSha%5D&security=tls&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:44:57 | Response: 1.353s | IP: 165.154.112.107
-trojan://1640ef52-2db0-44ab-b3f3-8690b762ebc9@165.154.112.107:12000?security=tls&sni=aliyun.com#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:45:52 | Response: 0.133s | IP: 2a09:bac5:79de:19cd::292:112
+# Tested at: 2025-11-13 03:57:00 | Response: 0.383s | IP: 104.28.160.20
 trojan://trojan@104.26.12.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560%2F%3FJoin-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:45:54 | Response: 1.457s | IP: 81.168.83.89
-trojan://YwuvGJk36B@creativecommons.org:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-13 03:57:06 | Response: 3.292s | IP: 37.1.212.205
+trojan://BxceQaOe@116.49.237.130:4569?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:46:41 | Response: 1.879s | IP: 104.28.152.204
-trojan://trojan@104.19.173.68:443?host=azadnet-9ya.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-13 03:57:08 | Response: 0.180s | IP: 2a09:bac5:bf0e:15d7::22d:125
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@whatismyipaddress.com:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:46:57 | Response: 4.585s | IP: 37.1.212.142
-trojan://BxceQaOe@116.49.237.130:2173?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
+# Tested at: 2025-11-13 03:57:57 | Response: 0.801s | IP: 104.28.162.222
+trojan://63b8ce6d-9a30-4122-a00f-fd47f020dc27@89.28.236.243:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F89.28.236.243%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:47:31 | Response: 2.316s | IP: 38.180.190.13
-trojan://1b57001bd214304027025a740b6cf1ac@160.16.106.144:2760?security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
+# Tested at: 2025-11-13 03:58:41 | Response: 0.838s | IP: 104.28.152.214
+trojan://trojan@azadnet-9ya.pages.dev:443?path=%2F%3Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:49:23 | Response: 0.794s | IP: 51.38.226.4
+# Tested at: 2025-11-13 03:58:51 | Response: 0.279s | IP: 104.28.159.170
+trojan://er668@kfjdi.pages.dev:443?path=%2F%3Fed%3D2048%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN--%40HiByeVPNN&security=tls&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:01:18 | Response: 2.070s | IP: 104.28.159.169
+trojan://trojan@172.67.75.172:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560%2F%3FJoin-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:02:11 | Response: 2.105s | IP: 104.28.155.227
+trojan://1b197915-23a1-4031-9614-2182b3b57705@95.164.62.196:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F95.164.62.196%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:02:12 | Response: 0.664s | IP: 2a09:bac1:27a0:1b08::215:c5
 trojan://8bf6e7d7-23e8-4655-8f07-c3827e2d6ebf@51.38.226.4:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F51.38.226.4%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:50:10 | Response: 1.904s | IP: 58.152.46.98
-trojan://BxceQaOe@58.152.46.98:443?security=tls&sni=58.152.46.98#%F0%9F%94%A5
+# Tested at: 2025-11-13 04:03:58 | Response: 1.240s | IP: 104.28.152.213
+trojan://trojan@172.67.75.172:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:51:56 | Response: 1.708s | IP: 219.76.135.188
-trojan://1b57001bd214304027025a740b6cf1ac@219.76.135.188:443?security=tls&sni=www.nintendogames.net#%F0%9F%94%A5
-
-# Tested at: 2025-11-12 09:52:01 | Response: 0.777s | IP: 45.144.48.158
+# Tested at: 2025-11-13 04:03:58 | Response: 0.749s | IP: 2a09:bac6:d675:2dc::49:150
 trojan://49d416e1-4cec-41e1-bff6-3748c466f275@45.144.48.158:8443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F45.144.48.158%3D8443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-12 09:52:11 | Response: 4.054s | IP: 104.28.161.5
+# Tested at: 2025-11-13 04:04:54 | Response: 4.129s | IP: 104.28.161.41
+trojan://14d6efcf-b0d3-4054-9d4e-e1347e3ceaa2@213.159.208.88:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F213.159.208.88%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:04:56 | Response: 0.253s | IP: 104.28.152.233
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.222.79:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:05:02 | Response: 2.370s | IP: 206.83.106.137
+trojan://a0b721d4-5189-4ede-863c-9b14d20c5221@5.34.222.4:44839?security=tls&sni=iepl.jpzsl.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:05:07 | Response: 4.522s | IP: 104.28.164.190
+trojan://0c7edd8f-96d8-4227-b086-1ffc3aeecc96@193.233.115.79:8443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F193.233.115.79%3D8443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:05:42 | Response: 1.894s | IP: 203.198.122.97
+trojan://BxceQaOe@203.198.122.97:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:06:30 | Response: 0.943s | IP: 104.28.155.236
+trojan://5ad5fe82-6b60-4f59-977b-93910ef7a9ca@86.107.197.239:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F86.107.197.239%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:06:32 | Response: 2.577s | IP: 107.151.216.109
+trojan://iwangjie@141.94.68.216:2053?path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:08:17 | Response: 1.063s | IP: 104.28.152.139
+trojan://iwangjie@158.101.11.204:15805?path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:08:18 | Response: 1.193s | IP: 165.154.112.107
+trojan://1640ef52-2db0-44ab-b3f3-8690b762ebc9@165.154.112.107:12000?security=tls&sni=aliyun.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:08:25 | Response: 1.171s | IP: 104.28.163.59
+trojan://trojan@104.18.12.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:09:30 | Response: 0.732s | IP: 38.180.249.177
+trojan://installshield@38.180.249.177:8443?host=38.180.249.177&security=tls&sni=38.180.249.177#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:10:14 | Response: 0.832s | IP: 219.77.239.35
+trojan://BxceQaOe@219.77.239.35:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:10:17 | Response: 4.741s | IP: 150.230.249.42
+trojan://0Y9gOHSdRt@150.230.249.42:443?security=tls#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:10:59 | Response: 1.369s | IP: 58.152.46.98
+trojan://BxceQaOe@58.152.46.98:443?security=tls&sni=58.152.46.98#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:11:00 | Response: 1.809s | IP: 104.28.163.72
+trojan://2b1487cd-e56b-4c62-b1e9-8beb686e002c@45.95.232.18:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F45.95.232.18%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:11:17 | Response: 1.068s | IP: 104.28.159.175
+trojan://4ae2d16f-8b88-4b0e-a9c5-e6e574267904@51.89.148.203:12122?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F51.89.148.203%3D12122&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:11:57 | Response: 0.812s | IP: 104.28.154.51
+trojan://19f8e29a-3f0b-448c-92e8-ae035ea5f9ba@45.159.251.8:81?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F45.159.251.8%3D81&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:12:42 | Response: 1.530s | IP: 2a09:bac1:28c0:840::3dd:22
 trojan://6b5b50ff-7798-40dc-9888-b4dd581e5435@51.89.128.93:44004?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F51.89.128.93%3D44004&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:12:44 | Response: 2.980s | IP: 35.158.29.116
+trojan://telegram-id-privatevpns@35.158.29.116:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:12:48 | Response: 1.042s | IP: 104.28.162.203
+trojan://iwangjie@135.125.232.253:2053?path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:12:52 | Response: 0.913s | IP: 151.242.164.127
+trojan://c2e3cdc0-bc72-3505-b2a9-ea5ed7bfa23f@151.242.164.127:3443?security=tls&sni=steampipe.akamaized.net#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:15:18 | Response: 0.347s | IP: 104.28.159.165
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@104.25.254.4:2087?host=azadnet-bdr.pages.dev&path=%2Fazadnet-bdr.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-bdr.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:16:16 | Response: 0.750s | IP: 104.28.161.253
+trojan://0a4dd3f9-4db4-4be7-83a1-2a0384ed6156@103.45.245.208:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F103.45.245.208%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:17:12 | Response: 2.585s | IP: 104.28.165.165
+trojan://9e1594b6-45da-4ebf-9948-1c18f12ba2fe@185.231.204.186:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F185.231.204.186%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:18:50 | Response: 1.342s | IP: 81.168.83.89
+trojan://YwuvGJk36B@104.20.5.134:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:18:51 | Response: 3.357s | IP: 206.83.106.137
+trojan://a0b721d4-5189-4ede-863c-9b14d20c5221@d1.catcat321.com:45854?security=tls&sni=iepl.jpzsl.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:18:52 | Response: 0.547s | IP: 104.28.160.17
+trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%2F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:18:55 | Response: 1.271s | IP: 2603:c024:4:da6e:29b:6c99:385b:c051
+trojan://d0298536-d670-4045-bbb1-ddd5ea68683e@www.digitalocean.com:443?host=azadnet-5vk.pages.dev&path=%2Fazadnet-5vk.pages.dev%2F%3Fed%3D2560%26PROT_TYPE%3Dtrojan&security=tls&sni=azadnet-5vk.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:19:11 | Response: 2.741s | IP: 2a12:f8c1:50:2:afbd:cf5e:f43c:9c41
+trojan://c2e3cdc0-bc72-3505-b2a9-ea5ed7bfa23f@151.242.165.233:3443?security=tls&sni=origin-a.akamaihd.net#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:19:48 | Response: 1.094s | IP: 104.28.165.2
+trojan://a5a3350e-6ea2-4e12-ae84-20db849ce1fc@94.131.114.50:81?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F94.131.114.50%3D81&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:19:50 | Response: 0.645s | IP: 81.168.83.89
+trojan://YwuvGJk36B@104.20.6.134:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:19:57 | Response: 2.576s | IP: 206.83.106.137
+trojan://a0b721d4-5189-4ede-863c-9b14d20c5221@5.34.222.4:41516?security=tls&sni=iepl.jpzsl.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:19:59 | Response: 1.297s | IP: 63.179.217.23
+trojan://telegram-id-privatevpns@63.179.217.23:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:20:41 | Response: 1.841s | IP: 206.83.106.137
+trojan://a0b721d4-5189-4ede-863c-9b14d20c5221@d1.catcat321.com:42768?security=tls&sni=iepl.jpzsl.cat.bilibili.com#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:21:31 | Response: 1.115s | IP: 35.181.106.165
+trojan://telegram-id-privatevpns@35.181.106.165:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:21:40 | Response: 1.361s | IP: 210.61.97.241
+trojan://0@8.39.125.151:443?host=snippets.sbak.netlib.re&path=%2Fproxyip%3Dd23d61f1.tp81.ip.090227.xyz&security=tls&sni=snippets.sbak.netlib.re&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:21:47 | Response: 2.231s | IP: 96.9.213.108
+trojan://G9CHhXltVx@96.9.213.108:12646?security=tls&sni=96.9.213.108#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:22:22 | Response: 1.503s | IP: 203.198.122.129
+trojan://BxceQaOe@203.198.122.129:443?security=tls&sni=203.198.122.129#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:22:22 | Response: 0.333s | IP: 104.28.152.204
+trojan://trojan@104.19.173.68:443?host=azadnet-9ya.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:22:23 | Response: 1.958s | IP: 51.45.24.134
+trojan://telegram-id-privatevpns@51.45.24.134:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:22:24 | Response: 2.738s | IP: 81.168.83.89
+trojan://YwuvGJk36B@creativecommons.org:2053?alpn=http%2F1.1&host=kotlet.arshiacomplus.dpdns.org&path=%2Fyamtekodasayahhh&security=tls&sni=kotlet.arshiacomplus.dpdns.org&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:24:16 | Response: 0.248s | IP: 104.28.152.203
+trojan://trojan@104.26.13.31:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560%2F%3FJoin-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-Join-sho--Telegram--VITUREY-&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:24:24 | Response: 3.882s | IP: 194.147.115.149
+trojan://c2d6a850-7e35-44f5-ab9f-8299f6f8c72b@194.147.115.149:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F194.147.115.149%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:25:07 | Response: 3.643s | IP: 104.28.164.190
+trojan://76ed5507-80e9-4549-877c-f74c174c26b4@95.214.9.72:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F95.214.9.72%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:26:52 | Response: 1.500s | IP: 104.28.152.211
+trojan://trojan@104.24.57.5:443?host=azadnet2-dl4.pages.dev&path=%F0%9F%94%92+%5BBy+EbraSha%5D&security=tls&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:27:05 | Response: 0.186s | IP: 155.138.200.226
+trojan://vp0GmFj.yIw1RZrd@155.138.228.41:19313?security=tls&sni=raincoat.bluetigeraa.click&type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:27:43 | Response: 1.396s | IP: 104.28.163.58
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.223.79:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:27:44 | Response: 1.891s | IP: 104.28.162.252
+trojan://trojan@www.visa.com.sg:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:28:38 | Response: 1.676s | IP: 104.28.161.212
+trojan://55d19115-ec40-407b-a674-74e6a948347a@45.144.48.55:2053?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F45.144.48.55%3D2053&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:28:47 | Response: 0.935s | IP: 104.28.163.93
+trojan://edeff73d-065d-4b0a-b848-aad9d3380223@77.221.141.207:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F77.221.141.207%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:28:49 | Response: 0.733s | IP: 104.28.152.203
+trojan://trojan@ip.sb:443?host=nixian.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=nixian.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:29:27 | Response: 0.178s | IP: 2a09:bac1:76c0:56b0::22d:d1
+trojan://trojan@104.18.13.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-13 04:30:19 | Response: 2.013s | IP: 104.28.160.46
+trojan://88701884-7690-4b79-ac5d-36d299e05e83@34.22.190.30:443?host=joss.dus.biz.id&path=%2FFree-VPN-CF-Geo-Project%2F34.22.190.30%3D443&security=tls&sni=joss.dus.biz.id&type=ws#%F0%9F%94%A5
 
