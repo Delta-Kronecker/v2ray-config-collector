@@ -1,856 +1,616 @@
 # Working VLESS Configurations (URL Format)
-# Generated at: 2025-11-19 06:28:53
+# Generated at: 2025-11-20 01:02:38
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-11-19 08:03:55 | Response: 0.201s | IP: 104.28.152.119
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:03:58 | Response: 2.494s | IP: 185.231.205.195
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638970192452867164.helsinki-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:04:05 | Response: 1.577s | IP: 104.28.158.197
-vless://4751adcd-064b-493e-979b-b1c56c133cb4@188.114.98.6:80?host=steep-water-754d-ppal0333333333333333.finisal307.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:04:05 | Response: 2.264s | IP: 104.28.158.222
-vless://47e9a0db-50c6-4522-8819-502c55b06dde@159.112.235.174:2082?host=workerr.schodog1.workers.dev&path=%2F%3Fed%3D2048&sni=workerr.schodog1.workers.dev&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:04:41 | Response: 0.170s | IP: 104.28.152.144
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.12.229:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:04:49 | Response: 0.580s | IP: 185.231.205.186
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.186:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:04:50 | Response: 0.895s | IP: 40.160.5.58
-vless://9dc11620-987c-4344-9088-f46fdfae4054@40.160.5.58:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:05:27 | Response: 1.894s | IP: 83.222.20.64
-vless://393044fb-755a-4623-965e-3ae4fe39d730@83.222.20.64:53299?path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:05:27 | Response: 0.650s | IP: 146.19.230.254
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638953873686405389.lahijan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:05:29 | Response: 2.022s | IP: 185.138.164.3
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638955452903725333.malayer-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:05:34 | Response: 0.480s | IP: 45.12.133.176
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.176:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:06:10 | Response: 0.391s | IP: 91.99.3.83
-vless://9932dc8c-12e1-4a02-91d7-6d99622a5eb6@91.99.3.83:30000#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:06:12 | Response: 0.736s | IP: 77.73.238.191
-vless://0cc9d390-42ee-461e-94ae-e4370883dc48@77.73.238.191:29505?path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:06:19 | Response: 0.811s | IP: 89.221.224.228
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@89.221.224.228:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:07:04 | Response: 0.802s | IP: 94.131.13.163
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638975337676447591.lisbon-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:07:41 | Response: 0.253s | IP: 94.232.247.117
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@94.232.247.117:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:08:29 | Response: 0.169s | IP: 104.28.152.153
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:09:09 | Response: 0.533s | IP: 45.140.167.172
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.172:8880?sni=---%40AZARBAYKAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:09:56 | Response: 2.129s | IP: 185.138.164.4
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638953873686407685.lahijan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:09:57 | Response: 0.438s | IP: 94.142.240.71
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:10:39 | Response: 1.182s | IP: 2a03:90c0:195::571
-vless://b4f3041b-e939-4c1a-8f1d-70e8369b25eb@180.149.44.224:4655#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:10:39 | Response: 0.420s | IP: 107.174.254.246
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.18.29.7:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:11:26 | Response: 0.567s | IP: 104.28.158.227
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.shopify.com:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:11:26 | Response: 0.612s | IP: 185.153.183.92
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638974021050129620.kish-blkaft-aaba.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:11:27 | Response: 1.239s | IP: 45.140.167.173
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.173:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:12:11 | Response: 0.169s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.67.248:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:12:15 | Response: 0.309s | IP: 146.19.230.248
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950280342840075.esfahan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:12:56 | Response: 0.773s | IP: 91.107.139.110
-vless://cfe554a3-4cd5-4fe1-9951-e6b65fc52a74@sea-daisy.unity4world.ir:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:05 | Response: 0.440s | IP: 45.89.111.80
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.111.80:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:06 | Response: 0.324s | IP: 45.140.167.213
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.213:8880?sni=---%40AZARBAYKAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:07 | Response: 0.658s | IP: 45.140.167.49
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638948510129819770.dezful-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:08 | Response: 1.170s | IP: 2407:3640:2270:1366::1
-vless://c4ccf00e-72c6-4fd9-b7ce-f625a835539f@109.123.236.161:42692?type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:41 | Response: 1.410s | IP: 2a01:4f9:c012:e640::1
-vless://7305bf70-4943-45e4-b47c-828781cdf8a6@37.27.40.194:10138?path=%2F%40FAST78_CHANNEL-TEL--%40FAST78_CHANNEL-TEL--%40FAST78_CHANNEL-TEL--%40FAST78_CHANNEL-JOIN-%40FAST78_CHANNEL-TEL--%40FAST78_CHANNEL-JOIN-%40FAST78_CHANNEL-TEL-%40FAST78_CHANNEL-TEL--%40FAST78_CHANNEL-JOIN-%40FAST78_CHANNEL-TEL--%40FAST78_CHANNEL&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:43 | Response: 0.089s | IP: 2a09:bac6:d721:117d::1be:e7
-vless://046da250-d5ef-4867-9095-302477d54d20@xn--b6gac.eu.org:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:43 | Response: 2.439s | IP: 185.153.183.184
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.184:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:13:50 | Response: 0.553s | IP: 104.28.152.129
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.12.229:8880?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:14:27 | Response: 0.094s | IP: 104.28.158.203
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:8880?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:14:28 | Response: 1.129s | IP: 171.22.114.132
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@171.22.114.132:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:14:28 | Response: 1.343s | IP: 185.231.205.192
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638959783653655787.lahijan-blkaft-aaao.info:8880?path=%2F%40V2ray_confing33&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:15:12 | Response: 0.725s | IP: 104.28.158.203
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:15:13 | Response: 0.240s | IP: 45.12.150.186
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.186:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:15:21 | Response: 0.632s | IP: 45.88.183.157
+# Tested at: 2025-11-20 02:37:30 | Response: 0.615s | IP: 45.88.183.157
 vless://1edafc20-cffb-4921-bb2b-f00ce9864c5c@45.88.183.157:23803#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 08:15:59 | Response: 0.701s | IP: 185.153.183.185
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960582852349799.paris-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:37:31 | Response: 0.430s | IP: 185.236.232.117
+vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@185.236.232.117:8880?host=pqh30v3.globalfymain.com&sni=pqh30v3.globalfymain.com&type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 08:16:07 | Response: 1.031s | IP: 104.28.157.110
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@developers.cloudflare.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:16:43 | Response: 0.508s | IP: 104.28.165.55
-vless://046da250-d5ef-4867-9095-302477d54d20@ip.sb:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:16:43 | Response: 0.234s | IP: 152.53.52.242
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@152.53.52.242:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:16:43 | Response: 0.840s | IP: 104.28.165.131
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@sub.091224.xyz:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:16:43 | Response: 0.995s | IP: 104.28.165.131
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.0.135:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:16:52 | Response: 0.788s | IP: 104.28.152.144
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:17:28 | Response: 0.692s | IP: 95.164.37.43
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950280342842933.esfahan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:17:30 | Response: 0.323s | IP: 95.164.18.181
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638947655359334556.birjand-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:17:37 | Response: 0.620s | IP: 146.19.230.248
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638959021371581893.neyshabur-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:18:14 | Response: 1.561s | IP: 104.28.157.104
-vless://d01a40f5-4e6f-4279-b0a9-0f2a268ab03c@198.41.208.211:8080?host=worker-falling-snow-ffd7.test61.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:18:23 | Response: 1.662s | IP: 179.61.219.170
-vless://0cd276a5-4501-413a-acf8-b51c54894f02@179.61.219.170:22934?path=%2F#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:19:07 | Response: 0.624s | IP: 185.138.164.5
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638961293929373584.rasht-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:19:08 | Response: 0.307s | IP: 45.89.111.145
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.111.145:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:19:53 | Response: 0.581s | IP: 95.164.6.189
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638971880245562150.mashhad-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:20:32 | Response: 2.797s | IP: 146.19.230.249
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638961293929368515.rasht-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:20:33 | Response: 0.418s | IP: 185.231.205.246
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.246:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:20:37 | Response: 0.708s | IP: 185.231.205.193
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638967500853380191.mashhad-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:20:38 | Response: 0.745s | IP: 146.19.230.247
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638955452903727461.malayer-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:20:40 | Response: 0.278s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:21:17 | Response: 0.335s | IP: 104.28.165.54
-vless://23b3cbba-e6ac-485a-9481-342a0415eab9@104.21.81.174:80?host=DaWn-lAKE-d5E3.WocoYA4320.wOrkERs.DeV&path=%2FwP3dwCyRAVyMJFfW%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:21:20 | Response: 4.375s | IP: 104.28.152.129
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.183.49:8880?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:21:23 | Response: 1.665s | IP: 104.28.157.116
-vless://3f5eba46-f9c9-4d49-985c-2a4345da4f5a@104.16.52.146:80?host=billowing-recipe-c066-ppal03.kerocel835.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:00 | Response: 0.559s | IP: 185.231.205.191
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.191:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:00 | Response: 0.688s | IP: 94.142.240.71
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@www.visa.com.sg:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:05 | Response: 0.266s | IP: 104.28.152.129
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.183.49:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:13 | Response: 0.188s | IP: 95.164.37.76
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638939927968108227.dublin-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:46 | Response: 0.218s | IP: 45.82.251.249
-vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v4.ipforvetra.shop:80?sni=pqh29v4.ipforvetra.shop&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:46 | Response: 0.879s | IP: 103.35.189.137
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@103.35.189.137:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:54 | Response: 0.448s | IP: 185.231.205.181
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.181:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:22:55 | Response: 0.152s | IP: 2a09:bac5:6248:1173::1bd:e9
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.183.49:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:23:31 | Response: 1.881s | IP: 185.231.205.176
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.176:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:23:32 | Response: 3.290s | IP: 185.231.205.192
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638959700852270917.esfahan-blkaft-aaao.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:23:38 | Response: 0.856s | IP: 152.53.227.159
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@152.53.227.159:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:23:43 | Response: 2.883s | IP: 185.153.183.210
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960582852348956.paris-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:25:44 | Response: 0.274s | IP: 104.28.152.153
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:8880?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:25:44 | Response: 0.387s | IP: 103.35.190.4
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978804870442798.copenhagen-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:28:44 | Response: 0.607s | IP: 185.153.183.150
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.150:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:28:45 | Response: 0.915s | IP: 2a01:4f8:1c17:6470::1
-vless://6967a7f2-e8a7-497e-f72e-c989e9f896d7@91.98.155.220:443?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:28:45 | Response: 2.215s | IP: 37.27.40.194
-vless://9c346f20-432d-4c2b-9167-f94dace57425@37.27.40.194:18423?path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:29:28 | Response: 0.203s | IP: 104.28.158.203
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:29:28 | Response: 0.798s | IP: 45.140.167.209
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.209:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:29:29 | Response: 0.674s | IP: 104.28.165.131
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.150.254:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:29:37 | Response: 0.487s | IP: 185.231.205.5
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.5:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:30:13 | Response: 0.280s | IP: 142.93.76.209
-vless://b4f3041b-e939-4c1a-8f1d-70e8369b25eb@142.93.76.209:4655?type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:30:14 | Response: 0.635s | IP: 95.164.18.181
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950280342842022.esfahan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:30:14 | Response: 0.770s | IP: 185.231.205.183
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638967288453104894.lahijan-blkaft-aaap.info:8880?path=%2F%40V2ray_confing33&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:30:15 | Response: 1.328s | IP: 45.12.133.212
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.212:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:30:17 | Response: 3.558s | IP: 5.75.207.116
-vless://083d7685-f2c1-4577-8d4c-e273f6518fb4@5.75.207.116:8880?type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:30:26 | Response: 4.607s | IP: 185.153.183.125
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.125:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:00 | Response: 0.619s | IP: 86.104.74.15
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638975337676353108.lisbon-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:00 | Response: 1.595s | IP: 104.28.157.115
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.17.134.117:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:01 | Response: 1.264s | IP: 185.236.232.117
-vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@pqh30v3.globalfymain.com:8880?host=pqh30v3.globalfymain.com&sni=pqh30v3.globalfymain.com&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:04 | Response: 2.536s | IP: 95.164.37.76
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638948510129823158.dezful-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:44 | Response: 0.632s | IP: 185.138.164.4
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.4:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:45 | Response: 0.542s | IP: 45.12.133.224
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.224:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:45 | Response: 0.880s | IP: 90.156.254.164
-vless://5ae45629-3db6-4c6b-9b9e-346c3e1a798d@90.156.254.164:40432?path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:45 | Response: 0.314s | IP: 185.153.183.184
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638970074254358453.oslo-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:46 | Response: 1.907s | IP: 146.19.230.250
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638948510129812987.dezful-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:47 | Response: 3.264s | IP: 94.131.14.48
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978804870443235.copenhagen-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:31:55 | Response: 0.585s | IP: 146.19.230.249
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638952778316586254.hamedan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:32:28 | Response: 0.736s | IP: 162.19.228.119
-vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@de.vpnbase.net:80?path=%2Fhttp&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:32:28 | Response: 0.580s | IP: 185.236.232.244
-vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v8.ipforvetra.shop:80?host=pqh29v8.ipforvetra.shop&sni=pqh29v8.ipforvetra.shop&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:32:30 | Response: 1.960s | IP: 185.153.183.125
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960638051874642.london-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:33:17 | Response: 0.119s | IP: 2a09:bac5:6249:1187::1bf:7f
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.18.33.45:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:34:00 | Response: 0.474s | IP: 104.28.152.176
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.npmjs.com:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:34:00 | Response: 0.451s | IP: 103.35.189.250
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978804870439763.copenhagen-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:34:01 | Response: 0.173s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.0.135:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:34:45 | Response: 0.412s | IP: 104.28.165.128
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.wto.org:2095?host=fuckingfangbinxing.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:35:31 | Response: 0.560s | IP: 94.142.240.71
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.13.229:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:35:33 | Response: 0.739s | IP: 95.164.37.76
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638961293929381453.rasht-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:35:40 | Response: 0.312s | IP: 104.28.152.153
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.67.248:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:35:40 | Response: 0.167s | IP: 95.164.18.181
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.18.181:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:36:16 | Response: 0.696s | IP: 146.19.230.250
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638947655359329765.birjand-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:36:26 | Response: 0.160s | IP: 146.19.230.250
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.250:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:36:27 | Response: 0.682s | IP: 45.12.133.224
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638932639207614557.kish-drc-dcrabj.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:37:01 | Response: 0.658s | IP: 94.142.240.71
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.183.49:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:37:02 | Response: 0.633s | IP: 45.12.150.156
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.156:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:37:09 | Response: 0.719s | IP: 5.253.41.223
-vless://a0a866bd-8c0c-464c-9b96-c6dafa154419@5.253.41.223:80?path=%2Fvless%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:37:12 | Response: 3.003s | IP: 104.28.152.176
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.17.135.117:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:37:47 | Response: 0.446s | IP: 23.94.37.117
-vless://3f5eba46-f9c9-4d49-985c-2a4345da4f5a@104.24.204.237:80?host=billowing-recipe-c066-ppal03.kerocel835.workers.dev&path=%2Fddd%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:38:42 | Response: 1.407s | IP: 185.231.205.193
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.193:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:39:17 | Response: 0.303s | IP: 209.126.84.189
-vless://0417be58-2ea8-49de-8083-9eff9b0137e5@v2ray.codefyinc.com:443?host=v2ray.codefyinc.com&path=%2Fvlessws&sni=v2ray.codefyinc.com&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:39:17 | Response: 0.472s | IP: 104.28.152.170
-vless://046da250-d5ef-4867-9095-302477d54d20@www.4chan.org:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:39:17 | Response: 0.626s | IP: 185.231.205.193
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638958556051243448.kish-drc-tusabl.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:39:18 | Response: 0.768s | IP: 45.88.183.164
-vless://ef246c6f-6e7d-4286-af33-5485544b0ba8@45.88.183.164:49355?path=%2F#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:39:26 | Response: 0.524s | IP: 37.120.186.241
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.186.241:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:40:14 | Response: 0.184s | IP: 146.19.230.249
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960022279961472.qazvin-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:40:49 | Response: 0.439s | IP: 185.186.26.243
-vless://4b6a8727-c0a3-4d13-9048-d61d7d671c7e@configmastervip.khalilv2.com:46990?host=telewebion.com&path=%2F#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:40:51 | Response: 2.808s | IP: 185.153.183.183
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.183:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:41:33 | Response: 0.617s | IP: 185.138.164.4
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638955452903724777.malayer-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:41:33 | Response: 0.189s | IP: 2a09:bac5:6248:2da5::48c:45
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.67.248:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:41:34 | Response: 0.606s | IP: 185.153.183.150
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638959321651247960.budapest-blkaft-aaao.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:41:36 | Response: 1.921s | IP: 146.19.230.254
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638947655359327481.birjand-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:41:41 | Response: 0.313s | IP: 45.89.111.145
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638974363192987483.budapest-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:41:47 | Response: 1.085s | IP: 45.89.111.151
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638977742221947111.warsaw-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:42:18 | Response: 0.160s | IP: 104.28.165.132
-vless://d345d11e-c424-4583-b36e-527ab1f0afa4@104.26.4.60:8080?host=v2raynselling.kir-rasol-kir.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:42:18 | Response: 0.509s | IP: 89.221.224.225
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@89.221.224.225:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:42:20 | Response: 2.356s | IP: 146.19.230.249
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.249:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:43:02 | Response: 0.649s | IP: 95.164.37.43
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638939927968105350.dublin-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:43:11 | Response: 0.285s | IP: 89.221.224.210
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@89.221.224.210:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:43:12 | Response: 0.181s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.12.229:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:43:48 | Response: 0.212s | IP: 2a09:bac5:6249:2da5::48c:20
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@namemc.com:2095?host=114514.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:43:49 | Response: 1.532s | IP: 104.28.160.7
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@itarmy.com.ua:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:43:56 | Response: 0.163s | IP: 104.28.152.153
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.13.229:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:44:05 | Response: 2.279s | IP: 185.31.200.16
-vless://f502e072-14a2-4a76-9d4b-2ab33a89657c@rhdheysy-463252636-fryhuhhd.poshakhowdy.ir:2095?host=uevsievsusg-82828isbshshs.poshakhowdy.ir&path=%2F%3FTELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:44:43 | Response: 0.406s | IP: 185.68.244.86
-vless://7c8cf438-8d5a-4ce9-bc1c-88345a545f2f@185.68.244.86:42545?host=skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:44:51 | Response: 1.913s | IP: 146.19.230.247
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638947655359333933.birjand-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:45:19 | Response: 0.581s | IP: 45.89.111.80
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638977742221945483.warsaw-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:04 | Response: 0.149s | IP: 95.164.6.79
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.79:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:12 | Response: 0.629s | IP: 157.180.123.25
-vless://638c1918-f6f0-4ecc-85e6-a3ac50ed9c02@157.180.123.25:443?host=157.180.123.25&path=%2Flinkws%3Fed&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:49 | Response: 0.470s | IP: 2605:a140:2273:7184::1
-vless://0417be58-2ea8-49de-8083-9eff9b0137e5@209.126.84.189:443?host=v2ray.codefyinc.com&path=%2Fvlessws&sni=v2ray.codefyinc.com&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:49 | Response: 1.662s | IP: 185.153.183.92
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638970129452669909.budapest-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:49 | Response: 2.227s | IP: 146.19.230.254
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.254:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:57 | Response: 1.048s | IP: 92.118.232.149
-vless://cfe554a3-4cd5-4fe1-9951-e6b65fc52a74@cone-snail.unity4world.ir:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:46:57 | Response: 0.090s | IP: 2a09:bac5:6248:2da5::48c:45
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.150.254:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:47:33 | Response: 0.283s | IP: 104.28.158.91
-vless://046da250-d5ef-4867-9095-302477d54d20@www.ipget.net:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:47:35 | Response: 2.904s | IP: 95.164.6.79
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638972070444854852.kish-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:48:17 | Response: 0.449s | IP: 94.142.240.71
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:48:19 | Response: 2.706s | IP: 185.231.205.178
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.178:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:48:21 | Response: 1.845s | IP: 45.12.150.144
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.144:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:48:31 | Response: 0.908s | IP: 104.28.165.131
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.183.49:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:02 | Response: 0.427s | IP: 2a09:bac5:6248:281e::3ff:4a
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.67.248:8880?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:02 | Response: 0.635s | IP: 185.231.205.178
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638970953252602111.dublin-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:10 | Response: 0.111s | IP: 2a09:bac5:6248:1846::26b:86
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:11 | Response: 0.584s | IP: 95.164.6.79
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960582852354160.paris-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:11 | Response: 0.527s | IP: 185.138.164.186
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.186:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:11 | Response: 0.301s | IP: 45.12.133.224
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638934442807081605.stockholm-drc-tusacae.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:45 | Response: 0.311s | IP: 104.28.152.144
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:46 | Response: 0.501s | IP: 185.231.205.188
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.188:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:46 | Response: 0.612s | IP: 2a01:4f8:1c1a:7501::1
-vless://6967a7f2-e8a7-497e-f72e-c989e9f896d7@91.98.137.244:443?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:49:46 | Response: 0.939s | IP: 104.28.152.129
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:51:20 | Response: 0.104s | IP: 2a09:bac6:d721:78::c:380
-vless://046da250-d5ef-4867-9095-302477d54d20@140.99.233.58:80?host=feng.ipy29c99.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:51:26 | Response: 0.825s | IP: 203.202.232.102
-vless://7f563a56-e0fe-44b1-a341-978e0bada967@pay.dlaparat.ir:80?host=vand.ar&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:51:26 | Response: 0.414s | IP: 85.195.101.122
-vless://b338a8f4-9aa3-4e1d-b6b7-5efed8ae038b@85.195.101.122:48129#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:51:28 | Response: 2.449s | IP: 45.120.178.93
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978016693357922.oslo-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:04 | Response: 1.189s | IP: 45.89.111.80
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960022279966763.qazvin-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:10 | Response: 0.429s | IP: 45.89.111.151
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.111.151:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:11 | Response: 0.232s | IP: 45.89.111.144
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.111.144:8880?path=%2F&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:11 | Response: 0.426s | IP: 94.142.240.71
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.13.229:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:49 | Response: 0.458s | IP: 185.231.205.195
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.195:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:53 | Response: 1.424s | IP: 38.47.176.134
-vless://a19fd311-c343-4b54-9ca3-fe6dcd84c0fc@38.47.176.134:59967?path=%2F#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:52:58 | Response: 3.123s | IP: 107.174.20.100
-vless://7e41b486-1783-446c-b0d0-4fe1389cae84@107.174.20.100:55703?sni=107.174.20.100#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:53:33 | Response: 0.699s | IP: 185.231.205.191
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638964503850730101.prague-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:53:42 | Response: 0.622s | IP: 185.153.183.185
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638969941052745836.athens-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:54:21 | Response: 2.339s | IP: 104.28.158.206
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@blog.cloudflare.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:54:26 | Response: 0.565s | IP: 95.164.37.43
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638965720991613536.ahvaz-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:54:29 | Response: 2.237s | IP: 152.228.162.19
-vless://5ce84688-f535-46ad-a512-37b17becf6ea@152.228.162.19:80?host=akamaized.net&path=%2Fvless%2F%23%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:55:04 | Response: 0.488s | IP: 37.120.184.180
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.184.180:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:55:05 | Response: 0.170s | IP: 185.231.205.167
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638966654853737260.dublin-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:55:15 | Response: 3.162s | IP: 185.231.205.176
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638970192452860730.helsinki-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:55:49 | Response: 0.695s | IP: 45.159.248.108
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.159.248.108:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:56:34 | Response: 0.892s | IP: 51.68.198.51
-vless://1848ccc2-09f0-4367-aa90-8b174de73614@51.68.198.51:8080?path=%2FYUYETrenyklxeoyemeWFCrneerV&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:56:34 | Response: 0.545s | IP: 2a12:5940:4d2f::2
-vless://d8d05386-e381-40a4-bb63-715c208b3ed3@109.120.132.142:40617?type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:56:35 | Response: 0.510s | IP: 104.28.165.131
-vless://d6ff33a6-03bf-4338-8a63-62ab284a9466@45.131.5.111:80?host=feng4.l1ut8bi9.workers.dev&path=%2FTelegram&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:57:28 | Response: 0.392s | IP: 104.28.165.128
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@cf.090227.xyz:2095?host=fuckingfangbinxing.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:47 | Response: 0.703s | IP: 185.153.183.150
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638974021050130973.kish-blkaft-aaba.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:48 | Response: 1.122s | IP: 185.236.232.242
-vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v6.ipforvetra.shop:80?host=pqh29v6.ipforvetra.shop&sni=pqh29v6.ipforvetra.shop&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:48 | Response: 1.657s | IP: 104.28.165.132
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@172.64.154.211:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:56 | Response: 0.733s | IP: 104.28.158.222
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:56 | Response: 0.686s | IP: 45.12.133.224
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638937381606723301.brussels-drc-tusacaf.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:58 | Response: 2.271s | IP: 95.164.37.43
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.43:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:58:59 | Response: 0.348s | IP: 91.99.177.36
-vless://77dacbb9-eb50-487e-adc7-f1f2cb4cb19c@91.99.177.36:443?host=91.99.177.36&path=%2Flinkws%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:59:33 | Response: 0.679s | IP: 45.12.150.134
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.134:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:59:33 | Response: 0.500s | IP: 103.35.189.137
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638975337676095689.lisbon-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 08:59:34 | Response: 0.923s | IP: 138.201.147.127
-vless://2097a5c6-c67e-4297-99e3-9996ee33a341@armanstore2.dynv6.net:37926?type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:00:16 | Response: 0.583s | IP: 185.231.205.176
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638958447451232006.yasuj-drc-tusabl.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:00:25 | Response: 0.332s | IP: 45.89.111.159
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638982038339964076.dublin-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:00:26 | Response: 1.489s | IP: 104.28.157.113
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.fbi.gov:2095?host=fuckingfangbinxing.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:00:27 | Response: 1.228s | IP: 185.231.205.167
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960022190781868.ahvaz-blkaft-aaao.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:00:30 | Response: 0.292s | IP: 94.131.14.200
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638977742302036034.prague-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:01:00 | Response: 0.560s | IP: 74.48.192.210
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.udemy.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:01:00 | Response: 0.675s | IP: 185.153.183.184
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638958908853566182.paris-blkaft-aaao.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:01:01 | Response: 0.175s | IP: 95.164.37.76
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.37.76:8880?sni=%F0%9F%94%92+%5BBy+EbraSha%5D+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:01:05 | Response: 0.086s | IP: 2a09:bac5:6248:1187::1bf:c8
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.150.254:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:01:05 | Response: 2.286s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.67.248:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:01:10 | Response: 0.923s | IP: 2407:3640:2270:1371::1
+# Tested at: 2025-11-20 02:37:42 | Response: 2.209s | IP: 84.247.145.11
 vless://d1c3b3d2-a7da-40b6-a6cb-23619528e130@84.247.145.11:37726#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:01:46 | Response: 0.797s | IP: 94.131.14.28
-vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978016693355897.oslo-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:38:15 | Response: 0.451s | IP: 2a09:bac6:d708:2832::401:39
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:01:46 | Response: 0.345s | IP: 146.19.230.254
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638948510129810487.dezful-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:38:59 | Response: 0.593s | IP: 103.35.189.137
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@103.35.189.137:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:01:50 | Response: 0.147s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.0.135:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:38:59 | Response: 0.576s | IP: 45.12.133.224
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638937381606723301.brussels-drc-tusacaf.info:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:02:30 | Response: 0.384s | IP: 2a09:bac5:624a:1173::1bd:5b
-vless://bc0a2570-d5fb-4906-b0f0-d47cdcd0a381@104.18.26.94:80?host=esetsecuritylicense.tibivip547.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:38:59 | Response: 0.694s | IP: 104.28.153.238
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.150.254:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:02:30 | Response: 0.747s | IP: 91.98.33.242
-vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.33.242:443?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:38:59 | Response: 0.454s | IP: 203.23.160.5
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:02:36 | Response: 0.185s | IP: 146.19.230.247
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.247:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:39:08 | Response: 0.479s | IP: 2a01:7e03::2000:10ff:fe19:8c46
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@172.64.154.211:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:02:39 | Response: 0.124s | IP: 2a09:bac5:6248:183c::26a:45
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.13.229:80?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:39:45 | Response: 2.239s | IP: 45.12.133.212
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.212:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:03:14 | Response: 0.329s | IP: 185.231.205.161
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.161:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:39:52 | Response: 0.632s | IP: 2001:470:66:2fc::2
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@developers.cloudflare.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:03:18 | Response: 4.662s | IP: 45.82.251.250
-vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v7.ipforvetra.shop:80?sni=pqh29v7.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:40:27 | Response: 0.491s | IP: 45.12.133.176
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.133.176:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:03:22 | Response: 0.184s | IP: 185.236.232.141
-vless://401374e6-df77-41fb-f638-dad8184f175b@pqh27v6.ipforvetra.shop:80?host=pqh27v6.ipforvetra.shop&sni=pqh27v6.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:40:27 | Response: 0.226s | IP: 104.28.158.254
+vless://d01a40f5-4e6f-4279-b0a9-0f2a268ab03c@198.41.208.211:8080?host=worker-falling-snow-ffd7.test61.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:04:09 | Response: 0.181s | IP: 104.28.152.129
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.12.229:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:40:27 | Response: 0.480s | IP: 138.201.147.127
+vless://2097a5c6-c67e-4297-99e3-9996ee33a341@armanstore2.dynv6.net:37926?type=raw#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:04:10 | Response: 0.562s | IP: 185.231.205.192
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.192:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:40:29 | Response: 0.673s | IP: 104.28.164.158
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.17.135.117:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:04:44 | Response: 0.576s | IP: 45.89.111.159
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.89.111.159:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:04:55 | Response: 0.325s | IP: 216.234.143.35
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.18.28.7:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:05:32 | Response: 4.329s | IP: 2a09:bac5:6248:183c::26a:45
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:05:36 | Response: 2.458s | IP: 144.124.255.72
-vless://1a79938c-e170-4d9b-99ac-2bfd19582461@144.124.255.72:443?type=raw#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:05:37 | Response: 0.581s | IP: 45.89.111.144
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638982038339964522.dublin-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:05:40 | Response: 1.431s | IP: 95.164.6.79
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638938180050776211.birjand-drc-tusabl.info:8880?path=%2F&type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:06:14 | Response: 0.583s | IP: 95.164.6.189
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.189:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:06:17 | Response: 1.935s | IP: 95.164.18.181
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638953873686410316.lahijan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:07:01 | Response: 2.442s | IP: 104.28.152.130
+# Tested at: 2025-11-20 02:40:36 | Response: 0.602s | IP: 104.28.153.243
 vless://7d47ff30-74b2-47c7-b5bd-b06ef8b8f80e@go.inmobi.com:8080?host=spring-flower-3254.magicnight101.workers.dev&path=%2F9PnUgtdLG8Br%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:07:44 | Response: 0.347s | IP: 103.35.189.107
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@103.35.189.107:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:40:36 | Response: 0.189s | IP: 85.195.101.122
+vless://b338a8f4-9aa3-4e1d-b6b7-5efed8ae038b@85.195.101.122:48129#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:07:55 | Response: 1.749s | IP: 46.250.237.164
-vless://fe7d9497-c04b-4462-900d-333abc79a90f@46.250.237.164:55076?type=raw#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:41:11 | Response: 0.588s | IP: 2605:a140:2273:7184::1
+vless://0417be58-2ea8-49de-8083-9eff9b0137e5@v2ray.codefyinc.com:443?host=v2ray.codefyinc.com&path=%2Fvlessws&sni=v2ray.codefyinc.com&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:08:29 | Response: 0.291s | IP: 104.28.165.131
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@sub.091224.xyz:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:41:12 | Response: 0.045s | IP: 104.28.153.238
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.0.135:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:08:30 | Response: 0.630s | IP: 185.231.205.183
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638958908853574874.paris-blkaft-aaao.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:41:57 | Response: 0.070s | IP: 104.28.157.171
+vless://046da250-d5ef-4867-9095-302477d54d20@www.ipget.net:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:08:38 | Response: 0.706s | IP: 212.192.31.146
-vless://199a78a5-b4d4-4064-a0db-bb37c5839134@212.192.31.146:443?path=%2Fpanika&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:42:08 | Response: 0.443s | IP: 45.12.150.156
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.156:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:09:14 | Response: 0.892s | IP: 45.140.167.200
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.200:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:42:42 | Response: 0.953s | IP: 92.118.232.149
+vless://cfe554a3-4cd5-4fe1-9951-e6b65fc52a74@92.118.232.149:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:09:59 | Response: 0.688s | IP: 95.164.37.43
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638948510129819106.dezful-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:42:43 | Response: 0.359s | IP: 185.231.205.246
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.246:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:11:39 | Response: 0.640s | IP: 146.19.230.249
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638974363192986340.budapest-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:42:50 | Response: 0.204s | IP: 2a01:e5c0:95a1::2
+vless://e1f6bc5b-cbc2-49bb-8f26-1bf8bb85d18a@172.66.156.81:80?host=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.&path=%2F%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:11:41 | Response: 2.378s | IP: 45.140.167.49
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.49:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:43:38 | Response: 4.665s | IP: 203.202.232.102
+vless://7f563a56-e0fe-44b1-a341-978e0bada967@203.202.232.102:80?host=vand.ar&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:11:42 | Response: 3.678s | IP: 146.19.230.254
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638950280342832628.esfahan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:44:56 | Response: 0.154s | IP: 104.28.164.152
+vless://636de463-b509-4631-adc6-400b21733278@104.21.59.114:8880?host=index.harmony510.workers.dev&path=%2Frlg2mgmxyyu4n5a8&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:12:18 | Response: 2.611s | IP: 45.12.133.224
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929750206966997.oslo-drc-dcrabj.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:44:56 | Response: 0.491s | IP: 2a13:e3c1:407d::
+vless://e016e15a-7e21-4d9a-8951-f1112c850f28@185.113.10.197:49246#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:12:20 | Response: 4.557s | IP: 40.160.4.211
-vless://9dc11620-987c-4344-9088-f46fdfae4054@40.160.4.211:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:44:56 | Response: 0.355s | IP: 104.28.157.175
+vless://4c9541c7-5fa1-403c-84af-175e3b25a27f@172.67.207.26:8080?host=201.58vtg99l.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:12:24 | Response: 0.192s | IP: 104.28.152.150
-vless://d0c1a844-40be-4717-accf-fd4f67980d4a@www.visa.com.sg:2052?host=vlesstest.nchen5022-797.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:44:56 | Response: 0.632s | IP: 45.82.251.250
+vless://401374e6-df77-41fb-f638-dad8184f175b@45.82.251.250:80?sni=pqh29v7.ipforvetra.shop&type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:13:01 | Response: 0.669s | IP: 185.138.164.67
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.67:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:44:56 | Response: 0.708s | IP: 104.28.159.229
+vless://18ff277a-3b9a-46a0-842e-290f2b0661d2@whatismyipaddress.com:80?host=hidden-base-217b.powas74490.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:13:13 | Response: 3.740s | IP: 185.236.232.241
-vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v5.ipforvetra.shop:80?host=pqh29v5.ipforvetra.shop&sni=pqh29v5.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:44:58 | Response: 0.584s | IP: 23.94.37.117
+vless://b550a101-63fe-4862-bfd3-8b87bb4168dd@104.16.1.47:80?host=flat-bread-ddb6-ppal03.joriy39169.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:13:47 | Response: 0.287s | IP: 89.221.224.149
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@89.221.224.149:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:45:41 | Response: 0.071s | IP: 104.28.158.129
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@104.18.20.94:2095?host=xijinpingnmsl.s4ar.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:13:50 | Response: 0.128s | IP: 23.224.189.171
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@openai.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:45:45 | Response: 4.687s | IP: 104.28.159.231
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:13:55 | Response: 0.428s | IP: 204.216.216.23
-vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:45:49 | Response: 0.561s | IP: 89.110.69.27
+vless://41398380-2073-4d85-878a-24194a6f04a3@188.114.96.1:2086?host=3.azadteam.workers.dev&path=%2FibCRjLW6w29xJBIL%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:13:57 | Response: 0.223s | IP: 185.153.183.92
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.92:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:45:59 | Response: 0.156s | IP: 104.28.162.93
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:14:33 | Response: 0.900s | IP: 185.138.164.5
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.5:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:46:25 | Response: 0.084s | IP: 185.236.232.241
+vless://401374e6-df77-41fb-f638-dad8184f175b@185.236.232.241:80?host=pqh29v5.ipforvetra.shop&sni=pqh29v5.ipforvetra.shop&type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:14:35 | Response: 2.331s | IP: 45.82.251.249
-vless://401374e6-df77-41fb-f638-dad8184f175b@45.82.251.249:80?sni=pqh29v4.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:46:25 | Response: 0.640s | IP: 107.174.131.32
+vless://590dfbde-f8c8-429b-b947-39bb767ddd9c@104.24.87.230:80?host=square-moon-bc81-ppal03.tivere6418.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:14:37 | Response: 0.168s | IP: 104.28.165.55
+# Tested at: 2025-11-20 02:46:26 | Response: 0.251s | IP: 94.142.240.71
 vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:14:41 | Response: 0.287s | IP: 95.164.45.122
-vless://005a5104-82c5-4a6b-b023-6e621ec9071d@95.164.45.122:50268?host=Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN&path=%2F#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:14:46 | Response: 4.991s | IP: 185.213.240.86
-vless://b4f3041b-e939-4c1a-8f1d-70e8369b25eb@185.213.240.86:4655#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:15:18 | Response: 0.644s | IP: 185.231.205.167
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.167:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:15:18 | Response: 0.286s | IP: 2a09:bac5:6249:1846::26b:23
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@linux.do:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:15:20 | Response: 1.394s | IP: 104.28.152.141
-vless://046da250-d5ef-4867-9095-302477d54d20@www.gov.ua:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:16:02 | Response: 0.475s | IP: 107.174.181.116
-vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.20.16.234:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:16:03 | Response: 0.548s | IP: 86.104.74.73
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.73:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:16:47 | Response: 0.338s | IP: 2a09:bac5:6248:1173::1bd:e9
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@sub.091224.xyz:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:16:56 | Response: 0.445s | IP: 86.104.74.62
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@86.104.74.62:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:17:32 | Response: 0.148s | IP: 185.153.183.185
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.185:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:17:33 | Response: 0.795s | IP: 185.231.205.183
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.183:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:18:16 | Response: 0.662s | IP: 185.153.183.210
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.210:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:18:17 | Response: 1.199s | IP: 45.159.248.108
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638952778316595016.hamedan-drc-tusaas.info:8880?type=grpc#%F0%9F%94%A5
-
-# Tested at: 2025-11-19 09:18:17 | Response: 0.718s | IP: 2604:2dc0:101:100::186
+# Tested at: 2025-11-20 02:47:12 | Response: 0.032s | IP: 2604:2dc0:101:100::186
 vless://9dc11620-987c-4344-9088-f46fdfae4054@40.160.4.127:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:18:24 | Response: 0.248s | IP: 104.28.165.55
-vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.12.229:80?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:47:56 | Response: 1.138s | IP: 104.28.162.94
+vless://d345d11e-c424-4583-b36e-527ab1f0afa4@104.26.4.60:8080?host=v2raynselling.kir-rasol-kir.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:18:25 | Response: 0.646s | IP: 45.89.111.145
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638977742221946555.warsaw-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:48:07 | Response: 0.503s | IP: 91.107.139.110
+vless://cfe554a3-4cd5-4fe1-9951-e6b65fc52a74@91.107.139.110:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:18:25 | Response: 0.696s | IP: 185.153.183.185
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638966654853739729.dublin-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:48:41 | Response: 0.530s | IP: 45.140.167.173
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.173:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:18:26 | Response: 0.179s | IP: 146.19.230.248
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@146.19.230.248:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 02:48:42 | Response: 0.654s | IP: 2a03:90c0:166:78::1
+vless://636de463-b509-4631-adc6-400b21733278@172.67.137.47:2086?host=index.harmony510.workers.dev&path=%2F1qrxwiek8tujvr6h&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:19:02 | Response: 0.551s | IP: 2a03:4000:f:27b:28ee:3aff:fe10:c47c
+# Tested at: 2025-11-20 02:48:49 | Response: 0.213s | IP: 2a01:4f8:c010:6d16::1
+vless://87e9533d-df16-4a58-8a6d-b48f8e6136aa@91.107.128.87:3030#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:49:26 | Response: 0.411s | IP: 109.120.132.142
+vless://d8d05386-e381-40a4-bb63-715c208b3ed3@109.120.132.142:40617?type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:10 | Response: 0.113s | IP: 2a09:bac6:d709:a0::10:4aa
+vless://8169cd18-e824-47a4-a4d4-96433b1a519d@172.67.161.104:2095?host=testdvpnhub69.95f425b718.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:18 | Response: 0.117s | IP: 104.28.164.203
+vless://9f0eae34-97c1-4c07-8a55-438379981334@104.24.148.115:80?host=snowy-bush-4df8-ppal03.toxebex651.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:19 | Response: 0.407s | IP: 104.28.162.194
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:20 | Response: 0.407s | IP: 83.228.225.98
+vless://14ba01de-0de4-48b4-9327-d6a2f7797764@83.228.225.98:24471?path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:21 | Response: 0.306s | IP: 104.168.76.144
+vless://9f0eae34-97c1-4c07-8a55-438379981334@104.18.56.155:8080?host=snowy-bush-4df8-ppal03.toxebex651.workers.dev&path=%2F%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:55 | Response: 0.245s | IP: 104.28.157.242
+vless://1853d1d2-1ccf-48e6-ae05-0c0bb285a8c4@104.16.19.242:8880?host=winter-bush-f08c-ppal03.himigaw787.workers.dev&path=%2F%3F%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:56 | Response: 0.309s | IP: 91.98.137.244
+vless://6967a7f2-e8a7-497e-f72e-c989e9f896d7@91.98.137.244:443?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:50:59 | Response: 3.499s | IP: 203.23.160.5
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.52.199:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:51:04 | Response: 0.709s | IP: 148.135.187.162
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@itarmy.com.ua:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:51:05 | Response: 1.657s | IP: 5.253.41.223
+vless://a0a866bd-8c0c-464c-9b96-c6dafa154419@5.253.41.223:80?path=%2Fvless%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:51:39 | Response: 0.539s | IP: 45.140.167.209
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.209:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:51:48 | Response: 0.366s | IP: 37.120.186.241
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.186.241:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:52:25 | Response: 0.586s | IP: 92.118.232.161
+vless://9dc11620-987c-4344-9088-f46fdfae4054@92.118.232.161:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:52:33 | Response: 0.437s | IP: 95.164.6.79
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638938180050776211.birjand-drc-tusabl.info:8880?path=%2F&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:53:09 | Response: 0.556s | IP: 23.94.37.117
+vless://3f5eba46-f9c9-4d49-985c-2a4345da4f5a@104.24.204.237:80?host=billowing-recipe-c066-ppal03.kerocel835.workers.dev&path=%2Fddd%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:53:10 | Response: 0.079s | IP: 104.28.157.166
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.18.28.7:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:54:04 | Response: 0.500s | IP: 104.28.153.181
+vless://9f0eae34-97c1-4c07-8a55-438379981334@104.25.35.114:8080?host=snowy-bush-4df8-ppal03.toxebex651.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:54:50 | Response: 0.915s | IP: 2a03:90c0:166:78::1
+vless://636de463-b509-4631-adc6-400b21733278@104.17.109.71:8080?host=index.harmony509.workers.dev&path=%2Fz5eg4ngdcqls&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:55:25 | Response: 0.705s | IP: 2407:3640:2270:1370::1
+vless://fe7d9497-c04b-4462-900d-333abc79a90f@46.250.237.164:55076?path=%2F#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:55:25 | Response: 1.054s | IP: 91.201.112.15
+vless://c14eb4f9-1ab2-4e4e-b75c-a3adc96d2884@104.21.27.126:2052?host=16vuhvadi1hvnj1kwy8ax33ux224kuxp.kurdpanel-2211.workers.dev&path=%2Faq35J2RBeiPBUtm5%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:55:33 | Response: 0.079s | IP: 185.236.232.241
+vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v5.ipforvetra.shop:80?host=pqh29v5.ipforvetra.shop&sni=pqh29v5.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:55:33 | Response: 0.200s | IP: 104.28.164.202
+vless://818a98bf-e7d0-45d5-800b-24d4058234c6@104.16.40.145:80?host=still-smoke-881e-ppal03.cabit21569.workers.dev&path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:56:09 | Response: 1.012s | IP: 94.142.240.71
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.150.254:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:56:10 | Response: 0.390s | IP: 104.28.153.242
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@linux.do:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:56:55 | Response: 0.652s | IP: 83.222.20.64
+vless://393044fb-755a-4623-965e-3ae4fe39d730@83.222.20.64:53299?path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:56:56 | Response: 0.490s | IP: 104.28.159.231
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@www.visa.com.sg:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:57:39 | Response: 0.069s | IP: 104.28.157.166
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.18.33.45:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:57:39 | Response: 0.175s | IP: 104.28.157.172
+vless://51d6b757-f262-4a95-843c-5f660223d3fc@104.24.79.221:80?host=morning-darkness-2df2.m197210665.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:57:40 | Response: 0.962s | IP: 194.62.99.239
+vless://e819cfb1-3c30-48b0-957d-e479bace661b@194.62.99.239:80?path=%2Frfvtgws&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:57:40 | Response: 1.411s | IP: 104.28.161.245
+vless://8169cd18-e824-47a4-a4d4-96433b1a519d@172.67.161.104:80?host=testdvpnhub69.95f425b718.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:57:48 | Response: 0.130s | IP: 185.153.183.125
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960638051874642.london-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:58:34 | Response: 0.150s | IP: 2a09:bac6:d70f:1678::23d:f
+vless://046da250-d5ef-4867-9095-302477d54d20@www.4chan.org:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:59:08 | Response: 0.906s | IP: 91.98.33.242
+vless://95b1344a-2b59-419f-ab7d-2ff7e5c6aa34@91.98.33.242:443?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:59:18 | Response: 0.140s | IP: 104.28.161.242
+vless://252d7c6c-3f50-44fb-9a51-13963fc727e0@104.18.15.19:8080?host=0105.f5s8fbc2.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 02:59:53 | Response: 0.747s | IP: 104.28.153.225
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.18.29.7:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:02:17 | Response: 0.242s | IP: 104.28.164.155
+vless://4c9541c7-5fa1-403c-84af-175e3b25a27f@104.21.64.1:8080?host=201.58vtg99l.workers.dev&path=%2Fproxyip%3Dproxyip.us.fxxk.dedyn.io&sni=201.58vtg99l.workers.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:02:52 | Response: 0.087s | IP: 104.28.164.150
+vless://41398380-2073-4d85-878a-24194a6f04a3@188.114.97.1:2095?host=3.azadteam.workers.dev&path=%2Fu5LrWYiY0ODb2qSv%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:02:53 | Response: 1.047s | IP: 104.28.153.226
+vless://046da250-d5ef-4867-9095-302477d54d20@ip.sb:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:03:38 | Response: 1.012s | IP: 65.75.221.129
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@cf.090227.xyz:2095?host=fuckingfangbinxing.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:03:38 | Response: 0.465s | IP: 45.12.150.144
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.144:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:04:22 | Response: 0.596s | IP: 95.164.45.122
+vless://005a5104-82c5-4a6b-b023-6e621ec9071d@95.164.45.122:50268?host=Join---i10VPN---Join---i10VPN---Join---i10VPN---Join---i10VPN&path=%2F#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:04:31 | Response: 0.819s | IP: 104.28.157.174
+vless://3f5eba46-f9c9-4d49-985c-2a4345da4f5a@104.16.52.146:80?host=billowing-recipe-c066-ppal03.kerocel835.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:05:07 | Response: 0.910s | IP: 91.98.155.220
+vless://6967a7f2-e8a7-497e-f72e-c989e9f896d7@91.98.155.220:443?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:05:15 | Response: 0.193s | IP: 2604:2dc0:101:100::1305
+vless://9dc11620-987c-4344-9088-f46fdfae4054@40.160.4.211:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:05:51 | Response: 0.325s | IP: 2a09:bac1:76e1:62b0::259:40
+vless://590dfbde-f8c8-429b-b947-39bb767ddd9c@172.64.92.243:80?host=square-moon-bc81-ppal03.tivere6418.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:05:52 | Response: 0.788s | IP: 104.28.153.181
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.150.254:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:05:52 | Response: 0.175s | IP: 95.164.6.79
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638972070444854852.kish-blkaft-aaax.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:07:21 | Response: 0.405s | IP: 104.28.158.124
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.12.229:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:07:26 | Response: 0.083s | IP: 2a09:bac6:d70f:1791::259:2e
+vless://046da250-d5ef-4867-9095-302477d54d20@xn--b6gac.eu.org:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:08:05 | Response: 0.474s | IP: 104.28.153.197
+vless://818a98bf-e7d0-45d5-800b-24d4058234c6@104.24.172.153:80?host=still-smoke-881e-ppal03.cabit21569.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:08:51 | Response: 0.459s | IP: 104.28.158.124
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@openai.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:08:52 | Response: 0.847s | IP: 107.174.131.32
+vless://1853d1d2-1ccf-48e6-ae05-0c0bb285a8c4@104.16.19.242:80?host=winter-bush-f08c-ppal03.himigaw787.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:09:42 | Response: 0.680s | IP: 152.53.52.242
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@152.53.52.242:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:09:45 | Response: 0.042s | IP: 45.82.251.249
+vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v4.ipforvetra.shop:80?sni=pqh29v4.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:09:47 | Response: 0.078s | IP: 104.28.158.124
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.udemy.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:10:21 | Response: 0.347s | IP: 104.28.164.202
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@namemc.com:2095?host=114514.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:10:21 | Response: 0.324s | IP: 104.28.153.244
+vless://046da250-d5ef-4867-9095-302477d54d20@www.gov.ua:8080?host=feng.ipy29c99.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:11:07 | Response: 0.247s | IP: 104.28.157.242
+vless://4c9541c7-5fa1-403c-84af-175e3b25a27f@104.21.15.212:8080?host=201.58vtg99l.workers.dev&path=%2F&sni=201.58vtg99l.workers.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:12:36 | Response: 1.653s | IP: 45.140.167.172
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.172:8880?sni=---%40AZARBAYKAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:12:37 | Response: 0.096s | IP: 2a09:bac5:c829:db9::15e:1d
+vless://b550a101-63fe-4862-bfd3-8b87bb4168dd@104.24.201.19:80?host=flat-bread-ddb6-ppal03.joriy39169.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:12:37 | Response: 0.332s | IP: 188.34.205.203
+vless://323e66b8-9214-487f-9499-8b5bcc68c3f4@lovetea1.dastur-amuzesh.ir:3002?path=%2F#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:12:37 | Response: 0.666s | IP: 104.28.153.183
+vless://d6ff33a6-03bf-4338-8a63-62ab284a9466@45.131.5.111:80?host=feng4.l1ut8bi9.workers.dev&path=%2FTelegram&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:12:46 | Response: 1.065s | IP: 2a13:9500:c0:3d2e:a43e:ca7a:30ff:1
+vless://6c446fb0-2fb3-4558-abcf-e497438ef091@telegram-armanstore2.dynv6.net:53132?type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:13:21 | Response: 0.390s | IP: 104.28.157.173
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@104.18.41.190:2095?host=xijinpingnmsl.s4ar.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:13:30 | Response: 0.853s | IP: 2a03:90c0:166:78::1
+vless://636de463-b509-4631-adc6-400b21733278@172.67.179.152:2086?host=index.harmony510.workers.dev&path=%2F0hj0k45fc0ro1kq7&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:13:30 | Response: 1.082s | IP: 92.118.232.149
+vless://cfe554a3-4cd5-4fe1-9951-e6b65fc52a74@cone-snail.unity4world.ir:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:05 | Response: 0.562s | IP: 95.164.6.79
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638960582852354160.paris-blkaft-aaap.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:05 | Response: 0.459s | IP: 94.131.14.200
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638977742302036034.prague-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:06 | Response: 0.112s | IP: 104.28.153.213
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@sub.091224.xyz:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:13 | Response: 0.317s | IP: 2a01:4f8:1c1b:2a8e::1
+vless://5bf8a4ed-a703-43f8-9eef-90daf06b41db@91.107.240.82:1415?path=%2F#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:17 | Response: 2.503s | IP: 203.202.232.102
+vless://7f563a56-e0fe-44b1-a341-978e0bada967@pay.dlaparat.ir:80?host=vand.ar&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:49 | Response: 0.280s | IP: 2a09:bac1:76a1:62b0::400:3
+vless://1953c1e6-af68-4c60-a6f8-f8194de580f6@172.67.209.105:2095?host=worker-ancient-bonus-70e8.96dc4cc80bfb.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:14:51 | Response: 0.588s | IP: 45.12.133.224
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638934442807081605.stockholm-drc-tusacae.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:16:19 | Response: 0.588s | IP: 45.12.133.224
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638941610778724075.helsinki-drc-tusacaf.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:16:19 | Response: 0.176s | IP: 185.236.232.141
+vless://401374e6-df77-41fb-f638-dad8184f175b@pqh27v6.ipforvetra.shop:80?host=pqh27v6.ipforvetra.shop&sni=pqh27v6.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:16:21 | Response: 1.585s | IP: 152.228.162.19
+vless://5ce84688-f535-46ad-a512-37b17becf6ea@152.228.162.19:80?host=akamaized.net&path=%2Fvless%2F%23%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C%40V2RAY_SPATIAL%2C&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:16:28 | Response: 0.112s | IP: 91.98.169.122
+vless://6967a7f2-e8a7-497e-f72e-c989e9f896d7@91.98.169.122:443?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:17:03 | Response: 0.114s | IP: 185.236.232.108
+vless://401374e6-df77-41fb-f638-dad8184f175b@185.236.232.108:80?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:17:03 | Response: 0.482s | IP: 94.142.240.71
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:17:03 | Response: 0.365s | IP: 2a0a:4cc0:c0:7391:786b:dbff:fe0f:b499
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@152.53.227.159:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:17:03 | Response: 0.555s | IP: 45.120.178.93
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978016693357922.oslo-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:19:17 | Response: 0.425s | IP: 104.28.158.129
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@www.epicgames.com:2095?host=xijinpingnmsl.s4ar.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:19:17 | Response: 0.410s | IP: 2a09:bac6:d70e:de1::162:cc
+vless://d0c1a844-40be-4717-accf-fd4f67980d4a@www.visa.com.sg:2052?host=vlesstest.nchen5022-797.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:19:18 | Response: 1.225s | IP: 91.99.177.36
+vless://77dacbb9-eb50-487e-adc7-f1f2cb4cb19c@91.99.177.36:443?host=91.99.177.36&path=%2Flinkws%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:19:27 | Response: 0.293s | IP: 162.19.228.119
+vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@162.19.228.119:80?host=google.com&path=%2Fhttp&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:19:27 | Response: 0.086s | IP: 104.28.153.196
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@blog.cloudflare.com:2095?host=freedom.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:20:10 | Response: 0.234s | IP: 2a09:bac6:d708:2828::400:2a
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@sub.091224.xyz:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:20:47 | Response: 0.263s | IP: 104.28.164.204
+vless://8169cd18-e824-47a4-a4d4-96433b1a519d@172.67.161.104:2082?host=testdvpnhub69.95f425b718.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:20:55 | Response: 0.367s | IP: 104.28.164.155
+vless://b38b778b-06f0-4161-91b2-1f0b220b7df4@tgju.org:8080?host=015.electrocellco-cf-015.workers.dev&path=%2FeyJqdW5rIjoiQm5nNGZUVWwiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyIyMTMuMTcwLjE1Ny4xIl19%3Fed%3D2560%26join-hallakechiVPN---join-hallakechiVPN---join-hallakechiVPN---join-hallakechiVPN---join-hallakechiVPN---join-hallakechiVPN---&sni=www.speedtest.net&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:21:30 | Response: 0.242s | IP: 2a02:4780:d:ddeb::1
+vless://0cd276a5-4501-413a-acf8-b51c54894f02@179.61.219.170:22934?type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:22:15 | Response: 0.342s | IP: 104.28.161.246
+vless://23b3cbba-e6ac-485a-9481-342a0415eab9@104.21.81.174:80?host=DaWn-lAKE-d5E3.WocoYA4320.wOrkERs.DeV&path=%2FwP3dwCyRAVyMJFfW%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:22:16 | Response: 0.766s | IP: 104.28.153.180
+vless://51d6b757-f262-4a95-843c-5f660223d3fc@104.16.150.17:2052?host=morning-darkness-2df2.m197210665.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:22:16 | Response: 1.089s | IP: 37.120.184.180
+vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@37.120.184.180:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:22:17 | Response: 2.281s | IP: 94.131.13.163
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638975337676447591.lisbon-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:22:23 | Response: 0.083s | IP: 2a09:bac6:d70a:2446::39d:4f
+vless://636de463-b509-4631-adc6-400b21733278@172.67.190.131:2082?host=index.harmony510.workers.dev&path=%2Ftn1885yw1g97r1q7&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:22:59 | Response: 0.244s | IP: 104.28.164.157
+vless://046da250-d5ef-4867-9095-302477d54d20@140.99.233.58:80?host=feng.ipy29c99.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:23:45 | Response: 0.126s | IP: 104.28.153.181
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@172.67.203.94:2086?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:23:46 | Response: 1.117s | IP: 38.47.176.134
+vless://a19fd311-c343-4b54-9ca3-fe6dcd84c0fc@38.47.176.134:59967?path=%2F#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:24:30 | Response: 0.609s | IP: 142.171.133.75
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.shopify.com:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:24:41 | Response: 1.480s | IP: 104.28.158.127
+vless://47e9a0db-50c6-4522-8819-502c55b06dde@159.112.235.174:2082?host=workerr.schodog1.workers.dev&path=%2F%3Fed%3D2048&sni=workerr.schodog1.workers.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:25:15 | Response: 0.268s | IP: 45.12.150.186
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.186:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:25:27 | Response: 0.514s | IP: 104.28.153.227
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.18.13.229:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:26:00 | Response: 0.963s | IP: 86.104.74.15
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638975337676353108.lisbon-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:26:08 | Response: 0.159s | IP: 104.28.153.195
+vless://51d6b757-f262-4a95-843c-5f660223d3fc@162.159.152.92:2095?host=morning-darkness-2df2.m197210665.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:26:53 | Response: 0.501s | IP: 45.12.133.224
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638932639207614557.kish-drc-dcrabj.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:26:55 | Response: 2.143s | IP: 109.123.236.161
+vless://c4ccf00e-72c6-4fd9-b7ce-f625a835539f@109.123.236.161:42692?type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:27:29 | Response: 0.620s | IP: 45.12.150.134
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.12.150.134:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:27:34 | Response: 0.033s | IP: 104.28.153.194
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:28:59 | Response: 0.066s | IP: 104.28.159.229
+vless://1853d1d2-1ccf-48e6-ae05-0c0bb285a8c4@104.24.189.102:80?host=winter-bush-f08c-ppal03.himigaw787.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:28:59 | Response: 0.487s | IP: 94.131.14.48
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978804870443235.copenhagen-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:29:08 | Response: 0.401s | IP: 103.35.189.137
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638975337676095689.lisbon-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:29:45 | Response: 2.536s | IP: 185.31.200.16
+vless://f502e072-14a2-4a76-9d4b-2ab33a89657c@rhdheysy-463252636-fryhuhhd.poshakhowdy.ir:2095?host=uevsievsusg-82828isbshshs.poshakhowdy.ir&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:30:37 | Response: 0.078s | IP: 104.28.164.158
+vless://41398380-2073-4d85-878a-24194a6f04a3@172.67.176.159:80?host=3.azadteam.workers.dev&path=%2FSy0HOf5sZffep0QQ%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:31:18 | Response: 2.151s | IP: 103.35.189.250
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978804870439763.copenhagen-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:32:51 | Response: 0.275s | IP: 95.164.6.79
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@95.164.6.79:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:33:29 | Response: 1.444s | IP: 91.107.139.110
+vless://cfe554a3-4cd5-4fe1-9951-e6b65fc52a74@sea-daisy.unity4world.ir:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:34:13 | Response: 0.076s | IP: 2604:2dc0:101:100::71d
+vless://9dc11620-987c-4344-9088-f46fdfae4054@40.160.4.106:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:35:07 | Response: 0.185s | IP: 94.131.110.117
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@94.131.110.117:8880?path=%2F&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:35:45 | Response: 1.695s | IP: 104.28.159.1
+vless://8169cd18-e824-47a4-a4d4-96433b1a519d@172.67.168.93:80?host=testdvpnhub69.95f425b718.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:35:52 | Response: 0.082s | IP: 2a09:bac6:d70d:2828::400:51
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@162.159.153.2:2095?host=xijinpingnmsl.s4ar.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:35:53 | Response: 0.283s | IP: 94.142.240.71
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:2095?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:36:28 | Response: 0.651s | IP: 104.28.193.120
 vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@ws.arvancloud.online:80?host=cdn.ir&path=%2Fnews&type=ws#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:19:03 | Response: 0.719s | IP: 45.89.111.144
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638974363192988782.budapest-blkaft-aaav.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 03:36:29 | Response: 0.039s | IP: 103.35.189.107
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@103.35.189.107:8880?type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:19:04 | Response: 2.062s | IP: 185.138.164.3
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.138.164.3:8880?sni=%F0%9F%94%92+%5BBy+EbraSha%5D+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29&type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 03:36:29 | Response: 0.241s | IP: 185.236.232.117
+vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@pqh30v3.globalfymain.com:8880?host=pqh30v3.globalfymain.com&sni=pqh30v3.globalfymain.com&type=grpc#%F0%9F%94%A5
 
-# Tested at: 2025-11-19 09:19:05 | Response: 2.297s | IP: 45.12.133.224
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638941610778724075.helsinki-drc-tusacaf.info:8880?type=grpc#%F0%9F%94%A5
+# Tested at: 2025-11-20 03:36:36 | Response: 0.091s | IP: 104.28.158.130
+vless://252d7c6c-3f50-44fb-9a51-13963fc727e0@104.18.15.19:2082?host=0105.f5s8fbc2.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:37:12 | Response: 0.367s | IP: 2a12:5940:3669::2
+vless://7c8cf438-8d5a-4ce9-bc1c-88345a545f2f@185.68.244.86:42545?host=skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---skypro_vpn---#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:37:13 | Response: 0.159s | IP: 2a09:bac6:d70b:1678::23d:34
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@185.18.184.66:80?host=hello.96xckkzx.workers.dev&path=%2F%3Fed%3D2048%40v2ray_configs_pools--%40v2ray_configs_pools&sni=hello.96xckkzx.workers.dev&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:37:21 | Response: 0.398s | IP: 107.174.131.32
+vless://9f0eae34-97c1-4c07-8a55-438379981334@104.16.86.2:80?host=snowy-bush-4df8-ppal03.toxebex651.workers.dev&path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:37:57 | Response: 0.354s | IP: 104.28.164.159
+vless://0c07016f-6238-4a17-a414-ab0ecd8a8b5e@npmjs.com:80?host=soft-wave-5d2a.kyng-ayaan.workers.dev&path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:38:41 | Response: 0.540s | IP: 2605:a140:2273:7184::1
+vless://0417be58-2ea8-49de-8083-9eff9b0137e5@209.126.84.189:443?host=v2ray.codefyinc.com&path=%2Fvlessws&sni=v2ray.codefyinc.com&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:38:45 | Response: 4.167s | IP: 185.236.232.242
+vless://401374e6-df77-41fb-f638-dad8184f175b@pqh29v6.ipforvetra.shop:80?host=pqh29v6.ipforvetra.shop&sni=pqh29v6.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:40:58 | Response: 0.164s | IP: 104.28.153.181
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.0.135:2052?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:40:59 | Response: 0.465s | IP: 94.131.14.28
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978016693355897.oslo-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:41:52 | Response: 0.461s | IP: 157.180.123.25
+vless://638c1918-f6f0-4ecc-85e6-a3ac50ed9c02@157.180.123.25:443?host=157.180.123.25&path=%2Flinkws%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:42:29 | Response: 0.086s | IP: 104.28.161.242
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@cdn888.qzz.io:8080?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:42:43 | Response: 2.421s | IP: 144.124.255.72
+vless://1a79938c-e170-4d9b-99ac-2bfd19582461@144.124.255.72:443?type=raw#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:43:12 | Response: 0.452s | IP: 212.192.31.146
+vless://199a78a5-b4d4-4064-a0db-bb37c5839134@212.192.31.146:443?path=%2Fpanika&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:43:55 | Response: 0.285s | IP: 104.28.164.154
+vless://8169cd18-e824-47a4-a4d4-96433b1a519d@172.67.168.93:8880?host=testdvpnhub69.95f425b718.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:43:56 | Response: 0.164s | IP: 185.231.205.181
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.181:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:43:56 | Response: 0.888s | IP: 104.28.164.202
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@sub.091224.xyz:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:43:56 | Response: 1.096s | IP: 45.12.133.224
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929750206966997.oslo-drc-dcrabj.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:44:05 | Response: 0.467s | IP: 104.28.153.212
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.17.134.117:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:44:41 | Response: 0.502s | IP: 185.153.183.125
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.153.183.125:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:45:27 | Response: 1.542s | IP: 162.19.228.119
+vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@de.vpnbase.net:80?path=%2Fhttp&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:45:34 | Response: 0.070s | IP: 45.82.251.249
+vless://401374e6-df77-41fb-f638-dad8184f175b@45.82.251.249:80?sni=pqh29v4.ipforvetra.shop&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:46:11 | Response: 0.288s | IP: 104.28.153.242
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.npmjs.com:2095?host=snippets.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:46:13 | Response: 0.075s | IP: 2a09:bac5:c82a:1032::19d:197
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@104.20.16.234:2095?host=fangbinxingnmsl.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:46:56 | Response: 0.460s | IP: 90.156.254.164
+vless://5ae45629-3db6-4c6b-9b9e-346c3e1a798d@90.156.254.164:40432?path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:47:05 | Response: 0.287s | IP: 45.140.167.213
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.213:8880?sni=---%40AZARBAYKAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1---%40AZARBAYJAB1&type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:47:43 | Response: 0.149s | IP: 104.28.164.150
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.wto.org:2095?host=fuckingfangbinxing.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:49:09 | Response: 0.528s | IP: 104.28.164.151
+vless://4751adcd-064b-493e-979b-b1c56c133cb4@188.114.98.6:80?host=steep-water-754d-ppal0333333333333333.finisal307.workers.dev&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:49:10 | Response: 0.751s | IP: 104.28.158.129
+vless://d342d11e-d424-4583-b36e-524ab1f0afa4@172.64.146.66:2095?host=xijinpingnmsl.s4ar.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:49:10 | Response: 0.153s | IP: 103.35.190.4
+vless://15d114ee-c814-47c7-bd12-fab0c7a0128e@638978804870442798.copenhagen-blkaft-aabc.info:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:49:10 | Response: 0.318s | IP: 40.160.5.58
+vless://9dc11620-987c-4344-9088-f46fdfae4054@40.160.5.58:8080?path=%2F%3Fed&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:49:55 | Response: 0.566s | IP: 154.21.86.85
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.fbi.gov:2095?host=fuckingfangbinxing.pusytroller.cf&path=%2F&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:49:55 | Response: 0.150s | IP: 45.140.167.200
+vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.167.200:8880?type=grpc#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:50:05 | Response: 0.144s | IP: 2a09:bac1:76a1:62b0::160:64
+vless://1953c1e6-af68-4c60-a6f8-f8194de580f6@172.67.209.105:8880?host=worker-ancient-bonus-70e8.96dc4cc80bfb.workers.dev&path=%2F%3Fed%3D2048&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:50:41 | Response: 0.751s | IP: 104.28.153.245
+vless://bc0a2570-d5fb-4906-b0f0-d47cdcd0a381@104.18.26.94:80?host=esetsecuritylicense.tibivip547.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
+
+# Tested at: 2025-11-20 03:52:10 | Response: 1.537s | IP: 104.28.153.213
+vless://7890ce31-9a25-4fd4-90e7-80e5823ff510@104.21.0.135:2082?host=iioo.iioou.workers.dev&path=%2F%3Fed%3D2560&type=ws#%F0%9F%94%A5
 
