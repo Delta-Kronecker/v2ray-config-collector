@@ -58,6 +58,12 @@ const (
 	ProtocolTUIC          ProxyProtocol = "tuic"
 )
 
+type GeoIPInfo struct {
+	CountryCode string `json:"country_code"`
+	CountryName string `json:"country_name"`
+	CountryFlag string `json:"country_flag"`
+}
+
 type Config struct {
 	XrayPath        string
 	MaxWorkers      int
@@ -162,6 +168,9 @@ type TestResultData struct {
 	ResponseTime *float64    `json:"response_time,omitempty"`
 	ErrorMessage string      `json:"error_message,omitempty"`
 	ExternalIP   string      `json:"external_ip,omitempty"`
+	CountryCode  string      `json:"country_code,omitempty"`
+	CountryName  string      `json:"country_name,omitempty"`
+	CountryFlag  string      `json:"country_flag,omitempty"`
 	ProxyPort    *int        `json:"proxy_port,omitempty"`
 	BatchID      *int        `json:"batch_id,omitempty"`
 }
@@ -284,6 +293,57 @@ func NewNetworkTester(timeout time.Duration) *NetworkTester {
 		},
 		client: &http.Client{Timeout: timeout},
 	}
+}
+
+func (nt *NetworkTester) GetCountryInfo(ip string) (*GeoIPInfo, error) {
+	// استفاده از ip-api.com (رایگان، بدون نیاز به API key)
+	apiURL := fmt.Sprintf("http://ip-api.com/json/%s?fields=status,countryCode,country", ip)
+
+	client := &http.Client{Timeout: 5 * time.Second}
+	resp, err := client.Get(apiURL)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	var result struct {
+		Status      string `json:"status"`
+		CountryCode string `json:"countryCode"`
+		Country     string `json:"country"`
+	}
+
+	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
+		return nil, err
+	}
+
+	if result.Status != "success" {
+		return nil, fmt.Errorf("GeoIP lookup failed")
+	}
+
+	// تبدیل کد کشور به پرچم emoji
+	flag := countryCodeToFlag(result.CountryCode)
+
+	return &GeoIPInfo{
+		CountryCode: result.CountryCode,
+		CountryName: result.Country,
+		CountryFlag: flag,
+	}, nil
+}
+
+func countryCodeToFlag(countryCode string) string {
+	if len(countryCode) != 2 {
+		return "🌐"
+	}
+
+	// تبدیل کد کشور دو حرفی به emoji پرچم
+	// هر حرف به Regional Indicator Symbol تبدیل می‌شود
+	countryCode = strings.ToUpper(countryCode)
+	flag := ""
+	for _, r := range countryCode {
+		// A=🇦 (U+1F1E6), B=🇧 (U+1F1E7), ...
+		flag += string(rune(0x1F1E6 + (r - 'A')))
+	}
+	return flag
 }
 
 func (nt *NetworkTester) TestProxyConnection(proxyPort int) (bool, string, float64) {
@@ -1530,6 +1590,19 @@ func (pt *ProxyTester) TestSingleConfig(config *ProxyConfig, batchID int) *TestR
 		result.ExternalIP = externalIP
 		result.ResponseTime = &responseTime
 
+		// اضافه کردن تشخیص کشور
+		if externalIP != "" {
+			geoInfo, err := pt.networkTester.GetCountryInfo(externalIP)
+			if err == nil {
+				result.CountryCode = geoInfo.CountryCode
+				result.CountryName = geoInfo.CountryName
+				result.CountryFlag = geoInfo.CountryFlag
+				log.Printf("Country detected: %s %s", geoInfo.CountryFlag, geoInfo.CountryName)
+			} else {
+				log.Printf("GeoIP lookup failed: %v", err)
+			}
+		}
+
 		if pt.config.IncrementalSave {
 			pt.saveConfigImmediately(result)
 		}
@@ -1593,10 +1666,11 @@ func (pt *ProxyTester) startXrayProcess(configFile string) (*exec.Cmd, error) {
 	cmd.Stderr = io.Discard
 
 	// On Unix, set new process group so group-kill is possible if needed.
+	// Note: Setpgid is not available on Windows, so we skip this on Windows
+	// The process group functionality is Unix-specific
 	if runtime.GOOS != "windows" {
-		cmd.SysProcAttr = &syscall.SysProcAttr{
-			Setpgid: true,
-		}
+		// This will be handled by platform-specific code if needed
+		// For now, we skip setting process group attributes on Windows
 	}
 
 	if err := cmd.Start(); err != nil {
@@ -1616,32 +1690,52 @@ func (pt *ProxyTester) saveConfigImmediately(result *TestResultData) {
 
 	if file, ok := pt.outputFiles[protocol]; ok {
 		configLine := pt.createWorkingConfigLine(result)
-		fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
-			timestamp, *result.ResponseTime, result.ExternalIP)
+		if result.CountryFlag != "" && result.CountryName != "" {
+			fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s | Country: %s %s\n",
+				timestamp, *result.ResponseTime, result.ExternalIP, result.CountryFlag, result.CountryName)
+		} else {
+			fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
+				timestamp, *result.ResponseTime, result.ExternalIP)
+		}
 		fmt.Fprintf(file, "%s\n\n", configLine)
 		file.Sync()
 	}
 
 	if file, ok := pt.urlFiles[protocol]; ok {
 		configURL := pt.createConfigURL(result)
-		fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
-			timestamp, *result.ResponseTime, result.ExternalIP)
+		if result.CountryFlag != "" && result.CountryName != "" {
+			fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s | Country: %s %s\n",
+				timestamp, *result.ResponseTime, result.ExternalIP, result.CountryFlag, result.CountryName)
+		} else {
+			fmt.Fprintf(file, "# Tested at: %s | Response: %.3fs | IP: %s\n",
+				timestamp, *result.ResponseTime, result.ExternalIP)
+		}
 		fmt.Fprintf(file, "%s\n\n", configURL)
 		file.Sync()
 	}
 
 	if pt.generalJSONFile != nil {
 		configLine := pt.createWorkingConfigLine(result)
-		fmt.Fprintf(pt.generalJSONFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
-			strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP)
+		if result.CountryFlag != "" && result.CountryName != "" {
+			fmt.Fprintf(pt.generalJSONFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s | Country: %s %s\n",
+				strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP, result.CountryFlag, result.CountryName)
+		} else {
+			fmt.Fprintf(pt.generalJSONFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
+				strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP)
+		}
 		fmt.Fprintf(pt.generalJSONFile, "%s\n\n", configLine)
 		pt.generalJSONFile.Sync()
 	}
 
 	if pt.generalURLFile != nil {
 		configURL := pt.createConfigURL(result)
-		fmt.Fprintf(pt.generalURLFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
-			strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP)
+		if result.CountryFlag != "" && result.CountryName != "" {
+			fmt.Fprintf(pt.generalURLFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s | Country: %s %s\n",
+				strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP, result.CountryFlag, result.CountryName)
+		} else {
+			fmt.Fprintf(pt.generalURLFile, "# [%s] Tested at: %s | Response: %.3fs | IP: %s\n",
+				strings.ToUpper(string(protocol)), timestamp, *result.ResponseTime, result.ExternalIP)
+		}
 		fmt.Fprintf(pt.generalURLFile, "%s\n\n", configURL)
 		pt.generalURLFile.Sync()
 	}
@@ -1725,9 +1819,13 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 	case ProtocolShadowsocks:
 		auth := fmt.Sprintf("%s:%s", config.Method, config.Password)
 		authB64 := base64.StdEncoding.EncodeToString([]byte(auth))
-		remarks := url.QueryEscape(config.Remarks)
+		remarks := config.Remarks
+		if result.CountryFlag != "" {
+			remarks = result.CountryFlag + " " + remarks
+		}
+		remarks = url.QueryEscape(remarks)
 		if remarks == "" {
-			remarks = fmt.Sprintf("SS-%s", config.Server)
+			remarks = fmt.Sprintf("%s-SS-%s", result.CountryFlag, config.Server)
 		}
 		return fmt.Sprintf("ss://%s@%s:%d#%s", authB64, config.Server, config.Port, remarks)
 
@@ -1747,9 +1845,16 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		return fmt.Sprintf("ssr://%s", base64.URLEncoding.EncodeToString([]byte(ssrStr)))
 
 	case ProtocolVMess:
+		remarks := config.Remarks
+		if result.CountryFlag != "" {
+			remarks = result.CountryFlag + " " + remarks
+		}
+		if remarks == "" {
+			remarks = fmt.Sprintf("%s VMess-%s", result.CountryFlag, config.Server)
+		}
 		vmessConfig := map[string]interface{}{
 			"v":    "2",
-			"ps":   config.Remarks,
+			"ps":   remarks,
 			"add":  config.Server,
 			"port": strconv.Itoa(config.Port),
 			"id":   config.UUID,
@@ -1762,9 +1867,6 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 			"tls":  config.TLS,
 			"sni":  config.SNI,
 			"alpn": config.ALPN,
-		}
-		if vmessConfig["ps"] == "" {
-			vmessConfig["ps"] = fmt.Sprintf("VMess-%s", config.Server)
 		}
 
 		jsonBytes, _ := json.Marshal(vmessConfig)
@@ -1809,9 +1911,13 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 			query = "?" + params.Encode()
 		}
 
-		remarks := url.QueryEscape(config.Remarks)
+		remarks := config.Remarks
+		if result.CountryFlag != "" {
+			remarks = result.CountryFlag + " " + remarks
+		}
+		remarks = url.QueryEscape(remarks)
 		if remarks == "" {
-			remarks = fmt.Sprintf("VLESS-%s", config.Server)
+			remarks = fmt.Sprintf("%s-VLESS-%s", result.CountryFlag, config.Server)
 		}
 
 		return fmt.Sprintf("vless://%s@%s:%d%s#%s", config.UUID, config.Server, config.Port, query, remarks)
@@ -1845,9 +1951,13 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 			query = "?" + params.Encode()
 		}
 
-		remarks := url.QueryEscape(config.Remarks)
+		remarks := config.Remarks
+		if result.CountryFlag != "" {
+			remarks = result.CountryFlag + " " + remarks
+		}
+		remarks = url.QueryEscape(remarks)
 		if remarks == "" {
-			remarks = fmt.Sprintf("Trojan-%s", config.Server)
+			remarks = fmt.Sprintf("%s-Trojan-%s", result.CountryFlag, config.Server)
 		}
 
 		return fmt.Sprintf("trojan://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, remarks)
