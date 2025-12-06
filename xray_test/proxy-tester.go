@@ -1882,32 +1882,16 @@ func (pt *ProxyTester) createWorkingConfigLine(result *TestResultData) string {
 
 func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 	config := &result.Config
+	remarks := result.CountryFlag
 
 	switch config.Protocol {
 	case ProtocolShadowsocks:
 		auth := fmt.Sprintf("%s:%s", config.Method, config.Password)
 		authB64 := base64.StdEncoding.EncodeToString([]byte(auth))
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		remarks = url.QueryEscape(remarks)
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s-SS-%s", result.CountryFlag, config.Server)
-		}
-		return fmt.Sprintf("ss://%s@%s:%d#%s", authB64, config.Server, config.Port, remarks)
+		return fmt.Sprintf("ss://%s@%s:%d#%s", authB64, config.Server, config.Port, url.QueryEscape(remarks))
 
 	case ProtocolShadowsocksR:
-		finalRemarks := config.Remarks
-		if result.CountryFlag != "" {
-			finalRemarks = result.CountryFlag + " " + finalRemarks
-		}
-		if finalRemarks == "" {
-			finalRemarks = fmt.Sprintf("%s-SSR-%s", result.CountryFlag, config.Server)
-		}
-
 		ssrStr := fmt.Sprintf("%s:%d:%s:%s:%s:%s", config.Server, config.Port, config.Protocol_Param, config.Method, config.Obfs, base64.URLEncoding.EncodeToString([]byte(config.Password)))
-
 		queryParams := []string{}
 		if config.ObfsParam != "" {
 			queryParams = append(queryParams, "obfsparam="+base64.URLEncoding.EncodeToString([]byte(config.ObfsParam)))
@@ -1915,22 +1899,13 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		if config.Protocol_Param != "" {
 			queryParams = append(queryParams, "protoparam="+base64.URLEncoding.EncodeToString([]byte(config.Protocol_Param)))
 		}
-		queryParams = append(queryParams, "remarks="+base64.URLEncoding.EncodeToString([]byte(finalRemarks)))
-
+		queryParams = append(queryParams, "remarks="+base64.URLEncoding.EncodeToString([]byte(remarks)))
 		if len(queryParams) > 0 {
 			ssrStr += "/?" + strings.Join(queryParams, "&")
 		}
-
 		return fmt.Sprintf("ssr://%s", base64.URLEncoding.EncodeToString([]byte(ssrStr)))
 
 	case ProtocolVMess:
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s VMess-%s", result.CountryFlag, config.Server)
-		}
 		vmessConfig := map[string]interface{}{
 			"v":    "2",
 			"ps":   remarks,
@@ -1947,7 +1922,6 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 			"sni":  config.SNI,
 			"alpn": config.ALPN,
 		}
-
 		jsonBytes, _ := json.Marshal(vmessConfig)
 		vmessB64 := base64.StdEncoding.EncodeToString(jsonBytes)
 		return fmt.Sprintf("vmess://%s", vmessB64)
@@ -1984,22 +1958,11 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		if config.Fingerprint != "" {
 			params.Add("fp", config.Fingerprint)
 		}
-
 		query := ""
 		if len(params) > 0 {
 			query = "?" + params.Encode()
 		}
-
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		remarks = url.QueryEscape(remarks)
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s-VLESS-%s", result.CountryFlag, config.Server)
-		}
-
-		return fmt.Sprintf("vless://%s@%s:%d%s#%s", config.UUID, config.Server, config.Port, query, remarks)
+		return fmt.Sprintf("vless://%s@%s:%d%s#%s", config.UUID, config.Server, config.Port, query, url.QueryEscape(remarks))
 
 	case ProtocolTrojan:
 		params := url.Values{}
@@ -2024,22 +1987,11 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		if config.Fingerprint != "" {
 			params.Add("fp", config.Fingerprint)
 		}
-
 		query := ""
 		if len(params) > 0 {
 			query = "?" + params.Encode()
 		}
-
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		remarks = url.QueryEscape(remarks)
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s-Trojan-%s", result.CountryFlag, config.Server)
-		}
-
-		return fmt.Sprintf("trojan://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, remarks)
+		return fmt.Sprintf("trojan://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, url.QueryEscape(remarks))
 
 	case ProtocolHysteria:
 		params := url.Values{}
@@ -2061,22 +2013,11 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		if config.Insecure {
 			params.Add("insecure", "1")
 		}
-
 		query := ""
 		if len(params) > 0 {
 			query = "?" + params.Encode()
 		}
-
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		remarks = url.QueryEscape(remarks)
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s-Hysteria-%s", result.CountryFlag, config.Server)
-		}
-
-		return fmt.Sprintf("hysteria://%s@%s:%d%s#%s", config.AuthStr, config.Server, config.Port, query, remarks)
+		return fmt.Sprintf("hysteria://%s@%s:%d%s#%s", config.AuthStr, config.Server, config.Port, query, url.QueryEscape(remarks))
 
 	case ProtocolHysteria2:
 		params := url.Values{}
@@ -2089,22 +2030,11 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		if config.Insecure {
 			params.Add("insecure", "1")
 		}
-
 		query := ""
 		if len(params) > 0 {
 			query = "?" + params.Encode()
 		}
-
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		remarks = url.QueryEscape(remarks)
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s-Hysteria2-%s", result.CountryFlag, config.Server)
-		}
-
-		return fmt.Sprintf("hysteria2://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, remarks)
+		return fmt.Sprintf("hysteria2://%s@%s:%d%s#%s", config.Password, config.Server, config.Port, query, url.QueryEscape(remarks))
 
 	case ProtocolTUIC:
 		params := url.Values{}
@@ -2120,26 +2050,16 @@ func (pt *ProxyTester) createConfigURL(result *TestResultData) string {
 		if config.Insecure {
 			params.Add("allow_insecure", "1")
 		}
-
 		query := ""
 		if len(params) > 0 {
 			query = "?" + params.Encode()
 		}
-
-		remarks := config.Remarks
-		if result.CountryFlag != "" {
-			remarks = result.CountryFlag + " " + remarks
-		}
-		remarks = url.QueryEscape(remarks)
-		if remarks == "" {
-			remarks = fmt.Sprintf("%s-TUIC-%s", result.CountryFlag, config.Server)
-		}
-
-		return fmt.Sprintf("tuic://%s:%s@%s:%d%s#%s", config.UUID, config.Password, config.Server, config.Port, query, remarks)
+		return fmt.Sprintf("tuic://%s:%s@%s:%d%s#%s", config.UUID, config.Password, config.Server, config.Port, query, url.QueryEscape(remarks))
 	}
 
 	return fmt.Sprintf("%s://%s:%d", config.Protocol, config.Server, config.Port)
 }
+
 
 func (pt *ProxyTester) updateStats(result *TestResultData) {
 	if protocolStats, ok := pt.stats.Load(result.Config.Protocol); ok {
