@@ -1,136 +1,151 @@
 # Working TROJAN Configurations (URL Format)
-# Generated at: 2025-12-07 01:03:30
+# Generated at: 2025-12-07 06:17:17
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-12-07 01:18:08 | Response: 0.795s | IP: 2a05:d012:5b0:2c00:6a2e:bb18:c745:e72b | Country: 🇫🇷 France
-trojan://telegram-id-privatevpns@13.37.144.126:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
-
-# Tested at: 2025-12-07 01:18:08 | Response: 0.745s | IP: 116.80.80.203 | Country: 🇯🇵 Japan
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.87.174:3169?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-07 01:18:08 | Response: 0.990s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.124.55:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:18:08 | Response: 0.801s | IP: 79.133.122.157 | Country: 🇵🇱 Poland
-trojan://.+QAJot50sDi6mvb@5.188.108.13:11790?path=%2F&security=tls&sni=runningshoes.purpletornado.click#%F0%9F%87%B5%F0%9F%87%B1
-
-# Tested at: 2025-12-07 01:18:08 | Response: 0.725s | IP: 116.80.79.152 | Country: 🇯🇵 Japan
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.72.33:3093?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-07 01:18:08 | Response: 1.029s | IP: 38.180.190.13 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.81.84:2760?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:18:08 | Response: 1.342s | IP: 152.42.220.9 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.68.250:1596?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:18:09 | Response: 0.804s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.57.238:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:18:09 | Response: 1.490s | IP: 38.180.193.206 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.116.227:2890?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:18:09 | Response: 0.962s | IP: 38.180.193.206 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.131.243:2890?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:18:09 | Response: 1.924s | IP: 58.152.53.8 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@58.152.53.8:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-07 01:18:09 | Response: 1.076s | IP: 58.152.30.120 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@58.152.30.120:443?security=tls&sni=58.152.30.120#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-07 01:18:11 | Response: 1.908s | IP: 38.180.190.13 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.214.6:2760?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:18:14 | Response: 0.387s | IP: 116.80.80.203 | Country: 🇯🇵 Japan
+# Tested at: 2025-12-07 06:31:50 | Response: 1.233s | IP: 116.80.80.203 | Country: 🇯🇵 Japan
 trojan://79314e99f0a473fe86efc7827942ad00@153.121.65.107:3169?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
 
-# Tested at: 2025-12-07 01:18:14 | Response: 1.974s | IP: 58.152.110.154 | Country: 🇭🇰 Hong Kong
-trojan://79314e99f0a473fe86efc7827942ad00@58.152.110.154:443?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-07 01:18:15 | Response: 1.084s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.214.6:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:18:16 | Response: 1.721s | IP: 116.80.60.10 | Country: 🇯🇵 Japan
-trojan://79314e99f0a473fe86efc7827942ad00@153.121.65.107:1331?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-07 01:18:16 | Response: 1.824s | IP: 219.79.186.107 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@219.79.186.107:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-07 01:18:16 | Response: 1.271s | IP: 23.186.64.37 | Country: 🇯🇵 Japan
-trojan://FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D@kuame.missionsec.us:443?security=tls&sni=kuame.missionsec.us#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-07 01:18:18 | Response: 0.187s | IP: 2a09:bac6:d6e4:2632::3ce:48 | Country: 🇺🇸 United States
-trojan://trojan@ip.sb:8443?path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:18:28 | Response: 0.403s | IP: 116.80.60.10 | Country: 🇯🇵 Japan
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.70.180:1331?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-07 01:18:28 | Response: 0.911s | IP: 38.180.107.7 | Country: 🇸🇬 Singapore
-trojan://BxceQaOe@43.198.90.142:2673?security=tls#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:19:02 | Response: 0.988s | IP: 38.96.254.63 | Country: 🇨🇦 Canada
-trojan://.ie4rghJuMkcf0oF@38.96.254.102:18509?path=%2F&security=tls&sni=shoppingmall.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-07 01:19:02 | Response: 1.580s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.63.16:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:19:02 | Response: 0.829s | IP: 47.242.225.242 | Country: 🇭🇰 Hong Kong
-trojan://92690597d6298061459918a371e8d77d@47.242.225.242:443?security=tls&sni=hezijiasuqi.com#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-07 01:19:02 | Response: 0.991s | IP: 38.180.193.206 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.151.196:2890?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:19:02 | Response: 0.969s | IP: 38.180.107.76 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.131.243:127?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:19:02 | Response: 1.829s | IP: 70.34.223.58 | Country: 🇸🇪 Sweden
-trojan://BaeSzHdfJIR13l67@70.34.218.149:11930?path=%2F&security=tls&sni=softpillow.silentrocket.click#%F0%9F%87%B8%F0%9F%87%AA
-
-# Tested at: 2025-12-07 01:19:02 | Response: 0.918s | IP: 38.180.190.13 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.124.55:2760?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:19:02 | Response: 0.953s | IP: 152.42.220.9 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.150.76:1596?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:19:03 | Response: 1.010s | IP: 206.189.151.42 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.107.37:507?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:19:03 | Response: 2.598s | IP: 58.152.25.242 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@58.152.25.242:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-07 01:19:03 | Response: 0.834s | IP: 38.180.107.76 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@153.121.51.29:127?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-07 01:19:06 | Response: 0.516s | IP: 116.80.79.152 | Country: 🇯🇵 Japan
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.130.66:3093?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-07 01:19:09 | Response: 0.888s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.81.84:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:19:09 | Response: 1.036s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@153.121.39.240:4054?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:19:09 | Response: 0.819s | IP: 38.180.193.227 | Country: 🇺🇸 United States
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.236.32:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-07 01:19:12 | Response: 0.300s | IP: 198.57.27.179 | Country: 🇨🇦 Canada
+# Tested at: 2025-12-07 06:31:50 | Response: 0.611s | IP: 198.57.27.179 | Country: 🇨🇦 Canada
 trojan://6pRjKQJ0CWyFtG.9@198.57.27.27:12990?path=%2F&security=tls&sni=diningtable.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2025-12-07 01:19:15 | Response: 0.644s | IP: 167.172.90.181 | Country: 🇸🇬 Singapore
-trojan://79314e99f0a473fe86efc7827942ad00@160.16.144.208:3145?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+# Tested at: 2025-12-07 06:31:50 | Response: 1.225s | IP: 68.183.231.236 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@68.183.231.236:443?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
 
-# Tested at: 2025-12-07 01:19:15 | Response: 0.652s | IP: 104.28.158.105 | Country: 🇺🇸 United States
-trojan://iwangjie@158.101.11.204:15805?path=%2F%3Fed%3D2560&security=tls&sni=nodes.830901.xyz&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2025-12-07 06:31:51 | Response: 1.895s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.236.32:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2025-12-07 01:19:16 | Response: 1.439s | IP: 23.186.64.37 | Country: 🇯🇵 Japan
-trojan://FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D@23.186.64.37:443?path=%2F&security=tls&sni=kuame.missionsec.us#%F0%9F%87%AF%F0%9F%87%B5
+# Tested at: 2025-12-07 06:31:51 | Response: 0.714s | IP: 116.80.60.10 | Country: 🇯🇵 Japan
+trojan://79314e99f0a473fe86efc7827942ad00@153.121.45.139:1331?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
 
-# Tested at: 2025-12-07 01:19:17 | Response: 0.854s | IP: 58.152.25.20 | Country: 🇭🇰 Hong Kong
+# Tested at: 2025-12-07 06:31:51 | Response: 2.566s | IP: 58.152.25.20 | Country: 🇭🇰 Hong Kong
 trojan://BxceQaOe@58.152.25.20:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
 
-# Tested at: 2025-12-07 01:19:54 | Response: 0.776s | IP: 2a05:d012:5b0:2c00:6a2e:bb18:c745:e72b | Country: 🇫🇷 France
+# Tested at: 2025-12-07 06:31:52 | Response: 2.271s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.214.6:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:31:52 | Response: 2.910s | IP: 58.152.110.154 | Country: 🇭🇰 Hong Kong
+trojan://79314e99f0a473fe86efc7827942ad00@58.152.110.154:443?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-07 06:31:59 | Response: 1.096s | IP: 13.37.144.126 | Country: 🇫🇷 France
 trojan://telegram-id-directvpn@13.37.144.126:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
 
-# Tested at: 2025-12-07 01:19:54 | Response: 0.867s | IP: 206.189.151.42 | Country: 🇸🇬 Singapore
+# Tested at: 2025-12-07 06:31:59 | Response: 0.444s | IP: 15.236.214.251 | Country: 🇫🇷 France
+trojan://telegram-id-privatevpns@15.236.214.251:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2025-12-07 06:31:59 | Response: 2.162s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.132.158:4054?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:31:59 | Response: 2.171s | IP: 38.180.107.76 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@153.121.51.29:127?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:31:59 | Response: 0.538s | IP: 116.80.80.203 | Country: 🇯🇵 Japan
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.87.174:3169?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-07 06:32:02 | Response: 1.060s | IP: 206.189.151.42 | Country: 🇸🇬 Singapore
 trojan://79314e99f0a473fe86efc7827942ad00@153.121.44.99:507?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:04 | Response: 2.179s | IP: 38.180.190.13 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.81.84:2760?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:05 | Response: 2.587s | IP: 38.180.190.13 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.124.55:2760?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:08 | Response: 0.793s | IP: 206.189.151.42 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.212.152:507?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:12 | Response: 3.426s | IP: 58.152.53.8 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@58.152.53.8:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.255s | IP: 13.37.144.126 | Country: 🇫🇷 France
+trojan://telegram-id-privatevpns@13.37.144.126:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2025-12-07 06:32:44 | Response: 0.698s | IP: 38.96.254.63 | Country: 🇨🇦 Canada
+trojan://.ie4rghJuMkcf0oF@38.96.254.102:18509?path=%2F&security=tls&sni=shoppingmall.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-07 06:32:44 | Response: 0.786s | IP: 3.123.83.170 | Country: 🇩🇪 Germany
+trojan://telegram-id-directvpn@3.123.83.170:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.959s | IP: 116.80.79.152 | Country: 🇯🇵 Japan
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.72.33:3093?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.076s | IP: 3.123.83.170 | Country: 🇩🇪 Germany
+trojan://telegram-id-privatevpns@3.123.83.170:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.127s | IP: 47.242.225.242 | Country: 🇭🇰 Hong Kong
+trojan://92690597d6298061459918a371e8d77d@47.242.225.242:443?security=tls&sni=hezijiasuqi.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.313s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.124.55:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.514s | IP: 38.180.107.76 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.131.243:127?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.577s | IP: 38.180.193.206 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.116.227:2890?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:44 | Response: 0.446s | IP: 70.34.223.58 | Country: 🇸🇪 Sweden
+trojan://BaeSzHdfJIR13l67@70.34.218.149:11930?path=%2F&security=tls&sni=softpillow.silentrocket.click#%F0%9F%87%B8%F0%9F%87%AA
+
+# Tested at: 2025-12-07 06:32:44 | Response: 1.390s | IP: 152.42.220.9 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.150.76:1596?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:45 | Response: 1.738s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.81.84:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:45 | Response: 1.006s | IP: 38.180.193.206 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.151.196:2890?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:47 | Response: 2.988s | IP: 23.186.64.37 | Country: 🇯🇵 Japan
+trojan://FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D@kuame.missionsec.us:443?security=tls&sni=kuame.missionsec.us#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-07 06:32:49 | Response: 1.118s | IP: 167.172.90.181 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.144.208:3145?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:49 | Response: 0.838s | IP: 58.152.25.242 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@58.152.25.242:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-07 06:32:50 | Response: 3.665s | IP: 38.180.193.206 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.131.243:2890?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:51 | Response: 0.333s | IP: 2a09:bac1:76e1:62b0::400:22 | Country: 🇺🇸 United States
+trojan://trojan@ip.sb:8443?path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:51 | Response: 2.491s | IP: 152.42.220.9 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.68.250:1596?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:51 | Response: 0.627s | IP: 116.80.60.10 | Country: 🇯🇵 Japan
+trojan://79314e99f0a473fe86efc7827942ad00@153.121.38.213:1331?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-07 06:32:51 | Response: 0.675s | IP: 116.80.60.10 | Country: 🇯🇵 Japan
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.70.180:1331?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-07 06:32:51 | Response: 0.930s | IP: 38.180.190.13 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.214.6:2760?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-07 06:32:52 | Response: 0.958s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.63.16:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:53 | Response: 1.116s | IP: 58.152.30.120 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@58.152.30.120:443?security=tls&sni=58.152.30.120#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-07 06:32:55 | Response: 0.690s | IP: 15.236.214.251 | Country: 🇫🇷 France
+trojan://telegram-id-directvpn@15.236.214.251:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2025-12-07 06:32:55 | Response: 0.992s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.57.238:4054?path=%2F&security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:32:59 | Response: 1.060s | IP: 219.79.186.107 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@219.79.186.107:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-07 06:33:02 | Response: 1.077s | IP: 38.180.193.227 | Country: 🇺🇸 United States
+trojan://79314e99f0a473fe86efc7827942ad00@153.121.39.240:4054?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-07 06:33:02 | Response: 0.488s | IP: 79.133.122.157 | Country: 🇵🇱 Poland
+trojan://.+QAJot50sDi6mvb@5.188.108.13:11790?path=%2F&security=tls&sni=runningshoes.purpletornado.click#%F0%9F%87%B5%F0%9F%87%B1
+
+# Tested at: 2025-12-07 06:33:37 | Response: 0.875s | IP: 23.186.64.37 | Country: 🇯🇵 Japan
+trojan://FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D@23.186.64.37:443?path=%2F&security=tls&sni=kuame.missionsec.us#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-07 06:33:37 | Response: 1.095s | IP: 206.189.151.42 | Country: 🇸🇬 Singapore
+trojan://79314e99f0a473fe86efc7827942ad00@160.16.107.37:507?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
 
