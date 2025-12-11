@@ -1,787 +1,796 @@
 # Working SHADOWSOCKS Configurations (URL Format)
-# Generated at: 2025-12-11 01:01:19
+# Generated at: 2025-12-11 06:22:24
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-12-11 01:01:22 | Response: 0.589s | IP: 142.4.216.225 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKSWhONnJCS2thRWJvTE5YVlN2NXJx@142.4.216.225:80#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:01:22 | Response: 0.943s | IP: 138.186.143.32 | Country: 🇵🇪 Peru
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@138.186.143.32:990#%F0%9F%87%B5%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:01:22 | Response: 0.862s | IP: 185.255.123.166 | Country: 🇳🇬 Nigeria
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.255.123.166:990#%F0%9F%87%B3%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:01:24 | Response: 0.326s | IP: 193.29.139.140 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.140:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:01:25 | Response: 2.611s | IP: 185.231.233.173 | Country: 🇵🇹 Portugal
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.231.233.173:990#%F0%9F%87%B5%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:02:00 | Response: 0.294s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.168:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:02:01 | Response: 0.779s | IP: 149.22.87.241 | Country: 🇯🇵 Japan
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.241:443#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-11 01:02:34 | Response: 0.432s | IP: 193.29.139.190 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.190:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:02:34 | Response: 0.844s | IP: 82.180.146.173 | Country: 🇮🇳 India
-ss://YWVzLTEyOC1nY206MTYyNjI5ZDctY2IxNy00M2IxLTgyYzktZjljN2FlNmNiYTcw@82.180.146.173:30607#%F0%9F%87%AE%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:02:35 | Response: 0.278s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.153:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:02:36 | Response: 0.385s | IP: 45.154.206.192 | Country: 🇪🇸 Spain
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@45.154.206.192:990#%F0%9F%87%AA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:02:39 | Response: 0.289s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@151.242.251.152:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:03:13 | Response: 0.266s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.171:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:03:14 | Response: 1.095s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.184:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:03:14 | Response: 0.430s | IP: 185.192.124.188 | Country: 🇧🇷 Brazil
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.192.124.188:990#%F0%9F%87%A7%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:03:14 | Response: 0.901s | IP: 2a11:7e07::1aa | Country: 🇦🇺 Australia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@45.15.185.70:990#%F0%9F%87%A6%F0%9F%87%BA
-
-# Tested at: 2025-12-11 01:03:18 | Response: 3.898s | IP: 193.29.139.177 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl10.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:03:48 | Response: 0.924s | IP: 193.29.139.132 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.35:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:03:49 | Response: 0.557s | IP: 62.100.205.100 | Country: 🇬🇧 United Kingdom
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@62.100.205.100:990#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2025-12-11 01:03:49 | Response: 0.890s | IP: 209.74.82.227 | Country: 🇸🇬 Singapore
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1QTFyTFA1bTBtTU9ROEZjeFJYeGdy@209.74.82.227:26515#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:03:49 | Response: 0.314s | IP: 193.29.139.151 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.151:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:03:51 | Response: 0.459s | IP: 38.54.59.180 | Country: 🇪🇬 Egypt
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.59.180:990#%F0%9F%87%AA%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:04:25 | Response: 0.331s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.157:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:04:26 | Response: 1.359s | IP: 190.103.176.32 | Country: 🇦🇷 Argentina
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@190.103.176.32:990#%F0%9F%87%A6%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:04:27 | Response: 0.287s | IP: 193.29.139.240 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.158.171.70:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:04:28 | Response: 0.208s | IP: 193.29.139.177 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.177:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:04:29 | Response: 0.325s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:05:03 | Response: 0.125s | IP: 156.146.38.169 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:05:04 | Response: 0.367s | IP: 81.19.141.45 | Country: 🇩🇪 Germany
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2UzREZFdlZUtNZ2RVSlk3TEJZM2d5@81.19.141.45:443#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:05:04 | Response: 1.058s | IP: 2a03:f80:971:1a27::1 | Country: 🇦🇪 United Arab Emirates
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.57.251.240:990#%F0%9F%87%A6%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:05:04 | Response: 0.449s | IP: 81.200.158.206 | Country: 🇷🇺 Russia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBcVpidDFRQ3MzbmdFZlhvMXA3VC13@81.200.158.206:1080#%F0%9F%87%B7%F0%9F%87%BA
-
-# Tested at: 2025-12-11 01:05:42 | Response: 0.699s | IP: 171.22.254.129 | Country: 🇲🇹 Malta
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@171.22.254.129:990#%F0%9F%87%B2%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:05:42 | Response: 0.635s | IP: 103.163.218.2 | Country: 🇻🇳 Vietnam
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@103.163.218.2:990#%F0%9F%87%BB%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:06:20 | Response: 0.387s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.217:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:06:20 | Response: 0.472s | IP: 38.54.57.90 | Country: 🇧🇷 Brazil
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.57.90:990#%F0%9F%87%A7%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:06:21 | Response: 1.314s | IP: 203.23.128.33 | Country: 🇭🇰 Hong Kong
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@203.23.128.33:990#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:06:21 | Response: 1.361s | IP: 144.126.146.38 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4ZDczZTA4OC1kYzVhLTRkZmUtODkyNy01NjM1MWVlODA0MDc=@144.126.146.38:30789#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:06:22 | Response: 0.320s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.164:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:06:27 | Response: 2.221s | IP: 146.70.90.194 | Country: 🇮🇪 Ireland
-ss://YWVzLTEyOC1nY206dThncDE0OGl6OTBkZG9vNm1zMzc=@146.70.90.196:17454#%F0%9F%87%AE%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:06:59 | Response: 0.315s | IP: 136.244.100.113 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5T0RMWFZMejJGV05URmVTU25nM0Zt@136.244.100.113:443#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:06:59 | Response: 0.317s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.206:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:06:59 | Response: 0.575s | IP: 203.23.128.92 | Country: 🇭🇰 Hong Kong
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@203.23.128.92:990#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:06:59 | Response: 0.485s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@193.29.139.164:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:06:59 | Response: 1.474s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl03.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:07:00 | Response: 0.224s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.190:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:07:00 | Response: 0.680s | IP: 209.74.82.196 | Country: 🇸🇬 Singapore
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4SWo0c2VpZjg1UVFIZkxtUjB6WWtR@209.74.82.196:48918#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:07:00 | Response: 0.325s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.170:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:07:01 | Response: 0.403s | IP: 188.214.157.30 | Country: 🇲🇦 Morocco
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@188.214.157.30:990#%F0%9F%87%B2%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:07:37 | Response: 0.509s | IP: 79.127.233.170 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@79.127.233.170:990#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:07:38 | Response: 0.466s | IP: 149.22.87.240 | Country: 🇯🇵 Japan
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.240:443#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-11 01:07:38 | Response: 0.413s | IP: 145.14.131.37 | Country: 🇨🇷 Costa Rica
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@145.14.131.37:990#%F0%9F%87%A8%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:07:38 | Response: 0.255s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.192:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:07:38 | Response: 0.257s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.217:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:08:16 | Response: 0.407s | IP: 37.235.56.69 | Country: 🇦🇹 Austria
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@37.235.56.69:990#%F0%9F%87%A6%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:08:16 | Response: 0.424s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.155:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:08:16 | Response: 0.981s | IP: 194.246.114.101 | Country: 🇭🇰 Hong Kong
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpIYU5xdzlwSUU0amN4OThzZzdVUWdIZUdOVE00UjJwaw==@194.246.114.101:443#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:08:17 | Response: 0.407s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.167:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:08:17 | Response: 0.342s | IP: 212.192.14.224 | Country: 🇷🇺 Russia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHRUtwaG1mbEVONnpzQ1gydFZWSmhx@212.192.14.224:57995#%F0%9F%87%B7%F0%9F%87%BA
-
-# Tested at: 2025-12-11 01:08:17 | Response: 0.265s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@tawaguard.xyz:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:08:18 | Response: 0.251s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.199:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:08:52 | Response: 0.420s | IP: 141.164.45.187 | Country: 🇰🇷 South Korea
-ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@141.164.45.187:7001#%F0%9F%87%B0%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:08:53 | Response: 0.320s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.186:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:08:54 | Response: 0.453s | IP: 188.29.145.69 | Country: 🇬🇧 United Kingdom
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2025-12-11 01:08:56 | Response: 3.587s | IP: 193.29.139.152 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.152:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:09:37 | Response: 0.540s | IP: 223.165.4.173 | Country: 🇹🇼 Taiwan
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@223.165.4.173:990#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2025-12-11 01:09:49 | Response: 4.489s | IP: 92.112.126.90 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5dHFoTWRJclRrZ1E0NlB2aHlBdE1I@switcher-nick-croquet.freesocks.work:443#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:10 | Response: 0.472s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.147:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:10 | Response: 1.040s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl06.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:11 | Response: 0.319s | IP: 77.238.224.29 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTMlF1ZEJ4aTB2UnlTdzRZUkxsb1Bx@77.238.224.29:55702#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:11 | Response: 0.495s | IP: 134.255.210.49 | Country: 🇨🇾 Cyprus
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@134.255.210.49:990#%F0%9F%87%A8%F0%9F%87%BE
-
-# Tested at: 2025-12-11 01:10:11 | Response: 1.790s | IP: 197.140.29.76 | Country: 🇩🇿 Algeria
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@197.140.29.76:990#%F0%9F%87%A9%F0%9F%87%BF
-
-# Tested at: 2025-12-11 01:10:12 | Response: 0.225s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.199:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:17 | Response: 3.226s | IP: 38.54.2.182 | Country: 🇧🇭 Bahrain
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.54.2.182:990#%F0%9F%87%A7%F0%9F%87%AD
-
-# Tested at: 2025-12-11 01:10:46 | Response: 0.406s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.166:443#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:46 | Response: 0.235s | IP: 185.47.253.171 | Country: 🇪🇨 Ecuador
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.253.171:990#%F0%9F%87%AA%F0%9F%87%A8
-
-# Tested at: 2025-12-11 01:10:47 | Response: 0.249s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.190:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:10:47 | Response: 0.438s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@vip.nl-16-07.galaxymc-ssh.ir:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:11:23 | Response: 0.233s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.214:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:11:23 | Response: 0.324s | IP: 193.29.139.209 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.209:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:11:23 | Response: 0.463s | IP: 83.217.9.17 | Country: 🇹🇷 Türkiye
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZSHRYRDRwb2p2b3JtVldSaUhnSWZ2@83.217.9.17:25232#%F0%9F%87%B9%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:11:24 | Response: 0.251s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.178:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:11:33 | Response: 1.642s | IP: 2a12:bec4:1822:1b9::a | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSRkszOENnN0FQbmVTQjVjV0RjcGJt@92.112.126.90:443#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:12:01 | Response: 0.471s | IP: 46.183.185.37 | Country: 🇲🇰 North Macedonia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@46.183.185.37:990#%F0%9F%87%B2%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:12:02 | Response: 0.257s | IP: 193.29.139.233 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.137:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:12:03 | Response: 0.610s | IP: 45.84.107.97 | Country: 🇸🇪 Sweden
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#%F0%9F%87%B8%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:12:39 | Response: 0.167s | IP: 23.95.76.59 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@23.95.76.59:990#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:12:40 | Response: 0.425s | IP: 176.126.83.158 | Country: 🇮🇹 Italy
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@176.126.83.158:990#%F0%9F%87%AE%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:12:40 | Response: 0.676s | IP: 103.75.119.38 | Country: 🇦🇺 Australia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.75.119.38:990#%F0%9F%87%A6%F0%9F%87%BA
-
-# Tested at: 2025-12-11 01:12:40 | Response: 0.440s | IP: 94.131.104.147 | Country: 🇱🇻 Latvia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2VkFjbGw0UDh4UFRVVlZ0SGVTVDNvblJtTG9WSUJTVQ==@94.131.104.147:443#%F0%9F%87%B1%F0%9F%87%BB
-
-# Tested at: 2025-12-11 01:12:41 | Response: 0.232s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@151.242.251.131:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:12:41 | Response: 0.242s | IP: 141.98.101.181 | Country: 🇬🇧 United Kingdom
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@141.98.101.181:443#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2025-12-11 01:12:41 | Response: 0.319s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.205:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:12:41 | Response: 0.220s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.187:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:12:42 | Response: 2.048s | IP: 89.185.84.185 | Country: 🇬🇧 United Kingdom
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpEa0g3dU83dDkwVXc0RDk1emdaVmRW@89.185.84.185:443#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2025-12-11 01:12:42 | Response: 3.183s | IP: 185.255.123.110 | Country: 🇳🇬 Nigeria
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.255.123.110:990#%F0%9F%87%B3%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:12:45 | Response: 3.567s | IP: 64.137.109.212 | Country: 🇫🇮 Finland
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyREdxM2p2VlJnNW4zQ2N4bXlzR0sya21yZ0plU05vZjEyQTc2Y1p2VnhxUHBldHlDMVhFY2lDRnVmcTV4S3ZSV0dHbktWZW1icFRodVVTUWhiWjdHTXNaWTRVVnhFQnc=@backup.fleetfoxi.link:44884#%F0%9F%87%AB%F0%9F%87%AE
-
-# Tested at: 2025-12-11 01:13:17 | Response: 0.519s | IP: 154.205.146.153 | Country: 🇧🇭 Bahrain
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@154.205.146.153:990#%F0%9F%87%A7%F0%9F%87%AD
-
-# Tested at: 2025-12-11 01:13:17 | Response: 0.277s | IP: 64.74.163.218 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@64.74.163.218:990#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:13:18 | Response: 1.060s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@ltnl02.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:13:18 | Response: 0.759s | IP: 209.74.81.149 | Country: 🇸🇬 Singapore
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpxOTJNcnJQOW9KM2xNRXpiUUZweXVV@209.74.81.149:21166#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:13:21 | Response: 0.213s | IP: 104.192.226.106 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@104.192.226.106:990#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:13:22 | Response: 0.749s | IP: 38.54.107.101 | Country: 🇹🇼 Taiwan
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.107.101:990#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2025-12-11 01:13:55 | Response: 0.606s | IP: 193.29.139.188 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.58:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:13:56 | Response: 0.111s | IP: 37.19.198.244 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.244:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:13:56 | Response: 0.304s | IP: 193.29.139.235 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.235:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:14:31 | Response: 0.605s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@193.29.139.175:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:14:31 | Response: 0.611s | IP: 212.34.140.184 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowTmVONXRhN0ZMYTVCOURMeXRVMHVt@212.34.140.184:443#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:14:32 | Response: 0.473s | IP: 188.214.36.155 | Country: 🇪🇪 Estonia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@188.214.36.155:990#%F0%9F%87%AA%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:14:32 | Response: 0.255s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.188:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:14:33 | Response: 0.728s | IP: 147.78.0.182 | Country: 🇦🇪 United Arab Emirates
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@147.78.0.182:990#%F0%9F%87%A6%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:14:34 | Response: 2.985s | IP: 14.18.106.88 | Country: 🇨🇳 China
-ss://YWVzLTI1Ni1nY206MTIz@14.18.106.88:6100#%F0%9F%87%A8%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:15:10 | Response: 0.406s | IP: 149.22.95.183 | Country: 🇨🇦 Canada
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.95.183:443#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:15:10 | Response: 0.455s | IP: 149.22.87.204 | Country: 🇯🇵 Japan
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.204:443#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-11 01:15:10 | Response: 0.748s | IP: 38.165.233.18 | Country: 🇵🇾 Paraguay
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.165.233.18:990#%F0%9F%87%B5%F0%9F%87%BE
-
-# Tested at: 2025-12-11 01:15:12 | Response: 0.220s | IP: 193.29.139.191 | Country: 🇳🇱 The Netherlands
+# Tested at: 2025-12-11 06:22:26 | Response: 0.392s | IP: 193.29.139.191 | Country: 🇳🇱 The Netherlands
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.191:8080#%F0%9F%87%B3%F0%9F%87%B1
 
-# Tested at: 2025-12-11 01:15:12 | Response: 0.647s | IP: 141.98.4.67 | Country: 🇫🇮 Finland
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMTVNOaDIxVHJYalIyb2syNVEybkU4RU5UMnpvQm1QdmthM1JDQ1VBSFpFTENuV29la1ZqdmFmODlxd2NSa2RieEVmZXAyYmMyYVV0bW54cXZGMWF5UVJlejFKSGpVTGo=@141.98.4.67:52952#%F0%9F%87%AB%F0%9F%87%AE
-
-# Tested at: 2025-12-11 01:15:49 | Response: 0.555s | IP: 193.29.139.144 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.144:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:15:49 | Response: 0.222s | IP: 173.244.56.6 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@173.244.56.6:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:15:49 | Response: 0.335s | IP: 147.78.1.27 | Country: 🇲🇽 Mexico
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@147.78.1.27:990#%F0%9F%87%B2%F0%9F%87%BD
-
-# Tested at: 2025-12-11 01:16:26 | Response: 0.157s | IP: 156.146.38.168 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:16:28 | Response: 1.160s | IP: 38.60.192.176 | Country: 🇲🇾 Malaysia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.60.192.176:990#%F0%9F%87%B2%F0%9F%87%BE
-
-# Tested at: 2025-12-11 01:17:06 | Response: 0.311s | IP: 37.143.130.203 | Country: 🇪🇸 Spain
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@37.143.130.203:990#%F0%9F%87%AA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:17:11 | Response: 0.252s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.197:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:17:41 | Response: 0.571s | IP: 185.47.252.251 | Country: 🇵🇪 Peru
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.252.251:990#%F0%9F%87%B5%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:17:43 | Response: 0.226s | IP: 193.29.139.251 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.10:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:17:43 | Response: 0.137s | IP: 2a05:541:116:3::1 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGNWJHWThHSjNHT2cwT1k1Z3J2V1dX@212.18.104.228:56636#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:17:44 | Response: 0.552s | IP: 38.54.45.129 | Country: 🇦🇷 Argentina
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.54.45.129:990#%F0%9F%87%A6%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:18:19 | Response: 1.071s | IP: 64.137.109.212 | Country: 🇫🇮 Finland
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyREdxM2p2VlJnNW4zQ2N4bXlzR0sya21yZ0plU05vZjEyQTc2Y1p2VnhxUHBldHlDMVhFY2lDRnVmcTV4S3ZSV0dHbktWZW1icFRodVVTUWhiWjdHTXNaWTRVVnhFQnc=@64.137.109.212:44884#%F0%9F%87%AB%F0%9F%87%AE
-
-# Tested at: 2025-12-11 01:18:19 | Response: 0.589s | IP: 185.237.185.89 | Country: 🇱🇹 Lithuania
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.237.185.89:990#%F0%9F%87%B1%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:18:19 | Response: 0.675s | IP: 119.59.98.58 | Country: 🇹🇭 Thailand
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@119.59.98.58:990#%F0%9F%87%B9%F0%9F%87%AD
-
-# Tested at: 2025-12-11 01:18:20 | Response: 0.304s | IP: 193.29.139.233 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.233:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:18:21 | Response: 0.826s | IP: 193.29.139.168 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl04.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:18:23 | Response: 0.311s | IP: 193.29.139.240 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.240:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:18:31 | Response: 0.250s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl11.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:18:57 | Response: 0.324s | IP: 193.29.139.243 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.28:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:18:56 | Response: 0.622s | IP: 95.173.218.203 | Country: 🇸🇬 Singapore
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@95.173.218.203:990#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:18:59 | Response: 0.345s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl17.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:19:02 | Response: 0.287s | IP: 193.29.139.168 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.65:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:19:34 | Response: 0.362s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.158:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:19:34 | Response: 0.951s | IP: 95.111.222.113 | Country: 🇦🇺 Australia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTVnQ2WmlXelJJMVl4ZWlnNHhCWndpSk90NmNlWHdHYQ==@95.111.222.113:443#%F0%9F%87%A6%F0%9F%87%BA
-
-# Tested at: 2025-12-11 01:19:34 | Response: 0.389s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.200:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:19:34 | Response: 0.127s | IP: 142.4.216.225 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKSWhONnJCS2thRWJvTE5YVlN2NXJx@ca225.vpnbook.com:80#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:19:36 | Response: 1.002s | IP: 78.135.93.114 | Country: 🇹🇷 Turkey
-ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206WmpabVlqaGhNVE0zTVRZd1l6azRaUT09Ok5qUTVPRFl3T0RndFl6TTVaaTAwTUE9PQ==@gg.xn--9kq279fa.xyz:22004#%F0%9F%87%B9%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:20:12 | Response: 0.279s | IP: 209.74.86.117 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZRjBxc1NkVUhlSnhwM3ljS2xQMUth@209.74.86.117:22011#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:20:12 | Response: 0.318s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.185:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:20:12 | Response: 0.216s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.208:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:20:13 | Response: 0.432s | IP: 154.205.153.107 | Country: 🇨🇱 Chile
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@154.205.153.107:990#%F0%9F%87%A8%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:20:13 | Response: 2.889s | IP: 38.180.195.193 | Country: 🇮🇹 Italy
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTd1RTaFhZU1FkNDA0RklTczhORmVK@promo19v.bystrivpn.ru:443#%F0%9F%87%AE%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:20:48 | Response: 0.405s | IP: 141.98.101.179 | Country: 🇬🇧 United Kingdom
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@141.98.101.179:443#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2025-12-11 01:20:48 | Response: 0.466s | IP: 185.47.254.87 | Country: 🇬🇹 Guatemala
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.254.87:990#%F0%9F%87%AC%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:20:48 | Response: 0.356s | IP: 193.29.139.251 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.251:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:20:50 | Response: 0.223s | IP: 193.29.139.160 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.160:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:20:53 | Response: 2.398s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@beesyar.org:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:20:53 | Response: 0.337s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.162:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:21:27 | Response: 0.298s | IP: 156.146.38.167 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:21:27 | Response: 0.713s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.154:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:21:27 | Response: 0.401s | IP: 193.29.139.168 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.168:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:21:28 | Response: 0.247s | IP: 193.29.139.132 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.132:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:21:28 | Response: 0.471s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.173:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:21:28 | Response: 0.364s | IP: 193.29.139.132 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl12.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:22:06 | Response: 0.406s | IP: 193.29.139.177 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.92:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:22:06 | Response: 0.651s | IP: 94.131.123.236 | Country: 🇹🇷 Türkiye
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozSUpqM1BGZ2x2N1VKTmtYOXVnUjU5@94.131.123.236:5223#%F0%9F%87%B9%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:22:06 | Response: 0.844s | IP: 38.60.247.151 | Country: 🇧🇬 Bulgaria
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.60.247.151:990#%F0%9F%87%A7%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:22:06 | Response: 0.700s | IP: 193.29.139.251 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@2.ilgm.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:22:07 | Response: 0.240s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
+# Tested at: 2025-12-11 06:22:26 | Response: 0.496s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.157:8080#%F0%9F%87%B3%F0%9F%87%B1
 
-# Tested at: 2025-12-11 01:22:07 | Response: 0.315s | IP: 95.164.10.228 | Country: 🇩🇰 Denmark
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTRGFGSVNyM0dmbTZZa0JTU3JGSUV3d1dqRUVVN1hibw==@95.164.10.228:443#%F0%9F%87%A9%F0%9F%87%B0
+# Tested at: 2025-12-11 06:22:27 | Response: 0.504s | IP: 188.214.157.30 | Country: 🇲🇦 Morocco
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@188.214.157.30:990#%F0%9F%87%B2%F0%9F%87%A6
 
-# Tested at: 2025-12-11 01:22:43 | Response: 0.363s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.176:8080#%F0%9F%87%B3%F0%9F%87%B1
+# Tested at: 2025-12-11 06:22:28 | Response: 0.317s | IP: 193.29.139.240 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.240:8080#%F0%9F%87%B3%F0%9F%87%B1
 
-# Tested at: 2025-12-11 01:22:44 | Response: 0.357s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@ltnl14.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+# Tested at: 2025-12-11 06:22:28 | Response: 0.444s | IP: 149.22.87.241 | Country: 🇯🇵 Japan
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.241:443#%F0%9F%87%AF%F0%9F%87%B5
 
-# Tested at: 2025-12-11 01:22:45 | Response: 0.317s | IP: 193.29.139.233 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.210:8080#%F0%9F%87%B3%F0%9F%87%B1
+# Tested at: 2025-12-11 06:22:30 | Response: 0.459s | IP: 13.212.176.231 | Country: 🇸🇬 Singapore
+ss://YWVzLTI1Ni1nY206OGYzYTgzNWMtOGE0NS00ODBkLWFlMzUtMWRlYjJjNTJkY2Fl@cgroup.node3.s2.nodelist-airport.com:34502#%F0%9F%87%B8%F0%9F%87%AC
 
-# Tested at: 2025-12-11 01:23:19 | Response: 0.356s | IP: 213.109.147.242 | Country: 🇳🇱 Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWcEtBQmNPcE5OQTBsNUcyQVZPbXc4@213.109.147.242:62685#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:23:19 | Response: 0.721s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@193.29.139.143:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:23:21 | Response: 0.292s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.180:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:23:22 | Response: 0.579s | IP: 176.5.189.168 | Country: 🇩🇪 Germany
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:23:57 | Response: 1.046s | IP: 154.205.159.100 | Country: 🇮🇩 Indonesia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@154.205.159.100:990#%F0%9F%87%AE%F0%9F%87%A9
-
-# Tested at: 2025-12-11 01:23:57 | Response: 0.580s | IP: 193.29.139.188 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.188:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:23:58 | Response: 1.242s | IP: 172.59.219.19 | Country: 🇺🇸 United States
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@15.204.247.49:12000#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:23:58 | Response: 0.227s | IP: 193.29.139.141 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl16.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:24:34 | Response: 1.288s | IP: 171.22.254.17 | Country: 🇲🇹 Malta
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@171.22.254.17:990#%F0%9F%87%B2%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:24:34 | Response: 0.442s | IP: 185.156.110.92 | Country: 🇭🇷 Croatia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpnWE9YazJGSndzejlQNm5YSUlDdUROT3FGOWdXWDFkbg==@185.156.110.92:443#%F0%9F%87%AD%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:24:35 | Response: 0.108s | IP: 37.19.198.160 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:24:35 | Response: 0.285s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@151.242.251.142:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:24:42 | Response: 4.438s | IP: 212.102.54.45 | Country: 🇮🇹 Italy
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@212.102.54.45:990#%F0%9F%87%AE%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:25:11 | Response: 1.029s | IP: 212.34.140.184 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowTmVONXRhN0ZMYTVCOURMeXRVMHVt@promo1o.bystrivpn.ru:443#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:25:12 | Response: 0.877s | IP: 134.209.147.198 | Country: 🇮🇳 India
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@134.209.147.198:990#%F0%9F%87%AE%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:25:13 | Response: 0.535s | IP: 193.29.139.150 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.150:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:25:13 | Response: 2.114s | IP: 38.89.142.56 | Country: 🇸🇬 Singapore
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.89.142.56:990#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:25:19 | Response: 0.210s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.183:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:25:51 | Response: 0.499s | IP: 45.159.250.190 | Country: 🇰🇿 Kazakhstan
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@45.159.250.190:990#%F0%9F%87%B0%F0%9F%87%BF
-
-# Tested at: 2025-12-11 01:25:51 | Response: 0.566s | IP: 185.126.237.38 | Country: 🇷🇴 Romania
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.126.237.38:990#%F0%9F%87%B7%F0%9F%87%B4
-
-# Tested at: 2025-12-11 01:25:52 | Response: 0.345s | IP: 154.70.207.97 | Country: 🇲🇦 Morocco
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@154.70.207.97:990#%F0%9F%87%B2%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:25:53 | Response: 0.646s | IP: 74.119.193.40 | Country: 🇭🇰 Hong Kong
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpOQmo3YzBNZGdibzUwZTRsaGY1MzVu@74.119.193.40:5223#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:25:55 | Response: 0.212s | IP: 193.29.139.184 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.184:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:26:25 | Response: 0.459s | IP: 209.74.86.194 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwcGd0b09IZG03Y3N6R3VuQldCVHFR@209.74.86.194:14936#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:26:26 | Response: 0.383s | IP: 193.29.139.240 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.158.171.66:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:26:27 | Response: 0.350s | IP: 185.47.253.227 | Country: 🇪🇨 Ecuador
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.253.227:990#%F0%9F%87%AA%F0%9F%87%A8
-
-# Tested at: 2025-12-11 01:26:29 | Response: 1.908s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.174:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:26:35 | Response: 0.170s | IP: 167.160.90.178 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@167.160.90.178:990#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:27:04 | Response: 0.570s | IP: 109.71.246.210 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZUUNTS29DRjNRYXpXOFlsdkRCV0E0@109.71.246.210:56689#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:27:05 | Response: 0.517s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.193:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:27:05 | Response: 0.889s | IP: 115.161.136.145 | Country: 🇰🇷 South Korea
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxMjI0Mg==@115.161.136.145:10099#%F0%9F%87%B0%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:27:05 | Response: 0.389s | IP: 94.131.22.134 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyQUpvZ0t1RnNpVmE1U3JoRDd2UG44UDI4c2U5REJBVDU2NFhUR0RuRTloNUhaUGg1OTNiekpSeFlhdld6cnlhY3I2Q0FONW5IRm04UnBzSGZxUm5hc3loYnNSelk0TnA=@94.131.22.134:40565#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:27:09 | Response: 0.280s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.165:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:27:44 | Response: 0.268s | IP: 37.19.198.243 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:27:44 | Response: 0.842s | IP: 103.97.203.227 | Country: 🇮🇳 India
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.97.203.227:990#%F0%9F%87%AE%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:27:45 | Response: 0.246s | IP: 193.29.139.202 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.202:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:27:45 | Response: 0.311s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.181:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:27:45 | Response: 0.258s | IP: 185.47.255.22 | Country: 🇵🇷 Puerto Rico
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.255.22:990#%F0%9F%87%B5%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:28:24 | Response: 0.261s | IP: 144.126.146.38 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjMWFiZDhkNC01MjI4LTQ5MmMtYjgyNy0wMzA0ZTYyYjdhYjA=@144.126.146.38:30941#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:28:59 | Response: 0.591s | IP: 103.111.114.29 | Country: 🇮🇳 India
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNjBlMjFkMjE5NzdkYzEx@103.111.114.29:57456#%F0%9F%87%AE%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:29:01 | Response: 3.006s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@193.29.139.179:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:29:40 | Response: 0.349s | IP: 138.186.142.81 | Country: 🇵🇦 Panama
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@138.186.142.81:990#%F0%9F%87%B5%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:29:43 | Response: 0.246s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@151.242.251.133:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:29:44 | Response: 0.176s | IP: 173.244.56.9 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@173.244.56.9:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:30:15 | Response: 0.683s | IP: 188.214.157.58 | Country: 🇲🇦 Morocco
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@188.214.157.58:990#%F0%9F%87%B2%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:30:15 | Response: 0.900s | IP: 95.40.64.182 | Country: 🇭🇰 Hong Kong
-ss://YWVzLTI1Ni1nY206OGYzYTgzNWMtOGE0NS00ODBkLWFlMzUtMWRlYjJjNTJkY2Fl@cgroup.node4.s.nodelist-airport.com:32013#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:30:15 | Response: 0.822s | IP: 156.59.243.6 | Country: 🇵🇰 Pakistan
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@156.59.243.6:990#%F0%9F%87%B5%F0%9F%87%B0
-
-# Tested at: 2025-12-11 01:30:15 | Response: 0.309s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.177:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:30:16 | Response: 0.395s | IP: 195.181.160.6 | Country: 🇨🇿 Czechia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@195.181.160.6:990#%F0%9F%87%A8%F0%9F%87%BF
-
-# Tested at: 2025-12-11 01:30:17 | Response: 0.618s | IP: 82.180.146.173 | Country: 🇮🇳 India
-ss://YWVzLTEyOC1nY206OTM0OTg1MzktNzgzOC00ODM2LWI5YjMtODMxMWZmYzc5YmNm@82.180.146.173:35652#%F0%9F%87%AE%F0%9F%87%B3
-
-# Tested at: 2025-12-11 01:30:52 | Response: 0.307s | IP: 208.67.105.196 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGemY1dmFYRnM3b0NZM1hiMzNhWjk0NXhraHZGdDJycnhkUkJZOUQzZFFlY05RS0VYeXNCWGIyZVZQekRWYjlpcU0zaUJod0pIRWk1ZVdoekFYSlhFUDJ2VXdXQ3BaWEQ=@208.67.105.196:42029#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:30:52 | Response: 0.213s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.194:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:30:52 | Response: 0.258s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.199:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:30:53 | Response: 0.404s | IP: 176.126.83.121 | Country: 🇮🇹 Italy
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRNHQ4VDdoRVlZM21EMkZuNHdueHlLNFgzNUFVenZSOA==@176.126.83.121:443#%F0%9F%87%AE%F0%9F%87%B9
-
-# Tested at: 2025-12-11 01:30:54 | Response: 0.504s | IP: 38.244.136.233 | Country: 🇫🇮 Finland
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkQUhNMXBtOGFnN0tkbHJVeWxRaTZ0@promo18v.bystrivpn.ru:443#%F0%9F%87%AB%F0%9F%87%AE
-
-# Tested at: 2025-12-11 01:31:29 | Response: 0.429s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.187:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:31:29 | Response: 0.533s | IP: 162.19.208.118 | Country: 🇩🇪 Germany
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPRDAxN0NHa3N0VzlhV1lhdmlPUmJZ@162.19.208.118:42976#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:31:29 | Response: 0.096s | IP: 37.19.198.236 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.236:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:31:30 | Response: 0.532s | IP: 87.121.162.249 | Country: 🇩🇪 Germany
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKR3Y2MTZoTVdkamZ1WjAwallmcTdYa0JISlpyT0JyZw==@87.121.162.249:443#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:31:30 | Response: 0.776s | IP: 212.18.104.228 | Country: 🇺🇸 United States
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGNWJHWThHSjNHT2cwT1k1Z3J2V1dX@dyn.usa.outlinekeys.net:56636#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:31:30 | Response: 0.225s | IP: 193.29.139.188 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl15.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:31:30 | Response: 1.004s | IP: 167.150.100.115 | Country: 🇸🇬 Singapore
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwSnRERlhNZmRXOVZOZEpwYWY0ZTJMZkZrWGRXZ3hyeg==@167.150.100.115:443#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:31:30 | Response: 0.433s | IP: 103.106.228.247 | Country: 🇯🇵 Japan
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.106.228.247:990#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2025-12-11 01:31:30 | Response: 0.349s | IP: 38.244.136.233 | Country: 🇫🇮 Finland
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkQUhNMXBtOGFnN0tkbHJVeWxRaTZ0@38.244.136.233:443#%F0%9F%87%AB%F0%9F%87%AE
-
-# Tested at: 2025-12-11 01:31:30 | Response: 0.534s | IP: 77.83.246.74 | Country: 🇵🇱 Poland
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0UDY5TmRLUDI0RUNkZlpvYkU5dWZY@77.83.246.74:443#%F0%9F%87%B5%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:31:32 | Response: 0.228s | IP: 185.47.255.213 | Country: 🇵🇷 Puerto Rico
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.47.255.213:990#%F0%9F%87%B5%F0%9F%87%B7
-
-# Tested at: 2025-12-11 01:31:35 | Response: 0.322s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.218:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:32:08 | Response: 0.324s | IP: 156.146.38.170 | Country: 🇺🇸 United States
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2025-12-11 01:32:08 | Response: 0.347s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.227:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:32:09 | Response: 0.972s | IP: 38.54.59.107 | Country: 🇪🇬 Egypt
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.59.107:990#%F0%9F%87%AA%F0%9F%87%AC
-
-# Tested at: 2025-12-11 01:32:09 | Response: 0.259s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.202:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:32:10 | Response: 0.218s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.175:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:32:11 | Response: 2.360s | IP: 90.156.203.62 | Country: 🇷🇺 Russia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWVmxBZmY3N0NuQVU0M0FvYzVqMTVZ@90.156.203.62:5112#%F0%9F%87%B7%F0%9F%87%BA
-
-# Tested at: 2025-12-11 01:32:47 | Response: 0.273s | IP: 23.95.76.147 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@23.95.76.147:990#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:32:47 | Response: 0.415s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl13.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:32:47 | Response: 0.505s | IP: 5.182.37.87 | Country: 🇷🇴 Romania
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPeTRUc3J4ZmFKRXhVSWhsY1NxSHBWUUlXSUZNMmpaUg==@5.182.37.87:443#%F0%9F%87%B7%F0%9F%87%B4
-
-# Tested at: 2025-12-11 01:32:47 | Response: 0.735s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.189:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:32:48 | Response: 0.746s | IP: 95.174.68.33 | Country: 🇦🇪 United Arab Emirates
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZekg0aWQ3WkV5S3BmeTM5RjJZY09tekNzQmtsR3doOA==@95.174.68.33:443#%F0%9F%87%A6%F0%9F%87%AA
-
-# Tested at: 2025-12-11 01:32:49 | Response: 0.360s | IP: 192.71.244.150 | Country: 🇸🇮 Slovenia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@192.71.244.150:990#%F0%9F%87%B8%F0%9F%87%AE
-
-# Tested at: 2025-12-11 01:32:53 | Response: 0.117s | IP: 147.78.1.230 | Country: 🇲🇽 Mexico
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@147.78.1.230:990#%F0%9F%87%B2%F0%9F%87%BD
-
-# Tested at: 2025-12-11 01:33:25 | Response: 0.254s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.166:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:33:28 | Response: 0.080s | IP: 64.74.163.82 | Country: 🇨🇦 Canada
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@64.74.163.82:990#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2025-12-11 01:34:02 | Response: 0.751s | IP: 91.148.135.31 | Country: 🇨🇾 Cyprus
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@91.148.135.31:990#%F0%9F%87%A8%F0%9F%87%BE
-
-# Tested at: 2025-12-11 01:34:03 | Response: 0.506s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.144:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:34:03 | Response: 0.964s | IP: 185.93.173.60 | Country: 🇧🇴 Bolivia
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.93.173.60:990#%F0%9F%87%A7%F0%9F%87%B4
-
-# Tested at: 2025-12-11 01:34:03 | Response: 0.257s | IP: 193.29.139.141 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.141:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:34:03 | Response: 0.472s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.191:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:34:40 | Response: 0.668s | IP: 38.165.231.25 | Country: 🇪🇨 Ecuador
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.165.231.25:990#%F0%9F%87%AA%F0%9F%87%A8
-
-# Tested at: 2025-12-11 01:34:41 | Response: 0.315s | IP: 193.29.139.202 | Country: 🇳🇱 The Netherlands
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.69:8080#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2025-12-11 01:34:42 | Response: 0.459s | IP: 38.180.195.193 | Country: 🇮🇹 Italy
+# Tested at: 2025-12-11 06:23:05 | Response: 1.210s | IP: 38.180.195.193 | Country: 🇮🇹 Italy
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTd1RTaFhZU1FkNDA0RklTczhORmVK@38.180.195.193:443#%F0%9F%87%AE%F0%9F%87%B9
 
-# Tested at: 2025-12-11 01:35:18 | Response: 0.248s | IP: 193.29.139.141 | Country: 🇳🇱 The Netherlands
+# Tested at: 2025-12-11 06:23:06 | Response: 1.382s | IP: 149.22.95.183 | Country: 🇨🇦 Canada
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.95.183:443#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:23:07 | Response: 0.334s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.167:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:23:42 | Response: 0.922s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.187:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:23:44 | Response: 0.244s | IP: 193.29.139.233 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.233:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:23:44 | Response: 2.184s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.168:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:23:45 | Response: 0.266s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.199:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:23:45 | Response: 0.716s | IP: 156.59.243.6 | Country: 🇵🇰 Pakistan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@156.59.243.6:990#%F0%9F%87%B5%F0%9F%87%B0
+
+# Tested at: 2025-12-11 06:23:48 | Response: 0.352s | IP: 212.192.14.224 | Country: 🇷🇺 Russia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHRUtwaG1mbEVONnpzQ1gydFZWSmhx@212.192.14.224:57995#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:24:21 | Response: 0.541s | IP: 193.29.139.251 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.251:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:24:22 | Response: 0.368s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.178:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:24:22 | Response: 0.584s | IP: 193.29.139.141 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.141:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:24:22 | Response: 0.725s | IP: 145.14.131.37 | Country: 🇨🇷 Costa Rica
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@145.14.131.37:990#%F0%9F%87%A8%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:24:22 | Response: 0.357s | IP: 185.47.253.171 | Country: 🇪🇨 Ecuador
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.253.171:990#%F0%9F%87%AA%F0%9F%87%A8
+
+# Tested at: 2025-12-11 06:24:24 | Response: 1.154s | IP: 141.164.45.187 | Country: 🇰🇷 South Korea
+ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@141.164.45.187:7001#%F0%9F%87%B0%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:24:27 | Response: 0.716s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl03.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:24:29 | Response: 0.468s | IP: 2001:3783:dedd:483::1 | Country: 🇦🇱 Albania
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKR3Y2MTZoTVdkamZ1WjAwallmcTdYa0JISlpyT0JyZw==@87.121.162.249:443#%F0%9F%87%A6%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:24:58 | Response: 0.329s | IP: 193.29.139.150 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.150:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:24:58 | Response: 0.456s | IP: 188.214.157.58 | Country: 🇲🇦 Morocco
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@188.214.157.58:990#%F0%9F%87%B2%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:25:03 | Response: 0.380s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.174:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:25:08 | Response: 0.130s | IP: 79.127.233.181 | Country: 🇨🇦 Canada
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@79.127.233.170:990#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:25:37 | Response: 0.736s | IP: 185.231.233.173 | Country: 🇵🇹 Portugal
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.231.233.173:990#%F0%9F%87%B5%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:25:37 | Response: 0.846s | IP: 154.205.159.100 | Country: 🇮🇩 Indonesia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@154.205.159.100:990#%F0%9F%87%AE%F0%9F%87%A9
+
+# Tested at: 2025-12-11 06:25:37 | Response: 1.165s | IP: 136.244.100.113 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5T0RMWFZMejJGV05URmVTU25nM0Zt@136.244.100.113:443#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:25:38 | Response: 0.552s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.187:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:25:38 | Response: 0.255s | IP: 193.29.139.160 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.160:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:25:39 | Response: 0.430s | IP: 95.174.68.33 | Country: 🇦🇪 United Arab Emirates
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZekg0aWQ3WkV5S3BmeTM5RjJZY09tekNzQmtsR3doOA==@95.174.68.33:443#%F0%9F%87%A6%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:25:54 | Response: 4.554s | IP: 74.119.193.40 | Country: 🇭🇰 Hong Kong
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpOQmo3YzBNZGdibzUwZTRsaGY1MzVu@74.119.193.40:5223#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-11 06:26:13 | Response: 0.474s | IP: 94.131.123.236 | Country: 🇹🇷 Türkiye
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozSUpqM1BGZ2x2N1VKTmtYOXVnUjU5@94.131.123.236:5223#%F0%9F%87%B9%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:26:13 | Response: 0.635s | IP: 144.126.146.38 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjMWFiZDhkNC01MjI4LTQ5MmMtYjgyNy0wMzA0ZTYyYjdhYjA=@144.126.146.38:30941#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:26:14 | Response: 0.612s | IP: 144.126.146.38 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4ZDczZTA4OC1kYzVhLTRkZmUtODkyNy01NjM1MWVlODA0MDc=@144.126.146.38:30789#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:26:14 | Response: 0.510s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@193.29.139.179:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:26:15 | Response: 0.433s | IP: 188.214.36.155 | Country: 🇪🇪 Estonia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@188.214.36.155:990#%F0%9F%87%AA%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:26:15 | Response: 0.604s | IP: 167.150.100.115 | Country: 🇸🇬 Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwSnRERlhNZmRXOVZOZEpwYWY0ZTJMZkZrWGRXZ3hyeg==@167.150.100.115:443#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:26:16 | Response: 0.540s | IP: 45.159.250.190 | Country: 🇰🇿 Kazakhstan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@45.159.250.190:990#%F0%9F%87%B0%F0%9F%87%BF
+
+# Tested at: 2025-12-11 06:26:32 | Response: 4.157s | IP: 45.82.249.122 | Country: 🇨🇱 Chile
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpUbnpDeEh1S1RUZkViZFBnczNIa25BZ1VMVlpBWkdSUg==@45.82.249.122:443#%F0%9F%87%A8%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:26:52 | Response: 0.328s | IP: 185.47.255.22 | Country: 🇵🇷 Puerto Rico
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.255.22:990#%F0%9F%87%B5%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:26:52 | Response: 0.331s | IP: 212.102.54.45 | Country: 🇮🇹 Italy
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@212.102.54.45:990#%F0%9F%87%AE%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:26:52 | Response: 0.806s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@151.242.251.133:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:26:52 | Response: 0.546s | IP: 45.154.206.192 | Country: 🇪🇸 Spain
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@45.154.206.192:990#%F0%9F%87%AA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:26:52 | Response: 0.541s | IP: 77.83.246.74 | Country: 🇵🇱 Poland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0UDY5TmRLUDI0RUNkZlpvYkU5dWZY@77.83.246.74:443#%F0%9F%87%B5%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:26:53 | Response: 0.482s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.186:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:26:58 | Response: 0.540s | IP: 109.71.246.210 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZUUNTS29DRjNRYXpXOFlsdkRCV0E0@109.71.246.210:56689#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.293s | IP: 156.146.38.169 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.375s | IP: 141.98.101.179 | Country: 🇬🇧 United Kingdom
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@141.98.101.179:443#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.392s | IP: 193.29.139.168 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.65:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.145s | IP: 173.244.56.9 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@173.244.56.9:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.455s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.197:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.353s | IP: 193.29.139.151 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.151:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.509s | IP: 185.255.123.110 | Country: 🇳🇬 Nigeria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.255.123.110:990#%F0%9F%87%B3%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.541s | IP: 138.186.143.32 | Country: 🇵🇪 Peru
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@138.186.143.32:990#%F0%9F%87%B5%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.477s | IP: 149.22.87.204 | Country: 🇯🇵 Japan
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.204:443#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-11 06:27:28 | Response: 0.891s | IP: 147.78.0.182 | Country: 🇦🇪 United Arab Emirates
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@147.78.0.182:990#%F0%9F%87%A6%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:27:29 | Response: 0.120s | IP: 156.146.38.170 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:27:29 | Response: 0.509s | IP: 38.165.231.25 | Country: 🇪🇨 Ecuador
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.165.231.25:990#%F0%9F%87%AA%F0%9F%87%A8
+
+# Tested at: 2025-12-11 06:27:29 | Response: 2.039s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.206:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:30 | Response: 0.633s | IP: 193.29.139.251 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@2.ilgm.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:31 | Response: 2.435s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl11.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:32 | Response: 4.219s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.192:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:27:32 | Response: 0.997s | IP: 197.140.29.76 | Country: 🇩🇿 Algeria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@197.140.29.76:990#%F0%9F%87%A9%F0%9F%87%BF
+
+# Tested at: 2025-12-11 06:27:32 | Response: 0.269s | IP: 62.100.205.100 | Country: 🇬🇧 United Kingdom
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@62.100.205.100:990#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2025-12-11 06:28:06 | Response: 0.447s | IP: 146.70.90.194 | Country: 🇮🇪 Ireland
+ss://YWVzLTEyOC1nY206dThncDE0OGl6OTBkZG9vNm1zMzc=@146.70.90.196:17454#%F0%9F%87%AE%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:28:07 | Response: 0.513s | IP: 149.22.87.240 | Country: 🇯🇵 Japan
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.240:443#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-11 06:28:07 | Response: 0.341s | IP: 193.29.139.177 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.177:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:28:15 | Response: 4.384s | IP: 115.161.136.145 | Country: 🇰🇷 South Korea
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxMjI0Mg==@115.161.136.145:10099#%F0%9F%87%B0%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:28:43 | Response: 0.335s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.200:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:28:43 | Response: 0.306s | IP: 38.244.136.233 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkQUhNMXBtOGFnN0tkbHJVeWxRaTZ0@38.244.136.233:443#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:28:43 | Response: 0.318s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.155:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:28:44 | Response: 1.605s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@151.242.251.152:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:28:44 | Response: 1.106s | IP: 38.54.59.107 | Country: 🇪🇬 Egypt
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.59.107:990#%F0%9F%87%AA%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:28:45 | Response: 0.290s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@151.242.251.131:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:28:50 | Response: 2.157s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl13.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:29:20 | Response: 1.454s | IP: 185.255.123.166 | Country: 🇳🇬 Nigeria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.255.123.166:990#%F0%9F%87%B3%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:29:22 | Response: 1.229s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@ltnl02.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:29:23 | Response: 0.792s | IP: 95.111.222.113 | Country: 🇦🇺 Australia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTVnQ2WmlXelJJMVl4ZWlnNHhCWndpSk90NmNlWHdHYQ==@95.111.222.113:443#%F0%9F%87%A6%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:29:58 | Response: 0.807s | IP: 77.246.97.187 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3a0pRczJSWUhoVmlUWVdhZjFSb2JC@77.246.97.187:7749#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:30:01 | Response: 0.640s | IP: 185.93.173.60 | Country: 🇧🇴 Bolivia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.93.173.60:990#%F0%9F%87%A7%F0%9F%87%B4
+
+# Tested at: 2025-12-11 06:30:06 | Response: 1.740s | IP: 38.89.142.56 | Country: 🇸🇬 Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.89.142.56:990#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:30:37 | Response: 0.533s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.166:443#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:30:37 | Response: 0.347s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@45.87.175.158:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:30:37 | Response: 0.922s | IP: 185.237.185.89 | Country: 🇱🇹 Lithuania
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.237.185.89:990#%F0%9F%87%B1%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:30:38 | Response: 0.326s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.177:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:30:38 | Response: 0.367s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@tawaguard.xyz:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:30:43 | Response: 1.544s | IP: 193.29.139.202 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.69:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:30:45 | Response: 3.957s | IP: 193.29.139.140 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.140:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:31:15 | Response: 0.163s | IP: 37.19.198.243 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:31:17 | Response: 1.486s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@193.29.139.164:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:31:53 | Response: 0.603s | IP: 192.71.244.150 | Country: 🇸🇮 Slovenia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@192.71.244.150:990#%F0%9F%87%B8%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:31:59 | Response: 0.404s | IP: 176.126.83.121 | Country: 🇮🇹 Italy
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRNHQ4VDdoRVlZM21EMkZuNHdueHlLNFgzNUFVenZSOA==@176.126.83.121:443#%F0%9F%87%AE%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:32:31 | Response: 0.479s | IP: 193.29.139.179 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:32:31 | Response: 0.608s | IP: 147.78.1.230 | Country: 🇲🇽 Mexico
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@147.78.1.230:990#%F0%9F%87%B2%F0%9F%87%BD
+
+# Tested at: 2025-12-11 06:32:32 | Response: 0.573s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.175:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:32:32 | Response: 0.228s | IP: 185.47.255.213 | Country: 🇵🇷 Puerto Rico
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@185.47.255.213:990#%F0%9F%87%B5%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:32:32 | Response: 0.387s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.202:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:32:36 | Response: 0.767s | IP: 37.143.130.203 | Country: 🇪🇸 Spain
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@37.143.130.203:990#%F0%9F%87%AA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:32:37 | Response: 0.276s | IP: 193.29.139.243 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.28:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:33:09 | Response: 0.551s | IP: 104.192.226.106 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@104.192.226.106:990#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:33:10 | Response: 0.733s | IP: 81.19.141.45 | Country: 🇩🇪 Germany
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4SDl1dkVUeDVrVzZmRTFienlEZGFk@81.19.141.45:443#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:33:10 | Response: 0.434s | IP: 138.186.142.81 | Country: 🇵🇦 Panama
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@138.186.142.81:990#%F0%9F%87%B5%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:33:10 | Response: 0.312s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.183:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:33:12 | Response: 1.790s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.153:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:33:12 | Response: 2.833s | IP: 77.238.224.29 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTMlF1ZEJ4aTB2UnlTdzRZUkxsb1Bx@77.238.224.29:55702#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:33:49 | Response: 0.878s | IP: 134.209.147.198 | Country: 🇮🇳 India
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@134.209.147.198:990#%F0%9F%87%AE%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:33:50 | Response: 0.490s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@vip.nl-16-07.galaxymc-ssh.ir:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:33:51 | Response: 0.661s | IP: 95.173.218.203 | Country: 🇸🇬 Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@95.173.218.203:990#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:34:27 | Response: 0.758s | IP: 209.74.81.149 | Country: 🇸🇬 Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpxOTJNcnJQOW9KM2xNRXpiUUZweXVV@209.74.81.149:21166#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:34:28 | Response: 0.441s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.180:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:34:28 | Response: 0.740s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@193.29.139.175:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:34:29 | Response: 0.522s | IP: 91.184.244.109 | Country: 🇷🇺 Russia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@23.95.76.147:990#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:35:03 | Response: 0.747s | IP: 13.231.88.61 | Country: 🇯🇵 Japan
+ss://YWVzLTI1Ni1nY206YzY5Mzc0ZGEtMjIwOC00Y2JkLWI4MWUtY2RmODhiNWU3ZjUz@ss.031.node-for-bigairport.win:36885#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-11 06:35:04 | Response: 0.173s | IP: 156.146.38.167 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:35:04 | Response: 0.643s | IP: 141.98.4.67 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMTVNOaDIxVHJYalIyb2syNVEybkU4RU5UMnpvQm1QdmthM1JDQ1VBSFpFTENuV29la1ZqdmFmODlxd2NSa2RieEVmZXAyYmMyYVV0bW54cXZGMWF5UVJlejFKSGpVTGo=@141.98.4.67:52952#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:35:13 | Response: 0.472s | IP: 64.137.109.212 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyREdxM2p2VlJnNW4zQ2N4bXlzR0sya21yZ0plU05vZjEyQTc2Y1p2VnhxUHBldHlDMVhFY2lDRnVmcTV4S3ZSV0dHbktWZW1icFRodVVTUWhiWjdHTXNaWTRVVnhFQnc=@backup.fleetfoxi.link:44884#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:35:43 | Response: 1.067s | IP: 193.29.139.141 | Country: 🇳🇱 The Netherlands
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.22:8080#%F0%9F%87%B3%F0%9F%87%B1
 
-# Tested at: 2025-12-11 01:35:18 | Response: 1.432s | IP: 45.15.126.19 | Country: 🇵🇱 Poland
+# Tested at: 2025-12-11 06:35:43 | Response: 0.323s | IP: 193.29.139.240 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.158.171.70:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:35:43 | Response: 0.372s | IP: 195.181.160.6 | Country: 🇨🇿 Czechia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@195.181.160.6:990#%F0%9F%87%A8%F0%9F%87%BF
+
+# Tested at: 2025-12-11 06:35:44 | Response: 0.303s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.170:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:35:46 | Response: 1.305s | IP: 223.165.4.173 | Country: 🇹🇼 Taiwan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@223.165.4.173:990#%F0%9F%87%B9%F0%9F%87%BC
+
+# Tested at: 2025-12-11 06:35:49 | Response: 4.672s | IP: 92.112.126.90 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5dHFoTWRJclRrZ1E0NlB2aHlBdE1I@92.112.126.90:443#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:35:53 | Response: 0.313s | IP: 193.29.139.132 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.132:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:36:21 | Response: 0.340s | IP: 156.146.38.168 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:36:22 | Response: 0.680s | IP: 94.131.104.147 | Country: 🇱🇻 Latvia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2VkFjbGw0UDh4UFRVVlZ0SGVTVDNvblJtTG9WSUJTVQ==@94.131.104.147:443#%F0%9F%87%B1%F0%9F%87%BB
+
+# Tested at: 2025-12-11 06:36:22 | Response: 0.489s | IP: 37.143.129.98 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@37.143.129.98:990#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:36:23 | Response: 0.148s | IP: 64.74.163.218 | Country: 🇨🇦 Canada
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@64.74.163.218:990#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:36:23 | Response: 0.273s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.199:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:36:25 | Response: 4.507s | IP: 154.70.207.97 | Country: 🇲🇦 Morocco
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@154.70.207.97:990#%F0%9F%87%B2%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:36:58 | Response: 0.768s | IP: 94.198.220.183 | Country: 🇰🇿 Kazakhstan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpzOExiSkNnVWlHWGVDS1ZjNjN0SEpQ@94.198.220.183:64674#%F0%9F%87%B0%F0%9F%87%BF
+
+# Tested at: 2025-12-11 06:37:34 | Response: 0.418s | IP: 64.74.163.82 | Country: 🇨🇦 Canada
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@64.74.163.82:990#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:37:34 | Response: 0.221s | IP: 173.244.56.6 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@173.244.56.6:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:37:35 | Response: 0.364s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.217:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:37:35 | Response: 0.878s | IP: 213.109.147.242 | Country: 🇳🇱 Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWcEtBQmNPcE5OQTBsNUcyQVZPbXc4@213.109.147.242:62685#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:37:35 | Response: 0.537s | IP: 185.126.237.38 | Country: 🇷🇴 Romania
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.126.237.38:990#%F0%9F%87%B7%F0%9F%87%B4
+
+# Tested at: 2025-12-11 06:37:36 | Response: 0.485s | IP: 190.103.176.32 | Country: 🇦🇷 Argentina
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@190.103.176.32:990#%F0%9F%87%A6%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:37:38 | Response: 0.871s | IP: 103.163.218.2 | Country: 🇻🇳 Vietnam
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@103.163.218.2:990#%F0%9F%87%BB%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:37:48 | Response: 0.950s | IP: 14.18.106.88 | Country: 🇨🇳 China
+ss://YWVzLTI1Ni1nY206MTIz@14.18.106.88:6100#%F0%9F%87%A8%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:38:13 | Response: 0.466s | IP: 193.29.139.240 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.158.171.66:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:38:13 | Response: 0.426s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.147:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:38:14 | Response: 0.457s | IP: 208.67.105.196 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGemY1dmFYRnM3b0NZM1hiMzNhWjk0NXhraHZGdDJycnhkUkJZOUQzZFFlY05RS0VYeXNCWGIyZVZQekRWYjlpcU0zaUJod0pIRWk1ZVdoekFYSlhFUDJ2VXdXQ3BaWEQ=@208.67.105.196:42029#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:38:14 | Response: 0.901s | IP: 38.54.107.101 | Country: 🇹🇼 Taiwan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.107.101:990#%F0%9F%87%B9%F0%9F%87%BC
+
+# Tested at: 2025-12-11 06:38:14 | Response: 0.859s | IP: 2a11:7e07::1aa | Country: 🇦🇺 Australia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@45.15.185.70:990#%F0%9F%87%A6%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:38:18 | Response: 3.024s | IP: 92.112.126.90 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5dHFoTWRJclRrZ1E0NlB2aHlBdE1I@switcher-nick-croquet.freesocks.work:443#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:38:51 | Response: 0.517s | IP: 185.192.124.188 | Country: 🇧🇷 Brazil
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.192.124.188:990#%F0%9F%87%A7%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:38:52 | Response: 0.863s | IP: 103.75.119.38 | Country: 🇦🇺 Australia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.75.119.38:990#%F0%9F%87%A6%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:38:52 | Response: 0.447s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl06.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:38:53 | Response: 0.824s | IP: 119.59.98.58 | Country: 🇹🇭 Thailand
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@119.59.98.58:990#%F0%9F%87%B9%F0%9F%87%AD
+
+# Tested at: 2025-12-11 06:39:35 | Response: 0.256s | IP: 147.78.1.27 | Country: 🇲🇽 Mexico
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@147.78.1.27:990#%F0%9F%87%B2%F0%9F%87%BD
+
+# Tested at: 2025-12-11 06:40:06 | Response: 0.645s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.164:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:40:06 | Response: 0.920s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@ltnl14.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:40:08 | Response: 0.723s | IP: 172.58.255.206 | Country: 🇺🇸 United States
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@15.204.247.49:12000#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:40:42 | Response: 0.262s | IP: 209.74.86.194 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpwcGd0b09IZG03Y3N6R3VuQldCVHFR@209.74.86.194:14936#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:40:43 | Response: 1.071s | IP: 103.111.114.29 | Country: 🇮🇳 India
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNjBlMjFkMjE5NzdkYzEx@103.111.114.29:57456#%F0%9F%87%AE%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:40:43 | Response: 0.629s | IP: 194.246.114.101 | Country: 🇭🇰 Hong Kong
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpIYU5xdzlwSUU0amN4OThzZzdVUWdIZUdOVE00UjJwaw==@194.246.114.101:443#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-11 06:40:45 | Response: 0.715s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@ltnl17.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:40:46 | Response: 0.847s | IP: 82.180.146.173 | Country: 🇮🇳 India
+ss://YWVzLTEyOC1nY206MTYyNjI5ZDctY2IxNy00M2IxLTgyYzktZjljN2FlNmNiYTcw@82.180.146.173:30607#%F0%9F%87%AE%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:41:21 | Response: 0.942s | IP: 195.66.27.148 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoU2hwMUttME5jRlNtU2lnYzhvemt5@195.66.27.148:28709#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:41:22 | Response: 1.001s | IP: 38.54.59.180 | Country: 🇪🇬 Egypt
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.59.180:990#%F0%9F%87%AA%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:41:28 | Response: 3.601s | IP: 212.34.140.184 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowTmVONXRhN0ZMYTVCOURMeXRVMHVt@212.34.140.184:443#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:42:00 | Response: 0.546s | IP: 89.185.84.185 | Country: 🇬🇧 United Kingdom
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpEa0g3dU83dDkwVXc0RDk1emdaVmRW@89.185.84.185:443#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2025-12-11 06:42:05 | Response: 0.258s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.154:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:42:07 | Response: 1.186s | IP: 134.255.210.49 | Country: 🇨🇾 Cyprus
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@134.255.210.49:990#%F0%9F%87%A8%F0%9F%87%BE
+
+# Tested at: 2025-12-11 06:42:07 | Response: 2.578s | IP: 83.217.9.17 | Country: 🇹🇷 Türkiye
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZSHRYRDRwb2p2b3JtVldSaUhnSWZ2@83.217.9.17:25232#%F0%9F%87%B9%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:42:38 | Response: 0.314s | IP: 193.29.139.233 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.210:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:42:38 | Response: 0.167s | IP: 37.19.198.244 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.244:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:42:41 | Response: 2.433s | IP: 38.54.45.129 | Country: 🇦🇷 Argentina
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.54.45.129:990#%F0%9F%87%A6%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:43:14 | Response: 0.490s | IP: 2001:41d0:700:6532::a810:4917 | Country: 🇩🇪 Germany
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPRDAxN0NHa3N0VzlhV1lhdmlPUmJZ@162.19.208.118:42976#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:43:19 | Response: 0.364s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.227:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:43:20 | Response: 0.530s | IP: 90.156.203.62 | Country: 🇷🇺 Russia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpWVmxBZmY3N0NuQVU0M0FvYzVqMTVZ@90.156.203.62:5112#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:43:27 | Response: 2.685s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@193.29.139.143:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:43:53 | Response: 0.345s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.217:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:43:54 | Response: 0.308s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@151.242.251.142:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:43:55 | Response: 2.516s | IP: 92.40.94.91 | Country: 🇬🇧 United Kingdom
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2025-12-11 06:43:57 | Response: 0.601s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@beesyar.org:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:44:32 | Response: 0.321s | IP: 142.4.216.225 | Country: 🇨🇦 Canada
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKSWhONnJCS2thRWJvTE5YVlN2NXJx@ca225.vpnbook.com:80#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:44:32 | Response: 0.913s | IP: 212.113.106.76 | Country: 🇦🇹 Austria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3SHVZSUtzV09GZFBRN2FZRzIyT3Qw@212.113.106.76:29149#%F0%9F%87%A6%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:44:33 | Response: 0.245s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.173:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:45:10 | Response: 0.526s | IP: 193.29.139.251 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.10:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:45:11 | Response: 0.941s | IP: 103.57.251.240 | Country: 🇦🇪 United Arab Emirates
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.57.251.240:990#%F0%9F%87%A6%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:45:11 | Response: 0.881s | IP: 5.253.41.46 | Country: 🇯🇵 Japan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp4Z29Pc3l5QnYyWW40dzBoU3Fqc05xZjVJR2JJRVRaNg==@5.253.41.46:443#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-11 06:45:12 | Response: 0.511s | IP: 91.148.135.31 | Country: 🇨🇾 Cyprus
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@91.148.135.31:990#%F0%9F%87%A8%F0%9F%87%BE
+
+# Tested at: 2025-12-11 06:45:48 | Response: 0.520s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.185:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:45:49 | Response: 0.756s | IP: 209.74.82.227 | Country: 🇸🇬 Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1QTFyTFA1bTBtTU9ROEZjeFJYeGdy@209.74.82.227:26515#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:45:52 | Response: 4.249s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.205:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:45:52 | Response: 3.313s | IP: 193.29.139.188 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.188:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:45:53 | Response: 4.138s | IP: 38.60.192.176 | Country: 🇲🇾 Malaysia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.60.192.176:990#%F0%9F%87%B2%F0%9F%87%BE
+
+# Tested at: 2025-12-11 06:46:28 | Response: 0.192s | IP: 142.4.216.225 | Country: 🇨🇦 Canada
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKSWhONnJCS2thRWJvTE5YVlN2NXJx@142.4.216.225:80#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:46:28 | Response: 0.367s | IP: 193.29.139.173 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.199:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:46:28 | Response: 0.434s | IP: 45.15.126.19 | Country: 🇵🇱 Poland
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2VHMyWkRUUUFmM2hrRm9COEFGdWZEd3NHcmxGNGUydA==@45.15.126.19:443#%F0%9F%87%B5%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:46:38 | Response: 0.336s | IP: 38.60.247.151 | Country: 🇧🇬 Bulgaria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.60.247.151:990#%F0%9F%87%A7%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:47:08 | Response: 0.850s | IP: 154.205.146.153 | Country: 🇧🇭 Bahrain
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@154.205.146.153:990#%F0%9F%87%A7%F0%9F%87%AD
+
+# Tested at: 2025-12-11 06:47:08 | Response: 1.012s | IP: 212.18.104.228 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGNWJHWThHSjNHT2cwT1k1Z3J2V1dX@212.18.104.228:56636#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:47:11 | Response: 4.189s | IP: 45.84.107.55 | Country: 🇸🇪 Sweden
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#%F0%9F%87%B8%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:47:45 | Response: 0.163s | IP: 37.19.198.236 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.236:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:47:46 | Response: 0.257s | IP: 193.29.139.206 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.166:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:48:24 | Response: 0.538s | IP: 37.19.198.160 | Country: 🇺🇸 United States
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:49:03 | Response: 1.398s | IP: 102.207.216.176 | Country: 🇩🇿 Algeria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@102.207.216.176:990#%F0%9F%87%A9%F0%9F%87%BF
+
+# Tested at: 2025-12-11 06:49:03 | Response: 0.482s | IP: 193.29.139.177 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.92:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:03 | Response: 0.480s | IP: 212.18.104.228 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGNWJHWThHSjNHT2cwT1k1Z3J2V1dX@dyn.usa.outlinekeys.net:56636#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:49:04 | Response: 0.695s | IP: 193.29.139.168 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl04.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:04 | Response: 0.872s | IP: 141.98.4.67 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMTVNOaDIxVHJYalIyb2syNVEybkU4RU5UMnpvQm1QdmthM1JDQ1VBSFpFTENuV29la1ZqdmFmODlxd2NSa2RieEVmZXAyYmMyYVV0bW54cXZGMWF5UVJlejFKSGpVTGo=@exchange.gameaurela.click:52952#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:49:04 | Response: 0.244s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@45.87.175.181:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:06 | Response: 1.336s | IP: 193.29.139.132 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl12.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:42 | Response: 0.313s | IP: 193.29.139.207 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.194:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:43 | Response: 0.249s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@193.29.139.189:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:44 | Response: 2.620s | IP: 81.200.158.206 | Country: 🇷🇺 Russia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBcVpidDFRQ3MzbmdFZlhvMXA3VC13@81.200.158.206:1080#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2025-12-11 06:49:45 | Response: 3.122s | IP: 46.183.185.37 | Country: 🇲🇰 North Macedonia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@46.183.185.37:990#%F0%9F%87%B2%F0%9F%87%B0
+
+# Tested at: 2025-12-11 06:49:46 | Response: 0.295s | IP: 193.29.139.189 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.193:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:49:46 | Response: 0.296s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxUld3WGh3ZkFCNWdBRW96VTRHMlBn@45.87.175.171:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:50:20 | Response: 0.455s | IP: 193.29.139.144 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.144:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:50:21 | Response: 0.180s | IP: 209.74.86.117 | Country: 🇺🇸 United States
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZRjBxc1NkVUhlSnhwM3ljS2xQMUth@209.74.86.117:22011#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2025-12-11 06:50:21 | Response: 1.338s | IP: 185.47.254.87 | Country: 🇬🇹 Guatemala
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.254.87:990#%F0%9F%87%AC%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:51:00 | Response: 0.305s | IP: 141.98.101.181 | Country: 🇬🇧 United Kingdom
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@141.98.101.181:443#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2025-12-11 06:51:05 | Response: 0.418s | IP: 103.106.228.247 | Country: 🇯🇵 Japan
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.106.228.247:990#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2025-12-11 06:51:38 | Response: 0.301s | IP: 193.29.139.157 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.157:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:51:38 | Response: 0.310s | IP: 193.29.139.217 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.218:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:51:38 | Response: 0.279s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.184:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:51:44 | Response: 0.245s | IP: 193.29.139.190 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.190:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:51:45 | Response: 0.671s | IP: 82.180.146.173 | Country: 🇮🇳 India
+ss://YWVzLTEyOC1nY206OTM0OTg1MzktNzgzOC00ODM2LWI5YjMtODMxMWZmYzc5YmNm@82.180.146.173:35652#%F0%9F%87%AE%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:52:17 | Response: 0.496s | IP: 38.165.233.18 | Country: 🇵🇾 Paraguay
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.165.233.18:990#%F0%9F%87%B5%F0%9F%87%BE
+
+# Tested at: 2025-12-11 06:52:17 | Response: 0.642s | IP: 176.126.83.158 | Country: 🇮🇹 Italy
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@176.126.83.158:990#%F0%9F%87%AE%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:52:17 | Response: 0.708s | IP: 203.23.128.33 | Country: 🇭🇰 Hong Kong
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@203.23.128.33:990#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2025-12-11 06:52:17 | Response: 0.887s | IP: 64.137.109.212 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyREdxM2p2VlJnNW4zQ2N4bXlzR0sya21yZ0plU05vZjEyQTc2Y1p2VnhxUHBldHlDMVhFY2lDRnVmcTV4S3ZSV0dHbktWZW1icFRodVVTUWhiWjdHTXNaWTRVVnhFQnc=@64.137.109.212:44884#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:52:18 | Response: 0.334s | IP: 193.29.139.227 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.208:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:19 | Response: 0.337s | IP: 185.47.253.227 | Country: 🇪🇨 Ecuador
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.253.227:990#%F0%9F%87%AA%F0%9F%87%A8
+
+# Tested at: 2025-12-11 06:52:21 | Response: 0.346s | IP: 193.29.139.132 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.35:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:23 | Response: 4.197s | IP: 212.34.140.184 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowTmVONXRhN0ZMYTVCOURMeXRVMHVt@promo1o.bystrivpn.ru:443#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:56 | Response: 0.327s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.214:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:57 | Response: 0.246s | IP: 193.29.139.233 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.137:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:57 | Response: 0.350s | IP: 193.29.139.188 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@45.87.175.58:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:57 | Response: 1.908s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.188:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:58 | Response: 1.738s | IP: 193.29.139.168 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.168:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:52:58 | Response: 2.233s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@151.242.251.144:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:53:35 | Response: 0.718s | IP: 185.47.252.251 | Country: 🇵🇪 Peru
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@185.47.252.251:990#%F0%9F%87%B5%F0%9F%87%AA
+
+# Tested at: 2025-12-11 06:53:35 | Response: 1.050s | IP: 95.164.10.228 | Country: 🇩🇰 Denmark
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTRGFGSVNyM0dmbTZZa0JTU3JGSUV3d1dqRUVVN1hibw==@95.164.10.228:443#%F0%9F%87%A9%F0%9F%87%B0
+
+# Tested at: 2025-12-11 06:53:35 | Response: 0.657s | IP: 171.22.254.129 | Country: 🇲🇹 Malta
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@171.22.254.129:990#%F0%9F%87%B2%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:53:36 | Response: 0.317s | IP: 193.29.139.197 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.191:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:53:39 | Response: 2.525s | IP: 38.244.136.233 | Country: 🇫🇮 Finland
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkQUhNMXBtOGFnN0tkbHJVeWxRaTZ0@promo18v.bystrivpn.ru:443#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2025-12-11 06:54:15 | Response: 0.444s | IP: 5.182.37.87 | Country: 🇷🇴 Romania
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPeTRUc3J4ZmFKRXhVSWhsY1NxSHBWUUlXSUZNMmpaUg==@5.182.37.87:443#%F0%9F%87%B7%F0%9F%87%B4
+
+# Tested at: 2025-12-11 06:54:28 | Response: 3.806s | IP: 38.180.195.193 | Country: 🇮🇹 Italy
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTd1RTaFhZU1FkNDA0RklTczhORmVK@promo19v.bystrivpn.ru:443#%F0%9F%87%AE%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:54:50 | Response: 0.519s | IP: 193.29.139.235 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.235:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:54:51 | Response: 1.068s | IP: 193.29.139.177 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl10.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:54:51 | Response: 0.668s | IP: 209.74.82.196 | Country: 🇸🇬 Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4SWo0c2VpZjg1UVFIZkxtUjB6WWtR@209.74.82.196:48918#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2025-12-11 06:54:56 | Response: 1.512s | IP: 38.54.57.90 | Country: 🇧🇷 Brazil
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@38.54.57.90:990#%F0%9F%87%A7%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:55:29 | Response: 0.985s | IP: 154.205.153.107 | Country: 🇨🇱 Chile
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@154.205.153.107:990#%F0%9F%87%A8%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:55:29 | Response: 0.392s | IP: 193.29.139.184 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.184:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:55:30 | Response: 0.874s | IP: 193.29.139.162 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0YTJyZml4b3BoZGpmZmE4S1ZBNEFh@193.29.139.162:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:55:34 | Response: 0.663s | IP: 193.29.139.141 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl16.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:56:08 | Response: 0.411s | IP: 193.29.139.199 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.190:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:56:08 | Response: 0.754s | IP: 103.97.203.227 | Country: 🇮🇳 India
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@103.97.203.227:990#%F0%9F%87%AE%F0%9F%87%B3
+
+# Tested at: 2025-12-11 06:56:09 | Response: 0.586s | IP: 193.29.139.164 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjdklJODVUclc2bjBPR3lmcEhWUzF1@45.87.175.190:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:56:09 | Response: 0.822s | IP: 193.29.139.188 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@ltnl15.saint.ydns.eu:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:56:09 | Response: 0.173s | IP: 23.95.76.59 | Country: 🇨🇦 Canada
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@23.95.76.59:990#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2025-12-11 06:56:11 | Response: 0.401s | IP: 185.156.110.92 | Country: 🇭🇷 Croatia
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpnWE9YazJGSndzejlQNm5YSUlDdUROT3FGOWdXWDFkbg==@185.156.110.92:443#%F0%9F%87%AD%F0%9F%87%B7
+
+# Tested at: 2025-12-11 06:56:14 | Response: 4.294s | IP: 38.54.2.182 | Country: 🇧🇭 Bahrain
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@38.54.2.182:990#%F0%9F%87%A7%F0%9F%87%AD
+
+# Tested at: 2025-12-11 06:56:47 | Response: 2.769s | IP: 193.29.139.175 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRQ1hEeHVEbFRUTUQ3anRnSFVqSW9q@45.87.175.165:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:56:57 | Response: 0.367s | IP: 193.29.139.209 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.209:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:57:23 | Response: 0.423s | IP: 37.235.56.69 | Country: 🇦🇹 Austria
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@37.235.56.69:990#%F0%9F%87%A6%F0%9F%87%B9
+
+# Tested at: 2025-12-11 06:57:24 | Response: 0.278s | IP: 193.29.139.152 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.152:8080#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2025-12-11 06:57:28 | Response: 0.259s | IP: 193.29.139.143 | Country: 🇳🇱 The Netherlands
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.176:8080#%F0%9F%87%B3%F0%9F%87%B1
 
