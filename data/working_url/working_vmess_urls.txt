@@ -1,466 +1,532 @@
 # Working VMESS Configurations (URL Format)
-# Generated at: 2025-12-12 06:21:39
+# Generated at: 2025-12-13 00:57:36
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2025-12-12 06:56:48 | Response: 0.423s | IP: 2a05:f480:2800:2079:5400:5ff:feb2:b6e1 | Country: 🇪🇸 Spain
-vmess://eyJhZGQiOiIyMDguNzYuMjIzLjIxOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiYTA1OTZiYTYtNzJhMy00MzY2LTg5OTItNzcwODhkYTY1YmQ4IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyNzA5MiIsInBzIjoi8J+HqvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:56:49 | Response: 0.776s | IP: 57.129.63.18 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDUyMjgiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:56:49 | Response: 0.311s | IP: 38.99.82.193 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIzOC45OS44Mi4xOTMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ0aWxlYmFuaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:56:49 | Response: 0.708s | IP: 146.59.118.250 | Country: 🇵🇱 Poland
-vmess://eyJhZGQiOiIxNDYuNTkuMTE4LjI1MCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e18J+HsSIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:56:58 | Response: 0.773s | IP: 57.129.24.131 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTMxIiwiYWlkIjoiMSIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:56:59 | Response: 2.001s | IP: 2400:d321:2292:2043::1 | Country: 🇮🇳 India
-vmess://eyJhZGQiOiI5NC4xMzYuMTg3Ljc3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoibm9kZTQucnR4Y29uZmlnei5jb20iLCJpZCI6IjQ0ZTU3NDg1LWVjY2MtNDZlZi04MDhmLWNkMTdhYzgxMDAxOCIsIm5ldCI6IndzIiwicGF0aCI6Ii9ATWFsaW5kYTYxMDQiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eu8J+HsyIsInNjeSI6IiIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:57:02 | Response: 1.150s | IP: 156.238.238.194 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiIxNTYuMjM4LjIzOC4xOTQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjA1MjQyMzZhLWUyMTctNGNmMy05MjIzLTk2OGEyOTBmZmNlNyIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNDcyOTYiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:57:10 | Response: 1.051s | IP: 172.82.67.155 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiI0RDQxLWI1MTAtRmMzNWYyRDdFQ2Q3LjY2NC5xenouaW8iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiI0RDQxLWI1MTAtZkMzNWYyZDdlY2Q3LjY2NC5xWnouaW8iLCJpZCI6IjA1MDdmYmNkLWI5ODMtNDNhNy04ZTFkLTJjNTYxOTYwYWQ0ZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9weXlZNFpWVHlKVjN2cjlub09obiIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IjRkNDEtQjUxMC1GQzM1RjJkN2VDRDcuNjY0LlFaei5pbyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:57:39 | Response: 0.767s | IP: 2607:5300:205:300::a3c | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiI1MS43OS4xMDIuMjUzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsImlkIjoiNThmZTE1NDItNTI5MC00MGFkLTgxNWEtNzc3MDdhODFhZmU1IiwibmV0Ijoid3MiLCJwYXRoIjoiL0lPZWJoTE1obDFDVGJGSGJMOTVteWZSWDIiLCJwb3J0IjoiODAiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:57:39 | Response: 0.768s | IP: 15.235.85.147 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuODUuMTQ3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6InBlbGFuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:57:40 | Response: 1.181s | IP: 57.129.59.202 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMjAyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:57:44 | Response: 1.495s | IP: 47.243.51.237 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0Ny4yNDMuNTEuMjM3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJlZjkzZjQxMy05MDM5LTRkZGItYWVmYi0yNDkwMjg3ZGY1NWEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraSIsInBvcnQiOiI1MjgwMSIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:57:46 | Response: 2.669s | IP: 94.136.187.77 | Country: 🇮🇳 India
-vmess://eyJhZGQiOiJlYmMuem9vbS51cyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6Ijg0NDMiLCJwcyI6IvCfh67wn4ezIiwic2N5IjoiYXV0byIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:57:48 | Response: 4.109s | IP: 146.59.70.146 | Country: 🇵🇱 Poland
-vmess://eyJhZGQiOiIxNDYuNTkuNzAuMTQ2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HtfCfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:57:49 | Response: 0.656s | IP: 47.243.213.247 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0Ny4yNDMuMjEzLjI0NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNjNmMmRjYTctNDM0Yy00NDRjLWE5YTEtMTMwYjM3NzIxOGM1IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2kiLCJwb3J0IjoiNTM4NjAiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:57:50 | Response: 0.688s | IP: 57.129.28.68 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJwZWxhbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoicGVsYW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:57:50 | Response: 0.653s | IP: 192.3.233.162 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJ2dlZCZ0h5dS45MjI5MjIuU0hvUCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InZ2VkJnSHl1LjkyMjkyMi5TSG9QIiwiaWQiOiJiY2UwYzdjYi0wOGQxLTQ2YTctYjc3Yi03YmZmOGI0NjI1MmYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvUmtVVWJxaEE5R0paQlJPakwzUTV2VHltciIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:57:51 | Response: 3.374s | IP: 15.235.41.200 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuNDEuMjAwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZ29vZ2xlLmNvbSIsImlkIjoiNThmZTE1NDItNTI5MC00MGFkLTgxNWEtNzc3MDdhODFhZmU1IiwibmV0Ijoid3MiLCJwYXRoIjoiL0lPZWJoTE1obDFDVGJGSGJMOTVteWZSWDIiLCJwb3J0IjoiODAiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:57:53 | Response: 0.437s | IP: 40.160.16.216 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiI0MC4xNjAuMTYuMjE2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:57:57 | Response: 0.414s | IP: 85.195.101.122 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI4NS4xOTUuMTAxLjEyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZjNkNDE2N2UtYjE1ZS00ZTQ2LTgyZTktOTI4NmVmOTNmZGE3IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0MDg3OCIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoibm9uZSIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:58:30 | Response: 0.563s | IP: 103.127.218.91 | Country: 🇹🇼 Taiwan
-vmess://eyJhZGQiOiIxMDMuMTI3LjIxOC45MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMWNlZjAzYWQtNjM0My00MDhjLTgxMjEtY2JkMWZkYTJlZTlkIiwibmV0Ijoid3MiLCJwYXRoIjoiLzFjZWYwM2FkIiwicG9ydCI6IjU0NjkzIiwicHMiOiLwn4e58J+HvCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:58:31 | Response: 0.295s | IP: 2605:a140:2273:7184::1 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIyMDkuMTI2Ljg0LjE4OSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IjIwOS4xMjYuODQuMTg5IiwiaWQiOiIyYzk4MTE2NC05YjkzLTRiY2EtOTRmZi1iNzhkM2Y4NDk4ZDciLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3N3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:58:31 | Response: 1.083s | IP: 91.134.8.88 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI5MS4xMzQuOC44OCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:58:31 | Response: 0.991s | IP: 91.134.8.100 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI5MS4xMzQuOC4xMDAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:58:31 | Response: 1.645s | IP: 47.242.228.72 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiJ3d3cuemhvdWJvd2VuLnZpcCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Ind3dy56aG91Ym93ZW4udmlwIiwiaWQiOiI3MWIyNjU1ZS0wN2Q5LTRkYWQtYTc3MC1hMmIwODI3NTE0MmIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYml1dGVmb3IuaWN1IiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoid3d3Lnpob3Vib3dlbi52aXAiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:58:36 | Response: 0.733s | IP: 57.129.2.121 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMi4xMjEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJwZWxhbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoicGVsYW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:58:37 | Response: 2.185s | IP: 149.30.232.103 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNDkuMzAuMjMyLjEwMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDYwOTA4YjgtZGUxNi00MmU5LWJkMGQtMTkxNTIyYWI5MmE1IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIxNTA5NyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:58:40 | Response: 0.700s | IP: 91.134.8.101 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI5MS4xMzQuOC4xMDEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmYXBlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoiZmFwZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:58:40 | Response: 0.480s | IP: 146.56.112.110 | Country: 🇰🇷 South Korea
-vmess://eyJhZGQiOiIxNDYuNTYuMTEyLjExMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZTdjMzAyZjMtOTBkNi00MmRkLTlkN2QtOTRhMzY4M2EzNzA3IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI4ODg4IiwicHMiOiLwn4ew8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:58:42 | Response: 0.334s | IP: 107.174.26.166 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJubm5ubm5ubm5ubm5ubi4yMjI3NjkueHl6IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoibm5ubm5ubm5ubm5ubm4uMjIyNzY5Lnh5eiIsImlkIjoiMmU2NTU3N2UtOGZkYi00YmIxLWE0OTUtOTZmMzEyMjA5OWE3IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Y2dGFPTWNPU1piOVRQUiIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoibm9uZSIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:58:43 | Response: 4.294s | IP: 2a13:7c00:4:14:f816:3eff:fec6:dc0f | Country: 🇳🇱 The Netherlands
-vmess://eyJhZGQiOiI0NS4xNTYuMjMuMTYzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJjOGIxYWViNy1kZGFkLTQzM2UtOTAyMi0yOWYyNGM3ZTVlYzgiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiI1MTg0OCIsInBzIjoi8J+Hs/Cfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 06:58:49 | Response: 0.534s | IP: 5.196.29.123 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI1LjE5Ni4yOS4xMjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJnb29nbGUuY29tIiwiaWQiOiIxMTJhYzM2Zi0zZjUzLTRlMjYtODM3MS1kMjVjMDI4ZTFiOWEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjIwODIiLCJwcyI6IvCfh6vwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:59:22 | Response: 0.482s | IP: 192.3.233.162 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJaelh4ZEUuOTIyOTIyLnNIT3AiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJaelh4ZEUuOTIyOTIyLnNIT3AiLCJpZCI6ImJjZTBjN2NiLTA4ZDEtNDZhNy1iNzdiLTdiZmY4YjQ2MjUyZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9Sa1VVYnFoQTlHSlpCUk9qTDNRNXZUeW1yIiwicG9ydCI6IjgwIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:59:22 | Response: 1.123s | IP: 134.195.198.147 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxMzQuMTk1LjE5OC4xNDciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJpbm5hLmNmZCIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:59:23 | Response: 1.154s | IP: 148.113.176.192 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNDguMTEzLjE3Ni4xOTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmYXBlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:59:23 | Response: 1.364s | IP: 57.129.59.199 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTk5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 06:59:23 | Response: 0.986s | IP: 192.3.233.162 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJYWFhjY0ZydC45MjI5MjIuU2hPUCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IlhYWGNjRnJ0LjkyMjkyMi5TaE9QIiwiaWQiOiJiY2UwYzdjYi0wOGQxLTQ2YTctYjc3Yi03YmZmOGI0NjI1MmYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvUmtVVWJxaEE5R0paQlJPakwzUTV2VHltciIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:59:24 | Response: 0.593s | IP: 57.129.24.125 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTI1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 06:59:32 | Response: 1.044s | IP: 146.56.177.166 | Country: 🇰🇷 South Korea
-vmess://eyJhZGQiOiJzZW91bDAzLnpnam9rLmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InNlb3VsMDMuemdqb2suY29tIiwiaWQiOiI3MmEwZGFjNC05Njg5LTRhNTctYjE2NC01YzY1YmZhOTQ3NzIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HsPCfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoic2VvdWwwMy56Z2pvay5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:00:14 | Response: 0.654s | IP: 47.243.213.247 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0Ny4yNDMuMjEzLjI0NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiYTk5ZDA4ZWItODFjNS00OTQ0LWJhMTYtNDQ2MWJiMmVjODA4IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2kiLCJwb3J0IjoiNTY4OSIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:00:15 | Response: 0.762s | IP: 91.134.8.102 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJrYXQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:00:18 | Response: 0.465s | IP: 107.172.132.247 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxMDQuMjEuMzAuMTY3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic3Nzc3Nzc3Nzc3NzZmZmZmZmZmdoLjIwMzIucHAudWEiLCJpZCI6IjQxNzRiOTVkLTExNWUtNGQzOS1hZGQ2LTFmOGRiOTViYjg2MCIsIm5ldCI6IndzIiwicGF0aCI6Ii82V2UzVTlEZjFXR3hnRm5vRlB3MSIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiIiwic25pIjoiIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:00:23 | Response: 0.529s | IP: 15.235.83.227 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuODMuMjI3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoibWFua2FkbXUuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IndybWVsbXd4bGYuZ2t0ZXZscnF6bndxcW96eS5mYWJwZnM2Nmdpem1ub2poY3ZxeHdsLmt5dHJjZnpxbGE4N2d2Z3ZzNmM3a2pucnVidWguY2MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:00:25 | Response: 0.567s | IP: 45.136.12.37 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImZkMjkxYmU2LWI0OGQtNDNhMS1kYTM4LTY2YzdmODBlMmY4MCIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMzgxNDEiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:00:25 | Response: 0.609s | IP: 57.129.28.216 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjE2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:00:25 | Response: 2.364s | IP: 94.136.187.77 | Country: 🇮🇳 India
-vmess://eyJhZGQiOiIxNDEuMTkzLjIxMy4yMSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6Ijg0NDMiLCJwcyI6IvCfh67wn4ezIiwic2N5IjoiYXV0byIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:00:33 | Response: 2.054s | IP: 45.136.12.37 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjA5MGQwYmQ5LWY5YzQtNGMzYi04YWFlLWZmYTY3ODc2NTkzNSIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiMjA1MjEiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:01:05 | Response: 0.208s | IP: 172.235.33.114 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNzIuMjM1LjMzLjExNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDQyYTM5MjMtZWNhMS00YWYwLWIzZmYtMjRhN2NlMGFmNjhmIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxMDAwMSIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:01:06 | Response: 1.204s | IP: 141.94.155.224 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiIxNDEuOTQuMTU1LjIyNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImZhcGVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:01:06 | Response: 1.583s | IP: 57.129.25.25 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjUiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmLmtoaWxlaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:01:06 | Response: 0.331s | IP: 15.204.64.211 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNS4yMDQuNjQuMjExIiwiYWlkIjoiMSIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:01:07 | Response: 0.495s | IP: 165.154.195.38 | Country: 🇹🇼 Taiwan
-vmess://eyJhZGQiOiIxNjUuMTU0LjE5NS4zOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiOTU5YThjYWYtNGNlYS00M2QwLWE1NDgtMzYyOGU3ZGRmYWZjIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIzNTAzNCIsInBzIjoi8J+HufCfh7wiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:01:15 | Response: 0.453s | IP: 13.212.76.217 | Country: 🇸🇬 Singapore
-vmess://eyJhZGQiOiJjZ3JvdXAubm9kZTMudi5ub2RlbGlzdC1haXJwb3J0LmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiOGYzYTgzNWMtOGE0NS00ODBkLWFlMzUtMWRlYjJjNTJkY2FlIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyNDMyMSIsInBzIjoi8J+HuPCfh6wiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:01:17 | Response: 0.537s | IP: 23.166.88.68 | Country: 🇨🇭 Switzerland
-vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDUyODgiLCJwcyI6IvCfh6jwn4etIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:01:18 | Response: 0.789s | IP: 57.129.25.22 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJvLm1ldHVqaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:01:19 | Response: 0.562s | IP: 57.128.189.240 | Country: 🇬🇧 United Kingdom
-vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjI0MCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4es8J+HpyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:02:01 | Response: 3.249s | IP: 57.129.28.64 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJrYXQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:02:06 | Response: 0.276s | IP: 38.143.66.81 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIzOC4xNDMuNjYuODEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJpYnVzLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6InNlcmlidXMub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:02:07 | Response: 0.756s | IP: 57.129.59.201 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMjAxIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:02:07 | Response: 1.518s | IP: 2400:6180:0:d2:0:2:395d:d000 | Country: 🇸🇬 Singapore
-vmess://eyJhZGQiOiI2OC4xODMuMTc4LjEzMSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Ind3dy4xMjMzMy5tb25zdGVyIiwiaWQiOiJjMTFjMzJjYi0yN2IzLTRhZmEtYzBmMy1mYjI1MGFhNDk1OWUiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjU4NjA3IiwicHMiOiLwn4e48J+HrCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ3d3cuMTIzMzMubW9uc3RlciIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:02:09 | Response: 0.588s | IP: 57.128.189.227 | Country: 🇬🇧 United Kingdom
-vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjIyNyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InlpY2h1ZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6zwn4enIiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:02:09 | Response: 1.939s | IP: 94.136.187.77 | Country: 🇮🇳 India
-vmess://eyJhZGQiOiIxNDEuMTkzLjIxMy4yMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6Ijg0NDMiLCJwcyI6IvCfh67wn4ezIiwic2N5IjoiYXV0byIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:02:15 | Response: 1.184s | IP: 95.164.4.88 | Country: 🇧🇷 Brazil
-vmess://eyJhZGQiOiI5NS4xNjQuNC44OCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBxLWJyYXppbDEuMDl2cG4uY29tIiwiaWQiOiJjMDRjM2IzNC03MGZkLTRmZWMtOTYzZS1jMTJkMDlmMzZiZWYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MvIiwicG9ydCI6IjgwIiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:02:49 | Response: 1.246s | IP: 172.111.146.64 | Country: 🇯🇵 Japan
-vmess://eyJhZGQiOiIxNzIuMTExLjE0Ni42NCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMDViOGM3ODMtN2Y1OS00N2Y5LTk5MjMtMDZhNDY1Njc5ZjZhIiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzLyIsInBvcnQiOiI4MCIsInBzIjoi8J+Hr/Cfh7UiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoibm9uZSIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:02:50 | Response: 1.492s | IP: 104.28.247.68 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiIxMzEuMTg2LjYzLjg5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiaGsubmJlZS5wcC51YSIsImlkIjoiNGJmMDc1ZjUtNGQ1ZS00ZDM5LWY1YWItYjMyYTg2MjUwZjBlIiwibmV0Ijoid3MiLCJwYXRoIjoiL2FhIiwicG9ydCI6IjExNjU1IiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiJoay5uYmVlLnBwLnVhIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:02:51 | Response: 0.673s | IP: 57.128.216.125 | Country: 🇵🇱 Poland
-vmess://eyJhZGQiOiI1Ny4xMjguMjE2LjEyNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImthbXBvbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HtfCfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:02:52 | Response: 0.133s | IP: 165.140.216.239 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNjUuMTQwLjIxNi4xNDEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJKb2luLS0tUExBTkJfTkVULS0tSm9pbi0tLVBMQU5CX05FVC0tLUpvaW4tLS1QTEFOQl9ORVQtLS1Kb2luLS0tUExBTkJfTkVUIiwiaWQiOiJlN2Q3MmE4ZC0yNmYyLTRiNTQtYjM2Ni0wYzQzZTBiY2JhN2QiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiSm9pbi0tLVBMQU5CX05FVC0tLUpvaW4tLS1QTEFOQl9ORVQtLS1Kb2luLS0tUExBTkJfTkVULS0tSm9pbi0tLVBMQU5CX05FVCIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:02:52 | Response: 0.772s | IP: 57.129.59.193 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTkzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJrYXQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:02:53 | Response: 4.230s | IP: 43.100.14.135 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiJuMTc0OTAzMjE3OS5renhkcy5jbiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im4xNzQ5MDMyMTc5Lmt6eGRzLmNuIiwiaWQiOiJlMTgzMGZhYy1kODFmLTQ3OTktODI2Yy0yOTdiYzI1MjczZDUiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoibjE3NDkwMzIxNzkua3p4ZHMuY24iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:02:59 | Response: 0.512s | IP: 130.162.152.253 | Country: 🇰🇷 South Korea
-vmess://eyJhZGQiOiIxMzAuMTYyLjE1Mi4yNTMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjUyMDZiYjlmLTJjYmMtNDRhYy1kZTJhLTQ3MTQzOWEyMzcwNyIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTY4NjciLCJwcyI6IvCfh7Dwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:03:00 | Response: 0.293s | IP: 185.122.166.51 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxMDQuMjEuMzguOTAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJkZGRjY2NkdmZnLjIyMjg1Ni54eXoiLCJpZCI6IjJkMDY4MDgzLTJjYjAtNGFlMy1hNDRhLTZmYzgyZjMwMzljYyIsIm5ldCI6IndzIiwicGF0aCI6Ii84N0V4MkppWVlXcjdGUmEwNmI4OEpTbyIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:03:41 | Response: 0.253s | IP: 23.162.200.227 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIyMy4xNjIuMjAwLjIyNyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:03:41 | Response: 1.145s | IP: 57.129.25.24 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJwZWxhbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InBlbGFuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:03:50 | Response: 0.606s | IP: 57.129.59.200 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMjAwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJrYXQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:03:51 | Response: 2.842s | IP: 107.172.132.247 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNzIuNjcuMTczLjY0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic3Nzc3Nzc3Nzc3NzZmZmZmZmZmdoLjIwMzIucHAudWEiLCJpZCI6IjQxNzRiOTVkLTExNWUtNGQzOS1hZGQ2LTFmOGRiOTViYjg2MCIsIm5ldCI6IndzIiwicGF0aCI6Ii82V2UzVTlEZjFXR3hnRm5vRlB3MSIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiIiwic25pIjoiIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:03:56 | Response: 0.357s | IP: 209.126.84.189 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJ2MnJheS5jb2RlZnlpbmMuY29tIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoidjJyYXkuY29kZWZ5aW5jLmNvbSIsImlkIjoiMmM5ODExNjQtOWI5My00YmNhLTk0ZmYtYjc4ZDNmODQ5OGQ3IiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzd3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ2MnJheS5jb2RlZnlpbmMuY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:03:58 | Response: 3.542s | IP: 57.129.28.69 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJiYXJhZGloYS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:04:31 | Response: 0.664s | IP: 154.201.76.172 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNTQuMjAxLjc2LjE3MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiYmE1MGUxZmUtMDU1Zi00NTg3LWZkMGQtMzZjOGQ2NjE1MTkyIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyMDk5MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:04:39 | Response: 0.633s | IP: 47.244.120.197 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiODQ1ZTZiMDgtMjkxOS00MjkwLWFkZTAtNWRjN2RjZWE1OWNhIiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiI0NDg2NyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:04:40 | Response: 0.678s | IP: 57.129.28.65 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjUiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJrYXBlbGxlbmcuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImthcGVsbGVuZy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:04:41 | Response: 0.745s | IP: 146.59.85.226 | Country: 🇵🇱 Poland
-vmess://eyJhZGQiOiIxNDYuNTkuODUuMjI2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7Xwn4exIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:04:42 | Response: 0.669s | IP: 91.134.8.93 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI5MS4xMzQuOC45MyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBlbGFuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:04:48 | Response: 0.710s | IP: 57.129.28.63 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmYXBlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiZmFwZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:04:49 | Response: 3.875s | IP: 148.113.153.109 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNDguMTEzLjE1My4xMDkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:05:24 | Response: 1.313s | IP: 2607:5300:205:300::16ac | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiI1MS43OS4xMDMuNzYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIiwiaWQiOiI1OGZlMTU0Mi01MjkwLTQwYWQtODE1YS03NzcwN2E4MWFmZTUiLCJuZXQiOiJ3cyIsInBhdGgiOiIvSU9lYmhMTWhsMUNUYkZIYkw5NW15ZlJYMiIsInBvcnQiOiI4MCIsInBzIjoi8J+HqPCfh6YiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:05:25 | Response: 1.920s | IP: 37.235.53.135 | Country: 🇪🇸 Spain
-vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5YWwuZnhsY24uY29tIiwiaWQiOiI0NjllMGIzMS0zMGMzLTRkYWItODAwZC03MTEyMzI2MzRjZTEiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQ1MjY2IiwicHMiOiLwn4eq8J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:05:27 | Response: 0.623s | IP: 57.129.25.26 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:05:33 | Response: 0.772s | IP: 57.129.24.130 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTMwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:05:36 | Response: 4.304s | IP: 8.219.50.123 | Country: 🇸🇬 Singapore
-vmess://eyJhZGQiOiJjZi4wOTAyMjcueHl6IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2dhbC5kYWdyYXRlLmV1Lm9yZyIsImlkIjoiMjkwY2M2OTEtM2FjNi00Mzg3LTk4YTEtMjVjOGViOGNhMmVhIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7jwn4esIiwic2N5IjoiYXV0byIsInNuaSI6InNnYWwuZGFncmF0ZS5ldS5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:05:39 | Response: 0.639s | IP: 141.94.155.229 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiIxNDEuOTQuMTU1LjIyOSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBlbGFuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:06:15 | Response: 1.160s | IP: 57.128.189.211 | Country: 🇬🇧 United Kingdom
-vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjIxMSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InlpY2h1ZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6zwn4enIiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:06:16 | Response: 1.446s | IP: 57.129.25.23 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:06:16 | Response: 1.201s | IP: 15.204.64.212 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNS4yMDQuNjQuMjEyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6InBlbGFuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:06:16 | Response: 1.445s | IP: 57.128.189.222 | Country: 🇬🇧 United Kingdom
-vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjIyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4es8J+HpyIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:06:16 | Response: 0.916s | IP: 57.129.28.213 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjEzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:06:16 | Response: 0.877s | IP: 40.160.16.219 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiI0MC4xNjAuMTYuMjE5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:06:17 | Response: 0.536s | IP: 140.83.80.36 | Country: 🇯🇵 Japan
-vmess://eyJhZGQiOiJ4cmF5LmtrMzcwMDUudGsiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjJlNzU0OGJiLTdjNWItNGQ5Ny1kNjRkLTFiMmZlNDA1MDA4OSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTU5MTkiLCJwcyI6IvCfh6/wn4e1Iiwic2N5IjoiYXV0byIsInNuaSI6InhyYXkua2szNzAwNS50ayIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:06:20 | Response: 0.535s | IP: 15.235.13.69 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuMTMuNjkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ2a3ZkMTI3Lm15Y2RuLm1lIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6InZrdmQxMjcubXljZG4ubWUiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:06:23 | Response: 1.173s | IP: 47.250.45.234 | Country: 🇲🇾 Malaysia
-vmess://eyJhZGQiOiI0Ny4yNTAuNDUuMjM0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJjNzdmNDhmNS00YmUzLTQ0NjEtYjUyYi00OTk5OGU3Yjg5N2IiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraT9lZD0yMDQ4IiwicG9ydCI6IjQzMDYzIiwicHMiOiLwn4ey8J+HviIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:06:27 | Response: 4.393s | IP: 172.82.67.155 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiI0YmI2LUI2NjctZjg4NjA4ZDE5RmQ1LjY2NC5RWnouaU8iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiI0QmI2LUI2NjctZjg4NjA4RDE5RmQ1LjY2NC5RelouSW8iLCJpZCI6IjA1MDdmYmNkLWI5ODMtNDNhNy04ZTFkLTJjNTYxOTYwYWQ0ZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9weXlZNFpWVHlKVjN2cjlub09obiIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:07:07 | Response: 1.058s | IP: 15.204.64.214 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNS4yMDQuNjQuMjE0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:07:07 | Response: 1.699s | IP: 57.129.28.214 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjE0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:07:07 | Response: 0.429s | IP: 15.235.83.228 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuODMuMjI4IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IndybWVsbXd4bGYuZ2t0ZXZscnF6bndxcW96eS5mYWJwZnM2Nmdpem1ub2poY3ZxeHdsLmt5dHJjZnpxbGE4N2d2Z3ZzNmM3a2pucnVidWguY2MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:07:07 | Response: 0.570s | IP: 140.238.2.250 | Country: 🇰🇷 South Korea
+# Tested at: 2025-12-13 01:32:39 | Response: 0.581s | IP: 140.238.2.250 | Country: 🇰🇷 South Korea
 vmess://eyJhZGQiOiIxNDAuMjM4LjIuMjUwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI0MWE3MDg5YS0wNDBiLTQ1MzgtOGI4ZC0wMTA5MDI0MDViZGUiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7Dwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
 
-# Tested at: 2025-12-12 07:07:09 | Response: 0.643s | IP: 57.129.24.132 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTMyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+# Tested at: 2025-12-13 01:32:39 | Response: 0.363s | IP: 172.82.67.156 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0NDI4LWE0MDQtZjBCNjAzODE4NWIyLjE5ODkwNjE0LnFaei5JTyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IjQ0MjgtQTQwNC1GMGI2MDM4MTg1YjIuMTk4OTA2MTQucXpaLklvIiwiaWQiOiI1NTgyMTc4MC02OTcwLTQ5ZGYtOGEyMy04MDBjMmM5YjdkM2EiLCJuZXQiOiJ3cyIsInBhdGgiOiIvU0dCdk1OZHBQdE50dmd5YVZYbSIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
 
-# Tested at: 2025-12-12 07:07:15 | Response: 0.541s | IP: 107.172.132.247 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJzc3Nzc3Nzc3Nzc3NmZmZmZmZmZ2guMjAzMi5wcC51YSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InNzc3Nzc3Nzc3Nzc2ZmZmZmZmZnaC4yMDMyLnBwLnVhIiwiaWQiOiI0MTc0Yjk1ZC0xMTVlLTRkMzktYWRkNi0xZjhkYjk1YmI4NjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvNldlM1U5RGYxV0d4Z0Zub0ZQdzEiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiJzc3Nzc3Nzc3Nzc3NmZmZmZmZmZ2guMjAzMi5wcC51YSIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:07:16 | Response: 0.366s | IP: 107.172.132.247 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJzc3Nzc3NzeHh4eC4yMDMyLnBwLnVhIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic3Nzc3Nzc3h4eHguMjAzMi5wcC51YSIsImlkIjoiNDE3NGI5NWQtMTE1ZS00ZDM5LWFkZDYtMWY4ZGI5NWJiODYwIiwibmV0Ijoid3MiLCJwYXRoIjoiLzZXZTNVOURmMVdHeGdGbm9GUHcxIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoic3Nzc3Nzc3h4eHguMjAzMi5wcC51YSIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:07:16 | Response: 0.500s | IP: 47.242.140.52 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0Ny4yNDIuMTQwLjUyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiIxYTQ2YjY2Yy02YmE5LTRlOWMtYWEwYi0wZWJhYzJiNjllMzIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraT9lZD0yMDQ4IiwicG9ydCI6IjM0ODE1IiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:07:16 | Response: 0.723s | IP: 192.3.233.162 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiJjQ2MuOTIyOTIyLlNoT3AiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJjQ2MuOTIyOTIyLlNoT3AiLCJpZCI6ImJjZTBjN2NiLTA4ZDEtNDZhNy1iNzdiLTdiZmY4YjQ2MjUyZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9Sa1VVYnFoQTlHSlpCUk9qTDNRNXZUeW1yIiwicG9ydCI6IjgwIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:07:18 | Response: 2.436s | IP: 149.30.232.103 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNDkuMzAuMjMyLjEwMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMmMxODA3Y2UtNmE2My00NDUxLTlhZGQtYTc3OGQyNTA3MTYwIiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIxODM5MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:07:18 | Response: 0.625s | IP: 57.128.189.143 | Country: 🇬🇧 United Kingdom
-vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjE0MyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4es8J+HpyIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:07:19 | Response: 0.793s | IP: 57.129.25.20 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjAiLCJhaWQiOiIxIiwiYWxwbiI6IiIsImhvc3QiOiI1Ny4xMjkuMjUuMjAiLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:07:22 | Response: 0.618s | IP: 141.95.126.134 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiIxNDEuOTUuMTI2LjEzNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImphbWVray5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJqYW1la2sub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:07:59 | Response: 1.158s | IP: 146.59.118.249 | Country: 🇵🇱 Poland
-vmess://eyJhZGQiOiIxNDYuNTkuMTE4LjI0OSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImZhcGVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e18J+HsSIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:08:08 | Response: 0.530s | IP: 140.83.80.36 | Country: 🇯🇵 Japan
-vmess://eyJhZGQiOiIxNDAuODMuODAuMzYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjJlNzU0OGJiLTdjNWItNGQ5Ny1kNjRkLTFiMmZlNDA1MDA4OSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTU5MTkiLCJwcyI6IvCfh6/wn4e1Iiwic2N5IjoiYXV0byIsInNuaSI6InhyYXkua2szNzAwNS50ayIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:08:08 | Response: 0.687s | IP: 2a09:bac1:31a0::3cf:48 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiIxNTQuMjEuMjAxLjgzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiaGsubmJlZS5wcC51YSIsImlkIjoiNGJmMDc1ZjUtNGQ1ZS00ZDM5LWY1YWItYjMyYTg2MjUwZjBlIiwibmV0Ijoid3MiLCJwYXRoIjoiL2FhIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiaGsubmJlZS5wcC51YSIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:08:09 | Response: 0.743s | IP: 91.134.8.92 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiI5MS4xMzQuOC45MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InlpY2h1ZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6vwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:08:09 | Response: 1.376s | IP: 15.235.85.156 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuODUuMTU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:08:17 | Response: 4.828s | IP: 95.164.4.88 | Country: 🇧🇷 Brazil
-vmess://eyJhZGQiOiJwcS1icmF6aWwxLjA5dnBuLmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBxLWJyYXppbDEuMDl2cG4uY29tIiwiaWQiOiJjMDRjM2IzNC03MGZkLTRmZWMtOTYzZS1jMTJkMDlmMzZiZWYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MvIiwicG9ydCI6IjgwIiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:08:50 | Response: 0.593s | IP: 8.218.105.196 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI4LjIxOC4xMDUuMTk2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI5MjViZGJmNS03MmJlLTQ0MzctYmViZi00NDFjNjEwODlmNmIiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjUyNzUyIiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:08:53 | Response: 3.549s | IP: 149.30.232.103 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNDkuMzAuMjMyLjEwMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNTM4MTQ0NWQtNmFlNC00OTQ4LWI2MWEtYTE2ZDk0OThkMjFiIiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIzMTQ2OSIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:09:02 | Response: 0.996s | IP: 38.107.234.57 | Country: 🇰🇿 Kazakhstan
-vmess://eyJhZGQiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJpZCI6IjU2N2Y0YmU1LTEyYWItNDJlMS1iOGQ5LWRiNmZkMWZkZDMxYyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh7Dwn4e/Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:09:04 | Response: 4.867s | IP: 47.81.33.183 | Country: 🇹🇭 Thailand
-vmess://eyJhZGQiOiJuMTc0OTAzMjkxNy5renhkcy5jbiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im4xNzQ5MDMyOTE3Lmt6eGRzLmNuIiwiaWQiOiJjZDY2ZWVlYS02NDNmLTQ4MjYtYTRmMy0wZDJmNTdhNWFkMDYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HufCfh60iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:09:09 | Response: 1.833s | IP: 57.129.28.67 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:09:25 | Response: 4.801s | IP: 2a05:f480:2800:2079:5400:5ff:feb2:b6e1 | Country: 🇪🇸 Spain
-vmess://eyJhZGQiOiIyMDguNzYuMjIzLjIxOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZDhmZDg5NTUtNzhkYi00OWJhLWQ4NmYtM2U0NzI5ZjZhYzRkIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiNDA0MzMiLCJwcyI6IvCfh6rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:09:43 | Response: 0.867s | IP: 185.255.123.10 | Country: 🇳🇬 Nigeria
-vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIxZTQyNjA0Ni10MGZkczAtdDEyY25qLTFvbDk3LmhrLnA1cHYuY29tIiwiaWQiOiI0NjllMGIzMS0zMGMzLTRkYWItODAwZC03MTEyMzI2MzRjZTEiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQ1Mjc3IiwicHMiOiLwn4ez8J+HrCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:09:51 | Response: 0.468s | IP: 38.180.16.86 | Country: 🇧🇷 Brazil
-vmess://eyJhZGQiOiIzOC4xODAuMTYuODYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImE1OGJjMWE1LThjMTgtNDlmZi05NDUzLWMzMzFiNTJmNDVkYyIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjM2MjM2IiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:09:52 | Response: 0.397s | IP: 36.230.42.204 | Country: 🇹🇼 Taiwan
-vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDU0MDciLCJwcyI6IvCfh7nwn4e8Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:09:55 | Response: 3.168s | IP: 8.218.199.111 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI4LjIxOC4xOTkuMTExIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJmNTVkYjQyZC1lZTUyLTRhNDctODgwYi02ZjdiMTIzYWIyMjIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjgwODAiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:09:59 | Response: 0.789s | IP: 146.59.55.50 | Country: 🇵🇱 Poland
-vmess://eyJhZGQiOiIxNDYuNTkuNTUuNTAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJvLm1ldHVqaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HtfCfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:10:00 | Response: 0.682s | IP: 57.129.64.199 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNjQuMTk5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJwZWxhbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:10:05 | Response: 0.471s | IP: 54.206.192.9 | Country: 🇦🇺 Australia
-vmess://eyJhZGQiOiI1NC4yMDYuMTkyLjkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjA4ZjQ1MDI4LTFkYjYtNGU5My1iZjUxLWQzNDRiNmM3MWUxOSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTY0MDciLCJwcyI6IvCfh6bwn4e6Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:10:35 | Response: 0.993s | IP: 15.235.50.172 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNS4yMzUuNTAuMTcyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiYmFyYWRpaGEuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:10:36 | Response: 0.706s | IP: 57.129.59.195 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTk1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:10:36 | Response: 0.446s | IP: 91.99.27.55 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI5MS45OS4yNy41NSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZjMwMjU5NjEtMTY3Yi00ZjQ5LWU0ZTMtODY1MDVmZTk4MGZkIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiODg4MCIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:10:38 | Response: 3.865s | IP: 183.236.51.36 | Country: 🇨🇳 China
-vmess://eyJhZGQiOiIxODMuMjM2LjUxLjM2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiI1OTAwMyIsInBzIjoi8J+HqPCfh7MiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:10:42 | Response: 0.503s | IP: 57.129.132.223 | Country: 🇬🇧 United Kingdom
-vmess://eyJhZGQiOiI1Ny4xMjkuMTMyLjIyMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Imdvb2dsZS5jb20iLCJpZCI6ImEyNWNiZjExLTI5MDgtNGExYi1hM2E4LTlhNTcxNzc3ZGNhMyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh6zwn4enIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:10:43 | Response: 0.533s | IP: 47.244.120.197 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDViODM1MTktOWM0Zi00MDUyLWExMWItMDJlMDE3YjYzNmQ0IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIzNjcwMyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:10:44 | Response: 1.597s | IP: 154.201.76.172 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNTQuMjAxLjc2LjE3MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDk2Y2VjNzEtYTBmZC00ZjI1LWJiYTEtY2JhOWU5ZDVhNTJmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOiIyMDUyMSIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:10:44 | Response: 0.840s | IP: 57.129.28.212 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjEyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:10:47 | Response: 1.617s | IP: 38.107.234.57 | Country: 🇰🇿 Kazakhstan
-vmess://eyJhZGQiOiIzOC4xMDcuMjM0LjU3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiLz9CSUFfVEVMRUdSQU1ATUFSQU1CQVNISV9NQVJBTUJBU0hJX01BUkFNQkFTSEkiLCJpZCI6IjU2N2Y0YmU1LTEyYWItNDJlMS1iOGQ5LWRiNmZkMWZkZDMxYyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh7Dwn4e/Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
-
-# Tested at: 2025-12-12 07:11:26 | Response: 0.950s | IP: 15.204.103.7 | Country: 🇺🇸 United States
-vmess://eyJhZGQiOiIxNS4yMDQuMTAzLjciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJsYW1tYWxhbmQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoibGFtbWFsYW5kLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:11:26 | Response: 1.124s | IP: 57.129.28.215 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjE1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:11:26 | Response: 1.327s | IP: 57.129.64.163 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNjQuMTYzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:11:26 | Response: 1.409s | IP: 57.129.59.194 | Country: 🇩🇪 Germany
-vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTk0IiwiYWlkIjoiMSIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:11:28 | Response: 0.751s | IP: 146.56.177.166 | Country: 🇰🇷 South Korea
-vmess://eyJhZGQiOiIxNDYuNTYuMTc3LjE2NiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InNlb3VsMDMuemdqb2suY29tIiwiaWQiOiI3MmEwZGFjNC05Njg5LTRhNTctYjE2NC01YzY1YmZhOTQ3NzIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HsPCfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoic2VvdWwwMy56Z2pvay5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:11:39 | Response: 0.595s | IP: 148.113.153.112 | Country: 🇨🇦 Canada
-vmess://eyJhZGQiOiIxNDguMTEzLjE1My4xMTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJrYXQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqPCfh6YiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
-
-# Tested at: 2025-12-12 07:11:44 | Response: 0.497s | IP: 8.218.116.26 | Country: 🇭🇰 Hong Kong
-vmess://eyJhZGQiOiI4LjIxOC4xMTYuMjYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImU0NzY3ZTlmLWVkMDAtNGYzMS1hOTg0LWE5MThiZGQ5YjA5YyIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjMyMjI4IiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
-
-# Tested at: 2025-12-12 07:12:18 | Response: 1.095s | IP: 89.31.120.192 | Country: 🇦🇪 United Arab Emirates
+# Tested at: 2025-12-13 01:32:40 | Response: 1.213s | IP: 89.31.120.192 | Country: 🇦🇪 United Arab Emirates
 vmess://eyJhZGQiOiI4OS4zMS4xMjAuMTkyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI0NDUzNzU5NS05Y2NjLTRiODMtODkzNi01ZjlhZDMyMjkwMTkiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HpvCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
 
-# Tested at: 2025-12-12 07:12:18 | Response: 0.617s | IP: 158.51.121.63 | Country: 🇨🇦 Canada
+# Tested at: 2025-12-13 01:32:43 | Response: 0.148s | IP: 158.51.121.63 | Country: 🇨🇦 Canada
 vmess://eyJhZGQiOiIxNTguNTEuMTIxLjYzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2VyaWJ1cy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJpYnVzLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
 
-# Tested at: 2025-12-12 07:12:22 | Response: 0.601s | IP: 141.94.155.228 | Country: 🇫🇷 France
-vmess://eyJhZGQiOiIxNDEuOTQuMTU1LjIyOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImthbXBvbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+# Tested at: 2025-12-13 01:32:48 | Response: 0.442s | IP: 15.235.83.228 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuODMuMjI4IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IndybWVsbXd4bGYuZ2t0ZXZscnF6bndxcW96eS5mYWJwZnM2Nmdpem1ub2poY3ZxeHdsLmt5dHJjZnpxbGE4N2d2Z3ZzNmM3a2pucnVidWguY2MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
 
-# Tested at: 2025-12-12 07:12:26 | Response: 0.337s | IP: 107.174.82.102 | Country: 🇺🇸 United States
+# Tested at: 2025-12-13 01:33:29 | Response: 0.854s | IP: 5.34.182.112 | Country: 🇺🇦 Ukraine
+vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDUyMjkiLCJwcyI6IvCfh7rwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:33:29 | Response: 0.866s | IP: 15.204.103.7 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNS4yMDQuMTAzLjciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJsYW1tYWxhbmQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoibGFtbWFsYW5kLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:33:29 | Response: 0.214s | IP: 15.235.50.172 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuNTAuMTcyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiYmFyYWRpaGEuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:33:30 | Response: 0.622s | IP: 57.129.64.163 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNjQuMTYzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:33:30 | Response: 0.193s | IP: 172.82.67.155 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI1NGQtYkQwRC1DM0YxMTFEMGI4NzkuNjY0LlF6Wi5pbyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IjU0RC1iZDBELWMzZjExMUQwYjg3OS42NjQuUVpaLmlPIiwiaWQiOiIwNTA3ZmJjZC1iOTgzLTQzYTctOGUxZC0yYzU2MTk2MGFkNGYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvcHl5WTRaVlR5SlYzdnI5bm9PaG4iLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiI1NEQtYmQwRC1jM2YxMTFEMGI4NzkuNjY0LnFaei5pTyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:33:30 | Response: 0.389s | IP: 47.242.140.52 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDIuMTQwLjUyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiIxYTQ2YjY2Yy02YmE5LTRlOWMtYWEwYi0wZWJhYzJiNjllMzIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraT9lZD0yMDQ4IiwicG9ydCI6IjM0ODE1IiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:33:37 | Response: 0.267s | IP: 216.238.86.158 | Country: 🇲🇽 Mexico
+vmess://eyJhZGQiOiIyMTYuMjM4Ljg2LjE1OCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiOTBiZTIxNGQtMDQ4Yy00ZWEyLWE2MDItYjhlNGQ0ZTUxZTM2IiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiMzQ0NjAiLCJwcyI6IvCfh7Lwn4e9Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:33:38 | Response: 0.494s | IP: 172.82.67.155 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJkLTRiZUQtYjcyNi0yYzUzYTgyZTQ5MjUuNjY0LnFaei5pbyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IkQtNGJFZC1iNzI2LTJjNTNBODJFNDkyNS42NjQucXpaLmlPIiwiaWQiOiIwNTA3ZmJjZC1iOTgzLTQzYTctOGUxZC0yYzU2MTk2MGFkNGYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvcHl5WTRaVlR5SlYzdnI5bm9PaG4iLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiJELTRCRWQtQjcyNi0yQzUzQTgyZTQ5MjUuNjY0LlF6Wi5JbyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:34:20 | Response: 0.659s | IP: 107.174.26.166 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJubm5ubm5ubm5ubm5ubi4yMjI3NjkueHl6IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoibm5ubm5ubm5ubm5ubm4uMjIyNzY5Lnh5eiIsImlkIjoiMmU2NTU3N2UtOGZkYi00YmIxLWE0OTUtOTZmMzEyMjA5OWE3IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Y2dGFPTWNPU1piOVRQUiIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoibm9uZSIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:34:21 | Response: 0.887s | IP: 91.148.134.156 | Country: 🇨🇴 Colombia
+vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDUyNjMiLCJwcyI6IvCfh6jwn4e0Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:34:22 | Response: 1.154s | IP: 2400:d321:2292:2043::1 | Country: 🇮🇳 India
+vmess://eyJhZGQiOiJub2RlNC5ydHhjb25maWd6LmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HrvCfh7MiLCJzY3kiOiJhdXRvIiwic25pIjoibm9kZTQucnR4Y29uZmlnei5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:34:26 | Response: 0.413s | IP: 15.204.64.211 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNS4yMDQuNjQuMjExIiwiYWlkIjoiMSIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:34:30 | Response: 0.847s | IP: 2a09:bac5:3985:2646::3d0:d | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTQuMjEuMjAxLjgzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiaGsubmJlZS5wcC51YSIsImlkIjoiNGJmMDc1ZjUtNGQ1ZS00ZDM5LWY1YWItYjMyYTg2MjUwZjBlIiwibmV0Ijoid3MiLCJwYXRoIjoiL2FhIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiaGsubmJlZS5wcC51YSIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:34:30 | Response: 0.762s | IP: 146.59.85.226 | Country: 🇵🇱 Poland
+vmess://eyJhZGQiOiIxNDYuNTkuODUuMjI2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7Xwn4exIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:34:31 | Response: 0.736s | IP: 15.235.41.200 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuNDEuMjAwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiMTUuMjM1LjQxLjIwMCIsImlkIjoiNThmZTE1NDItNTI5MC00MGFkLTgxNWEtNzc3MDdhODFhZmU1IiwibmV0Ijoid3MiLCJwYXRoIjoiL0lPZWJoTE1obDFDVGJGSGJMOTVteWZSWDIiLCJwb3J0IjoiODAiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:34:31 | Response: 0.781s | IP: 89.46.236.139 | Country: 🇷🇸 Serbia
+vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDUyNzIiLCJwcyI6IvCfh7fwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:34:32 | Response: 1.997s | IP: 156.245.232.15 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4xNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiOTUyNmI0NjItYzQ1Zi00OTQwLTgzYjktYTIwNDQ2MmIwNzQ0IiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiMjEyNDYiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:34:33 | Response: 3.256s | IP: 148.113.153.109 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNDguMTEzLjE1My4xMDkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:35:12 | Response: 0.581s | IP: 130.162.152.253 | Country: 🇰🇷 South Korea
+vmess://eyJhZGQiOiIxMzAuMTYyLjE1Mi4yNTMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjUyMDZiYjlmLTJjYmMtNDRhYy1kZTJhLTQ3MTQzOWEyMzcwNyIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTY4NjciLCJwcyI6IvCfh7Dwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:35:12 | Response: 0.574s | IP: 8.218.105.196 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI4LjIxOC4xMDUuMTk2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI5MjViZGJmNS03MmJlLTQ0MzctYmViZi00NDFjNjEwODlmNmIiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjUyNzUyIiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:35:13 | Response: 1.023s | IP: 45.83.20.104 | Country: 🇧🇪 Belgium
+vmess://eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJsdC5meGxjbi5jb20iLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjQ1Mjc2IiwicHMiOiLwn4en8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:35:13 | Response: 1.234s | IP: 57.129.28.212 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjEyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:35:13 | Response: 0.771s | IP: 192.3.233.162 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJaelh4ZEUuOTIyOTIyLnNIT3AiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJaelh4ZEUuOTIyOTIyLnNIT3AiLCJpZCI6ImJjZTBjN2NiLTA4ZDEtNDZhNy1iNzdiLTdiZmY4YjQ2MjUyZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9Sa1VVYnFoQTlHSlpCUk9qTDNRNXZUeW1yIiwicG9ydCI6IjgwIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:35:14 | Response: 0.503s | IP: 57.129.64.199 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNjQuMTk5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJwZWxhbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:35:14 | Response: 0.627s | IP: 57.129.25.22 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJvLm1ldHVqaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:35:18 | Response: 1.887s | IP: 38.107.234.57 | Country: 🇰🇿 Kazakhstan
+vmess://eyJhZGQiOiIzOC4xMDcuMjM0LjU3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiLz9CSUFfVEVMRUdSQU1ATUFSQU1CQVNISV9NQVJBTUJBU0hJX01BUkFNQkFTSEkiLCJpZCI6IjU2N2Y0YmU1LTEyYWItNDJlMS1iOGQ5LWRiNmZkMWZkZDMxYyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh7Dwn4e/Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:35:22 | Response: 0.606s | IP: 91.134.8.93 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI5MS4xMzQuOC45MyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBlbGFuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoicGVsYW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:35:22 | Response: 0.159s | IP: 23.162.200.227 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIyMy4xNjIuMjAwLjIyNyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:35:23 | Response: 0.668s | IP: 172.82.67.155 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI2Yi00RjY4LThEODctN0M0QUFERDEyQWI5LjY2NC5RelouaW8iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiI2Qi00RjY4LThEODctN2M0YWFEZDEyYWI5LjY2NC5RWnouaU8iLCJpZCI6IjA1MDdmYmNkLWI5ODMtNDNhNy04ZTFkLTJjNTYxOTYwYWQ0ZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9weXlZNFpWVHlKVjN2cjlub09obiIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IjZCLTRmNjgtOEQ4Ny03QzRBYWREMTJBYjkuNjY0LlF6Wi5JTyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:35:24 | Response: 3.610s | IP: 149.30.232.103 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNDkuMzAuMjMyLjEwMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMmMxODA3Y2UtNmE2My00NDUxLTlhZGQtYTc3OGQyNTA3MTYwIiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIxODM5MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:35:29 | Response: 0.463s | IP: 172.82.67.155 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0YkI2LUI2NjctRjg4NjA4RDE5RkQ1LjY2NC5xWnouaW8iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiI0YmI2LUI2NjctRjg4NjA4ZDE5RkQ1LjY2NC5RWnouSU8iLCJpZCI6IjA1MDdmYmNkLWI5ODMtNDNhNy04ZTFkLTJjNTYxOTYwYWQ0ZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9weXlZNFpWVHlKVjN2cjlub09obiIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IjRiYjYtYjY2Ny1mODg2MDhEMTlmZDUuNjY0LnF6Wi5JbyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:35:30 | Response: 0.150s | IP: 45.150.52.40 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0NS4xNTAuNTIuNDAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ4c2owMTEtMy5mYWNhaTIwMjQuY29tIiwiaWQiOiJjMzE3NzdhMS0yZWU2LTQ4NjQtZGI0Yy1hNzlmY2JjODE4OGIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYzMxNzc3YTEiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ4c2owMTEtMy5mYWNhaTIwMjQuY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:35:30 | Response: 4.107s | IP: 47.250.45.234 | Country: 🇲🇾 Malaysia
+vmess://eyJhZGQiOiI0Ny4yNTAuNDUuMjM0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJjNzdmNDhmNS00YmUzLTQ0NjEtYjUyYi00OTk5OGU3Yjg5N2IiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraT9lZD0yMDQ4IiwicG9ydCI6IjQzMDYzIiwicHMiOiLwn4ey8J+HviIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:36:04 | Response: 1.090s | IP: 57.128.189.227 | Country: 🇬🇧 United Kingdom
+vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjIyNyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InlpY2h1ZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6zwn4enIiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:36:05 | Response: 0.460s | IP: 38.180.16.86 | Country: 🇧🇷 Brazil
+vmess://eyJhZGQiOiIzOC4xODAuMTYuODYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImE1OGJjMWE1LThjMTgtNDlmZi05NDUzLWMzMzFiNTJmNDVkYyIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjM2MjM2IiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:36:05 | Response: 0.525s | IP: 91.134.8.102 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI5MS4xMzQuOC4xMDIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJrYXQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:36:13 | Response: 0.957s | IP: 140.83.80.36 | Country: 🇯🇵 Japan
+vmess://eyJhZGQiOiJ4cmF5LmtrMzcwMDUudGsiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjJlNzU0OGJiLTdjNWItNGQ5Ny1kNjRkLTFiMmZlNDA1MDA4OSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTU5MTkiLCJwcyI6IvCfh6/wn4e1Iiwic2N5IjoiYXV0byIsInNuaSI6InhyYXkua2szNzAwNS50ayIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:36:14 | Response: 1.168s | IP: 185.255.123.10 | Country: 🇳🇬 Nigeria
+vmess://eyJhZGQiOiJ5ZS5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIxZTQyNjA0Ni10MGZkczAtdDEyY25qLTFvbDk3LmhrLnA1cHYuY29tIiwiaWQiOiI0NjllMGIzMS0zMGMzLTRkYWItODAwZC03MTEyMzI2MzRjZTEiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQ1Mjc3IiwicHMiOiLwn4ez8J+HrCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:36:15 | Response: 0.974s | IP: 156.245.232.15 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4xNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZTg1NDJjMTAtOGQwOS00NmU2LWRiNTUtZGE4OTU0ZDM2NDcwIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiMTczNDIiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:36:16 | Response: 0.198s | IP: 51.79.102.253 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiI1MS43OS4xMDIuMjUzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiNTEuNzkuMTAyLjI1MyIsImlkIjoiNThmZTE1NDItNTI5MC00MGFkLTgxNWEtNzc3MDdhODFhZmU1IiwibmV0Ijoid3MiLCJwYXRoIjoiL0lPZWJoTE1obDFDVGJGSGJMOTVteWZSWDIiLCJwb3J0IjoiODAiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:36:17 | Response: 1.287s | IP: 47.244.120.197 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDViODM1MTktOWM0Zi00MDUyLWExMWItMDJlMDE3YjYzNmQ0IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIzNjcwMyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:36:17 | Response: 4.200s | IP: 45.136.12.37 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImZkMjkxYmU2LWI0OGQtNDNhMS1kYTM4LTY2YzdmODBlMmY4MCIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMzgxNDEiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:36:17 | Response: 4.271s | IP: 38.107.234.57 | Country: 🇰🇿 Kazakhstan
+vmess://eyJhZGQiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIzaC1rYXpha2hzdGFuMS4wOXZwbi5jb20iLCJpZCI6IjU2N2Y0YmU1LTEyYWItNDJlMS1iOGQ5LWRiNmZkMWZkZDMxYyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh7Dwn4e/Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:36:56 | Response: 0.498s | IP: 38.180.16.86 | Country: 🇧🇷 Brazil
+vmess://eyJhZGQiOiIzOC4xODAuMTYuODYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjI0NGEzNDY0LTEyNjktNDNiMy1iNDkxLTRkYzI3MTNlYjNmNiIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjM4MDM5IiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:36:56 | Response: 0.824s | IP: 37.235.53.135 | Country: 🇪🇸 Spain
+vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5YWwuZnhsY24uY29tIiwiaWQiOiI0NjllMGIzMS0zMGMzLTRkYWItODAwZC03MTEyMzI2MzRjZTEiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjQ1MjY2IiwicHMiOiLwn4eq8J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:36:56 | Response: 1.291s | IP: 141.94.155.229 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiIxNDEuOTQuMTU1LjIyOSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBlbGFuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoicGVsYW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:36:58 | Response: 0.608s | IP: 57.129.25.26 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:03 | Response: 0.175s | IP: 209.126.84.189 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIyMDkuMTI2Ljg0LjE4OSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IjIwOS4xMjYuODQuMTg5IiwiaWQiOiIyYzk4MTE2NC05YjkzLTRiY2EtOTRmZi1iNzhkM2Y4NDk4ZDciLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3N3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:37:05 | Response: 0.696s | IP: 146.56.112.110 | Country: 🇰🇷 South Korea
+vmess://eyJhZGQiOiIxNDYuNTYuMTEyLjExMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZTdjMzAyZjMtOTBkNi00MmRkLTlkN2QtOTRhMzY4M2EzNzA3IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI4ODg4IiwicHMiOiLwn4ew8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:37:06 | Response: 0.211s | IP: 148.113.153.112 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNDguMTEzLjE1My4xMTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJrYXQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqPCfh6YiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:37:11 | Response: 0.514s | IP: 57.128.189.143 | Country: 🇬🇧 United Kingdom
+vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjE0MyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4es8J+HpyIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:37:13 | Response: 0.520s | IP: 5.196.29.123 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI1LjE5Ni4yOS4xMjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJnb29nbGUuY29tIiwiaWQiOiIxMTJhYzM2Zi0zZjUzLTRlMjYtODM3MS1kMjVjMDI4ZTFiOWEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjIwODIiLCJwcyI6IvCfh6vwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6Im5vbmUiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:45 | Response: 0.358s | IP: 165.140.216.221 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNjUuMTQwLjIxNi4xNDEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJKb2luLS0tUExBTkJfTkVULS0tSm9pbi0tLVBMQU5CX05FVC0tLUpvaW4tLS1QTEFOQl9ORVQtLS1Kb2luLS0tUExBTkJfTkVUIiwiaWQiOiJlN2Q3MmE4ZC0yNmYyLTRiNTQtYjM2Ni0wYzQzZTBiY2JhN2QiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiSm9pbi0tLVBMQU5CX05FVC0tLUpvaW4tLS1QTEFOQl9ORVQtLS1Kb2luLS0tUExBTkJfTkVULS0tSm9pbi0tLVBMQU5CX05FVCIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:37:46 | Response: 0.764s | IP: 148.113.176.192 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNDguMTEzLjE3Ni4xOTIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmYXBlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:37:46 | Response: 1.013s | IP: 38.143.66.81 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIzOC4xNDMuNjYuODEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJpYnVzLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6InNlcmlidXMub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:46 | Response: 0.646s | IP: 40.160.16.216 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0MC4xNjAuMTYuMjE2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:37:46 | Response: 0.891s | IP: 57.129.28.65 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjUiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJrYXBlbGxlbmcuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImthcGVsbGVuZy5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:46 | Response: 1.147s | IP: 57.129.25.23 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:48 | Response: 0.589s | IP: 172.82.67.155 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0YmI2LUI2NjctZjg4NjA4ZDE5RmQ1LjY2NC5RWnouaU8iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiI0QmI2LUI2NjctZjg4NjA4RDE5RmQ1LjY2NC5RelouSW8iLCJpZCI6IjA1MDdmYmNkLWI5ODMtNDNhNy04ZTFkLTJjNTYxOTYwYWQ0ZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9weXlZNFpWVHlKVjN2cjlub09obiIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:51 | Response: 0.745s | IP: 154.201.76.172 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNTQuMjAxLjc2LjE3MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiYmE1MGUxZmUtMDU1Zi00NTg3LWZkMGQtMzZjOGQ2NjE1MTkyIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyMDk5MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:54 | Response: 0.562s | IP: 15.204.64.214 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNS4yMDQuNjQuMjE0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:37:56 | Response: 0.534s | IP: 57.128.189.240 | Country: 🇬🇧 United Kingdom
+vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjI0MCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4es8J+HpyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:37:56 | Response: 0.744s | IP: 47.243.213.247 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDMuMjEzLjI0NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiYTk5ZDA4ZWItODFjNS00OTQ0LWJhMTYtNDQ2MWJiMmVjODA4IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2kiLCJwb3J0IjoiNTY4OSIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:37:57 | Response: 0.578s | IP: 47.243.51.237 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDMuNTEuMjM3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJiZTVmNjVkZi1lMTA0LTRlMmEtOTM5MS1kMTA0NTRkYTdkZjEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraSIsInBvcnQiOiIyNzE2NSIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:37:57 | Response: 0.441s | IP: 47.244.120.197 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDQuMTIwLjE5NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiODQ1ZTZiMDgtMjkxOS00MjkwLWFkZTAtNWRjN2RjZWE1OWNhIiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiI0NDg2NyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:38:03 | Response: 0.401s | IP: 5.75.194.122 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ljc1LjE5NC4xMjIiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ1cGxvYWRib3kuY29tIiwiaWQiOiJiYmVjZDk2Ny1hNmQyLTQ3NjYtOTEwZS1mZDg0YThiNzE4MDkiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjEwMCIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:38:37 | Response: 0.599s | IP: 2607:5300:205:300::16ac | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiI1MS43OS4xMDMuNzYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ3cm1lbG13eGxmLmdrdGV2bHJxem53cXFvenkuZmFicGZzNjZnaXptbm9qaGN2cXh3bC5reXRyY2Z6cWxhODdndmd2czZjN2tqbnJ1YnVoLmNjIiwiaWQiOiI1OGZlMTU0Mi01MjkwLTQwYWQtODE1YS03NzcwN2E4MWFmZTUiLCJuZXQiOiJ3cyIsInBhdGgiOiIvSU9lYmhMTWhsMUNUYkZIYkw5NW15ZlJYMiIsInBvcnQiOiI4MCIsInBzIjoi8J+HqPCfh6YiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:38:38 | Response: 1.214s | IP: 57.129.28.68 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJwZWxhbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoicGVsYW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:38:38 | Response: 1.461s | IP: 57.129.25.25 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjUiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmLmtoaWxlaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:38:40 | Response: 0.566s | IP: 183.236.51.36 | Country: 🇨🇳 China
+vmess://eyJhZGQiOiIxODMuMjM2LjUxLjM2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI0MTgwNDhhZi1hMjkzLTRiOTktOWIwYy05OGNhMzU4MGRkMjQiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiI1OTAwMyIsInBzIjoi8J+HqPCfh7MiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:38:42 | Response: 0.843s | IP: 45.156.23.163 | Country: 🇳🇱 The Netherlands
+vmess://eyJhZGQiOiI0NS4xNTYuMjMuMTYzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJjOGIxYWViNy1kZGFkLTQzM2UtOTAyMi0yOWYyNGM3ZTVlYzgiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjUxODQ4IiwicHMiOiLwn4ez8J+HsSIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:38:46 | Response: 0.713s | IP: 57.129.59.193 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTkzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJrYXQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:38:46 | Response: 0.359s | IP: 2a05:f480:2800:2079:5400:5ff:feb2:b6e1 | Country: 🇪🇸 Spain
+vmess://eyJhZGQiOiIyMDguNzYuMjIzLjIxOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiYTA1OTZiYTYtNzJhMy00MzY2LTg5OTItNzcwODhkYTY1YmQ4IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIyNzA5MiIsInBzIjoi8J+HqvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:38:50 | Response: 0.645s | IP: 57.129.132.223 | Country: 🇬🇧 United Kingdom
+vmess://eyJhZGQiOiI1Ny4xMjkuMTMyLjIyMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Imdvb2dsZS5jb20iLCJpZCI6ImEyNWNiZjExLTI5MDgtNGExYi1hM2E4LTlhNTcxNzc3ZGNhMyIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcy8iLCJwb3J0IjoiODAiLCJwcyI6IvCfh6zwn4enIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:38:52 | Response: 0.955s | IP: 104.28.247.69 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxMzEuMTg2LjYzLjg5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiaGsubmJlZS5wcC51YSIsImlkIjoiNGJmMDc1ZjUtNGQ1ZS00ZDM5LWY1YWItYjMyYTg2MjUwZjBlIiwibmV0Ijoid3MiLCJwYXRoIjoiL2FhIiwicG9ydCI6IjExNjU1IiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiJoay5uYmVlLnBwLnVhIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:38:54 | Response: 0.640s | IP: 47.250.45.234 | Country: 🇲🇾 Malaysia
+vmess://eyJhZGQiOiI0Ny4yNTAuNDUuMjM0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI4MDAzOWI0ZC1iYWMwLTRmODktODJjNy01NGZhZDNiMGExZWEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraT9lZD0yMDQ4IiwicG9ydCI6Ijg2MTMiLCJwcyI6IvCfh7Lwn4e+Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:39:29 | Response: 0.749s | IP: 15.235.83.227 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuODMuMjI3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoibWFua2FkbXUuY29tIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6IndybWVsbXd4bGYuZ2t0ZXZscnF6bndxcW96eS5mYWJwZnM2Nmdpem1ub2poY3ZxeHdsLmt5dHJjZnpxbGE4N2d2Z3ZzNmM3a2pucnVidWguY2MiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:39:29 | Response: 1.227s | IP: 146.59.55.50 | Country: 🇵🇱 Poland
+vmess://eyJhZGQiOiIxNDYuNTkuNTUuNTAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJvLm1ldHVqaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HtfCfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:39:30 | Response: 1.554s | IP: 146.56.177.166 | Country: 🇰🇷 South Korea
+vmess://eyJhZGQiOiJzZW91bDAzLnpnam9rLmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InNlb3VsMDMuemdqb2suY29tIiwiaWQiOiI3MmEwZGFjNC05Njg5LTRhNTctYjE2NC01YzY1YmZhOTQ3NzIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HsPCfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoic2VvdWwwMy56Z2pvay5jb20iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:39:30 | Response: 0.353s | IP: 15.235.13.69 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuMTMuNjkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ2a3ZkMTI3Lm15Y2RuLm1lIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6InZrdmQxMjcubXljZG4ubWUiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:39:32 | Response: 3.877s | IP: 2001:df1:7880:4::429c | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0NS4xMzYuMTIuMzciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjA5MGQwYmQ5LWY5YzQtNGMzYi04YWFlLWZmYTY3ODc2NTkzNSIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiMjA1MjEiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:39:33 | Response: 4.392s | IP: 149.30.232.103 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNDkuMzAuMjMyLjEwMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDYwOTA4YjgtZGUxNi00MmU5LWJkMGQtMTkxNTIyYWI5MmE1IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIxNTA5NyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:39:38 | Response: 0.157s | IP: 15.235.85.147 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuODUuMTQ3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6jwn4emIiwic2N5IjoiYXV0byIsInNuaSI6InBlbGFuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:39:39 | Response: 0.438s | IP: 104.28.153.131 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJhaW8udW5saW1pdGVkLmJpei5pZCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImFpby51bmxpbWl0ZWQuYml6LmlkIiwiaWQiOiJmMjgyYjg3OC04NzExLTQ1YTEtOGM2OS01NTY0MTcyMTIzYzEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYWlvcHJveHlib3QvMTI5LjE1MC40OS41OC0xODY1MCIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiemVybyIsInNuaSI6ImFpby51bmxpbWl0ZWQuYml6LmlkIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:40:20 | Response: 0.894s | IP: 8.218.199.111 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI4LjIxOC4xOTkuMTExIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJmNTVkYjQyZC1lZTUyLTRhNDctODgwYi02ZjdiMTIzYWIyMjIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjgwODAiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:40:20 | Response: 1.023s | IP: 18.162.134.114 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiJjZ3JvdXAubm9kZTQudi5ub2RlbGlzdC1haXJwb3J0LmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiOGYzYTgzNWMtOGE0NS00ODBkLWFlMzUtMWRlYjJjNTJkY2FlIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI4MzEyIiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:40:21 | Response: 1.335s | IP: 57.129.24.125 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTI1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:40:21 | Response: 0.246s | IP: 192.3.233.162 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJjQ2MuOTIyOTIyLlNoT3AiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJjQ2MuOTIyOTIyLlNoT3AiLCJpZCI6ImJjZTBjN2NiLTA4ZDEtNDZhNy1iNzdiLTdiZmY4YjQ2MjUyZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9Sa1VVYnFoQTlHSlpCUk9qTDNRNXZUeW1yIiwicG9ydCI6IjgwIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:40:22 | Response: 2.342s | IP: 47.81.33.183 | Country: 🇹🇭 Thailand
+vmess://eyJhZGQiOiJuMTc0OTAzMjkxNy5renhkcy5jbiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im4xNzQ5MDMyOTE3Lmt6eGRzLmNuIiwiaWQiOiJjZDY2ZWVlYS02NDNmLTQ4MjYtYTRmMy0wZDJmNTdhNWFkMDYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HufCfh60iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:40:22 | Response: 1.312s | IP: 43.100.14.135 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiJuMTc0OTAzMjE3OS5renhkcy5jbiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im4xNzQ5MDMyMTc5Lmt6eGRzLmNuIiwiaWQiOiJlMTgzMGZhYy1kODFmLTQ3OTktODI2Yy0yOTdiYzI1MjczZDUiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoibjE3NDkwMzIxNzkua3p4ZHMuY24iLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:40:28 | Response: 0.588s | IP: 31.13.248.70 | Country: 🇧🇬 Bulgaria
+vmess://eyJhZGQiOiJsdC5meGxjbi5jb20iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNDUyNTgiLCJwcyI6IvCfh6fwn4esIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:40:29 | Response: 0.588s | IP: 107.174.82.102 | Country: 🇺🇸 United States
 vmess://eyJhZGQiOiIxMDcuMTc0LjgyLjEwMi5zc2xpcC5pbyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IjEwNy4xNzQuODIuMTAyLnNzbGlwLmlvIiwiaWQiOiJiYjgyNGEyMi1iN2NlLTQyN2ItOWVkNi0xYWRmMDc1MWRhMDIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvT3Y3SHJnd2xFY1J1Z293S1YiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIxMDcuMTc0LjgyLjEwMi5zc2xpcC5pbyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
 
-# Tested at: 2025-12-12 07:12:30 | Response: 4.782s | IP: 45.89.52.207 | Country: 🇹🇷 Turkey
+# Tested at: 2025-12-13 01:40:31 | Response: 0.777s | IP: 47.243.51.237 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDMuNTEuMjM3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJlZjkzZjQxMy05MDM5LTRkZGItYWVmYi0yNDkwMjg3ZGY1NWEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvYXJraSIsInBvcnQiOiI1MjgwMSIsInBzIjoi8J+HrfCfh7AiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:40:31 | Response: 0.442s | IP: 57.128.189.222 | Country: 🇬🇧 United Kingdom
+vmess://eyJhZGQiOiI1Ny4xMjguMTg5LjIyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4es8J+HpyIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:40:31 | Response: 0.603s | IP: 57.129.28.214 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjE0IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:40:31 | Response: 0.257s | IP: 192.3.233.162 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJYWFhjY0ZydC45MjI5MjIuU2hPUCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IlhYWGNjRnJ0LjkyMjkyMi5TaE9QIiwiaWQiOiJiY2UwYzdjYi0wOGQxLTQ2YTctYjc3Yi03YmZmOGI0NjI1MmYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvUmtVVWJxaEE5R0paQlJPakwzUTV2VHltciIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:40:34 | Response: 0.222s | IP: 192.3.233.162 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJ2dlZCZ0h5dS45MjI5MjIuU0hvUCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InZ2VkJnSHl1LjkyMjkyMi5TSG9QIiwiaWQiOiJiY2UwYzdjYi0wOGQxLTQ2YTctYjc3Yi03YmZmOGI0NjI1MmYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvUmtVVWJxaEE5R0paQlJPakwzUTV2VHltciIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:40:36 | Response: 2.033s | IP: 8.219.50.123 | Country: 🇸🇬 Singapore
+vmess://eyJhZGQiOiJjZi4wOTAyMjcueHl6IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2dhbC5kYWdyYXRlLmV1Lm9yZyIsImlkIjoiMjkwY2M2OTEtM2FjNi00Mzg3LTk4YTEtMjVjOGViOGNhMmVhIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7jwn4esIiwic2N5IjoiYXV0byIsInNuaSI6InNnYWwuZGFncmF0ZS5ldS5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:40:40 | Response: 1.669s | IP: 154.201.76.172 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNTQuMjAxLjc2LjE3MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDk2Y2VjNzEtYTBmZC00ZjI1LWJiYTEtY2JhOWU5ZDVhNTJmIiwibmV0Ijoid3MiLCJwYXRoIjoiLyIsInBvcnQiOiIyMDUyMSIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:41:11 | Response: 0.823s | IP: 165.154.195.38 | Country: 🇹🇼 Taiwan
+vmess://eyJhZGQiOiIxNjUuMTU0LjE5NS4zOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiOTU5YThjYWYtNGNlYS00M2QwLWE1NDgtMzYyOGU3ZGRmYWZjIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIzNTAzNCIsInBzIjoi8J+HufCfh7wiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:41:14 | Response: 0.835s | IP: 49.128.219.213 | Country: 🇰🇷 South Korea
+vmess://eyJhZGQiOiI0OS4xMjguMjE5LjIxMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiM2M5ZDAxMjMtNjYyMS00NDhlLWIyMzItNDU0N2Q0NzYwNTJlIiwibmV0Ijoid3MiLCJwYXRoIjoiL3psdnE1ZSIsInBvcnQiOiIzODI2NSIsInBzIjoi8J+HsPCfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:41:20 | Response: 0.839s | IP: 156.245.232.15 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4xNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNDhhMzNhMWItYTZmYi00ZDZhLTk0YzUtYzY4MDhmMWM0YjFmIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiNDI2NDAiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:41:21 | Response: 0.515s | IP: 91.134.8.88 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI5MS4xMzQuOC44OCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:42:03 | Response: 0.735s | IP: 156.245.232.15 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4xNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZDNkZmFiOTgtYzdkMi00NWQ3LTk5NDEtYjNkYzYzNDY5NmU0IiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiMTQ5MTQiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:42:03 | Response: 0.936s | IP: 141.94.155.228 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiIxNDEuOTQuMTU1LjIyOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImthbXBvbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:42:08 | Response: 1.280s | IP: 2400:d321:2292:2043::1 | Country: 🇮🇳 India
+vmess://eyJhZGQiOiJlYmMuem9vbS51cyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6Ijg0NDMiLCJwcyI6IvCfh67wn4ezIiwic2N5IjoiYXV0byIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:42:08 | Response: 0.575s | IP: 57.129.24.132 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTMyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:42:14 | Response: 0.624s | IP: 57.129.59.201 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMjAxIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:42:19 | Response: 0.563s | IP: 141.95.126.134 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiIxNDEuOTUuMTI2LjEzNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImphbWVray5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJqYW1la2sub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:42:55 | Response: 0.519s | IP: 54.206.192.9 | Country: 🇦🇺 Australia
+vmess://eyJhZGQiOiI1NC4yMDYuMTkyLjkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjA4ZjQ1MDI4LTFkYjYtNGU5My1iZjUxLWQzNDRiNmM3MWUxOSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiMTY0MDciLCJwcyI6IvCfh6bwn4e6Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:42:55 | Response: 1.146s | IP: 57.129.59.199 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTk5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:42:55 | Response: 1.356s | IP: 57.129.2.121 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMi4xMjEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJwZWxhbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoicGVsYW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:42:55 | Response: 1.236s | IP: 57.129.59.195 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTk1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:42:57 | Response: 0.640s | IP: 47.243.213.247 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI0Ny4yNDMuMjEzLjI0NyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNjNmMmRjYTctNDM0Yy00NDRjLWE5YTEtMTMwYjM3NzIxOGM1IiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2kiLCJwb3J0IjoiNTM4NjAiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:42:57 | Response: 0.627s | IP: 57.129.59.202 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMjAyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:42:58 | Response: 0.509s | IP: 156.245.232.15 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4xNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNzZlZTZkMWYtZTYwOC00MDQxLWIyNjMtYjc0MTg2YThjYTIzIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiMzk4MTEiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:42:58 | Response: 0.531s | IP: 57.129.24.130 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTMwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:43:07 | Response: 0.164s | IP: 38.99.82.193 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIzOC45OS44Mi4xOTMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ0aWxlYmFuaS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:43:46 | Response: 0.377s | IP: 185.122.166.51 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxMDQuMjEuMzguOTAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJkZGRjY2NkdmZnLjIyMjg1Ni54eXoiLCJpZCI6IjJkMDY4MDgzLTJjYjAtNGFlMy1hNDRhLTZmYzgyZjMwMzljYyIsIm5ldCI6IndzIiwicGF0aCI6Ii84N0V4MkppWVlXcjdGUmEwNmI4OEpTbyIsInBvcnQiOiI4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:43:47 | Response: 1.168s | IP: 57.129.28.69 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjkiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJiYXJhZGloYS5jb20iLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoid3JtZWxtd3hsZi5na3RldmxycXpud3Fxb3p5LmZhYnBmczY2Z2l6bW5vamhjdnF4d2wua3l0cmNmenFsYTg3Z3ZndnM2Yzdram5ydWJ1aC5jYyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:43:49 | Response: 0.591s | IP: 57.129.24.131 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjQuMTMxIiwiYWlkIjoiMSIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Ii9saW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:43:57 | Response: 0.115s | IP: 149.34.251.245 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI4Mi4xOTguMjQ2Ljk3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiMjAwMTpiYzg6MzJkNzozMDI6OjEwIiwiaWQiOiJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLz9lZD0yMDQ4IiwicG9ydCI6IjE4MCIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:43:58 | Response: 0.978s | IP: 140.83.80.36 | Country: 🇯🇵 Japan
+vmess://eyJhZGQiOiIxNDAuODMuODAuMzYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjJlNzU0OGJiLTdjNWItNGQ5Ny1kNjRkLTFiMmZlNDA1MDA4OSIsIm5ldCI6InRjcCIsInBhdGgiOiIiLCJwb3J0IjoiNTU5MTkiLCJwcyI6IvCfh6/wn4e1Iiwic2N5IjoiYXV0byIsInNuaSI6InhyYXkua2szNzAwNS50ayIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:06 | Response: 0.840s | IP: 146.59.70.146 | Country: 🇵🇱 Poland
+vmess://eyJhZGQiOiIxNDYuNTkuNzAuMTQ2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HtfCfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:19 | Response: 0.370s | IP: 172.245.41.59 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJoZ3Ryb2phbi56YWJjLm5ldCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImhndHJvamFuLnphYmMubmV0IiwiaWQiOiJlNjM5NWMyMC00NTcxLTRiMzQtZDZiMS01NWE1ZDM2ZTQ5ZWEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvZTYzOTVjMjAiLCJwb3J0IjoiMjA4MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:39 | Response: 1.018s | IP: 107.172.132.247 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJzc3Nzc3Nzc3Nzc3NmZmZmZmZmZ2guMjAzMi5wcC51YSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InNzc3Nzc3Nzc3Nzc2ZmZmZmZmZnaC4yMDMyLnBwLnVhIiwiaWQiOiI0MTc0Yjk1ZC0xMTVlLTRkMzktYWRkNi0xZjhkYjk1YmI4NjAiLCJuZXQiOiJ3cyIsInBhdGgiOiIvNldlM1U5RGYxV0d4Z0Zub0ZQdzEiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiJzc3Nzc3Nzc3Nzc3NmZmZmZmZmZ2guMjAzMi5wcC51YSIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:40 | Response: 2.265s | IP: 57.129.28.63 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjMiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmYXBlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiZmFwZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:42 | Response: 3.326s | IP: 103.127.218.91 | Country: 🇹🇼 Taiwan
+vmess://eyJhZGQiOiIxMDMuMTI3LjIxOC45MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IjEwMy4xMjcuMjE4LjkxIiwiaWQiOiIxY2VmMDNhZC02MzQzLTQwOGMtODEyMS1jYmQxZmRhMmVlOWQiLCJuZXQiOiJ3cyIsInBhdGgiOiIvMWNlZjAzYWQiLCJwb3J0IjoiNTQ2OTMiLCJwcyI6IvCfh7nwn4e8Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:47 | Response: 0.527s | IP: 57.129.28.67 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5aWNodWVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJ5aWNodWVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:44:49 | Response: 0.497s | IP: 91.134.8.100 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI5MS4xMzQuOC4xMDAiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJrYW1wb25nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:51 | Response: 2.393s | IP: 172.82.67.155 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0RDQxLWI1MTAtRmMzNWYyRDdFQ2Q3LjY2NC5xenouaW8iLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiI0RDQxLWI1MTAtZkMzNWYyZDdlY2Q3LjY2NC5xWnouaW8iLCJpZCI6IjA1MDdmYmNkLWI5ODMtNDNhNy04ZTFkLTJjNTYxOTYwYWQ0ZiIsIm5ldCI6IndzIiwicGF0aCI6Ii9weXlZNFpWVHlKVjN2cjlub09obiIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IjRkNDEtQjUxMC1GQzM1RjJkN2VDRDcuNjY0LlFaei5pbyIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:44:58 | Response: 2.041s | IP: 8.218.116.26 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiI4LjIxOC4xMTYuMjYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImU0NzY3ZTlmLWVkMDAtNGYzMS1hOTg0LWE5MThiZGQ5YjA5YyIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjMyMjI4IiwicHMiOiLwn4et8J+HsCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:45:31 | Response: 0.829s | IP: 134.195.198.147 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxMzQuMTk1LjE5OC4xNDciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJpbm5hLmNmZCIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:45:31 | Response: 1.450s | IP: 57.128.216.125 | Country: 🇵🇱 Poland
+vmess://eyJhZGQiOiI1Ny4xMjguMjE2LjEyNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImthbXBvbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HtfCfh7EiLCJzY3kiOiJhdXRvIiwic25pIjoia2FtcG9uZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:45:34 | Response: 0.613s | IP: 57.129.59.194 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMTk0IiwiYWlkIjoiMSIsImFscG4iOiIiLCJob3N0IjoieWljaHVlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoieWljaHVlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:45:38 | Response: 0.203s | IP: 15.235.85.156 | Country: 🇨🇦 Canada
+vmess://eyJhZGQiOiIxNS4yMzUuODUuMTU2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoia2FtcG9uZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eo8J+HpiIsInNjeSI6ImF1dG8iLCJzbmkiOiJrYW1wb25nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:45:40 | Response: 0.641s | IP: 57.129.28.215 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjE1IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:45:41 | Response: 0.538s | IP: 203.227.56.29 | Country: 🇰🇷 South Korea
+vmess://eyJhZGQiOiIyMTYuMjI3LjE2OC4xNTciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJ5ZS5meGxjbi5jb20iLCJpZCI6IjQ2OWUwYjMxLTMwYzMtNGRhYi04MDBkLTcxMTIzMjYzNGNlMSIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjQ1MjQ1IiwicHMiOiLwn4ew8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:45:42 | Response: 1.571s | IP: 57.129.28.64 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguNjQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJzZXJrYXQub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoic2Vya2F0Lm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:45:44 | Response: 0.419s | IP: 2a01:4f8:1c17:ff0d::1 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI5MS4xMDcuMTM2LjEwOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InVwbG9hZGJveS5jb20iLCJpZCI6ImJiZWNkOTY3LWE2ZDItNDc2Ni05MTBlLWZkODRhOGI3MTgwOSIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiMTAwIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:45:47 | Response: 0.589s | IP: 57.129.59.200 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuNTkuMjAwIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJzZXJrYXQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:46:23 | Response: 1.085s | IP: 216.238.87.47 | Country: 🇲🇽 Mexico
+vmess://eyJhZGQiOiIyMTYuMjM4Ljg3LjQ3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJiODE1NWNlNC03ZTA4LTRjNDAtODAwZi04NjcxMzEyYjcxMjQiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiIyNzUwMiIsInBzIjoi8J+HsvCfh70iLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:46:23 | Response: 1.162s | IP: 146.59.118.249 | Country: 🇵🇱 Poland
+vmess://eyJhZGQiOiIxNDYuNTkuMTE4LjI0OSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImZhcGVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e18J+HsSIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:46:23 | Response: 0.543s | IP: 91.134.8.101 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI5MS4xMzQuOC4xMDEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJmYXBlbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiJsaW5rdndzIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+Hq/Cfh7ciLCJzY3kiOiJhdXRvIiwic25pIjoiZmFwZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:46:23 | Response: 0.578s | IP: 141.94.155.224 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiIxNDEuOTQuMTU1LjIyNCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImZhcGVuZy5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4er8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:46:24 | Response: 0.976s | IP: 94.136.187.77 | Country: 🇮🇳 India
+vmess://eyJhZGQiOiI5NC4xMzYuMTg3Ljc3IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoibm9kZTQucnR4Y29uZmlnei5jb20iLCJpZCI6IjQ0ZTU3NDg1LWVjY2MtNDZlZi04MDhmLWNkMTdhYzgxMDAxOCIsIm5ldCI6IndzIiwicGF0aCI6Ii9ATWFsaW5kYTYxMDQiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4eu8J+HsyIsInNjeSI6IiIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:46:29 | Response: 0.427s | IP: 15.204.64.212 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNS4yMDQuNjQuMjEyIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoicGVsYW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6InBlbGFuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:46:30 | Response: 1.646s | IP: 2400:d321:2292:2043::1 | Country: 🇮🇳 India
+vmess://eyJhZGQiOiIxNDEuMTkzLjIxMy4yMCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6Ijg0NDMiLCJwcyI6IvCfh67wn4ezIiwic2N5IjoiYXV0byIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:46:33 | Response: 1.974s | IP: 2400:d321:2292:2043::1 | Country: 🇮🇳 India
+vmess://eyJhZGQiOiIxNDEuMTkzLjIxMy4yMSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwiaWQiOiI0NGU1NzQ4NS1lY2NjLTQ2ZWYtODA4Zi1jZDE3YWM4MTAwMTgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvQE1hbGluZGE2MTA0IiwicG9ydCI6Ijg0NDMiLCJwcyI6IvCfh67wn4ezIiwic2N5IjoiYXV0byIsInNuaSI6Im5vZGU0LnJ0eGNvbmZpZ3ouY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:46:33 | Response: 0.243s | IP: 2605:a140:2273:7184::1 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJ2MnJheS5jb2RlZnlpbmMuY29tIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoidjJyYXkuY29kZWZ5aW5jLmNvbSIsImlkIjoiMmM5ODExNjQtOWI5My00YmNhLTk0ZmYtYjc4ZDNmODQ5OGQ3IiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzd3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ2MnJheS5jb2RlZnlpbmMuY29tIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:46:35 | Response: 4.662s | IP: 68.183.178.131 | Country: 🇸🇬 Singapore
+vmess://eyJhZGQiOiI2OC4xODMuMTc4LjEzMSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6Ind3dy4xMjMzMy5tb25zdGVyIiwiaWQiOiJjMTFjMzJjYi0yN2IzLTRhZmEtYzBmMy1mYjI1MGFhNDk1OWUiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjU4NjA3IiwicHMiOiLwn4e48J+HrCIsInNjeSI6ImF1dG8iLCJzbmkiOiJ3d3cuMTIzMzMubW9uc3RlciIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:46:41 | Response: 0.535s | IP: 91.134.8.92 | Country: 🇫🇷 France
+vmess://eyJhZGQiOiI5MS4xMzQuOC45MiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InlpY2h1ZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6vwn4e3Iiwic2N5IjoiYXV0byIsInNuaSI6InlpY2h1ZW5nLm9yZyIsInRscyI6InRscyIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:47:14 | Response: 0.424s | IP: 47.253.197.26 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0Ny4yNTMuMTk3LjI2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJkZDdiZTdmMS0zOGZmLTQ1ZTYtZjFlNS1iMjBjMjE5MGY1MjciLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiIiwicG9ydCI6IjEyMDU2IiwicHMiOiLwn4e68J+HuCIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:47:14 | Response: 0.688s | IP: 45.89.52.207 | Country: 🇹🇷 Turkey
 vmess://eyJhZGQiOiI0NS44OS41Mi4yMDciLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6ImFjNGMxMmM1LTQ1ZjItNDM5OC1hNzE4LTk5ODM5NDFlZGUyYiIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjM5NjUxIiwicHMiOiLwn4e58J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
 
-# Tested at: 2025-12-12 07:12:36 | Response: 0.439s | IP: 38.180.16.86 | Country: 🇧🇷 Brazil
-vmess://eyJhZGQiOiIzOC4xODAuMTYuODYiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjI0NGEzNDY0LTEyNjktNDNiMy1iNDkxLTRkYzI3MTNlYjNmNiIsIm5ldCI6InRjcCIsInBhdGgiOiIvIiwicG9ydCI6IjM4MDM5IiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+# Tested at: 2025-12-13 01:47:14 | Response: 0.487s | IP: 156.245.232.15 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjQ1LjIzMi4xNSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMTg2MjBjMjAtYjdhNC00MDNlLWMzMTItMWMwMTk5MDg4MTAwIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiMzA0OTAiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:47:15 | Response: 0.976s | IP: 57.129.25.24 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiJwZWxhbmcub3JnIiwiaWQiOiIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLCJuZXQiOiJ3cyIsInBhdGgiOiIvbGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6InBlbGFuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:47:15 | Response: 0.218s | IP: 40.160.16.219 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiI0MC4xNjAuMTYuMjE5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic2Vya2F0Lm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh7rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6InNlcmthdC5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:47:16 | Response: 1.842s | IP: 172.111.146.64 | Country: 🇯🇵 Japan
+vmess://eyJhZGQiOiIxNzIuMTExLjE0Ni42NCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiMDViOGM3ODMtN2Y1OS00N2Y5LTk5MjMtMDZhNDY1Njc5ZjZhIiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzLyIsInBvcnQiOiI4MCIsInBzIjoi8J+Hr/Cfh7UiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoibm9uZSIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:47:23 | Response: 0.176s | IP: 192.204.47.79 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxOTIuMjA0LjQ3Ljc5IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiJhZWU2MWIyMS1lODVhLTQ4NGItZjIwMy1iMjQ1ZjE0NTFjZmYiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiI0MjI3NyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:47:23 | Response: 1.404s | IP: 85.195.101.122 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI4NS4xOTUuMTAxLjEyMiIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZjNkNDE2N2UtYjE1ZS00ZTQ2LTgyZTktOTI4NmVmOTNmZGE3IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI0MDg3OCIsInBzIjoi8J+HqfCfh6oiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoibm9uZSIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:47:23 | Response: 0.781s | IP: 156.238.238.194 | Country: 🇭🇰 Hong Kong
+vmess://eyJhZGQiOiIxNTYuMjM4LjIzOC4xOTQiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImhvc3QiOiIiLCJpZCI6IjA1MjQyMzZhLWUyMTctNGNmMy05MjIzLTk2OGEyOTBmZmNlNyIsIm5ldCI6IndzIiwicGF0aCI6Ii8iLCJwb3J0IjoiNDcyOTYiLCJwcyI6IvCfh63wn4ewIiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJhdXRvIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:47:23 | Response: 0.741s | IP: 107.172.132.247 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiJzc3Nzc3NzeHh4eC4yMDMyLnBwLnVhIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0Ijoic3Nzc3Nzc3h4eHguMjAzMi5wcC51YSIsImlkIjoiNDE3NGI5NWQtMTE1ZS00ZDM5LWFkZDYtMWY4ZGI5NWJiODYwIiwibmV0Ijoid3MiLCJwYXRoIjoiLzZXZTNVOURmMVdHeGdGbm9GUHcxIiwicG9ydCI6IjQ0MyIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoic3Nzc3Nzc3h4eHguMjAzMi5wcC51YSIsInRscyI6InRscyIsInR5cGUiOiIiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:47:24 | Response: 0.816s | IP: 57.129.25.20 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjUuMjAiLCJhaWQiOiIxIiwiYWxwbiI6IiIsImhvc3QiOiI1Ny4xMjkuMjUuMjAiLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiYXV0byIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:47:32 | Response: 1.267s | IP: 95.164.4.88 | Country: 🇧🇷 Brazil
+vmess://eyJhZGQiOiJwcS1icmF6aWwxLjA5dnBuLmNvbSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBxLWJyYXppbDEuMDl2cG4uY29tIiwiaWQiOiJjMDRjM2IzNC03MGZkLTRmZWMtOTYzZS1jMTJkMDlmMzZiZWYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MvIiwicG9ydCI6IjgwIiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiJub25lIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:48:03 | Response: 0.471s | IP: 208.76.223.218 | Country: 🇪🇸 Spain
+vmess://eyJhZGQiOiIyMDguNzYuMjIzLjIxOCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiZDhmZDg5NTUtNzhkYi00OWJhLWQ4NmYtM2U0NzI5ZjZhYzRkIiwibmV0IjoidGNwIiwicGF0aCI6Ii8iLCJwb3J0IjoiNDA0MzMiLCJwcyI6IvCfh6rwn4e4Iiwic2N5IjoiYXV0byIsInNuaSI6IiIsInRscyI6IiIsInR5cGUiOiJub25lIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:48:04 | Response: 0.767s | IP: 209.38.31.133 | Country: 🇦🇺 Australia
+vmess://eyJhZGQiOiIyMDkuMzguMzEuMTMzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiIiwiaWQiOiI0MTJiMjJlYy1lOWQ5LTRlYzYtZDNhYi02YTU5NTM3Mzk4YmYiLCJuZXQiOiJ0Y3AiLCJwYXRoIjoiLyIsInBvcnQiOiIzMjA3NyIsInBzIjoi8J+HpvCfh7oiLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:48:04 | Response: 1.355s | IP: 95.164.4.88 | Country: 🇧🇷 Brazil
+vmess://eyJhZGQiOiI5NS4xNjQuNC44OCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6InBxLWJyYXppbDEuMDl2cG4uY29tIiwiaWQiOiJjMDRjM2IzNC03MGZkLTRmZWMtOTYzZS1jMTJkMDlmMzZiZWYiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MvIiwicG9ydCI6IjgwIiwicHMiOiLwn4en8J+HtyIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:48:05 | Response: 0.543s | IP: 57.129.28.216 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjE2IiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoibGlua3Z3cyIsInBvcnQiOiI0NDMiLCJwcyI6IvCfh6nwn4eqIiwic2N5IjoiYXV0byIsInNuaSI6ImZhcGVuZy5vcmciLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
+
+# Tested at: 2025-12-13 01:48:05 | Response: 0.637s | IP: 57.129.28.213 | Country: 🇩🇪 Germany
+vmess://eyJhZGQiOiI1Ny4xMjkuMjguMjEzIiwiYWlkIjoiMCIsImFscG4iOiIiLCJob3N0IjoiZmFwZW5nLm9yZyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwibmV0Ijoid3MiLCJwYXRoIjoiL2xpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4ep8J+HqiIsInNjeSI6ImF1dG8iLCJzbmkiOiJmYXBlbmcub3JnIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+
+# Tested at: 2025-12-13 01:48:08 | Response: 4.974s | IP: 149.30.232.103 | Country: 🇺🇸 United States
+vmess://eyJhZGQiOiIxNDkuMzAuMjMyLjEwMyIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6IiIsImlkIjoiNTM4MTQ0NWQtNmFlNC00OTQ4LWI2MWEtYTE2ZDk0OThkMjFiIiwibmV0Ijoid3MiLCJwYXRoIjoiL2Fya2k/ZWQ9MjA0OCIsInBvcnQiOiIzMTQ2OSIsInBzIjoi8J+HuvCfh7giLCJzY3kiOiJhdXRvIiwic25pIjoiIiwidGxzIjoiIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
+
+# Tested at: 2025-12-13 01:48:15 | Response: 0.581s | IP: 146.59.118.250 | Country: 🇵🇱 Poland
+vmess://eyJhZGQiOiIxNDYuNTkuMTE4LjI1MCIsImFpZCI6IjAiLCJhbHBuIjoiIiwiaG9zdCI6ImxhbW1hbGFuZC5vcmciLCJpZCI6IjAzZmNjNjE4LWI5M2QtNjc5Ni02YWVkLThhMzhjOTc1ZDU4MSIsIm5ldCI6IndzIiwicGF0aCI6Imxpbmt2d3MiLCJwb3J0IjoiNDQzIiwicHMiOiLwn4e18J+HsSIsInNjeSI6ImF1dG8iLCJzbmkiOiJsYW1tYWxhbmQub3JnIiwidGxzIjoidGxzIiwidHlwZSI6ImF1dG8iLCJ2IjoiMiJ9
 
