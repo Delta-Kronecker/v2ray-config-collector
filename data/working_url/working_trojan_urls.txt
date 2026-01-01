@@ -1,793 +1,781 @@
 # Working TROJAN Configurations (URL Format)
-# Generated at: 2026-01-01 01:07:24
+# Generated at: 2026-01-01 06:21:31
 # Format: Each line contains one working configuration as URL
 
-# Tested at: 2026-01-01 02:16:32 | Response: 0.935s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.113:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:16:32 | Response: 1.184s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@141.101.120.85:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:32 | Response: 0.885s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.68:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:16:32 | Response: 0.934s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.64:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:16:32 | Response: 0.659s | IP: 38.180.137.196 | Country: 🇺🇸 United States
-trojan://f36f4495b4b26cc2fe346cfa23e05b1b@38.180.137.196:443?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:32 | Response: 1.290s | IP: 5.178.101.217 | Country: 🇩🇪 Germany
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@108.162.192.207:443?host=nl-0.fw-node.cc&path=%2Fgame&security=tls&sni=nl-0.fw-node.cc&type=ws#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:16:32 | Response: 0.876s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.106:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:16:32 | Response: 0.944s | IP: 2a09:bac6:d6e3:96::f:3ac | Country: 🇺🇸 United States
-trojan://bpb-trojan@104.21.75.193:443?alpn=h3&host=mashdt.pages.dev&path=%2Ftr%3Fed%3D2560&security=tls&sni=mashdt.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:32 | Response: 0.828s | IP: 2a09:bac5:bf0b:2e28::499:3d | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.60:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:33 | Response: 0.789s | IP: 104.28.159.162 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.2:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:33 | Response: 1.561s | IP: 185.248.185.173 | Country: 🇹🇼 Taiwan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50044?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:16:33 | Response: 0.152s | IP: 2a09:bac5:bf0b:1c64::2d4:9a | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.187:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:33 | Response: 0.771s | IP: 5.34.217.16 | Country: 🇺🇸 United States
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@us-endpoint.fw-node.cc:443?host=us-0.fw-node.cc&path=%2Fgames&security=tls&sni=us-0.fw-node.cc&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:33 | Response: 1.537s | IP: 185.248.187.61 | Country: 🇸🇬 Singapore
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50032?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2026-01-01 02:16:33 | Response: 1.550s | IP: 14.199.34.93 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:54655?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:16:33 | Response: 0.365s | IP: 104.28.160.19 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.152.241:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:33 | Response: 0.176s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.138:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:33 | Response: 0.426s | IP: 15.188.124.7 | Country: 🇫🇷 France
-trojan://telegram-id-directvpn@15.188.124.7:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:16:34 | Response: 2.072s | IP: 137.131.60.166 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50056?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 0.121s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.59:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 0.155s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.144:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 0.134s | IP: 2a09:bac6:d6e6:96::f:334 | Country: 🇺🇸 United States
-trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@104.26.11.57:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 0.128s | IP: 2a09:bac5:bf0b:1c64::2d4:9a | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.183:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 0.169s | IP: 104.28.152.215 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.237:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 2.246s | IP: 129.146.68.46 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50054?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:34 | Response: 0.838s | IP: 58.152.46.60 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@58.152.46.60:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:16:35 | Response: 0.287s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.245:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:35 | Response: 0.184s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.16.245.77:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:35 | Response: 0.812s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.160:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:35 | Response: 1.076s | IP: 107.189.31.253 | Country: 🇱🇺 Luxembourg
-trojan://Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q@mfyousheng.nl.eu.org:443?host=mfyousheng.nl.eu.org&path=%2FtjwsLhx0SFASG4l9FERJ1g&security=tls&sni=mfyousheng.nl.eu.org&type=ws#%F0%9F%87%B1%F0%9F%87%BA
-
-# Tested at: 2026-01-01 02:16:35 | Response: 0.399s | IP: 167.17.70.250 | Country: 🇳🇱 Netherlands
-trojan://kuGDUhAYqXnvIomV0Kdljfor@167.17.70.117:27234?security=tls#%F0%9F%87%B3%F0%9F%87%B1
-
-# Tested at: 2026-01-01 02:16:36 | Response: 4.751s | IP: 212.87.195.61 | Country: 🇯🇵 Japan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50039?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:16:37 | Response: 0.900s | IP: 203.189.233.25 | Country: 🇷🇺 Russia
-trojan://yUHNMwWvenoHBaN5CtqKPwt1CTzXgW@203.189.233.25:443?alpn=h2%2Chttp%2F1.1&security=tls&sni=ru2.nnvpn.io#%F0%9F%87%B7%F0%9F%87%BA
-
-# Tested at: 2026-01-01 02:16:37 | Response: 0.996s | IP: 212.87.195.180 | Country: 🇯🇵 Japan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50021?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:16:38 | Response: 0.171s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.15:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:38 | Response: 0.194s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@777.ai7777777.xyz:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:38 | Response: 0.479s | IP: 13.37.129.152 | Country: 🇫🇷 France
-trojan://telegram-id-directvpn@13.37.129.152:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:16:38 | Response: 0.991s | IP: 111.246.13.135 | Country: 🇹🇼 Taiwan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50024?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:16:38 | Response: 0.718s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@cf.130519.xyz:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:39 | Response: 0.161s | IP: 104.28.152.231 | Country: 🇺🇸 United States
-trojan://trojan@104.26.12.31:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:39 | Response: 0.136s | IP: 2a09:bac5:bf0b:2e46::49c:e | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.70:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:39 | Response: 0.192s | IP: 104.28.162.253 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:30:31 | Response: 1.093s | IP: 104.28.152.187 | Country: 🇺🇸 United States
 trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@162.159.36.5:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:16:40 | Response: 0.152s | IP: 2a09:bac6:d6e2:2632::3ce:28 | Country: 🇺🇸 United States
-trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%2F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:40 | Response: 0.123s | IP: 2a09:bac5:bf0b:15d7::22d:74 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.83:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:40 | Response: 0.260s | IP: 104.28.160.36 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.26.4.60:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:40 | Response: 0.097s | IP: 64.94.95.114 | Country: 🇺🇸 United States
-trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?security=tls#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:40 | Response: 2.351s | IP: 212.87.195.246 | Country: 🇯🇵 Japan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50020?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:16:41 | Response: 0.135s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.79:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:16:41 | Response: 0.559s | IP: 80.173.230.196 | Country: 🇪🇸 Spain
-trojan://a5inYFE=JGV89+hjxIqgDp1tcWBd6@80.173.230.196:26279?security=tls&sni=io.ozone.ru#%F0%9F%87%AA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:41 | Response: 1.380s | IP: 141.148.177.96 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50038?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:41 | Response: 0.186s | IP: 104.28.159.162 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.159:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:42 | Response: 0.244s | IP: 104.28.162.253 | Country: 🇺🇸 United States
-trojan://523c7fad-4059-468b-b3db-c8df2f5ff147@172.66.46.237:2053?alpn=h2%2Chttp%2F1.1&host=69e8856f.fakem.pages.dev&path=%2FtrasARXNJlEPikhaXy%3Fed%3D2560&security=tls&sni=69e8856F.FakeM.pAgeS.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:42 | Response: 1.062s | IP: 111.246.13.135 | Country: 🇹🇼 Taiwan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50023?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:16:43 | Response: 0.810s | IP: 104.28.152.219 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.169:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:44 | Response: 0.168s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.65:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:44 | Response: 0.174s | IP: 2a09:bac6:d6e2:2632::3ce:28 | Country: 🇺🇸 United States
-trojan://trojan@109.234.211.66:2087?path=%2F%3FBIA_TELEGRAM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:44 | Response: 0.136s | IP: 104.28.162.253 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.40.152:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:45 | Response: 0.139s | IP: 2a09:bac5:bf0b:1923::281:23 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.150:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:45 | Response: 0.389s | IP: 66.135.4.222 | Country: 🇺🇸 United States
-trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@bisque.qzz.io:443?host=bisque.qzz.io&path=%2F66.135.4.222%3A8443&security=tls&sni=bisque.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:45 | Response: 0.264s | IP: 104.28.152.212 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.114:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:16:47 | Response: 0.128s | IP: 2a09:bac5:bf0b:2e28::499:3d | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.214:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:19 | Response: 1.841s | IP: 172.238.229.254 | Country: 🇮🇹 Italy
-trojan://OdgHycGphesfLmPMYolUF@172.238.229.254:14051?security=tls&sni=api.avito.ru#%F0%9F%87%AE%F0%9F%87%B9
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.962s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.132:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.811s | IP: 104.28.160.20 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.201:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.003s | IP: 104.28.152.201 | Country: 🇺🇸 United States
-trojan://13e71ddb-908c-45e0-993c-da482d848c88@seashell.qzz.io:443?host=seashell.qzz.io&path=%2F156.254.114.120%3A30011&security=tls&sni=seashell.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.868s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.92:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.242s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.67:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.794s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.144.82:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.317s | IP: 185.248.186.236 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50033?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.327s | IP: 104.28.163.58 | Country: 🇺🇸 United States
-trojan://zWFjJENcljZm@104.18.2.150:443?host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.926s | IP: 104.28.159.162 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.164:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.170s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.61:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.322s | IP: 104.28.162.251 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@cf.090227.xyz:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.109s | IP: 15.188.124.7 | Country: 🇫🇷 France
-trojan://telegram-id-privatevpns@15.188.124.7:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.315s | IP: 35.157.123.56 | Country: 🇩🇪 Germany
-trojan://telegram-id-directvpn@35.157.123.56:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.227s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.19.173.68:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.166s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.58:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.273s | IP: 104.28.152.215 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.14:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.687s | IP: 192.252.182.52 | Country: 🇺🇸 United States
-trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@172.67.73.246:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.863s | IP: 45.32.31.189 | Country: 🇯🇵 Japan
-trojan://ace1qxDyr_-GmIUgK.1Tnjb6ikAN@45.77.20.207:10435?security=tls&sni=fuzzyfonduepotstand.oscillatingovenmitt.click#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.622s | IP: 140.82.35.244 | Country: 🇩🇪 Germany
-trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.153.36:20994?security=tls&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:17:20 | Response: 1.400s | IP: 116.80.63.174 | Country: 🇯🇵 Japan
-trojan://BxceQaOe@52.194.193.12:2762?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:20 | Response: 0.284s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.235:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:17:21 | Response: 1.890s | IP: 46.3.193.24 | Country: 🇯🇵 Japan
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@46.3.193.24:443?host=sgp-0.fw-node.cc&path=%2Fgame&security=tls&sni=sgp-0.fw-node.cc&type=ws#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:21 | Response: 0.168s | IP: 198.57.27.179 | Country: 🇨🇦 Canada
-trojan://6pRjKQJ0CWyFtG.9@198.57.27.27:12990?security=tls&sni=diningtable.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:17:21 | Response: 0.236s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://13e71ddb-908c-45e0-993c-da482d848c88@172.66.158.183:443?host=seashell.qzz.io&path=%2F156.254.114.120%3A30011&security=tls&sni=seashell.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:21 | Response: 0.863s | IP: 107.189.31.253 | Country: 🇱🇺 Luxembourg
-trojan://Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q@104.21.23.136:443?host=mfyousheng.nl.eu.org&path=%2FtjwsLhx0SFASG4l9FERJ1g&security=tls&sni=mfyousheng.nl.eu.org&type=ws#%F0%9F%87%B1%F0%9F%87%BA
-
-# Tested at: 2026-01-01 02:17:21 | Response: 1.885s | IP: 212.87.195.180 | Country: 🇯🇵 Japan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50019?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:21 | Response: 0.407s | IP: 140.82.35.244 | Country: 🇩🇪 Germany
-trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.158.138:20994?security=tls&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:17:21 | Response: 1.831s | IP: 104.28.163.64 | Country: 🇬🇧 United Kingdom
-trojan://5a2c16f9@57.129.137.55:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2026-01-01 02:17:21 | Response: 0.709s | IP: 103.197.71.1 | Country: 🇭🇰 Hong Kong
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@103.197.71.1:5353?security=tls&sni=hkg-2.fw-node.cc#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:17:21 | Response: 1.037s | IP: 46.3.193.24 | Country: 🇯🇵 Japan
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@sgp-1.fw-node.cc:443?host=sgp-0.fw-node.cc&path=%2Fgame&security=tls&sni=sgp-0.fw-node.cc&type=ws#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:21 | Response: 0.903s | IP: 192.252.182.52 | Country: 🇺🇸 United States
-trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@blueivy.qzz.io:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:21 | Response: 2.316s | IP: 212.87.195.197 | Country: 🇯🇵 Japan
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@jp-endpoint.fw-node.cc:443?host=jp-0.fw-node.cc&path=%2Fgame&security=tls&sni=jp-0.fw-node.cc&type=ws#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:21 | Response: 2.601s | IP: 221.162.120.94 | Country: 🇰🇷 South Korea
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@sub.danfeng.eu.org:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%B0%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:17:22 | Response: 0.259s | IP: 104.28.159.167 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@saas.sin.fan:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:22 | Response: 0.408s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.17.162.3:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:22 | Response: 1.673s | IP: 141.148.153.71 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50057?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:22 | Response: 0.161s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.11:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:22 | Response: 0.364s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.128:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:23 | Response: 0.960s | IP: 46.232.122.189 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:54654?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:17:23 | Response: 0.307s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://zWFjJENcljZm@104.18.3.150:443?host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:17:23 | Response: 0.159s | IP: 104.28.160.20 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.96:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:23 | Response: 1.555s | IP: 123.30.186.72 | Country: 🇻🇳 Vietnam
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50027?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BB%F0%9F%87%B3
-
-# Tested at: 2026-01-01 02:17:24 | Response: 0.133s | IP: 2a09:bac5:bf0b:2e28::499:3d | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.189:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:25 | Response: 0.154s | IP: 2a09:bac5:bf0b:1923::281:23 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.82:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:25 | Response: 0.178s | IP: 104.28.152.205 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:30:31 | Response: 1.053s | IP: 2a09:bac1:76c0:d28::4d0:6e | Country: 🇺🇸 United States
 trojan://5a2c16f9@172.64.229.108:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:17:25 | Response: 0.757s | IP: 5.178.101.217 | Country: 🇩🇪 Germany
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@nl-endpoint.fw-node.cc:443?host=nl-0.fw-node.cc&path=%2Fgame&security=tls&sni=nl-0.fw-node.cc&type=ws#%F0%9F%87%A9%F0%9F%87%AA
+# Tested at: 2026-01-01 07:30:31 | Response: 0.894s | IP: 104.28.157.109 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.14:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:17:26 | Response: 0.148s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.141:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:31 | Response: 0.984s | IP: 104.28.166.54 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.65:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:17:26 | Response: 0.334s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.130:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:31 | Response: 0.981s | IP: 2a09:bac1:76a0:d28::4:36d | Country: 🇺🇸 United States
+trojan://13e71ddb-908c-45e0-993c-da482d848c88@seashell.qzz.io:443?host=seashell.qzz.io&path=%2F156.254.114.120%3A30011&security=tls&sni=seashell.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:17:26 | Response: 0.172s | IP: 104.28.160.20 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.33:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:31 | Response: 1.493s | IP: 104.28.157.110 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.160:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:17:26 | Response: 0.189s | IP: 104.28.152.229 | Country: 🇺🇸 United States
-trojan://trojan@172.67.75.172:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:32 | Response: 0.508s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@172.66.171.30:443?host=bisque.qzz.io&path=%2F66.135.4.222%3A8443&security=tls&sni=bisque.qzz.io&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:17:27 | Response: 0.350s | IP: 104.28.165.214 | Country: 🇨🇦 Canada
-trojan://trojan@104.18.12.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+# Tested at: 2026-01-01 07:30:32 | Response: 1.069s | IP: 104.28.157.112 | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@162.159.36.20:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:17:27 | Response: 0.717s | IP: 2001:19f0:7001:19dc:9ebd:ebbd:10b:b855 | Country: 🇯🇵 Japan
-trojan://f52d0a04-94ad-4f9e-9945-4c3d43374e36@172.64.145.93:2096?alpn=h3&host=ts888.yumige.dpdns.org&path=%2Fhttp%3A%2F%2F45.32.19.198%3A30005&security=tls&sni=ts888.yumige.dpdns.org&type=ws#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:17:27 | Response: 0.277s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.51:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:17:28 | Response: 0.276s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.17.237.219:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:28 | Response: 0.462s | IP: 104.28.165.225 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.67.138.17:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:28 | Response: 0.276s | IP: 107.174.82.102 | Country: 🇺🇸 United States
-trojan://bb824a22-b7ce-427b-9ed6-1adf0751da02@107.174.82.102:443?path=%2FgXKGj8a1tp1nNbZEcRugowKV&security=tls&sni=107.174.82.102.sslip.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:29 | Response: 0.278s | IP: 104.28.160.20 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.48:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:30 | Response: 1.103s | IP: 52.58.230.3 | Country: 🇩🇪 Germany
-trojan://telegram-id-privatevpns@52.58.230.3:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:17:30 | Response: 0.198s | IP: 104.28.163.58 | Country: 🇺🇸 United States
-trojan://trojan@22b.net:2087?path=%2F%3FBIA_TELEGRAM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:30 | Response: 0.173s | IP: 104.28.152.219 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.234:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:17:32 | Response: 0.571s | IP: 38.96.254.63 | Country: 🇨🇦 Canada
-trojan://.ie4rghJuMkcf0oF@38.96.254.102:18509?path=%2F&security=tls&sni=shoppingmall.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.771s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.236:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.744s | IP: 104.28.160.20 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.115:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.849s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@104.20.39.88:443?host=bisque.qzz.io&path=%2F66.135.4.222%3A8443&security=tls&sni=bisque.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.919s | IP: 104.28.165.225 | Country: 🇨🇦 Canada
-trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@104.20.19.178:443?host=tronblue.qzz.io&path=%2F152.32.255.24%3A587&security=tls&sni=tronblue.qzz.io&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.897s | IP: 104.28.152.229 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.21.94.161:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.975s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.111:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 1.046s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.98:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.931s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.231:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:06 | Response: 1.003s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.243:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.929s | IP: 104.28.152.201 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.35.15:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 1.012s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.217:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.955s | IP: 2a09:bac1:7680:56b0::22d:131 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@store.ubi.com:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:06 | Response: 0.183s | IP: 104.28.159.170 | Country: 🇺🇸 United States
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.223.79:443?path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:07 | Response: 1.518s | IP: 47.242.225.242 | Country: 🇭🇰 Hong Kong
-trojan://92690597d6298061459918a371e8d77d@47.242.225.242:443?security=tls&sni=hezijiasuqi.com#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:18:07 | Response: 1.510s | IP: 203.189.233.25 | Country: 🇷🇺 Russia
-trojan://yUHNMwWvenoHBaN5CtqKPwt1CTzXgW@ru2.nnvpn.io:443?alpn=h2%2Chttp%2F1.1&security=tls&sni=ru2.nnvpn.io#%F0%9F%87%B7%F0%9F%87%BA
-
-# Tested at: 2026-01-01 02:18:07 | Response: 0.593s | IP: 38.180.191.125 | Country: 🇸🇬 Singapore
-trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.144.208:3901?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2026-01-01 02:18:07 | Response: 1.689s | IP: 83.143.87.9 | Country: 🇳🇴 Norway
-trojan://RPyW62_b9aH.ztJKeArou@83.143.87.9:18581?security=tls#%F0%9F%87%B3%F0%9F%87%B4
-
-# Tested at: 2026-01-01 02:18:07 | Response: 1.894s | IP: 141.164.55.238 | Country: 🇰🇷 South Korea
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50047?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B0%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:18:07 | Response: 1.926s | IP: 185.248.187.61 | Country: 🇸🇬 Singapore
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50031?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B8%F0%9F%87%AC
-
-# Tested at: 2026-01-01 02:18:07 | Response: 0.291s | IP: 104.28.152.216 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@mfa.gov.ua:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:07 | Response: 2.168s | IP: 132.145.10.211 | Country: 🇬🇧 United Kingdom
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50048?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2026-01-01 02:18:07 | Response: 2.085s | IP: 141.148.177.96 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50037?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:07 | Response: 2.263s | IP: 103.146.222.10 | Country: 🇮🇳 India
+# Tested at: 2026-01-01 07:30:32 | Response: 2.398s | IP: 103.146.222.10 | Country: 🇮🇳 India
 trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@in-endpoint.fw-node.cc:443?host=in-0.fw-node.cc&path=%2Fgame&security=tls&sni=in-0.fw-node.cc&type=ws#%F0%9F%87%AE%F0%9F%87%B3
 
-# Tested at: 2026-01-01 02:18:08 | Response: 2.228s | IP: 156.248.8.93 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:53311?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+# Tested at: 2026-01-01 07:30:32 | Response: 1.002s | IP: 104.28.157.106 | Country: 🇺🇸 United States
+trojan://trojan@172.67.75.172:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:18:08 | Response: 0.509s | IP: 116.80.60.36 | Country: 🇯🇵 Japan
-trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.150.76:1933?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:18:08 | Response: 0.122s | IP: 2a09:bac5:bf0b:2628::3cd:32 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.4:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:11 | Response: 0.348s | IP: 104.28.159.170 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.38.47:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:11 | Response: 0.524s | IP: 2001:19f0:7001:19dc:9ebd:ebbd:10b:b855 | Country: 🇯🇵 Japan
-trojan://f52d0a04-94ad-4f9e-9945-4c3d43374e36@104.18.42.163:2096?alpn=h3&host=ts888.yumige.dpdns.org&path=%2Fhttp%3A%2F%2F45.32.19.198%3A30005&security=tls&sni=ts888.yumige.dpdns.org&type=ws#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:18:11 | Response: 1.179s | IP: 152.32.255.24 | Country: 🇻🇳 Vietnam
-trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?host=tronblue.qzz.io&path=%2F152.32.255.24%3A587&security=tls&sni=tronblue.qzz.io&type=ws#%F0%9F%87%BB%F0%9F%87%B3
-
-# Tested at: 2026-01-01 02:18:11 | Response: 0.140s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.147.104:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:11 | Response: 0.142s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@172.66.155.99:443?host=tronblue.qzz.io&path=%2F152.32.255.24%3A587&security=tls&sni=tronblue.qzz.io&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:12 | Response: 0.324s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.10:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:12 | Response: 0.123s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.158:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:13 | Response: 0.945s | IP: 13.37.129.152 | Country: 🇫🇷 France
-trojan://telegram-id-privatevpns@13.37.129.152:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:18:13 | Response: 0.187s | IP: 104.28.162.252 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:30:32 | Response: 0.810s | IP: 104.28.152.173 | Country: 🇺🇸 United States
 trojan://5a2c16f9@172.64.229.23:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:18:13 | Response: 1.094s | IP: 38.180.107.92 | Country: 🇸🇬 Singapore
-trojan://BxceQaOe@54.238.137.20:3127?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%B8%F0%9F%87%AC
+# Tested at: 2026-01-01 07:30:32 | Response: 0.649s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@104.16.245.77:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:18:13 | Response: 0.735s | IP: 58.152.25.236 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@58.152.25.236:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:18:13 | Response: 0.707s | IP: 104.28.162.251 | Country: 🇺🇸 United States
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.17.148.22:443?alpn=h2%2Chttp%2F1.1&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:14 | Response: 0.463s | IP: 140.82.35.244 | Country: 🇩🇪 Germany
-trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@140.82.35.244:20994?security=tls&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:18:14 | Response: 0.489s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.105:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:15 | Response: 1.785s | IP: 220.128.110.108 | Country: 🇹🇼 Taiwan
-trojan://5a2c16f9@172.64.229.116:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:18:15 | Response: 0.261s | IP: 104.28.165.228 | Country: 🇨🇦 Canada
-trojan://trojan@172.66.47.32:443?path=%2F&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:15 | Response: 0.906s | IP: 121.133.66.15 | Country: 🇰🇷 South Korea
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@162.159.36.20:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%B0%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:18:16 | Response: 0.156s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@104.18.94.107:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:17 | Response: 0.888s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.41:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:18 | Response: 0.178s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.21:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:19 | Response: 0.308s | IP: 140.82.63.194 | Country: 🇺🇸 United States
-trojan://25IYE1_dhFCBi6omM3qf9@144.202.8.250:23239?security=tls&sni=api-maps.yandex.ru#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:19 | Response: 0.133s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://Aimer@167.68.4.199:2053?host=epge.muarua.filegear-sg.me&path=%2F&security=tls&sni=epge.muarua.filegear-sg.me&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:19 | Response: 0.140s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.86:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:20 | Response: 0.118s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.36:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:21 | Response: 0.184s | IP: 104.28.152.233 | Country: 🇺🇸 United States
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@188.114.97.3:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:24 | Response: 0.120s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.200:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:55 | Response: 0.740s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.19.55.205:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:56 | Response: 1.499s | IP: 104.28.165.214 | Country: 🇨🇦 Canada
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.149.209:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:57 | Response: 1.835s | IP: 185.248.185.173 | Country: 🇹🇼 Taiwan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50045?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:18:57 | Response: 1.907s | IP: 79.133.122.157 | Country: 🇵🇱 Poland
-trojan://.+QAJot50sDi6mvb@5.188.108.13:11790?security=tls&sni=5.188.108.13#%F0%9F%87%B5%F0%9F%87%B1
-
-# Tested at: 2026-01-01 02:18:57 | Response: 0.291s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.28:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:57 | Response: 1.799s | IP: 141.164.55.238 | Country: 🇰🇷 South Korea
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50046?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B0%F0%9F%87%B7
-
-# Tested at: 2026-01-01 02:18:57 | Response: 1.277s | IP: 104.28.159.162 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.6:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:57 | Response: 0.752s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.16.246.188:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:57 | Response: 0.983s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.227:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:57 | Response: 0.678s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.47:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:58 | Response: 0.714s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.17.167.134:443?host=snippets.kkii.eu.org&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:58 | Response: 1.093s | IP: 45.32.31.189 | Country: 🇯🇵 Japan
-trojan://ace1qxDyr_-GmIUgK.1Tnjb6ikAN@167.179.113.248:10435?security=tls&sni=fuzzyfonduepotstand.oscillatingovenmitt.click#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:18:58 | Response: 0.178s | IP: 104.28.160.22 | Country: 🇺🇸 United States
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.26.5.60:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:58 | Response: 1.329s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.181:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:58 | Response: 0.283s | IP: 104.28.163.58 | Country: 🇺🇸 United States
-trojan://trojan@tm-azarbayjab1.1.workers.dev:443?alpn=h2%2Chttp%2F1.1&host=store.timimi.dpdns.org&path=%2F&security=tls&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:58 | Response: 1.640s | IP: 144.24.7.65 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:32566?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:58 | Response: 1.890s | IP: 129.146.120.146 | Country: 🇺🇸 United States
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50055?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:59 | Response: 1.242s | IP: 220.128.110.108 | Country: 🇹🇼 Taiwan
-trojan://5a2c16f9@172.64.229.121:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:18:59 | Response: 1.289s | IP: 60.248.139.106 | Country: 🇹🇼 Taiwan
-trojan://5a2c16f9@172.64.229.101:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%B9%F0%9F%87%BC
-
-# Tested at: 2026-01-01 02:18:59 | Response: 3.163s | IP: 212.193.18.144 | Country: 🇫🇮 Finland
-trojan://ZblhWr0mqMakCPg.N@212.193.18.144:36158?security=tls&sni=api.avito.ru#%F0%9F%87%AB%F0%9F%87%AE
-
-# Tested at: 2026-01-01 02:18:59 | Response: 0.177s | IP: 2a09:bac1:76e0:56b0::3ce:17 | Country: 🇺🇸 United States
-trojan://7418004a-0ecd-41c0-a062-42bf966d3fb2@172.64.146.66:443?path=%2F&security=tls&sni=guang.bgm2024.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:59 | Response: 0.291s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.43.174:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:18:59 | Response: 0.267s | IP: 104.28.159.162 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.193:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:59 | Response: 0.355s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@198.41.208.218:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:18:59 | Response: 0.162s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.107:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:00 | Response: 0.161s | IP: 2a09:bac5:bf0b:15e1::22e:77 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.99:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:01 | Response: 2.351s | IP: 185.248.186.236 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50030?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:19:03 | Response: 0.485s | IP: 52.58.230.3 | Country: 🇩🇪 Germany
-trojan://telegram-id-directvpn@52.58.230.3:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:19:03 | Response: 0.162s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@104.19.220.22:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:19:03 | Response: 0.520s | IP: 116.80.76.130 | Country: 🇯🇵 Japan
-trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.68.250:4006?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:19:03 | Response: 1.543s | IP: 212.87.195.246 | Country: 🇯🇵 Japan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50018?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
-
-# Tested at: 2026-01-01 02:19:03 | Response: 0.587s | IP: 35.157.123.56 | Country: 🇩🇪 Germany
-trojan://telegram-id-privatevpns@35.157.123.56:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA
-
-# Tested at: 2026-01-01 02:19:03 | Response: 0.157s | IP: 2a09:bac5:bf0b:15e1::22e:77 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.81:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:04 | Response: 0.198s | IP: 5.34.217.16 | Country: 🇺🇸 United States
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@162.159.38.38:443?host=us-0.fw-node.cc&path=%2Fgames&security=tls&sni=us-0.fw-node.cc&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:04 | Response: 0.636s | IP: 103.197.71.1 | Country: 🇭🇰 Hong Kong
-trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@hkg-2.fw-node.cc:5353?security=tls&sni=hkg-2.fw-node.cc#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:19:04 | Response: 1.278s | IP: 2a09:bac5:bf0b:96::f:39f | Country: 🇺🇸 United States
-trojan://5a2c16f9@freeyx.cloudflare88.eu.org:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:04 | Response: 0.360s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://trojan@104.18.13.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:05 | Response: 0.659s | IP: 104.28.154.111 | Country: 🇬🇧 United Kingdom
-trojan://5a2c16f9@5.144.182.188:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%AC%F0%9F%87%A7
-
-# Tested at: 2026-01-01 02:19:05 | Response: 0.812s | IP: 45.15.140.107 | Country: 🇳🇿 New Zealand
-trojan://tSk5LQoJr7F.WnRsUM4hT@45.15.140.107:19106?security=tls&sni=binaryboots.algorithmblanket.click#%F0%9F%87%B3%F0%9F%87%BF
-
-# Tested at: 2026-01-01 02:19:06 | Response: 0.166s | IP: 104.28.152.231 | Country: 🇺🇸 United States
-trojan://trojan@ip.sb:8443?host=fofang.pages.dev&path=%2F&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:06 | Response: 0.732s | IP: 203.198.84.221 | Country: 🇭🇰 Hong Kong
-trojan://BxceQaOe@203.198.84.221:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
-
-# Tested at: 2026-01-01 02:19:07 | Response: 0.157s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.7:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:07 | Response: 0.876s | IP: 38.180.137.196 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:30:32 | Response: 1.555s | IP: 38.180.137.196 | Country: 🇺🇸 United States
 trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.150.76:1281?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:07 | Response: 0.179s | IP: 104.28.157.221 | Country: 🇺🇸 United States
-trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@104.26.10.57:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:32 | Response: 0.543s | IP: 38.180.137.196 | Country: 🇺🇸 United States
+trojan://f36f4495b4b26cc2fe346cfa23e05b1b@38.180.137.196:443?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:07 | Response: 0.277s | IP: 104.28.162.252 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.26.1.110:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:32 | Response: 1.013s | IP: 104.28.166.30 | Country: 🇨🇦 Canada
+trojan://trojan@tm-azarbayjab1.1.workers.dev:443?alpn=h2%2Chttp%2F1.1&host=store.timimi.dpdns.org&path=%2F&security=tls&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:07 | Response: 0.721s | IP: 38.54.82.205 | Country: 🇹🇭 Thailand
-trojan://pUF+zmIw0QuRESBPLofx7eOj6Xc49@38.54.82.205:27877?security=tls&sni=www.metaphysicalmagnet.click#%F0%9F%87%B9%F0%9F%87%AD
+# Tested at: 2026-01-01 07:30:32 | Response: 0.967s | IP: 45.32.31.189 | Country: 🇯🇵 Japan
+trojan://ace1qxDyr_-GmIUgK.1Tnjb6ikAN@45.77.20.207:10435?security=tls&sni=fuzzyfonduepotstand.oscillatingovenmitt.click#%F0%9F%87%AF%F0%9F%87%B5
 
-# Tested at: 2026-01-01 02:19:08 | Response: 0.116s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.230:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+# Tested at: 2026-01-01 07:30:32 | Response: 2.131s | IP: 129.146.68.46 | Country: 🇺🇸 United States
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50054?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:08 | Response: 0.359s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.52:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:32 | Response: 0.070s | IP: 104.28.157.108 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.181:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:09 | Response: 1.294s | IP: 223.16.218.158 | Country: 🇭🇰 Hong Kong
+# Tested at: 2026-01-01 07:30:32 | Response: 0.846s | IP: 104.28.166.41 | Country: 🇨🇦 Canada
+trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@104.26.11.57:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:30:32 | Response: 0.160s | IP: 104.28.157.117 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.33:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:30:33 | Response: 1.645s | IP: 185.248.185.173 | Country: 🇹🇼 Taiwan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50045?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
+
+# Tested at: 2026-01-01 07:30:33 | Response: 1.664s | IP: 116.80.76.130 | Country: 🇯🇵 Japan
+trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.68.250:4006?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:30:33 | Response: 0.714s | IP: 104.28.166.45 | Country: 🇨🇦 Canada
+trojan://trojan@172.66.44.224:443?path=%2F&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:30:33 | Response: 0.206s | IP: 104.28.166.32 | Country: 🇨🇦 Canada
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@store.ubi.com:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:30:33 | Response: 1.553s | IP: 14.199.34.93 | Country: 🇭🇰 Hong Kong
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:54655?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:30:33 | Response: 0.921s | IP: 185.90.62.86 | Country: 🇩🇪 Germany
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@uk-endpoint.fw-node.cc:443?host=uk-0.fw-node.cc&path=%2Fgame&security=tls&sni=uk-0.fw-node.cc&type=ws#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2026-01-01 07:30:33 | Response: 0.165s | IP: 104.28.152.176 | Country: 🇺🇸 United States
+trojan://5a2c16f9@104.19.173.68:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:30:33 | Response: 2.147s | IP: 223.16.218.158 | Country: 🇭🇰 Hong Kong
 trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50017?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
 
-# Tested at: 2026-01-01 02:19:10 | Response: 0.567s | IP: 2001:19f0:7001:19dc:9ebd:ebbd:10b:b855 | Country: 🇯🇵 Japan
-trojan://f52d0a04-94ad-4f9e-9945-4c3d43374e36@www.shopify.com:2096?alpn=h3&host=ts888.yumige.dpdns.org&path=%2Fhttp%3A%2F%2F45.32.19.198%3A30005&security=tls&sni=ts888.yumige.dpdns.org&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+# Tested at: 2026-01-01 07:30:34 | Response: 1.547s | IP: 123.30.186.72 | Country: 🇻🇳 Vietnam
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50027?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BB%F0%9F%87%B3
 
-# Tested at: 2026-01-01 02:19:11 | Response: 0.209s | IP: 2a09:bac6:d6e2:2632::3ce:28 | Country: 🇺🇸 United States
-trojan://trojan@azerb.net:443?alpn=h2%2Chttp%2F1.1&host=store.timimi.dpdns.org&path=%2F&security=tls&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:34 | Response: 0.531s | IP: 104.28.166.54 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.132:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:11 | Response: 0.162s | IP: 104.28.160.20 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.18.81.164:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:36 | Response: 0.068s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.82:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:20 | Response: 0.869s | IP: 167.17.185.219 | Country: 🇮🇸 Iceland
-trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.228:10889?security=tls&sni=web.max#%F0%9F%87%AE%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:37 | Response: 0.715s | IP: 107.189.31.253 | Country: 🇱🇺 Luxembourg
+trojan://Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q@mfyousheng.nl.eu.org:443?host=mfyousheng.nl.eu.org&path=%2FtjwsLhx0SFASG4l9FERJ1g&security=tls&sni=mfyousheng.nl.eu.org&type=ws#%F0%9F%87%B1%F0%9F%87%BA
 
-# Tested at: 2026-01-01 02:19:44 | Response: 0.823s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.176:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:37 | Response: 0.106s | IP: 104.28.152.184 | Country: 🇺🇸 United States
+trojan://trojan@104.18.13.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:45 | Response: 1.427s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.95:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:37 | Response: 0.942s | IP: 111.246.13.135 | Country: 🇹🇼 Taiwan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50023?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
 
-# Tested at: 2026-01-01 02:19:45 | Response: 0.769s | IP: 104.28.152.208 | Country: 🇺🇸 United States
-trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@172.66.171.30:443?host=bisque.qzz.io&path=%2F66.135.4.222%3A8443&security=tls&sni=bisque.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:38 | Response: 0.070s | IP: 2a09:bac1:76c0:d28::4:329 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.83:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:45 | Response: 0.354s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@104.16.148.244:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:45 | Response: 0.934s | IP: 104.28.163.60 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.5:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:45 | Response: 0.804s | IP: 104.28.152.203 | Country: 🇺🇸 United States
-trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.222.79:443?path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:45 | Response: 0.684s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.34:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:45 | Response: 0.951s | IP: 104.28.152.215 | Country: 🇺🇸 United States
-trojan://5a2c16f9@162.159.128.253:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:45 | Response: 0.508s | IP: 104.28.152.204 | Country: 🇺🇸 United States
-trojan://trojan@172.66.44.224:443?path=%2F&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
-
-# Tested at: 2026-01-01 02:19:45 | Response: 0.158s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.170:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
-
-# Tested at: 2026-01-01 02:19:46 | Response: 0.168s | IP: 104.28.165.216 | Country: 🇨🇦 Canada
+# Tested at: 2026-01-01 07:30:39 | Response: 0.173s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
 trojan://5a2c16f9@172.64.229.174:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:46 | Response: 0.187s | IP: 104.28.152.213 | Country: 🇺🇸 United States
-trojan://13e71ddb-908c-45e0-993c-da482d848c88@104.20.28.242:443?host=seashell.qzz.io&path=%2F156.254.114.120%3A30011&security=tls&sni=seashell.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:39 | Response: 0.174s | IP: 104.28.166.45 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.243:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:46 | Response: 2.315s | IP: 223.16.218.158 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50516?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+# Tested at: 2026-01-01 07:30:39 | Response: 0.162s | IP: 104.28.166.30 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.230:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:46 | Response: 1.627s | IP: 45.196.236.235 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:30072?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+# Tested at: 2026-01-01 07:30:40 | Response: 0.404s | IP: 66.135.4.222 | Country: 🇺🇸 United States
+trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@104.20.39.88:443?host=bisque.qzz.io&path=%2F66.135.4.222%3A8443&security=tls&sni=bisque.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:46 | Response: 1.799s | IP: 212.87.195.61 | Country: 🇯🇵 Japan
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50022?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+# Tested at: 2026-01-01 07:30:40 | Response: 0.108s | IP: 104.28.157.112 | Country: 🇺🇸 United States
+trojan://trojan@104.26.12.31:8443?host=fofang.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:46 | Response: 1.640s | IP: 195.133.17.25 | Country: 🇳🇱 The Netherlands
-trojan://zWFjJENcljZm@usa.visa.com:443?host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&type=ws#%F0%9F%87%B3%F0%9F%87%B1
+# Tested at: 2026-01-01 07:30:40 | Response: 0.080s | IP: 2a09:bac1:76c0:d28::4d0:38 | Country: 🇺🇸 United States
+trojan://5a2c16f9@162.159.128.253:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:46 | Response: 1.906s | IP: 223.18.60.25 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50043?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+# Tested at: 2026-01-01 07:30:40 | Response: 0.068s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.34:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:46 | Response: 1.742s | IP: 144.24.7.65 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:30:40 | Response: 1.259s | IP: 104.28.154.111 | Country: 🇬🇧 United Kingdom
+trojan://5a2c16f9@57.129.137.55:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2026-01-01 07:30:41 | Response: 0.159s | IP: 104.28.166.30 | Country: 🇨🇦 Canada
+trojan://trojan@109.234.211.66:8443?host=store.timimi.dpdns.org&path=%2F&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:30:41 | Response: 0.175s | IP: 64.94.95.114 | Country: 🇦🇺 Australia
+trojan://kkzh2prsyr2ik47as615@64.94.95.118:57142?security=tls#%F0%9F%87%A6%F0%9F%87%BA
+
+# Tested at: 2026-01-01 07:30:42 | Response: 3.028s | IP: 58.152.18.147 | Country: 🇭🇰 Hong Kong S.A.R.
+trojan://f36f4495b4b26cc2fe346cfa23e05b1b@58.152.18.147:443?security=tls&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:30:42 | Response: 0.203s | IP: 198.57.27.179 | Country: 🇨🇦 Canada
+trojan://6pRjKQJ0CWyFtG.9@198.57.27.27:12990?security=tls&sni=diningtable.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:30:42 | Response: 0.089s | IP: 2a09:bac1:76c0:d28::1d2:c3 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.159:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:30:42 | Response: 0.172s | IP: 104.28.157.117 | Country: 🇺🇸 United States
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.222.79:443?path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:30:42 | Response: 1.104s | IP: 111.246.13.135 | Country: 🇹🇼 Taiwan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50024?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
+
+# Tested at: 2026-01-01 07:30:44 | Response: 0.105s | IP: 2a09:bac1:76c0:d28::4cf:7e | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.96:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:30:45 | Response: 0.951s | IP: 185.248.187.61 | Country: 🇸🇬 Singapore
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50032?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2026-01-01 07:30:46 | Response: 1.574s | IP: 144.24.7.65 | Country: 🇺🇸 United States
 trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:32565?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:46 | Response: 1.659s | IP: 217.170.194.222 | Country: 🇳🇴 Norway
-trojan://DGVu0fnAmdPMx7F9Reo.s@217.170.194.222:13950?security=tls&sni=ads.x5.ru#%F0%9F%87%B3%F0%9F%87%B4
+# Tested at: 2026-01-01 07:30:47 | Response: 2.177s | IP: 185.248.186.236 | Country: 🇸🇬 Singapore
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50033?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B8%F0%9F%87%AC
 
-# Tested at: 2026-01-01 02:19:46 | Response: 0.129s | IP: 2a09:bac5:bf0b:96::f:39f | Country: 🇺🇸 United States
-trojan://5a2c16f9@one.cf.cdn.hyli.xyz:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:30:48 | Response: 0.178s | IP: 104.28.152.181 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.41:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:47 | Response: 0.461s | IP: 104.28.152.205 | Country: 🇺🇸 United States
-trojan://5a2c16f9@162.159.24.131:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:31:20 | Response: 0.757s | IP: 104.28.152.184 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.170:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:47 | Response: 0.293s | IP: 104.28.159.164 | Country: 🇺🇸 United States
-trojan://7418004a-0ecd-41c0-a062-42bf966d3fb2@104.18.41.190:443?path=%2F&security=tls&sni=guang.bgm2024.dpdns.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:31:20 | Response: 0.989s | IP: 104.28.157.118 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.116:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:47 | Response: 0.139s | IP: 2a09:bac5:bf0b:1923::281:23 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.244:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:31:20 | Response: 0.779s | IP: 2a09:bac1:76c0:d28::4d0:42 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.70:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:47 | Response: 0.146s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.163:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+# Tested at: 2026-01-01 07:31:20 | Response: 0.927s | IP: 104.28.152.182 | Country: 🇺🇸 United States
+trojan://e86364fb-a5e3-42c3-b7fa-6ce8097fe19f@bisque.qzz.io:443?host=bisque.qzz.io&path=%2F66.135.4.222%3A8443&security=tls&sni=bisque.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:47 | Response: 2.946s | IP: 223.16.217.236 | Country: 🇭🇰 Hong Kong
-trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50042?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+# Tested at: 2026-01-01 07:31:20 | Response: 0.892s | IP: 104.28.166.32 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.111:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:19:48 | Response: 0.415s | IP: 216.238.79.82 | Country: 🇲🇽 Mexico
-trojan://bMJKkQZ1xHhlBjVo_wSiPUmCGRvEn@216.238.79.82:25121?security=tls&sni=ya.ru#%F0%9F%87%B2%F0%9F%87%BD
+# Tested at: 2026-01-01 07:31:20 | Response: 1.161s | IP: 64.112.124.66 | Country: 🇺🇸 United States
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@162.159.38.38:443?host=us-0.fw-node.cc&path=%2Fgames&security=tls&sni=us-0.fw-node.cc&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:48 | Response: 0.164s | IP: 104.28.159.162 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.188:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:31:20 | Response: 1.018s | IP: 104.28.157.110 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.201:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:49 | Response: 0.269s | IP: 104.28.152.214 | Country: 🇺🇸 United States
-trojan://5a2c16f9@172.64.229.49:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+# Tested at: 2026-01-01 07:31:20 | Response: 1.336s | IP: 83.143.87.9 | Country: 🇳🇴 Norway
+trojan://RPyW62_b9aH.ztJKeArou@83.143.87.9:18581?security=tls#%F0%9F%87%B3%F0%9F%87%B4
 
-# Tested at: 2026-01-01 02:19:49 | Response: 4.430s | IP: 107.189.31.253 | Country: 🇱🇺 Luxembourg
-trojan://Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q@172.67.211.79:443?host=mfyousheng.nl.eu.org&path=%2FtjwsLhx0SFASG4l9FERJ1g&security=tls&sni=mfyousheng.nl.eu.org&type=ws#%F0%9F%87%B1%F0%9F%87%BA
+# Tested at: 2026-01-01 07:31:20 | Response: 0.287s | IP: 104.28.157.119 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.2:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:50 | Response: 0.130s | IP: 104.28.152.214 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:31:20 | Response: 1.459s | IP: 38.54.82.205 | Country: 🇹🇭 Thailand
+trojan://pUF+zmIw0QuRESBPLofx7eOj6Xc49@38.54.82.205:27877?security=tls&sni=www.metaphysicalmagnet.click#%F0%9F%87%B9%F0%9F%87%AD
+
+# Tested at: 2026-01-01 07:31:20 | Response: 0.133s | IP: 2a09:bac1:76c0:d28::1d2:66 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.99:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:20 | Response: 1.258s | IP: 104.28.166.45 | Country: 🇨🇦 Canada
+trojan://trojan@172.66.47.32:443?path=%2F&security=tls&sni=azadnet-9ya.pages.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:20 | Response: 0.093s | IP: 2a09:bac6:d73e:3050::4d0:74 | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.26.4.60:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:20 | Response: 1.217s | IP: 79.133.122.157 | Country: 🇵🇱 Poland
+trojan://.+QAJot50sDi6mvb@5.188.108.13:11790?security=tls&sni=5.188.108.13#%F0%9F%87%B5%F0%9F%87%B1
+
+# Tested at: 2026-01-01 07:31:20 | Response: 0.319s | IP: 104.28.152.175 | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.144.82:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:21 | Response: 1.415s | IP: 58.152.46.60 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@58.152.46.60:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:31:21 | Response: 0.082s | IP: 104.28.166.54 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@104.19.220.22:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:21 | Response: 1.641s | IP: 212.87.195.180 | Country: 🇯🇵 Japan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50019?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:31:21 | Response: 1.819s | IP: 212.87.195.180 | Country: 🇯🇵 Japan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50021?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:31:21 | Response: 1.935s | IP: 58.152.25.236 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@58.152.25.236:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:31:22 | Response: 0.167s | IP: 104.28.166.41 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.183:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:22 | Response: 0.168s | IP: 104.28.166.30 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.15:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:23 | Response: 4.001s | IP: 107.189.31.253 | Country: 🇱🇺 Luxembourg
+trojan://Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q@104.21.23.136:443?host=mfyousheng.nl.eu.org&path=%2FtjwsLhx0SFASG4l9FERJ1g&security=tls&sni=mfyousheng.nl.eu.org&type=ws#%F0%9F%87%B1%F0%9F%87%BA
+
+# Tested at: 2026-01-01 07:31:25 | Response: 0.909s | IP: 45.196.236.236 | Country: 🇭🇰 Hong Kong
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:54654?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:31:26 | Response: 1.004s | IP: 212.87.195.61 | Country: 🇯🇵 Japan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50039?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:31:26 | Response: 0.657s | IP: 15.188.124.7 | Country: 🇫🇷 France
+trojan://telegram-id-directvpn@15.188.124.7:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:31:26 | Response: 0.515s | IP: 2001:19f0:7001:19dc:9ebd:ebbd:10b:b855 | Country: 🇯🇵 Japan
+trojan://f52d0a04-94ad-4f9e-9945-4c3d43374e36@104.18.42.163:2096?alpn=h3&host=ts888.yumige.dpdns.org&path=%2Fhttp%3A%2F%2F45.32.19.198%3A30005&security=tls&sni=ts888.yumige.dpdns.org&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:31:26 | Response: 0.129s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.152.241:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:27 | Response: 0.093s | IP: 2a09:bac5:6389:1250::1d3:46 | Country: 🇺🇸 United States
+trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@104.26.10.57:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:27 | Response: 0.096s | IP: 104.28.166.54 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.10:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:27 | Response: 0.367s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
+trojan://trojan@109.234.211.66:2087?path=%2F%3FBIA_TELEGRAM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:28 | Response: 0.258s | IP: 16.52.164.13 | Country: 🇨🇦 Canada
+trojan://9b6419f8-8120-442e-a48c-6bf52aef0abf@16.52.164.13:443?security=tls#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:28 | Response: 0.104s | IP: 104.28.166.32 | Country: 🇨🇦 Canada
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.40.152:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:28 | Response: 0.769s | IP: 46.3.193.24 | Country: 🇯🇵 Japan
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@sgp-1.fw-node.cc:443?host=sgp-0.fw-node.cc&path=%2Fgame&security=tls&sni=sgp-0.fw-node.cc&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:31:29 | Response: 1.602s | IP: 144.24.7.65 | Country: 🇺🇸 United States
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:32566?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:29 | Response: 0.157s | IP: 104.28.157.117 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.245:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:30 | Response: 0.326s | IP: 104.28.166.41 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@141.101.120.85:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:30 | Response: 0.783s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.7:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:31 | Response: 0.111s | IP: 38.96.254.63 | Country: 🇨🇦 Canada
+trojan://.ie4rghJuMkcf0oF@38.96.254.102:18509?path=%2F&security=tls&sni=shoppingmall.electricbanana.click#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:32 | Response: 0.623s | IP: 104.28.157.108 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.47:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:32 | Response: 0.630s | IP: 167.17.70.250 | Country: 🇳🇱 Netherlands
+trojan://kuGDUhAYqXnvIomV0Kdljfor@167.17.70.117:27234?security=tls#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2026-01-01 07:31:33 | Response: 0.181s | IP: 104.28.166.25 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.130:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:31:34 | Response: 0.856s | IP: 192.252.182.52 | Country: 🇺🇸 United States
+trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@blueivy.qzz.io:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:35 | Response: 0.330s | IP: 104.28.152.171 | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.21.94.161:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:31:35 | Response: 0.311s | IP: 104.28.157.115 | Country: 🇺🇸 United States
 trojan://5a2c16f9@172.64.229.206:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:50 | Response: 0.157s | IP: 104.28.165.226 | Country: 🇨🇦 Canada
-trojan://5a2c16f9@172.64.229.100:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+# Tested at: 2026-01-01 07:32:10 | Response: 1.007s | IP: 104.28.166.25 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.169:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:50 | Response: 0.142s | IP: 2a09:bac5:bf0b:15d7::22d:74 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:32:10 | Response: 1.264s | IP: 2a09:bac1:76c0:d28::1d3:26 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.101:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:10 | Response: 1.277s | IP: 104.28.166.42 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.164:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:10 | Response: 1.246s | IP: 104.28.166.25 | Country: 🇺🇸 United States
+trojan://zWFjJENcljZm@104.18.3.150:443?host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:10 | Response: 1.175s | IP: 104.28.159.246 | Country: 🇺🇸 United States
+trojan://5a2c16f9@104.17.167.134:443?host=snippets.kkii.eu.org&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:10 | Response: 1.064s | IP: 107.174.82.102 | Country: 🇺🇸 United States
+trojan://bb824a22-b7ce-427b-9ed6-1adf0751da02@107.174.82.102:443?path=%2FgXKGj8a1tp1nNbZEcRugowKV&security=tls&sni=107.174.82.102.sslip.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:10 | Response: 1.347s | IP: 104.28.157.103 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.107:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.127s | IP: 104.28.157.109 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.67:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.487s | IP: 104.28.166.44 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.61:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.427s | IP: 104.28.166.44
+trojan://5a2c16f9@172.64.229.51:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.046s | IP: 2a09:bac1:76e0:d28::1d2:b5
+trojan://bpb-trojan@104.21.75.193:443?alpn=h3&host=mashdt.pages.dev&path=%2Ftr%3Fed%3D2560&security=tls&sni=mashdt.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 0.702s | IP: 104.28.166.54
+trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@104.20.19.178:443?host=tronblue.qzz.io&path=%2F152.32.255.24%3A587&security=tls&sni=tronblue.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 0.076s | IP: 2a09:bac1:76c0:d28::4cf:5d
+trojan://5a2c16f9@172.64.229.158:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.284s | IP: 104.28.166.54
+trojan://5a2c16f9@172.64.229.214:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 0.810s | IP: 104.28.157.118
+trojan://5a2c16f9@172.64.229.244:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.437s | IP: 140.82.35.244
+trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.158.138:20994?security=tls&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.813s | IP: 104.28.157.109
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.149.209:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.847s | IP: 2a05:d012:a7c:4900:b843:34e8:61c7:437f
+trojan://telegram-id-privatevpns@15.188.124.7:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.131s | IP: 140.82.35.244
+trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@140.82.35.244:20994?security=tls&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.492s | IP: 45.196.236.234
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:30072?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.974s | IP: 143.20.64.165
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@nl-endpoint.fw-node.cc:443?host=nl-0.fw-node.cc&path=%2Fgame&security=tls&sni=nl-0.fw-node.cc&type=ws#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.908s | IP: 141.164.55.238
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50047?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B0%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:32:11 | Response: 0.480s | IP: 104.28.157.117
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@188.114.97.3:443?host=red-dream-2d6c.xepis84786.workers.dev&path=%2F&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 1.832s | IP: 212.87.195.246
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50020?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:32:11 | Response: 2.324s | IP: 141.148.177.96
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50038?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:11 | Response: 2.405s | IP: 104.28.159.246
+trojan://5a2c16f9@freeyx.cloudflare88.eu.org:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 1.802s | IP: 141.148.177.96
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50037?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.539s | IP: 104.28.166.26
+trojan://trojan@ip.sb:8443?host=fofang.pages.dev&path=%2F&security=tls&sni=fofang.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.079s | IP: 104.28.166.42
+trojan://5a2c16f9@172.64.229.121:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.498s | IP: 35.92.94.159
+trojan://9b6419f8-8120-442e-a48c-6bf52aef0abf@gy2.hdcloud.link:443?security=tls&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.120s | IP: 104.28.157.114
+trojan://5a2c16f9@172.64.229.144:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.079s | IP: 104.28.166.45
+trojan://5a2c16f9@172.64.229.98:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.172s | IP: 104.28.166.45
+trojan://5a2c16f9@172.64.229.187:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 0.158s | IP: 104.28.166.41
+trojan://5a2c16f9@104.16.148.244:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:12 | Response: 3.117s | IP: 185.248.185.173
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50044?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B9%F0%9F%87%BC
+
+# Tested at: 2026-01-01 07:32:13 | Response: 0.673s | IP: 121.133.66.15
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.35.15:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%B0%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:32:14 | Response: 4.186s | IP: 185.22.153.104
+trojan://oUFBC3Vs2rYmN8_bR-P7quoL@45.129.3.220:10668?security=tls&sni=www.vk.com#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2026-01-01 07:32:14 | Response: 0.065s | IP: 104.28.152.187
+trojan://5a2c16f9@172.64.229.235:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:15 | Response: 0.157s | IP: 104.28.166.32
+trojan://5a2c16f9@cf.130519.xyz:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:15 | Response: 0.095s | IP: 104.28.157.111
+trojan://5a2c16f9@one.cf.cdn.hyli.xyz:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:16 | Response: 0.975s | IP: 185.248.187.61
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50031?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2026-01-01 07:32:16 | Response: 1.495s | IP: 141.164.55.238
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50046?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%B0%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:32:16 | Response: 0.070s | IP: 104.28.166.45
+trojan://5a2c16f9@172.64.229.86:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:16 | Response: 0.104s | IP: 2a09:bac6:d73e:1250::1d3:6e
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@mfa.gov.ua:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:16 | Response: 2.564s | IP: 45.196.236.236
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:53311?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:32:16 | Response: 0.696s | IP: 104.28.157.119
+trojan://5a2c16f9@104.19.55.205:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:17 | Response: 0.109s | IP: 104.28.166.54
+trojan://trojan@104.18.12.229:8443?host=azadnet-f03.pages.dev&path=%2F%3Fed%3D2560&security=tls&sni=azadnet-f03.pages.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:17 | Response: 0.097s | IP: 104.28.166.30
+trojan://5a2c16f9@172.64.229.5:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:17 | Response: 0.796s | IP: 143.20.64.165
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@108.162.192.207:443?host=nl-0.fw-node.cc&path=%2Fgame&security=tls&sni=nl-0.fw-node.cc&type=ws#%F0%9F%87%B3%F0%9F%87%B1
+
+# Tested at: 2026-01-01 07:32:18 | Response: 0.872s | IP: 104.28.152.187
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@sub.danfeng.eu.org:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:19 | Response: 1.792s | IP: 137.131.60.166
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50056?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:20 | Response: 0.311s | IP: 104.28.166.43
+trojan://zWFjJENcljZm@104.18.2.150:443?host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:21 | Response: 0.080s | IP: 2a09:bac1:76c0:d28::1d3:ab
+trojan://5a2c16f9@172.64.229.64:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:21 | Response: 0.504s | IP: 80.173.230.196 | Country: 🇪🇸 Spain
+trojan://a5inYFE=JGV89+hjxIqgDp1tcWBd6@80.173.230.196:26279?security=tls&sni=io.ozone.ru#%F0%9F%87%AA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:21 | Response: 0.163s | IP: 104.28.166.25 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@104.16.246.188:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:24 | Response: 4.638s | IP: 167.17.185.219 | Country: 🇮🇸 Iceland
+trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.228:10889?security=tls&sni=web.max#%F0%9F%87%AE%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.076s | IP: 104.28.157.108 | Country: 🇺🇸 United States
+trojan://5a2c16f9@104.18.81.164:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.148s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
+trojan://523c7fad-4059-468b-b3db-c8df2f5ff147@172.66.46.237:2053?alpn=h2%2Chttp%2F1.1&host=69e8856f.fakem.pages.dev&path=%2FtrasARXNJlEPikhaXy%3Fed%3D2560&security=tls&sni=69e8856F.FakeM.pAgeS.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.177s | IP: 216.238.79.82 | Country: 🇲🇽 Mexico
+trojan://bMJKkQZ1xHhlBjVo_wSiPUmCGRvEn@216.238.79.82:25121?security=tls&sni=ya.ru#%F0%9F%87%B2%F0%9F%87%BD
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.251s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@104.18.94.107:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.279s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.4:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.794s | IP: 104.28.157.114 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.68:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.713s | IP: 2a09:bac6:d73e:1250::1d3:6e | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.38.47:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.047s | IP: 104.28.166.44 | Country: 🇨🇦 Canada
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.147.104:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.868s | IP: 2a09:bac6:d73e:1232::1d0:cc | Country: 🇺🇸 United States
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.17.148.22:443?alpn=h2%2Chttp%2F1.1&path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.347s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://13e71ddb-908c-45e0-993c-da482d848c88@104.20.28.242:443?host=seashell.qzz.io&path=%2F156.254.114.120%3A30011&security=tls&sni=seashell.qzz.io&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.031s | IP: 104.28.166.45 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.141:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.942s | IP: 140.82.63.194 | Country: 🇺🇸 United States
+trojan://25IYE1_dhFCBi6omM3qf9@144.202.8.250:23239?security=tls&sni=api-maps.yandex.ru#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.834s | IP: 104.28.152.168 | Country: 🇺🇸 United States
+trojan://5a2c16f9@104.26.1.110:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.093s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.128:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.437s | IP: 104.28.166.26 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.189:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.542s | IP: 103.197.71.1 | Country: 🇭🇰 Hong Kong
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@hkg-2.fw-node.cc:5353?security=tls&sni=hkg-2.fw-node.cc#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.550s | IP: 140.82.35.244 | Country: 🇩🇪 Germany
+trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.153.36:20994?security=tls&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.260s | IP: 104.28.166.25 | Country: 🇨🇦 Canada
+trojan://zWFjJENcljZm@usa.visa.com:443?host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.620s | IP: 64.112.124.66 | Country: 🇺🇸 United States
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@us-endpoint.fw-node.cc:443?host=us-0.fw-node.cc&path=%2Fgames&security=tls&sni=us-0.fw-node.cc&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:32:58 | Response: 0.171s | IP: 104.28.152.175 | Country: 🇺🇸 United States
 trojan://5a2c16f9@172.64.229.40:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:50 | Response: 0.895s | IP: 38.180.137.196 | Country: 🇺🇸 United States
+# Tested at: 2026-01-01 07:32:58 | Response: 0.380s | IP: 104.28.166.31 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.6:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.456s | IP: 2001:19f0:7001:19dc:9ebd:ebbd:10b:b855 | Country: 🇯🇵 Japan
+trojan://f52d0a04-94ad-4f9e-9945-4c3d43374e36@www.shopify.com:2096?alpn=h3&host=ts888.yumige.dpdns.org&path=%2Fhttp%3A%2F%2F45.32.19.198%3A30005&security=tls&sni=ts888.yumige.dpdns.org&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:32:58 | Response: 1.392s | IP: 104.28.163.244 | Country: 🇬🇧 United Kingdom
+trojan://5a2c16f9@5.144.182.188:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2026-01-01 07:32:59 | Response: 1.506s | IP: 31.58.223.95 | Country: 🇯🇵 Japan
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@jp-endpoint.fw-node.cc:443?host=jp-0.fw-node.cc&path=%2Fgame&security=tls&sni=jp-0.fw-node.cc&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:32:59 | Response: 0.589s | IP: 13.37.129.152 | Country: 🇫🇷 France
+trojan://telegram-id-privatevpns@13.37.129.152:22222?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:32:59 | Response: 1.835s | IP: 212.87.195.246 | Country: 🇯🇵 Japan
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50018?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:32:59 | Response: 0.671s | IP: 58.152.25.86 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@58.152.25.86:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:32:59 | Response: 2.378s | IP: 132.145.10.211 | Country: 🇬🇧 United Kingdom
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50048?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AC%F0%9F%87%A7
+
+# Tested at: 2026-01-01 07:32:59 | Response: 1.908s | IP: 38.180.137.196 | Country: 🇺🇸 United States
 trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.68.250:1281?security=tls&sni=www.nintendogames.net#%F0%9F%87%BA%F0%9F%87%B8
 
-# Tested at: 2026-01-01 02:19:54 | Response: 1.461s | IP: 167.17.185.219 | Country: 🇮🇸 Iceland
-trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.172:10889?security=tls&sni=web.max.ru#%F0%9F%87%AE%F0%9F%87%B8
+# Tested at: 2026-01-01 07:32:59 | Response: 0.077s | IP: 104.28.166.44 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.176:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
 
-# Tested at: 2026-01-01 02:20:06 | Response: 0.512s | IP: 116.80.95.130 | Country: 🇯🇵 Japan
-trojan://BxceQaOe@52.194.193.12:11945?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AF%F0%9F%87%B5
+# Tested at: 2026-01-01 07:32:59 | Response: 0.330s | IP: 104.28.152.187 | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@saas.sin.fan:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:00 | Response: 0.199s | IP: 104.28.157.114 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.188:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:00 | Response: 0.169s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.106:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:00 | Response: 3.600s | IP: 107.189.31.253 | Country: 🇱🇺 Luxembourg
+trojan://Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q@172.67.211.79:443?host=mfyousheng.nl.eu.org&path=%2FtjwsLhx0SFASG4l9FERJ1g&security=tls&sni=mfyousheng.nl.eu.org&type=ws#%F0%9F%87%B1%F0%9F%87%BA
+
+# Tested at: 2026-01-01 07:33:01 | Response: 0.175s | IP: 104.28.152.170 | Country: 🇺🇸 United States
+trojan://13e71ddb-908c-45e0-993c-da482d848c88@172.66.158.183:443?host=seashell.qzz.io&path=%2F156.254.114.120%3A30011&security=tls&sni=seashell.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:01 | Response: 2.381s | IP: 60.248.139.106 | Country: 🇹🇼 Taiwan
+trojan://5a2c16f9@172.64.229.11:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%B9%F0%9F%87%BC
+
+# Tested at: 2026-01-01 07:33:01 | Response: 0.073s | IP: 2a09:bac1:76c0:d28::4d0:5b | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.217:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:01 | Response: 2.657s | IP: 223.16.218.158 | Country: 🇭🇰 Hong Kong
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50516?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:33:02 | Response: 0.326s | IP: 104.28.166.29 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.58:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:02 | Response: 0.291s | IP: 104.28.166.30 | Country: 🇨🇦 Canada
+trojan://trojan@22b.net:2087?path=%2F%3FBIA_TELEGRAM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29+TM+%28%40AZARBAYJAB1%29&security=tls&sni=store.timimi.dpdns.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:03 | Response: 0.181s | IP: 104.28.157.113 | Country: 🇺🇸 United States
+trojan://da943f80-91e6-46df-b7ba-c6ecf28e0171@172.67.73.246:443?host=blueivy.qzz.io&path=%2F192.252.182.52%3A7602&security=tls&sni=blueivy.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:03 | Response: 0.071s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.92:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:04 | Response: 1.907s | IP: 103.197.71.1
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@103.197.71.1:5353?security=tls&sni=hkg-2.fw-node.cc#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:33:04 | Response: 0.092s | IP: 2a09:bac6:d73e:123c::1d1:fb
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.26.5.60:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:04 | Response: 0.190s | IP: 104.28.166.42
+trojan://5a2c16f9@172.64.229.105:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:04 | Response: 0.178s | IP: 104.28.152.187
+trojan://5a2c16f9@172.64.229.231:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:05 | Response: 0.101s | IP: 2a09:bac1:76c0:d28::1d3:20
+trojan://5a2c16f9@172.64.229.114:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:05 | Response: 0.075s | IP: 2a09:bac1:76c0:d28::4cf:95
+trojan://5a2c16f9@172.64.229.163:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:05 | Response: 0.602s | IP: 13.37.129.152
+trojan://telegram-id-directvpn@13.37.129.152:22223?alpn=http%2F1.1&security=tls&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7
+
+# Tested at: 2026-01-01 07:33:05 | Response: 0.766s | IP: 45.15.140.107
+trojan://tSk5LQoJr7F.WnRsUM4hT@45.15.140.107:19106?security=tls&sni=binaryboots.algorithmblanket.click#%F0%9F%87%B3%F0%9F%87%BF
+
+# Tested at: 2026-01-01 07:33:05 | Response: 2.715s | IP: 212.87.195.61
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50022?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:33:05 | Response: 1.471s | IP: 212.193.18.144
+trojan://ZblhWr0mqMakCPg.N@212.193.18.144:36158?security=tls&sni=api.avito.ru#%F0%9F%87%AB%F0%9F%87%AE
+
+# Tested at: 2026-01-01 07:33:07 | Response: 0.064s | IP: 104.28.152.186
+trojan://5a2c16f9@172.64.229.193:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:08 | Response: 0.179s | IP: 104.28.152.175
+trojan://5a2c16f9@172.64.229.227:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:09 | Response: 0.172s | IP: 104.28.152.187
+trojan://5a2c16f9@172.64.229.81:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:09 | Response: 0.084s | IP: 104.28.152.175
+trojan://cf142ac0-4bae-4c4b-9882-21fc0550a661@104.19.223.79:443?path=%2F%3Fed%3D2560&security=tls&sni=red-dream-2d6c.xepis84786.workers.dev&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:09 | Response: 0.092s | IP: 104.28.157.106
+trojan://5a2c16f9@172.64.229.36:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:10 | Response: 0.456s | IP: 2001:19f0:7002:97c:a3d9:1f4b:e782:bc0e
+trojan://ace1qxDyr_-GmIUgK.1Tnjb6ikAN@167.179.113.248:10435?security=tls&sni=fuzzyfonduepotstand.oscillatingovenmitt.click#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:33:12 | Response: 0.393s | IP: 2001:19f0:7001:19dc:9ebd:ebbd:10b:b855
+trojan://f52d0a04-94ad-4f9e-9945-4c3d43374e36@172.64.145.93:2096?alpn=h3&host=ts888.yumige.dpdns.org&path=%2Fhttp%3A%2F%2F45.32.19.198%3A30005&security=tls&sni=ts888.yumige.dpdns.org&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:33:12 | Response: 0.184s | IP: 104.28.152.173
+trojan://5a2c16f9@777.ai7777777.xyz:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:44 | Response: 0.892s | IP: 2a09:bac1:76c0:d28::4cf:49 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.79:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.920s | IP: 104.28.166.32 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.28:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.049s | IP: 16.52.164.13 | Country: 🇨🇦 Canada
+trojan://9b6419f8-8120-442e-a48c-6bf52aef0abf@gy3.hdcloud.link:443?security=tls#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.133s | IP: 104.28.152.176 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.49:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.171s | IP: 104.28.166.42 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@198.41.208.218:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.990s | IP: 2a09:bac1:76c0:d28::4cf:1f | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.21:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.148s | IP: 104.28.152.166 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.138:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.238s | IP: 35.92.94.159 | Country: 🇺🇸 United States
+trojan://9b6419f8-8120-442e-a48c-6bf52aef0abf@35.92.94.159:443?security=tls&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.210s | IP: 104.28.166.54 | Country: 🇨🇦 Canada
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.67.138.17:443?host=_acme-challenge.2go.cloudns.be&path=%2F%3Fed%3D2560&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.812s | IP: 2a09:bac1:76c0:d28::1d3:42 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.200:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.789s | IP: 2a09:bac1:76c0:d28::1d1:e5 | Country: 🇺🇸 United States
+trojan://5a2c16f9@162.159.24.131:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.750s | IP: 2a09:bac1:76c0:d28::4cf:21 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.234:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.982s | IP: 104.28.157.102 | Country: 🇺🇸 United States
+trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@172.66.155.99:443?host=tronblue.qzz.io&path=%2F152.32.255.24%3A587&security=tls&sni=tronblue.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.062s | IP: 104.28.152.185 | Country: 🇺🇸 United States
+trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?host=tronblue.qzz.io&path=%2F152.32.255.24%3A587&security=tls&sni=tronblue.qzz.io&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.223s | IP: 172.238.229.254 | Country: 🇮🇹 Italy
+trojan://OdgHycGphesfLmPMYolUF@172.238.229.254:14051?security=tls&sni=api.avito.ru#%F0%9F%87%AE%F0%9F%87%B9
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.095s | IP: 104.28.152.171 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.115:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.419s | IP: 104.28.159.246 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.236:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.664s | IP: 203.189.233.25 | Country: 🇷🇺 Russia
+trojan://yUHNMwWvenoHBaN5CtqKPwt1CTzXgW@203.189.233.25:443?alpn=h2%2Chttp%2F1.1&security=tls&sni=ru2.nnvpn.io#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.943s | IP: 203.189.233.25 | Country: 🇷🇺 Russia
+trojan://yUHNMwWvenoHBaN5CtqKPwt1CTzXgW@ru2.nnvpn.io:443?alpn=h2%2Chttp%2F1.1&security=tls&sni=ru2.nnvpn.io#%F0%9F%87%B7%F0%9F%87%BA
+
+# Tested at: 2026-01-01 07:33:45 | Response: 1.593s | IP: 185.248.186.236 | Country: 🇭🇰 Hong Kong
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50030?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:33:45 | Response: 0.179s | IP: 104.28.157.109 | Country: 🇺🇸 United States
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.43.174:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 1.372s | IP: 47.242.225.242 | Country: 🇭🇰 Hong Kong
+trojan://92690597d6298061459918a371e8d77d@47.242.225.242:443?security=tls&sni=hezijiasuqi.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.084s | IP: 2a09:bac1:76c0:d28::1d2:b1 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.113:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 2.204s | IP: 217.170.194.222 | Country: 🇳🇴 Norway
+trojan://DGVu0fnAmdPMx7F9Reo.s@217.170.194.222:13950?security=tls&sni=ads.x5.ru#%F0%9F%87%B3%F0%9F%87%B4
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.505s | IP: 2a09:bac5:638f:3050::4d0:35 | Country: 🇺🇸 United States
+trojan://trojan@azerb.net:443?alpn=h2%2Chttp%2F1.1&host=store.timimi.dpdns.org&path=%2F&security=tls&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.121s | IP: 104.28.166.45 | Country: 🇨🇦 Canada
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@cf.090227.xyz:443?host=_acme-challenge.2go.cloudns.be&path=%2F&security=tls&sni=_acme-challenge.2go.cloudns.be&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:46 | Response: 1.057s | IP: 223.18.60.25 | Country: 🇭🇰 Hong Kong
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50043?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:33:46 | Response: 2.227s | IP: 129.146.120.146 | Country: 🇺🇸 United States
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50055?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.084s | IP: 104.28.152.174 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.95:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 2.779s | IP: 38.180.191.125 | Country: 🇸🇬 Singapore
+trojan://f36f4495b4b26cc2fe346cfa23e05b1b@160.16.144.208:3901?security=tls&sni=www.nintendogames.net#%F0%9F%87%B8%F0%9F%87%AC
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.076s | IP: 104.28.166.30 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@172.64.229.52:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.065s | IP: 2a09:bac1:76c0:d28::1d2:bf | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.150:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 2.778s | IP: 46.3.193.24 | Country: 🇯🇵 Japan
+trojan://2e752fd9-923d-4687-8657-4eaaafd5a354@46.3.193.24:443?host=sgp-0.fw-node.cc&path=%2Fgame&security=tls&sni=sgp-0.fw-node.cc&type=ws#%F0%9F%87%AF%F0%9F%87%B5
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.164s | IP: 104.28.152.187 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.100:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.171s | IP: 104.28.166.32 | Country: 🇨🇦 Canada
+trojan://5a2c16f9@104.17.162.3:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%A8%F0%9F%87%A6
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.165s | IP: 104.28.157.118 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.237:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:46 | Response: 0.189s | IP: 104.28.152.174 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.59:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:47 | Response: 0.165s | IP: 104.28.152.187 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.60:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:47 | Response: 3.594s | IP: 141.148.153.71 | Country: 🇺🇸 United States
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50057?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:48 | Response: 0.945s | IP: 104.28.152.183 | Country: 🇺🇸 United States
+trojan://5a2c16f9@104.17.237.219:443?host=snippets.kkii.eu.org&path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:48 | Response: 0.069s | IP: 2a09:bac1:76c0:d28::4cf:12 | Country: 🇺🇸 United States
+trojan://5a2c16f9@172.64.229.48:443?path=%2F&security=tls&sni=snippets.kkii.eu.org&type=ws#%F0%9F%87%BA%F0%9F%87%B8
+
+# Tested at: 2026-01-01 07:33:48 | Response: 0.979s | IP: 203.198.84.221 | Country: 🇭🇰 Hong Kong
+trojan://BxceQaOe@203.198.84.221:443?security=tls&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0
+
+# Tested at: 2026-01-01 07:33:50 | Response: 1.191s | IP: 223.16.217.236 | Country: 🇭🇰 Hong Kong
+trojan://e416e25f-bb0f-43af-b50a-8c92c5709ecc@120.241.44.77:50042?security=tls&sni=v1dytv.lalakw.com#%F0%9F%87%AD%F0%9F%87%B0
 
