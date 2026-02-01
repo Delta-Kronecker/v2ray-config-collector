@@ -39,13 +39,10 @@ jobs:
     - name: Install Xray
       run: |
         echo "Installing Xray..."
-        # Download and install Xray
         wget -q https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip 
         unzip -o -q Xray-linux-64.zip
         chmod +x xray
         sudo mv xray /usr/local/bin/
-        
-        # Verify installation
         xray -version
         echo "Xray installed successfully"
 
@@ -63,7 +60,6 @@ jobs:
         else
           mkdir -p data
         fi
-        # Create all necessary subdirectories
         mkdir -p data/working_url
         echo "Created directory structure:"
         find data -type d
@@ -91,9 +87,7 @@ jobs:
         echo "Checking for files in xray_test/data..."
         if [ -d "xray_test/data" ]; then
           echo "Found xray_test/data directory, moving files to main data directory..."
-          # Move all files from xray_test/data to data/
           mv xray_test/data/* data/ 2>/dev/null || echo "No files to move or already moved"
-          # Remove empty directory
           rm -rf xray_test/data 2>/dev/null || true
         else
           echo "xray_test/data directory not found"
@@ -113,6 +107,15 @@ jobs:
           echo "Data folder not found!"
         fi
 
+    - name: Send results to Telegram
+      if: success()
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "Sending working URLs to Telegram..."
+        python config_collector/telegram_sender.py
+
     - name: Configure git for automated commits
       run: |
         git config --global user.name 'github-actions[bot]'
@@ -121,39 +124,26 @@ jobs:
     - name: Commit and push ALL changes
       run: |
         echo "Checking for changes in all data subdirectories..."
-
-        # Add all files in data/ first (before pull to avoid conflicts)
         git add data/working_url || true
-
-        # Check if there are changes to commit
         if git diff --cached --quiet; then
           echo "No changes to commit"
           exit 0
         fi
-
         echo "Files to be committed:"
         git diff --cached --name-only
-
-        # Create commit message with execution summary
         TIMESTAMP=$(date -u '+%Y-%m-%d %H:%M:%S UTC')
         PYTHON_STATUS="${{ steps.python-collector.outcome }}"
         PROXY_STATUS="${{ steps.go-proxy-tester.outcome }}"
         RUN_ID="${{ github.run_id }}"
         GITHUB_REF_NAME="${{ github.ref_name }}"
-
         git commit -m "Automated proxy collection - ${TIMESTAMP}" \
                    -m "Python Collector: ${PYTHON_STATUS}" \
                    -m "Proxy Tester: ${PROXY_STATUS}" \
                    -m "Workflow run: ${RUN_ID}"
-
-        # Pull with rebase and push (handle conflicts gracefully)
         echo "Pulling latest changes from remote..."
         git fetch origin
-
-        # Try to pull with rebase, accepting ours for conflicts in data folder
         git pull --rebase origin "${GITHUB_REF_NAME}" -X ours || {
           echo "Rebase had conflicts, attempting to continue with our changes..."
-          # If rebase fails, abort and try merge strategy instead
           git rebase --abort 2>/dev/null || true
           git pull origin "${GITHUB_REF_NAME}" --no-rebase --strategy=recursive -X ours || {
             echo "Merge also failed, forcing push with our changes"
@@ -162,8 +152,6 @@ jobs:
             exit 0
           }
         }
-
-        # Push the changes
         git push origin "${GITHUB_REF_NAME}"
         echo "✅ Changes committed and pushed successfully"
 
@@ -190,7 +178,6 @@ jobs:
         echo "| Python Collector | ${{ steps.python-collector.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
         echo "| Go Proxy Tester | ${{ steps.go-proxy-tester.outcome == 'success' && '✅ Success' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
-
         if [ -d "data" ]; then
           echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
