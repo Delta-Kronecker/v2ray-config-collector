@@ -6,46 +6,61 @@ import requests
 import time
 from datetime import datetime
 
-def get_line_count(file_path):
-    """Counts non-empty lines in a file."""
+def get_protocol_prefix_map():
+    """Returns a map of protocol names to their URL prefixes."""
+    return {
+        'vless': 'vless://',
+        'vmess': 'vmess://',
+        'trojan': 'trojan://',
+        'shadowsocks': 'ss://',
+        'shadowsocksr': 'ssr://',
+        'hysteria': 'hysteria://',
+        'hysteria2': 'hysteria2://',
+        'tuic': 'tuic://'
+    }
+
+def get_config_count(file_path):
+    """Counts only the actual configuration lines in a file based on its protocol."""
+    filename = os.path.basename(file_path)
+    protocol_map = get_protocol_prefix_map()
+    
+    # Determine the prefix for this specific file
+    protocol_name = filename.replace('working_', '').replace('_urls.txt', '').replace('.txt', '')
+    specific_prefix = protocol_map.get(protocol_name)
+    
+    # For the 'all' file, we check against all known prefixes
+    all_prefixes = tuple(protocol_map.values())
+
+    count = 0
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            return len([line for line in f if line.strip()])
+            for line in f:
+                clean_line = line.strip()
+                if not clean_line:
+                    continue
+                
+                if specific_prefix:
+                    # This is a specific protocol file (e.g., vless.txt)
+                    if clean_line.startswith(specific_prefix):
+                        count += 1
+                elif 'all' in filename.lower():
+                    # This is the main 'all' file, check for any valid prefix
+                    if clean_line.startswith(all_prefixes):
+                        count += 1
     except Exception:
         return 0
+    return count
 
-def send_zip_to_telegram(zip_path, caption):
-    """Sends a zip file to a Telegram channel with a caption."""
-    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
-
-    if not bot_token or not chat_id:
-        print("Error: TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID environment variables are not set.")
-        sys.exit(1)
-
-    url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
-    
-    try:
-        with open(zip_path, 'rb') as f:
-            files = {'document': (os.path.basename(zip_path), f)}
-            params = {'chat_id': chat_id, 'caption': caption, 'parse_mode': 'HTML'}
-            
-            response = requests.post(url, params=params, files=files, timeout=60)
-            response.raise_for_status()
-        
-        print(f"Successfully sent {zip_path} to Telegram.")
-    except requests.exceptions.RequestException as e:
-        print(f"Error sending document to Telegram: {e}")
-        if e.response:
-            print(f"Response: {e.response.text}")
-        sys.exit(1)
-    except FileNotFoundError:
-        print(f"Error: Zip file not found at {zip_path}")
-        sys.exit(1)
+def format_protocol_name(filename):
+    """Extracts and formats the protocol name from a filename."""
+    name = filename.replace('working_', '').replace('_urls.txt', '').replace('.txt', '')
+    if name.lower() == 'shadowsocksr':
+        return 'ShadowsocksR'
+    return name.capitalize()
 
 def main():
     """
-    Zips working URL files, generates statistics, and sends them to Telegram.
+    Zips working URL files, generates accurate statistics, and sends them to Telegram.
     """
     start_time = time.time()
     source_dir = "data/working_url/"
@@ -66,11 +81,14 @@ def main():
         print(f"Error creating zip file: {e}")
         sys.exit(1)
 
-    stats = {os.path.basename(fp): get_line_count(fp) for fp in file_paths}
+    # Use the new, accurate counting function
+    stats = {os.path.basename(fp): get_config_count(fp) for fp in file_paths}
     
+    all_file_key = next((key for key in stats.keys() if 'all' in key.lower()), None)
+    total_configs = stats.get(all_file_key, 0)
+
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     
-    # --- Build the new, stylish caption using HTML for Telegram ---
     caption_lines = [
         "<b>✨ V2Ray/Xray Ultimate Collector ✨</b>",
         f"📅 <b>Date:</b> <code>{timestamp}</code>",
@@ -79,17 +97,15 @@ def main():
         "📊 <b>Stats:</b>"
     ]
 
-    sorted_items = sorted(stats.items(), key=lambda item: (item[0] != 'all.txt', item[0]))
+    sorted_items = sorted(
+        (k, v) for k, v in stats.items() if k != all_file_key
+    )
     
     for filename, count in sorted_items:
-        if filename == 'all.txt':
-            continue # Skip 'all.txt' in the detailed list
-        # Use code tags for filenames to make them stand out
-        caption_lines.append(f"   🔹 <code>{filename}</code>: {count}")
+        protocol_name = format_protocol_name(filename)
+        caption_lines.append(f"   🔹 {protocol_name}: {count}")
 
     caption_lines.append("-------------------------")
-    
-    total_configs = stats.get('all.txt', 0)
     caption_lines.append(f"✅ <b>Total Unique Configs:</b> {total_configs}")
     
     end_time = time.time()
