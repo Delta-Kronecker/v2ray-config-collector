@@ -24,11 +24,9 @@ def get_config_count(file_path):
     filename = os.path.basename(file_path)
     protocol_map = get_protocol_prefix_map()
     
-    # Determine the prefix for this specific file
     protocol_name = filename.replace('working_', '').replace('_urls.txt', '').replace('.txt', '')
     specific_prefix = protocol_map.get(protocol_name)
     
-    # For the 'all' file, we check against all known prefixes
     all_prefixes = tuple(protocol_map.values())
 
     count = 0
@@ -40,11 +38,9 @@ def get_config_count(file_path):
                     continue
                 
                 if specific_prefix:
-                    # This is a specific protocol file (e.g., vless.txt)
                     if clean_line.startswith(specific_prefix):
                         count += 1
                 elif 'all' in filename.lower():
-                    # This is the main 'all' file, check for any valid prefix
                     if clean_line.startswith(all_prefixes):
                         count += 1
     except Exception:
@@ -57,6 +53,35 @@ def format_protocol_name(filename):
     if name.lower() == 'shadowsocksr':
         return 'ShadowsocksR'
     return name.capitalize()
+
+def send_zip_to_telegram(zip_path, caption):
+    """Sends a zip file to a Telegram channel with a caption."""
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
+    if not bot_token or not chat_id:
+        print("Error: TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID environment variables are not set.")
+        sys.exit(1)
+
+    url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
+    
+    try:
+        with open(zip_path, 'rb') as f:
+            files = {'document': (os.path.basename(zip_path), f)}
+            params = {'chat_id': chat_id, 'caption': caption, 'parse_mode': 'HTML'}
+            
+            response = requests.post(url, params=params, files=files, timeout=60)
+            response.raise_for_status()
+        
+        print(f"Successfully sent {zip_path} to Telegram.")
+    except requests.exceptions.RequestException as e:
+        print(f"Error sending document to Telegram: {e}")
+        if e.response:
+            print(f"Response: {e.response.text}")
+        sys.exit(1)
+    except FileNotFoundError:
+        print(f"Error: Zip file not found at {zip_path}")
+        sys.exit(1)
 
 def main():
     """
@@ -81,7 +106,6 @@ def main():
         print(f"Error creating zip file: {e}")
         sys.exit(1)
 
-    # Use the new, accurate counting function
     stats = {os.path.basename(fp): get_config_count(fp) for fp in file_paths}
     
     all_file_key = next((key for key in stats.keys() if 'all' in key.lower()), None)
