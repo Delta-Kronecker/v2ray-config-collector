@@ -114,7 +114,7 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
         echo "Sending working URLs to Telegram..."
-        python config_collector/telegram_sender.py
+        python telegram_sender.py
 
     - name: Configure git for automated commits
       run: |
