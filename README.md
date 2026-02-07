@@ -3,7 +3,7 @@
  A comprehensive tool for collecting, processing, and testing proxy configurations for Xray. This project automates the discovery and validation of working proxy servers, making it easier to find reliable proxies for bypassing internet restrictions.
  
 
- ### (automatic update every 6 hour)
+ ### (automatic update every 24 hour)
  - **All**: 
    [working_all_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_all_urls.txt)
   - **Shadowsocks**: 
@@ -12,8 +12,36 @@
    [working_vmess_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_vmess_urls.txt)
  - **VLESS**: 
    [working_vless_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/Xray/refs/heads/main/data/working_url/working_vless_urls.txt)
- 
+  - **Trojan**: 
+   [working_trojan_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/v2ray-config-collector/refs/heads/main/data/working_url/working_trojan_urls.txt)
 
+ ## Project Structure
+
+
+ ```
+ Xray-main/
+ ├── config_collector/          # Python collection and processing scripts
+ │   ├── main.py               # Main collection orchestrator
+ │   ├── get_source.py         # Source data fetching
+ │   ├── find_url_config.py    # URL extraction
+ │   ├── decode_base64.py      # Base64 decoding
+ │   ├── reformat.py           # Protocol-specific formatting
+ │   ├── config_parser.py      # Configuration parsing
+ │   ├── config_deduplicator.py # Duplicate removal
+ │   └── find_url_from_decoded.py # Additional URL extraction
+ ├── xray_test/                # Go testing framework
+ │   ├── proxy-tester.go       # Main testing application
+ │   ├── go.mod
+ │   └── go.sum
+ ├── data/
+ │   └── working_url/          # Validated configuration files
+ │       ├── working_all_urls.txt
+ │       ├── working_shadowsocks_urls.txt
+ │       ├── working_vmess_urls.txt
+ │       └── working_vless_urls.txt
+ ├── test_in_iran.txt          # Iran-specific test results
+ └── README.md
+ ```
 
  ## Usage
  
@@ -45,47 +73,8 @@
  - Save working configurations to output files
  
 
- ## Working Configurations
- 
- The following files contain validated, working proxy configurations:
- 
 
 
- ## Project Structure
  
- ```
- Xray-main/
- ├── config_collector/          # Python collection and processing scripts
- │   ├── main.py               # Main collection orchestrator
- │   ├── get_source.py         # Source data fetching
- │   ├── find_url_config.py    # URL extraction
- │   ├── decode_base64.py      # Base64 decoding
- │   ├── reformat.py           # Protocol-specific formatting
- │   ├── config_parser.py      # Configuration parsing
- │   ├── config_deduplicator.py # Duplicate removal
- │   └── find_url_from_decoded.py # Additional URL extraction
- ├── xray_test/                # Go testing framework
- │   ├── proxy-tester.go       # Main testing application
- │   ├── go.mod
- │   └── go.sum
- ├── data/
- │   └── working_url/          # Validated configuration files
- │       ├── working_all_urls.txt
- │       ├── working_shadowsocks_urls.txt
- │       ├── working_vmess_urls.txt
- │       └── working_vless_urls.txt
- ├── test_in_iran.txt          # Iran-specific test results
- └── README.md
- ```
- 
- ## How It Works
- 
- 1. **Collection Phase**: The Python scripts fetch proxy configurations from various online sources and APIs
- 2. **Processing Phase**: Configurations are decoded, parsed, validated, and deduplicated
- 3. **Testing Phase**: The Go application loads processed configs and tests each one by:
-    - Generating Xray configuration files
-    - Starting Xray processes on unique ports
-    - Making HTTP requests through the proxy to verify connectivity
-    - Recording response times and success/failure status
- 4. **Output Phase**: Working configurations are saved to categorized files for easy access
+
  
