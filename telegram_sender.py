@@ -114,11 +114,10 @@ def main():
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     
     caption_lines = [
-        "<b>✨ V2Ray/Xray Ultimate Collector ✨</b>",
-        f"📅 <b>Date:</b> <code>{timestamp}</code>",
+        "<b> V2Ray Collector</b>",
+        f" <b>Date:</b> <code>{timestamp}</code>",
         "",
-        f"🔍 <b>Sources Checked:</b> {len(file_paths)} files",
-        "📊 <b>Stats:</b>"
+        " <b>Stats:</b>"
     ]
 
     sorted_items = sorted(
@@ -127,10 +126,10 @@ def main():
     
     for filename, count in sorted_items:
         protocol_name = format_protocol_name(filename)
-        caption_lines.append(f"   🔹 {protocol_name}: {count}")
+        caption_lines.append(f"    {protocol_name}: {count}")
 
     caption_lines.append("-------------------------")
-    caption_lines.append(f"✅ <b>Total Unique Configs:</b> {total_configs}")
+    caption_lines.append(f"<b>Total Unique Configs:</b> {total_configs}")
     
     end_time = time.time()
     execution_time = round(end_time - start_time)
