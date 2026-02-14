@@ -60,7 +60,7 @@ jobs:
         else
           mkdir -p data
         fi
-        mkdir -p data/working_url
+        mkdir -p data/V2ray_url
         echo "Created directory structure:"
         find data -type d
 
@@ -101,7 +101,7 @@ jobs:
         if [ -d "data" ]; then
           find data -type f | head -50
           echo "=== File counts by type ==="
-          echo "Working URL: $(find data/working_url -type f 2>/dev/null | wc -l || echo 0)"
+          echo "Working URL: $(find data/V2ray_url -type f 2>/dev/null | wc -l || echo 0)"
           echo "Total files in data: $(find data -type f | wc -l)"
         else
           echo "Data folder not found!"
@@ -124,7 +124,7 @@ jobs:
     - name: Commit and push ALL changes
       run: |
         echo "Checking for changes in all data subdirectories..."
-        git add data/working_url || true
+        git add data/V2ray_url || true
         if git diff --cached --quiet; then
           echo "No changes to commit"
           exit 0
@@ -161,7 +161,7 @@ jobs:
       with:
         name: proxy-results-${{ github.run_id }}
         path: |
-          data/working_url/
+          data/V2ray_url/
         retention-days: 7
 
     - name: Workflow summary
@@ -182,7 +182,7 @@ jobs:
           echo "### Results Summary" >> $GITHUB_STEP_SUMMARY
           echo "| Result Type | File Count |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|------------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Working URLs | $(find data/working_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Working URLs | $(find data/V2ray_url -type f 2>/dev/null | wc -l || echo 0) |" >> $GITHUB_STEP_SUMMARY
           echo "| **Total Files** | **$(find data -type f | wc -l)** |" >> $GITHUB_STEP_SUMMARY
         else
           echo "**Data Files Generated:** 0" >> $GITHUB_STEP_SUMMARY
