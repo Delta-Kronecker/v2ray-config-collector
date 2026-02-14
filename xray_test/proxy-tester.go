@@ -931,7 +931,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	if err := os.MkdirAll(filepath.Join(pt.config.DataDir, "working_json"), 0755); err != nil {
 		return err
 	}
-	if err := os.MkdirAll(filepath.Join(pt.config.DataDir, "working_url"), 0755); err != nil {
+	if err := os.MkdirAll(filepath.Join(pt.config.DataDir, "V2ray_url"), 0755); err != nil {
 		return err
 	}
 
@@ -959,7 +959,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 		jsonFile.WriteString("# Format: Each line contains one working configuration in JSON\n\n")
 		pt.outputFiles[protocol] = jsonFile
 
-		urlFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", fmt.Sprintf("working_%s_urls.txt", name)))
+		urlFile, err := os.Create(filepath.Join(pt.config.DataDir, "V2ray_url", fmt.Sprintf("working_%s_urls.txt", name)))
 		if err != nil {
 			return err
 		}
@@ -980,7 +980,7 @@ func (pt *ProxyTester) setupIncrementalSave() error {
 	generalJSONFile.WriteString("# Protocols: Shadowsocks, ShadowsocksR, VMess, VLESS, Trojan, Hysteria, Hysteria2, TUIC\n\n")
 	pt.generalJSONFile = generalJSONFile
 
-	generalURLFile, err := os.Create(filepath.Join(pt.config.DataDir, "working_url", "working_all_urls.txt"))
+	generalURLFile, err := os.Create(filepath.Join(pt.config.DataDir, "V2ray", "working_all_urls.txt"))
 	if err != nil {
 		return err
 	}
@@ -2449,7 +2449,7 @@ func setupDirectories(config *Config) error {
 		config.DataDir,
 		config.LogDir,
 		filepath.Join(config.DataDir, "working_json"),
-		filepath.Join(config.DataDir, "working_url"),
+		filepath.Join(config.DataDir, "V2ray"),
 	}
 
 	for _, dir := range dirs {
@@ -2540,9 +2540,9 @@ func main() {
 		log.Printf("Total working configurations: %d", totalWorkingConfigs)
 		log.Printf("\nWorking configurations saved to:")
 		log.Printf("  JSON: %s/working_json/working_*.txt", config.DataDir)
-		log.Printf("  URL: %s/working_url/working_*_urls.txt", config.DataDir)
+		log.Printf("  URL: %s/V2ray/working_*_urls.txt", config.DataDir)
 		log.Printf("  All configs (JSON): %s/working_json/working_all_configs.txt", config.DataDir)
-		log.Printf("  All configs (URL): %s/working_url/working_all_urls.txt", config.DataDir)
+		log.Printf("  All configs (URL): %s/V2ray/working_all_urls.txt", config.DataDir)
 		log.Println(strings.Repeat("=", 70))
 	} else {
 		log.Println("No working configurations found")
