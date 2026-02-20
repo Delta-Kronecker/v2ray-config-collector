@@ -15,66 +15,13 @@
   - **Trojan**: 
    [working_trojan_urls.txt](https://raw.githubusercontent.com/Delta-Kronecker/v2ray-config-collector/refs/heads/main/data/working_url/working_trojan_urls.txt)
 
- ## Project Structure
+## 🔥 Keep This Project Going!
 
+If you're finding this useful, please show your support:
 
- ```
- Xray-main/
- ├── config_collector/          # Python collection and processing scripts
- │   ├── main.py               # Main collection orchestrator
- │   ├── get_source.py         # Source data fetching
- │   ├── find_url_config.py    # URL extraction
- │   ├── decode_base64.py      # Base64 decoding
- │   ├── reformat.py           # Protocol-specific formatting
- │   ├── config_parser.py      # Configuration parsing
- │   ├── config_deduplicator.py # Duplicate removal
- │   └── find_url_from_decoded.py # Additional URL extraction
- ├── xray_test/                # Go testing framework
- │   ├── proxy-tester.go       # Main testing application
- │   ├── go.mod
- │   └── go.sum
- ├── data/
- │   └── working_url/          # Validated configuration files
- │       ├── working_all_urls.txt
- │       ├── working_shadowsocks_urls.txt
- │       ├── working_vmess_urls.txt
- │       └── working_vless_urls.txt
- ├── test_in_iran.txt          # Iran-specific test results
- └── README.md
- ```
+⭐ **Star the repository on GitHub**
 
- ## Usage
- 
- ### Collecting Configurations
- Run the Python collector to gather and process proxy configurations:
- ```bash
- cd config_collector
- python main.py
- ```
- 
- This will:
- - Fetch data from various sources
- - Decode base64 encoded configurations
- - Parse and validate configurations
- - Remove duplicates
- - Save processed configs to JSON files
- 
- ### Testing Configurations
- Run the Go tester to validate collected configurations:
- ```bash
- cd xray_test
- ./proxy-tester
- ```
- 
- The tester will:
- - Load JSON configuration files
- - Generate Xray config files for each proxy
- - Test connectivity using HTTP requests
- - Save working configurations to output files
- 
+⭐ **Star our [Telegram posts](https://t.me/DeltaKroneckerGithub)** 
 
-
-
- 
-
+Your stars fuel our motivation to keep improving!
  
